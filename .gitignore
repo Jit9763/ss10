@@ -1,0 +1,15 @@
+# Ignore PDF reference downloads and debug crops
+*.pdf
+scratch/
+images/renders_debug/
+images/check/
+images/check_germania/
+images/visual_crops/
+images/page_renders/
+*.png
+!images/*.webp
+
+# OS & Temp files
+.DS_Store
+Thumbs.db
+node_modules/

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मास्टर प्रश्न-उत्तर (Master Q&A - NCERT Class 10 SS)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: #0b0f19;
+            color: #f8fafc;
+            padding: 30px 15px;
+        }
+        .qa-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+        .qa-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .qa-header h1 {
+            color: #a855f7;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+        .qa-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .qa-card:hover {
+            border-color: #a855f7;
+            box-shadow: 0 8px 25px rgba(168, 85, 247, 0.2);
+        }
+        .question {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fbbf24;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .answer {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            padding-left: 28px;
+            border-left: 3px solid #38bdf8;
+        }
+        .badge-qtype {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="floating-home-btn">🏠 मुख्य पृष्ठ (Home)</a>
+
+    <div class="qa-container">
+        <div class="qa-header">
+            <h1 id="qa-title">❓ बोर्ड परीक्षा मास्टर प्रश्न-उत्तर (Master Q&A)</h1>
+            <p style="color: var(--text-secondary);">NCERT अभ्यास प्रश्न, अति-महत्वपूर्ण बोर्ड प्रश्न एवं उत्तर कुंजी</p>
+        </div>
+
+        <div id="qa-list">
+            <!-- Dynamic Q&A list -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || 'hist1';
+            
+            loadQnA(id);
+        });
+
+        function loadQnA(id) {
+            const qnaDatabase = {
+                'hist1': [
+                    {
+                        type: 'अति लघु उत्तरीय (1 अंक)',
+                        q: 'प्रश्‍न 1: फ़्रेडरिक सरयू कौन था?',
+                        a: 'उत्तर: फ़्रेडरिक सरयू एक फ्रांसीसी चित्रकार था जिसने 1848 में चार चित्रों की एक श्रृंखला बनाई जिसमें उसने लोकतांत्रिक और सामाजिक गणराज्यों से बने विश्व के अपने सपने को चित्रित किया था।'
+                    },
+                    {
+                        type: 'लघु उत्तरीय (3 अंक)',
+                        q: 'प्रश्‍न 2: 1815 की वियना संधि के प्रमुख प्रावधानों का वर्णन कीजिए।',
+                        a: 'उत्तर: 1. फ्रांसीसी क्रांति के दौरान हटाए गए बूर्बों वंश को सत्ता में बहाल किया गया।<br>2. फ्रांस की सीमाओं पर कई राज्य स्थापित किए गए ताकि भविष्य में फ्रांस अपना विस्तार न कर सके।<br>3. नेपोलियन द्वारा बनाए गए 39 जर्मन राज्यों के संघ को बरकरार रखा गया।'
+                    },
+                    {
+                        type: 'दीर्घ उत्तरीय (5 अंक)',
+                        q: 'प्रश्‍न 3: जर्मनी के एकीकरण की प्रक्रिया का विस्तारपूर्वक वर्णन कीजिए।',
+                        a: 'उत्तर: 1. 1848 में जर्मन मध्यम वर्ग के लोगों ने फ्रैंकफर्ट संसद में एक राष्ट्र-राज्य बनाने का प्रयास किया जो असफल रहा।<br>2. इसके पश्चात प्रशा ने राष्ट्रीय एकीकरण के आंदोलन का नेतृत्व संभाला।<br>3. प्रशा के प्रमुख मंत्री ऑटो वोन बिस्मार्क को इस प्रक्रिया का जनक माना जाता है।<br>4. सात वर्षों के दौरान ऑस्ट्रिया, डेनमार्क और फ्रांस के साथ तीन युद्ध हुए जिसमें प्रशा की जीत हुई।<br>5. जनवरी 1871 में वर्साय के शीशमहल (Hall of Mirrors) में प्रशा के राजा विलियम प्रथम को नए जर्मन साम्राज्य का सम्राट घोषित किया गया।'
+                    },
+                    {
+                        type: 'दीर्घ उत्तरीय (5 अंक)',
+                        q: 'प्रश्‍न 4: इटली के एकीकरण में मैजिनी, कावूर और गैरीबाल्डी के योगदान का मूल्यांकन कीजिए।',
+                        a: 'उत्तर: 1. <b>ज्यूसेपे मैजिनी:</b> उसने \'यंग इटली\' और \'यंग यूरोप\' नामक गुप्त समाजों की स्थापना की और वैचारिक चेतना जगाई।<br>2. <b>काउंट कावूर:</b> सार्डिनिया-पीडमॉन्ट के प्रधानमंत्री कावूर ने चतुर कूटनीति के माध्यम से 1859 में फ्रांस के साथ गठबंधन कर ऑस्ट्रियाई बलों को हराया।<br>3. <b>ज्यूसेपे गैरीबाल्डी:</b> उसने रेड शर्ट्स (लाल कुर्ती) के स्वयंसेवकों का नेतृत्व किया और 1860 में दो सिचलियों के राज्य को जीतकर इटली के एकीकरण को पूरा किया।<br>4. 1861 में विक्टर इमेन्यूएल द्वितीय को एकीकृत इटली का राजा घोषित किया गया।'
+                    },
+                    {
+                        type: 'स्रोत/केस आधारित प्रश्न',
+                        q: 'प्रश्‍न 5: बालकन क्षेत्र में राष्ट्रवादी तनाव क्यों उत्पन्न हुआ?',
+                        a: 'उत्तर: 1. बालकन एक विशाल भौगोलिक और जातीय विविधता वाला क्षेत्र था जिसमें आधुनिक रोमानिया, बुल्गारिया, अल्बानिया, ग्रीस आदि शामिल थे।<br>2. ऑटोमन साम्राज्य के विघटन और रूमानी राष्ट्रवाद के प्रसार ने इस क्षेत्र को अत्यधिक विस्फोटक बना दिया।<br>3. यूरोपीय महाशक्तियों (रूस, जर्मनी, इंग्लैंड, ऑस्ट्रिया-हंगरी) के बीच व्यापार, नौसेना और उपनिवेशों को लेकर प्रतिद्वंद्विता के कारण स्थिति और जटिल हो गई जिसके परिणामस्वरूप प्रथम विश्व युद्ध हुआ।'
+                    }
+                ]
+            };
+
+            const list = qnaDatabase[id] || [
+                {
+                    type: 'NCERT बोर्ड प्रश्न',
+                    q: 'प्रश्‍न 1: अध्याय से संबंधित मुख्य अवधारणा क्या है?',
+                    a: 'उत्तर: यह अध्याय बोर्ड परीक्षा के लिए अति महत्वपूर्ण है। कृपया नोट्स और पाठ्यपुस्तक के मुख्य प्रश्नों का निरंतर अभ्यास करें।'
+                },
+                {
+                    type: 'दीर्घ उत्तरीय प्रश्न',
+                    q: 'प्रश्‍न 2: बोर्ड परीक्षा में अच्छे अंक प्राप्त करने के क्या उपाय हैं?',
+                    a: 'उत्तर: बिंदुवार उत्तर लिखें, महत्वपूर्ण तिथियों एवं मुख्य शब्दों को रेखांकित (highlight) करें और मानचित्र आधारित अभ्यास पूरा करें।'
+                }
+            ];
+
+            const container = document.getElementById('qa-list');
+            container.innerHTML = '';
+
+            list.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'qa-card';
+                card.innerHTML = `
+                    <span class="badge-qtype">${item.type}</span>
+                    <div class="question">${item.q}</div>
+                    <div class="answer">${item.a}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नोट्स - प्रीमियम HTML व्यू (Class 10 NCERT SS)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            overflow-x: auto !important;
+            background: var(--bg-color);
+            background-image: var(--bg-gradient);
+        }
+        .container {
+            max-width: none !important;
+            width: fit-content !important;
+            min-width: 100% !important;
+            margin: 0 auto !important;
+            padding: 0 0 40px 0 !important;
+            position: relative;
+        }
+        .page-container {
+            width: var(--container-width, 1260px) !important;
+            max-width: none !important;
+            margin: 40px auto;
+            background: white;
+            color: #1a202c;
+            padding: 90px 25px 25px 25px !important;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            text-align: justify;
+            position: relative;
+        }
+        
+        /* High Contrast Projector Text Styling */
+        #notes-content {
+            color: #000000;
+            font-weight: 900;
+            font-size: 26pt;
+            line-height: 2.0;
+            margin-top: 20px;
+        }
+        #notes-content p, #notes-content li, #notes-content div, #notes-content b, #notes-content strong, #notes-content span, #notes-content td, #notes-content th {
+            color: #000000;
+            font-weight: 900 !important;
+            -webkit-text-stroke: 1.1px #000000;
+            text-shadow: 0 0 1px #000;
+        }
+
+        #notes-content .adjustable-text {
+            font-size: max(12px, calc(var(--orig-size, 26pt) + var(--size-offset, 0px))) !important;
+            font-weight: calc(var(--orig-weight, 900) + var(--weight-offset, 0)) !important;
+            -webkit-text-stroke-width: max(0px, calc(var(--orig-stroke, 1.1px) + var(--stroke-offset, 0px))) !important;
+            -webkit-text-stroke-color: #000000 !important;
+        }
+
+        #notes-content img, .img-box img {
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1300px) {
+            .page-container {
+                max-width: 98% !important;
+                padding: 85px 15px 15px 15px !important;
+            }
+        }
+        
+        /* Action Bar for Copy/Print/Controls */
+        .action-bar {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 1100;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: calc(100% - 30px);
+            width: fit-content;
+        }
+
+        .action-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            border: 2.5px solid #3b82f6;
+            background: #1e293b;
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.12);
+            background: #3b82f6;
+            box-shadow: 0 8px 22px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-copy {
+            background: #fbbf24;
+            color: #000000;
+            border-color: #f59e0b;
+        }
+        .btn-copy:hover {
+            background: #f59e0b;
+        }
+        .btn-copy.success {
+            background: #059669;
+            color: #ffffff;
+            border-color: #10b981;
+        }
+
+        @media print {
+            .bg-animation, 
+            .floating-home-btn, 
+            .action-bar {
+                display: none !important;
+            }
+            body { 
+                background: white !important; 
+                margin: 0; 
+                padding: 0;
+            }
+            .container {
+                padding: 0;
+                margin: 0;
+            }
+            .page-container {
+                width: 100% !important;
+                max-width: none !important;
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 20px !important;
+                border-radius: 0 !important;
+                background: white !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container" style="position: relative;">
+        <!-- Floating Home Button -->
+        <a href="index.html" class="floating-home-btn" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; background: #1e293b; color: white; width: 50px; height: 50px; border-radius: 50%; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 2px solid #fbbf24; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; transition: all 0.3s ease;" title="मुख्य पृष्ठ पर जाएँ">🏠</a>
+
+        <div class="page-container">
+            <div class="action-bar">
+                <button class="action-btn" onclick="adjustWidth(50)" title="कंटेनर चौड़ाई बढ़ाएँ (W+)">W+</button>
+                <button class="action-btn" onclick="adjustWidth(-50)" title="कंटेनर चौड़ाई घटाएँ (W-)">W-</button>
+                <button class="action-btn" onclick="adjustFontSize(3)" title="अक्षर का आकार बढ़ाएँ (A+)">A+</button>
+                <button class="action-btn" onclick="adjustFontSize(-3)" title="अक्षर का आकार घटाएँ (A-)">A-</button>
+                <button class="action-btn" onclick="adjustFontWeight(100)" title="अक्षर की मोटाई बढ़ाएँ (B+)">B+</button>
+                <button class="action-btn" onclick="adjustFontWeight(-100)" title="अक्षर की मोटाई घटाएँ (B-)">B-</button>
+                <button id="floatingCopyBtn" class="action-btn btn-copy" onclick="copyEntireContent()" title="Google Docs के लिए कॉपी करें">📋</button>
+                <button class="action-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️</button>
+            </div>
+
+            <div id="notes-content">
+                <div style="text-align: center; padding: 100px; font-size: 24pt;">
+                    नोट्स लोड हो रहे हैं... ⌛
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let containerWidth = 1260; // Default 10% smaller container size
+        let sizeOffset = 0;
+        let weightOffset = 0;
+        let strokeOffset = 0;
+
+        function adjustWidth(amount) {
+            containerWidth += amount;
+            if (containerWidth < 300) containerWidth = 300;
+            if (containerWidth > 6000) containerWidth = 6000;
+            const container = document.querySelector('.page-container');
+            if (container) {
+                container.style.setProperty('--container-width', containerWidth + 'px');
+                container.style.setProperty('width', containerWidth + 'px', 'important');
+                container.style.setProperty('max-width', 'none', 'important');
+            }
+        }
+
+        function adjustFontSize(amount) {
+            sizeOffset += amount;
+            if (sizeOffset < -18) sizeOffset = -18;
+            if (sizeOffset > 40) sizeOffset = 40;
+            const container = document.getElementById('notes-content');
+            if (container) {
+                container.style.setProperty('--size-offset', sizeOffset + 'px');
+            }
+        }
+
+        function adjustFontWeight(amount) {
+            weightOffset += amount;
+            if (weightOffset < -600) weightOffset = -600;
+            if (weightOffset > 800) weightOffset = 800;
+            
+            strokeOffset += (amount / 100) * 0.4;
+            if (strokeOffset < -3.0) strokeOffset = -3.0;
+            if (strokeOffset > 5.0) strokeOffset = 5.0;
+            
+            const container = document.getElementById('notes-content');
+            if (container) {
+                container.style.setProperty('--weight-offset', weightOffset);
+                container.style.setProperty('--stroke-offset', strokeOffset + 'px');
+            }
+        }
+
+        function initTextFormatting(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const elements = container.querySelectorAll('*');
+            elements.forEach(el => {
+                const tagName = el.tagName.toLowerCase();
+                if (['script', 'style', 'img', 'br', 'hr'].includes(tagName)) return;
+                
+                const style = window.getComputedStyle(el);
+                const fontSize = style.fontSize;
+                const fontWeight = style.fontWeight;
+                const strokeWidth = style.webkitTextStrokeWidth;
+                
+                if (fontSize) {
+                    el.style.setProperty('--orig-size', fontSize);
+                }
+                if (fontWeight) {
+                    let weightVal = fontWeight;
+                    if (fontWeight === 'normal') weightVal = '400';
+                    else if (fontWeight === 'bold') weightVal = '700';
+                    el.style.setProperty('--orig-weight', weightVal);
+                }
+                if (strokeWidth && strokeWidth !== '0px' && strokeWidth !== '') {
+                    el.style.setProperty('--orig-stroke', strokeWidth);
+                }
+                el.classList.add('adjustable-text');
+            });
+        }
+
+        async function copyEntireContent() {
+            const btn = document.getElementById('floatingCopyBtn');
+            const target = document.getElementById('notes-content');
+            
+            const clone = target.cloneNode(true);
+            const adjustableElements = clone.querySelectorAll('.adjustable-text');
+            adjustableElements.forEach(el => {
+                const origSize = el.style.getPropertyValue('--orig-size');
+                const origWeight = el.style.getPropertyValue('--orig-weight');
+                const origStroke = el.style.getPropertyValue('--orig-stroke');
+                if (origSize) el.style.fontSize = origSize;
+                if (origWeight) el.style.fontWeight = origWeight;
+                if (origStroke) el.style.webkitTextStrokeWidth = origStroke;
+                el.classList.remove('adjustable-text');
+            });
+
+            const images = clone.querySelectorAll('img');
+            images.forEach(img => {
+                img.setAttribute('src', img.src);
+            });
+
+            const content = clone.innerHTML;
+            
+            try {
+                const blob = new Blob([content], { type: 'text/html' });
+                const item = new ClipboardItem({ 'text/html': blob });
+                await navigator.clipboard.write([item]);
+                
+                btn.innerText = '✅';
+                btn.classList.add('success');
+                
+                setTimeout(() => {
+                    btn.innerText = '📋';
+                    btn.classList.remove('success');
+                }, 3000);
+            } catch (err) {
+                alert('Copy failed: ' + err);
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+            if (e.key === 'w' || e.key === 'W') {
+                if (e.shiftKey) adjustWidth(-50);
+                else adjustWidth(50);
+            } else if (e.key === '+' || e.key === '=') {
+                adjustWidth(50);
+            } else if (e.key === '-') {
+                adjustWidth(-50);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || 'hist1';
+            
+            try {
+                let masterFile = `copy_master_${id}.html`;
+                if (id === 'hist1') masterFile = 'copy_master_hist1.html';
+
+                const response = await fetch(masterFile);
+                if (!response.ok) throw new Error('File not found');
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const content = doc.getElementById('contentToCopy') || doc.body;
+                
+                if (content) {
+                    const styleTags = doc.querySelectorAll('style');
+                    styleTags.forEach(style => {
+                        document.head.appendChild(style.cloneNode(true));
+                    });
+                    
+                    document.getElementById('notes-content').innerHTML = content.innerHTML;
+                    const pageTitle = doc.querySelector('title')?.innerText || "नोट्स - " + id;
+                    document.title = pageTitle;
+                    initTextFormatting('notes-content');
+                } else {
+                    document.getElementById('notes-content').innerHTML = "<p>त्रुटि: नोट्स प्राप्त नहीं हो सके।</p>";
+                }
+            } catch (err) {
+                loadFallbackNotes(id);
+            }
+        });
+
+        function loadFallbackNotes(id) {
+            const chapterNames = {
+                'hist2': 'भारत में राष्ट्रवाद',
+                'hist3': 'भूमंडलीकृत विश्व का बनना',
+                'hist4': 'औद्योगिकरण का युग',
+                'hist5': 'मुद्रण संस्कृति और आधुनिक दुनिया',
+                'geo1': 'संसाधन एवं विकास',
+                'geo2': 'वन एवं वन्यजीव संसाधन',
+                'geo3': 'जल संसाधन',
+                'geo4': 'कृषि',
+                'geo5': 'खनिज तथा ऊर्जा संसाधन',
+                'geo6': 'विनिर्माण उद्योग',
+                'geo7': 'राष्ट्रीय अर्थव्यवस्था की जीवन रेखाएं',
+                'civ1': 'सत्ता की साझेदारी',
+                'civ2': 'संघवाद',
+                'civ3': 'जाति, धर्म और लैंगिक मसले',
+                'civ4': 'राजनीतिक दल',
+                'civ5': 'लोकतंत्र के परिणाम',
+                'eco1': 'विकास',
+                'eco2': 'भारतीय अर्थव्यवस्था के क्षेत्रक',
+                'eco3': 'मुद्रा और साख',
+                'eco4': 'वैश्वीकरण और भारतीय अर्थव्यवस्था',
+                'eco5': 'उपभोक्ता अधिकार'
+            };
+
+            const title = chapterNames[id] || ("अध्याय " + id);
+            document.title = "नोट्स - " + title;
+
+            document.getElementById('notes-content').innerHTML = `
+                <div style="padding: 20px; font-family: 'Noto Sans Devanagari', sans-serif;">
+                    <div style="background-color: #064e3b; color: white; border: 5px solid #10b981; padding: 30px; border-radius: 20px; text-align: center; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(6,78,59,0.4);">
+                        <h1 style="color: #ffffff; font-size: 40pt; font-weight: 900; margin-bottom: 10px;">NCERT कक्षा 10 सामाजिक विज्ञान</h1>
+                        <h2 style="color: #a7f3d0; font-size: 32pt; font-weight: 900;">${title} - संपूर्ण डिजिटल मास्टर नोट्स</h2>
+                    </div>
+
+                    <div style="color: #7f1d1d; background-color: #fee2e2; border-left: 18px solid #b91c1c; padding: 22px 28px; border-radius: 14px; font-size: 38pt; font-weight: 900; margin-top: 40px; margin-bottom: 35px;">
+                        भाग 1: अध्याय का संपूर्ण सार (Chapter Overview)
+                    </div>
+
+                    <div style="background: #f0fdf4; border-left: 14px solid #22c55e; padding: 25px; border-radius: 12px; margin-bottom: 35px; font-size: 24pt;">
+                        <h3 style="color: #166534; font-size: 28pt; font-weight: 900;">📌 मुख्य बिंदु एवं अवधारणाएं</h3>
+                        <p style="font-size: 24pt; line-height: 2; font-weight: 900; color: #000;">
+                            यह अध्याय NCERT पाठ्यपुस्तक पर आधारित है। इसमें बोर्ड परीक्षा की दृष्टि से सभी महत्वपूर्ण परिभाषाएं, आंकड़े, कारण-परिणाम एवं मानचित्र कार्य सम्मिलित हैं।
+                        </p>
+                    </div>
+
+                    <div style="color: #1e3a8a; background-color: #eff6ff; border-left: 16px solid #2563eb; padding: 20px 26px; border-radius: 12px; font-size: 34pt; font-weight: 900; margin-top: 45px; margin-bottom: 30px;">
+                        भाग 2: बोर्ड परीक्षा प्रश्न एवं उत्तर कुंजी
+                    </div>
+
+                    <div style="background: #fffbeb; border-left: 14px solid #d97706; padding: 25px; border-radius: 12px; font-size: 24pt; margin-bottom: 30px;">
+                        <p style="font-size: 24pt; line-height: 2; font-weight: 900; color: #78350f;">
+                            <b>1. 5 अंक वाले प्रश्न:</b> विस्तृत उत्तर बिंदुवार लिखें और महत्वपूर्ण शब्दों को रेखांकित करें।<br>
+                            <b>2. मानचित्र अभ्यास:</b> स्थानों को सही चिन्हित करें।
+                        </p>
+                    </div>
+
+                    <div style="background-color: #fdf2f2; border: 6px solid #ef4444; padding: 30px; border-radius: 15px; margin-top: 50px;">
+                        <h2 style="font-weight: 900; text-align: center; color: #991b1b; font-size: 32pt;">🔥 बोर्ड परीक्षा के लिए ब्रह्मास्त्र (Ultimate Revision) 🔥</h2>
+                        <p style="font-size: 24pt; line-height: 2; font-weight: 900; color: #7f1d1d; margin-top: 20px;">
+                            1. NCERT के सभी प्रमुख सिद्धांतों को याद करें।<br>
+                            2. महत्वपूर्ण तिथियों की समयरेखा बनाएँ।<br>
+                            3. उत्तर में चित्र एवं फ्लोचार्ट का उपयोग करें।
+                        </p>
+                    </div>
+                </div>
+            `;
+            initTextFormatting('notes-content');
+        }
+    </script>
+</body>
+</html>

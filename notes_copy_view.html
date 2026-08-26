@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छात्र कॉपी नोट्स (NCERT Class 10 SS)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 30px 15px;
+        }
+        .copy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #1e293b;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .header-box {
+            text-align: center;
+            border-bottom: 2px dashed var(--accent-gold);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header-box h1 {
+            color: var(--accent-gold);
+            font-size: 2.2rem;
+        }
+        .notes-body {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+        .notes-body h2 {
+            color: #38bdf8;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+            border-left: 5px solid #38bdf8;
+            padding-left: 12px;
+        }
+        .notes-body h3 {
+            color: #fbbf24;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        .notes-body ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        .notes-body li {
+            margin-bottom: 8px;
+        }
+        .btn-copy-all {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        .btn-copy-all:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="floating-home-btn">🏠 मुख्य पृष्ठ (Home)</a>
+
+    <div class="copy-container">
+        <div class="header-box">
+            <h1 id="chapter-header-title">नोट्स (छात्र कॉपी संस्करण)</h1>
+            <p style="color: var(--text-secondary);">नोटबुक / रजिस्टर में लिखने के लिए सुव्यवस्थित नोट्स</p>
+        </div>
+
+        <button class="btn-copy-all" id="copyTextBtn" onclick="copyRawText()">📋 सम्पूर्ण छात्र नोट्स टेक्स्ट कॉपी करें (Copy Plaintext)</button>
+
+        <div id="copy-notes-body" class="notes-body">
+            <div style="text-align:center; padding: 40px;">लोड हो रहा है...</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || 'hist1';
+            
+            try {
+                let masterFile = `copy_master_${id}.html`;
+                if (id === 'hist1') masterFile = 'copy_master_hist1.html';
+
+                const res = await fetch(masterFile);
+                if (!res.ok) throw new Error();
+                const html = await res.text();
+
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const content = doc.getElementById('contentToCopy') || doc.body;
+                
+                document.getElementById('copy-notes-body').innerHTML = content.innerHTML;
+                const title = doc.querySelector('title')?.innerText || "नोट्स - " + id;
+                document.getElementById('chapter-header-title').innerText = title;
+            } catch (err) {
+                loadDefaultCopyNotes(id);
+            }
+        });
+
+        function loadDefaultCopyNotes(id) {
+            const titleMap = {
+                'hist1': 'यूरोप में राष्ट्रवाद का उदय',
+                'hist2': 'भारत में राष्ट्रवाद',
+                'geo1': 'संसाधन एवं विकास',
+                'civ1': 'सत्ता की साझेदारी',
+                'eco1': 'विकास'
+            };
+            const name = titleMap[id] || ("अध्याय " + id);
+            document.getElementById('chapter-header-title').innerText = "नोट्स - " + name;
+
+            document.getElementById('copy-notes-body').innerHTML = `
+                <h2>1. अध्याय का मूल सारांश</h2>
+                <p>यह अध्याय NCERT सामाजिक विज्ञान कक्षा 10 का महत्वपूर्ण अध्याय है। इसमें विषयवस्तु को व्यवस्थित तथा बोर्ड परीक्षा के प्रारूप में प्रस्तुत किया गया है।</p>
+
+                <h2>2. मुख्य बिंदु एवं तथ्य</h2>
+                <ul>
+                    <li><b>बिंदु 1:</b> NCERT की पाठ्यपुस्तक पर आधारित सटीक एवं संक्षिप्त अवधारणाएं।</li>
+                    <li><b>बिंदु 2:</b> परीक्षा उपयोगी परिभाषाएं एवं प्रमुख शब्द।</li>
+                    <li><b>बिंदु 3:</b> तिथि-वार एवं घटना-वार पूर्ण विवरण।</li>
+                </ul>
+
+                <h2>3. त्वरित पुनरीक्षण (Quick Revision)</h2>
+                <p>परीक्षार्थी इन नोट्स का उपयोग परीक्षा से पूर्व त्वरित दोहराव हेतु कर सकते हैं।</p>
+            `;
+        }
+
+        async function copyRawText() {
+            const body = document.getElementById('copy-notes-body');
+            const text = body.innerText;
+            const btn = document.getElementById('copyTextBtn');
+
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.innerText = '✅ टेक्स्ट कॉपी हो गया!';
+                setTimeout(() => {
+                    btn.innerText = '📋 सम्पूर्ण छात्र नोट्स टेक्स्ट कॉपी करें (Copy Plaintext)';
+                }, 3000);
+            } catch(e) {
+                alert('कॉपी त्रुटि: ' + e);
+            }
+        }
+    </script>
+</body>
+</html>
