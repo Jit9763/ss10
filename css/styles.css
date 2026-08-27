@@ -491,3 +491,75 @@ footer {
     width: 100%;
   }
 }
+
+/* Senior Secondary Portals Grid Styles */
+.senior-portals-wrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.senior-portal-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.senior-portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.class-portal-card {
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.95), rgba(67, 56, 202, 0.95));
+  border: 3px solid #818cf8;
+  border-radius: 20px;
+  padding: 22px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.c11-card {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.95), rgba(4, 120, 87, 0.95));
+  border-color: #34d399;
+}
+
+.c11-card:hover {
+  border-color: #a7f3d0;
+  box-shadow: 0 15px 40px rgba(52, 211, 153, 0.4);
+}
+
+.c12-card:hover {
+  border-color: #fbbf24;
+  box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+}
+
+.card-class-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.c11-btn {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border-color: #a7f3d0 !important;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.5) !important;
+}
+
+.c11-btn:hover {
+  background: linear-gradient(135deg, #34d399, #10b981) !important;
+}
+
+@media (max-width: 850px) {
+  .senior-portal-grid {
+    grid-template-columns: 1fr;
+  }
+}
