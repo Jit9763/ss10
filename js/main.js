@@ -48,8 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
   tabButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       tabButtons.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      currentFilter = e.target.getAttribute('data-subject');
+      const target = e.currentTarget || e.target;
+      target.classList.add('active');
+      currentFilter = target.getAttribute('data-subject') || 'all';
       filterAndRender();
     });
   });
@@ -82,20 +83,25 @@ function renderChapters(data) {
     return;
   }
 
-  data.forEach((chapter, index) => {
+  data.forEach((chapter) => {
     const card = document.createElement('div');
     card.className = 'chapter-card';
     
     let badgeClass = `badge-${chapter.subject}`;
     
+    // Notes link: if standalone copy_master_*.html exists (like geo7, hist1..5), open it directly!
+    let notesUrl = (chapter.id === 'geo7' || chapter.id.startsWith('hist')) ? `copy_master_${chapter.id}.html` : `notes_html_view.html?id=${chapter.id}`;
+    let copyUrl = `notes_copy_view.html?id=${chapter.id}`;
+    let qaUrl = `qa_master_${chapter.id}.html`;
+
     card.innerHTML = `
       <span class="subject-badge ${badgeClass}">${chapter.subjectName}</span>
       <div class="chapter-num">${String(chapter.num).padStart(2, '0')}</div>
       <h3 class="chapter-title">${chapter.title}</h3>
       <div class="chapter-actions">
-        <button class="btn-primary" onclick="window.open(\'qa_master_\' + chapter.id + \'.html\', \'_blank\')">🌍 संपूर्ण नोट्स देखें (Premium HTML)</button>
-        <button class="btn-secondary-notes" onclick="window.open(\'qa_master_\' + chapter.id + \'.html\', \'_blank\')">📝 छात्र नोट्स (Copy View)</button>
-        <button class="btn-secondary-qa" onclick="window.open(`qa_master_${chapter.id}.html`, `_blank`)">❓ प्रश्न-उत्तर (Master Q&A)</button>
+        <button class="btn-primary" onclick="window.open('${notesUrl}', '_blank')">🌍 संपूर्ण नोट्स देखें (Premium HTML)</button>
+        <button class="btn-secondary-notes" onclick="window.open('${copyUrl}', '_blank')">📝 छात्र नोट्स (Copy View)</button>
+        <button class="btn-secondary-qa" onclick="window.open('${qaUrl}', '_blank')">❓ प्रश्न-उत्तर (Master Q&A)</button>
       </div>
     `;
     grid.appendChild(card);
