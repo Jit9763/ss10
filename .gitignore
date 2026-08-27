@@ -13,3 +13,7 @@ images/page_renders/
 .DS_Store
 Thumbs.db
 node_modules/
+*.log
+push_result.txt
+task_318_out.txt
+
