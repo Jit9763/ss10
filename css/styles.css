@@ -411,3 +411,83 @@ footer {
 ::-webkit-scrollbar-track { background: #0b0f19; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
+
+
+/* Class 12 Portal Link Banner Styles */
+.class12-portal-card {
+  margin-top: 30px;
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.95), rgba(67, 56, 202, 0.95));
+  border: 3px solid #818cf8;
+  border-radius: 20px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.class12-portal-card:hover {
+  transform: translateY(-4px);
+  border-color: #fbbf24;
+  box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+}
+
+.c12-badge {
+  display: inline-block;
+  background: #d97706;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #f59e0b;
+}
+
+.c12-info h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  font-weight: 900;
+}
+
+.c12-info p {
+  font-size: 1.05rem !important;
+  color: #c7d2fe !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.c12-link-btn {
+  white-space: nowrap;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: 16px 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
+  transition: all 0.3s ease;
+  border: 2px solid #fef08a;
+  display: inline-block;
+}
+
+.c12-link-btn:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(251, 191, 36, 0.7);
+}
+
+@media (max-width: 768px) {
+  .class12-portal-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .c12-link-btn {
+    width: 100%;
+  }
+}
