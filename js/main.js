@@ -95,7 +95,7 @@ function renderChapters(data) {
       <div class="chapter-actions">
         <button class="btn-primary" onclick="window.open('notes_html_view.html?id=${chapter.id}', '_blank')">🌍 संपूर्ण नोट्स देखें (Premium HTML)</button>
         <button class="btn-secondary-notes" onclick="window.open('notes_copy_view.html?id=${chapter.id}', '_blank')">📝 छात्र नोट्स (Copy View)</button>
-        <button class="btn-secondary-qa" onclick="window.open(chapter.id === 'geo7' ? 'qa_master_geo7.html' : 'qa_view.html?id=' + chapter.id, '_blank')">❓ प्रश्न-उत्तर (Master Q&A)</button>
+        <button class="btn-secondary-qa" onclick="window.open((chapter.id.startsWith('hist') || chapter.id === 'geo7') ? 'qa_master_' + chapter.id + '.html' : 'qa_view.html?id=' + chapter.id, '_blank')">❓ प्रश्न-उत्तर (Master Q&A)</button>
       </div>
     `;
     grid.appendChild(card);
