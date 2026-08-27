@@ -86,7 +86,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            
             const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            if (id) {
+                window.location.replace('qa_master_' + id + '.html');
+                return;
+            }
+
             const id = urlParams.get('id') || 'hist1';
             
             loadQnA(id);
