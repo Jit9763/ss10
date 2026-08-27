@@ -587,14 +587,177 @@
 
     <div class="topic-header">4.2 संचार सेवाएं (Communication Services):</div>
 
-    <div class="img-box">
-        <img src="images/geo7/ncert_geo7_fig12_satellite_communication.webp" alt="चित्र 7.12 (आधिकारिक NCERT हिंदी पाठ्यपुस्तक अध्याय 7): इंसैट (INSAT) उपग्रह संचार और पृथ्वी की कक्षा में चक्कर काटता उपग्रह।">
-        <div class="img-caption">चित्र 7.12 (आधिकारिक NCERT हिंदी पाठ्यपुस्तक अध्याय 7): इंसैट (INSAT) उपग्रह संचार और पृथ्वी की कक्षा में चक्कर काटता उपग्रह (INSAT Satellite Orbiting Earth)।</div>
-        <div class="img-desc">
-            <b>🔍 चित्र का विस्तृत विवरण & भौगोलिक संदर्भ:</b><br>
-            • <b>क्या दर्शाता है:</b> अंतरिक्ष में पृथ्वी की कक्षा में चक्कर काटता भारतीय इंसैट (INSAT) उपग्रह संचार नेटवर्क।<br>
-            • <b>भौगोलिक महत्व:</b> उपग्रह संचार ने देशव्यापी दूरदर्शन, आकाशवाणी, इंटरनेट, मोबाइल कनेक्टिविटी तथा चक्रवात/मौसम चेतावनियों को पूरे भारत से जोड़ दिया है।
+    <div class="img-box" style="background: #020617; border: 5px solid #0284c7; box-shadow: 0 12px 35px rgba(2, 132, 199, 0.4);">
+        <div style="font-size: 26pt; font-weight: 900; color: #38bdf8; margin-bottom: 20px; text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);">
+            📡 3D लाइव सिम्युलेटर (Live Orbit Simulator): इंसैट (INSAT) उपग्रह का पृथ्वी की कक्षा में परिक्रमण
         </div>
+        
+        <canvas id="satelliteOrbitCanvas" width="900" height="520" style="background: #020617; border-radius: 18px; border: 3px solid #1e293b; display: block; margin: 0 auto; box-shadow: inset 0 0 30px rgba(0,0,0,0.8);"></canvas>
+        
+        <div style="margin-top: 22px; text-align: center;">
+            <button onclick="toggleOrbitPlay()" id="playBtn" style="font-size: 22pt; font-weight: 900; padding: 14px 32px; background: #0284c7; color: white !important; border: none; border-radius: 14px; cursor: pointer; margin-right: 20px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.5);">⏸️ पॉज़ / प्ले (Pause/Play)</button>
+            <button onclick="changeOrbitSpeed()" id="speedBtn" style="font-size: 22pt; font-weight: 900; padding: 14px 32px; background: #0369a1; color: white !important; border: none; border-radius: 14px; cursor: pointer; box-shadow: 0 4px 14px rgba(3, 105, 161, 0.5);">⚡ गति: 1x (Speed)</button>
+        </div>
+        
+        <div class="img-caption" style="margin-top: 25px; background: #0369a1; color: #ffffff !important; border-color: #38bdf8;">
+            चित्र 7.12 (आधिकारिक NCERT हिंदी पाठ्यपुस्तक अध्याय 7): इंसैट (INSAT) उपग्रह संचार और पृथ्वी की कक्षा में चक्कर काटता उपग्रह (INSAT Satellite Orbiting Earth)।
+        </div>
+        
+        <div class="img-desc" style="background: #0f172a; border-left-color: #38bdf8; color: #e2e8f0 !important;">
+            <b style="color: #38bdf8 !important;">🔍 सिम्युलेटर एवं चित्र का विस्तृत विवरण & भौगोलिक संदर्भ:</b><br>
+            • <b>क्या दर्शाता है:</b> अंतरिक्ष में पृथ्वी की कक्षा में 360° निरंतर चक्र लगाता भारतीय इंसैट (INSAT) संचार उपग्रह जो भारत पर सिग्नेचर रेडियो बीम (Radio Signals) भेजता है।<br>
+            • <b>भौगोलिक महत्व:</b> उपग्रह संचार ने देशव्यापी दूरदर्शन, आकाशवाणी, दूरसंचार, मोबाइल नेटवर्क तथा चक्रवात/मौसम चेतावनियों को पूरे भारत से जोड़ दिया है।
+        </div>
+        
+        <script>
+            (function() {
+                var canvas = document.getElementById('satelliteOrbitCanvas');
+                if(!canvas) return;
+                var ctx = canvas.getContext('2d');
+                var angle = 0;
+                var isPlaying = true;
+                var speedMultiplier = 1;
+                var pulseRadius = 0;
+                
+                // Stars background
+                var stars = [];
+                for(var i=0; i<120; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        r: Math.random() * 2 + 0.5,
+                        alpha: Math.random()
+                    });
+                }
+                
+                function drawSim() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    // Draw Stars
+                    stars.forEach(function(s) {
+                        ctx.fillStyle = 'rgba(255, 255, 255, ' + (0.3 + 0.7 * Math.sin(Date.now()*0.003 + s.x)) + ')';
+                        ctx.beginPath();
+                        ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+                        ctx.fill();
+                    });
+                    
+                    var cx = canvas.width / 2;
+                    var cy = canvas.height / 2;
+                    var earthR = 110;
+                    
+                    // Atmosphere Outer Glow
+                    var grad = ctx.createRadialGradient(cx, cy, earthR, cx, cy, earthR + 30);
+                    grad.addColorStop(0, 'rgba(56, 189, 248, 0.6)');
+                    grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+                    ctx.fillStyle = grad;
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, earthR + 30, 0, Math.PI*2);
+                    ctx.fill();
+                    
+                    // Earth Main Sphere
+                    var earthGrad = ctx.createRadialGradient(cx - 30, cy - 30, 20, cx, cy, earthR);
+                    earthGrad.addColorStop(0, '#3b82f6');
+                    earthGrad.addColorStop(0.7, '#1d4ed8');
+                    earthGrad.addColorStop(1, '#0f172a');
+                    ctx.fillStyle = earthGrad;
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, earthR, 0, Math.PI*2);
+                    ctx.fill();
+                    
+                    // India / Asia Landmass (Green Silhouette)
+                    ctx.fillStyle = '#22c55e';
+                    ctx.beginPath();
+                    ctx.moveTo(cx - 10, cy - 35);
+                    ctx.lineTo(cx + 25, cy - 45);
+                    ctx.lineTo(cx + 45, cy - 10);
+                    ctx.lineTo(cx + 20, cy + 45);
+                    ctx.lineTo(cx - 5, cy + 10);
+                    ctx.closePath();
+                    ctx.fill();
+                    
+                    // Elliptical Orbit Track
+                    var rx = 320;
+                    var ry = 140;
+                    ctx.strokeStyle = 'rgba(6, 182, 212, 0.4)';
+                    ctx.lineWidth = 3;
+                    ctx.setLineDash([8, 6]);
+                    ctx.beginPath();
+                    ctx.ellipse(cx, cy, rx, ry, -0.2, 0, Math.PI*2);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                    
+                    // Calculate Satellite Position on Orbit
+                    var satX = cx + rx * Math.cos(angle) * Math.cos(-0.2) - ry * Math.sin(angle) * Math.sin(-0.2);
+                    var satY = cy + rx * Math.cos(angle) * Math.sin(-0.2) + ry * Math.sin(angle) * Math.cos(-0.2);
+                    
+                    // Radio Signal Pulse Waves from Satellite to Earth
+                    pulseRadius = (pulseRadius + 1.5 * speedMultiplier) % 120;
+                    ctx.strokeStyle = 'rgba(56, 189, 248, ' + (1 - pulseRadius/120) + ')';
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.arc(satX, satY, pulseRadius, 0, Math.PI*2);
+                    ctx.stroke();
+                    
+                    // Beam Line connecting Satellite to India on Earth
+                    ctx.strokeStyle = 'rgba(234, 179, 8, 0.6)';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(satX, satY);
+                    ctx.lineTo(cx + 10, cy);
+                    ctx.stroke();
+                    
+                    // Draw ISRO INSAT Satellite Model
+                    ctx.save();
+                    ctx.translate(satX, satY);
+                    ctx.rotate(angle + Math.PI/2);
+                    
+                    // Solar Panels
+                    ctx.fillStyle = '#1e3a8a';
+                    ctx.strokeStyle = '#3b82f6';
+                    ctx.lineWidth = 2;
+                    ctx.fillRect(-65, -10, 45, 20); // Left Solar Panel
+                    ctx.strokeRect(-65, -10, 45, 20);
+                    ctx.fillRect(20, -10, 45, 20);  // Right Solar Panel
+                    ctx.strokeRect(20, -10, 45, 20);
+                    
+                    // Main Body Box (Gold Foil)
+                    ctx.fillStyle = '#eab308';
+                    ctx.strokeStyle = '#ffffff';
+                    ctx.lineWidth = 2;
+                    ctx.fillRect(-20, -15, 40, 30);
+                    ctx.strokeRect(-20, -15, 40, 30);
+                    
+                    // Dish Antenna
+                    ctx.fillStyle = '#f8fafc';
+                    ctx.beginPath();
+                    ctx.arc(0, 15, 14, 0, Math.PI, false);
+                    ctx.fill();
+                    
+                    ctx.restore();
+                    
+                    // Update angle if playing
+                    if(isPlaying) {
+                        angle += 0.015 * speedMultiplier;
+                    }
+                    
+                    requestAnimationFrame(drawSim);
+                }
+                
+                window.toggleOrbitPlay = function() {
+                    isPlaying = !isPlaying;
+                    document.getElementById('playBtn').innerHTML = isPlaying ? "⏸️ पॉज़ (Pause)" : "▶️ प्ले (Play Orbit)";
+                };
+                
+                window.changeOrbitSpeed = function() {
+                    if(speedMultiplier === 1) speedMultiplier = 2;
+                    else if(speedMultiplier === 2) speedMultiplier = 3;
+                    else speedMultiplier = 1;
+                    document.getElementById('speedBtn').innerHTML = "⚡ गति: " + speedMultiplier + "x";
+                };
+                
+                drawSim();
+            })();
+        </script>
     </div>
 
     <div class="img-box">
