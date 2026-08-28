@@ -1,33 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
-  <rect width="1200" height="675" fill="#022c22"/>
-
-  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#065f46" stroke="#10b981" stroke-width="4"/>
-  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.8: प्रसिद्ध 'चिपको आंदोलन' एवं जन-भागीदारी (Chipko Movement)</text>
+  <rect width="1400" height="950" fill="#0f172a"/>
+  
+  <rect x="40" y="25" width="1320" height="100" rx="20" fill="#047857" stroke="#34d399" stroke-width="6"/>
+  <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 6.2: प्रसिद्ध 'चिपको आंदोलन' एवं जन-भागीदारी</text>
 
   <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
-    <!-- Left Box -->
-    <rect x="50" y="115" width="530" height="530" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="4"/>
-    <text x="70" y="155" font-size="30" fill="#a7f3d0">🌲 चिपको आंदोलन की ऐतिहासिक पृष्ठभूमि:</text>
-    <text x="70" y="195" font-size="26" fill="#ffffff">• स्थान: गढ़वाल हिमालय (उत्तराखंड का रेणी गांव, 1970)।</text>
-    <text x="70" y="230" font-size="26" fill="#ffffff">• नेतृत्व: सुंदरलाल बहुगुणा, चंडी प्रसाद भट्ट व गौरा देवी।</text>
-    <text x="70" y="265" font-size="26" fill="#ffffff">• सत्याग्रह: ग्रामीणों और विशेषकर महिलाओं ने पेड़ों से</text>
-    <text x="88" y="290" font-size="26" fill="#ffffff">  चिपकाव कर व्यावसायिक कटाई रोकी।</text>
-    <text x="70" y="325" font-size="26" fill="#a7f3d0">• इसने साबित किया कि स्थानीय पौधे लगाकर वनों का</text>
-    <text x="88" y="350" font-size="26" fill="#a7f3d0">  पुनरोपण संभव है।</text>
-    <text x="70" y="395" font-size="26" fill="#fbbf24">• प्रसिद्ध नारा:</text>
-    <text x="88" y="420" font-size="26" fill="#fbbf24">  "क्या हैं जंगल के उपकार? मिट्टी, पानी और बयार।</text>
-    <text x="88" y="445" font-size="26" fill="#fbbf24">   मिट्टी, पानी और बयार, जिंदा रहने के आधार।"</text>
+    <rect x="40" y="150" width="1320" height="760" rx="20" fill="#064e3b" stroke="#10b981" stroke-width="5"/>
+    <text x="700" y="220" font-size="32" fill="#a7f3d0" text-anchor="middle">🌳 गढ़वाल हिमालय का ऐतिहासिक वृक्ष संरक्षण आंदोलन (1970)</text>
 
-    <!-- Right Box -->
-    <rect x="620" y="115" width="530" height="530" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="4"/>
-    <text x="640" y="155" font-size="30" fill="#a7f3d0">🌱 सामुदायिक पर्यावरण संरक्षण के अन्य उदाहरण:</text>
-    <text x="640" y="195" font-size="26" fill="#ffffff">• सरिस्का (राजस्थान): ग्रामीणों ने खनन कार्य के खिलाफ</text>
-    <text x="658" y="220" font-size="26" fill="#ffffff">  लड़ाई लड़ी और वन्यजीव कानून लागू करवाया।</text>
-    <text x="640" y="255" font-size="26" fill="#ffffff">• भैरोदेव डाकव 'सोंचुरी' (अलवर): 5 गांवों ने 1,200</text>
-    <text x="658" y="280" font-size="26" fill="#ffffff">  हेक्टेयर वन क्षेत्र को खुद का अभयारण्य घोषित किया।</text>
-    <text x="640" y="315" font-size="26" fill="#a7f3d0">• बिश्नोई समाज (राजस्थान): काले हिरण, चिंकारा व मोर</text>
-    <text x="658" y="340" font-size="26" fill="#a7f3d0">  की सुरक्षा हेतु अपने प्राणों की आहुति दी।</text>
-    <text x="640" y="375" font-size="26" fill="#ffffff">• बीज बचाओ आंदोलन (टिहरी): बिना रसायनों के</text>
-    <text x="658" y="400" font-size="26" fill="#ffffff">  पारंपरिक बीजों से जैविक खेती।</text>
+    <text x="80" y="295" font-size="26" fill="#ffffff">• स्थान: उत्तराखंड का गढ़वाल हिमालय (रेणी गांव, 1970 दशक)।</text>
+
+    <text x="80" y="390" font-size="26" fill="#a7f3d0">• मुख्य नेतृत्वकर्ता: सुंदरलाल बहुगुणा, चंडी प्रसाद भट्ट व गौरा देवी।</text>
+
+    <text x="80" y="485" font-size="26" fill="#ffffff">• चिपको सत्याग्रह: ग्रामीणों व महिलाओं ने पेड़ों से चिपक कर कटाई रोकी।</text>
+
+    <text x="80" y="580" font-size="26" fill="#ffffff">• संदेश: ठेकेदारों के कुल्हाड़ों के खिलाफ स्थानीय प्रजातियों का पौधारोपण।</text>
+
+    <text x="80" y="675" font-size="26" fill="#fbbf24">• प्रसिद्ध नारा: "क्या हैं जंगल के उपकार? मिट्टी, पानी और बयार।</text>
+    <text x="115" y="725" font-size="26" fill="#fbbf24">  मिट्टी, पानी और बयार, जिंदा रहने के आधार।"</text>
+
+    <text x="80" y="820" font-size="26" fill="#a7f3d0">• सामुदायिक वन संरक्षण एवं पर्यावरण जागरूकता का विश्वप्रसिद्ध प्रतीक।</text>
   </g>
 </svg>

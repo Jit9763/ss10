@@ -1,43 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="100%" height="100%">
-  <rect width="1400" height="1000" fill="#0f172a"/>
-  <rect x="50" y="25" width="1300" height="95" rx="20" fill="#b91c1c" stroke="#f87171" stroke-width="6"/>
-  <text x="700" y="85" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.4: वनों की कटाई और पर्यावरण विनाश के मुख्य कारण</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1400" height="950" fill="#0f172a"/>
+  
+  <rect x="40" y="25" width="1320" height="100" rx="20" fill="#991b1b" stroke="#f87171" stroke-width="6"/>
+  <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 3.2: भारत में वन विनाश के 4 मुख्य कारक</text>
 
   <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
     <!-- Box 1 -->
-    <rect x="50" y="150" width="620" height="380" rx="20" fill="#1e293b" stroke="#f87171" stroke-width="5"/>
-    <text x="360" y="205" font-size="27" fill="#fca5a5" text-anchor="middle">🌾 1. कृषि विस्तार (Agriculture)</text>
-    <text x="80" y="265" font-size="30" fill="#ffffff">• 1951 से 1980 के बीच 26,200 वर्ग किमी</text>
-    <text x="110" y="305" font-size="30" fill="#ffffff">वन क्षेत्र को कृषि भूमि में बदला गया।</text>
-    <text x="80" y="360" font-size="30" fill="#fde68a">• पूर्वोत्तर व मध्य भारत में झूम खेती</text>
-    <text x="110" y="400" font-size="30" fill="#fde68a">(Slash &amp; Burn Agriculture) से ह्रास।</text>
-    <text x="80" y="460" font-size="30" fill="#a7f3d0">• कृषि भूमि की मांग निरंतर बढ़ना।</text>
+    <rect x="40" y="150" width="630" height="360" rx="20" fill="#1e293b" stroke="#f87171" stroke-width="5"/>
+    <text x="355" y="210" font-size="27" fill="#fca5a5" text-anchor="middle">🌾 1. कृषि का विस्तार (Agricultural Expansion)</text>
+    <text x="70" y="270" font-size="23" fill="#ffffff">• 1951-1980 के बीच 26,200 वर्ग किमी से</text>
+    <text x="95" y="310" font-size="23" fill="#ffffff">  अधिक वन क्षेत्र कृषि भूमि में बदला गया।</text>
+    <text x="70" y="375" font-size="23" fill="#fca5a5">• पूर्वोत्तर व मध्य भारत में झूम खेती</text>
+    <text x="95" y="415" font-size="23" fill="#fca5a5">  (Slash &amp; Burn Agriculture) से वन कटाई।</text>
 
     <!-- Box 2 -->
-    <rect x="730" y="150" width="620" height="380" rx="20" fill="#1e293b" stroke="#f87171" stroke-width="5"/>
-    <text x="1040" y="205" font-size="27" fill="#fca5a5" text-anchor="middle">🏞️ 2. नदी घाटी परियोजनाएं</text>
-    <text x="760" y="265" font-size="30" fill="#ffffff">• 1952 से अब तक 5,000 वर्ग किमी</text>
-    <text x="790" y="305" font-size="30" fill="#ffffff">से अधिक वन बांधों के कारण साफ हुए।</text>
-    <text x="760" y="360" font-size="30" fill="#7dd3fc">• नर्मदा सागर परियोजना (M.P.) से</text>
-    <text x="790" y="400" font-size="30" fill="#7dd3fc">40,000 हेक्टेयर वन जलमग्न हुए।</text>
-    <text x="760" y="460" font-size="30" fill="#fca5a5">• प्राकृतिक जैव विविधता का विनाश।</text>
+    <rect x="730" y="150" width="630" height="360" rx="20" fill="#1e293b" stroke="#38bdf8" stroke-width="5"/>
+    <text x="1045" y="210" font-size="27" fill="#7dd3fc" text-anchor="middle">🌊 2. नदी घाटी परियोजनाएं (River Projects)</text>
+    <text x="760" y="270" font-size="23" fill="#ffffff">• 1952 से अब तक 5,000 वर्ग किमी से</text>
+    <text x="785" y="310" font-size="23" fill="#ffffff">  अधिक वन क्षेत्र बांधों से जलमग्न।</text>
+    <text x="760" y="375" font-size="23" fill="#7dd3fc">• नर्मदा सागर परियोजना (म.प्र.) से 40,000</text>
+    <text x="785" y="415" font-size="23" fill="#7dd3fc">  हेक्टेयर सघन वन क्षेत्र जलमग्न हुआ।</text>
 
     <!-- Box 3 -->
-    <rect x="50" y="560" width="620" height="390" rx="20" fill="#1e293b" stroke="#f59e0b" stroke-width="5"/>
-    <text x="360" y="615" font-size="27" fill="#fde68a" text-anchor="middle">⛏️ 3. खनन कार्य (Mining)</text>
-    <text x="80" y="675" font-size="30" fill="#ffffff">• पश्चिम बंगाल में बक्सा टाइगर रिजर्व</text>
-    <text x="110" y="715" font-size="30" fill="#ffffff">डोलोमाइट खनन के कारण खतरे में है।</text>
-    <text x="80" y="770" font-size="30" fill="#fca5a5">• हाथियों के प्राकृतिक आवागमन मार्ग</text>
-    <text x="110" y="810" font-size="30" fill="#fca5a5">(Elephant Corridors) विखंडित हुए।</text>
-    <text x="80" y="870" font-size="30" fill="#fde68a">• भू-निम्नीकरण व मृदा अपरदन।</text>
+    <rect x="40" y="540" width="630" height="360" rx="20" fill="#1e293b" stroke="#eab308" stroke-width="5"/>
+    <text x="355" y="600" font-size="27" fill="#fef08a" text-anchor="middle">⛏️ 3. खनन कार्य (Mining Operations)</text>
+    <text x="70" y="660" font-size="23" fill="#ffffff">• खनन गतिविधियों से वनों का भारी विनाश।</text>
+    <text x="70" y="725" font-size="23" fill="#fef08a">• बक्सा टाइगर रिजर्व (पश्चिम बंगाल)</text>
+    <text x="95" y="765" font-size="23" fill="#fef08a">  डोलोमाइट खनन से गंभीर खतरे में।</text>
+    <text x="70" y="830" font-size="23" fill="#ffffff">• हाथी गलियारे विखंडित व बाधित।</text>
 
     <!-- Box 4 -->
-    <rect x="730" y="560" width="620" height="390" rx="20" fill="#1e293b" stroke="#f59e0b" stroke-width="5"/>
-    <text x="1040" y="615" font-size="27" fill="#fde68a" text-anchor="middle">🔥 4. अति-पशुचारण व ईंधन</text>
-    <text x="760" y="675" font-size="30" fill="#ffffff">• ईंधन लकड़ी और पशुचारण का दबाव।</text>
-    <text x="760" y="725" font-size="30" fill="#ffffff">• इमारती लकड़ी व रेल लाइनों की मांग।</text>
-    <text x="760" y="775" font-size="30" fill="#fde68a">• एकल व्यापारिक वृक्षारोपण रोपण</text>
-    <text x="790" y="815" font-size="30" fill="#fde68a">(Monoculture Plantation) से नुकसान।</text>
-    <text x="760" y="870" font-size="30" fill="#ffffff">• सागौन व चीड़ रोपण से वन ह्रास।</text>
+    <rect x="730" y="540" width="630" height="360" rx="20" fill="#1e293b" stroke="#22c55e" stroke-width="5"/>
+    <text x="1045" y="600" font-size="27" fill="#86efac" text-anchor="middle">🪵 4. अति-पशुचारण व ईंधन संग्रह</text>
+    <text x="760" y="660" font-size="23" fill="#ffffff">• ईंधन लकड़ी संग्रह एवं अनियंत्रित</text>
+    <text x="785" y="700" font-size="23" fill="#ffffff">  पशुचारण से वन आवरण का ह्रास।</text>
+    <text x="760" y="765" font-size="23" fill="#86efac">• व्यावसायिक सागौन व चीड़ रोपण से</text>
+    <text x="785" y="805" font-size="23" fill="#86efac">  प्राकृतिक प्राकृतिक विविधता का विनाश।</text>
   </g>
 </svg>
