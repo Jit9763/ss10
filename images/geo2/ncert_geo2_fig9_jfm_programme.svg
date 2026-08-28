@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1200" height="675" fill="#0f172a"/>
+
+  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#047857" stroke="#34d399" stroke-width="4"/>
+  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.9: संयुक्त वन प्रबंधन (Joint Forest Management - JFM Programme 1988)</text>
+
+  <!-- Flowchart Diagram -->
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
+    <!-- Box 1 -->
+    <rect x="50" y="125" width="350" height="520" rx="16" fill="#1e3a8a" stroke="#60a5fa" stroke-width="4"/>
+    <circle cx="225" cy="185" r="40" fill="#3b82f6"/>
+    <text x="225" y="196" font-size="28" fill="#ffffff" text-anchor="middle">1988</text>
+    <text x="225" y="260" font-size="30" fill="#93c5fd" text-anchor="middle">1. औपचारिक प्रस्ताव</text>
+    <text x="225" y="290" font-size="28" fill="#60a5fa" text-anchor="middle">(Odisha JFM Resolution)</text>
+    <text x="70" y="340" font-size="26" fill="#ffffff">• ओडिशा राज्य ने 1988 में</text>
+    <text x="85" y="365" font-size="26" fill="#ffffff">  पहला JFM प्रस्ताव पास किया।</text>
+    <text x="70" y="400" font-size="26" fill="#93c5fd">• क्षरित वनों (Degraded</text>
+    <text x="85" y="425" font-size="26" fill="#93c5fd">  Forests) के प्रबंधन और</text>
+    <text x="85" y="450" font-size="26" fill="#93c5fd">  सुरक्षा की पहल।</text>
+    <text x="70" y="485" font-size="26" fill="#ffffff">• भारत में सफल मॉडल।</text>
+
+    <!-- Box 2 -->
+    <rect x="425" y="125" width="350" height="520" rx="16" fill="#065f46" stroke="#34d399" stroke-width="4"/>
+    <circle cx="600" cy="185" r="40" fill="#10b981"/>
+    <text x="600" y="196" font-size="32" fill="#ffffff" text-anchor="middle">संस्था</text>
+    <text x="600" y="260" font-size="30" fill="#a7f3d0" text-anchor="middle">2. सुरक्षा समितियां</text>
+    <text x="600" y="290" font-size="28" fill="#34d399" text-anchor="middle">(Village Forest Committees)</text>
+    <text x="445" y="340" font-size="26" fill="#ffffff">• गांव स्तर पर संस्थाएं बनाई</text>
+    <text x="460" y="365" font-size="26" fill="#ffffff">  जाती हैं।</text>
+    <text x="445" y="400" font-size="26" fill="#a7f3d0">• इसमें ग्रामीण व वन विभाग</text>
+    <text x="460" y="425" font-size="26" fill="#a7f3d0">  विशेष रूप से क्षरित भूमि</text>
+    <text x="460" y="450" font-size="26" fill="#a7f3d0">  पर रक्षण कार्य करते हैं।</text>
+
+    <!-- Box 3 -->
+    <rect x="800" y="125" width="350" height="520" rx="16" fill="#78350f" stroke="#fbbf24" stroke-width="4"/>
+    <circle cx="975" cy="185" r="40" fill="#d97706"/>
+    <text x="975" y="196" font-size="32" fill="#ffffff" text-anchor="middle">लाभ</text>
+    <text x="975" y="260" font-size="30" fill="#fde68a" text-anchor="middle">3. पारस्परिक लाभ</text>
+    <text x="975" y="290" font-size="28" fill="#fbbf24" text-anchor="middle">(Benefits Sharing)</text>
+    <text x="820" y="340" font-size="26" fill="#ffffff">• गैर-इमारती वन उत्पाद</text>
+    <text x="835" y="365" font-size="26" fill="#ffffff">  (NTFP) में हकदारी।</text>
+    <text x="820" y="400" font-size="26" fill="#fde68a">• सफल पुनर्जनन पर इमारती</text>
+    <text x="835" y="425" font-size="26" fill="#fde68a">  लकड़ी में हिस्सेदारी।</text>
+    <text x="820" y="460" font-size="26" fill="#ffffff">• पर्यावरण व आजीविका दोनों</text>
+    <text x="835" y="485" font-size="26" fill="#ffffff">  का विकास।</text>
+  </g>
+</svg>

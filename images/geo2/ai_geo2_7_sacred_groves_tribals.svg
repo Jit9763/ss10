@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1200" height="675" fill="#022c22"/>
+  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#065f46" stroke="#10b981" stroke-width="4"/>
+  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 6.7: पवित्र उपवन (Sacred Groves / देवराई)</text>
+
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
+    <rect x="60" y="125" width="1080" height="510" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="4"/>
+    <text x="600" y="170" font-size="32" fill="#a7f3d0" text-anchor="middle">🛕 प्रकृति पूजा एवं जनजातीय वन संरक्षण परंपराएं</text>
+
+    <text x="90" y="215" font-size="26" fill="#ffffff">• पवित्र उपवन (Devrai / Sacred Groves): वनों के ऐसे अछूते भाग</text>
+    <text x="115" y="243" font-size="26" fill="#ffffff">जिन्हें स्थानीय देवी-देवताओं का निवास मानकर संरक्षित किया जाता है।</text>
+
+    <text x="90" y="285" font-size="26" fill="#a7f3d0">• छोटानागपुर क्षेत्र: मुंडा और संताल जनजातियां महुआ और</text>
+    <text x="115" y="313" font-size="26" fill="#a7f3d0">कदंब के वृक्षों की पूजा करती हैं।</text>
+
+    <text x="90" y="355" font-size="26" fill="#ffffff">• ओडिशा व बिहार: जनजातियां विवाह के अवसर पर इमली और</text>
+    <text x="115" y="383" font-size="26" fill="#ffffff">आम के पेड़ों की पूजा करती हैं।</text>
+
+    <text x="90" y="425" font-size="26" fill="#fbbf24">• पीपल और वटवृक्ष को पूरे भारत में पवित्र मानकर रक्षित किया जाता है।</text>
+  </g>
+</svg>

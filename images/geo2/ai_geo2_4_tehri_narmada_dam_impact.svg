@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1200" height="675" fill="#0f172a"/>
+  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#0369a1" stroke="#38bdf8" stroke-width="4"/>
+  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 3.5: नदी घाटी परियोजनाओं का पारिस्थितिकी प्रभाव</text>
+
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
+    <rect x="60" y="125" width="1080" height="510" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+    <text x="600" y="170" font-size="32" fill="#7dd3fc" text-anchor="middle">🌊 बड़े बांधों से वन एवं जैव विविधता का ह्रास</text>
+
+    <text x="90" y="215" font-size="26" fill="#ffffff">• 1952 से अब तक 5,000 वर्ग किमी से अधिक वन क्षेत्र</text>
+    <text x="115" y="243" font-size="26" fill="#ffffff">नदी घाटी परियोजनाओं के कारण साफ किए गए।</text>
+
+    <text x="90" y="285" font-size="26" fill="#7dd3fc">• नर्मदा सागर परियोजना (मध्य प्रदेश) से 40,000 हेक्टेयर</text>
+    <text x="115" y="313" font-size="26" fill="#7dd3fc">सघन वन क्षेत्र पूर्णतः जलमग्न होने की आशंका।</text>
+
+    <text x="90" y="355" font-size="26" fill="#ffffff">• टिहरी बांध (उत्तराखंड): भागीरथी नदी घाटी में विशाल</text>
+    <text x="115" y="383" font-size="26" fill="#ffffff">जलाशय निर्माण से बहुमूल्य वनों और बस्तियों का जलमग्न होना।</text>
+
+    <text x="90" y="425" font-size="26" fill="#fbbf24">• जलमग्नता से जलीय व स्थलीय जीवों के प्राकृतिक आवास नष्ट</text>
+    <text x="115" y="453" font-size="26" fill="#fbbf24">होते हैं और मृदा अपरदन की गति तीव्र होती है।</text>
+  </g>
+</svg>

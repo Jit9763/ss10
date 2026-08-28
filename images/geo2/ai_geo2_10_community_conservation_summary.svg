@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1400" height="950" fill="#0f172a"/>
+  
+  <!-- Header Title Banner -->
+  <rect x="40" y="25" width="1320" height="100" rx="20" fill="#047857" stroke="#34d399" stroke-width="6"/>
+  <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">समुदाय और राज्य द्वारा वन व वन्यजीव संरक्षण का मास्टर मॉडल</text>
+
+  <!-- Main Container Frame -->
+  <rect x="40" y="150" width="1320" height="760" rx="20" fill="#064e3b" stroke="#10b981" stroke-width="5"/>
+  <text x="700" y="215" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#a7f3d0" text-anchor="middle">🛡️ वन एवं वन्यजीव संरक्षण का द्विपक्षीय मॉडल (Master Model)</text>
+
+  <!-- Section 1 -->
+  <text x="80" y="280" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fbbf24">1. राज्यीय व कानूनी पहल (State &amp; Legislative Measures):</text>
+  <text x="110" y="330" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">• 1972 वन्यजीव संरक्षण अधिनियम, 1973 प्रोजेक्ट टाइगर, आरक्षित वनों का सीमांकन।</text>
+
+  <!-- Section 2 -->
+  <text x="80" y="415" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fbbf24">2. सामुदायिक व पारंपरिक पहल (Community Measures):</text>
+  <text x="110" y="465" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">• चिपको आंदोलन (उत्तराखंड), बिश्नोई समाज (राजस्थान), पवित्र उपवन, बीज बचाओ आंदोलन।</text>
+
+  <!-- Section 3 -->
+  <text x="80" y="550" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fbbf24">3. संयुक्त सहभागिता (Joint Co-operative Framework):</text>
+  <text x="110" y="600" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">• संयुक्त वन प्रबंधन (JFM 1988) - ग्राम सुरक्षा समितियों द्वारा स्थानीय आजीविका का विकास।</text>
+
+  <!-- Conclusion Box -->
+  <rect x="120" y="670" width="1160" height="190" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+  <text x="700" y="735" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#38bdf8" text-anchor="middle">💡 NCERT निष्कर्ष (Key Takeaway):</text>
+  <text x="700" y="790" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#a7f3d0" text-anchor="middle">"पर्यावरण संरक्षण केवल कानूनी प्रतिबंधों से नहीं,</text>
+  <text x="700" y="835" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#a7f3d0" text-anchor="middle">स्थानीय समुदायों की सक्रिय भागीदारी से ही संभव है।"</text>
+</svg>

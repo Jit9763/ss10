@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1400" height="950" fill="#064e3b"/>
+  <rect x="50" y="25" width="1300" height="95" rx="20" fill="#047857" stroke="#34d399" stroke-width="6"/>
+  <text x="700" y="85" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.1: भारत में जैव विविधता (Biodiversity in India)</text>
+
+  <!-- Left Card: Flora -->
+  <rect x="50" y="150" width="620" height="750" rx="20" fill="#022c22" stroke="#34d399" stroke-width="5"/>
+  <text x="360" y="210" font-family="'Segoe UI', Devanagari, sans-serif" font-size="30" font-weight="900" fill="#a7f3d0" text-anchor="middle">🌿 वनस्पतिजात (Flora of India)</text>
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">
+    <text x="80" y="275">• भारत में 47,000 पादप प्रजातियां हैं।</text>
+    <text x="110" y="315" fill="#a7f3d0">(विश्व की कुल वनस्पति का 10%)</text>
+    
+    <text x="80" y="375">• 15,000 फूल वाले पौधे हैं।</text>
+    <text x="110" y="415" fill="#a7f3d0">(15% प्रजातियां स्थानिक/Endemic हैं)</text>
+    
+    <text x="80" y="485" font-size="26" fill="#fbbf24">🚨 संकटग्रस्त वनस्पति:</text>
+    <text x="80" y="535">• महुआ की जंगली प्रजाति (Wild Mahua)।</text>
+    <text x="80" y="585">• हुब्बर्डिया हेप्टान्यूरॉन (दुर्लभ घास)।</text>
+    <text x="80" y="635">• हिमालयन यव (कैंसर रोधी टैक्सोल पौधा)।</text>
+    <text x="80" y="705" font-size="25" fill="#fca5a5">• 10% वनस्पति के लुप्त होने का संकट!</text>
+  </g>
+
+  <!-- Right Card: Fauna -->
+  <rect x="730" y="150" width="620" height="750" rx="20" fill="#022c22" stroke="#34d399" stroke-width="5"/>
+  <text x="1040" y="210" font-family="'Segoe UI', Devanagari, sans-serif" font-size="30" font-weight="900" fill="#a7f3d0" text-anchor="middle">🐅 प्राणीजात (Fauna of India)</text>
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">
+    <text x="760" y="275">• 81,000 से अधिक प्राणी प्रजातियां हैं।</text>
+    <text x="760" y="325">• 2,000 से अधिक पक्षी (विश्व का 13%)।</text>
+    <text x="760" y="375">• 2,546 मत्स्य प्रजातियां (विश्व का 12%)।</text>
+
+    <text x="760" y="450" font-size="26" fill="#fca5a5">🚨 संकटग्रस्त प्राणीजात:</text>
+    <text x="760" y="500">• एशियाई बाघ व एक-सींग वाला गेंडा।</text>
+    <text x="760" y="550">• काला हिरण, घड़ियाल व गिर शेर।</text>
+    <text x="760" y="600">• संगाई (मणिपुरी हिरण) व हिम तेंदुआ।</text>
+    <text x="760" y="670" font-size="25" fill="#fca5a5">• 20% स्तनधारियों के लुप्त होने का संकट!</text>
+  </g>
+</svg>

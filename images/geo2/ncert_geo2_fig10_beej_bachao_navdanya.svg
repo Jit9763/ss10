@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1200" height="675" fill="#022c22"/>
+
+  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#065f46" stroke="#10b981" stroke-width="4"/>
+  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.10: बीज बचाओ आंदोलन एवं नवधान्य (Beej Bachao Andolan &amp; Organic Agriculture)</text>
+
+  <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
+    <rect x="50" y="115" width="530" height="530" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="4"/>
+    <text x="70" y="155" font-size="30" fill="#a7f3d0">🌾 1. बीज बचाओ आंदोलन (टिहरी, उत्तराखंड):</text>
+    <text x="70" y="195" font-size="26" fill="#ffffff">• विजय जरधारी द्वारा शुरू किया गया आंदोलन।</text>
+    <text x="70" y="230" font-size="26" fill="#ffffff">• रासायनिक उर्वरकों और संकर बीजों (Hybrid Seeds)</text>
+    <text x="88" y="255" font-size="26" fill="#ffffff">  पर निर्भरता समाप्त करना।</text>
+    <text x="70" y="290" font-size="26" fill="#a7f3d0">• पारंपरिक बीजों (जैसे मंडुआ, झंगोरा, राजमा) का</text>
+    <text x="88" y="315" font-size="26" fill="#a7f3d0">  संरक्षण और बिना रसायनों के विविधतापूर्ण कृषि।</text>
+    <text x="70" y="355" font-size="26" fill="#ffffff">• आर्थिक रूप से लाभदायक एवं पर्यावरण-अनुकूल।</text>
+
+    <rect x="620" y="115" width="530" height="530" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="4"/>
+    <text x="640" y="155" font-size="30" fill="#a7f3d0">🌱 2. नवधान्य आंदोलन (Navdanya Movement):</text>
+    <text x="640" y="195" font-size="26" fill="#ffffff">• वंदना शिवा द्वारा स्थापित जैविक कृषि नेटवर्क।</text>
+    <text x="640" y="230" font-size="26" fill="#ffffff">• जैव विविधता संरक्षण और किसानों के अधिकारों की सुरक्षा।</text>
+    <text x="640" y="265" font-size="26" fill="#a7f3d0">• भारत भर में 150 से अधिक सामुदायिक बीज बैंक</text>
+    <text x="658" y="290" font-size="26" fill="#a7f3d0">  (Community Seed Banks) की स्थापना।</text>
+    <text x="640" y="325" font-size="26" fill="#ffffff">• देशी बीजों के पेटेंट (Biopiracy) के खिलाफ लड़ाई।</text>
+    <text x="640" y="360" font-size="26" fill="#fbbf24">• मृदा की उर्वरता व मानव स्वास्थ्य का संवर्धन।</text>
+  </g>
+</svg>
