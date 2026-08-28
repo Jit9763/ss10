@@ -1,18 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
-  <rect width="1200" height="675" fill="#064e3b"/>
-  <rect x="40" y="20" width="1120" height="75" rx="16" fill="#047857" stroke="#34d399" stroke-width="4"/>
-  <text x="600" y="68" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 5.6: भारत के जैव विविधता हॉटस्पॉट (Biodiversity Hotspots)</text>
+  <rect width="1400" height="950" fill="#0f172a"/>
+  
+  <rect x="40" y="25" width="1320" height="100" rx="20" fill="#047857" stroke="#34d399" stroke-width="6"/>
+  <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 5.6: भारत के 3 प्रमुख जैव विविधता हॉटस्पॉट</text>
 
-  <g font-family="'Segoe UI', Devanagari, sans-serif" font-weight="900">
-    <rect x="60" y="125" width="1080" height="510" rx="16" fill="#022c22" stroke="#34d399" stroke-width="4"/>
-    <text x="600" y="170" font-size="32" fill="#a7f3d0" text-anchor="middle">🏔️ 3 प्रमुख जैव विविधता हॉटस्पॉट क्षेत्र</text>
+  <rect x="40" y="150" width="1320" height="760" rx="20" fill="#064e3b" stroke="#10b981" stroke-width="5"/>
+  <text x="700" y="220" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#a7f3d0" text-anchor="middle">🌏 अति-समृद्ध जैव विविधता केंद्र (Biodiversity Hotspots)</text>
 
-    <text x="90" y="215" font-size="26" fill="#86efac">• 1. पश्चिमी घाट (Western Ghats): अत्यधिक स्थानिक प्रजातियां।</text>
+  <text x="80" y="295" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">1. पश्चिमी घाट (Western Ghats):</text>
+  <text x="115" y="345" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#a7f3d0">   सघन सदाबहार वर्षावन व 15,000 से अधिक स्थानिक पादप प्रजातियां।</text>
 
-    <text x="90" y="255" font-size="26" fill="#93c5fd">• 2. पूर्वी हिमालय (Eastern Himalayas): दुर्लभ वनस्पति व औषधीय पौधे।</text>
+  <text x="80" y="440" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">2. पूर्वी हिमालय (Eastern Himalayas):</text>
+  <text x="115" y="490" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#a7f3d0">   सिक्किम व पूर्वोत्तर राज्यों के दुर्लभ पर्वतीय वनस्पति व जीव।</text>
 
-    <text x="90" y="295" font-size="26" fill="#fde68a">• 3. इंडो-बर्मा क्षेत्र: पूर्वोत्तर भारत का समृद्ध वन क्षेत्र।</text>
+  <text x="80" y="585" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#ffffff">3. इंडो-बर्मा क्षेत्र (Indo-Burma Region):</text>
+  <text x="115" y="635" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#a7f3d0">   भारत की पूर्वोत्तर सीमा से सटा समृद्ध वन्यजीव गलियारा।</text>
 
-    <text x="90" y="345" font-size="26" fill="#ffffff">• वैश्विक स्तर पर 36 हॉटस्पॉट में से 3 भारत में स्थित हैं।</text>
-  </g>
+  <text x="80" y="730" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#fbbf24">• ये तीनों क्षेत्र विश्व धरोहर एवं सर्वोच्च संरक्षण प्राथमिकता वाले स्थान हैं।</text>
 </svg>
