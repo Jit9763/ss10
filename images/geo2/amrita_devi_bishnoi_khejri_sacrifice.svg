@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
+  <rect width="1400" height="950" fill="#0f172a"/>
+  
+  <!-- Header Banner -->
+  <rect x="40" y="25" width="1320" height="100" rx="20" fill="#991b1b" stroke="#f87171" stroke-width="6"/>
+  <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">ऐतिहासिक बलिदान (1730 ई.): अमृता देवी बिश्नोई एवं 363 वीरों का खेजड़ी वृक्ष संरक्षण</text>
+
+  <!-- Main Container -->
+  <rect x="40" y="150" width="1320" height="760" rx="20" fill="#064e3b" stroke="#10b981" stroke-width="5"/>
+
+  <!-- Famous Bishnoi Slogan Quote Box -->
+  <rect x="80" y="185" width="1240" height="135" rx="16" fill="#0f172a" stroke="#fbbf24" stroke-width="4"/>
+  <text x="700" y="235" font-family="'Segoe UI', Devanagari, sans-serif" font-size="30" font-weight="900" fill="#fde68a" text-anchor="middle">📜 बिश्नोई समाज का अमर सिद्धांत:</text>
+  <text x="700" y="285" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#fbbf24" text-anchor="middle">"सिर साँटे रूँख रहे तो भी सस्तो जाण"</text>
+  <text x="700" y="312" font-family="'Segoe UI', Devanagari, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">(यदि एक सिर कटवाने पर भी एक वृक्ष बचता है, तो यह अत्यंत सस्ता सौदा है)</text>
+
+  <!-- Left Box: Historical Event -->
+  <rect x="80" y="345" width="600" height="530" rx="16" fill="#1e293b" stroke="#f87171" stroke-width="4"/>
+  <text x="380" y="395" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#fca5a5" text-anchor="middle">🪓 खेजड़ली बलिदान (1730 ई. जोधपुर)</text>
+  <text x="110" y="455" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• स्थान: जोधपुर (राजस्थान) का खेजड़ली गांव।</text>
+  <text x="110" y="525" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• घटना: 1730 में जोधपुर महाराजा के सैनिकों ने</text>
+  <text x="135" y="565" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">  चूने की भट्टी के लिए खेजड़ी वृक्ष काटने की कोशिश की।</text>
+  <text x="110" y="635" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fca5a5">• अमृता देवी का नेतृत्व: अमृता देवी बिश्नोई व</text>
+  <text x="135" y="675" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fca5a5">  उनकी तीन बेटियों (आसू, रतनी, भागू) ने पेड़ों से</text>
+  <text x="135" y="715" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fca5a5">  लिपटकर अपने प्राणों की आहुति दे दी।</text>
+  <text x="110" y="785" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fbbf24">• कुल 363 बिश्नोई वीरों का ऐतिहासिक आत्म-बलिदान।</text>
+
+  <!-- Right Box: National Impact & Legacy -->
+  <rect x="720" y="345" width="600" height="530" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="4"/>
+  <text x="1020" y="395" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#a7f3d0" text-anchor="middle">🎖️ राष्ट्रीय सम्मान एवं बिश्नोई परंपरा</text>
+  <text x="750" y="455" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• विश्व का एकमात्र वृक्ष मेला: खेजड़ली गाँव में</text>
+  <text x="775" y="495" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">  प्रतिवर्ष भाद्रपद शुक्ल नवमी को विशाल मेला।</text>
+  <text x="750" y="565" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#a7f3d0">• अमृता देवी राष्ट्रीय पुरस्कार: भारत सरकार</text>
+  <text x="775" y="605" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#a7f3d0">  द्वारा पर्यावरण व वन्यजीव संरक्षण हेतु सर्वोच्च पुरस्कार।</text>
+  <text x="750" y="675" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• बिश्नोई समुदाय के 29 नियम: गुरु जंभेश्वर</text>
+  <text x="775" y="715" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">  द्वारा हरे वृक्ष काटने व वन्यजीव हिंसा पर पूर्ण रोक।</text>
+  <text x="750" y="785" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fbbf24">• चिपको आंदोलन की ऐतिहासिक प्रेरणा एवं मार्गदर्शक।</text>
+</svg>
