@@ -1,154 +1,176 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f0fdf4"/>
-      <stop offset="100%" stop-color="#dcfce7"/>
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
     </linearGradient>
     <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="0%" stop-color="#064e3b"/>
       <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
     </linearGradient>
     <linearGradient id="digesterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#fde68a"/>
     </linearGradient>
-    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#0284c7"/>
-    </linearGradient>
-    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#854d0e"/>
-      <stop offset="100%" stop-color="#583101"/>
-    </linearGradient>
-    <linearGradient id="manureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#84cc16"/>
-      <stop offset="100%" stop-color="#4d7c0f"/>
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity="0.18"/>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-opacity="0.2"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1100" height="650" fill="url(#bgGrad)" rx="20"/>
-  <rect x="15" y="15" width="1070" height="620" fill="none" stroke="#10b981" stroke-width="4" rx="16"/>
+  <!-- Canvas Background -->
+  <rect width="1100" height="680" fill="url(#bgGrad)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="656" fill="none" stroke="#059669" stroke-width="5" rx="20"/>
 
-  <!-- Top Title Banner -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="18" width="1020" height="52" rx="14" fill="url(#bannerGrad)"/>
-    <text x="550" y="52" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
-      बायोगैस / गोबर गैस संयंत्र की संरचना एवं कार्यप्रणाली (Biogas Plant Model)
+  <!-- ================= TOP HEADER BANNER ================= -->
+  <g filter="url(#cardShadow)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="23" font-weight="900" text-anchor="middle" letter-spacing="1">
+      बायोगैस / गोबर गैस संयंत्र की संरचना एवं कार्यप्रणाली (Biogas Plant Architecture)
     </text>
   </g>
 
-  <!-- Ground Soil Level -->
-  <rect x="40" y="320" width="1020" height="290" fill="url(#soilGrad)" opacity="0.15" rx="12"/>
-  <line x1="40" y1="320" x2="1060" y2="320" stroke="#059669" stroke-width="4" stroke-dasharray="10,6"/>
-  <text x="70" y="310" fill="#065f46" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">
-    🌱 भू-तल स्तर (Ground Level)
-  </text>
+  <!-- ================= GROUND LEVEL (भू-तल) ================= -->
+  <rect x="40" y="310" width="1020" height="295" fill="#f8fafc" opacity="0.6" rx="12"/>
+  <line x1="40" y1="310" x2="1060" y2="310" stroke="#059669" stroke-width="5" stroke-dasharray="12,8"/>
+  
+  <!-- Ground Level Badge (Left) -->
+  <g filter="url(#cardShadow)">
+    <rect x="45" y="270" width="220" height="34" rx="8" fill="#065f46"/>
+    <text x="155" y="293" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      🌱 भू-तल स्तर (Ground Level)
+    </text>
+  </g>
 
-  <!-- ================= CENTRAL DIGESTER TANK (पाचक कक्ष) ================= -->
-  <!-- Digester Brick Pit -->
-  <g filter="url(#shadow)">
-    <rect x="370" y="240" width="360" height="350" fill="#ffffff" stroke="#0f766e" stroke-width="5" rx="18"/>
-    <!-- Digester Slurry Fluid -->
-    <rect x="380" y="340" width="340" height="240" fill="url(#digesterGrad)" opacity="0.85" rx="10"/>
+  <!-- ================= CENTRAL DIGESTER PIT (पाचक कक्ष) ================= -->
+  <!-- Outer Digester Wall -->
+  <g filter="url(#cardShadow)">
+    <rect x="360" y="230" width="380" height="365" fill="#ffffff" stroke="#0f766e" stroke-width="6" rx="20"/>
+    <!-- Slurry Liquid Fill -->
+    <rect x="372" y="325" width="356" height="258" fill="url(#digesterGrad)" rx="12"/>
     
-    <!-- Partition Wall -->
-    <rect x="545" y="400" width="10" height="180" fill="#0f766e" rx="4"/>
+    <!-- Central Brick Partition Wall -->
+    <rect x="544" y="390" width="12" height="193" fill="#0f766e" rx="4"/>
   </g>
 
   <!-- Floating / Fixed Gas Dome (गैस धारक डोम) -->
-  <g filter="url(#shadow)">
-    <path d="M 400 250 Q 550 140 700 250 Z" fill="url(#domeGrad)" stroke="#0369a1" stroke-width="4"/>
-    <text x="550" y="215" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+  <g filter="url(#cardShadow)">
+    <path d="M 390 240 Q 550 120 710 240 Z" fill="url(#domeGrad)" stroke="#075985" stroke-width="5"/>
+    
+    <!-- Ultra High Contrast Dome Label Badge -->
+    <rect x="420" y="165" width="260" height="38" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="3" filter="url(#cardShadow)"/>
+    <text x="550" y="190" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
       गैस संचयन डोम (CH₄ + CO₂)
     </text>
   </g>
 
-  <!-- Gas Outlet Pipe & Valve -->
-  <g>
-    <rect x="540" y="100" width="20" height="60" fill="#0284c7" rx="3"/>
-    <rect x="520" y="100" width="60" height="14" fill="#0369a1" rx="4"/>
-    <path d="M 550 100 L 550 82 L 800 82" fill="none" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
-    
-    <!-- Gas Outlet Label Box -->
-    <rect x="740" y="65" width="300" height="42" fill="#0284c7" rx="10" filter="url(#shadow)"/>
-    <text x="890" y="92" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
-      💨 गैस निकास (रसोई चूल्हे हेतु बायोगैस)
+  <!-- ================= GAS OUTLET PIPE & VALVE ================= -->
+  <!-- Metal Pipe T-Junction -->
+  <rect x="542" y="80" width="16" height="50" fill="#0284c7"/>
+  <rect x="525" y="80" width="50" height="16" fill="#0369a1" rx="4"/>
+  <path d="M 550 80 L 550 65 L 750 65" fill="none" stroke="#0284c7" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Gas Outlet High-Contrast Badge -->
+  <g filter="url(#cardShadow)">
+    <rect x="710" y="44" width="350" height="46" rx="12" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+    <text x="885" y="74" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
+      💨 गैस निकास (रसोई चूल्हे हेतु स्वच्छ ईंधन)
     </text>
   </g>
 
   <!-- ================= INLET TANK (प्रवेश कक्ष - बाईं तरफ) ================= -->
-  <g filter="url(#shadow)">
-    <!-- Mixing Tank above ground -->
-    <rect x="80" y="210" width="200" height="100" fill="#ffffff" stroke="#15803d" stroke-width="4" rx="12"/>
-    <rect x="90" y="240" width="180" height="60" fill="#bbf7d0" rx="8"/>
+  <!-- Connecting Slurry Pipe -->
+  <path d="M 230 290 L 405 435" fill="none" stroke="#15803d" stroke-width="26" stroke-linecap="round"/>
+  <path d="M 230 290 L 405 435" fill="none" stroke="#86efac" stroke-width="16" stroke-linecap="round"/>
+  <!-- Flow Arrow -->
+  <polygon points="350,380 375,405 345,410" fill="#15803d"/>
+
+  <!-- Inlet Box Container -->
+  <g filter="url(#cardShadow)">
+    <rect x="65" y="160" width="240" height="120" fill="#ffffff" stroke="#15803d" stroke-width="5" rx="16"/>
     
-    <text x="180" y="235" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+    <!-- Title Header -->
+    <rect x="75" y="170" width="220" height="38" fill="#15803d" rx="8"/>
+    <text x="185" y="196" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
       प्रवेश कक्ष (Inlet Tank)
     </text>
-    <text x="180" y="275" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
+    
+    <!-- Content Description -->
+    <rect x="75" y="215" width="220" height="52" fill="#dcfce7" rx="8"/>
+    <text x="185" y="238" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
       गोबर + जल का घोल
     </text>
-    
-    <!-- Inlet Slope Pipe -->
-    <path d="M 230 300 L 410 440" fill="none" stroke="#15803d" stroke-width="24" stroke-linecap="round"/>
-    <path d="M 230 300 L 410 440" fill="none" stroke="#86efac" stroke-width="14" stroke-linecap="round"/>
-    <!-- Flow Arrow -->
-    <polygon points="360,390 380,410 355,415" fill="#15803d"/>
+    <text x="185" y="258" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
+      (अनुपात 1:1 स्लरी)
+    </text>
   </g>
 
   <!-- ================= OUTLET TANK (निकास कक्ष - दाईं तरफ) ================= -->
-  <g filter="url(#shadow)">
-    <!-- Outlet Sludge Tank above ground -->
-    <rect x="820" y="210" width="220" height="100" fill="#ffffff" stroke="#c2410c" stroke-width="4" rx="12"/>
-    <rect x="830" y="240" width="200" height="60" fill="#fed7aa" rx="8"/>
+  <!-- Connecting Sludge Pipe -->
+  <path d="M 695 435 L 870 290" fill="none" stroke="#c2410c" stroke-width="26" stroke-linecap="round"/>
+  <path d="M 695 435 L 870 290" fill="none" stroke="#fdba74" stroke-width="16" stroke-linecap="round"/>
+  <!-- Flow Arrow -->
+  <polygon points="795,345 820,335 815,365" fill="#c2410c"/>
+
+  <!-- Outlet Box Container -->
+  <g filter="url(#cardShadow)">
+    <rect x="795" y="160" width="255" height="120" fill="#ffffff" stroke="#c2410c" stroke-width="5" rx="16"/>
     
-    <text x="930" y="235" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+    <!-- Title Header -->
+    <rect x="805" y="170" width="235" height="38" fill="#c2410c" rx="8"/>
+    <text x="922" y="196" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
       निकास कक्ष (Outlet Tank)
     </text>
-    <text x="930" y="275" fill="#c2410c" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
-      उपयुक्त स्लरी (उत्तम जैविक खाद)
+    
+    <!-- Content Description -->
+    <rect x="805" y="215" width="235" height="52" fill="#ffedd5" rx="8"/>
+    <text x="922" y="238" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      प्रयुक्त बायोगैस स्लरी
     </text>
-
-    <!-- Outlet Slope Pipe -->
-    <path d="M 690 440 L 870 300" fill="none" stroke="#c2410c" stroke-width="24" stroke-linecap="round"/>
-    <path d="M 690 440 L 870 300" fill="none" stroke="#fdba74" stroke-width="14" stroke-linecap="round"/>
-    <!-- Flow Arrow -->
-    <polygon points="810,345 835,335 830,360" fill="#c2410c"/>
+    <text x="922" y="258" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
+      (नाइट्रोजन युक्त जैविक खाद)
+    </text>
   </g>
 
-  <!-- Inside Digester Activity Notes -->
-  <text x="550" y="470" fill="#451a03" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
-    पाचक कक्ष (Digester Tank)
+  <!-- ================= DIGESTER PROCESS LABELS (INSIDE PIT) ================= -->
+  <!-- Digester Title Badge -->
+  <g filter="url(#cardShadow)">
+    <rect x="410" y="340" width="280" height="38" rx="10" fill="#78350f"/>
+    <text x="550" y="365" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      पाचक कक्ष (Digester Tank)
+    </text>
+  </g>
+
+  <!-- Digester Activity Description Box -->
+  <rect x="385" y="440" width="330" height="75" rx="12" fill="#ffffff" stroke="#b45309" stroke-width="3" filter="url(#cardShadow)"/>
+  <text x="550" y="468" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+    अवायवीय सूक्ष्मजीव (Anaerobic Bacteria)
   </text>
-  <text x="550" y="500" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
-    अवायवीय सूक्ष्मजीवों (Bacteria) द्वारा किण्वन
-  </text>
-  <text x="550" y="530" fill="#b45309" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
-    (50-60 दिन में मीथेन गैस उत्पत्ति)
+  <text x="550" y="495" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
+    बिना ऑक्सीजन किण्वन द्वारा गैस निर्माण
   </text>
 
-  <!-- Bottom 3 Key Feature Cards -->
-  <g filter="url(#shadow)">
+  <!-- ================= BOTTOM 3 PROJECTOR SUMMARY CARDS ================= -->
+  <g filter="url(#cardShadow)">
     <!-- Card 1 -->
-    <rect x="50" y="590" width="310" height="42" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-    <text x="205" y="617" fill="#065f46" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
-      1. कच्चा माल: पशु गोबर + जल + अपशिष्ट
+    <rect x="40" y="608" width="325" height="52" rx="14" fill="#065f46" stroke="#10b981" stroke-width="2"/>
+    <text x="202" y="640" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      1. कच्चा माल: गोबर + जल + कृषि कचरा
     </text>
 
     <!-- Card 2 -->
-    <rect x="395" y="590" width="310" height="42" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-    <text x="550" y="617" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
-      2. मुख्य घटक: मीथेन (CH₄ ~ 55% - 70%)
+    <rect x="385" y="608" width="330" height="52" rx="14" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+    <text x="550" y="640" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      2. मुख्य गैस: मीथेन (CH₄ 55% - 70%)
     </text>
 
     <!-- Card 3 -->
-    <rect x="740" y="590" width="310" height="42" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-    <text x="895" y="617" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">
-      3. सह-उत्पाद: नाइट्रोजन-समृद्ध जैविक खाद
+    <rect x="735" y="608" width="325" height="52" rx="14" fill="#9a3412" stroke="#fb923c" stroke-width="2"/>
+    <text x="897" y="640" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      3. सह-उत्पाद: N &amp; P युक्त उत्तम जैविक खाद
     </text>
   </g>
 </svg>
