@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad3)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad3)" filter="url(#shadow3)" stroke="#a78bfa" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🌐 देशों की तुलना: विश्व बैंक (World Bank) बनाम UNDP (मानव विकास सूचकांक - HDI)
+  </text>
+
+  <!-- Left: World Bank Criteria -->
+  <g transform="translate(45, 95)" filter="url(#shadow3)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <rect width="485" height="50" rx="18" fill="#b45309"/>
+    <rect y="32" width="485" height="18" fill="#b45309"/>
+    <text x="242" y="34" fill="#ffffff" font-size="20" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏦 1. विश्व बैंक मापदंड (WDR - केवल आय)</text>
+    
+    <rect x="25" y="70" width="435" height="65" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="40" y="95" fill="#fbbf24" font-size="16" font-weight="900" font-family="system-ui, sans-serif">📊 मुख्य पैमाना: प्रति व्यक्ति आय (Average Income)</text>
+    <text x="40" y="120" fill="#cbd5e1" font-size="14" font-weight="900" font-family="system-ui, sans-serif">प्रति व्यक्ति आय = देश की कुल राष्ट्रीय आय ÷ कुल जनसंख्या</text>
+
+    <!-- Category 1 -->
+    <rect x="25" y="148" width="435" height="56" rx="8" fill="#064e3b"/>
+    <text x="40" y="172" fill="#34d399" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🟢 समृद्ध देश (High Income):</text>
+    <text x="40" y="194" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">प्रति व्यक्ति आय &gt; $12,056 प्रति वर्ष (USA, UK, जापान आदि)</text>
+
+    <!-- Category 2 -->
+    <rect x="25" y="214" width="435" height="56" rx="8" fill="#78350f"/>
+    <text x="40" y="238" fill="#fbbf24" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🟡 मध्यम आय देश (Middle Income):</text>
+    <text x="40" y="260" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">भारत = $1,820 प्रति वर्ष (निम्न-मध्यम आय वर्ग)</text>
+
+    <!-- Category 3 -->
+    <rect x="25" y="280" width="435" height="56" rx="8" fill="#7f1d1d"/>
+    <text x="40" y="304" fill="#f87171" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🔴 निम्न आय देश (Low Income):</text>
+    <text x="40" y="326" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">प्रति व्यक्ति आय &lt; $955 प्रति वर्ष (जैसे—अफ्रीकी देश)</text>
+
+    <!-- Limitations -->
+    <rect x="25" y="348" width="435" height="120" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="242" y="375" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚠️ औसत आय की गंभीर सीमा (Limitation):</text>
+    <text x="40" y="405" fill="#fed7aa" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• यह आय के वास्तविक वितरण को छिपा देती है।</text>
+    <text x="40" y="430" fill="#fed7aa" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• यह नहीं बताती कि पैसा सभी में समान रूप से बंटा</text>
+    <text x="40" y="455" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">  है या केवल कुछ ही अमीरों के पास केंद्रित है।</text>
+  </g>
+
+  <!-- Right: UNDP Human Development Report -->
+  <g transform="translate(570, 95)" filter="url(#shadow3)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+    <rect width="485" height="50" rx="18" fill="#1e3a8a"/>
+    <rect y="32" width="485" height="18" fill="#1e3a8a"/>
+    <text x="242" y="34" fill="#ffffff" font-size="20" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🌍 2. UNDP मापदंड (मानव विकास रिपोर्ट - HDI)</text>
+    
+    <rect x="25" y="70" width="435" height="65" rx="10" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="40" y="95" fill="#60a5fa" font-size="16" font-weight="900" font-family="system-ui, sans-serif">🌟 3-आयामी समग्र दृष्टिकोण (Holistic Measure):</text>
+    <text x="40" y="120" fill="#cbd5e1" font-size="14" font-weight="900" font-family="system-ui, sans-serif">आय के साथ-साथ स्वास्थ्य एवं शिक्षा स्तर का संयुक्त सूचकांक।</text>
+
+    <!-- Pillar 1 -->
+    <rect x="25" y="148" width="435" height="65" rx="8" fill="#0c4a6e"/>
+    <text x="40" y="172" fill="#38bdf8" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🏥 1. स्वास्थ्य स्थिति (Health Indicator):</text>
+    <text x="40" y="196" fill="#f0f9ff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">जन्म के समय जीवन प्रत्याशा (Life Expectancy) एवं शिशु स्वास्थ्य।</text>
+
+    <!-- Pillar 2 -->
+    <rect x="25" y="222" width="435" height="65" rx="8" fill="#1e1b4b"/>
+    <text x="40" y="246" fill="#a78bfa" font-size="15" font-weight="900" font-family="system-ui, sans-serif">📚 2. शैक्षिक स्तर (Education Level):</text>
+    <text x="40" y="270" fill="#ede9fe" font-size="14" font-weight="900" font-family="system-ui, sans-serif">प्रौढ़ साक्षरता दर एवं विद्यालयों में सकल नामांकन अनुपात।</text>
+
+    <!-- Pillar 3 -->
+    <rect x="25" y="296" width="435" height="65" rx="8" fill="#14532d"/>
+    <text x="40" y="320" fill="#4ade80" font-size="15" font-weight="900" font-family="system-ui, sans-serif">💵 3. प्रति व्यक्ति आय (Per Capita Income in PPP $):</text>
+    <text x="40" y="344" fill="#f0fdf4" font-size="14" font-weight="900" font-family="system-ui, sans-serif">क्रय शक्ति समता डॉलर (Purchasing Power Parity) पर आधारित।</text>
+
+    <!-- HDI Advantage -->
+    <rect x="25" y="372" width="435" height="96" rx="10" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="242" y="398" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏆 UNDP का लाभ (Advantage):</text>
+    <text x="40" y="425" fill="#93c5fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• मानव विकास रिपोर्ट यह स्पष्ट करती है कि नागरिक क्या</text>
+    <text x="40" y="450" fill="#dbeafe" font-size="14" font-weight="900" font-family="system-ui, sans-serif">  कर पा रहे हैं, उनका स्वास्थ्य और शिक्षा कैसी है।</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="605" width="1020" height="34" rx="8" fill="#5b21b6" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="550" y="628" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 परीक्षा सूत्र: विश्व बैंक = केवल प्रति व्यक्ति आय (संकीर्ण) | UNDP = आय + स्वास्थ्य (जीवन प्रत्याशा) + शिक्षा (व्यापक)।
+  </text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad)"/>
+
+  <!-- Master Top Banner (1020px wide) -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad)" filter="url(#shadow)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle" letter-spacing="0.5">
+    🎯 विकास के विभिन्न एवं परस्पर विरोधी लक्ष्य (Different People, Different Goals Matrix)
+  </text>
+
+  <!-- 4 Category Cards Grid -->
+  <!-- CARD 1: Landless Laborer -->
+  <g transform="translate(45, 95)" filter="url(#shadow)">
+    <rect width="485" height="235" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+    <rect width="485" height="42" rx="16" fill="#1e3a8a"/>
+    <rect y="26" width="485" height="16" fill="#1e3a8a"/>
+    <text x="20" y="28" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif">🌾 1. भूमिहीन ग्रामीण मजदूर (Landless Laborer)</text>
+    <text x="20" y="75" fill="#93c5fd" font-size="16" font-weight="900" font-family="system-ui, sans-serif">✅ मुख्य आकांक्षाएं व विकास लक्ष्य:</text>
+    <text x="20" y="110" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• काम करने के अधिक दिन और बेहतर दैनिक मजदूरी।</text>
+    <text x="20" y="145" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• स्थानीय सरकारी स्कूल में बच्चों को गुणवत्तापूर्ण शिक्षा।</text>
+    <text x="20" y="180" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• गांव में कोई सामाजिक व जातिगत भेदभाव न हो।</text>
+    <rect x="20" y="198" width="445" height="26" rx="6" fill="#0f766e"/>
+    <text x="242" y="216" fill="#ccfbf1" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">प्राथमिकता: आजीविका सुरक्षा एवं सामाजिक समानता</text>
+  </g>
+
+  <!-- CARD 2: Rich Farmer -->
+  <g transform="translate(570, 95)" filter="url(#shadow)">
+    <rect width="485" height="235" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="485" height="42" rx="16" fill="#065f46"/>
+    <rect y="26" width="485" height="16" fill="#065f46"/>
+    <text x="20" y="28" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif">🚜 2. पंजाब का समृद्ध किसान (Prosperous Farmer)</text>
+    <text x="20" y="75" fill="#6ee7b7" font-size="16" font-weight="900" font-family="system-ui, sans-serif">✅ मुख्य आकांक्षाएं व विकास लक्ष्य:</text>
+    <text x="20" y="110" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• फसलों का अधिकतम न्यूनतम समर्थन मूल्य (MSP)।</text>
+    <text x="20" y="145" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• खेती हेतु सस्ते व आज्ञाकारी प्रवासी श्रमिक।</text>
+    <text x="20" y="180" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• पारिवारिक उच्च आय व बच्चों को विदेश (कनाडा) में बसाना।</text>
+    <rect x="20" y="198" width="445" height="26" rx="6" fill="#047857"/>
+    <text x="242" y="216" fill="#d1fae5" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">प्राथमिकता: उच्च लाभ मार्जिन एवं वैश्विक गतिशीलता</text>
+  </g>
+
+  <!-- CARD 3: Conflict - Dam vs Tribals -->
+  <g transform="translate(45, 350)" filter="url(#shadow)">
+    <rect width="485" height="240" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect width="485" height="42" rx="16" fill="#991b1b"/>
+    <rect y="26" width="485" height="16" fill="#991b1b"/>
+    <text x="20" y="28" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif">⚡ 3. परस्पर विरोधी लक्ष्य: उद्योगपति बनाम आदिवासी</text>
+    <text x="20" y="75" fill="#fca5a5" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🏭 उद्योगपति का लक्ष्य: अधिक बिजली हेतु विशाल बांध (Hydro Dam)</text>
+    <text x="20" y="105" fill="#f87171" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🏹 आदिवासी का संकट: पैतृक जमीन, जंगल व घर जलमग्न (विस्थापन)</text>
+    <rect x="20" y="125" width="445" height="60" rx="8" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="242" y="150" fill="#fecaca" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚠️ जो एक के लिए विकास है, वह दूसरे के लिए</text>
+    <text x="242" y="172" fill="#f87171" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">विनाशकारी (Destructive) भी हो सकता है!</text>
+    <rect x="20" y="198" width="445" height="28" rx="6" fill="#b91c1c"/>
+    <text x="242" y="217" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">केस स्टडी: सरदार सरोवर बांध (नर्मदा बचाओ आंदोलन)</text>
+  </g>
+
+  <!-- CARD 4: Urban Youth & Gender Equality -->
+  <g transform="translate(570, 350)" filter="url(#shadow)">
+    <rect width="485" height="240" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="3"/>
+    <rect width="485" height="42" rx="16" fill="#5b21b6"/>
+    <rect y="26" width="485" height="16" fill="#5b21b6"/>
+    <text x="20" y="28" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif">👩‍💼 4. शहरी युवा एवं लैंगिक समानता (Gender Goals)</text>
+    <text x="20" y="75" fill="#c4b5fd" font-size="16" font-weight="900" font-family="system-ui, sans-serif">✅ शहरी लड़की की आकांक्षाएं:</text>
+    <text x="20" y="105" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• भाई के समान पूर्ण स्वतंत्रता व निर्णय लेने का अधिकार।</text>
+    <text x="20" y="135" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• उच्च शिक्षा व विदेश में अध्ययन के समान अवसर।</text>
+    <text x="20" y="165" fill="#f8fafc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">• घर के कार्यों में भाई द्वारा भी बराबर हाथ बंटाना।</text>
+    <rect x="20" y="198" width="445" height="28" rx="6" fill="#6d28d9"/>
+    <text x="242" y="217" fill="#ede9fe" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">निष्कर्ष: विकास लक्ष्यों में स्वतंत्रता व सुरक्षा सर्वोपरि है</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="605" width="1020" height="34" rx="8" fill="#0f766e" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="550" y="628" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 निष्कर्ष: 1. अलग-अलग लोगों के विकास लक्ष्य भिन्न हो सकते हैं। 2. एक के लिए जो विकास है वह दूसरे के लिए विनाशकारी भी हो सकता है।
+  </text>
+</svg>
