@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#1e293b"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#f59e0b" stroke-width="4"/>
+
+  <!-- Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 5.4: ऊर्जा संसाधनों का वर्गीकरण (Conventional vs Non-Conventional Energy)
+  </text>
+
+  <!-- Left: Conventional Energy -->
+  <g transform="translate(45, 90)">
+    <rect width="490" height="415" rx="16" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="15" y="15" width="460" height="44" rx="8" fill="#92400e"/>
+    <text x="245" y="44" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#fde047" text-anchor="middle">🔥 1. पारंपरिक ऊर्जा संसाधन (Conventional)</text>
+    
+    <text x="20" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#fde047">• कोयला (Coal):</text>
+    <text x="20" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  भारत का प्रमुख वाणिज्यिक ऊर्जा स्रोत (दामोदर घाटी, गोदावरी)</text>
+
+    <text x="20" y="140" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#fde047">• पेट्रोलियम (Mineral Oil):</text>
+    <text x="20" y="165" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  मुंबई हाई (63%), गुजरात (18%), असम (16% - डिगबोई सबसे पुराना)</text>
+
+    <text x="20" y="195" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#fde047">• प्राकृतिक गैस (Natural Gas):</text>
+    <text x="20" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  पर्यावरण अनुकूल स्वच्छ ईंधन (CNG), हजीरा-विजयपुर-जगदीशपुर (HVJ)</text>
+
+    <text x="20" y="250" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#fde047">• ताप विद्युत (Thermal) व जल विद्युत (Hydel):</text>
+    <text x="20" y="275" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  जीवाश्म ईंधन दहन व तीव्र प्रवाहित जल टर्बाइन द्वारा विद्युत</text>
+
+    <rect x="15" y="325" width="460" height="70" rx="8" fill="#1e293b"/>
+    <text x="245" y="352" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fca5a5" text-anchor="middle">⚠️ अनवीकरणीय, सीमित भंडार एवं कार्बन प्रदूषणकारी</text>
+    <text x="245" y="375" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">(भविष्य में इनके समाप्त होने का गंभीर संकट)</text>
+  </g>
+
+  <!-- Right: Non-Conventional Energy -->
+  <g transform="translate(565, 90)">
+    <rect width="490" height="415" rx="16" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+    <rect x="15" y="15" width="460" height="44" rx="8" fill="#15803d"/>
+    <text x="245" y="44" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">☀️ 2. गैर-पारंपरिक ऊर्जा (Non-Conventional)</text>
+    
+    <text x="20" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#4ade80">• सौर ऊर्जा (Solar Energy):</text>
+    <text x="20" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  फोटोवोल्टाइक तकनीक, थार मरुस्थल राजस्थान व गुजरात अग्रणी</text>
+
+    <text x="20" y="140" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#4ade80">• पवन ऊर्जा (Wind Energy):</text>
+    <text x="20" y="165" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  तमिलनाडु (नागरकोइल से मदुरै विशालतम फार्म) व जैसलमेर</text>
+
+    <text x="20" y="195" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#4ade80">• बायोगैस (Biogas / गोबर गैस):</text>
+    <text x="20" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  ग्रामीण क्षेत्रों में जैविक अपशिष्ट व गोबर से गैस + उत्तम खाद</text>
+
+    <text x="20" y="250" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#4ade80">• परमाणु (Nuclear), ज्वारीय (Tidal) व भू-तापीय (Geothermal):</text>
+    <text x="20" y="275" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  यूरेनियम विखंडन, खंभात की खाड़ी व मणिकर्ण (हि.प्र.) तप्त झरने</text>
+
+    <rect x="15" y="325" width="460" height="70" rx="8" fill="#1e293b"/>
+    <text x="245" y="352" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">🌱 नवीकरणीय, अक्षय, प्रदूषण-मुक्त एवं सतत विकास का आधार</text>
+    <text x="245" y="375" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">(भविष्य की ऊर्जा सुरक्षा का एकमात्र स्थायी विकल्प)</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+    💡 ऊर्जा संरक्षण ही ऊर्जा उत्पादन है (Energy saved is energy produced) - सतत विकास का मूल मंत्र।
+  </text>
+</svg>

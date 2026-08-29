@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#1e1b4b"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#818cf8" stroke-width="4"/>
+
+  <!-- Wide Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#312e81" stroke="#a5b4fc" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 4.2: भारत का 12-माह वार्षिक सस्य ऋतु चक्र (Cropping Seasonal Cycle)
+  </text>
+
+  <!-- Left: Circular Dial -->
+  <g transform="translate(290, 310)">
+    <circle cx="0" cy="0" r="180" fill="#1e1b4b" stroke="#6366f1" stroke-width="4"/>
+    
+    <!-- Kharif Sector (June to Oct) -->
+    <path d="M 0 0 L -127 127 A 180 180 0 0 1 -180 0 A 180 180 0 0 1 0 -180 Z" fill="#15803d" stroke="#4ade80" stroke-width="2"/>
+    
+    <!-- Rabi Sector (Oct to April) -->
+    <path d="M 0 0 L 0 -180 A 180 180 0 0 1 180 0 A 180 180 0 0 1 127 127 Z" fill="#b45309" stroke="#fde047" stroke-width="2"/>
+
+    <!-- Zaid Sector (March to June) -->
+    <path d="M 0 0 L 127 127 A 180 180 0 0 1 -127 127 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Center Hub -->
+    <circle cx="0" cy="0" r="70" fill="#0f172a" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="-10" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">भारतीय</text>
+    <text x="0" y="16" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#facc15" text-anchor="middle">सस्य वर्ष</text>
+    <text x="0" y="38" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">12 Month Wheel</text>
+
+    <!-- Dial Labels -->
+    <text x="-95" y="-70" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">🌧️ खरीफ</text>
+    <text x="-95" y="-45" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#bbf7d0" text-anchor="middle">(जून - अक्टू.)</text>
+
+    <text x="95" y="-70" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">🌾 रबी</text>
+    <text x="95" y="-45" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#fef08a" text-anchor="middle">(अक्टू. - अप्रैल)</text>
+
+    <text x="0" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">☀️ जायद (मार्च - जून)</text>
+  </g>
+
+  <!-- Right: 3 Spacious Cards -->
+  <g transform="translate(560, 90)">
+    <!-- 1. Kharif -->
+    <rect x="0" y="0" width="490" height="128" rx="14" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="32" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="19" font-weight="900" fill="#4ade80">🌧️ खरीफ ऋतु (Kharif Season)</text>
+    <text x="20" y="60" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">बुवाई: जून-जुलाई (मानसून) | कटाई: सितंबर-अक्टूबर</text>
+    <text x="20" y="88" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#dcfce7">मुख्य फसलें: चावल (धान), मक्का, ज्वार, बाजरा, कपास, जूट, मूंगफली</text>
+    <text x="20" y="112" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#fef08a">विशेष: 25°C+ तापमान व 100 सेमी+ भारी मानसूनी वर्षा</text>
+
+    <!-- 2. Rabi -->
+    <rect x="0" y="142" width="490" height="128" rx="14" fill="#78350f" stroke="#fde047" stroke-width="2"/>
+    <text x="20" y="174" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="19" font-weight="900" fill="#fde047">🌾 रबी ऋतु (Rabi Season)</text>
+    <text x="20" y="202" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">बुवाई: अक्टूबर-दिसंबर (शीतकाल) | कटाई: अप्रैल-जून</text>
+    <text x="20" y="230" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#fef3c7">मुख्य फसलें: गेहूं, जौ, चना, मटर, सरसों, अलसी</text>
+    <text x="20" y="254" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#86efac">विशेष: शीतकालीन पश्चिमी विक्षोभ (मावठ) से गेहूं को भारी लाभ</text>
+
+    <!-- 3. Zaid -->
+    <rect x="0" y="284" width="490" height="128" rx="14" fill="#075985" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="316" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="19" font-weight="900" fill="#38bdf8">☀️ जायद ऋतु (Zaid Season)</text>
+    <text x="20" y="344" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">अवधि: मार्च से जून (रबी व खरीफ के मध्य ग्रीष्मकाल)</text>
+    <text x="20" y="372" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#e0f2fe">मुख्य फसलें: तरबूज, खरबूजा, खीरा, ककड़ी, मौसमी सब्जियां व चारा</text>
+    <text x="20" y="396" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#fde047">विशेष: गन्ने की फसल तैयार होने में लगभग 1 वर्ष लेती है</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#facc15" text-anchor="middle">
+    📌 असम, पश्चिम बंगाल व ओडिशा में किसान वर्ष भर में धान की 3 फसलें (औस, अमन और बोरो) उगाते हैं।
+  </text>
+</svg>

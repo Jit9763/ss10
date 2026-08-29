@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="45%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="600" rx="18" fill="url(#skyGrad)"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#0284c7" stroke-width="4"/>
+
+  <!-- Wide Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#0c4a6e" stroke="#38bdf8" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 4.4: दलहनी फसलों का प्राकृतिक नाइट्रोजन चक्र (Biological Nitrogen Cycle)
+  </text>
+
+  <!-- Atmospheric Nitrogen Cloud -->
+  <g transform="translate(550, 130)">
+    <ellipse cx="0" cy="0" rx="180" ry="42" fill="#1e3a8a" stroke="#60a5fa" stroke-width="3"/>
+    <text x="0" y="-8" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">वायुमंडलीय नाइट्रोजन (N₂)</text>
+    <text x="0" y="18" font-family="'Segoe UI', Arial" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">वायुमंडल का 78% भाग</text>
+  </g>
+
+  <!-- Ground Soil Line -->
+  <rect x="25" y="280" width="1050" height="235" fill="#78350f"/>
+  <rect x="25" y="270" width="1050" height="15" fill="#22c55e"/> <!-- Grass surface -->
+
+  <!-- Legume Plant in Center -->
+  <!-- Plant Shoot -->
+  <line x1="550" y1="280" x2="550" y2="185" stroke="#15803d" stroke-width="12"/>
+  <ellipse cx="505" cy="205" rx="40" ry="20" fill="#22c55e"/>
+  <ellipse cx="595" cy="205" rx="40" ry="20" fill="#22c55e"/>
+  <text x="550" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">दलहनी पौधा (चना/मटर/दालें)</text>
+
+  <!-- Plant Roots with Nodules -->
+  <line x1="550" y1="280" x2="550" y2="470" stroke="#fde047" stroke-width="8"/>
+  <line x1="550" y1="330" x2="440" y2="380" stroke="#fde047" stroke-width="5"/>
+  <line x1="550" y1="375" x2="660" y2="425" stroke="#fde047" stroke-width="5"/>
+  <line x1="550" y1="410" x2="460" y2="460" stroke="#fde047" stroke-width="5"/>
+
+  <!-- Pink Rhizobium Nodules -->
+  <circle cx="490" cy="355" r="16" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="610" cy="400" r="16" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="510" cy="435" r="16" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="550" cy="350" r="16" fill="#fb7185" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Left: Stage 1 Box -->
+  <g transform="translate(60, 235)">
+    <rect width="280" height="115" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="140" y="32" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">1. राइजोबियम जीवाणु</text>
+    <text x="15" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff">• जड़ों की ग्रंथियों (Nodules) में वास</text>
+    <text x="15" y="88" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff">• वायुमंडलीय N₂ का सीधा अवशोषण</text>
+  </g>
+  <path d="M 400 160 Q 280 200 280 230" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="6,4"/>
+
+  <!-- Right: Stage 2 Box -->
+  <g transform="translate(760, 235)">
+    <rect width="280" height="115" rx="12" fill="#0f172a" stroke="#4ade80" stroke-width="2"/>
+    <text x="140" y="32" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">2. नाइट्रेट्स में रूपांतरण</text>
+    <text x="15" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff">• N₂ को मिट्टी के नाइट्रेट्स में बदलना</text>
+    <text x="15" y="88" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff">• बिना खाद के प्राकृतिक उर्वरता वृद्धि</text>
+  </g>
+
+  <!-- Bottom Cycle Banner -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fde047" text-anchor="middle">
+    💡 अरहर (तुअर) को छोड़कर अन्य सभी दालें भूमि में नाइट्रोजन स्थिर करती हैं, इसलिए इन्हें फसल चक्र (Crop Rotation) में बोते हैं।
+  </text>
+</svg>

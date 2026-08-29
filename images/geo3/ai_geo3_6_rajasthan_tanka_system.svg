@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <rect width="1000" height="560" rx="16" fill="#78350f"/>
+  <rect x="10" y="10" width="980" height="540" rx="14" fill="none" stroke="#f59e0b" stroke-width="4"/>
+
+  <!-- Title -->
+  <rect x="100" y="25" width="800" height="55" rx="14" fill="#92400e" stroke="#fbbf24" stroke-width="3"/>
+  <text x="500" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle">
+    पश्चिमी राजस्थान का पारंपरिक 'टांका' (Tanka) एवं पार्लर पानी
+  </text>
+
+  <!-- Left: Diagram of House with Underground Tanka -->
+  <g transform="translate(60, 105)">
+    <rect width="420" height="370" rx="14" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Courtyard & Ground Level -->
+    <rect x="20" y="140" width="380" height="15" fill="#d97706"/>
+    <text x="210" y="130" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fef08a" text-anchor="middle">ढलवां आंगन / छत (Paved Catchment)</text>
+
+    <!-- House Room Above Tanka -->
+    <rect x="60" y="30" width="300" height="100" fill="#b45309" stroke="#fbbf24" stroke-width="2"/>
+    <text x="210" y="70" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">घर का कमरा</text>
+    <text x="210" y="95" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#fde68a" text-anchor="middle">(टांका कमरे को गर्मियों में ठंडा रखता है)</text>
+
+    <!-- Underground Tanka Cross Section -->
+    <rect x="90" y="170" width="240" height="180" rx="16" fill="#0369a1" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="105" y="210" width="210" height="130" rx="8" fill="#0284c7"/>
+    <text x="210" y="200" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">पक्का भूमिगत 'टांका'</text>
+    <text x="210" y="260" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">💧 पार्लर पानी</text>
+    <text x="210" y="290" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#e0f2fe" text-anchor="middle">6.12 मी. गहरा x 4.27 मी. लंबा</text>
+
+    <!-- Inlet Pipe -->
+    <path d="M 340 140 L 300 210" stroke="#f59e0b" stroke-width="6"/>
+  </g>
+
+  <!-- Right: Key NCERT Concepts -->
+  <g transform="translate(520, 105)">
+    <rect width="420" height="370" rx="14" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+    <text x="210" y="40" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde047" text-anchor="middle">📌 टांका प्रणाली के मुख्य तथ्य</text>
+    
+    <text x="20" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>क्षेत्र:</b> बीकानेर, फलोदी, बाड़मेर (थार मरुस्थल)।</text>
+    <text x="20" y="115" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>आकार:</b> फलोदी में एक टांका 6.12 मी. गहरा,</text>
+    <text x="20" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  4.27 मी. लंबा तथा 2.44 मी. चौड़ा पाया गया।</text>
+    
+    <text x="20" y="185" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>पार्लर पानी (Palar Pani):</b> वर्षा जल को</text>
+    <text x="20" y="215" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  स्थानीय भाषा में 'पार्लर पानी' कहते हैं।</text>
+    
+    <text x="20" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>पहली वर्षा का जल:</b> छत व पाइप साफ करने</text>
+    <text x="20" y="285" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  हेतु बहा दिया जाता है, बाद का जल भरते हैं।</text>
+
+    <rect x="20" y="315" width="380" height="40" rx="8" fill="#92400e"/>
+    <text x="210" y="342" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fde68a" text-anchor="middle">अगली वर्षा ऋतु तक पूरे साल पेयजल उपलब्ध रहता है</text>
+  </g>
+
+  <!-- Bottom Alert -->
+  <text x="500" y="520" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#fed7aa" text-anchor="middle">
+    ⚠️ आज इंदिरा गांधी नहर (Rajasthan Canal) से बारहमासी जल मिलने के कारण टांका प्रथा में कुछ कमी आई है।
+  </text>
+</svg>

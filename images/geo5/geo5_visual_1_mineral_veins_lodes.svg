@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="rockBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="goldVein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#eab308"/>
+      <stop offset="80%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="copperVein" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="quartzVein" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="540" fill="url(#rockBase)"/>
+  
+  <!-- Fractured Rock Layers -->
+  <path d="M0,80 Q240,110 480,70 T960,100 L960,0 L0,0 Z" fill="#334155" opacity="0.6"/>
+  <path d="M0,260 Q300,220 600,290 T960,240 L960,540 L0,540 Z" fill="#1e293b" opacity="0.8"/>
+  <path d="M0,400 Q400,430 750,380 T960,420 L960,540 L0,540 Z" fill="#0f172a"/>
+
+  <!-- Quartz Fault Line -->
+  <path d="M120,0 Q220,180 340,320 T520,540" fill="none" stroke="url(#quartzVein)" stroke-width="18" opacity="0.85" filter="url(#glow)"/>
+  <path d="M120,0 Q220,180 340,320 T520,540" fill="none" stroke="#ffffff" stroke-width="6"/>
+
+  <!-- Golden Pyrite & Gold Vein Branching -->
+  <path d="M340,320 Q480,240 680,280 T960,190" fill="none" stroke="url(#goldVein)" stroke-width="22" filter="url(#glow)"/>
+  <path d="M340,320 Q480,240 680,280 T960,190" fill="none" stroke="#fef08a" stroke-width="8"/>
+  <path d="M560,260 Q620,140 780,90" fill="none" stroke="url(#goldVein)" stroke-width="12"/>
+  <path d="M680,280 Q740,400 890,460" fill="none" stroke="url(#goldVein)" stroke-width="14"/>
+
+  <!-- Copper-Azurite Veins -->
+  <path d="M220,180 Q80,290 0,380" fill="none" stroke="url(#copperVein)" stroke-width="16" filter="url(#glow)"/>
+  <path d="M220,180 Q80,290 0,380" fill="none" stroke="#cffafe" stroke-width="5"/>
+  <path d="M420,380 Q320,460 260,540" fill="none" stroke="url(#copperVein)" stroke-width="10"/>
+
+  <!-- Sparkling Mineral Clusters -->
+  <g fill="#fef08a" filter="url(#glow)">
+    <polygon points="680,270 690,280 680,290 670,280"/>
+    <polygon points="560,250 570,260 560,270 550,260"/>
+    <polygon points="780,85 790,95 780,105 770,95"/>
+    <polygon points="340,310 355,325 340,340 325,325"/>
+    <polygon points="890,450 900,460 890,470 880,460"/>
+  </g>
+</svg>

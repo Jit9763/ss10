@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#022c22"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#10b981" stroke-width="4"/>
+
+  <!-- Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#065f46" stroke="#34d399" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 5.5: भारत में परमाणु ऊर्जा संयंत्र एवं स्वच्छ ऊर्जा उत्पादन चक्र (Clean Energy Model)
+  </text>
+
+  <!-- 3 Stage Process Cards -->
+  <!-- Stage 1: Nuclear Fuel -->
+  <g transform="translate(45, 100)">
+    <rect width="305" height="405" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#047857"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">⚛️</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">1. आणविक ईंधन स्रोत</text>
+    
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• <b>यूरेनियम (Uranium):</b></text>
+    <text x="18" y="185" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#a7f3d0">  झारखंड (जादूगोड़ा) व अरावली</text>
+    
+    <text x="18" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• <b>थोरियम (Thorium):</b></text>
+    <text x="18" y="245" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#a7f3d0">  केरल के तटीय मोनाजाइट बालू</text>
+
+    <rect x="18" y="295" width="269" height="90" rx="10" fill="#022c22"/>
+    <text x="152" y="330" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">परमाणु विखंडन द्वारा अति</text>
+    <text x="152" y="358" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">विशाल तापीय ऊर्जा का विमुक्ति</text>
+  </g>
+
+  <!-- Flow Connector 1 -->
+  <polygon points="375,305 405,295 405,315" fill="#34d399"/>
+  <line x1="355" y1="305" x2="400" y2="305" stroke="#34d399" stroke-width="6"/>
+
+  <!-- Stage 2: 6 Major Nuclear Plants -->
+  <g transform="translate(415, 100)">
+    <rect width="305" height="405" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#047857"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">🏭</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">2. 6 प्रमुख परमाणु संयंत्र</text>
+    
+    <text x="18" y="155" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>नरोरा (Narora):</b> उत्तर प्रदेश</text>
+    <text x="18" y="180" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>रावतभाटा (Rawatbhata):</b> राजस्थान</text>
+    <text x="18" y="205" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>काकरापारा (Kakrapar):</b> गुजरात</text>
+    <text x="18" y="230" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>तारापुर (Tarapur):</b> महाराष्ट्र (प्रथम)</text>
+    <text x="18" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>कैगा (Kaiga):</b> कर्नाटक</text>
+    <text x="18" y="280" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>कलपक्कम/कुडनकुलम:</b> तमिलनाडु</text>
+
+    <rect x="18" y="305" width="269" height="80" rx="10" fill="#022c22"/>
+    <text x="152" y="338" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">राष्ट्रीय ग्रिड को 24x7 निरंतर</text>
+    <text x="152" y="364" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">कार्बन-मुक्त बेसलोड विद्युत आपूर्ति</text>
+  </g>
+
+  <!-- Flow Connector 2 -->
+  <polygon points="745,305 775,295 775,315" fill="#34d399"/>
+  <line x1="725" y1="305" x2="770" y2="305" stroke="#34d399" stroke-width="6"/>
+
+  <!-- Stage 3: Sustainable Grid -->
+  <g transform="translate(750, 100)">
+    <rect width="305" height="405" rx="16" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#047857"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">⚡</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">3. स्वच्छ ऊर्जा भविष्य</text>
+    
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>सोलर + विंड हाइब्रिड:</b> दिन में</text>
+    <text x="18" y="185" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#a7f3d0">  सौर व रात में पवन विद्युत</text>
+    
+    <text x="18" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>बायोगैस व ग्रामीण विकास:</b></text>
+    <text x="18" y="245" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#a7f3d0">  पेड़ों की कटाई में भारी कमी</text>
+
+    <rect x="18" y="295" width="269" height="90" rx="10" fill="#022c22"/>
+    <text x="152" y="330" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">ग्लोबल वार्मिंग नियंत्रण एवं</text>
+    <text x="152" y="358" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">भारत का 2070 नेट-जीरो लक्ष्य</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+    🌱 गैर-पारंपरिक ऊर्जा स्रोतों का तीव्र विस्तार भारत को ऊर्जा क्षेत्र में आत्मनिर्भर बनाएगा।
+  </text>
+</svg>

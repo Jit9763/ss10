@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="windSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="turbineWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#windSky)"/>
+
+  <!-- Western Ghats Mountains in Background -->
+  <polygon points="0,280 240,160 520,270 780,140 960,240 960,540 0,540" fill="#15803d"/>
+  <polygon points="0,340 380,240 760,330 960,280 960,540 0,540" fill="#166534"/>
+
+  <!-- Green Grass Coastal Plains -->
+  <polygon points="0,420 960,390 960,540 0,540" fill="#22c55e"/>
+
+  <!-- Wind Turbine 1 (Distant Left) -->
+  <g transform="translate(180, 180) scale(0.6)" fill="url(#turbineWhite)">
+    <polygon points="45,300 55,300 52,50 48,50"/>
+    <circle cx="50" cy="50" r="10" fill="#334155"/>
+    <polygon points="50,50 45,-80 55,-80"/>
+    <polygon points="50,50 160,110 150,120"/>
+    <polygon points="50,50 -60,110 -50,120"/>
+  </g>
+
+  <!-- Wind Turbine 2 (Distant Right) -->
+  <g transform="translate(760, 160) scale(0.7)" fill="url(#turbineWhite)">
+    <polygon points="45,300 55,300 52,50 48,50"/>
+    <circle cx="50" cy="50" r="10" fill="#334155"/>
+    <polygon points="50,50 45,-80 55,-80"/>
+    <polygon points="50,50 160,110 150,120"/>
+    <polygon points="50,50 -60,110 -50,120"/>
+  </g>
+
+  <!-- Wind Turbine 3 (Foreground Hero Turbine) -->
+  <g transform="translate(440, 80)" fill="url(#turbineWhite)">
+    <!-- Tower -->
+    <polygon points="42,420 58,420 54,60 46,60"/>
+    <circle cx="50" cy="60" r="15" fill="#334155"/>
+    <!-- 3 Rotor Blades -->
+    <polygon points="50,60 42,-140 58,-140"/>
+    <polygon points="50,60 220,160 205,175"/>
+    <polygon points="50,60 -120,160 -105,175"/>
+  </g>
+</svg>

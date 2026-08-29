@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#18181b"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#f59e0b" stroke-width="4"/>
+
+  <!-- Wide Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 4.5: भारत की राष्ट्रीय खाद्य सुरक्षा एवं सार्वजनिक वितरण प्रणाली (Food Security Model)
+  </text>
+
+  <!-- 3 Stage Supply Chain Visual Cards -->
+  <!-- Stage 1: Farmer & MSP -->
+  <g transform="translate(45, 100)">
+    <rect width="305" height="405" rx="16" fill="#27272a" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#ca8a04"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">🌾</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">1. किसान एवं MSP</text>
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• <b>न्यूनतम समर्थन मूल्य</b></text>
+    <text x="18" y="188" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  (MSP) पर सुनिश्चित खरीद।</text>
+    <text x="18" y="225" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• अधिशेष खाद्यान्न (गेहूं-चावल)</text>
+    <text x="18" y="253" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  की मंडियों से सीधी खरीद।</text>
+    <rect x="18" y="295" width="269" height="90" rx="10" fill="#3f3f46"/>
+    <text x="152" y="330" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">किसानों को मूल्य अनिश्चितता</text>
+    <text x="152" y="358" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">व बिचौलियों के शोषण से सुरक्षा</text>
+  </g>
+
+  <!-- Flow Connector 1 -->
+  <polygon points="375,305 405,295 405,315" fill="#f59e0b"/>
+  <line x1="355" y1="305" x2="400" y2="305" stroke="#f59e0b" stroke-width="6"/>
+
+  <!-- Stage 2: FCI Buffer Stock -->
+  <g transform="translate(415, 100)">
+    <rect width="305" height="405" rx="16" fill="#27272a" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#ca8a04"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">🏬</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">2. FCI बफर स्टॉक</text>
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• <b>भारतीय खाद्य निगम</b></text>
+    <text x="18" y="188" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  (FCI) के विशाल साइलो/गोदाम।</text>
+    <text x="18" y="225" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• सूखा, बाढ़ व राष्ट्रीय संकट</text>
+    <text x="18" y="253" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  हेतु आपातकालीन भंडारण।</text>
+    <rect x="18" y="295" width="269" height="90" rx="10" fill="#3f3f46"/>
+    <text x="152" y="330" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">राष्ट्रीय स्तर पर खाद्यान्न</text>
+    <text x="152" y="358" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">की निरंतर उपलब्धता सुनिश्चित</text>
+  </g>
+
+  <!-- Flow Connector 2 -->
+  <polygon points="745,305 775,295 775,315" fill="#f59e0b"/>
+  <line x1="725" y1="305" x2="770" y2="305" stroke="#f59e0b" stroke-width="6"/>
+
+  <!-- Stage 3: PDS Distribution -->
+  <g transform="translate(750, 100)">
+    <rect width="305" height="405" rx="16" fill="#27272a" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="152" cy="55" r="32" fill="#ca8a04"/>
+    <text x="152" y="66" font-family="'Segoe UI', Arial" font-size="28" text-anchor="middle">⚖️</text>
+    <text x="152" y="118" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#fde047" text-anchor="middle">3. PDS राशन वितरण</text>
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• <b>उचित मूल्य की दुकानें</b></text>
+    <text x="18" y="188" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  (Fair Price Shops/राशन)।</text>
+    <text x="18" y="225" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">• निर्धन (BPL) परिवारों को</text>
+    <text x="18" y="253" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#ffffff">  सस्ती रियायती दर पर अनाज।</text>
+    <rect x="18" y="295" width="269" height="90" rx="10" fill="#3f3f46"/>
+    <text x="152" y="330" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">अंतिम पंक्ति के नागरिक तक</text>
+    <text x="152" y="358" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">खाद्य व पोषण सुरक्षा की गारंटी</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+    🌾 भारत की खाद्य सुरक्षा नीति का प्राथमिक उद्देश्य सभी नागरिकों के लिए वहनीय मूल्यों पर खाद्यान्न की उपलब्धता सुनिश्चित करना है।
+  </text>
+</svg>

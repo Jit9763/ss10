@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#064e3b"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#10b981" stroke-width="4"/>
+
+  <!-- Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#065f46" stroke="#34d399" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 5.3: भारत में प्रमुख खनिजों का राज्यवार उत्पादन अंश (Production Share in %)
+  </text>
+
+  <!-- 3 Mineral Production Share Visual Bars/Cards -->
+  <!-- 1. Iron Ore Share -->
+  <g transform="translate(45, 95)">
+    <rect width="310" height="410" rx="14" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="42" rx="8" fill="#047857"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#fef08a" text-anchor="middle">🔩 लौह अयस्क (Iron Ore)</text>
+    
+    <!-- State Bars -->
+    <text x="18" y="90" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">ओडिशा (Odisha) - 52%</text>
+    <rect x="18" y="100" width="270" height="22" rx="6" fill="#22c55e"/>
+    
+    <text x="18" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">छत्तीसगढ़ (Chhattisgarh) - 16%</text>
+    <rect x="18" y="155" width="85" height="22" rx="6" fill="#10b981"/>
+
+    <text x="18" y="200" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">कर्नाटक (Karnataka) - 14%</text>
+    <rect x="18" y="210" width="75" height="22" rx="6" fill="#14b8a6"/>
+
+    <text x="18" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">झारखंड (Jharkhand) - 11%</text>
+    <rect x="18" y="265" width="60" height="22" rx="6" fill="#06b6d4"/>
+
+    <rect x="15" y="325" width="280" height="65" rx="8" fill="#042f2e"/>
+    <text x="155" y="352" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">ओडिशा देश का आधा से अधिक</text>
+    <text x="155" y="374" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#a7f3d0" text-anchor="middle">लौह अयस्क उत्पादित करता है</text>
+  </g>
+
+  <!-- 2. Bauxite Share -->
+  <g transform="translate(395, 95)">
+    <rect width="310" height="410" rx="14" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="42" rx="8" fill="#047857"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#fef08a" text-anchor="middle">🥫 बॉक्साइट (Bauxite / Al)</text>
+    
+    <!-- State Bars -->
+    <text x="18" y="90" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">ओडिशा (Odisha) - 51%</text>
+    <rect x="18" y="100" width="265" height="22" rx="6" fill="#f59e0b"/>
+    
+    <text x="18" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">गुजरात (Gujarat) - 24%</text>
+    <rect x="18" y="155" width="125" height="22" rx="6" fill="#fbbf24"/>
+
+    <text x="18" y="200" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">झारखंड (Jharkhand) - 9%</text>
+    <rect x="18" y="210" width="48" height="22" rx="6" fill="#fde047"/>
+
+    <text x="18" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">छत्तीसगढ़ (Chhattisgarh) - 8%</text>
+    <rect x="18" y="265" width="42" height="22" rx="6" fill="#fed7aa"/>
+
+    <rect x="15" y="325" width="280" height="65" rx="8" fill="#042f2e"/>
+    <text x="155" y="352" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">पंचपतमली (कोरापुट) ओडिशा का</text>
+    <text x="155" y="374" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#a7f3d0" text-anchor="middle">सबसे समृद्ध बॉक्साइट निक्षेप है</text>
+  </g>
+
+  <!-- 3. Manganese Share -->
+  <g transform="translate(745, 95)">
+    <rect width="310" height="410" rx="14" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="42" rx="8" fill="#047857"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#fef08a" text-anchor="middle">⚙️ मैंगनीज (Manganese)</text>
+    
+    <!-- State Bars -->
+    <text x="18" y="90" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">मध्य प्रदेश (MP) - 33%</text>
+    <rect x="18" y="100" width="175" height="22" rx="6" fill="#0ea5e9"/>
+    
+    <text x="18" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">महाराष्ट्र (Maharashtra) - 25%</text>
+    <rect x="18" y="155" width="130" height="22" rx="6" fill="#38bdf8"/>
+
+    <text x="18" y="200" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">ओडिशा (Odisha) - 19%</text>
+    <rect x="18" y="210" width="100" height="22" rx="6" fill="#7dd3fc"/>
+
+    <text x="18" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#ffffff">अन्य राज्य (कर्नाटक/आंध्र) - 23%</text>
+    <rect x="18" y="265" width="120" height="22" rx="6" fill="#bae6fd"/>
+
+    <rect x="15" y="325" width="280" height="65" rx="8" fill="#042f2e"/>
+    <text x="155" y="352" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">1 टन इस्पात बनाने में लगभग</text>
+    <text x="155" y="374" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="700" fill="#a7f3d0" text-anchor="middle">10 किग्रा मैंगनीज आवश्यक है</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+    ⭐ ओडिशा भारत में लौह अयस्क और बॉक्साइट दोनों के उत्पादन में देश में शीर्ष स्थान रखता है।
+  </text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <rect width="1000" height="560" rx="16" fill="#064e3b"/>
+  <rect x="10" y="10" width="980" height="540" rx="14" fill="none" stroke="#10b981" stroke-width="4"/>
+
+  <!-- Title -->
+  <rect x="100" y="25" width="800" height="55" rx="14" fill="#065f46" stroke="#34d399" stroke-width="3"/>
+  <text x="500" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle">
+    बहुउद्देशीय नदी घाटी परियोजनाओं के 6 प्रमुख लाभ एवं उद्देश्य
+  </text>
+
+  <!-- Center Hub: Multipurpose Project -->
+  <circle cx="500" cy="290" r="95" fill="#047857" stroke="#6ee7b7" stroke-width="4"/>
+  <text x="500" y="275" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">बहुउद्देशीय</text>
+  <text x="500" y="305" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">परियोजनाएं</text>
+  <text x="500" y="335" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#a7f3d0" text-anchor="middle">आधुनिक मंदिर</text>
+
+  <!-- 6 Radial Benefit Cards -->
+  <!-- 1. Irrigation -->
+  <g transform="translate(60, 110)">
+    <rect width="260" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">🌾</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">1. कृषि सिंचाई (Irrigation)</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">नहरों द्वारा शुष्क क्षेत्रों में जलापूर्ति।</text>
+  </g>
+
+  <!-- 2. Hydroelectricity -->
+  <g transform="translate(680, 110)">
+    <rect width="260" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">⚡</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">2. जलविद्युत (Electricity)</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">प्रदूषण मुक्त व नवीकरणीय ऊर्जा।</text>
+  </g>
+
+  <!-- 3. Flood Control -->
+  <g transform="translate(50, 240)">
+    <rect width="260" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">🛡️</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">3. बाढ़ नियंत्रण (Floods)</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">अतिरिक्त वर्षा जल का संचयन।</text>
+  </g>
+
+  <!-- 4. Drinking Water -->
+  <g transform="translate(690, 240)">
+    <rect width="260" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">🚰</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">4. घरेलू व औद्योगिक जल</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">शहरों व उद्योगों को स्वच्छ जलापूर्ति।</text>
+  </g>
+
+  <!-- 5. Inland Navigation & Fisheries -->
+  <g transform="translate(100, 380)">
+    <rect width="280" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">🐟</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">5. मत्स्य पालन व नौवहन</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">जलाशयों में मछली पालन व जल परिवहन।</text>
+  </g>
+
+  <!-- 6. Tourism & Recreation -->
+  <g transform="translate(620, 380)">
+    <rect width="280" height="100" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="40" font-family="'Segoe UI', Arial" font-size="22">⛵</text>
+    <text x="55" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#6ee7b7">6. पर्यटन एवं मनोरंजन</text>
+    <text x="20" y="75" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="700" fill="#ffffff">नौकायन, उद्यान व स्थानीय रोजगार।</text>
+  </g>
+
+  <!-- Quote Bottom -->
+  <rect x="50" y="495" width="900" height="45" rx="10" fill="#064e3b" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="500" y="525" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#fef08a" text-anchor="middle">
+    ⭐ पं. जवाहरलाल नेहरू: "बांध आधुनिक भारत के मंदिर हैं क्योंकि ये कृषि और उद्योग का एकीकृत विकास करते हैं।"
+  </text>
+</svg>

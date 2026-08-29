@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="quarrySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="limeCliff" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#quarrySky)"/>
+
+  <!-- White Limestone Stepped Quarry Face -->
+  <polygon points="0,180 380,140 760,190 960,150 960,540 0,540" fill="url(#limeCliff)"/>
+  <polygon points="0,270 440,230 820,280 960,240 960,540 0,540" fill="#e2e8f0"/>
+  <polygon points="0,360 400,320 780,370 960,330 960,540 0,540" fill="#cbd5e1"/>
+  <polygon points="0,460 500,430 960,450 960,540 0,540" fill="#94a3b8"/>
+
+  <!-- Modern Cement Plant Silos & Rotary Kiln on Horizon -->
+  <g transform="translate(680, 80)" fill="#475569" stroke="#1e293b" stroke-width="2">
+    <!-- Silo 1 -->
+    <rect x="0" y="30" width="40" height="90" rx="6" fill="#f8fafc"/>
+    <!-- Silo 2 -->
+    <rect x="45" y="30" width="40" height="90" rx="6" fill="#f8fafc"/>
+    <!-- Chimney -->
+    <rect x="100" y="0" width="16" height="120" fill="#cbd5e1"/>
+    <!-- Rotary Kiln cylinder -->
+    <line x1="-80" y1="110" x2="0" y2="110" stroke="#334155" stroke-width="16"/>
+  </g>
+</svg>

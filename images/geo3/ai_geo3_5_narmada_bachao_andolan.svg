@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <rect width="1000" height="560" rx="16" fill="#18181b"/>
+  <rect x="10" y="10" width="980" height="540" rx="14" fill="none" stroke="#eab308" stroke-width="4"/>
+
+  <!-- Title -->
+  <rect x="100" y="25" width="800" height="55" rx="14" fill="#854d0e" stroke="#facc15" stroke-width="3"/>
+  <text x="500" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle">
+    नर्मदा बचाओ आंदोलन एवं बड़े बांध विरोधी जन-आंदोलन
+  </text>
+
+  <!-- Left: Narmada Bachao Andolan Facts -->
+  <g transform="translate(60, 105)">
+    <rect width="420" height="370" rx="16" fill="#27272a" stroke="#ca8a04" stroke-width="2"/>
+    <text x="210" y="40" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde047" text-anchor="middle">✊ नर्मदा बचाओ आंदोलन (NBA)</text>
+    
+    <text x="20" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>नेतृत्व:</b> मेधा पाटकर एवं अन्य पर्यावरणविद।</text>
+    <text x="20" y="115" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>मूल लक्ष्य:</b> गुजरात में नर्मदा नदी पर बन रहे</text>
+    <text x="20" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  सरदार सरोवर बांध से डूबने वाले वनों की सुरक्षा।</text>
+    
+    <text x="20" y="185" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>बाद में विस्तार:</b> बांध विस्थापित निर्धन</text>
+    <text x="20" y="215" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  जनजातियों व किसानों के पुनर्वास पर केंद्रित हुआ।</text>
+    
+    <text x="20" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>आंदोलन का नारा:</b> "विकास ऐसा हो जो विनाश न लाए"</text>
+    <text x="20" y="285" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  तथा "डूबेंगे पर झुकेंगे नहीं!"</text>
+    
+    <rect x="20" y="315" width="380" height="40" rx="8" fill="#713f12"/>
+    <text x="210" y="342" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fef08a" text-anchor="middle">गैर-सरकारी संगठन (NGO) आधारित अहिंसक आंदोलन</text>
+  </g>
+
+  <!-- Right: Sardar Sarovar Project Specs -->
+  <g transform="translate(520, 105)">
+    <rect width="420" height="370" rx="16" fill="#27272a" stroke="#ca8a04" stroke-width="2"/>
+    <text x="210" y="40" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde047" text-anchor="middle">🌊 सरदार सरोवर बांध (Sardar Sarovar)</text>
+    
+    <text x="20" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>स्थान:</b> केवड़िया (नर्मदा जिला, गुजरात)</text>
+    <text x="20" y="115" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>लाभान्वित 4 राज्य:</b> गुजरात, राजस्थान,</text>
+    <text x="20" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  मध्य प्रदेश और महाराष्ट्र।</text>
+    
+    <text x="20" y="185" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>गुजरात व राजस्थान के सूखाग्रस्त क्षेत्र:</b></text>
+    <text x="20" y="215" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  कच्छ, सौराष्ट्र व बाड़मेर/जालौर तक नहरी पानी।</text>
+    
+    <text x="20" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• <b>विवाद:</b> बांध की ऊंचाई बढ़ाने से मध्य प्रदेश</text>
+    <text x="20" y="285" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  के सैकड़ों गांवों का जलमग्न होना।</text>
+
+    <rect x="20" y="315" width="380" height="40" rx="8" fill="#14532d"/>
+    <text x="210" y="342" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#bbf7d0" text-anchor="middle">भारत की सबसे बड़ी जल संसाधन परियोजनाओं में से एक</text>
+  </g>
+
+  <!-- Bottom Quote -->
+  <text x="500" y="520" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#fef08a" text-anchor="middle">
+    📌 टिहरी बांध आंदोलन: उत्तराखंड में भागीरथी नदी पर बांध निर्माण व भूकंपीय संवेदनशीलता के विरुद्ध जन-संघर्ष।
+  </text>
+</svg>

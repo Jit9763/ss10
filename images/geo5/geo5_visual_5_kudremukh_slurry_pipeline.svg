@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="ghatsMist" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="40%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="pipeSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#ghatsMist)"/>
+
+  <!-- Lush Western Ghats Mountains -->
+  <path d="M0,240 Q220,130 460,220 T960,150 L960,540 L0,540 Z" fill="#15803d"/>
+  <path d="M0,290 Q340,210 680,310 T960,260 L960,540 L0,540 Z" fill="#166534"/>
+  <path d="M0,380 Q450,300 960,370 L960,540 L0,540 Z" fill="#14532d"/>
+
+  <!-- Elevated Slurry Pipeline Cutting Through Hills to Coast -->
+  <!-- Concrete Pylon Supports -->
+  <g fill="#64748b" stroke="#334155" stroke-width="2">
+    <rect x="140" y="320" width="22" height="150"/>
+    <rect x="340" y="290" width="24" height="180"/>
+    <rect x="560" y="270" width="26" height="200"/>
+    <rect x="780" y="250" width="28" height="220"/>
+  </g>
+
+  <!-- Giant Steel Pipeline -->
+  <path d="M0,370 L200,340 L440,310 L700,280 L960,250" fill="none" stroke="url(#pipeSteel)" stroke-width="26"/>
+  <path d="M0,366 L200,336 L440,306 L700,276 L960,246" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.8"/>
+  <path d="M0,370 L200,340 L440,310 L700,280 L960,250" fill="none" stroke="#1e293b" stroke-width="2"/>
+</svg>

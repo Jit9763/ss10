@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#1e1b4b"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#818cf8" stroke-width="4"/>
+
+  <!-- Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#312e81" stroke="#a5b4fc" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 5.2: भारत की 3 प्रमुख खनिज पेटियां (Major Mineral Belts of India)
+  </text>
+
+  <!-- 3 Belts Cards -->
+  <!-- Belt 1: North-Eastern Peninsular Belt -->
+  <g transform="translate(45, 90)">
+    <rect width="310" height="415" rx="14" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="44" rx="8" fill="#4338ca"/>
+    <text x="155" y="44" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fde047" text-anchor="middle">1. उत्तर-पूर्वी प्रायद्वीपीय पेटी</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#93c5fd">क्षेत्र व राज्य:</text>
+    <text x="18" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>छोटानागपुर का पठार</b></text>
+    <text x="18" y="135" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• झारखंड, ओडिशा, पश्चिम बंगाल,</text>
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  छत्तीसगढ़</text>
+
+    <text x="18" y="195" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#86efac">उपलब्ध प्रमुख खनिज:</text>
+    <text x="18" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• देश का 90% से अधिक <b>कोयला</b></text>
+    <text x="18" y="245" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  (झरिया, रानीगंज, बोकारो)</text>
+    <text x="18" y="270" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• उच्च कोटि का <b>लौह अयस्क</b> (मयूरभंज)</text>
+    <text x="18" y="295" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>मैंगनीज, बॉक्साइट व अभ्रक</b> (कोडरमा)</text>
+
+    <rect x="15" y="340" width="280" height="55" rx="8" fill="#1e1b4b"/>
+    <text x="155" y="365" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">भारत का खनिज हृदय स्थल</text>
+    <text x="155" y="385" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="12" font-weight="700" fill="#e0e7ff" text-anchor="middle">(रूहर ऑफ इंडिया / Ruhr of India)</text>
+  </g>
+
+  <!-- Belt 2: Central-Southern Belt -->
+  <g transform="translate(395, 90)">
+    <rect width="310" height="415" rx="14" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="44" rx="8" fill="#4338ca"/>
+    <text x="155" y="44" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#4ade80" text-anchor="middle">2. मध्य-दक्षिणी प्रायद्वीपीय पेटी</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#93c5fd">क्षेत्र व राज्य:</text>
+    <text x="18" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>कर्नाटक का पठार, गोवा व तमिलनाडु</b></text>
+    <text x="18" y="135" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• बेल्लारी-चित्रदुर्ग-चिकमगलूर पेटी</text>
+    <text x="18" y="160" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• नेवेली (तमिलनाडु)</text>
+
+    <text x="18" y="195" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#86efac">उपलब्ध प्रमुख खनिज:</text>
+    <text x="18" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>कुद्रेमुख (Kudremukh)</b> 100% निर्यातोन्मुख</text>
+    <text x="18" y="245" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  लौह अयस्क स्लरी पाइपलाइन</text>
+    <text x="18" y="270" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>लिग्नाइट (भूरा कोयला)</b> - नेवेली</text>
+    <text x="18" y="295" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• बॉक्साइट व चूना पत्थर</text>
+
+    <rect x="15" y="340" width="280" height="55" rx="8" fill="#1e1b4b"/>
+    <text x="155" y="365" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#4ade80" text-anchor="middle">मंगलौर व मारमागाओ पत्तन</text>
+    <text x="155" y="385" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="12" font-weight="700" fill="#e0e7ff" text-anchor="middle">द्वारा जापान व ईरान को भारी निर्यात</text>
+  </g>
+
+  <!-- Belt 3: North-Western Belt -->
+  <g transform="translate(745, 90)">
+    <rect width="310" height="415" rx="14" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="44" rx="8" fill="#4338ca"/>
+    <text x="155" y="44" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#38bdf8" text-anchor="middle">3. उत्तर-पश्चिमी पेटी</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#93c5fd">क्षेत्र व राज्य:</text>
+    <text x="18" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>अरावली पर्वतमाला (राजस्थान)</b></text>
+    <text x="18" y="135" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• गुजरात का तटीय मैदान व खंभात</text>
+
+    <text x="18" y="195" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="900" fill="#86efac">उपलब्ध प्रमुख खनिज:</text>
+    <text x="18" y="220" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>तांबा (Copper)</b> - खेतड़ी (राजस्थान)</text>
+    <text x="18" y="245" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>सीसा, जस्ता, चांदी</b> (जावर खदानें)</text>
+    <text x="18" y="270" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>संगमरमर, बलुआ पत्थर, जिप्सम</b></text>
+    <text x="18" y="295" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">• <b>पेट्रोलियम</b> (अंकलेश्वर व बाड़मेर)</text>
+
+    <rect x="15" y="340" width="280" height="55" rx="8" fill="#1e1b4b"/>
+    <text x="155" y="365" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">अलौह धातु व निर्माण पत्थर</text>
+    <text x="155" y="385" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="12" font-weight="700" fill="#e0e7ff" text-anchor="middle">का देश में सबसे समृद्ध क्षेत्र</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#3730a3" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#fde047" text-anchor="middle">
+    🗺️ उत्तरी भारत का विशाल जलोढ़ मैदान आर्थिक रूप से महत्वपूर्ण खनिजों से लगभग विहीन है।
+  </text>
+</svg>

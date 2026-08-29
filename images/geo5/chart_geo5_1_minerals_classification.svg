@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600">
+  <rect width="1100" height="600" rx="18" fill="#0f172a"/>
+  <rect x="12" y="12" width="1076" height="576" rx="14" fill="none" stroke="#38bdf8" stroke-width="4"/>
+
+  <!-- Title Banner (1020px) -->
+  <rect x="40" y="18" width="1020" height="52" rx="14" fill="#0369a1" stroke="#7dd3fc" stroke-width="3"/>
+  <text x="550" y="52" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">
+    चार्ट 5.1: खनिजों का विस्तृत वर्गीकरण (Classification of Minerals)
+  </text>
+
+  <!-- Root Node -->
+  <rect x="400" y="95" width="300" height="54" rx="12" fill="#0284c7" stroke="#38bdf8" stroke-width="3"/>
+  <text x="550" y="130" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="21" font-weight="900" fill="#ffffff" text-anchor="middle">💎 खनिज संसाधन (Minerals)</text>
+
+  <!-- Connectors -->
+  <line x1="550" y1="149" x2="550" y2="180" stroke="#38bdf8" stroke-width="4"/>
+  <line x1="200" y1="180" x2="900" y2="180" stroke="#38bdf8" stroke-width="4"/>
+  <line x1="200" y1="180" x2="200" y2="210" stroke="#38bdf8" stroke-width="4"/>
+  <line x1="550" y1="180" x2="550" y2="210" stroke="#38bdf8" stroke-width="4"/>
+  <line x1="900" y1="180" x2="900" y2="210" stroke="#38bdf8" stroke-width="4"/>
+
+  <!-- Branch 1: Metallic -->
+  <g transform="translate(45, 210)">
+    <rect width="310" height="295" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="40" rx="8" fill="#0369a1"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">1. धात्विक खनिज (Metallic)</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• लौह धातुएं (Ferrous):</text>
+    <text x="18" y="108" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  लौह अयस्क, मैंगनीज, निकेल, कोबाल्ट</text>
+    
+    <text x="18" y="138" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• अलौह धातुएं (Non-Ferrous):</text>
+    <text x="18" y="161" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  तांबा, बॉक्साइट, सीसा, जस्ता, टिन</text>
+    
+    <text x="18" y="191" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• बहुमूल्य धातुएं (Precious):</text>
+    <text x="18" y="214" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  सोना, चांदी, प्लेटिनम</text>
+
+    <rect x="15" y="240" width="280" height="38" rx="6" fill="#0f172a"/>
+    <text x="155" y="264" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#fde047" text-anchor="middle">कुल धात्विक मूल्य में लौह 3/4 भाग</text>
+  </g>
+
+  <!-- Branch 2: Non-Metallic -->
+  <g transform="translate(395, 210)">
+    <rect width="310" height="295" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="40" rx="8" fill="#0369a1"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">2. अधात्विक खनिज</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• अभ्रक (Mica):</text>
+    <text x="18" y="108" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  विद्युत रोधक, चादरों में विभाजन क्षमता</text>
+    
+    <text x="18" y="138" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• चूना पत्थर (Limestone):</text>
+    <text x="18" y="161" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  सीमेंट उद्योग का आधारभूत कच्चा माल</text>
+    
+    <text x="18" y="191" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• अन्य खनिज पत्थर:</text>
+    <text x="18" y="214" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  जिप्सम, संगमरमर, पोटाश, ग्रेनाइट</text>
+
+    <rect x="15" y="240" width="280" height="38" rx="6" fill="#0f172a"/>
+    <text x="155" y="264" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#fde047" text-anchor="middle">इलेक्ट्रॉनिक व निर्माण उद्योग आधार</text>
+  </g>
+
+  <!-- Branch 3: Energy Minerals -->
+  <g transform="translate(745, 210)">
+    <rect width="310" height="295" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="15" width="280" height="40" rx="8" fill="#0369a1"/>
+    <text x="155" y="42" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">3. ऊर्जा खनिज (Energy)</text>
+    
+    <text x="18" y="85" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• कोयला (Coal):</text>
+    <text x="18" y="108" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  एंथ्रेसाइट, बिटुमिनस, लिग्नाइट, पीट</text>
+    
+    <text x="18" y="138" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• पेट्रोलियम व प्राकृतिक गैस:</text>
+    <text x="18" y="161" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  मुंबई हाई, अंकलेश्वर, डिगबोई, KG बेसिन</text>
+    
+    <text x="18" y="191" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="900" fill="#38bdf8">• आणविक ऊर्जा (Nuclear):</text>
+    <text x="18" y="214" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="14" font-weight="700" fill="#ffffff">  यूरेनियम (झारखंड) व थोरियम (केरल)</text>
+
+    <rect x="15" y="240" width="280" height="38" rx="6" fill="#0f172a"/>
+    <text x="155" y="264" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="13" font-weight="900" fill="#fde047" text-anchor="middle">ताप विद्युत व परिवहन की जीवन रेखा</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="40" y="525" width="1020" height="50" rx="12" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+  <text x="550" y="556" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+    📌 खनिज निश्चित आंतरिक संरचना वाले प्राकृतिक समरूप यौगिक हैं जो आग्नेय, कायांतरित व अवसादी शैलों में पाए जाते हैं।
+  </text>
+</svg>

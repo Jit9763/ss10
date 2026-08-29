@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560">
+  <rect width="1000" height="560" rx="16" fill="#451a03"/>
+  <rect x="10" y="10" width="980" height="540" rx="14" fill="none" stroke="#d97706" stroke-width="4"/>
+
+  <!-- Title -->
+  <rect x="100" y="25" width="800" height="55" rx="14" fill="#78350f" stroke="#f59e0b" stroke-width="3"/>
+  <text x="500" y="62" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle">
+    प्राचीन भारत में जल प्रबंधन एवं उत्कृष्ट जलीय कृतियां (NCERT History)
+  </text>
+
+  <!-- 4 Historic Milestones -->
+  <!-- 1. Sringaverapura -->
+  <g transform="translate(60, 110)">
+    <rect width="410" height="175" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="35" rx="6" fill="#d97706"/>
+    <text x="50" y="40" font-family="'Segoe UI', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">ई.पू. 1वीं सदी</text>
+    <text x="95" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde68a">श्रृंगवेरपुरा (इलाहाबाद/प्रयागराज)</text>
+    <text x="15" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• गंगा नदी के बाढ़ जल को सुरक्षित ले जाने वाली</text>
+    <text x="15" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  उत्कृष्ट जल संचयन प्रणाली बनाई गई थी।</text>
+    <text x="15" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#86efac">🏛️ उत्कृष्ट हाइड्रोलिक इंजीनियरिंग का प्रमाण</text>
+  </g>
+
+  <!-- 2. Chandragupta Maurya -->
+  <g transform="translate(530, 110)">
+    <rect width="410" height="175" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="35" rx="6" fill="#d97706"/>
+    <text x="50" y="40" font-family="'Segoe UI', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">मौर्य काल</text>
+    <text x="95" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde68a">चंद्रगुप्त मौर्य के बांध व झीलें</text>
+    <text x="15" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• व्यापक स्तर पर बांधों, झीलों एवं सिंचाई तंत्र</text>
+    <text x="15" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  का निर्माण (कलिंग, नागार्जुनकोंडा, कोल्हापुर)।</text>
+    <text x="15" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#86efac">🌊 गुजरात की ऐतिहासिक सुदर्शन झील का निर्माण</text>
+  </g>
+
+  <!-- 3. Bhopal Lake -->
+  <g transform="translate(60, 315)">
+    <rect width="410" height="175" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="35" rx="6" fill="#d97706"/>
+    <text x="50" y="40" font-family="'Segoe UI', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">11वीं सदी</text>
+    <text x="95" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde68a">भोपाल की कृत्रिम झील (Bhopal Lake)</text>
+    <text x="15" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• 11वीं शताब्दी में अपने समय की सबसे बड़ी</text>
+    <text x="15" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  कृत्रिम झीलों में से एक का निर्माण किया गया।</text>
+    <text x="15" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#86efac">💧 राजा भोज द्वारा निर्मित विशाल जल संरचना</text>
+  </g>
+
+  <!-- 4. Hauz Khas -->
+  <g transform="translate(530, 315)">
+    <rect width="410" height="175" rx="14" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="70" height="35" rx="6" fill="#d97706"/>
+    <text x="50" y="40" font-family="'Segoe UI', Arial" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">14वीं सदी</text>
+    <text x="95" y="38" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="22" font-weight="900" fill="#fde68a">हौज खास (दिल्ली - इल्तुतमिश)</text>
+    <text x="15" y="80" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">• सुल्तान इल्तुतमिश ने सीरी फोर्ट क्षेत्र में</text>
+    <text x="15" y="110" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="700" fill="#ffffff">  जल आपूर्ति हेतु विशाल हौज (जलाशय) बनवाया।</text>
+    <text x="15" y="145" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="16" font-weight="900" fill="#86efac">🏰 मध्यकालीन भारत की उत्कृष्ट जलापूर्ति व्यवस्था</text>
+  </g>
+
+  <!-- Bottom Banner -->
+  <text x="500" y="525" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="18" font-weight="900" fill="#fed7aa" text-anchor="middle">
+    📌 अर्थशास्त्र में कौटिल्य ने बांध व नहरें तोड़ने वालों के लिए कड़े दंड का उल्लेख किया है।
+  </text>
+</svg>
