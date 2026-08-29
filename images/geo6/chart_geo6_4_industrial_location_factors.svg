@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad4)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="626" fill="none" stroke="#0284c7" stroke-width="5" rx="20"/>
+
+  <!-- Top Banner -->
+  <g filter="url(#shadow4)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad4)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
+      चार्ट 6.4: उद्योगों के स्थानीयकरण के 6 प्रमुख निर्धारक कारक (Industrial Location Factors)
+    </text>
+  </g>
+
+  <!-- Central Hub: आदर्श औद्योगिक स्थिति -->
+  <g filter="url(#shadow4)">
+    <circle cx="550" cy="340" r="95" fill="#0f766e" stroke="#ffffff" stroke-width="6"/>
+    <text x="550" y="325" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">आदर्श स्थिति</text>
+    <text x="550" y="350" fill="#a7f3d0" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">(न्यूनतम उत्पादन</text>
+    <text x="550" y="372" fill="#a7f3d0" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">लागत स्थल)</text>
+  </g>
+
+  <!-- 6 Radial Surrounding Factor Cards -->
+  <!-- Factor 1: Raw Material (Top Left) -->
+  <g filter="url(#shadow4)">
+    <rect x="40" y="90" width="310" height="100" rx="14" fill="#ffffff" stroke="#15803d" stroke-width="3"/>
+    <rect x="48" y="98" width="294" height="32" rx="8" fill="#15803d"/>
+    <text x="195" y="120" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">1. कच्चा माल (Raw Material)</text>
+    <text x="195" y="152" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• भारी/भार ह्रासी माल के स्रोत की समीपता</text>
+    <text x="195" y="172" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(जैसे गन्ना, लोहा-अयस्क)</text>
+  </g>
+
+  <!-- Factor 2: Power (Top Right) -->
+  <g filter="url(#shadow4)">
+    <rect x="750" y="90" width="310" height="100" rx="14" fill="#ffffff" stroke="#c2410c" stroke-width="3"/>
+    <rect x="758" y="98" width="294" height="32" rx="8" fill="#c2410c"/>
+    <text x="905" y="120" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">2. ऊर्जा व विद्युत आपूर्ति (Power)</text>
+    <text x="905" y="152" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• निर्बाध, सस्ती व नियमित विद्युत</text>
+    <text x="905" y="172" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(कोयला/जलविद्युत/ग्रिड)</text>
+  </g>
+
+  <!-- Factor 3: Labour (Middle Left) -->
+  <g filter="url(#shadow4)">
+    <rect x="40" y="240" width="310" height="100" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+    <rect x="48" y="248" width="294" height="32" rx="8" fill="#0284c7"/>
+    <text x="195" y="270" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">3. श्रमिक उपलब्धता (Labour)</text>
+    <text x="195" y="302" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• कुशल इंजीनियर व सस्ते अकुशल श्रमिक</text>
+    <text x="195" y="322" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(सघन आबादी वाले राज्यों से)</text>
+  </g>
+
+  <!-- Factor 4: Market (Middle Right) -->
+  <g filter="url(#shadow4)">
+    <rect x="750" y="240" width="310" height="100" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+    <rect x="758" y="248" width="294" height="32" rx="8" fill="#7c3aed"/>
+    <text x="905" y="270" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">4. बाजार समीपता (Market)</text>
+    <text x="905" y="302" fill="#5b21b6" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• तैयार माल की खपत व क्रय शक्ति</text>
+    <text x="905" y="322" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(महानगरीय उपभोक्ता मांग)</text>
+  </g>
+
+  <!-- Factor 5: Capital & Banking (Bottom Left) -->
+  <g filter="url(#shadow4)">
+    <rect x="40" y="390" width="310" height="100" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+    <rect x="48" y="398" width="294" height="32" rx="8" fill="#d97706"/>
+    <text x="195" y="420" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">5. पूंजी व वित्तीय सेवाएं (Capital)</text>
+    <text x="195" y="452" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• बैंक, बीमा, शेयर बाजार व ऋण</text>
+    <text x="195" y="472" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(निवेश अनुकूल वातावरण)</text>
+  </g>
+
+  <!-- Factor 6: Transport & Port (Bottom Right) -->
+  <g filter="url(#shadow4)">
+    <rect x="750" y="390" width="310" height="100" rx="14" fill="#ffffff" stroke="#059669" stroke-width="3"/>
+    <rect x="758" y="398" width="294" height="32" rx="8" fill="#059669"/>
+    <text x="905" y="420" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">6. परिवहन व पत्तन (Transport)</text>
+    <text x="905" y="452" fill="#065f46" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900" text-anchor="middle">• रेलवे, एक्सप्रेसवे व बंदरगाह पहुंच</text>
+    <text x="905" y="472" fill="#064e3b" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" text-anchor="middle">(सुलभ अंतरराष्ट्रीय व्यापार)</text>
+  </g>
+
+  <!-- Bottom Agglomeration Economics Card -->
+  <g filter="url(#shadow4)">
+    <rect x="40" y="520" width="1020" height="110" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="550" y="555" fill="#38bdf8" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      🏙️ समूहन बचतें (Agglomeration Economies):
+    </text>
+    <text x="550" y="585" fill="#f8fafc" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
+      जब अनेक उद्योग एक साथ नगरों में स्थापित होकर वहां उपलब्ध बैंकिंग, बीमा, परिवहन, श्रम व परामर्श सेवाओं का साझा लाभ उठाते हैं,
+    </text>
+    <text x="550" y="608" fill="#f8fafc" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
+      तो इसे 'समूहन बचत' (Agglomeration Economies) कहा जाता है। (उदाहरण: मुंबई-पुणे, बेंगलुरु-तमिलनाडु औद्योगिक पेटी)।
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad2)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="626" fill="none" stroke="#0d9488" stroke-width="5" rx="20"/>
+
+  <!-- Top Banner -->
+  <g filter="url(#shadow2)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad2)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
+      चार्ट 6.2: वस्त्र उद्योग में मूल्य संवर्धन चक्र (Value Addition in Textile Industry)
+    </text>
+  </g>
+
+  <!-- 4 Step Sequential Process Chain -->
+  <!-- Step 1: Raw Fiber -->
+  <g filter="url(#shadow2)">
+    <rect x="40" y="110" width="220" height="420" rx="16" fill="#ffffff" stroke="#15803d" stroke-width="4"/>
+    <rect x="50" y="120" width="200" height="40" rx="10" fill="#15803d"/>
+    <text x="150" y="146" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 1: कच्चा रेशा
+    </text>
+    
+    <text x="150" y="195" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="32" text-anchor="middle">🌱 🌾</text>
+    
+    <rect x="50" y="220" width="200" height="70" rx="8" fill="#dcfce7"/>
+    <text x="150" y="246" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">कपास, जूट, ऊन,</text>
+    <text x="150" y="272" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">रेशम व कृत्रिम रेशा</text>
+
+    <rect x="50" y="310" width="200" height="205" rx="8" fill="#f0fdf4"/>
+    <text x="60" y="335" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">⚙️ प्रक्रिया:</text>
+    <text x="60" y="365" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• ओटना (Ginning)</text>
+    <text x="60" y="395" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• धुनाई (Carding)</text>
+    <text x="60" y="425" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• रेशों की सफाई</text>
+    <text x="60" y="475" fill="#15803d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">💵 आधारभूत मूल्य</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 265 320 L 305 320" stroke="#0d9488" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="310,320 295,310 295,330" fill="#0d9488"/>
+
+  <!-- Step 2: Spinning / Yarn -->
+  <g filter="url(#shadow2)">
+    <rect x="315" y="110" width="220" height="420" rx="16" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+    <rect x="325" y="120" width="200" height="40" rx="10" fill="#0284c7"/>
+    <text x="425" y="146" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 2: कताई (Soot)
+    </text>
+
+    <text x="425" y="195" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="32" text-anchor="middle">🧵 🌀</text>
+
+    <rect x="325" y="220" width="200" height="70" rx="8" fill="#e0f2fe"/>
+    <text x="425" y="246" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">सूत / धागा निर्माण</text>
+    <text x="425" y="272" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">(Yarn Production)</text>
+
+    <rect x="325" y="310" width="200" height="205" rx="8" fill="#f0fdf4"/>
+    <text x="335" y="335" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">⚙️ प्रक्रिया:</text>
+    <text x="335" y="365" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• कताई मिलें (Spinning)</text>
+    <text x="335" y="395" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• रिंग फ्रेम मशीनें</text>
+    <text x="335" y="425" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• धागे की रील्स</text>
+    <text x="335" y="475" fill="#0284c7" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">📈 +2x मूल्य संवर्धन</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 540 320 L 580 320" stroke="#0d9488" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="585,320 570,310 570,330" fill="#0d9488"/>
+
+  <!-- Step 3: Weaving & Processing -->
+  <g filter="url(#shadow2)">
+    <rect x="590" y="110" width="220" height="420" rx="16" fill="#ffffff" stroke="#c2410c" stroke-width="4"/>
+    <rect x="600" y="120" width="200" height="40" rx="10" fill="#c2410c"/>
+    <text x="700" y="146" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 3: बुनाई व रंगाई
+    </text>
+
+    <text x="700" y="195" fill="#c2410c" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="32" text-anchor="middle">🎨 🧣</text>
+
+    <rect x="600" y="220" width="200" height="70" rx="8" fill="#ffedd5"/>
+    <text x="700" y="246" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">कपड़ा / वस्त्र (Fabric)</text>
+    <text x="700" y="272" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">रंगाई व परिष्करण</text>
+
+    <rect x="600" y="310" width="200" height="205" rx="8" fill="#fffbeb"/>
+    <text x="610" y="335" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">⚙️ प्रक्रिया:</text>
+    <text x="610" y="365" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• हथकरघा (Handloom)</text>
+    <text x="610" y="395" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• विद्युतकरघा (Powerloom)</text>
+    <text x="610" y="425" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• रासायनिक रंगाई</text>
+    <text x="610" y="475" fill="#c2410c" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">📈 +5x मूल्य संवर्धन</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 815 320 L 855 320" stroke="#0d9488" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="860,320 845,310 845,330" fill="#0d9488"/>
+
+  <!-- Step 4: Garments / Ready Made -->
+  <g filter="url(#shadow2)">
+    <rect x="865" y="110" width="220" height="420" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+    <rect x="875" y="120" width="200" height="40" rx="10" fill="#7c3aed"/>
+    <text x="975" y="146" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 4: सिले परिधान
+    </text>
+
+    <text x="975" y="195" fill="#7c3aed" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="32" text-anchor="middle">👔 👗</text>
+
+    <rect x="875" y="220" width="200" height="70" rx="8" fill="#f5f3ff"/>
+    <text x="975" y="246" fill="#5b21b6" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">तैयार सिले वस्त्र</text>
+    <text x="975" y="272" fill="#5b21b6" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">(Garment Export)</text>
+
+    <rect x="875" y="310" width="200" height="205" rx="8" fill="#f5f3ff"/>
+    <text x="885" y="335" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">⚙️ प्रक्रिया:</text>
+    <text x="885" y="365" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• वस्त्र सिलाई (Tailoring)</text>
+    <text x="885" y="395" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• पैकेजिंग व ब्रांडिंग</text>
+    <text x="885" y="425" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• वैश्विक निर्यात</text>
+    <text x="885" y="475" fill="#7c3aed" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🚀 +10x उच्चतम मूल्य</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Card -->
+  <g filter="url(#shadow2)">
+    <rect x="40" y="555" width="1045" height="70" rx="14" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text x="562" y="597" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
+      💡 वस्त्र उद्योग भारत का एकमात्र उद्योग है जो कच्चे माल से लेकर उच्चतम मूल्य संवर्धित उत्पाद (परिधान) तक पूर्णतः स्वावलंबी (Self-Reliant) है!
+    </text>
+  </g>
+</svg>

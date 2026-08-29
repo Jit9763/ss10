@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad3)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="626" fill="none" stroke="#ea580c" stroke-width="5" rx="20"/>
+
+  <!-- Top Banner -->
+  <g filter="url(#shadow3)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad3)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
+      चार्ट 6.3: लोहा एवं इस्पात निर्माण की चरणबद्ध वैज्ञानिक प्रक्रिया (Steel Making Process)
+    </text>
+  </g>
+
+  <!-- 4 Step Process Cards -->
+  <!-- Step 1: Raw Material -->
+  <g filter="url(#shadow3)">
+    <rect x="40" y="95" width="490" height="235" rx="16" fill="#ffffff" stroke="#78350f" stroke-width="4"/>
+    <rect x="48" y="103" width="474" height="40" rx="10" fill="#78350f"/>
+    <text x="285" y="130" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 1: कच्चा माल का अनुपात एवं परिवहन
+    </text>
+
+    <rect x="58" y="153" width="454" height="160" rx="10" fill="#fef3c7"/>
+    <text x="75" y="180" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">⚖️ आदर्श कच्चा माल अनुपात (4 : 2 : 1):</text>
+    <text x="75" y="210" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• <b>4 भाग:</b> लौह अयस्क (Iron Ore)</text>
+    <text x="75" y="240" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• <b>2 भाग:</b> कोकिंग कोयला (Coking Coal - ईंधन व अपचायक)</text>
+    <text x="75" y="270" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• <b>1 भाग:</b> चूना पत्थर (Limestone - गालक/Flux) + मैंगनीज</text>
+  </g>
+
+  <!-- Step 2: Blast Furnace -->
+  <g filter="url(#shadow3)">
+    <rect x="570" y="95" width="490" height="235" rx="16" fill="#ffffff" stroke="#c2410c" stroke-width="4"/>
+    <rect x="578" y="103" width="474" height="40" rx="10" fill="#c2410c"/>
+    <text x="815" y="130" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 2: झोंका भट्टी में प्रगलन (Blast Furnace)
+    </text>
+
+    <rect x="588" y="153" width="454" height="160" rx="10" fill="#ffedd5"/>
+    <text x="605" y="180" fill="#9a3412" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">🔥 भट्टी प्रगलन एवं पिघला लोहा:</text>
+    <text x="605" y="210" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• लौह अयस्क को चूना पत्थर व कोक के साथ 1600°C पर गर्म करना।</text>
+    <text x="605" y="240" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• धातुमल (Slag) अलग किया जाता है।</text>
+    <text x="605" y="270" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• सांचों में ढालकर <b>'कच्चा लोहा' (Pig Iron / ढलवा लोहा)</b> तैयार होता है।</text>
+  </g>
+
+  <!-- Step 3: Steel Making -->
+  <g filter="url(#shadow3)">
+    <rect x="40" y="350" width="490" height="210" rx="16" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+    <rect x="48" y="358" width="474" height="40" rx="10" fill="#0284c7"/>
+    <text x="285" y="385" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 3: इस्पात निर्माण (Steel Making Conversion)
+    </text>
+
+    <rect x="58" y="408" width="454" height="135" rx="10" fill="#e0f2fe"/>
+    <text x="75" y="435" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">✨ ऑक्सीकरण एवं मिश्र धातु मिश्रण:</text>
+    <text x="75" y="465" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• कच्चे लोहे को पुनः पिघलाकर कार्बन की अशुद्धियां जलाना।</text>
+    <text x="75" y="495" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• कठोरता व जंगरोधक क्षमता हेतु <b>मैंगनीज, निकेल, क्रोमियम</b> मिलाना।</text>
+  </g>
+
+  <!-- Step 4: Shaping & Rolling -->
+  <g filter="url(#shadow3)">
+    <rect x="570" y="350" width="490" height="210" rx="16" fill="#ffffff" stroke="#15803d" stroke-width="4"/>
+    <rect x="578" y="358" width="474" height="40" rx="10" fill="#15803d"/>
+    <text x="815" y="385" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      चरण 4: ढलाई, रोलिंग एवं आकार देना (Shaping)
+    </text>
+
+    <rect x="588" y="408" width="454" height="135" rx="10" fill="#dcfce7"/>
+    <text x="605" y="435" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">🏗️ अंतिम वाणिज्यिक इस्पात उत्पाद:</text>
+    <text x="605" y="465" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• बेलना (Rolling), दबाना (Pressing), ढलाई (Casting) व गढ़ना।</text>
+    <text x="605" y="495" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• स्टील शीट्स, टीएमटी सरिये, गर्डर, रेल पटरियां व पाइप्स का निर्माण।</text>
+  </g>
+
+  <!-- Bottom Mini-Takeaway Card -->
+  <g filter="url(#shadow3)">
+    <rect x="40" y="575" width="1020" height="55" rx="12" fill="#1e293b"/>
+    <text x="550" y="609" fill="#f8fafc" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">
+      📊 छोटानागपुर पठार क्षेत्र में भारत के सर्वाधिक इस्पात संयंत्र संकेंद्रित हैं क्योंकि यहाँ लौह अयस्क, कोयला व चूना पत्थर निकट ही सुलभ हैं!
+    </text>
+  </g>
+</svg>

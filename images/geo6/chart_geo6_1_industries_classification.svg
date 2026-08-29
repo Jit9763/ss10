@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadow1" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad1)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="626" fill="none" stroke="#059669" stroke-width="5" rx="20"/>
+
+  <!-- Top Banner -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad1)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
+      चार्ट 6.1: विनिर्माण उद्योगों का बहु-आयामी वर्गीकरण मॉडल (Classification Matrix)
+    </text>
+  </g>
+
+  <!-- 4 Primary Dimension Cards -->
+  <!-- Card 1: By Raw Material -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="95" width="490" height="245" rx="16" fill="#ffffff" stroke="#15803d" stroke-width="4"/>
+    <rect x="48" y="103" width="474" height="40" rx="10" fill="#15803d"/>
+    <text x="285" y="130" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      1. प्रयुक्त कच्चे माल के आधार पर (Raw Material)
+    </text>
+    
+    <rect x="58" y="153" width="454" height="75" rx="10" fill="#dcfce7"/>
+    <text x="75" y="178" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">🌾 कृषि आधारित (Agro-Based):</text>
+    <text x="75" y="208" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• सूती, ऊनी, पटसन (जूट), रेशम वस्त्र, चीनी, चाय, खाद्य तेल</text>
+
+    <rect x="58" y="240" width="454" height="85" rx="10" fill="#e0f2fe"/>
+    <text x="75" y="265" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">⚙️ खनिज आधारित (Mineral-Based):</text>
+    <text x="75" y="295" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• लोहा-इस्पात, सीमेंट, एल्युमिनियम प्रगलन, रसायन, पेट्रोरसायन</text>
+  </g>
+
+  <!-- Card 2: By Main Role -->
+  <g filter="url(#shadow1)">
+    <rect x="570" y="95" width="490" height="245" rx="16" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+    <rect x="578" y="103" width="474" height="40" rx="10" fill="#0284c7"/>
+    <text x="815" y="130" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      2. प्रमुख भूमिका के आधार पर (Main Role)
+    </text>
+
+    <rect x="588" y="153" width="454" height="75" rx="10" fill="#e0f2fe"/>
+    <text x="605" y="178" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">🔩 आधारभूत उद्योग (Basic / Key Industries):</text>
+    <text x="605" y="208" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• जिनके उत्पाद अन्य उद्योगों का आधार हैं (लोहा-इस्पात, तांबा प्रगलन)</text>
+
+    <rect x="588" y="240" width="454" height="85" rx="10" fill="#fef3c7"/>
+    <text x="605" y="265" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">🛍️ उपभोक्ता उद्योग (Consumer Industries):</text>
+    <text x="605" y="295" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• सीधे उपभोक्ताओं के उपयोग हेतु (चीनी, टूथपेस्ट, कागज, पंखे, सिलाई मशीन)</text>
+  </g>
+
+  <!-- Card 3: By Ownership -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="360" width="490" height="260" rx="16" fill="#ffffff" stroke="#c2410c" stroke-width="4"/>
+    <rect x="48" y="368" width="474" height="40" rx="10" fill="#c2410c"/>
+    <text x="285" y="395" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      3. स्वामित्व के आधार पर (Ownership)
+    </text>
+
+    <rect x="58" y="418" width="454" height="46" rx="8" fill="#ffedd5"/>
+    <text x="75" y="447" fill="#7c2d12" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🏢 सार्वजनिक (Public): सरकारी उपक्रम (BHEL, SAIL, NTPC)</text>
+
+    <rect x="58" y="472" width="454" height="46" rx="8" fill="#f1f5f9"/>
+    <text x="75" y="501" fill="#334155" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🏭 निजी (Private): व्यक्तिगत या कंपनियों द्वारा (TISCO, Reliance, Bajaj)</text>
+
+    <rect x="58" y="526" width="454" height="44" rx="8" fill="#ecfdf5"/>
+    <text x="75" y="555" fill="#065f46" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🤝 संयुक्त (Joint): सरकार + निजी संयुक्त (Oil India Ltd.)</text>
+
+    <rect x="58" y="578" width="454" height="34" rx="6" fill="#fef3c7"/>
+    <text x="75" y="601" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">👥 सहकारी (Cooperative): उत्पादकों व श्रमिकों का साझा (महाराष्ट्र चीनी, अमूल)</text>
+  </g>
+
+  <!-- Card 4: Capital & Weight -->
+  <g filter="url(#shadow1)">
+    <rect x="570" y="360" width="490" height="260" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+    <rect x="578" y="368" width="474" height="40" rx="10" fill="#7c3aed"/>
+    <text x="815" y="395" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      4. पूंजी निवेश एवं भार के आधार पर (Capital &amp; Weight)
+    </text>
+
+    <rect x="588" y="418" width="454" height="85" rx="10" fill="#f5f3ff"/>
+    <text x="605" y="445" fill="#5b21b6" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">💰 पूंजी निवेश सीमा (Investment Limit):</text>
+    <text x="605" y="475" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• लघु उद्योग (Small Scale): वर्तमान में ₹1 करोड़ तक निवेश</text>
+    <text x="605" y="495" fill="#6d28d9" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• बड़े पैमाने के उद्योग (Large Scale): ₹1 करोड़ से अधिक निवेश</text>
+
+    <rect x="588" y="515" width="454" height="95" rx="10" fill="#f1f5f9"/>
+    <text x="605" y="542" fill="#1e293b" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900">⚖️ कच्चे माल व उत्पाद के भार के आधार पर:</text>
+    <text x="605" y="572" fill="#334155" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• भारी उद्योग (Heavy): लोहा तथा इस्पात उद्योग</text>
+    <text x="605" y="596" fill="#334155" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• हल्के उद्योग (Light): कम भार कच्चा माल (विद्युत उपकरण उद्योग)</text>
+  </g>
+</svg>

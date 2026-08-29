@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad5)" rx="24"/>
+  <rect x="12" y="12" width="1076" height="626" fill="none" stroke="#0284c7" stroke-width="5" rx="20"/>
+
+  <!-- Top Banner -->
+  <g filter="url(#shadow5)">
+    <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad5)"/>
+    <text x="550" y="53" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="21" font-weight="900" text-anchor="middle" letter-spacing="1">
+      चार्ट 6.5: औद्योगिक प्रदूषण नियंत्रण एवं 3-स्तरीय जल शोधन मॉडल (ETP Clean Cycle)
+    </text>
+  </g>
+
+  <!-- 3 Stage Effluent Treatment Process -->
+  <!-- Tier 1: Primary Treatment -->
+  <g filter="url(#shadow5)">
+    <rect x="40" y="100" width="315" height="420" rx="18" fill="#ffffff" stroke="#d97706" stroke-width="4"/>
+    <rect x="50" y="110" width="295" height="42" rx="10" fill="#d97706"/>
+    <text x="197" y="138" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      1. प्राथमिक उपचार (Primary)
+    </text>
+
+    <text x="197" y="195" fill="#d97706" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="34" text-anchor="middle">⚙️ 🚯</text>
+
+    <rect x="50" y="225" width="295" height="50" rx="8" fill="#fef3c7"/>
+    <text x="197" y="256" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">यांत्रिक व भौतिक प्रक्रिया</text>
+
+    <rect x="50" y="290" width="295" height="215" rx="10" fill="#fffbeb"/>
+    <text x="65" y="320" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🔬 मुख्य विधियां:</text>
+    <text x="65" y="355" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• स्क्रीन द्वारा कचरा छानना (Screening)</text>
+    <text x="65" y="390" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• भारी कणों का पेटी में बैठना</text>
+    <text x="65" y="425" fill="#78350f" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• तेल व ग्रीस को सतह से हटाना</text>
+    <text x="65" y="475" fill="#d97706" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">📊 ठोस अशुद्धियां 60% दूर</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 365 310 L 415 310" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="420,310 405,300 405,320" fill="#0284c7"/>
+
+  <!-- Tier 2: Secondary Treatment -->
+  <g filter="url(#shadow5)">
+    <rect x="425" y="100" width="315" height="420" rx="18" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+    <rect x="435" y="110" width="295" height="42" rx="10" fill="#0284c7"/>
+    <text x="582" y="138" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      2. द्वितीयक उपचार (Secondary)
+    </text>
+
+    <text x="582" y="195" fill="#0284c7" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="34" text-anchor="middle">🦠 💨</text>
+
+    <rect x="435" y="225" width="295" height="50" rx="8" fill="#e0f2fe"/>
+    <text x="582" y="256" fill="#0369a1" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">जैविक सूक्ष्मजीवी प्रक्रिया</text>
+
+    <rect x="435" y="290" width="295" height="215" rx="10" fill="#f0f9ff"/>
+    <text x="450" y="320" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🔬 मुख्य विधियां:</text>
+    <text x="450" y="355" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• वातन टैंक में वायु प्रवाह (Aeration)</text>
+    <text x="450" y="390" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• वायवीय जीवाणु द्वारा कार्बनिक अपघटन</text>
+    <text x="450" y="425" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• BOD स्तर में भारी कमी</text>
+    <text x="450" y="475" fill="#0284c7" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">📊 85% जैविक अपशिष्ट नष्ट</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 750 310 L 800 310" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="805,310 790,300 790,330" fill="#0284c7"/>
+
+  <!-- Tier 3: Tertiary Treatment -->
+  <g filter="url(#shadow5)">
+    <rect x="810" y="100" width="315" height="420" rx="18" fill="#ffffff" stroke="#15803d" stroke-width="4"/>
+    <rect x="820" y="110" width="295" height="42" rx="10" fill="#15803d"/>
+    <text x="967" y="138" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="18" font-weight="900" text-anchor="middle">
+      3. तृतीयक उपचार (Tertiary)
+    </text>
+
+    <text x="967" y="195" fill="#15803d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="34" text-anchor="middle">💧 ♻️</text>
+
+    <rect x="820" y="225" width="295" height="50" rx="8" fill="#dcfce7"/>
+    <text x="967" y="256" fill="#14532d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="16" font-weight="900" text-anchor="middle">रासायनिक व पुनर्चक्रण प्रक्रिया</text>
+
+    <rect x="820" y="290" width="295" height="215" rx="10" fill="#f0fdf4"/>
+    <text x="835" y="320" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🔬 मुख्य विधियां:</text>
+    <text x="835" y="355" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• रसायनों द्वारा भारी धातुओं का निष्कासन</text>
+    <text x="835" y="390" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• क्लोरीनीकरण व UV कीटाणुशोधन</text>
+    <text x="835" y="425" fill="#166534" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">• शोधित जल का पुनः उपयोग (Recycling)</text>
+    <text x="835" y="475" fill="#15803d" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">🌿 100% सुरक्षित हरित जल</text>
+  </g>
+
+  <!-- Bottom 3R Formula Card -->
+  <g filter="url(#shadow5)">
+    <rect x="40" y="545" width="1020" height="80" rx="16" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text x="550" y="578" fill="#a7f3d0" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="900" text-anchor="middle">
+      ♻️ जल प्रदूषण नियंत्रण का 3R सूत्र: Reduce (कम उपयोग) • Reuse (पुनः उपयोग) • Recycle (पुनर्चक्रण)
+    </text>
+    <text x="550" y="605" fill="#ffffff" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900" text-anchor="middle">
+      1 लीटर अपशिष्ट जल लगभग 8 गुना स्वच्छ मीठे जल को प्रदूषित करता है, अतः औद्योगिक प्रवाह का शोधन अनिवार्य है!
+    </text>
+  </g>
+</svg>
