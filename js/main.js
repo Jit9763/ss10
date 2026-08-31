@@ -89,8 +89,8 @@ function renderChapters(data) {
     
     let badgeClass = `badge-${chapter.subject}`;
     
-    // Notes link: if standalone copy_master_*.html exists (like geo1, geo2, geo7, hist1..5), open it directly!
-    let notesUrl = (chapter.id === 'geo7' || chapter.id === 'geo1' || chapter.id === 'geo2' || chapter.id.startsWith('hist')) ? `copy_master_${chapter.id}.html` : `notes_html_view.html?id=${chapter.id}`;
+    // Notes link: route all chapters to notes_html_view.html to provide full interactive toolbar (W, A, B, Copy, Print)
+    let notesUrl = `notes_html_view.html?id=${chapter.id}`;
     let copyUrl = `notes_copy_view.html?id=${chapter.id}`;
     let qaUrl = `qa_master_${chapter.id}.html`;
 
