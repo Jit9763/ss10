@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad4)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad4)" filter="url(#shadow4)" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    ⚖️ कार्य दशाओं के आधार पर वर्गीकरण: संगठित (कांता) बनाम असंगठित क्षेत्रक (कमल)
+  </text>
+
+  <!-- Left: Organized Sector (Kanta) -->
+  <g transform="translate(45, 95)" filter="url(#shadow4)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#065f46"/>
+    <rect y="30" width="485" height="18" fill="#065f46"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏢 संगठित क्षेत्रक (Organized: कांता)</text>
+    
+    <rect x="20" y="65" width="445" height="65" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="88" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📜 1. सरकारी पंजीकरण एवं कानून पालन:</text>
+    <text x="35" y="112" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">कारखाना अधिनियम, न्यूनतम मजदूरी कानून व ग्रेच्युटी एक्ट का पालन।</text>
+
+    <rect x="20" y="140" width="445" height="65" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="163" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🛡️ 2. रोजगार की सुरक्षा (Job Security):</text>
+    <text x="35" y="187" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">निश्चित कार्य अवधि, बिना ठोस कारण नौकरी से नहीं हटाया जा सकता।</text>
+
+    <rect x="20" y="215" width="445" height="65" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="238" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🏖️ 3. सवेतन अवकाश (Paid Leave):</text>
+    <text x="35" y="262" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">रविवार व त्योहारों की सवेतन छुट्टी, बीमारी की स्थिति में मेडिकल लीव।</text>
+
+    <rect x="20" y="290" width="445" height="65" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="313" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">💰 4. अतिरिक्त सामाजिक लाभ (Social Security):</text>
+    <text x="35" y="337" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">भविष्य निधि (PF), पेंशन, चिकित्सा सुविधा व ओवरटाइम का अतिरिक्त वेतन।</text>
+
+    <rect x="20" y="365" width="445" height="105" rx="10" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+    <text x="242" y="392" fill="#d1fae5" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">👩‍💼 कांता का उदाहरण:</text>
+    <text x="35" y="420" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कार्यालय में सुबह 9:30 से शाम 5:30 तक काम।</text>
+    <text x="35" y="445" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• नियमित मासिक वेतन, PF व मेडिकल लाभ प्राप्त होते हैं।</text>
+  </g>
+
+  <!-- Right: Unorganized Sector (Kamal) -->
+  <g transform="translate(570, 95)" filter="url(#shadow4)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#991b1b"/>
+    <rect y="30" width="485" height="18" fill="#991b1b"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🔨 असंगठित क्षेत्रक (Unorganized: कमल)</text>
+    
+    <rect x="20" y="65" width="445" height="65" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="88" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">⚠️ 1. सरकारी नियंत्रण से बाहर:</text>
+    <text x="35" y="112" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">छोटी-बिखरी इकाइयां, नियमों व कानूनों का कोई अनुपालन नहीं होता।</text>
+
+    <rect x="20" y="140" width="445" height="65" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="163" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">❌ 2. रोजगार की कोई सुरक्षा नहीं:</text>
+    <text x="35" y="187" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">मालिक जब चाहे बिना किसी कारण काम से निकाल सकता है।</text>
+
+    <rect x="20" y="215" width="445" height="65" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="238" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">❌ 3. कोई सवेतन छुट्टी नहीं (No Paid Leave):</text>
+    <text x="35" y="262" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">जिस दिन काम पर नहीं जाएंगे, उस दिन की मजदूरी कट जाएगी।</text>
+
+    <rect x="20" y="290" width="445" height="65" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="313" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">❌ 4. कोई सामाजिक सुरक्षा या PF नहीं:</text>
+    <text x="35" y="337" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">कम वेतन, कोई पेंशन नहीं, अत्यधिक काम के घंटे व बीमारी में कोई भत्ता नहीं।</text>
+
+    <rect x="20" y="365" width="445" height="105" rx="10" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="242" y="392" fill="#fecaca" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">👨‍🔧 कमल का उदाहरण:</text>
+    <text x="35" y="420" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• किराना दुकान पर सुबह 7:30 से रात 8:00 बजे तक कठोर श्रम।</text>
+    <text x="35" y="445" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• केवल दैनिक मजदूरी, कोई छुट्टी नहीं और कोई अतिरिक्त लाभ नहीं।</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="600" width="1020" height="36" rx="8" fill="#5b21b6" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="550" y="624" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 महत्वपूर्ण आवश्यकता: भारत के अधिकांश श्रमिक असंगठित क्षेत्रक में हैं; उन्हें संरक्षण, उचित मजदूरी व सामाजिक सुरक्षा देना अनिवार्य है।
+  </text>
+</svg>

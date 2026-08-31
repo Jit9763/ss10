@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="50%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad3)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad3)" filter="url(#shadow3)" stroke="#fca5a5" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🌾 प्रच्छन्न / अल्प-बेरोजगारी की संकल्पना (Disguised Unemployment: लक्ष्मी केस स्टडी)
+  </text>
+
+  <!-- Left: What is Disguised Unemployment -->
+  <g transform="translate(45, 95)" filter="url(#shadow3)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#991b1b"/>
+    <rect y="30" width="485" height="18" fill="#991b1b"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📉 1. प्रच्छन्न बेरोजगारी की परिभाषा व लक्षण</text>
+    
+    <rect x="20" y="65" width="445" height="95" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="90" fill="#fca5a5" font-size="15" font-weight="900" font-family="system-ui, sans-serif">📖 मानक परिभाषा (NCERT Definition):</text>
+    <text x="35" y="118" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• "ऐसी स्थिति जहाँ लोग प्रत्यक्ष रूप से काम करते दिखाई देते हैं,</text>
+    <text x="35" y="140" fill="#fef08a" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  लेकिन वे अपनी वास्तविक क्षमता से कम काम कर रहे होते हैं।"</text>
+
+    <!-- The Laxmi Case Study -->
+    <rect x="20" y="172" width="445" height="175" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="35" y="198" fill="#f87171" font-size="15" font-weight="900" font-family="system-ui, sans-serif">👩‍🌾 लक्ष्मी के 2 हेक्टेयर खेत की केस स्टडी:</text>
+    <text x="35" y="226" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• लक्ष्मी के परिवार में <b>5 सदस्य</b> हैं, और सभी 5 सदस्य केवल</text>
+    <text x="35" y="248" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  <b>2 हेक्टेयर असिंचित भूमि</b> पर काम करते हैं।</text>
+    <text x="35" y="278" fill="#fef08a" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• यदि इनमें से <b>2 सदस्यों को हटाकर</b> किसी जमींदार के खेत या</text>
+    <text x="35" y="300" fill="#fef08a" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  कारखाने में काम पर लगा दिया जाए, तो भी खेत के कुल</text>
+    <text x="35" y="322" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">  उत्पादन पर कोई नकारात्मक प्रभाव नहीं पड़ेगा!</text>
+
+    <rect x="20" y="360" width="445" height="110" rx="10" fill="#7f1d1d"/>
+    <text x="242" y="388" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🔍 प्रच्छन्न क्यों कहा जाता है?</text>
+    <text x="35" y="415" fill="#fecaca" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• क्योंकि खुली बेरोजगारी (Open Unemployment) की तरह यह</text>
+    <text x="35" y="440" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  दिखती नहीं है, बल्कि काम में छिपी (Disguised) रहती है।</text>
+  </g>
+
+  <!-- Right: How to Create More Employment -->
+  <g transform="translate(570, 95)" filter="url(#shadow3)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#065f46"/>
+    <rect y="30" width="485" height="18" fill="#065f46"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🌱 2. अतिरिक्त रोजगार सृजन के 5 उपाय</text>
+    
+    <rect x="20" y="65" width="445" height="70" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="88" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">💧 1. सिंचाई व नलकूप निर्माण (Irrigation):</text>
+    <text x="35" y="112" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">बांध/नहरें बनने से साल में दूसरी फसल (रबी) संभव, अधिक काम सृजित।</text>
+
+    <rect x="20" y="145" width="445" height="70" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="168" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🚚 2. परिवहन व ग्रामीण सड़कें (Infrastructure):</text>
+    <text x="35" y="192" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">पक्की सड़कें बनने से किसान उपज मंडी तक पहुंचा सकेंगे, परिवहन में रोजगार।</text>
+
+    <rect x="20" y="225" width="445" height="70" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="248" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🏦 3. सस्ता कृषि ऋण (Affordable Credit):</text>
+    <text x="35" y="272" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">बैंकों द्वारा कम ब्याज पर ऋण देने से किसान बीज, खाद व उपकरण खरीद सकेंगे।</text>
+
+    <rect x="20" y="305" width="445" height="70" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="328" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🏭 4. कृषि-आधारित उद्योग व कोल्ड स्टोरेज:</text>
+    <text x="35" y="352" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">दाल मिल, आलू कोल्ड स्टोरेज, शहद संग्रह केंद्र खोलने से अर्ध-शहरी रोजगार।</text>
+
+    <rect x="20" y="385" width="445" height="85" rx="10" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+    <text x="35" y="412" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📚 5. शिक्षा, स्वास्थ्य व पर्यटन (Social Infra):</text>
+    <text x="35" y="438" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">नीति आयोग अनुसार: शिक्षा में 20 लाख व पर्यटन में 35 लाख</text>
+    <text x="35" y="458" fill="#fef08a" font-size="13" font-weight="900" font-family="system-ui, sans-serif">नए अतिरिक्त रोजगार सृजित किए जा सकते हैं।</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="600" width="1020" height="36" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="550" y="624" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 सूत्र: यदि हम कृषि से अतिरिक्त श्रमिकों को हटाकर अन्य क्षेत्रों में लगाएं, तो कृषि उत्पादन गिरे बिना देश की राष्ट्रीय आय बढ़ जाएगी।
+  </text>
+</svg>

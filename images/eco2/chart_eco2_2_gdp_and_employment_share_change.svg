@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad2)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad2)" filter="url(#shadow2)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📊 40 वर्षों में क्षेत्रकों का ऐतिहासिक बदलाव (GDP vs रोजगार का विरोधाभास: 1973-74 से 2013-14)
+  </text>
+
+  <!-- Left Box: GDP Share (Tremendous Tertiary Growth) -->
+  <g transform="translate(45, 95)" filter="url(#shadow2)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#1e3a8a"/>
+    <rect y="30" width="485" height="18" fill="#1e3a8a"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📈 1. GDP में हिस्सेदारी का बदलाव (उत्पादन)</text>
+    
+    <!-- 1973-74 Bar -->
+    <rect x="25" y="65" width="435" height="70" rx="10" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="35" y="88" fill="#93c5fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🗓️ वर्ष 1973-74 में GDP हिस्सेदारी:</text>
+    <rect x="35" y="100" width="174" height="22" fill="#10b981" rx="4"/>
+    <rect x="209" y="100" width="87" height="22" fill="#3b82f6" rx="4"/>
+    <rect x="296" y="100" width="150" height="22" fill="#f59e0b" rx="4"/>
+    <text x="122" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">प्राथमिक 40%</text>
+    <text x="252" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">द्वि 20%</text>
+    <text x="371" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">तृतीयक 35%</text>
+
+    <!-- 2013-14 Bar -->
+    <rect x="25" y="148" width="435" height="75" rx="10" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="35" y="172" fill="#38bdf8" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🚀 वर्ष 2013-14 में GDP हिस्सेदारी (भारी उछाल):</text>
+    <rect x="35" y="185" width="52" height="24" fill="#10b981" rx="4"/>
+    <rect x="87" y="185" width="121" height="24" fill="#3b82f6" rx="4"/>
+    <rect x="208" y="185" width="238" height="24" fill="#f59e0b" rx="4"/>
+    <text x="61" y="202" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">12%</text>
+    <text x="147" y="202" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">द्वितीयक 28%</text>
+    <text x="327" y="202" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">तृतीयक 60% 🏆 (सर्वोच्च)</text>
+
+    <!-- Key Reasons -->
+    <rect x="25" y="235" width="435" height="235" rx="10" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="242" y="260" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💡 तृतीयक क्षेत्रक के तेजी से बढ़ने के 4 मुख्य कारण:</text>
+    <text x="40" y="290" fill="#dbeafe" font-size="13" font-weight="900" font-family="system-ui, sans-serif">1. <b>बुनियादी सेवाएं:</b> अस्पताल, स्कूल, डाक, पुलिस, बैंक, कोर्ट।</text>
+    <text x="40" y="325" fill="#dbeafe" font-size="13" font-weight="900" font-family="system-ui, sans-serif">2. <b>कृषि व उद्योग का विकास:</b> परिवहन व भंडारण की अधिक मांग।</text>
+    <text x="40" y="360" fill="#dbeafe" font-size="13" font-weight="900" font-family="system-ui, sans-serif">3. <b>आय स्तर में वृद्धि:</b> होटल, पर्यटन, शॉपिंग व निजी स्कूल।</text>
+    <text x="40" y="395" fill="#dbeafe" font-size="13" font-weight="900" font-family="system-ui, sans-serif">4. <b>सूचना एवं संचार प्रौद्योगिकी (IT क्रांति):</b> इंटरनेट व सॉफ्टवेयर।</text>
+    <rect x="35" y="420" width="415" height="36" rx="6" fill="#047857"/>
+    <text x="242" y="443" fill="#d1fae5" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">निष्कर्ष: सेवा क्षेत्रक भारत की GDP का मुख्य इंजन बन गया है।</text>
+  </g>
+
+  <!-- Right Box: Employment Share (Primary Sector Trap) -->
+  <g transform="translate(570, 95)" filter="url(#shadow2)">
+    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <rect width="485" height="48" rx="18" fill="#b45309"/>
+    <rect y="30" width="485" height="18" fill="#b45309"/>
+    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">👥 2. रोजगार में हिस्सेदारी (गंभीर विरोधाभास)</text>
+    
+    <!-- 1977-78 Bar -->
+    <rect x="25" y="65" width="435" height="70" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="35" y="88" fill="#fde68a" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🗓️ वर्ष 1977-78 में रोजगार हिस्सेदारी:</text>
+    <rect x="35" y="100" width="308" height="22" fill="#10b981" rx="4"/>
+    <rect x="343" y="100" width="48" height="22" fill="#3b82f6" rx="4"/>
+    <rect x="391" y="100" width="55" height="22" fill="#f59e0b" rx="4"/>
+    <text x="189" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">प्राथमिक 71% (अत्यधिक भीड़)</text>
+    <text x="367" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">11%</text>
+    <text x="418" y="116" fill="#ffffff" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">18%</text>
+
+    <!-- 2017-18 Bar -->
+    <rect x="25" y="148" width="435" height="75" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="35" y="172" fill="#fbbf24" font-size="14" font-weight="900" font-family="system-ui, sans-serif">⚠️ वर्ष 2017-18 में रोजगार (धीमा स्थानांतरण):</text>
+    <rect x="35" y="185" width="191" height="24" fill="#10b981" rx="4"/>
+    <rect x="226" y="185" width="109" height="24" fill="#3b82f6" rx="4"/>
+    <rect x="335" y="185" width="135" height="24" fill="#f59e0b" rx="4"/>
+    <text x="130" y="202" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">प्राथमिक 44% (अभी भी शीर्ष)</text>
+    <text x="280" y="202" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">द्वि 25%</text>
+    <text x="402" y="202" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">तृतीयक 31%</text>
+
+    <!-- The Irony / Disguised Unemployment -->
+    <rect x="25" y="235" width="435" height="235" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="242" y="260" fill="#fef08a" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚠️ अर्थव्यवस्था का सबसे बड़ा संरचनात्मक विरोधाभास:</text>
+    <text x="40" y="295" fill="#fed7aa" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• <b>उत्पादन बदला लेकिन रोजगार नहीं बदला:</b></text>
+    <text x="40" y="325" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  GDP में सेवा क्षेत्रक का 60% हिस्सा है, लेकिन रोजगार में</text>
+    <text x="40" y="350" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  यह केवल 31% लोगों को ही काम दे पाया।</text>
+    <text x="40" y="385" fill="#f87171" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• <b>कृषि पर अत्यधिक बोझ:</b></text>
+    <text x="40" y="410" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  कृषि GDP में केवल 1/6 हिस्सा देती है, लेकिन देश के</text>
+    <text x="40" y="435" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  आधे श्रमिक इसी में लगे हैं (प्रच्छन्न बेरोजगारी)।</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="600" width="1020" height="36" rx="8" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="550" y="624" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 परीक्षा का मुख्य प्रश्न: "GDP में तृतीयक क्षेत्रक का महत्व बढ़ा है, लेकिन रोजगार में प्राथमिक क्षेत्रक का प्रभुत्व क्यों बना हुआ है?"
+  </text>
+</svg>

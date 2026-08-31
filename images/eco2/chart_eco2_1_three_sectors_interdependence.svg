@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad)" filter="url(#shadow)" stroke="#34d399" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🔄 आर्थिक गतिविधियों के तीन क्षेत्रक एवं उनकी अंतर्निर्भरता (Interdependence of 3 Sectors)
+  </text>
+
+  <!-- 3 Sector Column Cards -->
+  <!-- COLUMN 1: PRIMARY SECTOR -->
+  <g transform="translate(45, 95)" filter="url(#shadow)">
+    <rect width="320" height="485" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#065f46"/>
+    <rect y="28" width="320" height="18" fill="#065f46"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🌾 1. प्राथमिक क्षेत्रक (Primary)</text>
+    
+    <rect x="15" y="60" width="290" height="75" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🌱 प्राकृतिक संसाधनों का दोहन:</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कृषि, डेयरी, मत्स्य पालन, वानिकी व खनन।</text>
+    <text x="25" y="126" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• इसे 'कृषि एवं सहायक क्षेत्रक' भी कहते हैं।</text>
+
+    <rect x="15" y="148" width="290" height="75" rx="10" fill="#064e3b"/>
+    <text x="25" y="172" fill="#6ee7b7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📦 उत्पाद (कच्चा माल):</text>
+    <text x="25" y="196" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कपास (Cotton), गन्ना (Sugarcane),</text>
+    <text x="25" y="214" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  दूध, कच्चा लोहा, खनिज अयस्क आदि।</text>
+
+    <rect x="15" y="235" width="290" height="135" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="160" y="260" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🔗 अंतर्निर्भरता (Interlink):</text>
+    <text x="25" y="285" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• यदि ट्रैक्टर, खाद (द्वितीयक) व</text>
+    <text x="25" y="305" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  बैंकिंग/डीजल (तृतीयक) न मिले तो</text>
+    <text x="25" y="325" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  कृषि उत्पादन ठप हो जाएगा।</text>
+    <text x="25" y="350" fill="#93c5fd" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कारखानों को कच्चा माल यहीं से मिलता है।</text>
+
+    <rect x="15" y="382" width="290" height="88" rx="10" fill="#065f46"/>
+    <text x="160" y="408" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">👥 रोजगार में स्थिति:</text>
+    <text x="25" y="432" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• भारत के लगभग 44% श्रमिक अभी</text>
+    <text x="25" y="452" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  भी इसी क्षेत्रक में कार्यरत हैं।</text>
+  </g>
+
+  <!-- COLUMN 2: SECONDARY SECTOR -->
+  <g transform="translate(390, 95)" filter="url(#shadow)">
+    <rect width="320" height="485" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#1e3a8a"/>
+    <rect y="28" width="320" height="18" fill="#1e3a8a"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏭 2. द्वितीयक क्षेत्रक (Secondary)</text>
+    
+    <rect x="15" y="60" width="290" height="75" rx="10" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#60a5fa" font-size="14" font-weight="900" font-family="system-ui, sans-serif">⚙️ विनिर्माण एवं रूप परिवर्तन:</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• प्राकृतिक उत्पादों को विनिर्माण प्रणाली द्वारा</text>
+    <text x="25" y="126" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  अन्य रूपों में बदलना (औद्योगिक क्षेत्रक)।</text>
+
+    <rect x="15" y="148" width="290" height="75" rx="10" fill="#1e3a8a"/>
+    <text x="25" y="172" fill="#93c5fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📦 उत्पाद (निर्मित वस्तुएं):</text>
+    <text x="25" y="196" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कपास से कपड़ा, गन्ने से चीनी/गुड़,</text>
+    <text x="25" y="214" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  लोहे से गाड़ियां, मिट्टी से ईंट/मकान।</text>
+
+    <rect x="15" y="235" width="290" height="135" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="160" y="260" fill="#60a5fa" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🔗 अंतर्निर्भरता (Interlink):</text>
+    <text x="25" y="285" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• प्राथमिक क्षेत्रक से कच्चा माल लेता है</text>
+    <text x="25" y="305" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  और तृतीयक क्षेत्रक को मालगाड़ी, ट्रक व</text>
+    <text x="25" y="325" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  गोदामों हेतु तैयार माल देता है।</text>
+    <text x="25" y="350" fill="#6ee7b7" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कृषि हेतु ट्रैक्टर व पंप बनाता है।</text>
+
+    <rect x="15" y="382" width="290" height="88" rx="10" fill="#1e3a8a"/>
+    <text x="160" y="408" fill="#bfdbfe" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📈 GDP योगदान:</text>
+    <text x="25" y="432" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• GDP में लगभग 28% और रोजगार</text>
+    <text x="25" y="452" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  में 25% का महत्वपूर्ण योगदान।</text>
+  </g>
+
+  <!-- COLUMN 3: TERTIARY SECTOR -->
+  <g transform="translate(735, 95)" filter="url(#shadow)">
+    <rect width="320" height="485" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#b45309"/>
+    <rect y="28" width="320" height="18" fill="#b45309"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💼 3. तृतीयक क्षेत्रक (Tertiary)</text>
+    
+    <rect x="15" y="60" width="290" height="75" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#fbbf24" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🚚 सेवा उत्पादन (Service Provider):</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• यह क्षेत्रक वस्तुएं नहीं बनाता बल्कि</text>
+    <text x="25" y="126" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  उत्पादन प्रक्रिया में सहयोग/सेवा देता है।</text>
+
+    <rect x="15" y="148" width="290" height="75" rx="10" fill="#78350f"/>
+    <text x="25" y="172" fill="#fde68a" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📦 मुख्य सेवाएं:</text>
+    <text x="25" y="196" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• परिवहन, भंडारण (Cold Storage),</text>
+    <text x="25" y="214" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  संचार, बैंकिंग, बीमा, शिक्षा व IT।</text>
+
+    <rect x="15" y="235" width="290" height="135" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="160" y="260" fill="#fbbf24" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🔗 अंतर्निर्भरता (Interlink):</text>
+    <text x="25" y="285" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• प्राथमिक व द्वितीयक क्षेत्रक के विकास</text>
+    <text x="25" y="305" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  से ही परिवहन व व्यापार की मांग बढ़ती है।</text>
+    <text x="25" y="325" fill="#34d399" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• यह दोनों क्षेत्रकों को गति प्रदान करता है।</text>
+    <text x="25" y="350" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• इसे 'सेवा क्षेत्रक' भी कहा जाता है।</text>
+
+    <rect x="15" y="382" width="290" height="88" rx="10" fill="#b45309"/>
+    <text x="160" y="408" fill="#fef08a" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏆 वर्तमान में सबसे बड़ा उत्पादक:</text>
+    <text x="25" y="432" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• GDP में सबसे बड़ा हिस्सा (54%+) लेकिन</text>
+    <text x="25" y="452" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  रोजगार में केवल 31% हिस्सेदारी।</text>
+  </g>
+
+  <!-- Bottom Core Takeaway Badge -->
+  <rect x="40" y="600" width="1020" height="36" rx="8" fill="#0f766e" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="550" y="624" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📌 मूल नियम: तीनों क्षेत्रक स्वतंत्र नहीं हैं; वे एक-दूसरे पर पूरी तरह अंतर्निर्भर (Interdependent) हैं।
+  </text>
+</svg>
