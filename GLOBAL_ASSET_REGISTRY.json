@@ -1,0 +1,6441 @@
+[
+  {
+    "id": "eco1_real_1_landless_laborer.webp",
+    "path": "images/eco1/eco1_real_1_landless_laborer.webp",
+    "chapter": "eco1",
+    "title": "भूमिहीन ग्रामीण खेतिहर मजदूर",
+    "tags": [
+      "laborer",
+      "agriculture",
+      "farmer",
+      "poverty",
+      "मजदूर",
+      "खेती",
+      "किसान",
+      "विकास",
+      "आय"
+    ],
+    "category": "Agriculture & Labor",
+    "dimensions": "1200x675",
+    "size_kb": 430
+  },
+  {
+    "id": "eco1_real_4_tribal_dam_displacement.webp",
+    "path": "images/eco1/eco1_real_4_tribal_dam_displacement.webp",
+    "chapter": "eco1",
+    "title": "विशाल बांध निर्माण एवं आदिवासी विस्थापन",
+    "tags": [
+      "dam",
+      "displacement",
+      "tribal",
+      "development_conflict",
+      "बांध",
+      "विस्थापन",
+      "आदिवासी",
+      "जल"
+    ],
+    "category": "Environment & Infrastructure",
+    "dimensions": "1200x675",
+    "size_kb": 283
+  },
+  {
+    "id": "eco1_real_8_pds_ration_shop.webp",
+    "path": "images/eco1/eco1_real_8_pds_ration_shop.webp",
+    "chapter": "eco1",
+    "title": "सार्वजनिक वितरण प्रणाली (PDS) राशन दुकान",
+    "tags": [
+      "pds",
+      "ration",
+      "food_security",
+      "fair_price_shop",
+      "राशन",
+      "खाद्य_सुरक्षा",
+      "जन_कल्याण"
+    ],
+    "category": "Public Welfare",
+    "dimensions": "1200x675",
+    "size_kb": 250
+  },
+  {
+    "id": "eco1_real_15_economic_inequality_income.webp",
+    "path": "images/eco1/eco1_real_15_economic_inequality_income.webp",
+    "chapter": "eco1",
+    "title": "आर्थिक विषमता एवं प्रति व्यक्ति आय",
+    "tags": [
+      "inequality",
+      "income",
+      "wealth_gap",
+      "skyscrapers",
+      "विषमता",
+      "आय",
+      "अमीर_गरीब"
+    ],
+    "category": "Economy & Inequality",
+    "dimensions": "1200x675",
+    "size_kb": 298
+  },
+  {
+    "id": "eco1_real_18_maternal_healthcare.webp",
+    "path": "images/eco1/eco1_real_18_maternal_healthcare.webp",
+    "chapter": "eco1",
+    "title": "मातृ एवं शिशु स्वास्थ्य देखभाल (Primary Clinic)",
+    "tags": [
+      "healthcare",
+      "maternal",
+      "infant",
+      "doctor",
+      "clinic",
+      "स्वास्थ्य",
+      "चिकित्सा",
+      "अस्पताल"
+    ],
+    "category": "Healthcare",
+    "dimensions": "1200x675",
+    "size_kb": 116
+  },
+  {
+    "id": "eco2_real_1_primary_agriculture.webp",
+    "path": "images/eco2/eco2_real_1_primary_agriculture.webp",
+    "chapter": "eco2",
+    "title": "प्राथमिक क्षेत्रक - कृषि एवं सुनहरी फसल कटाई",
+    "tags": [
+      "primary_sector",
+      "agriculture",
+      "wheat",
+      "harvesting",
+      "farming",
+      "प्राथमिक_क्षेत्रक",
+      "कृषि",
+      "फसल"
+    ],
+    "category": "Agriculture",
+    "dimensions": "1200x675",
+    "size_kb": 306
+  },
+  {
+    "id": "eco2_real_2_primary_dairy.webp",
+    "path": "images/eco2/eco2_real_2_primary_dairy.webp",
+    "chapter": "eco2",
+    "title": "प्राथमिक क्षेत्रक - आधुनिक डेयरी एवं पशुपालन",
+    "tags": [
+      "primary_sector",
+      "dairy",
+      "cattle",
+      "livestock",
+      "milk",
+      "डेयरी",
+      "पशुपालन",
+      "दूध"
+    ],
+    "category": "Agriculture & Livestock",
+    "dimensions": "1200x675",
+    "size_kb": 300
+  },
+  {
+    "id": "eco2_real_3_secondary_factory.webp",
+    "path": "images/eco2/eco2_real_3_secondary_factory.webp",
+    "chapter": "eco2",
+    "title": "द्वितीयक क्षेत्रक - औद्योगिक वस्त्र विनिर्माण मिल",
+    "tags": [
+      "secondary_sector",
+      "factory",
+      "textile",
+      "manufacturing",
+      "industry",
+      "द्वितीयक_क्षेत्रक",
+      "कारखाना",
+      "उद्योग"
+    ],
+    "category": "Manufacturing & Industry",
+    "dimensions": "1200x675",
+    "size_kb": 189
+  },
+  {
+    "id": "eco2_real_4_tertiary_it_services.webp",
+    "path": "images/eco2/eco2_real_4_tertiary_it_services.webp",
+    "chapter": "eco2",
+    "title": "तृतीयक क्षेत्रक - सूचना प्रौद्योगिकी एवं सॉफ्टवेयर सेवा",
+    "tags": [
+      "tertiary_sector",
+      "it",
+      "software",
+      "programming",
+      "services",
+      "तृतीयक_क्षेत्रक",
+      "सेवा_क्षेत्रक",
+      "आईटी",
+      "कंप्यूटर"
+    ],
+    "category": "Services & IT",
+    "dimensions": "1200x675",
+    "size_kb": 246
+  },
+  {
+    "id": "eco2_real_5_tertiary_banking.webp",
+    "path": "images/eco2/eco2_real_5_tertiary_banking.webp",
+    "chapter": "eco2",
+    "title": "तृतीयक क्षेत्रक - बैंकिंग एवं वित्तीय सेवाएं",
+    "tags": [
+      "tertiary_sector",
+      "banking",
+      "finance",
+      "bank_branch",
+      "credit",
+      "बैंकिंग",
+      "बैंक",
+      "ऋण",
+      "वित्तीय_सेवाएं"
+    ],
+    "category": "Banking & Finance",
+    "dimensions": "1200x675",
+    "size_kb": 186
+  },
+  {
+    "id": "eco2_real_6_transport_logistics.webp",
+    "path": "images/eco2/eco2_real_6_transport_logistics.webp",
+    "chapter": "eco2",
+    "title": "सेवा क्षेत्रक - माल परिवहन एवं लॉजिस्टिक्स",
+    "tags": [
+      "transport",
+      "logistics",
+      "freight",
+      "railways",
+      "trucks",
+      "परिवहन",
+      "मालगाड़ी",
+      "लॉजिस्टिक्स"
+    ],
+    "category": "Transport & Infrastructure",
+    "dimensions": "1200x675",
+    "size_kb": 229
+  },
+  {
+    "id": "eco2_real_7_final_goods_biscuits.webp",
+    "path": "images/eco2/eco2_real_7_final_goods_biscuits.webp",
+    "chapter": "eco2",
+    "title": "अंतिम वस्तु बनाम मध्यवर्ती वस्तु - बिस्कुट निर्माण",
+    "tags": [
+      "final_goods",
+      "biscuit",
+      "food_processing",
+      "gdp",
+      "अंतिम_वस्तु",
+      "बिस्कुट",
+      "खाद्य_प्रसंस्करण"
+    ],
+    "category": "Manufacturing",
+    "dimensions": "1200x675",
+    "size_kb": 251
+  },
+  {
+    "id": "eco2_real_8_disguised_unemployment.webp",
+    "path": "images/eco2/eco2_real_8_disguised_unemployment.webp",
+    "chapter": "eco2",
+    "title": "प्रच्छन्न बेरोजगारी - 2 हेक्टेयर खेत पर लक्ष्मी का परिवार",
+    "tags": [
+      "disguised_unemployment",
+      "laxmi",
+      "underemployment",
+      "small_farm",
+      "प्रच्छन्न_बेरोजगारी",
+      "अल्प_रोजगार",
+      "लक्ष्मी"
+    ],
+    "category": "Employment & Labor",
+    "dimensions": "1200x675",
+    "size_kb": 379
+  },
+  {
+    "id": "eco2_real_9_mgnrega_rural_work.webp",
+    "path": "images/eco2/eco2_real_9_mgnrega_rural_work.webp",
+    "chapter": "eco2",
+    "title": "मनरेगा (MGNREGA 2005) - ग्रामीण तालाब खुदाई कार्य",
+    "tags": [
+      "mgnrega",
+      "rural_employment",
+      "job_guarantee",
+      "pond_digging",
+      "मनरेगा",
+      "रोजगार_गारंटी",
+      "तालाब"
+    ],
+    "category": "Rural Employment",
+    "dimensions": "1200x675",
+    "size_kb": 396
+  },
+  {
+    "id": "eco2_real_10_rural_irrigation_credit.webp",
+    "path": "images/eco2/eco2_real_10_rural_irrigation_credit.webp",
+    "chapter": "eco2",
+    "title": "ग्रामीण सिंचाई नलकूप एवं जल वितरण",
+    "tags": [
+      "irrigation",
+      "tubewell",
+      "pump",
+      "water_canal",
+      "crops",
+      "सिंचाई",
+      "नलकूप",
+      "पानी",
+      "फसल"
+    ],
+    "category": "Agriculture & Water",
+    "dimensions": "1200x675",
+    "size_kb": 333
+  },
+  {
+    "id": "eco2_real_11_cold_storage_processing.webp",
+    "path": "images/eco2/eco2_real_11_cold_storage_processing.webp",
+    "chapter": "eco2",
+    "title": "आधुनिक कोल्ड स्टोरेज एवं कृषि प्रसंस्करण",
+    "tags": [
+      "cold_storage",
+      "potatoes",
+      "agri_business",
+      "warehouse",
+      "कोल्ड_स्टोरेज",
+      "भंडारण",
+      "आलू"
+    ],
+    "category": "Agri-Business",
+    "dimensions": "1200x675",
+    "size_kb": 266
+  },
+  {
+    "id": "eco2_real_12_tourism_hospitality.webp",
+    "path": "images/eco2/eco2_real_12_tourism_hospitality.webp",
+    "chapter": "eco2",
+    "title": "पर्यटन एवं आतिथ्य सेवा रोजगार",
+    "tags": [
+      "tourism",
+      "hospitality",
+      "guide",
+      "heritage",
+      "palace",
+      "पर्यटन",
+      "गाइड",
+      "होटल",
+      "धरोहर"
+    ],
+    "category": "Tourism & Services",
+    "dimensions": "1200x675",
+    "size_kb": 270
+  },
+  {
+    "id": "eco2_real_13_organized_office_kanta.webp",
+    "path": "images/eco2/eco2_real_13_organized_office_kanta.webp",
+    "chapter": "eco2",
+    "title": "संगठित क्षेत्रक - सुरक्षित कार्यालय (कांता का केस)",
+    "tags": [
+      "organized_sector",
+      "kanta",
+      "office",
+      "job_security",
+      "pf",
+      "संगठित_क्षेत्रक",
+      "कांता",
+      "कार्यालय",
+      "नौकरी_सुरक्षा"
+    ],
+    "category": "Organized Employment",
+    "dimensions": "1200x675",
+    "size_kb": 146
+  },
+  {
+    "id": "eco2_real_14_unorganized_daily_wage.webp",
+    "path": "images/eco2/eco2_real_14_unorganized_daily_wage.webp",
+    "chapter": "eco2",
+    "title": "असंगठित क्षेत्रक - दैनिक दिहाड़ी मजदूर (कमल का केस)",
+    "tags": [
+      "unorganized_sector",
+      "kamal",
+      "daily_wage",
+      "grocery_helper",
+      "असंगठित_क्षेत्रक",
+      "कमल",
+      "दिहाड़ी_मजदूर",
+      "किराना"
+    ],
+    "category": "Unorganized Employment",
+    "dimensions": "1200x675",
+    "size_kb": 321
+  },
+  {
+    "id": "eco2_real_15_street_vendor_worker.webp",
+    "path": "images/eco2/eco2_real_15_street_vendor_worker.webp",
+    "chapter": "eco2",
+    "title": "असंगठित क्षेत्रक - सड़क सब्जी विक्रेता एवं ठेला",
+    "tags": [
+      "street_vendor",
+      "vegetable_cart",
+      "informal_economy",
+      "सड़क_विक्रेता",
+      "ठेला",
+      "सब्जी",
+      "अनौपचारिक"
+    ],
+    "category": "Informal Economy",
+    "dimensions": "1200x675",
+    "size_kb": 301
+  },
+  {
+    "id": "eco2_real_16_public_railways_infra.webp",
+    "path": "images/eco2/eco2_real_16_public_railways_infra.webp",
+    "chapter": "eco2",
+    "title": "सार्वजनिक क्षेत्रक - भारतीय रेलवे अवसंरचना",
+    "tags": [
+      "public_sector",
+      "railways",
+      "infrastructure",
+      "train",
+      "सार्वजनिक_क्षेत्रक",
+      "भारतीय_रेलवे",
+      "रेल"
+    ],
+    "category": "Public Infrastructure",
+    "dimensions": "1200x675",
+    "size_kb": 131
+  },
+  {
+    "id": "eco2_real_17_public_hospital_health.webp",
+    "path": "images/eco2/eco2_real_17_public_hospital_health.webp",
+    "chapter": "eco2",
+    "title": "सार्वजनिक क्षेत्रक - सरकारी AIIMS अस्पताल",
+    "tags": [
+      "public_sector",
+      "hospital",
+      "healthcare",
+      "aiims",
+      "doctor",
+      "सरकारी_अस्पताल",
+      "एम्स",
+      "स्वास्थ्य"
+    ],
+    "category": "Public Healthcare",
+    "dimensions": "1200x675",
+    "size_kb": 240
+  },
+  {
+    "id": "eco2_real_18_private_industry_tata.webp",
+    "path": "images/eco2/eco2_real_18_private_industry_tata.webp",
+    "chapter": "eco2",
+    "title": "निजी क्षेत्रक - टाटा स्टील भारी औद्योगिक संयंत्र",
+    "tags": [
+      "private_sector",
+      "tata_steel",
+      "heavy_industry",
+      "blast_furnace",
+      "निजी_क्षेत्रक",
+      "टाटा_स्टील",
+      "उद्योग"
+    ],
+    "category": "Private Industry",
+    "dimensions": "1200x675",
+    "size_kb": 288
+  },
+  {
+    "id": "eco2_real_19_rural_dam_canal_infra.webp",
+    "path": "images/eco2/eco2_real_19_rural_dam_canal_infra.webp",
+    "chapter": "eco2",
+    "title": "सार्वजनिक अवसंरचना - विशाल सिंचाई बांध व बैराज",
+    "tags": [
+      "dam",
+      "barrage",
+      "canal",
+      "public_infra",
+      "irrigation",
+      "बांध",
+      "बैराज",
+      "नहर",
+      "सिंचाई"
+    ],
+    "category": "Public Infrastructure",
+    "dimensions": "1200x675",
+    "size_kb": 357
+  },
+  {
+    "id": "eco2_real_20_skill_training_vocational.webp",
+    "path": "images/eco2/eco2_real_20_skill_training_vocational.webp",
+    "chapter": "eco2",
+    "title": "व्यावसायिक कौशल विकास एवं तकनीकी कार्यशाला",
+    "tags": [
+      "vocational_training",
+      "skill_development",
+      "iti",
+      "technical",
+      "कौशल_विकास",
+      "आईटीआई",
+      "प्रशिक्षण"
+    ],
+    "category": "Skill & Education",
+    "dimensions": "1200x675",
+    "size_kb": 200
+  },
+  {
+    "id": "chart_eco1_1_development_goals.svg",
+    "path": "images/eco1/chart_eco1_1_development_goals.svg",
+    "chapter": "eco1",
+    "title": "Chart Eco Development Goals Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "development",
+      "goals",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_eco1_2_income_and_other_goals.svg",
+    "path": "images/eco1/chart_eco1_2_income_and_other_goals.svg",
+    "chapter": "eco1",
+    "title": "Chart Eco Income And Other Goals Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "income",
+      "and",
+      "other",
+      "goals",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "chart_eco1_3_world_bank_vs_undp.svg",
+    "path": "images/eco1/chart_eco1_3_world_bank_vs_undp.svg",
+    "chapter": "eco1",
+    "title": "Chart Eco World Bank Vs Undp Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "world",
+      "bank",
+      "undp",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "chart_eco1_4_state_comparative_indicators.svg",
+    "path": "images/eco1/chart_eco1_4_state_comparative_indicators.svg",
+    "chapter": "eco1",
+    "title": "Chart Eco State Comparative Indicators Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "state",
+      "comparative",
+      "indicators",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 11
+  },
+  {
+    "id": "chart_eco1_5_sustainable_development_crude_groundwater.svg",
+    "path": "images/eco1/chart_eco1_5_sustainable_development_crude_groundwater.svg",
+    "chapter": "eco1",
+    "title": "Chart Eco Sustainable Development Crude Groundwater Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "sustainable",
+      "development",
+      "crude",
+      "groundwater",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "eco1_real_10_clean_drinking_water.webp",
+    "path": "images/eco1/eco1_real_10_clean_drinking_water.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Clean Drinking Water Webp",
+    "tags": [
+      "eco",
+      "real",
+      "clean",
+      "drinking",
+      "water",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 43
+  },
+  {
+    "id": "eco1_real_11_groundwater_tubewell_crisis.webp",
+    "path": "images/eco1/eco1_real_11_groundwater_tubewell_crisis.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Groundwater Tubewell Crisis Webp",
+    "tags": [
+      "eco",
+      "real",
+      "groundwater",
+      "tubewell",
+      "crisis",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 109
+  },
+  {
+    "id": "eco1_real_12_crude_oil_offshore_drilling.webp",
+    "path": "images/eco1/eco1_real_12_crude_oil_offshore_drilling.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Crude Oil Offshore Drilling Webp",
+    "tags": [
+      "eco",
+      "real",
+      "crude",
+      "oil",
+      "offshore",
+      "drilling",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 186
+  },
+  {
+    "id": "eco1_real_13_solar_renewable_energy.webp",
+    "path": "images/eco1/eco1_real_13_solar_renewable_energy.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Solar Renewable Energy Webp",
+    "tags": [
+      "eco",
+      "real",
+      "solar",
+      "renewable",
+      "energy",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 194
+  },
+  {
+    "id": "eco1_real_14_undp_human_development.webp",
+    "path": "images/eco1/eco1_real_14_undp_human_development.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Undp Human Development Webp",
+    "tags": [
+      "eco",
+      "real",
+      "undp",
+      "human",
+      "development",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 170
+  },
+  {
+    "id": "eco1_real_16_sustainable_green_forest.webp",
+    "path": "images/eco1/eco1_real_16_sustainable_green_forest.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Sustainable Green Forest Webp",
+    "tags": [
+      "eco",
+      "real",
+      "sustainable",
+      "green",
+      "forest",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 184
+  },
+  {
+    "id": "eco1_real_17_public_metro_transit.webp",
+    "path": "images/eco1/eco1_real_17_public_metro_transit.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Public Metro Transit Webp",
+    "tags": [
+      "eco",
+      "real",
+      "public",
+      "metro",
+      "transit",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 254
+  },
+  {
+    "id": "eco1_real_19_community_rural_development.webp",
+    "path": "images/eco1/eco1_real_19_community_rural_development.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Community Rural Development Webp",
+    "tags": [
+      "eco",
+      "real",
+      "community",
+      "rural",
+      "development",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 68
+  },
+  {
+    "id": "eco1_real_20_sustainable_future_economy.webp",
+    "path": "images/eco1/eco1_real_20_sustainable_future_economy.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Sustainable Future Economy Webp",
+    "tags": [
+      "eco",
+      "real",
+      "sustainable",
+      "future",
+      "economy",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 59
+  },
+  {
+    "id": "eco1_real_2_prosperous_farmer.webp",
+    "path": "images/eco1/eco1_real_2_prosperous_farmer.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Prosperous Farmer Webp",
+    "tags": [
+      "eco",
+      "real",
+      "prosperous",
+      "farmer",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 269
+  },
+  {
+    "id": "eco1_real_3_urban_unemployed_youth.webp",
+    "path": "images/eco1/eco1_real_3_urban_unemployed_youth.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Urban Unemployed Youth Webp",
+    "tags": [
+      "eco",
+      "real",
+      "urban",
+      "unemployed",
+      "youth",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 222
+  },
+  {
+    "id": "eco1_real_5_gender_equality_women.webp",
+    "path": "images/eco1/eco1_real_5_gender_equality_women.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Gender Equality Women Webp",
+    "tags": [
+      "eco",
+      "real",
+      "gender",
+      "equality",
+      "women",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 257
+  },
+  {
+    "id": "eco1_real_6_child_healthcare_immunization.webp",
+    "path": "images/eco1/eco1_real_6_child_healthcare_immunization.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Child Healthcare Immunization Webp",
+    "tags": [
+      "eco",
+      "real",
+      "child",
+      "healthcare",
+      "immunization",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 244
+  },
+  {
+    "id": "eco1_real_7_primary_education_literacy.webp",
+    "path": "images/eco1/eco1_real_7_primary_education_literacy.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Primary Education Literacy Webp",
+    "tags": [
+      "eco",
+      "real",
+      "primary",
+      "education",
+      "literacy",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 182
+  },
+  {
+    "id": "eco1_real_9_bmi_nutrition_health.webp",
+    "path": "images/eco1/eco1_real_9_bmi_nutrition_health.webp",
+    "chapter": "eco1",
+    "title": "Eco Real Bmi Nutrition Health Webp",
+    "tags": [
+      "eco",
+      "real",
+      "bmi",
+      "nutrition",
+      "health",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 188
+  },
+  {
+    "id": "chart_eco2_1_three_sectors_interdependence.svg",
+    "path": "images/eco2/chart_eco2_1_three_sectors_interdependence.svg",
+    "chapter": "eco2",
+    "title": "Chart Eco Three Sectors Interdependence Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "three",
+      "sectors",
+      "interdependence",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 12
+  },
+  {
+    "id": "chart_eco2_2_gdp_and_employment_share_change.svg",
+    "path": "images/eco2/chart_eco2_2_gdp_and_employment_share_change.svg",
+    "chapter": "eco2",
+    "title": "Chart Eco Gdp And Employment Share Change Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "gdp",
+      "and",
+      "employment",
+      "share",
+      "change",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "chart_eco2_3_disguised_unemployment_laxmi_case.svg",
+    "path": "images/eco2/chart_eco2_3_disguised_unemployment_laxmi_case.svg",
+    "chapter": "eco2",
+    "title": "Chart Eco Disguised Unemployment Laxmi Case Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "disguised",
+      "unemployment",
+      "laxmi",
+      "case",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_eco2_4_organized_vs_unorganized_sector.svg",
+    "path": "images/eco2/chart_eco2_4_organized_vs_unorganized_sector.svg",
+    "chapter": "eco2",
+    "title": "Chart Eco Organized Vs Unorganized Sector Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "organized",
+      "unorganized",
+      "sector",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_eco2_5_public_vs_private_and_mgnrega.svg",
+    "path": "images/eco2/chart_eco2_5_public_vs_private_and_mgnrega.svg",
+    "chapter": "eco2",
+    "title": "Chart Eco Public Vs Private And Mgnrega Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "public",
+      "private",
+      "and",
+      "mgnrega",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "ai_geo1_10_land_degradation_reclamation.webp",
+    "path": "images/geo1/ai_geo1_10_land_degradation_reclamation.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Land Degradation Reclamation Webp",
+    "tags": [
+      "geo",
+      "land",
+      "degradation",
+      "reclamation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x687",
+    "size_kb": 134
+  },
+  {
+    "id": "ai_geo1_1_sustainable_development.webp",
+    "path": "images/geo1/ai_geo1_1_sustainable_development.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Sustainable Development Webp",
+    "tags": [
+      "geo",
+      "sustainable",
+      "development",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 143
+  },
+  {
+    "id": "ai_geo1_2_black_soil_cotton.webp",
+    "path": "images/geo1/ai_geo1_2_black_soil_cotton.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Black Soil Cotton Webp",
+    "tags": [
+      "geo",
+      "black",
+      "soil",
+      "cotton",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 129
+  },
+  {
+    "id": "ai_geo1_3_alluvial_soil_punjab.webp",
+    "path": "images/geo1/ai_geo1_3_alluvial_soil_punjab.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Alluvial Soil Punjab Webp",
+    "tags": [
+      "geo",
+      "alluvial",
+      "soil",
+      "punjab",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 144
+  },
+  {
+    "id": "ai_geo1_4_laterite_soil_tea.webp",
+    "path": "images/geo1/ai_geo1_4_laterite_soil_tea.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Laterite Soil Tea Webp",
+    "tags": [
+      "geo",
+      "laterite",
+      "soil",
+      "tea",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x1600",
+    "size_kb": 332
+  },
+  {
+    "id": "ai_geo1_5_arid_desert_soil_rajasthan.webp",
+    "path": "images/geo1/ai_geo1_5_arid_desert_soil_rajasthan.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Arid Desert Soil Rajasthan Webp",
+    "tags": [
+      "geo",
+      "arid",
+      "desert",
+      "soil",
+      "rajasthan",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x1800",
+    "size_kb": 273
+  },
+  {
+    "id": "ai_geo1_6_mountain_forest_soil_himalayas.webp",
+    "path": "images/geo1/ai_geo1_6_mountain_forest_soil_himalayas.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Mountain Forest Soil Himalayas Webp",
+    "tags": [
+      "geo",
+      "mountain",
+      "forest",
+      "soil",
+      "himalayas",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 236
+  },
+  {
+    "id": "ai_geo1_7_rio_earth_summit_1992.webp",
+    "path": "images/geo1/ai_geo1_7_rio_earth_summit_1992.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Rio Earth Summit Webp",
+    "tags": [
+      "geo",
+      "rio",
+      "earth",
+      "summit",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 253
+  },
+  {
+    "id": "ai_geo1_8_strip_cropping_windbreak.webp",
+    "path": "images/geo1/ai_geo1_8_strip_cropping_windbreak.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Strip Cropping Windbreak Webp",
+    "tags": [
+      "geo",
+      "strip",
+      "cropping",
+      "windbreak",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 95
+  },
+  {
+    "id": "ai_geo1_9_resource_planning_india.webp",
+    "path": "images/geo1/ai_geo1_9_resource_planning_india.webp",
+    "chapter": "geo1",
+    "title": "Ai Geo Resource Planning India Webp",
+    "tags": [
+      "geo",
+      "resource",
+      "planning",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x797",
+    "size_kb": 223
+  },
+  {
+    "id": "ncert_geo1_fig10_shelter_belts.webp",
+    "path": "images/geo1/ncert_geo1_fig10_shelter_belts.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Shelter Belts Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "shelter",
+      "belts",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1165
+  },
+  {
+    "id": "ncert_geo1_fig1_interdependence.webp",
+    "path": "images/geo1/ncert_geo1_fig1_interdependence.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Interdependence Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "interdependence",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 566
+  },
+  {
+    "id": "ncert_geo1_fig2_resource_classification.webp",
+    "path": "images/geo1/ncert_geo1_fig2_resource_classification.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Resource Classification Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "resource",
+      "classification",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 456
+  },
+  {
+    "id": "ncert_geo1_fig3_land_relief_pie.webp",
+    "path": "images/geo1/ncert_geo1_fig3_land_relief_pie.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Land Relief Pie Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "land",
+      "relief",
+      "pie",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 671
+  },
+  {
+    "id": "ncert_geo1_fig4_land_use_comparison.webp",
+    "path": "images/geo1/ncert_geo1_fig4_land_use_comparison.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Land Use Comparison Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "land",
+      "use",
+      "comparison",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 807
+  },
+  {
+    "id": "ncert_geo1_fig5_soil_profile.webp",
+    "path": "images/geo1/ncert_geo1_fig5_soil_profile.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Soil Profile Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "soil",
+      "profile",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 783
+  },
+  {
+    "id": "ncert_geo1_fig6_soil_map_india.webp",
+    "path": "images/geo1/ncert_geo1_fig6_soil_map_india.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Soil Map India Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "soil",
+      "map",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 805
+  },
+  {
+    "id": "ncert_geo1_fig7_gully_erosion.webp",
+    "path": "images/geo1/ncert_geo1_fig7_gully_erosion.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Gully Erosion Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "gully",
+      "erosion",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1122
+  },
+  {
+    "id": "ncert_geo1_fig8_sheet_erosion.webp",
+    "path": "images/geo1/ncert_geo1_fig8_sheet_erosion.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Sheet Erosion Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "sheet",
+      "erosion",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 973
+  },
+  {
+    "id": "ncert_geo1_fig9_contour_ploughing.webp",
+    "path": "images/geo1/ncert_geo1_fig9_contour_ploughing.webp",
+    "chapter": "geo1",
+    "title": "Ncert Geo Fig Contour Ploughing Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "contour",
+      "ploughing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 837
+  },
+  {
+    "id": "ai_geo2_10_community_conservation_summary.svg",
+    "path": "images/geo2/ai_geo2_10_community_conservation_summary.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Community Conservation Summary Svg",
+    "tags": [
+      "geo",
+      "community",
+      "conservation",
+      "summary",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ai_geo2_1_flora_fauna_ecosystem.svg",
+    "path": "images/geo2/ai_geo2_1_flora_fauna_ecosystem.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Flora Fauna Ecosystem Svg",
+    "tags": [
+      "geo",
+      "flora",
+      "fauna",
+      "ecosystem",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ai_geo2_1_flora_fauna_ecosystem.webp",
+    "path": "images/geo2/ai_geo2_1_flora_fauna_ecosystem.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Flora Fauna Ecosystem Webp",
+    "tags": [
+      "geo",
+      "flora",
+      "fauna",
+      "ecosystem",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x799",
+    "size_kb": 297
+  },
+  {
+    "id": "ai_geo2_2_extinct_rare_species.svg",
+    "path": "images/geo2/ai_geo2_2_extinct_rare_species.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Extinct Rare Species Svg",
+    "tags": [
+      "geo",
+      "extinct",
+      "rare",
+      "species",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ai_geo2_2_extinct_rare_species.webp",
+    "path": "images/geo2/ai_geo2_2_extinct_rare_species.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Extinct Rare Species Webp",
+    "tags": [
+      "geo",
+      "extinct",
+      "rare",
+      "species",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "3192x2092",
+    "size_kb": 902
+  },
+  {
+    "id": "ai_geo2_3_buxa_mining_impact.svg",
+    "path": "images/geo2/ai_geo2_3_buxa_mining_impact.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Buxa Mining Impact Svg",
+    "tags": [
+      "geo",
+      "buxa",
+      "mining",
+      "impact",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ai_geo2_4_tehri_narmada_dam_impact.svg",
+    "path": "images/geo2/ai_geo2_4_tehri_narmada_dam_impact.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Tehri Narmada Dam Impact Svg",
+    "tags": [
+      "geo",
+      "tehri",
+      "narmada",
+      "dam",
+      "impact",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ai_geo2_4_tehri_narmada_dam_impact.webp",
+    "path": "images/geo2/ai_geo2_4_tehri_narmada_dam_impact.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Tehri Narmada Dam Impact Webp",
+    "tags": [
+      "geo",
+      "tehri",
+      "narmada",
+      "dam",
+      "impact",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x801",
+    "size_kb": 153
+  },
+  {
+    "id": "ai_geo2_5_reserved_vs_protected_forests.svg",
+    "path": "images/geo2/ai_geo2_5_reserved_vs_protected_forests.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Reserved Vs Protected Forests Svg",
+    "tags": [
+      "geo",
+      "reserved",
+      "protected",
+      "forests",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ai_geo2_5_reserved_vs_protected_forests.webp",
+    "path": "images/geo2/ai_geo2_5_reserved_vs_protected_forests.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Reserved Vs Protected Forests Webp",
+    "tags": [
+      "geo",
+      "reserved",
+      "protected",
+      "forests",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 197
+  },
+  {
+    "id": "ai_geo2_6_wildlife_protection_act_1972.svg",
+    "path": "images/geo2/ai_geo2_6_wildlife_protection_act_1972.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Wildlife Protection Act Svg",
+    "tags": [
+      "geo",
+      "wildlife",
+      "protection",
+      "act",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ai_geo2_7_sacred_groves_tribals.svg",
+    "path": "images/geo2/ai_geo2_7_sacred_groves_tribals.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Sacred Groves Tribals Svg",
+    "tags": [
+      "geo",
+      "sacred",
+      "groves",
+      "tribals",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ai_geo2_7_sacred_groves_tribals.webp",
+    "path": "images/geo2/ai_geo2_7_sacred_groves_tribals.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Sacred Groves Tribals Webp",
+    "tags": [
+      "geo",
+      "sacred",
+      "groves",
+      "tribals",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x828",
+    "size_kb": 286
+  },
+  {
+    "id": "ai_geo2_8_bhairodev_dakav_sonchuri.webp",
+    "path": "images/geo2/ai_geo2_8_bhairodev_dakav_sonchuri.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Bhairodev Dakav Sonchuri Webp",
+    "tags": [
+      "geo",
+      "bhairodev",
+      "dakav",
+      "sonchuri",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x1792",
+    "size_kb": 283
+  },
+  {
+    "id": "ai_geo2_9_biodiversity_hotspots_india.svg",
+    "path": "images/geo2/ai_geo2_9_biodiversity_hotspots_india.svg",
+    "chapter": "geo2",
+    "title": "Ai Geo Biodiversity Hotspots India Svg",
+    "tags": [
+      "geo",
+      "biodiversity",
+      "hotspots",
+      "india",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ai_geo2_9_biodiversity_hotspots_india.webp",
+    "path": "images/geo2/ai_geo2_9_biodiversity_hotspots_india.webp",
+    "chapter": "geo2",
+    "title": "Ai Geo Biodiversity Hotspots India Webp",
+    "tags": [
+      "geo",
+      "biodiversity",
+      "hotspots",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x715",
+    "size_kb": 156
+  },
+  {
+    "id": "buxa_tiger_reserve_map.svg",
+    "path": "images/geo2/buxa_tiger_reserve_map.svg",
+    "chapter": "geo2",
+    "title": "Buxa Tiger Reserve Map Svg",
+    "tags": [
+      "buxa",
+      "tiger",
+      "reserve",
+      "map",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "copilot_community_plantation_v1.webp",
+    "path": "images/geo2/copilot_community_plantation_v1.webp",
+    "chapter": "geo2",
+    "title": "Copilot Community Plantation V Webp",
+    "tags": [
+      "copilot",
+      "community",
+      "plantation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1536",
+    "size_kb": 714
+  },
+  {
+    "id": "copilot_forest_guard_patrol_1972.webp",
+    "path": "images/geo2/copilot_forest_guard_patrol_1972.webp",
+    "chapter": "geo2",
+    "title": "Copilot Forest Guard Patrol Webp",
+    "tags": [
+      "copilot",
+      "forest",
+      "guard",
+      "patrol",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1536x1024",
+    "size_kb": 620
+  },
+  {
+    "id": "copilot_khejarli_bishnoi_sacrifice_v1.webp",
+    "path": "images/geo2/copilot_khejarli_bishnoi_sacrifice_v1.webp",
+    "chapter": "geo2",
+    "title": "Copilot Khejarli Bishnoi Sacrifice V Webp",
+    "tags": [
+      "copilot",
+      "khejarli",
+      "bishnoi",
+      "sacrifice",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1536",
+    "size_kb": 738
+  },
+  {
+    "id": "endangered_animals_4_collage_v2.webp",
+    "path": "images/geo2/endangered_animals_4_collage_v2.webp",
+    "chapter": "geo2",
+    "title": "Endangered Animals Collage V Webp",
+    "tags": [
+      "endangered",
+      "animals",
+      "collage",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1600x1200",
+    "size_kb": 465
+  },
+  {
+    "id": "ncert_geo2_fig10_beej_bachao_navdanya.svg",
+    "path": "images/geo2/ncert_geo2_fig10_beej_bachao_navdanya.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Beej Bachao Navdanya Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "beej",
+      "bachao",
+      "navdanya",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ncert_geo2_fig1_biodiversity.svg",
+    "path": "images/geo2/ncert_geo2_fig1_biodiversity.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Biodiversity Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "biodiversity",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 3
+  },
+  {
+    "id": "ncert_geo2_fig2_endangered_species.svg",
+    "path": "images/geo2/ncert_geo2_fig2_endangered_species.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Endangered Species Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "endangered",
+      "species",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "ncert_geo2_fig3_iucn_categories.svg",
+    "path": "images/geo2/ncert_geo2_fig3_iucn_categories.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Iucn Categories Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "iucn",
+      "categories",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "ncert_geo2_fig4_deforestation_causes.svg",
+    "path": "images/geo2/ncert_geo2_fig4_deforestation_causes.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Deforestation Causes Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "deforestation",
+      "causes",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "ncert_geo2_fig5_forest_types_pie.svg",
+    "path": "images/geo2/ncert_geo2_fig5_forest_types_pie.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Forest Types Pie Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "forest",
+      "types",
+      "pie",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "ncert_geo2_fig6_sundarbans_mangroves.svg",
+    "path": "images/geo2/ncert_geo2_fig6_sundarbans_mangroves.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Sundarbans Mangroves Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "sundarbans",
+      "mangroves",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "ncert_geo2_fig7_project_tiger_map.svg",
+    "path": "images/geo2/ncert_geo2_fig7_project_tiger_map.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Project Tiger Map Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "project",
+      "tiger",
+      "map",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "ncert_geo2_fig8_chipko_movement.svg",
+    "path": "images/geo2/ncert_geo2_fig8_chipko_movement.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Chipko Movement Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "chipko",
+      "movement",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ncert_geo2_fig9_jfm_programme.svg",
+    "path": "images/geo2/ncert_geo2_fig9_jfm_programme.svg",
+    "chapter": "geo2",
+    "title": "Ncert Geo Fig Jfm Programme Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "jfm",
+      "programme",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 2
+  },
+  {
+    "id": "ncert_official_geo2_fig3.webp",
+    "path": "images/geo2/ncert_official_geo2_fig3.webp",
+    "chapter": "geo2",
+    "title": "Ncert Official Geo Fig Webp",
+    "tags": [
+      "ncert",
+      "official",
+      "geo",
+      "fig",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2022x646",
+    "size_kb": 287
+  },
+  {
+    "id": "ncert_official_geo2_fig4.webp",
+    "path": "images/geo2/ncert_official_geo2_fig4.webp",
+    "chapter": "geo2",
+    "title": "Ncert Official Geo Fig Webp",
+    "tags": [
+      "ncert",
+      "official",
+      "geo",
+      "fig",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2021x1230",
+    "size_kb": 578
+  },
+  {
+    "id": "ncert_official_geo2_tribal_adivasi.webp",
+    "path": "images/geo2/ncert_official_geo2_tribal_adivasi.webp",
+    "chapter": "geo2",
+    "title": "Ncert Official Geo Tribal Adivasi Webp",
+    "tags": [
+      "ncert",
+      "official",
+      "geo",
+      "tribal",
+      "adivasi",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1563x1125",
+    "size_kb": 598
+  },
+  {
+    "id": "ncert_geo3_fig1_hydrological_cycle.svg",
+    "path": "images/geo3/ncert_geo3_fig1_hydrological_cycle.svg",
+    "chapter": "geo3",
+    "title": "Ncert Geo Fig Hydrological Cycle Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "hydrological",
+      "cycle",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "ncert_geo3_fig2_water_distribution_pie.svg",
+    "path": "images/geo3/ncert_geo3_fig2_water_distribution_pie.svg",
+    "chapter": "geo3",
+    "title": "Ncert Geo Fig Water Distribution Pie Svg",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "water",
+      "distribution",
+      "pie",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "real_geo3_10_jaisalmer_khadin_farm.webp",
+    "path": "images/geo3/real_geo3_10_jaisalmer_khadin_farm.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Jaisalmer Khadin Farm Webp",
+    "tags": [
+      "real",
+      "geo",
+      "jaisalmer",
+      "khadin",
+      "farm",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 244
+  },
+  {
+    "id": "real_geo3_11_himalayan_kul_channel.webp",
+    "path": "images/geo3/real_geo3_11_himalayan_kul_channel.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Himalayan Kul Channel Webp",
+    "tags": [
+      "real",
+      "geo",
+      "himalayan",
+      "kul",
+      "channel",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 326
+  },
+  {
+    "id": "real_geo3_12_meghalaya_bamboo_drip.webp",
+    "path": "images/geo3/real_geo3_12_meghalaya_bamboo_drip.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Meghalaya Bamboo Drip Webp",
+    "tags": [
+      "real",
+      "geo",
+      "meghalaya",
+      "bamboo",
+      "drip",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 282
+  },
+  {
+    "id": "real_geo3_13_micro_drip_irrigation.webp",
+    "path": "images/geo3/real_geo3_13_micro_drip_irrigation.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Micro Drip Irrigation Webp",
+    "tags": [
+      "real",
+      "geo",
+      "micro",
+      "drip",
+      "irrigation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 178
+  },
+  {
+    "id": "real_geo3_1_water_scarcity_rajasthan.webp",
+    "path": "images/geo3/real_geo3_1_water_scarcity_rajasthan.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Water Scarcity Rajasthan Webp",
+    "tags": [
+      "real",
+      "geo",
+      "water",
+      "scarcity",
+      "rajasthan",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 336
+  },
+  {
+    "id": "real_geo3_2_river_pollution_effluent.webp",
+    "path": "images/geo3/real_geo3_2_river_pollution_effluent.webp",
+    "chapter": "geo3",
+    "title": "Real Geo River Pollution Effluent Webp",
+    "tags": [
+      "real",
+      "geo",
+      "river",
+      "pollution",
+      "effluent",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 221
+  },
+  {
+    "id": "real_geo3_3_massive_hydro_dam.webp",
+    "path": "images/geo3/real_geo3_3_massive_hydro_dam.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Massive Hydro Dam Webp",
+    "tags": [
+      "real",
+      "geo",
+      "massive",
+      "hydro",
+      "dam",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 206
+  },
+  {
+    "id": "real_geo3_4_ancient_sringaverapura.webp",
+    "path": "images/geo3/real_geo3_4_ancient_sringaverapura.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Ancient Sringaverapura Webp",
+    "tags": [
+      "real",
+      "geo",
+      "ancient",
+      "sringaverapura",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 276
+  },
+  {
+    "id": "real_geo3_5_bhopal_upper_lake.webp",
+    "path": "images/geo3/real_geo3_5_bhopal_upper_lake.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Bhopal Upper Lake Webp",
+    "tags": [
+      "real",
+      "geo",
+      "bhopal",
+      "upper",
+      "lake",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 216
+  },
+  {
+    "id": "real_geo3_6_tehri_dam_highest.webp",
+    "path": "images/geo3/real_geo3_6_tehri_dam_highest.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Tehri Dam Highest Webp",
+    "tags": [
+      "real",
+      "geo",
+      "tehri",
+      "dam",
+      "highest",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 240
+  },
+  {
+    "id": "real_geo3_7_narmada_bachao_andolan.webp",
+    "path": "images/geo3/real_geo3_7_narmada_bachao_andolan.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Narmada Bachao Andolan Webp",
+    "tags": [
+      "real",
+      "geo",
+      "narmada",
+      "bachao",
+      "andolan",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 292
+  },
+  {
+    "id": "real_geo3_8_modern_rooftop_harvesting.webp",
+    "path": "images/geo3/real_geo3_8_modern_rooftop_harvesting.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Modern Rooftop Harvesting Webp",
+    "tags": [
+      "real",
+      "geo",
+      "modern",
+      "rooftop",
+      "harvesting",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 263
+  },
+  {
+    "id": "real_geo3_9_rajasthan_tanka_system.webp",
+    "path": "images/geo3/real_geo3_9_rajasthan_tanka_system.webp",
+    "chapter": "geo3",
+    "title": "Real Geo Rajasthan Tanka System Webp",
+    "tags": [
+      "real",
+      "geo",
+      "rajasthan",
+      "tanka",
+      "system",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x669",
+    "size_kb": 297
+  },
+  {
+    "id": "chart_geo4_1_farming_types_flowchart.svg",
+    "path": "images/geo4/chart_geo4_1_farming_types_flowchart.svg",
+    "chapter": "geo4",
+    "title": "Chart Geo Farming Types Flowchart Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "farming",
+      "types",
+      "flowchart",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_geo4_2_cropping_seasons_matrix.svg",
+    "path": "images/geo4/chart_geo4_2_cropping_seasons_matrix.svg",
+    "chapter": "geo4",
+    "title": "Chart Geo Cropping Seasons Matrix Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "cropping",
+      "seasons",
+      "matrix",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 6
+  },
+  {
+    "id": "chart_geo4_3_major_crops_classification.svg",
+    "path": "images/geo4/chart_geo4_3_major_crops_classification.svg",
+    "chapter": "geo4",
+    "title": "Chart Geo Major Crops Classification Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "major",
+      "crops",
+      "classification",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_geo4_4_reforms_institutional_tech.svg",
+    "path": "images/geo4/chart_geo4_4_reforms_institutional_tech.svg",
+    "chapter": "geo4",
+    "title": "Chart Geo Reforms Institutional Tech Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "reforms",
+      "institutional",
+      "tech",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_geo4_5_food_security_pds_flow.svg",
+    "path": "images/geo4/chart_geo4_5_food_security_pds_flow.svg",
+    "chapter": "geo4",
+    "title": "Chart Geo Food Security Pds Flow Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "food",
+      "security",
+      "pds",
+      "flow",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "ncert_fig4_10_tea_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_10_tea_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Tea Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "tea",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "667x501",
+    "size_kb": 72
+  },
+  {
+    "id": "ncert_fig4_11_tea_leaves_harvesting.webp",
+    "path": "images/geo4/ncert_fig4_11_tea_leaves_harvesting.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Tea Leaves Harvesting Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "tea",
+      "leaves",
+      "harvesting",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "672x505",
+    "size_kb": 92
+  },
+  {
+    "id": "ncert_fig4_12_horticulture_fruits.webp",
+    "path": "images/geo4/ncert_fig4_12_horticulture_fruits.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Horticulture Fruits Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "horticulture",
+      "fruits",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1981x459",
+    "size_kb": 228
+  },
+  {
+    "id": "ncert_fig4_13_vegetables_peas.webp",
+    "path": "images/geo4/ncert_fig4_13_vegetables_peas.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Vegetables Peas Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "vegetables",
+      "peas",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1985x414",
+    "size_kb": 197
+  },
+  {
+    "id": "ncert_fig4_14_cotton_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_14_cotton_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Cotton Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "cotton",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "955x522",
+    "size_kb": 114
+  },
+  {
+    "id": "ncert_fig4_15a_tractor_ploughing.webp",
+    "path": "images/geo4/ncert_fig4_15a_tractor_ploughing.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig A Tractor Ploughing Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "tractor",
+      "ploughing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "960x689",
+    "size_kb": 174
+  },
+  {
+    "id": "ncert_fig4_15b_modern_harvester.webp",
+    "path": "images/geo4/ncert_fig4_15b_modern_harvester.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig B Modern Harvester Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "modern",
+      "harvester",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "956x680",
+    "size_kb": 95
+  },
+  {
+    "id": "ncert_fig4_1_jhumming.webp",
+    "path": "images/geo4/ncert_fig4_1_jhumming.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Jhumming Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "jhumming",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "788x709",
+    "size_kb": 170
+  },
+  {
+    "id": "ncert_fig4_2_banana_plantation.webp",
+    "path": "images/geo4/ncert_fig4_2_banana_plantation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Banana Plantation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "banana",
+      "plantation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "956x613",
+    "size_kb": 134
+  },
+  {
+    "id": "ncert_fig4_3_bamboo_plantation.webp",
+    "path": "images/geo4/ncert_fig4_3_bamboo_plantation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Bamboo Plantation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bamboo",
+      "plantation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "956x717",
+    "size_kb": 207
+  },
+  {
+    "id": "ncert_fig4_4a_rice_transplantation.webp",
+    "path": "images/geo4/ncert_fig4_4a_rice_transplantation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig A Rice Transplantation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "rice",
+      "transplantation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x718",
+    "size_kb": 101
+  },
+  {
+    "id": "ncert_fig4_4b_rice_harvest_ready.webp",
+    "path": "images/geo4/ncert_fig4_4b_rice_harvest_ready.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig B Rice Harvest Ready Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "rice",
+      "harvest",
+      "ready",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x630",
+    "size_kb": 181
+  },
+  {
+    "id": "ncert_fig4_5_wheat_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_5_wheat_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Wheat Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "wheat",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "956x709",
+    "size_kb": 113
+  },
+  {
+    "id": "ncert_fig4_6_bajra_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_6_bajra_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Bajra Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bajra",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x614",
+    "size_kb": 129
+  },
+  {
+    "id": "ncert_fig4_7_maize_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_7_maize_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Maize Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "maize",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "955x635",
+    "size_kb": 150
+  },
+  {
+    "id": "ncert_fig4_8_sugarcane_cultivation.webp",
+    "path": "images/geo4/ncert_fig4_8_sugarcane_cultivation.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Sugarcane Cultivation Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "sugarcane",
+      "cultivation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x685",
+    "size_kb": 151
+  },
+  {
+    "id": "ncert_fig4_9_oilseeds_groundnut_mustard.webp",
+    "path": "images/geo4/ncert_fig4_9_oilseeds_groundnut_mustard.webp",
+    "chapter": "geo4",
+    "title": "Ncert Fig Oilseeds Groundnut Mustard Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "oilseeds",
+      "groundnut",
+      "mustard",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1976x434",
+    "size_kb": 235
+  },
+  {
+    "id": "ncert_map_rice_distribution.webp",
+    "path": "images/geo4/ncert_map_rice_distribution.webp",
+    "chapter": "geo4",
+    "title": "Ncert Map Rice Distribution Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "rice",
+      "distribution",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1980x2520",
+    "size_kb": 444
+  },
+  {
+    "id": "ncert_map_wheat_distribution.webp",
+    "path": "images/geo4/ncert_map_wheat_distribution.webp",
+    "chapter": "geo4",
+    "title": "Ncert Map Wheat Distribution Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "wheat",
+      "distribution",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1980x2520",
+    "size_kb": 440
+  },
+  {
+    "id": "chart_geo5_1_minerals_classification.svg",
+    "path": "images/geo5/chart_geo5_1_minerals_classification.svg",
+    "chapter": "geo5",
+    "title": "Chart Geo Minerals Classification Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "minerals",
+      "classification",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_geo5_2_mineral_belts_matrix.svg",
+    "path": "images/geo5/chart_geo5_2_mineral_belts_matrix.svg",
+    "chapter": "geo5",
+    "title": "Chart Geo Mineral Belts Matrix Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "mineral",
+      "belts",
+      "matrix",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_geo5_3_production_share_bars.svg",
+    "path": "images/geo5/chart_geo5_3_production_share_bars.svg",
+    "chapter": "geo5",
+    "title": "Chart Geo Production Share Bars Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "production",
+      "share",
+      "bars",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_geo5_4_energy_conventional_nonconventional.svg",
+    "path": "images/geo5/chart_geo5_4_energy_conventional_nonconventional.svg",
+    "chapter": "geo5",
+    "title": "Chart Geo Energy Conventional Nonconventional Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "energy",
+      "conventional",
+      "nonconventional",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_geo5_5_nuclear_clean_energy_cycle.svg",
+    "path": "images/geo5/chart_geo5_5_nuclear_clean_energy_cycle.svg",
+    "chapter": "geo5",
+    "title": "Chart Geo Nuclear Clean Energy Cycle Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "nuclear",
+      "clean",
+      "energy",
+      "cycle",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "diagram_geo5_biogas_plant_structure_v3.svg",
+    "path": "images/geo5/diagram_geo5_biogas_plant_structure_v3.svg",
+    "chapter": "geo5",
+    "title": "Diagram Geo Biogas Plant Structure V Svg",
+    "tags": [
+      "diagram",
+      "geo",
+      "biogas",
+      "plant",
+      "structure",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "geo5_real_10_anthracite_coal.webp",
+    "path": "images/geo5/geo5_real_10_anthracite_coal.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Anthracite Coal Webp",
+    "tags": [
+      "geo",
+      "real",
+      "anthracite",
+      "coal",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 330
+  },
+  {
+    "id": "geo5_real_11_mumbai_high.webp",
+    "path": "images/geo5/geo5_real_11_mumbai_high.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Mumbai High Webp",
+    "tags": [
+      "geo",
+      "real",
+      "mumbai",
+      "high",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x803",
+    "size_kb": 214
+  },
+  {
+    "id": "geo5_real_12_gas_pipeline.webp",
+    "path": "images/geo5/geo5_real_12_gas_pipeline.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Gas Pipeline Webp",
+    "tags": [
+      "geo",
+      "real",
+      "gas",
+      "pipeline",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x974",
+    "size_kb": 337
+  },
+  {
+    "id": "geo5_real_13_solar_park.webp",
+    "path": "images/geo5/geo5_real_13_solar_park.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Solar Park Webp",
+    "tags": [
+      "geo",
+      "real",
+      "solar",
+      "park",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x685",
+    "size_kb": 206
+  },
+  {
+    "id": "geo5_real_14_wind_turbines.webp",
+    "path": "images/geo5/geo5_real_14_wind_turbines.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Wind Turbines Webp",
+    "tags": [
+      "geo",
+      "real",
+      "wind",
+      "turbines",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x1501",
+    "size_kb": 140
+  },
+  {
+    "id": "geo5_real_15_manikaran_hot_spring.webp",
+    "path": "images/geo5/geo5_real_15_manikaran_hot_spring.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Manikaran Hot Spring Webp",
+    "tags": [
+      "geo",
+      "real",
+      "manikaran",
+      "hot",
+      "spring",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x950",
+    "size_kb": 197
+  },
+  {
+    "id": "geo5_real_16_nuclear_power_plant.webp",
+    "path": "images/geo5/geo5_real_16_nuclear_power_plant.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Nuclear Power Plant Webp",
+    "tags": [
+      "geo",
+      "real",
+      "nuclear",
+      "power",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x767",
+    "size_kb": 297
+  },
+  {
+    "id": "geo5_real_17_tidal_power_plant.webp",
+    "path": "images/geo5/geo5_real_17_tidal_power_plant.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Tidal Power Plant Webp",
+    "tags": [
+      "geo",
+      "real",
+      "tidal",
+      "power",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x749",
+    "size_kb": 257
+  },
+  {
+    "id": "geo5_real_1_mineral_vein.webp",
+    "path": "images/geo5/geo5_real_1_mineral_vein.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Mineral Vein Webp",
+    "tags": [
+      "geo",
+      "real",
+      "mineral",
+      "vein",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "926x878",
+    "size_kb": 90
+  },
+  {
+    "id": "geo5_real_2_placer_gold.webp",
+    "path": "images/geo5/geo5_real_2_placer_gold.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Placer Gold Webp",
+    "tags": [
+      "geo",
+      "real",
+      "placer",
+      "gold",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x905",
+    "size_kb": 325
+  },
+  {
+    "id": "geo5_real_3_magnetite.webp",
+    "path": "images/geo5/geo5_real_3_magnetite.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Magnetite Webp",
+    "tags": [
+      "geo",
+      "real",
+      "magnetite",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "354x418",
+    "size_kb": 35
+  },
+  {
+    "id": "geo5_real_4_hematite.webp",
+    "path": "images/geo5/geo5_real_4_hematite.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Hematite Webp",
+    "tags": [
+      "geo",
+      "real",
+      "hematite",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "600x502",
+    "size_kb": 76
+  },
+  {
+    "id": "geo5_real_5_kudremukh.webp",
+    "path": "images/geo5/geo5_real_5_kudremukh.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Kudremukh Webp",
+    "tags": [
+      "geo",
+      "real",
+      "kudremukh",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x531",
+    "size_kb": 87
+  },
+  {
+    "id": "geo5_real_6_khetri_copper.webp",
+    "path": "images/geo5/geo5_real_6_khetri_copper.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Khetri Copper Webp",
+    "tags": [
+      "geo",
+      "real",
+      "khetri",
+      "copper",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x1212",
+    "size_kb": 377
+  },
+  {
+    "id": "geo5_real_7_bauxite_aluminium.webp",
+    "path": "images/geo5/geo5_real_7_bauxite_aluminium.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Bauxite Aluminium Webp",
+    "tags": [
+      "geo",
+      "real",
+      "bauxite",
+      "aluminium",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 266
+  },
+  {
+    "id": "geo5_real_8_mica_sheet.webp",
+    "path": "images/geo5/geo5_real_8_mica_sheet.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Mica Sheet Webp",
+    "tags": [
+      "geo",
+      "real",
+      "mica",
+      "sheet",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x425",
+    "size_kb": 102
+  },
+  {
+    "id": "geo5_real_9_limestone_quarry.webp",
+    "path": "images/geo5/geo5_real_9_limestone_quarry.webp",
+    "chapter": "geo5",
+    "title": "Geo Real Limestone Quarry Webp",
+    "tags": [
+      "geo",
+      "real",
+      "limestone",
+      "quarry",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x798",
+    "size_kb": 461
+  },
+  {
+    "id": "ncert_fig5_10_solar_milk_center.webp",
+    "path": "images/geo5/ncert_fig5_10_solar_milk_center.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Solar Milk Center Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "solar",
+      "milk",
+      "center",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x522",
+    "size_kb": 49
+  },
+  {
+    "id": "ncert_fig5_11_wind_mills_nagarcoil.webp",
+    "path": "images/geo5/ncert_fig5_11_wind_mills_nagarcoil.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Wind Mills Nagarcoil Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "wind",
+      "mills",
+      "nagarcoil",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x522",
+    "size_kb": 67
+  },
+  {
+    "id": "ncert_fig5_12_biogas_plant.webp",
+    "path": "images/geo5/ncert_fig5_12_biogas_plant.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Biogas Plant Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "biogas",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "876x751",
+    "size_kb": 122
+  },
+  {
+    "id": "ncert_fig5_2_iron_ore_mine.webp",
+    "path": "images/geo5/ncert_fig5_2_iron_ore_mine.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Iron Ore Mine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "iron",
+      "ore",
+      "mine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x793",
+    "size_kb": 144
+  },
+  {
+    "id": "ncert_fig5_3_manganese_production.webp",
+    "path": "images/geo5/ncert_fig5_3_manganese_production.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Manganese Production Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "manganese",
+      "production",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x813",
+    "size_kb": 38
+  },
+  {
+    "id": "ncert_fig5_6_bauxite_mine.webp",
+    "path": "images/geo5/ncert_fig5_6_bauxite_mine.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Bauxite Mine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bauxite",
+      "mine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x1168",
+    "size_kb": 169
+  },
+  {
+    "id": "ncert_fig5_7_limestone_production.webp",
+    "path": "images/geo5/ncert_fig5_7_limestone_production.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Limestone Production Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "limestone",
+      "production",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "901x835",
+    "size_kb": 47
+  },
+  {
+    "id": "ncert_fig5_9a_inside_coal_mine.webp",
+    "path": "images/geo5/ncert_fig5_9a_inside_coal_mine.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig A Inside Coal Mine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "inside",
+      "coal",
+      "mine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x668",
+    "size_kb": 128
+  },
+  {
+    "id": "ncert_fig5_9b_outside_coal_mine.webp",
+    "path": "images/geo5/ncert_fig5_9b_outside_coal_mine.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig B Outside Coal Mine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "outside",
+      "coal",
+      "mine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x668",
+    "size_kb": 95
+  },
+  {
+    "id": "ncert_fig5_rat_hole_mining.webp",
+    "path": "images/geo5/ncert_fig5_rat_hole_mining.webp",
+    "chapter": "geo5",
+    "title": "Ncert Fig Rat Hole Mining Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "rat",
+      "hole",
+      "mining",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x730",
+    "size_kb": 243
+  },
+  {
+    "id": "ncert_map_energy_resources_coal_oil.webp",
+    "path": "images/geo5/ncert_map_energy_resources_coal_oil.webp",
+    "chapter": "geo5",
+    "title": "Ncert Map Energy Resources Coal Oil Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "energy",
+      "resources",
+      "coal",
+      "oil",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2085x2501",
+    "size_kb": 388
+  },
+  {
+    "id": "ncert_map_metallic_minerals_india.webp",
+    "path": "images/geo5/ncert_map_metallic_minerals_india.webp",
+    "chapter": "geo5",
+    "title": "Ncert Map Metallic Minerals India Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "metallic",
+      "minerals",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2085x2626",
+    "size_kb": 415
+  },
+  {
+    "id": "ncert_map_power_plants_india.webp",
+    "path": "images/geo5/ncert_map_power_plants_india.webp",
+    "chapter": "geo5",
+    "title": "Ncert Map Power Plants India Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "power",
+      "plants",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2085x2626",
+    "size_kb": 420
+  },
+  {
+    "id": "chart_geo6_1_industries_classification.svg",
+    "path": "images/geo6/chart_geo6_1_industries_classification.svg",
+    "chapter": "geo6",
+    "title": "Chart Geo Industries Classification Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "industries",
+      "classification",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "chart_geo6_2_textile_value_chain.svg",
+    "path": "images/geo6/chart_geo6_2_textile_value_chain.svg",
+    "chapter": "geo6",
+    "title": "Chart Geo Textile Value Chain Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "textile",
+      "value",
+      "chain",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "chart_geo6_3_steel_manufacturing_process.svg",
+    "path": "images/geo6/chart_geo6_3_steel_manufacturing_process.svg",
+    "chapter": "geo6",
+    "title": "Chart Geo Steel Manufacturing Process Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "steel",
+      "manufacturing",
+      "process",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_geo6_4_industrial_location_factors.svg",
+    "path": "images/geo6/chart_geo6_4_industrial_location_factors.svg",
+    "chapter": "geo6",
+    "title": "Chart Geo Industrial Location Factors Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "industrial",
+      "location",
+      "factors",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_geo6_5_pollution_control_treatment.svg",
+    "path": "images/geo6/chart_geo6_5_pollution_control_treatment.svg",
+    "chapter": "geo6",
+    "title": "Chart Geo Pollution Control Treatment Svg",
+    "tags": [
+      "chart",
+      "geo",
+      "pollution",
+      "control",
+      "treatment",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "geo6_imp_1_agri_modernization.webp",
+    "path": "images/geo6/geo6_imp_1_agri_modernization.webp",
+    "chapter": "geo6",
+    "title": "Geo Imp Agri Modernization Webp",
+    "tags": [
+      "geo",
+      "imp",
+      "agri",
+      "modernization",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 670
+  },
+  {
+    "id": "geo6_imp_2_employment_poverty.webp",
+    "path": "images/geo6/geo6_imp_2_employment_poverty.webp",
+    "chapter": "geo6",
+    "title": "Geo Imp Employment Poverty Webp",
+    "tags": [
+      "geo",
+      "imp",
+      "employment",
+      "poverty",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "410x200",
+    "size_kb": 35
+  },
+  {
+    "id": "geo6_imp_3_forex_export.webp",
+    "path": "images/geo6/geo6_imp_3_forex_export.webp",
+    "chapter": "geo6",
+    "title": "Geo Imp Forex Export Webp",
+    "tags": [
+      "geo",
+      "imp",
+      "forex",
+      "export",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "600x450",
+    "size_kb": 94
+  },
+  {
+    "id": "geo6_imp_4_national_prosperity.webp",
+    "path": "images/geo6/geo6_imp_4_national_prosperity.webp",
+    "chapter": "geo6",
+    "title": "Geo Imp National Prosperity Webp",
+    "tags": [
+      "geo",
+      "imp",
+      "national",
+      "prosperity",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "600x450",
+    "size_kb": 105
+  },
+  {
+    "id": "geo6_importance_infographic.webp",
+    "path": "images/geo6/geo6_importance_infographic.webp",
+    "chapter": "geo6",
+    "title": "Geo Importance Infographic Webp",
+    "tags": [
+      "geo",
+      "importance",
+      "infographic",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1396",
+    "size_kb": 601
+  },
+  {
+    "id": "geo6_pollution_1_air.webp",
+    "path": "images/geo6/geo6_pollution_1_air.webp",
+    "chapter": "geo6",
+    "title": "Geo Pollution Air Webp",
+    "tags": [
+      "geo",
+      "pollution",
+      "air",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 55
+  },
+  {
+    "id": "geo6_pollution_2_water.webp",
+    "path": "images/geo6/geo6_pollution_2_water.webp",
+    "chapter": "geo6",
+    "title": "Geo Pollution Water Webp",
+    "tags": [
+      "geo",
+      "pollution",
+      "water",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 456
+  },
+  {
+    "id": "geo6_pollution_3_thermal.webp",
+    "path": "images/geo6/geo6_pollution_3_thermal.webp",
+    "chapter": "geo6",
+    "title": "Geo Pollution Thermal Webp",
+    "tags": [
+      "geo",
+      "pollution",
+      "thermal",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 212
+  },
+  {
+    "id": "geo6_pollution_4_noise.webp",
+    "path": "images/geo6/geo6_pollution_4_noise.webp",
+    "chapter": "geo6",
+    "title": "Geo Pollution Noise Webp",
+    "tags": [
+      "geo",
+      "pollution",
+      "noise",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x856",
+    "size_kb": 371
+  },
+  {
+    "id": "geo6_pollution_5_soil.webp",
+    "path": "images/geo6/geo6_pollution_5_soil.webp",
+    "chapter": "geo6",
+    "title": "Geo Pollution Soil Webp",
+    "tags": [
+      "geo",
+      "pollution",
+      "soil",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 442
+  },
+  {
+    "id": "geo6_real_10_rotary_kiln_cement_plant.webp",
+    "path": "images/geo6/geo6_real_10_rotary_kiln_cement_plant.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Rotary Kiln Cement Plant Webp",
+    "tags": [
+      "geo",
+      "real",
+      "rotary",
+      "kiln",
+      "cement",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x668",
+    "size_kb": 112
+  },
+  {
+    "id": "geo6_real_11_robotic_car_assembly.webp",
+    "path": "images/geo6/geo6_real_11_robotic_car_assembly.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Robotic Car Assembly Webp",
+    "tags": [
+      "geo",
+      "real",
+      "robotic",
+      "car",
+      "assembly",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 192
+  },
+  {
+    "id": "geo6_real_12_truck_tractor_manufacturing.webp",
+    "path": "images/geo6/geo6_real_12_truck_tractor_manufacturing.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Truck Tractor Manufacturing Webp",
+    "tags": [
+      "geo",
+      "real",
+      "truck",
+      "tractor",
+      "manufacturing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x721",
+    "size_kb": 365
+  },
+  {
+    "id": "geo6_real_13_bengaluru_it_park.webp",
+    "path": "images/geo6/geo6_real_13_bengaluru_it_park.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Bengaluru It Park Webp",
+    "tags": [
+      "geo",
+      "real",
+      "bengaluru",
+      "park",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x898",
+    "size_kb": 308
+  },
+  {
+    "id": "geo6_real_14_semiconductor_pcb_assembly.webp",
+    "path": "images/geo6/geo6_real_14_semiconductor_pcb_assembly.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Semiconductor Pcb Assembly Webp",
+    "tags": [
+      "geo",
+      "real",
+      "semiconductor",
+      "pcb",
+      "assembly",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x768",
+    "size_kb": 197
+  },
+  {
+    "id": "geo6_real_15_industrial_smoke_esp_chimney.webp",
+    "path": "images/geo6/geo6_real_15_industrial_smoke_esp_chimney.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Industrial Smoke Esp Chimney Webp",
+    "tags": [
+      "geo",
+      "real",
+      "industrial",
+      "smoke",
+      "esp",
+      "chimney",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "799x509",
+    "size_kb": 110
+  },
+  {
+    "id": "geo6_real_16_etp_aeration_water_treatment.webp",
+    "path": "images/geo6/geo6_real_16_etp_aeration_water_treatment.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Etp Aeration Water Treatment Webp",
+    "tags": [
+      "geo",
+      "real",
+      "etp",
+      "aeration",
+      "water",
+      "treatment",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 328
+  },
+  {
+    "id": "geo6_real_17_industrial_safety_valves.webp",
+    "path": "images/geo6/geo6_real_17_industrial_safety_valves.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Industrial Safety Valves Webp",
+    "tags": [
+      "geo",
+      "real",
+      "industrial",
+      "safety",
+      "valves",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x1603",
+    "size_kb": 496
+  },
+  {
+    "id": "geo6_real_18_copper_zinc_smelter.webp",
+    "path": "images/geo6/geo6_real_18_copper_zinc_smelter.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Copper Zinc Smelter Webp",
+    "tags": [
+      "geo",
+      "real",
+      "copper",
+      "zinc",
+      "smelter",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x721",
+    "size_kb": 301
+  },
+  {
+    "id": "geo6_real_19_synthetic_polyester_fiber.webp",
+    "path": "images/geo6/geo6_real_19_synthetic_polyester_fiber.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Synthetic Polyester Fiber Webp",
+    "tags": [
+      "geo",
+      "real",
+      "synthetic",
+      "polyester",
+      "fiber",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 90
+  },
+  {
+    "id": "geo6_real_1_cotton_spinning_mill.webp",
+    "path": "images/geo6/geo6_real_1_cotton_spinning_mill.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Cotton Spinning Mill Webp",
+    "tags": [
+      "geo",
+      "real",
+      "cotton",
+      "spinning",
+      "mill",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 202
+  },
+  {
+    "id": "geo6_real_20_ntpc_green_belt_ecopark.webp",
+    "path": "images/geo6/geo6_real_20_ntpc_green_belt_ecopark.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Ntpc Green Belt Ecopark Webp",
+    "tags": [
+      "geo",
+      "real",
+      "ntpc",
+      "green",
+      "belt",
+      "ecopark",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x721",
+    "size_kb": 382
+  },
+  {
+    "id": "geo6_real_2_silk_handloom_weaving.webp",
+    "path": "images/geo6/geo6_real_2_silk_handloom_weaving.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Silk Handloom Weaving Webp",
+    "tags": [
+      "geo",
+      "real",
+      "silk",
+      "handloom",
+      "weaving",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x768",
+    "size_kb": 136
+  },
+  {
+    "id": "geo6_real_3_jute_processing_mill.webp",
+    "path": "images/geo6/geo6_real_3_jute_processing_mill.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Jute Processing Mill Webp",
+    "tags": [
+      "geo",
+      "real",
+      "jute",
+      "processing",
+      "mill",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 458
+  },
+  {
+    "id": "geo6_real_4_sugar_mill_cooperative.webp",
+    "path": "images/geo6/geo6_real_4_sugar_mill_cooperative.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Sugar Mill Cooperative Webp",
+    "tags": [
+      "geo",
+      "real",
+      "sugar",
+      "mill",
+      "cooperative",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x908",
+    "size_kb": 149
+  },
+  {
+    "id": "geo6_real_5_blast_furnace_molten_steel.webp",
+    "path": "images/geo6/geo6_real_5_blast_furnace_molten_steel.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Blast Furnace Molten Steel Webp",
+    "tags": [
+      "geo",
+      "real",
+      "blast",
+      "furnace",
+      "molten",
+      "steel",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x900",
+    "size_kb": 385
+  },
+  {
+    "id": "geo6_real_6_hot_strip_rolling_mill.webp",
+    "path": "images/geo6/geo6_real_6_hot_strip_rolling_mill.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Hot Strip Rolling Mill Webp",
+    "tags": [
+      "geo",
+      "real",
+      "hot",
+      "strip",
+      "rolling",
+      "mill",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x799",
+    "size_kb": 216
+  },
+  {
+    "id": "geo6_real_7_aluminium_smelting_ingots.webp",
+    "path": "images/geo6/geo6_real_7_aluminium_smelting_ingots.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Aluminium Smelting Ingots Webp",
+    "tags": [
+      "geo",
+      "real",
+      "aluminium",
+      "smelting",
+      "ingots",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x963",
+    "size_kb": 193
+  },
+  {
+    "id": "geo6_real_8_chemical_fertilizer_complex.webp",
+    "path": "images/geo6/geo6_real_8_chemical_fertilizer_complex.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Chemical Fertilizer Complex Webp",
+    "tags": [
+      "geo",
+      "real",
+      "chemical",
+      "fertilizer",
+      "complex",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1376",
+    "size_kb": 566
+  },
+  {
+    "id": "geo6_real_9_petrochemical_refinery.webp",
+    "path": "images/geo6/geo6_real_9_petrochemical_refinery.webp",
+    "chapter": "geo6",
+    "title": "Geo Real Petrochemical Refinery Webp",
+    "tags": [
+      "geo",
+      "real",
+      "petrochemical",
+      "refinery",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x799",
+    "size_kb": 331
+  },
+  {
+    "id": "ncert_fig6_1_textile_handloom_weaving.webp",
+    "path": "images/geo6/ncert_fig6_1_textile_handloom_weaving.webp",
+    "chapter": "geo6",
+    "title": "Ncert Fig Textile Handloom Weaving Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "textile",
+      "handloom",
+      "weaving",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x800",
+    "size_kb": 306
+  },
+  {
+    "id": "ncert_fig6_4_aluminium_smelting.webp",
+    "path": "images/geo6/ncert_fig6_4_aluminium_smelting.webp",
+    "chapter": "geo6",
+    "title": "Ncert Fig Aluminium Smelting Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "aluminium",
+      "smelting",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x602",
+    "size_kb": 120
+  },
+  {
+    "id": "ncert_fig6_5_cables_manufacturing.webp",
+    "path": "images/geo6/ncert_fig6_5_cables_manufacturing.webp",
+    "chapter": "geo6",
+    "title": "Ncert Fig Cables Manufacturing Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "cables",
+      "manufacturing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x680",
+    "size_kb": 176
+  },
+  {
+    "id": "ncert_fig6_6_industrial_air_pollution.webp",
+    "path": "images/geo6/ncert_fig6_6_industrial_air_pollution.webp",
+    "chapter": "geo6",
+    "title": "Ncert Fig Industrial Air Pollution Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "industrial",
+      "air",
+      "pollution",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x691",
+    "size_kb": 157
+  },
+  {
+    "id": "ncert_fig6_7_effluent_treatment_plant.webp",
+    "path": "images/geo6/ncert_fig6_7_effluent_treatment_plant.webp",
+    "chapter": "geo6",
+    "title": "Ncert Fig Effluent Treatment Plant Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "effluent",
+      "treatment",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x437",
+    "size_kb": 110
+  },
+  {
+    "id": "ncert_map_iron_steel_plants_india.webp",
+    "path": "images/geo6/ncert_map_iron_steel_plants_india.webp",
+    "chapter": "geo6",
+    "title": "Ncert Map Iron Steel Plants India Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "iron",
+      "steel",
+      "plants",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1400x1756",
+    "size_kb": 289
+  },
+  {
+    "id": "ncert_map_software_technology_parks.webp",
+    "path": "images/geo6/ncert_map_software_technology_parks.webp",
+    "chapter": "geo6",
+    "title": "Ncert Map Software Technology Parks Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "software",
+      "technology",
+      "parks",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1400x1755",
+    "size_kb": 308
+  },
+  {
+    "id": "ncert_map_textiles_india.webp",
+    "path": "images/geo6/ncert_map_textiles_india.webp",
+    "chapter": "geo6",
+    "title": "Ncert Map Textiles India Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "textiles",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1400x1756",
+    "size_kb": 338
+  },
+  {
+    "id": "ai_geo7_10_border_roads_bro.webp",
+    "path": "images/geo7/ai_geo7_10_border_roads_bro.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Border Roads Bro Webp",
+    "tags": [
+      "geo",
+      "border",
+      "roads",
+      "bro",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 211
+  },
+  {
+    "id": "ai_geo7_1_golden_quadrilateral.webp",
+    "path": "images/geo7/ai_geo7_1_golden_quadrilateral.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Golden Quadrilateral Webp",
+    "tags": [
+      "geo",
+      "golden",
+      "quadrilateral",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 78
+  },
+  {
+    "id": "ai_geo7_2_indian_railways.webp",
+    "path": "images/geo7/ai_geo7_2_indian_railways.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Indian Railways Webp",
+    "tags": [
+      "geo",
+      "indian",
+      "railways",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 320
+  },
+  {
+    "id": "ai_geo7_3_inland_waterways_ganga.webp",
+    "path": "images/geo7/ai_geo7_3_inland_waterways_ganga.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Inland Waterways Ganga Webp",
+    "tags": [
+      "geo",
+      "inland",
+      "waterways",
+      "ganga",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 149
+  },
+  {
+    "id": "ai_geo7_4_major_sea_ports.webp",
+    "path": "images/geo7/ai_geo7_4_major_sea_ports.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Major Sea Ports Webp",
+    "tags": [
+      "geo",
+      "major",
+      "sea",
+      "ports",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 252
+  },
+  {
+    "id": "ai_geo7_6_pipeline_transport.webp",
+    "path": "images/geo7/ai_geo7_6_pipeline_transport.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Pipeline Transport Webp",
+    "tags": [
+      "geo",
+      "pipeline",
+      "transport",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "960x720",
+    "size_kb": 107
+  },
+  {
+    "id": "ai_geo7_7_communication_satellites.webp",
+    "path": "images/geo7/ai_geo7_7_communication_satellites.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Communication Satellites Webp",
+    "tags": [
+      "geo",
+      "communication",
+      "satellites",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 190
+  },
+  {
+    "id": "ai_geo7_8_international_trade.webp",
+    "path": "images/geo7/ai_geo7_8_international_trade.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo International Trade Webp",
+    "tags": [
+      "geo",
+      "international",
+      "trade",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 192
+  },
+  {
+    "id": "ai_geo7_9_tourism_as_trade.webp",
+    "path": "images/geo7/ai_geo7_9_tourism_as_trade.webp",
+    "chapter": "geo7",
+    "title": "Ai Geo Tourism As Trade Webp",
+    "tags": [
+      "geo",
+      "tourism",
+      "trade",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 297
+  },
+  {
+    "id": "ncert_geo7_fig10_air_travel_northeast.webp",
+    "path": "images/geo7/ncert_geo7_fig10_air_travel_northeast.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Air Travel Northeast Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "air",
+      "travel",
+      "northeast",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "944x784",
+    "size_kb": 156
+  },
+  {
+    "id": "ncert_geo7_fig11_airport_terminal.webp",
+    "path": "images/geo7/ncert_geo7_fig11_airport_terminal.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Airport Terminal Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "airport",
+      "terminal",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 178
+  },
+  {
+    "id": "ncert_geo7_fig13_newspaper_print.webp",
+    "path": "images/geo7/ncert_geo7_fig13_newspaper_print.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Newspaper Print Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "newspaper",
+      "print",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 217
+  },
+  {
+    "id": "ncert_geo7_fig14_foreign_tourists.webp",
+    "path": "images/geo7/ncert_geo7_fig14_foreign_tourists.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Foreign Tourists Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "foreign",
+      "tourists",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 197
+  },
+  {
+    "id": "ncert_geo7_fig15_handicrafts_export.webp",
+    "path": "images/geo7/ncert_geo7_fig15_handicrafts_export.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Handicrafts Export Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "handicrafts",
+      "export",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1920x1184",
+    "size_kb": 481
+  },
+  {
+    "id": "ncert_geo7_fig1_transport_modes.webp",
+    "path": "images/geo7/ncert_geo7_fig1_transport_modes.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Transport Modes Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "transport",
+      "modes",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1856x576",
+    "size_kb": 67
+  },
+  {
+    "id": "ncert_geo7_fig2a_ropeway.webp",
+    "path": "images/geo7/ncert_geo7_fig2a_ropeway.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig A Ropeway Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "ropeway",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "736x416",
+    "size_kb": 75
+  },
+  {
+    "id": "ncert_geo7_fig2b_traffic_jam.webp",
+    "path": "images/geo7/ncert_geo7_fig2b_traffic_jam.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig B Traffic Jam Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "traffic",
+      "jam",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "928x520",
+    "size_kb": 93
+  },
+  {
+    "id": "ncert_geo7_fig3_metalled_road.webp",
+    "path": "images/geo7/ncert_geo7_fig3_metalled_road.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Metalled Road Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "metalled",
+      "road",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 149
+  },
+  {
+    "id": "ncert_geo7_fig4_unmetalled_road.webp",
+    "path": "images/geo7/ncert_geo7_fig4_unmetalled_road.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Unmetalled Road Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "unmetalled",
+      "road",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 147
+  },
+  {
+    "id": "ncert_geo7_fig5_border_road.webp",
+    "path": "images/geo7/ncert_geo7_fig5_border_road.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Border Road Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "border",
+      "road",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "944x712",
+    "size_kb": 120
+  },
+  {
+    "id": "ncert_geo7_fig6_inland_waterway.webp",
+    "path": "images/geo7/ncert_geo7_fig6_inland_waterway.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Inland Waterway Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "inland",
+      "waterway",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "912x544",
+    "size_kb": 136
+  },
+  {
+    "id": "ncert_geo7_fig7_tanker_ship.webp",
+    "path": "images/geo7/ncert_geo7_fig7_tanker_ship.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Tanker Ship Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "tanker",
+      "ship",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "952x520",
+    "size_kb": 60
+  },
+  {
+    "id": "ncert_geo7_fig8_cargo_loading.webp",
+    "path": "images/geo7/ncert_geo7_fig8_cargo_loading.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Cargo Loading Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "cargo",
+      "loading",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "936x400",
+    "size_kb": 55
+  },
+  {
+    "id": "ncert_geo7_fig9_pawan_hans_helicopter.webp",
+    "path": "images/geo7/ncert_geo7_fig9_pawan_hans_helicopter.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Fig Pawan Hans Helicopter Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "fig",
+      "pawan",
+      "hans",
+      "helicopter",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1000x600",
+    "size_kb": 340
+  },
+  {
+    "id": "ncert_geo7_map_highways.webp",
+    "path": "images/geo7/ncert_geo7_map_highways.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Map Highways Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "map",
+      "highways",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1944x2392",
+    "size_kb": 637
+  },
+  {
+    "id": "ncert_geo7_map_ports_airports.webp",
+    "path": "images/geo7/ncert_geo7_map_ports_airports.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Map Ports Airports Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "map",
+      "ports",
+      "airports",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1904x2384",
+    "size_kb": 444
+  },
+  {
+    "id": "ncert_geo7_map_railways.webp",
+    "path": "images/geo7/ncert_geo7_map_railways.webp",
+    "chapter": "geo7",
+    "title": "Ncert Geo Map Railways Webp",
+    "tags": [
+      "ncert",
+      "geo",
+      "map",
+      "railways",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1888x2352",
+    "size_kb": 544
+  },
+  {
+    "id": "balkan_nationalism.webp",
+    "path": "images/hist1/balkan_nationalism.webp",
+    "chapter": "hist1",
+    "title": "Balkan Nationalism Webp",
+    "tags": [
+      "balkan",
+      "nationalism",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x559",
+    "size_kb": 196
+  },
+  {
+    "id": "german_unification_versailles.webp",
+    "path": "images/hist1/german_unification_versailles.webp",
+    "chapter": "hist1",
+    "title": "German Unification Versailles Webp",
+    "tags": [
+      "german",
+      "unification",
+      "versailles",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 143
+  },
+  {
+    "id": "germania_marianne.webp",
+    "path": "images/hist1/germania_marianne.webp",
+    "chapter": "hist1",
+    "title": "Germania Marianne Webp",
+    "tags": [
+      "germania",
+      "marianne",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 91
+  },
+  {
+    "id": "map_britain_uk.webp",
+    "path": "images/hist1/map_britain_uk.webp",
+    "chapter": "hist1",
+    "title": "Map Britain Uk Webp",
+    "tags": [
+      "map",
+      "britain",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x864",
+    "size_kb": 127
+  },
+  {
+    "id": "map_france_napoleon.webp",
+    "path": "images/hist1/map_france_napoleon.webp",
+    "chapter": "hist1",
+    "title": "Map France Napoleon Webp",
+    "tags": [
+      "map",
+      "france",
+      "napoleon",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 141
+  },
+  {
+    "id": "map_germany_unification.webp",
+    "path": "images/hist1/map_germany_unification.webp",
+    "chapter": "hist1",
+    "title": "Map Germany Unification Webp",
+    "tags": [
+      "map",
+      "germany",
+      "unification",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 137
+  },
+  {
+    "id": "map_italy_unification.webp",
+    "path": "images/hist1/map_italy_unification.webp",
+    "chapter": "hist1",
+    "title": "Map Italy Unification Webp",
+    "tags": [
+      "map",
+      "italy",
+      "unification",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 139
+  },
+  {
+    "id": "mazzini_young_italy.webp",
+    "path": "images/hist1/mazzini_young_italy.webp",
+    "chapter": "hist1",
+    "title": "Mazzini Young Italy Webp",
+    "tags": [
+      "mazzini",
+      "young",
+      "italy",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 111
+  },
+  {
+    "id": "ncert_bismarck_whip.webp",
+    "path": "images/hist1/ncert_bismarck_whip.webp",
+    "chapter": "hist1",
+    "title": "Ncert Bismarck Whip Webp",
+    "tags": [
+      "ncert",
+      "bismarck",
+      "whip",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x507",
+    "size_kb": 77
+  },
+  {
+    "id": "ncert_club_of_thinkers.webp",
+    "path": "images/hist1/ncert_club_of_thinkers.webp",
+    "chapter": "hist1",
+    "title": "Ncert Club Of Thinkers Webp",
+    "tags": [
+      "ncert",
+      "club",
+      "thinkers",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x438",
+    "size_kb": 184
+  },
+  {
+    "id": "ncert_courier_rhineland.webp",
+    "path": "images/hist1/ncert_courier_rhineland.webp",
+    "chapter": "hist1",
+    "title": "Ncert Courier Rhineland Webp",
+    "tags": [
+      "ncert",
+      "courier",
+      "rhineland",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "777x881",
+    "size_kb": 115
+  },
+  {
+    "id": "ncert_fallen_germania.webp",
+    "path": "images/hist1/ncert_fallen_germania.webp",
+    "chapter": "hist1",
+    "title": "Ncert Fallen Germania Webp",
+    "tags": [
+      "ncert",
+      "fallen",
+      "germania",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x376",
+    "size_kb": 104
+  },
+  {
+    "id": "ncert_frankfurt_parliament.webp",
+    "path": "images/hist1/ncert_frankfurt_parliament.webp",
+    "chapter": "hist1",
+    "title": "Ncert Frankfurt Parliament Webp",
+    "tags": [
+      "ncert",
+      "frankfurt",
+      "parliament",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x581",
+    "size_kb": 285
+  },
+  {
+    "id": "ncert_garibaldi_boot.webp",
+    "path": "images/hist1/ncert_garibaldi_boot.webp",
+    "chapter": "hist1",
+    "title": "Ncert Garibaldi Boot Webp",
+    "tags": [
+      "ncert",
+      "garibaldi",
+      "boot",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "644x777",
+    "size_kb": 128
+  },
+  {
+    "id": "ncert_germania_heroic.webp",
+    "path": "images/hist1/ncert_germania_heroic.webp",
+    "chapter": "hist1",
+    "title": "Ncert Germania Heroic Webp",
+    "tags": [
+      "ncert",
+      "germania",
+      "heroic",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "713x896",
+    "size_kb": 154
+  },
+  {
+    "id": "ncert_map_balkan_book.webp",
+    "path": "images/hist1/ncert_map_balkan_book.webp",
+    "chapter": "hist1",
+    "title": "Ncert Map Balkan Book Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "balkan",
+      "book",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x559",
+    "size_kb": 196
+  },
+  {
+    "id": "ncert_map_britain_book.webp",
+    "path": "images/hist1/ncert_map_britain_book.webp",
+    "chapter": "hist1",
+    "title": "Ncert Map Britain Book Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "britain",
+      "book",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x625",
+    "size_kb": 201
+  },
+  {
+    "id": "ncert_map_italy_book.webp",
+    "path": "images/hist1/ncert_map_italy_book.webp",
+    "chapter": "hist1",
+    "title": "Ncert Map Italy Book Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "italy",
+      "book",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "592x620",
+    "size_kb": 37
+  },
+  {
+    "id": "ncert_map_vienna_1815.webp",
+    "path": "images/hist1/ncert_map_vienna_1815.webp",
+    "chapter": "hist1",
+    "title": "Ncert Map Vienna Webp",
+    "tags": [
+      "ncert",
+      "map",
+      "vienna",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x590",
+    "size_kb": 65
+  },
+  {
+    "id": "ncert_marianne_stamp.webp",
+    "path": "images/hist1/ncert_marianne_stamp.webp",
+    "chapter": "hist1",
+    "title": "Ncert Marianne Stamp Webp",
+    "tags": [
+      "ncert",
+      "marianne",
+      "stamp",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "219x290",
+    "size_kb": 28
+  },
+  {
+    "id": "ncert_massacre_chios.webp",
+    "path": "images/hist1/ncert_massacre_chios.webp",
+    "chapter": "hist1",
+    "title": "Ncert Massacre Chios Webp",
+    "tags": [
+      "ncert",
+      "massacre",
+      "chios",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "723x866",
+    "size_kb": 242
+  },
+  {
+    "id": "ncert_mazzini_portrait.webp",
+    "path": "images/hist1/ncert_mazzini_portrait.webp",
+    "chapter": "hist1",
+    "title": "Ncert Mazzini Portrait Webp",
+    "tags": [
+      "ncert",
+      "mazzini",
+      "portrait",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "437x628",
+    "size_kb": 147
+  },
+  {
+    "id": "ncert_sorrieu_print.webp",
+    "path": "images/hist1/ncert_sorrieu_print.webp",
+    "chapter": "hist1",
+    "title": "Ncert Sorrieu Print Webp",
+    "tags": [
+      "ncert",
+      "sorrieu",
+      "print",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x538",
+    "size_kb": 178
+  },
+  {
+    "id": "ncert_symbols_chart.webp",
+    "path": "images/hist1/ncert_symbols_chart.webp",
+    "chapter": "hist1",
+    "title": "Ncert Symbols Chart Webp",
+    "tags": [
+      "ncert",
+      "symbols",
+      "chart",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "440x325",
+    "size_kb": 75
+  },
+  {
+    "id": "ncert_tree_of_liberty.webp",
+    "path": "images/hist1/ncert_tree_of_liberty.webp",
+    "chapter": "hist1",
+    "title": "Ncert Tree Of Liberty Webp",
+    "tags": [
+      "ncert",
+      "tree",
+      "liberty",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "780x506",
+    "size_kb": 162
+  },
+  {
+    "id": "ncert_versailles_declaration.webp",
+    "path": "images/hist1/ncert_versailles_declaration.webp",
+    "chapter": "hist1",
+    "title": "Ncert Versailles Declaration Webp",
+    "tags": [
+      "ncert",
+      "versailles",
+      "declaration",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "624x647",
+    "size_kb": 152
+  },
+  {
+    "id": "sorrieu_utopia.webp",
+    "path": "images/hist1/sorrieu_utopia.webp",
+    "chapter": "hist1",
+    "title": "Sorrieu Utopia Webp",
+    "tags": [
+      "sorrieu",
+      "utopia",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x446",
+    "size_kb": 128
+  },
+  {
+    "id": "ai_alluri_sitarama_raju.webp",
+    "path": "images/hist2/ai_alluri_sitarama_raju.webp",
+    "chapter": "hist2",
+    "title": "Ai Alluri Sitarama Raju Webp",
+    "tags": [
+      "alluri",
+      "sitarama",
+      "raju",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 405
+  },
+  {
+    "id": "ai_bharat_mata_divine.webp",
+    "path": "images/hist2/ai_bharat_mata_divine.webp",
+    "chapter": "hist2",
+    "title": "Ai Bharat Mata Divine Webp",
+    "tags": [
+      "bharat",
+      "mata",
+      "divine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "896x1200",
+    "size_kb": 333
+  },
+  {
+    "id": "ai_dandi_march_gandhi.webp",
+    "path": "images/hist2/ai_dandi_march_gandhi.webp",
+    "chapter": "hist2",
+    "title": "Ai Dandi March Gandhi Webp",
+    "tags": [
+      "dandi",
+      "march",
+      "gandhi",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 347
+  },
+  {
+    "id": "ai_jallianwala_memorial.webp",
+    "path": "images/hist2/ai_jallianwala_memorial.webp",
+    "chapter": "hist2",
+    "title": "Ai Jallianwala Memorial Webp",
+    "tags": [
+      "jallianwala",
+      "memorial",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 313
+  },
+  {
+    "id": "ai_khilafat_unity.webp",
+    "path": "images/hist2/ai_khilafat_unity.webp",
+    "chapter": "hist2",
+    "title": "Ai Khilafat Unity Webp",
+    "tags": [
+      "khilafat",
+      "unity",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 343
+  },
+  {
+    "id": "ai_poona_pact_ambedkar.webp",
+    "path": "images/hist2/ai_poona_pact_ambedkar.webp",
+    "chapter": "hist2",
+    "title": "Ai Poona Pact Ambedkar Webp",
+    "tags": [
+      "poona",
+      "pact",
+      "ambedkar",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 217
+  },
+  {
+    "id": "ai_satyagraha_concept.webp",
+    "path": "images/hist2/ai_satyagraha_concept.webp",
+    "chapter": "hist2",
+    "title": "Ai Satyagraha Concept Webp",
+    "tags": [
+      "satyagraha",
+      "concept",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 375
+  },
+  {
+    "id": "ai_simon_commission_boycott.webp",
+    "path": "images/hist2/ai_simon_commission_boycott.webp",
+    "chapter": "hist2",
+    "title": "Ai Simon Commission Boycott Webp",
+    "tags": [
+      "simon",
+      "commission",
+      "boycott",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 385
+  },
+  {
+    "id": "ai_swaraj_flag_tricolour.webp",
+    "path": "images/hist2/ai_swaraj_flag_tricolour.webp",
+    "chapter": "hist2",
+    "title": "Ai Swaraj Flag Tricolour Webp",
+    "tags": [
+      "swaraj",
+      "flag",
+      "tricolour",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 363
+  },
+  {
+    "id": "ai_women_national_movement.webp",
+    "path": "images/hist2/ai_women_national_movement.webp",
+    "chapter": "hist2",
+    "title": "Ai Women National Movement Webp",
+    "tags": [
+      "women",
+      "national",
+      "movement",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 304
+  },
+  {
+    "id": "ncert_ch2_fig1_procession.webp",
+    "path": "images/hist2/ncert_ch2_fig1_procession.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Procession Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "procession",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1490x741",
+    "size_kb": 243
+  },
+  {
+    "id": "ncert_ch2_fig2_jallianwala.webp",
+    "path": "images/hist2/ncert_ch2_fig2_jallianwala.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Jallianwala Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "jallianwala",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x1125",
+    "size_kb": 166
+  },
+  {
+    "id": "ncert_ch2_fig3_foreigncloth.webp",
+    "path": "images/hist2/ncert_ch2_fig3_foreigncloth.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Foreigncloth Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "foreigncloth",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1439x1079",
+    "size_kb": 347
+  },
+  {
+    "id": "ncert_ch2_fig4_simoncommission.webp",
+    "path": "images/hist2/ncert_ch2_fig4_simoncommission.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Simoncommission Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "simoncommission",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1125x782",
+    "size_kb": 116
+  },
+  {
+    "id": "ncert_ch2_fig5_bharatmata.webp",
+    "path": "images/hist2/ncert_ch2_fig5_bharatmata.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Bharatmata Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bharatmata",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "841x1447",
+    "size_kb": 123
+  },
+  {
+    "id": "ncert_ch2_fig6_swarajflag.webp",
+    "path": "images/hist2/ncert_ch2_fig6_swarajflag.webp",
+    "chapter": "hist2",
+    "title": "Ncert Ch Fig Swarajflag Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "swarajflag",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "841x1147",
+    "size_kb": 208
+  },
+  {
+    "id": "ai_ch3_10_globalization_mnc.webp",
+    "path": "images/hist3/ai_ch3_10_globalization_mnc.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Globalization Mnc Webp",
+    "tags": [
+      "globalization",
+      "mnc",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "800x514",
+    "size_kb": 123
+  },
+  {
+    "id": "ai_ch3_1_silkroute.webp",
+    "path": "images/hist3/ai_ch3_1_silkroute.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Silkroute Webp",
+    "tags": [
+      "silkroute",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "960x960",
+    "size_kb": 105
+  },
+  {
+    "id": "ai_ch3_2_foodtravels.webp",
+    "path": "images/hist3/ai_ch3_2_foodtravels.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Foodtravels Webp",
+    "tags": [
+      "foodtravels",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "975x768",
+    "size_kb": 83
+  },
+  {
+    "id": "ai_ch3_3_smallpox_conquest.webp",
+    "path": "images/hist3/ai_ch3_3_smallpox_conquest.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Smallpox Conquest Webp",
+    "tags": [
+      "smallpox",
+      "conquest",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2560x1702",
+    "size_kb": 1659
+  },
+  {
+    "id": "ai_ch3_4_refrigerated_meat_ship.webp",
+    "path": "images/hist3/ai_ch3_4_refrigerated_meat_ship.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Refrigerated Meat Ship Webp",
+    "tags": [
+      "refrigerated",
+      "meat",
+      "ship",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "762x441",
+    "size_kb": 117
+  },
+  {
+    "id": "ai_ch3_5_rinderpest_africa.webp",
+    "path": "images/hist3/ai_ch3_5_rinderpest_africa.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Rinderpest Africa Webp",
+    "tags": [
+      "rinderpest",
+      "africa",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "749x499",
+    "size_kb": 101
+  },
+  {
+    "id": "ai_ch3_6_indentured_labourers.webp",
+    "path": "images/hist3/ai_ch3_6_indentured_labourers.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Indentured Labourers Webp",
+    "tags": [
+      "indentured",
+      "labourers",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "320x395",
+    "size_kb": 57
+  },
+  {
+    "id": "ai_ch3_7_indian_bankers_abroad.webp",
+    "path": "images/hist3/ai_ch3_7_indian_bankers_abroad.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Indian Bankers Abroad Webp",
+    "tags": [
+      "indian",
+      "bankers",
+      "abroad",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x719",
+    "size_kb": 229
+  },
+  {
+    "id": "ai_ch3_8_great_depression_1929.webp",
+    "path": "images/hist3/ai_ch3_8_great_depression_1929.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Great Depression Webp",
+    "tags": [
+      "great",
+      "depression",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2939x2392",
+    "size_kb": 1215
+  },
+  {
+    "id": "ai_ch3_9_bretton_woods_twins.webp",
+    "path": "images/hist3/ai_ch3_9_bretton_woods_twins.webp",
+    "chapter": "hist3",
+    "title": "Ai Ch Bretton Woods Twins Webp",
+    "tags": [
+      "bretton",
+      "woods",
+      "twins",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "6000x3750",
+    "size_kb": 7591
+  },
+  {
+    "id": "ncert_ch3_fig11_munitionfactory.webp",
+    "path": "images/hist3/ncert_ch3_fig11_munitionfactory.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Munitionfactory Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "munitionfactory",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1105x876",
+    "size_kb": 294
+  },
+  {
+    "id": "ncert_ch3_fig12_ford_assembly.webp",
+    "path": "images/hist3/ncert_ch3_fig12_ford_assembly.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Ford Assembly Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "ford",
+      "assembly",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "951x798",
+    "size_kb": 135
+  },
+  {
+    "id": "ncert_ch3_fig13_greatdepression.webp",
+    "path": "images/hist3/ncert_ch3_fig13_greatdepression.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Greatdepression Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "greatdepression",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "799x1042",
+    "size_kb": 94
+  },
+  {
+    "id": "ncert_ch3_fig15_brettonwoods.webp",
+    "path": "images/hist3/ncert_ch3_fig15_brettonwoods.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Brettonwoods Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "brettonwoods",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "845x379",
+    "size_kb": 56
+  },
+  {
+    "id": "ncert_ch3_fig1_memorialstone.webp",
+    "path": "images/hist3/ncert_ch3_fig1_memorialstone.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Memorialstone Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "memorialstone",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1136x989",
+    "size_kb": 294
+  },
+  {
+    "id": "ncert_ch3_fig2_silkroute.webp",
+    "path": "images/hist3/ncert_ch3_fig2_silkroute.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Silkroute Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "silkroute",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1201x857",
+    "size_kb": 213
+  },
+  {
+    "id": "ncert_ch3_fig3_irishfamine.webp",
+    "path": "images/hist3/ncert_ch3_fig3_irishfamine.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Irishfamine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "irishfamine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "847x1278",
+    "size_kb": 257
+  },
+  {
+    "id": "ncert_ch3_fig5_refrigeratedmeat.webp",
+    "path": "images/hist3/ncert_ch3_fig5_refrigeratedmeat.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Refrigeratedmeat Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "refrigeratedmeat",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1404x703",
+    "size_kb": 244
+  },
+  {
+    "id": "ncert_ch3_fig6_colonialafrica.webp",
+    "path": "images/hist3/ncert_ch3_fig6_colonialafrica.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Colonialafrica Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "colonialafrica",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1236x1327",
+    "size_kb": 229
+  },
+  {
+    "id": "ncert_ch3_fig8_indenturedlabour.webp",
+    "path": "images/hist3/ncert_ch3_fig8_indenturedlabour.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Indenturedlabour Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "indenturedlabour",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1152x781",
+    "size_kb": 229
+  },
+  {
+    "id": "ncert_ch3_fig9_suratport.webp",
+    "path": "images/hist3/ncert_ch3_fig9_suratport.webp",
+    "chapter": "hist3",
+    "title": "Ncert Ch Fig Suratport Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "suratport",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1501x923",
+    "size_kb": 240
+  },
+  {
+    "id": "ai_ch4_10_advertising_gods_calendars.webp",
+    "path": "images/hist4/ai_ch4_10_advertising_gods_calendars.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Advertising Gods Calendars Webp",
+    "tags": [
+      "advertising",
+      "gods",
+      "calendars",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 496
+  },
+  {
+    "id": "ai_ch4_1_dawn_of_century.webp",
+    "path": "images/hist4/ai_ch4_1_dawn_of_century.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Dawn Of Century Webp",
+    "tags": [
+      "dawn",
+      "century",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 373
+  },
+  {
+    "id": "ai_ch4_2_proto_industrialisation.webp",
+    "path": "images/hist4/ai_ch4_2_proto_industrialisation.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Proto Industrialisation Webp",
+    "tags": [
+      "proto",
+      "industrialisation",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 349
+  },
+  {
+    "id": "ai_ch4_3_early_factory_steam_engine.webp",
+    "path": "images/hist4/ai_ch4_3_early_factory_steam_engine.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Early Factory Steam Engine Webp",
+    "tags": [
+      "early",
+      "factory",
+      "steam",
+      "engine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 368
+  },
+  {
+    "id": "ai_ch4_4_spinning_jenny_conflict.webp",
+    "path": "images/hist4/ai_ch4_4_spinning_jenny_conflict.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Spinning Jenny Conflict Webp",
+    "tags": [
+      "spinning",
+      "jenny",
+      "conflict",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 336
+  },
+  {
+    "id": "ai_ch4_5_surat_port_17th_century.webp",
+    "path": "images/hist4/ai_ch4_5_surat_port_17th_century.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Surat Port Th Century Webp",
+    "tags": [
+      "surat",
+      "port",
+      "century",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 397
+  },
+  {
+    "id": "ai_ch4_6_gomastha_clash_weavers.webp",
+    "path": "images/hist4/ai_ch4_6_gomastha_clash_weavers.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Gomastha Clash Weavers Webp",
+    "tags": [
+      "gomastha",
+      "clash",
+      "weavers",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 481
+  },
+  {
+    "id": "ai_ch4_7_early_indian_entrepreneurs.webp",
+    "path": "images/hist4/ai_ch4_7_early_indian_entrepreneurs.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Early Indian Entrepreneurs Webp",
+    "tags": [
+      "early",
+      "indian",
+      "entrepreneurs",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 290
+  },
+  {
+    "id": "ai_ch4_8_the_jobber_recruiting.webp",
+    "path": "images/hist4/ai_ch4_8_the_jobber_recruiting.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch The Jobber Recruiting Webp",
+    "tags": [
+      "the",
+      "jobber",
+      "recruiting",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 329
+  },
+  {
+    "id": "ai_ch4_9_fly_shuttle_handloom.webp",
+    "path": "images/hist4/ai_ch4_9_fly_shuttle_handloom.webp",
+    "chapter": "hist4",
+    "title": "Ai Ch Fly Shuttle Handloom Webp",
+    "tags": [
+      "fly",
+      "shuttle",
+      "handloom",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 405
+  },
+  {
+    "id": "genai_hist4_topic10_33_भरत_म_मनचसटर_क_आन_mancheste.jpg",
+    "path": "images/hist4/genai_hist4_topic10_33_भरत_म_मनचसटर_क_आन_mancheste.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भरत म मनचसटर क आन Mancheste Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "भरत",
+      "मनचसटर",
+      "mancheste",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 33
+  },
+  {
+    "id": "genai_hist4_topic11_भग_4_भरत_म_फकटरय_क_आन_एव_शरआत_.jpg",
+    "path": "images/hist4/genai_hist4_topic11_भग_4_भरत_म_फकटरय_क_आन_एव_शरआत_.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग भरत म फकटरय क आन एव शरआत Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "भरत",
+      "फकटरय",
+      "शरआत",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 34
+  },
+  {
+    "id": "genai_hist4_topic14_भग_5_औदयगक_वकस_क_अनख_वशषतए_pec.jpg",
+    "path": "images/hist4/genai_hist4_topic14_भग_5_औदयगक_वकस_क_अनख_वशषतए_pec.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग औदयगक वकस क अनख वशषतए Pec Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "औदयगक",
+      "वकस",
+      "अनख",
+      "वशषतए",
+      "pec",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 34
+  },
+  {
+    "id": "genai_hist4_topic15_51_परथम_वशव_यदध_क_चमतकरक_परभव_.jpg",
+    "path": "images/hist4/genai_hist4_topic15_51_परथम_वशव_यदध_क_चमतकरक_परभव_.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic परथम वशव यदध क चमतकरक परभव Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "परथम",
+      "वशव",
+      "यदध",
+      "चमतकरक",
+      "परभव",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 34
+  },
+  {
+    "id": "genai_hist4_topic17_भग_6_वसतओ_क_लए_बजर_market_for_.jpg",
+    "path": "images/hist4/genai_hist4_topic17_भग_6_वसतओ_क_लए_बजर_market_for_.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग वसतओ क लए बजर Market For Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "वसतओ",
+      "बजर",
+      "market",
+      "for",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 33
+  },
+  {
+    "id": "genai_hist4_topic18_भग_7_हमन_कय_सख_पठ_क_सर_-_key_t.jpg",
+    "path": "images/hist4/genai_hist4_topic18_भग_7_हमन_कय_सख_पठ_क_सर_-_key_t.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग हमन कय सख पठ क सर Key T Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "हमन",
+      "key",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 33
+  },
+  {
+    "id": "genai_hist4_topic1_भग_1_औदयगक_करत_स_पहल_before_th.jpg",
+    "path": "images/hist4/genai_hist4_topic1_भग_1_औदयगक_करत_स_पहल_before_th.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग औदयगक करत स पहल Before Th Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "औदयगक",
+      "करत",
+      "पहल",
+      "before",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 33
+  },
+  {
+    "id": "genai_hist4_topic4_भग_2_हथ_क_शरम_और_भप_क_शकत_hand.jpg",
+    "path": "images/hist4/genai_hist4_topic4_भग_2_हथ_क_शरम_और_भप_क_शकत_hand.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग हथ क शरम और भप क शकत Hand Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "शरम",
+      "शकत",
+      "hand",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 33
+  },
+  {
+    "id": "genai_hist4_topic7_भग_3_औपनवशक_भरत_म_औदयगकरण_indu.jpg",
+    "path": "images/hist4/genai_hist4_topic7_भग_3_औपनवशक_भरत_म_औदयगकरण_indu.jpg",
+    "chapter": "hist4",
+    "title": "Genai Hist Topic भग औपनवशक भरत म औदयगकरण Indu Jpg",
+    "tags": [
+      "genai",
+      "hist",
+      "topic",
+      "औपनवशक",
+      "भरत",
+      "औदयगकरण",
+      "indu",
+      "jpg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "820x460",
+    "size_kb": 34
+  },
+  {
+    "id": "ncert_ch4_fig10_houseless_hungry.webp",
+    "path": "images/hist4/ncert_ch4_fig10_houseless_hungry.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Houseless Hungry Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "houseless",
+      "hungry",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1436x904",
+    "size_kb": 376
+  },
+  {
+    "id": "ncert_ch4_fig11_spinning_jenny.webp",
+    "path": "images/hist4/ncert_ch4_fig11_spinning_jenny.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Spinning Jenny Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "spinning",
+      "jenny",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "868x652",
+    "size_kb": 69
+  },
+  {
+    "id": "ncert_ch4_fig12_london_underground_railway.webp",
+    "path": "images/hist4/ncert_ch4_fig12_london_underground_railway.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig London Underground Railway Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "london",
+      "underground",
+      "railway",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1884x1308",
+    "size_kb": 513
+  },
+  {
+    "id": "ncert_ch4_fig13_surat_english_factory.webp",
+    "path": "images/hist4/ncert_ch4_fig13_surat_english_factory.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Surat English Factory Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "surat",
+      "english",
+      "factory",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1576x1192",
+    "size_kb": 544
+  },
+  {
+    "id": "ncert_ch4_fig14_gujarat_weaver.webp",
+    "path": "images/hist4/ncert_ch4_fig14_gujarat_weaver.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Gujarat Weaver Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "gujarat",
+      "weaver",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "956x996",
+    "size_kb": 96
+  },
+  {
+    "id": "ncert_ch4_fig15_bombay_harbour.webp",
+    "path": "images/hist4/ncert_ch4_fig15_bombay_harbour.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Bombay Harbour Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bombay",
+      "harbour",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2044x1196",
+    "size_kb": 688
+  },
+  {
+    "id": "ncert_ch4_fig16_jamsetjee_jeejeebhoy.webp",
+    "path": "images/hist4/ncert_ch4_fig16_jamsetjee_jeejeebhoy.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Jamsetjee Jeejeebhoy Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "jamsetjee",
+      "jeejeebhoy",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "488x632",
+    "size_kb": 31
+  },
+  {
+    "id": "ncert_ch4_fig17_dwarkanath_tagore.webp",
+    "path": "images/hist4/ncert_ch4_fig17_dwarkanath_tagore.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Dwarkanath Tagore Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "dwarkanath",
+      "tagore",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "468x652",
+    "size_kb": 52
+  },
+  {
+    "id": "ncert_ch4_fig18_tata_partners.webp",
+    "path": "images/hist4/ncert_ch4_fig18_tata_partners.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Tata Partners Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "tata",
+      "partners",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x672",
+    "size_kb": 101
+  },
+  {
+    "id": "ncert_ch4_fig19_bombay_mill_young_workers.webp",
+    "path": "images/hist4/ncert_ch4_fig19_bombay_mill_young_workers.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Bombay Mill Young Workers Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bombay",
+      "mill",
+      "young",
+      "workers",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "716x964",
+    "size_kb": 113
+  },
+  {
+    "id": "ncert_ch4_fig1_dawn_of_century.webp",
+    "path": "images/hist4/ncert_ch4_fig1_dawn_of_century.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Dawn Of Century Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "dawn",
+      "century",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1152x1368",
+    "size_kb": 430
+  },
+  {
+    "id": "ncert_ch4_fig20_head_jobber.webp",
+    "path": "images/hist4/ncert_ch4_fig20_head_jobber.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Head Jobber Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "head",
+      "jobber",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "744x1036",
+    "size_kb": 54
+  },
+  {
+    "id": "ncert_ch4_fig21_ahmedabad_mill_spinners.webp",
+    "path": "images/hist4/ncert_ch4_fig21_ahmedabad_mill_spinners.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Ahmedabad Mill Spinners Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "ahmedabad",
+      "mill",
+      "spinners",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1156x856",
+    "size_kb": 150
+  },
+  {
+    "id": "ncert_ch4_fig22_madras_chamber_commerce.webp",
+    "path": "images/hist4/ncert_ch4_fig22_madras_chamber_commerce.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Madras Chamber Commerce Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "madras",
+      "chamber",
+      "commerce",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1272x892",
+    "size_kb": 208
+  },
+  {
+    "id": "ncert_ch4_fig23_handwoven_cloth.webp",
+    "path": "images/hist4/ncert_ch4_fig23_handwoven_cloth.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Handwoven Cloth Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "handwoven",
+      "cloth",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "500x820",
+    "size_kb": 125
+  },
+  {
+    "id": "ncert_ch4_fig24_map_industries_1931.webp",
+    "path": "images/hist4/ncert_ch4_fig24_map_industries_1931.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Map Industries Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "map",
+      "industries",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1020x1280",
+    "size_kb": 83
+  },
+  {
+    "id": "ncert_ch4_fig25_gripe_water_calendar.webp",
+    "path": "images/hist4/ncert_ch4_fig25_gripe_water_calendar.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Gripe Water Calendar Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "gripe",
+      "water",
+      "calendar",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "884x1088",
+    "size_kb": 195
+  },
+  {
+    "id": "ncert_ch4_fig26a_manchester_label.webp",
+    "path": "images/hist4/ncert_ch4_fig26a_manchester_label.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig A Manchester Label Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "manchester",
+      "label",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "656x848",
+    "size_kb": 175
+  },
+  {
+    "id": "ncert_ch4_fig26b_ranjit_singh_label.webp",
+    "path": "images/hist4/ncert_ch4_fig26b_ranjit_singh_label.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig B Ranjit Singh Label Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "ranjit",
+      "singh",
+      "label",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "696x848",
+    "size_kb": 157
+  },
+  {
+    "id": "ncert_ch4_fig27_sunlight_soap_calendar.webp",
+    "path": "images/hist4/ncert_ch4_fig27_sunlight_soap_calendar.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Sunlight Soap Calendar Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "sunlight",
+      "soap",
+      "calendar",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "828x1140",
+    "size_kb": 197
+  },
+  {
+    "id": "ncert_ch4_fig28_indian_mill_cloth_label.webp",
+    "path": "images/hist4/ncert_ch4_fig28_indian_mill_cloth_label.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Indian Mill Cloth Label Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "indian",
+      "mill",
+      "cloth",
+      "label",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x1096",
+    "size_kb": 270
+  },
+  {
+    "id": "ncert_ch4_fig2_two_magicians.webp",
+    "path": "images/hist4/ncert_ch4_fig2_two_magicians.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Two Magicians Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "two",
+      "magicians",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x1152",
+    "size_kb": 220
+  },
+  {
+    "id": "ncert_ch4_fig3_spinning_18th_century.webp",
+    "path": "images/hist4/ncert_ch4_fig3_spinning_18th_century.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Spinning Th Century Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "spinning",
+      "century",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1100x844",
+    "size_kb": 214
+  },
+  {
+    "id": "ncert_ch4_fig4_lancashire_mill.webp",
+    "path": "images/hist4/ncert_ch4_fig4_lancashire_mill.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Lancashire Mill Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "lancashire",
+      "mill",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "896x1204",
+    "size_kb": 172
+  },
+  {
+    "id": "ncert_ch4_fig5_industrial_manchester.webp",
+    "path": "images/hist4/ncert_ch4_fig5_industrial_manchester.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Industrial Manchester Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "industrial",
+      "manchester",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1544x952",
+    "size_kb": 257
+  },
+  {
+    "id": "ncert_ch4_fig6_railway_fitting_shop.webp",
+    "path": "images/hist4/ncert_ch4_fig6_railway_fitting_shop.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Railway Fitting Shop Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "railway",
+      "fitting",
+      "shop",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x556",
+    "size_kb": 190
+  },
+  {
+    "id": "ncert_ch4_fig7_spinning_factory_1830.webp",
+    "path": "images/hist4/ncert_ch4_fig7_spinning_factory_1830.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Spinning Factory Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "spinning",
+      "factory",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1388x796",
+    "size_kb": 323
+  },
+  {
+    "id": "ncert_ch4_fig8_workers_search_work.webp",
+    "path": "images/hist4/ncert_ch4_fig8_workers_search_work.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Workers Search Work Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "workers",
+      "search",
+      "work",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1156x908",
+    "size_kb": 198
+  },
+  {
+    "id": "ncert_ch4_fig9_iron_works.webp",
+    "path": "images/hist4/ncert_ch4_fig9_iron_works.webp",
+    "chapter": "hist4",
+    "title": "Ncert Ch Fig Iron Works Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "iron",
+      "works",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x832",
+    "size_kb": 201
+  },
+  {
+    "id": "ai_ch5_1_chinese_woodblock_printing.webp",
+    "path": "images/hist5/ai_ch5_1_chinese_woodblock_printing.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Chinese Woodblock Printing Webp",
+    "tags": [
+      "chinese",
+      "woodblock",
+      "printing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 338
+  },
+  {
+    "id": "ai_ch5_2_gutenberg_movable_metal_type.webp",
+    "path": "images/hist5/ai_ch5_2_gutenberg_movable_metal_type.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Gutenberg Movable Metal Type Webp",
+    "tags": [
+      "gutenberg",
+      "movable",
+      "metal",
+      "type",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 291
+  },
+  {
+    "id": "ai_ch5_3_print_revolution_pamphlets.webp",
+    "path": "images/hist5/ai_ch5_3_print_revolution_pamphlets.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Print Revolution Pamphlets Webp",
+    "tags": [
+      "print",
+      "revolution",
+      "pamphlets",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x1024",
+    "size_kb": 243
+  },
+  {
+    "id": "ai_ch5_4_reading_mania_lending_libraries.webp",
+    "path": "images/hist5/ai_ch5_4_reading_mania_lending_libraries.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Reading Mania Lending Libraries Webp",
+    "tags": [
+      "reading",
+      "mania",
+      "lending",
+      "libraries",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1152x876",
+    "size_kb": 427
+  },
+  {
+    "id": "ai_ch5_6_traditional_indian_manuscripts.webp",
+    "path": "images/hist5/ai_ch5_6_traditional_indian_manuscripts.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Traditional Indian Manuscripts Webp",
+    "tags": [
+      "traditional",
+      "indian",
+      "manuscripts",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "988x1292",
+    "size_kb": 381
+  },
+  {
+    "id": "ai_ch5_8_women_and_print_reading.webp",
+    "path": "images/hist5/ai_ch5_8_women_and_print_reading.webp",
+    "chapter": "hist5",
+    "title": "Ai Ch Women And Print Reading Webp",
+    "tags": [
+      "women",
+      "and",
+      "print",
+      "reading",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1656x1328",
+    "size_kb": 440
+  },
+  {
+    "id": "ncert_ch5_fig10_macabre_dance.webp",
+    "path": "images/hist5/ncert_ch5_fig10_macabre_dance.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Macabre Dance Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "macabre",
+      "dance",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1152x876",
+    "size_kb": 492
+  },
+  {
+    "id": "ncert_ch5_fig11_french_revolution_nobility.webp",
+    "path": "images/hist5/ncert_ch5_fig11_french_revolution_nobility.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig French Revolution Nobility Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "french",
+      "revolution",
+      "nobility",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1492x1144",
+    "size_kb": 467
+  },
+  {
+    "id": "ncert_ch5_fig12_penny_magazine.webp",
+    "path": "images/hist5/ncert_ch5_fig12_penny_magazine.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Penny Magazine Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "penny",
+      "magazine",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "988x1292",
+    "size_kb": 455
+  },
+  {
+    "id": "ncert_ch5_fig13_railway_station_ads.webp",
+    "path": "images/hist5/ncert_ch5_fig13_railway_station_ads.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Railway Station Ads Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "railway",
+      "station",
+      "ads",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1644x848",
+    "size_kb": 540
+  },
+  {
+    "id": "ncert_ch5_fig14_manuscript_pages.webp",
+    "path": "images/hist5/ncert_ch5_fig14_manuscript_pages.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Manuscript Pages Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "manuscript",
+      "pages",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1656x1328",
+    "size_kb": 532
+  },
+  {
+    "id": "ncert_ch5_fig15_diwan_e_hafiz.webp",
+    "path": "images/hist5/ncert_ch5_fig15_diwan_e_hafiz.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Diwan E Hafiz Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "diwan",
+      "hafiz",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "480x896",
+    "size_kb": 101
+  },
+  {
+    "id": "ncert_ch5_fig16_rigveda_manuscript.webp",
+    "path": "images/hist5/ncert_ch5_fig16_rigveda_manuscript.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Rigveda Manuscript Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "rigveda",
+      "manuscript",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1284x408",
+    "size_kb": 87
+  },
+  {
+    "id": "ncert_ch5_fig17_raja_ravi_varma_painting.webp",
+    "path": "images/hist5/ncert_ch5_fig17_raja_ravi_varma_painting.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Raja Ravi Varma Painting Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "raja",
+      "ravi",
+      "varma",
+      "painting",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1120x1648",
+    "size_kb": 275
+  },
+  {
+    "id": "ncert_ch5_fig18_indian_charivari.webp",
+    "path": "images/hist5/ncert_ch5_fig18_indian_charivari.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Indian Charivari Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "indian",
+      "charivari",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x1016",
+    "size_kb": 267
+  },
+  {
+    "id": "ncert_ch5_fig19_ghor_kali.webp",
+    "path": "images/hist5/ncert_ch5_fig19_ghor_kali.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Ghor Kali Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "ghor",
+      "kali",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1532x1104",
+    "size_kb": 516
+  },
+  {
+    "id": "ncert_ch5_fig1_bookmaking.webp",
+    "path": "images/hist5/ncert_ch5_fig1_bookmaking.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Bookmaking Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "bookmaking",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1028x1396",
+    "size_kb": 251
+  },
+  {
+    "id": "ncert_ch5_fig20_indian_couple_caricature.webp",
+    "path": "images/hist5/ncert_ch5_fig20_indian_couple_caricature.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Indian Couple Caricature Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "indian",
+      "couple",
+      "caricature",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "676x1004",
+    "size_kb": 207
+  },
+  {
+    "id": "ncert_ch5_fig21_european_couple.webp",
+    "path": "images/hist5/ncert_ch5_fig21_european_couple.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig European Couple Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "european",
+      "couple",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1152x856",
+    "size_kb": 281
+  },
+  {
+    "id": "ncert_ch5_fig22_lakshminath_bezbaroa.webp",
+    "path": "images/hist5/ncert_ch5_fig22_lakshminath_bezbaroa.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Lakshminath Bezbaroa Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "lakshminath",
+      "bezbaroa",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "336x448",
+    "size_kb": 19
+  },
+  {
+    "id": "ncert_ch5_fig2a_diamond_sutra.webp",
+    "path": "images/hist5/ncert_ch5_fig2a_diamond_sutra.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig A Diamond Sutra Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "diamond",
+      "sutra",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "856x1100",
+    "size_kb": 265
+  },
+  {
+    "id": "ncert_ch5_fig2b_tripitaka_koreana.webp",
+    "path": "images/hist5/ncert_ch5_fig2b_tripitaka_koreana.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig B Tripitaka Koreana Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "tripitaka",
+      "koreana",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "700x468",
+    "size_kb": 60
+  },
+  {
+    "id": "ncert_ch5_fig3_ukiyo_art.webp",
+    "path": "images/hist5/ncert_ch5_fig3_ukiyo_art.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Ukiyo Art Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "ukiyo",
+      "art",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "400x524",
+    "size_kb": 50
+  },
+  {
+    "id": "ncert_ch5_fig4a_morning_scene.webp",
+    "path": "images/hist5/ncert_ch5_fig4a_morning_scene.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig A Morning Scene Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "morning",
+      "scene",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1180x796",
+    "size_kb": 201
+  },
+  {
+    "id": "ncert_ch5_fig4b_jikji.webp",
+    "path": "images/hist5/ncert_ch5_fig4b_jikji.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig B Jikji Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "jikji",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "668x476",
+    "size_kb": 81
+  },
+  {
+    "id": "ncert_ch5_fig5_gutenberg_portrait.webp",
+    "path": "images/hist5/ncert_ch5_fig5_gutenberg_portrait.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Gutenberg Portrait Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "gutenberg",
+      "portrait",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "492x588",
+    "size_kb": 88
+  },
+  {
+    "id": "ncert_ch5_fig6_gutenberg_press.webp",
+    "path": "images/hist5/ncert_ch5_fig6_gutenberg_press.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Gutenberg Press Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "gutenberg",
+      "press",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "860x972",
+    "size_kb": 227
+  },
+  {
+    "id": "ncert_ch5_fig7_gutenberg_bible.webp",
+    "path": "images/hist5/ncert_ch5_fig7_gutenberg_bible.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Gutenberg Bible Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "gutenberg",
+      "bible",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "748x1208",
+    "size_kb": 278
+  },
+  {
+    "id": "ncert_ch5_fig8_printer_workshop.webp",
+    "path": "images/hist5/ncert_ch5_fig8_printer_workshop.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Printer Workshop Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "printer",
+      "workshop",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "2044x964",
+    "size_kb": 825
+  },
+  {
+    "id": "ncert_ch5_fig9_limprimerie.webp",
+    "path": "images/hist5/ncert_ch5_fig9_limprimerie.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig Limprimerie Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "limprimerie",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1124x1444",
+    "size_kb": 582
+  },
+  {
+    "id": "ncert_ch5_p1_illustration1.webp",
+    "path": "images/hist5/ncert_ch5_p1_illustration1.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch P Illustration Webp",
+    "tags": [
+      "ncert",
+      "illustration",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1288x888",
+    "size_kb": 227
+  },
+  {
+    "id": "ncert_ch5_p1_illustration3.webp",
+    "path": "images/hist5/ncert_ch5_p1_illustration3.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch P Illustration Webp",
+    "tags": [
+      "ncert",
+      "illustration",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "792x668",
+    "size_kb": 142
+  }
+]
