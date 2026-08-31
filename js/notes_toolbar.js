@@ -14,31 +14,29 @@
     const style = document.createElement('style');
     style.innerHTML = `
         .master-action-bar {
-            position: fixed;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin: 0 auto 30px auto;
             display: flex;
-            gap: 10px;
-            z-index: 99999;
+            gap: 12px;
+            z-index: 100;
             flex-wrap: wrap;
             justify-content: center;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 8px 16px;
+            background: #0f172a;
+            padding: 12px 24px;
             border-radius: 20px;
-            border: 2px solid #3b82f6;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 3px solid #3b82f6;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+            width: fit-content;
         }
 
         .master-action-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            border: 2px solid #3b82f6;
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            border: 2.5px solid #3b82f6;
             background: #1e293b;
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 900;
             display: flex;
             align-items: center;
@@ -126,14 +124,26 @@
     homeBtn.title = 'मुख्य पृष्ठ पर जाएँ (Home)';
     homeBtn.innerHTML = '🏠';
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.body.appendChild(bar);
-        document.body.appendChild(homeBtn);
-    });
+    function attachToolbar() {
+        if (document.querySelector('.master-action-bar-attached')) return;
+        const target = document.getElementById('contentToCopy') || document.querySelector('.page-container') || document.querySelector('.copy-container') || document.body;
+        if (target) {
+            bar.classList.add('master-action-bar-attached');
+            if (target.firstChild) {
+                target.insertBefore(bar, target.firstChild);
+            } else {
+                target.appendChild(bar);
+            }
+        }
+        if (!document.querySelector('.master-floating-home')) {
+            document.body.appendChild(homeBtn);
+        }
+    }
 
-    if (document.body) {
-        document.body.appendChild(bar);
-        document.body.appendChild(homeBtn);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachToolbar);
+    } else {
+        attachToolbar();
     }
 
     // Controls Logic
