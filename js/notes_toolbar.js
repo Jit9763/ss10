@@ -107,10 +107,10 @@
     const bar = document.createElement('div');
     bar.className = 'master-action-bar';
     bar.innerHTML = `
-        <button class="master-action-btn" onclick="window.__adjustWidth(60)" title="कंटेनर चौड़ाई बढ़ाएँ (W+)">W+</button>
-        <button class="master-action-btn" onclick="window.__adjustWidth(-60)" title="कंटेनर चौड़ाई घटाएँ (W-)">W-</button>
-        <button class="master-action-btn" onclick="window.__adjustFontSize(2)" title="अक्षर का आकार बढ़ाएँ (A+)">A+</button>
-        <button class="master-action-btn" onclick="window.__adjustFontSize(-2)" title="अक्षर का आकार घटाएँ (A-)">A-</button>
+        <button class="master-action-btn" onclick="window.__adjustWidth(120)" title="कंटेनर चौड़ाई तेजी से बढ़ाएँ (W+)">W+</button>
+        <button class="master-action-btn" onclick="window.__adjustWidth(-120)" title="कंटेनर चौड़ाई तेजी से घटाएँ (W-)">W-</button>
+        <button class="master-action-btn" onclick="window.__adjustFontSize(2.5)" title="अक्षर का आकार बढ़ाएँ (A+)">A+</button>
+        <button class="master-action-btn" onclick="window.__adjustFontSize(-2.5)" title="अक्षर का आकार घटाएँ (A-)">A-</button>
         <button class="master-action-btn" onclick="window.__adjustFontWeight(100)" title="अक्षर की मोटाई बढ़ाएँ (B+)">B+</button>
         <button class="master-action-btn" onclick="window.__adjustFontWeight(-100)" title="अक्षर की मोटाई घटाएँ (B-)">B-</button>
         <button id="__masterCopyBtn" class="master-action-btn master-btn-copy" onclick="window.__copyEntireContent()" title="Google Docs के लिए कॉपी करें">📋</button>
@@ -154,20 +154,20 @@
 
     window.__adjustWidth = function(amount) {
         currentWidth += amount;
-        if (currentWidth < 400) currentWidth = 400;
-        if (currentWidth > 6000) currentWidth = 6000;
+        if (currentWidth < 250) currentWidth = 250;
+        if (currentWidth > 10000) currentWidth = 10000;
         const target = document.getElementById('contentToCopy') || document.querySelector('.page-container') || document.querySelector('.copy-container') || document.body;
         if (target) {
             target.style.setProperty('max-width', currentWidth + 'px', 'important');
-            target.style.setProperty('width', '100%', 'important');
+            target.style.setProperty('width', currentWidth + 'px', 'important');
             target.style.setProperty('margin', '0 auto', 'important');
         }
     };
 
     window.__adjustFontSize = function(amount) {
         sizeOffset += amount;
-        if (sizeOffset < -16) sizeOffset = -16;
-        if (sizeOffset > 30) sizeOffset = 30;
+        if (sizeOffset < -18) sizeOffset = -18;
+        if (sizeOffset > 35) sizeOffset = 35;
         const elements = document.querySelectorAll('body, p, li, td, th, div, span, h1, h2, h3, h4, b, strong');
         elements.forEach(el => {
             if (el.closest('.master-action-bar')) return;
@@ -245,12 +245,12 @@
     document.addEventListener('keydown', (e) => {
         if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
         if (e.key === 'w' || e.key === 'W') {
-            if (e.shiftKey) window.__adjustWidth(-60);
-            else window.__adjustWidth(60);
+            if (e.shiftKey) window.__adjustWidth(-120);
+            else window.__adjustWidth(120);
         } else if (e.key === '+' || e.key === '=') {
-            window.__adjustFontSize(2);
+            window.__adjustFontSize(2.5);
         } else if (e.key === '-') {
-            window.__adjustFontSize(-2);
+            window.__adjustFontSize(-2.5);
         }
     });
 })();
