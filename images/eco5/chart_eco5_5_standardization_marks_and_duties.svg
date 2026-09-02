@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#14261c"/>
+    </linearGradient>
+    <linearGradient id="titleGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <rect width="1100" height="650" rx="20" fill="url(#bgGrad5)" stroke="#1e3a5f" stroke-width="2"/>
+  
+  <!-- Title -->
+  <rect x="50" y="25" width="1000" height="65" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="550" y="67" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="28" font-weight="900" text-anchor="middle">मानकीकरण प्रमाणन चिह्न एवं जागरूक उपभोक्ता के कर्तव्य</text>
+  
+  <!-- 3 Standardization Marks (Left/Top) -->
+  <g transform="translate(60, 115)" filter="url(#shadow5)">
+    <!-- ISI Mark -->
+    <rect width="470" height="150" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="470" height="38" rx="16" fill="#0284c7"/>
+    <text x="235" y="26" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">1. ISI मार्क (BIS - भारतीय मानक ब्यूरो)</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• औद्योगिक एवं इलेक्ट्रॉनिक उत्पाद</text>
+    <text x="20" y="95" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">उदा. एलपीजी सिलेंडर, हेलमेट, बिजली के तार, गीजर, सीमेंट</text>
+    <text x="20" y="125" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">सुरक्षा और गुणवत्ता की सरकारी गारंटी</text>
+  </g>
+  
+  <g transform="translate(570, 115)" filter="url(#shadow5)">
+    <!-- AGMARK -->
+    <rect width="470" height="150" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+    <rect x="0" y="0" width="470" height="38" rx="16" fill="#059669"/>
+    <text x="235" y="26" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">2. एगमार्क (AGMARK - कृषि उत्पाद)</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• कृषि एवं खाद्य पदार्थों की गुणवत्ता</text>
+    <text x="20" y="95" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">उदा. खाद्य तेल, मसाले, आटा, दालें, शहद, मक्खन</text>
+    <text x="20" y="125" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">शुद्धता व जैविक प्रमाणन की गारंटी</text>
+  </g>
+  
+  <g transform="translate(60, 285)" filter="url(#shadow5)">
+    <!-- HALLMARK -->
+    <rect width="470" height="150" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="470" height="38" rx="16" fill="#d97706"/>
+    <text x="235" y="26" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">3. हॉलमार्क (HALLMARK - आभूषण)</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• सोने व चांदी के आभूषणों की शुद्धता</text>
+    <text x="20" y="95" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">उदा. 22K (916) गोल्ड ज्वेलरी, चांदी के बर्तन</text>
+    <text x="20" y="125" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">धातु की शत-प्रतिशत शुद्धता का प्रमाण</text>
+  </g>
+  
+  <!-- Consumer Duties (Right/Bottom) -->
+  <g transform="translate(570, 285)" filter="url(#shadow5)">
+    <rect width="470" height="330" rx="16" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect x="0" y="0" width="470" height="40" rx="16" fill="#db2777"/>
+    <text x="235" y="27" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">जागरूक उपभोक्ता के 4 प्रमुख कर्तव्य (Duties)</text>
+    
+    <text x="20" y="75" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">1. पक्का बिल व रसीद (Cash Memo) अवश्य लें</text>
+    <text x="35" y="100" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">कोर्ट में मुआवजे का दावा करने के लिए बिल सबसे ठोस सबूत है।</text>
+    
+    <text x="20" y="140" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">2. मानकीकरण चिह्न (ISI/Agmark/Hallmark) जांचें</text>
+    <text x="35" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">बिना मानक चिह्न वाली घटिया वस्तुओं को खरीदने से बचें।</text>
+    
+    <text x="20" y="205" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">3. पैकिंग पर दी गई जानकारी पूरी तरह पढ़ें</text>
+    <text x="35" y="230" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">MRP, एक्सपायरी डेट, बैच नंबर और सामग्री अवश्य चेक करें।</text>
+    
+    <text x="20" y="270" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">4. शोषण होने पर शिकायत अवश्य दर्ज करें</text>
+    <text x="35" y="295" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">नुकसान छोटा हो या बड़ा, उपभोक्ता फोरम में गुहार लगाएं।</text>
+  </g>
+  
+  <!-- Eco Mark Box -->
+  <g transform="translate(60, 455)" filter="url(#shadow5)">
+    <rect width="470" height="160" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+    <rect x="0" y="0" width="470" height="38" rx="16" fill="#047857"/>
+    <text x="235" y="26" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">4. इको-मार्क (ECO-MARK - पर्यावरण अनुकूल)</text>
+    <text x="20" y="68" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• मिट्टी का घड़ा प्रतीक चिह्न (Earthen Pot)</text>
+    <text x="20" y="95" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">पर्यावरण को नुकसान न पहुंचाने वाले साबुन, डिटर्जेंट, कागज, पेंट</text>
+    <text x="20" y="125" fill="#a7f3d0" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">पर्यावरणीय सुरक्षा एवं प्रदूषण मुक्त उत्पादन का प्रतीक</text>
+  </g>
+</svg>

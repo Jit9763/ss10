@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="titleGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <rect width="1100" height="650" rx="20" fill="url(#bgGrad3)" stroke="#374151" stroke-width="2"/>
+  
+  <!-- Title -->
+  <rect x="50" y="30" width="1000" height="65" rx="14" fill="#1e293b" stroke="#facc15" stroke-width="2.5" filter="url(#shadow3)"/>
+  <text x="550" y="72" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="28" font-weight="900" text-anchor="middle">त्रि-स्तरीय अर्ध-न्यायिक उपभोक्ता अदालतें (Three-Tier Consumer Courts)</text>
+  
+  <!-- Level 3: National Commission (Top) -->
+  <g transform="translate(150, 130)" filter="url(#shadow3)">
+    <rect width="800" height="125" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect x="0" y="0" width="800" height="40" rx="16" fill="#dc2626"/>
+    <text x="400" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">3. राष्ट्रीय उपभोक्ता विवाद निवारण आयोग (National Commission - NCDRC)</text>
+    <text x="30" y="75" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="bold">• क्षेत्राधिकार: ₹10 करोड़ से अधिक के दावे (2019 नियम) / नई दिल्ली</text>
+    <text x="30" y="105" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17">• राज्य आयोग के आदेशों के खिलाफ अपील सुनने का सर्वोच्च अधिकार (इसके बाद सुप्रीम कोर्ट)</text>
+  </g>
+  
+  <!-- Appeal Arrow 2 -->
+  <g transform="translate(550, 260)">
+    <line x1="0" y1="35" x2="0" y2="5" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6,4"/>
+    <polygon points="-8,8 0,-2 8,8" fill="#f59e0b"/>
+    <text x="20" y="22" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15" font-weight="bold">45 दिनों में अपील</text>
+  </g>
+  
+  <!-- Level 2: State Commission (Middle) -->
+  <g transform="translate(150, 305)" filter="url(#shadow3)">
+    <rect width="800" height="125" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <rect x="0" y="0" width="800" height="40" rx="16" fill="#d97706"/>
+    <text x="400" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. राज्य उपभोक्ता विवाद निवारण आयोग (State Commission)</text>
+    <text x="30" y="75" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="bold">• क्षेत्राधिकार: ₹1 करोड़ से ₹10 करोड़ तक के दावे / राज्य की राजधानी</text>
+    <text x="30" y="105" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17">• जिला आयोग के फैसलों के खिलाफ अपील की सुनवाई करना</text>
+  </g>
+  
+  <!-- Appeal Arrow 1 -->
+  <g transform="translate(550, 435)">
+    <line x1="0" y1="35" x2="0" y2="5" stroke="#38bdf8" stroke-width="4" stroke-dasharray="6,4"/>
+    <polygon points="-8,8 0,-2 8,8" fill="#38bdf8"/>
+    <text x="20" y="22" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15" font-weight="bold">45 दिनों में अपील</text>
+  </g>
+  
+  <!-- Level 1: District Commission (Bottom Base) -->
+  <g transform="translate(150, 480)" filter="url(#shadow3)">
+    <rect width="800" height="135" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="800" height="40" rx="16" fill="#0284c7"/>
+    <text x="400" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. जिला उपभोक्ता विवाद निवारण आयोग (District Commission / Forum)</text>
+    <text x="30" y="75" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="bold">• क्षेत्राधिकार: ₹1 करोड़ तक के दावे / प्रत्येक जिले में स्थित</text>
+    <text x="30" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17">• आम नागरिक सीधे सादे कागज पर या ऑनलाइन ई-दाखिल पोर्टल से शिकायत दर्ज कर सकते हैं</text>
+  </g>
+</svg>

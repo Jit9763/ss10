@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06121e"/>
+      <stop offset="100%" stop-color="#0f2942"/>
+    </linearGradient>
+    <linearGradient id="titleGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <rect width="1100" height="650" rx="20" fill="url(#bgGrad4)" stroke="#1e3a5f" stroke-width="2"/>
+  
+  <!-- Title -->
+  <rect x="50" y="25" width="1000" height="65" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="2.5" filter="url(#shadow4)"/>
+  <text x="550" y="67" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="28" font-weight="900" text-anchor="middle">कोपरा (COPRA) के अंतर्गत 6 मौलिक उपभोक्ता अधिकार</text>
+  
+  <!-- Right 1: सुरक्षा का अधिकार -->
+  <g transform="translate(60, 115)" filter="url(#shadow4)">
+    <rect width="300" height="230" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#dc2626"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">1. सुरक्षा का अधिकार</text>
+    <text x="150" y="70" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to Safety)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• जान व माल को हानि पहुंचाने वाले</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  उत्पादों से सुरक्षा का हक।</text>
+    <text x="15" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">उदा. प्रेशर कुकर की सुरक्षा वाल्व,</text>
+    <text x="15" y="190" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">बिजली के उपकरण, दवाइयों की शुद्धता।</text>
+  </g>
+  
+  <!-- Right 2: सूचना का अधिकार -->
+  <g transform="translate(400, 115)" filter="url(#shadow4)">
+    <rect width="300" height="230" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#0284c7"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">2. सूचना पाने का अधिकार</text>
+    <text x="150" y="70" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to Information)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• उत्पाद की सामग्री, मूल्य, बैच नं,</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  निर्माण व एक्सपायरी तिथि की जानकारी।</text>
+    <text x="15" y="170" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">• अक्टूबर 2005 में सरकारी विभागों हेतु RTI एक्ट भी लागू हुआ।</text>
+  </g>
+  
+  <!-- Right 3: चुनने का अधिकार -->
+  <g transform="translate(740, 115)" filter="url(#shadow4)">
+    <rect width="300" height="230" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#d97706"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">3. चुनने का अधिकार</text>
+    <text x="150" y="70" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to Choose)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• किसी भी वस्तु/सेवा को अपनी इच्छा</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  से प्रतिस्पर्धी मूल्य पर चुनना।</text>
+    <text x="15" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">दुकानदार किसी अतिरिक्त वस्तु को</text>
+    <text x="15" y="190" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">जबरन खरीदने हेतु बाध्य नहीं कर सकता।</text>
+  </g>
+  
+  <!-- Right 4: सुनवाई का अधिकार -->
+  <g transform="translate(60, 375)" filter="url(#shadow4)">
+    <rect width="300" height="240" rx="16" fill="#1e293b" stroke="#a855f7" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#9333ea"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">4. सुनवाई का अधिकार</text>
+    <text x="150" y="70" fill="#d8b4fe" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to be Heard)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• उपभोक्ता के हितों पर उचित मंचों</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  पर विचार और सुनवाई होना।</text>
+    <text x="15" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">• उपभोक्ता अदालत में अपना पक्ष</text>
+    <text x="15" y="190" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">  बिना वकील के भी रखने की स्वतंत्रता।</text>
+  </g>
+  
+  <!-- Right 5: निवारण का अधिकार -->
+  <g transform="translate(400, 375)" filter="url(#shadow4)">
+    <rect width="300" height="240" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#059669"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">5. निवारण / क्षतिपूर्ति अधिकार</text>
+    <text x="150" y="70" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to Seek Redressal)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• दोषपूर्ण वस्तु के बदले उचित</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  क्षतिपूर्ति (मुआवजा) पाने का हक।</text>
+    <text x="15" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">• वस्तु की मरम्मत, पैसे की वापसी</text>
+    <text x="15" y="190" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">  या नुकसान की भरपाई।</text>
+  </g>
+  
+  <!-- Right 6: उपभोक्ता शिक्षा का अधिकार -->
+  <g transform="translate(740, 375)" filter="url(#shadow4)">
+    <rect width="300" height="240" rx="16" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect x="0" y="0" width="300" height="42" rx="16" fill="#db2777"/>
+    <text x="150" y="28" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">6. उपभोक्ता शिक्षा का अधिकार</text>
+    <text x="150" y="70" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">(Right to Consumer Education)</text>
+    <text x="15" y="105" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">• जागरूक उपभोक्ता बनने हेतु ज्ञान</text>
+    <text x="15" y="130" fill="#f8fafc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="15">  और कौशल प्राप्त करने का अधिकार।</text>
+    <text x="15" y="165" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">• 'जागो ग्राहक जागो' अभियान द्वारा</text>
+    <text x="15" y="190" fill="#94a3b8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="14">  नागरिकों को जागरूक करना।</text>
+  </g>
+</svg>
