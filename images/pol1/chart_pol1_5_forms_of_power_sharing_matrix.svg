@@ -30,7 +30,7 @@
     <rect x="0" y="0" width="500" height="55" rx="16" fill="#0284c7"/>
     <text x="250" y="38" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. क्षैतिज वितरण (Horizontal Sharing)</text>
     <text x="15" y="105" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• विधायिका, कार्यपालिका व न्यायपालिका में बंटवारा।</text>
-    <text x="15" y="155" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• नियंत्रण और संतुलन की व्यवस्था (Checks & Balances)।</text>
+    <text x="15" y="155" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• नियंत्रण और संतुलन की व्यवस्था (Checks &amp; Balances)।</text>
   </g>
 
   <g transform="translate(565, 125)" filter="url(#shadow5)">
