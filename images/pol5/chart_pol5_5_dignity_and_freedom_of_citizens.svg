@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="titleGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Title -->
+  <g filter="url(#shadow5)">
+    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#34d399" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">👑 नागरिकों की गरिमा और आजादी (Dignity & Freedom of Citizens)</text>
+  </g>
+
+  <!-- 2 Cards -->
+  <g transform="translate(45, 125)" filter="url(#shadow5)">
+    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+    <rect x="0" y="0" width="480" height="60" rx="18" fill="#db2777"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. महिलाओं की गरिमा व समान अवसर</text>
+    
+    <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• पुरुषों के वर्चस्व के खिलाफ निरंतर संघर्ष:</text>
+    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">लंबे संघर्ष के बाद आज यह स्वीकार किया गया है कि महिलाओं से आदर का व्यवहार लोकतंत्र की अनिवार्य शर्त है।</text>
+
+    <text x="25" y="210" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• कानूनी आधार प्राप्त होना:</text>
+    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">अन्याय के खिलाफ महिलाओं के पास अब कानूनी लड़ाई लड़ने का आधार मौजूद है।</text>
+  </g>
+
+  <g transform="translate(575, 125)" filter="url(#shadow5)">
+    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. वंचित जातियों की गरिमा व दावों को बल</text>
+    
+    <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• भेदभाव के खिलाफ अधिकार:</text>
+    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सदियों से शोषित जातियों को लोकतंत्र ने अपनी गरिमा और अवसरों की मांग करने का नैतिक बल दिया।</text>
+
+    <text x="25" y="210" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• शिकायतें लोकतंत्र की सफलता का प्रमाण:</text>
+    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">जनता की शिकायतें और नई मांगें यह सिद्ध करती हैं कि नागरिक जागरूक हो चुके हैं।</text>
+  </g>
+</svg>

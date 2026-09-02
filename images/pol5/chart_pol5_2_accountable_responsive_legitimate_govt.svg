@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070d1e"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="titleGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad2)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Title -->
+  <g filter="url(#shadow2)">
+    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#34d399" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad2)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🏛️ उत्तरदायी, जिम्मेदार एवं वैध सरकार (Accountable & Legitimate Govt)</text>
+  </g>
+
+  <!-- 3 Columns -->
+  <g transform="translate(40, 125)" filter="url(#shadow2)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="320" height="50" rx="16" fill="#0284c7"/>
+    <text x="160" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">1. उत्तरदायी (Accountable)</text>
+
+    <text x="15" y="90" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• जनता के प्रति जवाबदेह:</text>
+    <text x="15" y="130" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">सरकार को अपने हर फैसले की जानकारी जनता को देनी होती है।</text>
+    <text x="15" y="190" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• पारदर्शिता (Transparency):</text>
+    <text x="15" y="225" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">सूचना का अधिकार (RTI) से नागरिक फैसले की प्रक्रिया जान सकते हैं।</text>
+  </g>
+
+  <g transform="translate(390, 125)" filter="url(#shadow2)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="0" y="0" width="320" height="50" rx="16" fill="#059669"/>
+    <text x="160" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">2. जिम्मेदार (Responsive)</text>
+
+    <text x="15" y="90" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• जरूरतों का ध्यान रखना:</text>
+    <text x="15" y="130" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">जनता की आवश्यकताओं और मांगों पर ध्यान देना।</text>
+    <text x="15" y="190" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• भ्रष्टाचार से मुक्ति की अपेक्षा:</text>
+    <text x="15" y="225" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">जनता की शिकायतों का समय पर निवारण करना।</text>
+  </g>
+
+  <g transform="translate(740, 125)" filter="url(#shadow2)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#facc15" stroke-width="2.5"/>
+    <rect x="0" y="0" width="320" height="50" rx="16" fill="#d97706"/>
+    <text x="160" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">3. वैध सरकार (Legitimate)</text>
+
+    <text x="15" y="90" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• जनता की अपनी सरकार:</text>
+    <text x="15" y="130" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">स्वतंत्र व निष्पक्ष चुनाव द्वारा चुनी गई सरकार।</text>
+    <text x="15" y="190" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">• कानूनों का पालन:</text>
+    <text x="15" y="225" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">संविधान और विधायिका के नियमों के अनुसार शासन।</text>
+  </g>
+</svg>

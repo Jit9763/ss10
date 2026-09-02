@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="titleGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad1)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Title -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🌟 लोकतंत्र के मूल्यांकन के 5 मुख्य पैमाने (5 Evaluation Metrics)</text>
+  </g>
+
+  <!-- 5 Horizontal Feature Rows -->
+  <g transform="translate(45, 120)" filter="url(#shadow1)">
+    <rect width="1010" height="495" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    
+    <text x="35" y="55" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">1. नागरिकों में समानता को बढ़ावा देना:</text>
+    <text x="450" y="55" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">हर नागरिक को समान राजनीतिक अधिकार व एक वोट का समान मूल्य।</text>
+
+    <text x="35" y="125" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">2. व्यक्ति की गरिमा को सुरक्षा देना:</text>
+    <text x="450" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">महिलाओं व वंचित समूहों के सम्मान और स्वतंत्रता की कानूनी रक्षा।</text>
+
+    <text x="35" y="195" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">3. फैसलों की गुणवत्ता में सुधार:</text>
+    <text x="450" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">विचार-विमर्श व बहस द्वारा बेहतर और सर्वमान्य निर्णय लेना।</text>
+
+    <text x="35" y="265" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">4. टकरावों को टालने व संभालने की क्षमता:</text>
+    <text x="450" y="265" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सामाजिक विविधताओं के बीच शांतिपूर्ण सामंजस्य स्थापित करना।</text>
+
+    <text x="35" y="335" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">5. गलतियों को सुधारने की गुंजाइश:</text>
+    <text x="450" y="335" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold">चुनावों के माध्यम से नीतियों व सरकार को बदलने का अवसर।</text>
+
+    <rect x="25" y="390" width="960" height="75" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+    <text x="505" y="435" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 लोकतंत्र अन्य सभी तानाशाही या गैर-लोकतांत्रिक शासनों से बेहतर है!</text>
+  </g>
+</svg>
