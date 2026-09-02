@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091e3a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad2)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad2)" filter="url(#shadow2)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🏦 बैंकों की ऋण संबंधी गतिविधियां एवं लाभ चक्र (Bank Loan Operations &amp; Profit Spread)
+  </text>
+
+  <!-- LEFT: DEPOSITORS -->
+  <g transform="translate(45, 95)" filter="url(#shadow2)">
+    <rect width="290" height="380" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="290" height="46" rx="16" fill="#065f46"/>
+    <rect y="28" width="290" height="18" fill="#065f46"/>
+    <text x="145" y="32" fill="#ffffff" font-size="17" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">👥 1. जमाकर्ता (Depositors)</text>
+
+    <rect x="15" y="60" width="260" height="95" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="25" y="85" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">💰 धन जमा करना:</text>
+    <text x="25" y="108" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• लोग अपनी अतिरिक्त नकदी को</text>
+    <text x="25" y="128" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  सुरक्षा हेतु बैंक में जमा करते हैं।</text>
+    <text x="25" y="146" fill="#a7f3d0" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  $ightarrow$ मांग पर कभी भी निकासी संभव।</text>
+
+    <rect x="15" y="168" width="260" height="105" rx="10" fill="#064e3b"/>
+    <text x="25" y="193" fill="#6ee7b7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📈 ब्याज प्राप्ति (अल्प दर):</text>
+    <text x="25" y="216" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बैंक जमाकर्ताओं को उनके धन पर</text>
+    <text x="25" y="236" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  लगभग 4% से 6% ब्याज देता है।</text>
+    <text x="25" y="258" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• धन सुरक्षित रहता है और बढ़ता है।</text>
+
+    <rect x="15" y="285" width="260" height="80" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="145" y="310" fill="#34d399" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🟢 वित्तीय भूमिका:</text>
+    <text x="25" y="333" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• देश की बचतों को उत्पादक कार्यों</text>
+    <text x="25" y="351" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  के लिए गतिशील बनाना।</text>
+  </g>
+
+  <!-- CENTER: BANK (INTERMEDIARY) -->
+  <g transform="translate(365, 95)" filter="url(#shadow2)">
+    <rect width="370" height="380" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+    <rect width="370" height="46" rx="16" fill="#1e3a8a"/>
+    <rect y="28" width="370" height="18" fill="#1e3a8a"/>
+    <text x="185" y="32" fill="#ffffff" font-size="17" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏛️ 2. बैंक (वित्तीय मध्यस्थ / Intermediary)</text>
+
+    <rect x="15" y="60" width="340" height="100" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="25" y="85" fill="#60a5fa" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🛡️ 15% नकद कोष अनुपात (CRR):</text>
+    <text x="25" y="108" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बैंक कुल जमा का केवल 15% हिस्सा</text>
+    <text x="25" y="128" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  दैनिक जमाकर्ताओं की नकद निकासी हेतु रखता है।</text>
+    <text x="25" y="148" fill="#93c5fd" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• शेष 85% राशि ऋण देने में उपयोग होती है।</text>
+
+    <rect x="15" y="172" width="340" height="100" rx="10" fill="#172554"/>
+    <text x="25" y="196" fill="#93c5fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🔄 मध्यस्थता की कड़ी:</text>
+    <text x="25" y="218" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बैंक उन लोगों (जिनके पास अतिरिक्त धन है)</text>
+    <text x="25" y="238" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  और उन लोगों (जिन्हें धन की जरूरत है)</text>
+    <text x="25" y="258" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  के बीच मध्यस्थ का काम करता है।</text>
+
+    <rect x="15" y="284" width="340" height="82" rx="10" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="185" y="308" fill="#60a5fa" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚖️ RBI की कड़ी निगरानी:</text>
+    <text x="25" y="331" fill="#e2e8f0" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• RBI देखता है कि बैंक 15% नकद संतुलन रखे</text>
+    <text x="25" y="351" fill="#4ade80" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• और छोटे किसानों/उद्योगों को भी ऋण दे।</text>
+  </g>
+
+  <!-- RIGHT: BORROWERS -->
+  <g transform="translate(765, 95)" filter="url(#shadow2)">
+    <rect width="290" height="380" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+    <rect width="290" height="46" rx="16" fill="#b45309"/>
+    <rect y="28" width="290" height="18" fill="#b45309"/>
+    <text x="145" y="32" fill="#ffffff" font-size="17" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🚜 3. कर्जदार (Borrowers)</text>
+
+    <rect x="15" y="60" width="260" height="95" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.5"/>
+    <text x="25" y="85" fill="#fbbf24" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📋 ऋण प्राप्ति (साख):</text>
+    <text x="25" y="108" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• किसान, उद्योगपति, छात्र एवं व्यापारी</text>
+    <text x="25" y="128" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  विभिन्न गतिविधियों हेतु ऋण लेते हैं।</text>
+    <text x="25" y="146" fill="#fde68a" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  (घर, ट्रैक्टर, शिक्षा, व्यवसाय)।</text>
+
+    <rect x="15" y="168" width="260" height="105" rx="10" fill="#78350f"/>
+    <text x="25" y="193" fill="#fde68a" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📉 ब्याज भुगतान (उच्च दर):</text>
+    <text x="25" y="216" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कर्जदार बैंक को मूलधन के साथ</text>
+    <text x="25" y="236" fill="#f87171" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  लगभग 9% से 12% ब्याज चुकाते हैं।</text>
+    <text x="25" y="258" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• यह दर जमा ब्याज दर से अधिक होती है।</text>
+
+    <rect x="15" y="285" width="260" height="80" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="145" y="310" fill="#fbbf24" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 आर्थिक प्रभाव:</text>
+    <text x="25" y="333" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• उत्पादक निवेश से आय व उत्पादन</text>
+    <text x="25" y="351" fill="#94a3b8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  में वृद्धि होती है।</text>
+  </g>
+
+  <!-- BOTTOM PROFIT FORMULA BOX -->
+  <g transform="translate(45, 490)" filter="url(#shadow2)">
+    <rect width="1010" height="135" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="505" y="520" fill="#38bdf8" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      💎 बैंक की आय का मुख्य स्रोत = ब्याज दर का अंतर (Interest Rate Spread)
+    </text>
+    <rect x="25" y="535" width="960" height="75" rx="12" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="505" y="563" fill="#facc15" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      बैंक का शुद्ध लाभ = [ कर्जदारों से ली गई ब्याज दर (उदा. 10%) ]  —  [ जमाकर्ताओं को दी गई ब्याज दर (उदा. 5%) ]
+    </text>
+    <text x="505" y="593" fill="#94a3b8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      यही 5% का अंतर बैंक के सभी प्रशासनिक खर्चों को पूरा करता है और बैंक का शुद्ध मुनाफा बनता है।
+    </text>
+  </g>
+</svg>

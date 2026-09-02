@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad4)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad4)" filter="url(#shadow4)" stroke="#38bdf8" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🏛️ भारत में साख: औपचारिक बनाम अनौपचारिक क्षेत्रक एवं RBI की भूमिका (Formal vs Informal Credit)
+  </text>
+
+  <!-- COLUMN 1: FORMAL SECTOR -->
+  <g transform="translate(45, 95)" filter="url(#shadow4)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#065f46"/>
+    <rect y="28" width="320" height="18" fill="#065f46"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏦 1. औपचारिक साख (Formal)</text>
+    
+    <rect x="15" y="60" width="290" height="85" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📋 प्रमुख स्रोत:</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• वाणिज्यिक बैंक (SBI, PNB आदि)</text>
+    <text x="25" y="128" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• सहकारी साख समितियां (Co-operatives)।</text>
+
+    <rect x="15" y="158" width="290" height="95" rx="10" fill="#064e3b"/>
+    <text x="25" y="182" fill="#6ee7b7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🟢 विशेषताएं एवं नियम:</text>
+    <text x="25" y="206" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• ब्याज दर कम व उचित (लगभग 8-12%)।</text>
+    <text x="25" y="226" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• समर्थक ऋणाधार (Collateral) आवश्यक।</text>
+    <text x="25" y="244" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• पारदर्शी दस्तावेजीकरण प्रक्रिया।</text>
+
+    <rect x="15" y="265" width="290" height="120" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="160" y="290" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 देश के विकास में लाभ:</text>
+    <text x="25" y="315" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कर्जदार पर भारी बोझ नहीं पड़ता।</text>
+    <text x="25" y="335" fill="#4ade80" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• सस्ता ऋण नए उद्योग व कृषि</text>
+    <text x="25" y="355" fill="#4ade80" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  उत्पादन को प्रोत्साहित करता है।</text>
+    <text x="25" y="375" fill="#93c5fd" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• ऋण जाल का कोई खतरा नहीं।</text>
+
+    <rect x="15" y="398" width="290" height="78" rx="10" fill="#065f46"/>
+    <text x="160" y="422" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚠️ वर्तमान समस्या:</text>
+    <text x="25" y="446" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• 85% गरीब परिवार अभी भी</text>
+    <text x="25" y="464" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  बैंक ऋण से वंचित हैं।</text>
+  </g>
+
+  <!-- COLUMN 2: INFORMAL SECTOR -->
+  <g transform="translate(390, 95)" filter="url(#shadow4)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#991b1b"/>
+    <rect y="28" width="320" height="18" fill="#991b1b"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💸 2. अनौपचारिक साख (Informal)</text>
+    
+    <rect x="15" y="60" width="290" height="85" rx="10" fill="#0f172a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#f87171" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📋 प्रमुख स्रोत:</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• गांव के साहूकार (Moneylenders)</text>
+    <text x="25" y="128" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• व्यापारी, भूस्वामी, रिश्तेदार व मित्र।</text>
+
+    <rect x="15" y="158" width="290" height="95" rx="10" fill="#7f1d1d"/>
+    <text x="25" y="182" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">❌ विशेषताएं एवं खतरे:</text>
+    <text x="25" y="206" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• अत्यधिक ऊंची ब्याज दरें (36% - 60%+)।</text>
+    <text x="25" y="226" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• संपार्श्विक के बिना भी आसानी से उपलब्ध।</text>
+    <text x="25" y="244" fill="#fca5a5" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• अनुचित तरीकों से वसूली व उत्पीड़न।</text>
+
+    <rect x="15" y="265" width="290" height="120" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="160" y="290" fill="#f87171" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">⚠️ कर्जदार पर प्रभाव:</text>
+    <text x="25" y="315" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कर्जदार की अधिकांश आय ब्याज चुकाने</text>
+    <text x="25" y="335" fill="#f87171" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  में ही समाप्त हो जाती है।</text>
+    <text x="25" y="355" fill="#f87171" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• व्यक्ति निरंतर 'ऋण जाल' में फंसता है।</text>
+    <text x="25" y="375" fill="#fca5a5" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• देश के आर्थिक विकास में भारी बाधा।</text>
+
+    <rect x="15" y="398" width="290" height="78" rx="10" fill="#991b1b"/>
+    <text x="160" y="422" fill="#fecaca" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛑 नियामक का अभाव:</text>
+    <text x="25" y="446" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• अनौपचारिक ऋणदाताओं पर निगरानी</text>
+    <text x="25" y="464" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  रखने वाली कोई सरकारी संस्था नहीं।</text>
+  </g>
+
+  <!-- COLUMN 3: RBI'S CENTRAL ROLE -->
+  <g transform="translate(735, 95)" filter="url(#shadow4)">
+    <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect width="320" height="46" rx="16" fill="#0369a1"/>
+    <rect y="28" width="320" height="18" fill="#0369a1"/>
+    <text x="160" y="32" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛡️ 3. RBI की नियामक भूमिका</text>
+    
+    <rect x="15" y="60" width="290" height="85" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="25" y="84" fill="#38bdf8" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🔍 नकद संतुलन (15% CRR) जांच:</text>
+    <text x="25" y="108" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• RBI देखता है कि बैंक वास्तव में</text>
+    <text x="25" y="128" fill="#cbd5e1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  15% नकद शेष अपने पास रख रहे हैं या नहीं।</text>
+
+    <rect x="15" y="158" width="290" height="95" rx="10" fill="#0c4a6e"/>
+    <text x="25" y="182" fill="#7dd3fc" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🎯 न्यायसंगत ऋण वितरण:</text>
+    <text x="25" y="206" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बैंक सिर्फ मुनाफा कमाने वाले बड़े</text>
+    <text x="25" y="226" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  व्यापारियों को ही ऋण न दें,</text>
+    <text x="25" y="244" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• बल्कि छोटे किसानों व MSME को भी दें।</text>
+
+    <rect x="15" y="265" width="290" height="120" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="160" y="290" fill="#38bdf8" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📊 आवधिक रिपोर्टिंग:</text>
+    <text x="25" y="315" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बैंकों को समय-समय पर RBI को</text>
+    <text x="25" y="335" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  जानकारी देनी होती है कि वे किसको,</text>
+    <text x="25" y="355" fill="#f8fafc" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  कितना और किस ब्याज दर पर ऋण दे रहे हैं।</text>
+    <text x="25" y="375" fill="#4ade80" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• वित्तीय अनुशासन सुनिश्चित करता है।</text>
+
+    <rect x="15" y="398" width="290" height="78" rx="10" fill="#0369a1"/>
+    <text x="160" y="422" fill="#bae6fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🚀 राष्ट्रीय लक्ष्य:</text>
+    <text x="25" y="446" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• ग्रामीण क्षेत्रों में बैंकों का विस्तार करना</text>
+    <text x="25" y="464" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  ताकि साहूकारों पर निर्भरता घटे।</text>
+  </g>
+
+  <!-- Bottom Footer Bar -->
+  <rect x="40" y="598" width="1020" height="38" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="550" y="623" fill="#94a3b8" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    💡 परीक्षा सूत्र: "सस्ता और सामर्थ्य के अनुकूल साख देश के तीव्र विकास के लिए अति आवश्यक है।"
+  </text>
+</svg>

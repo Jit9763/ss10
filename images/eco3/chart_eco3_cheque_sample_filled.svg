@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGradCheque" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091e3a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGradCheque" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <filter id="shadowCheque" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="guilloche" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 0,20 Q 10,0 20,20 T 40,20" fill="none" stroke="#e0f2fe" stroke-width="0.8" opacity="0.6"/>
+      <path d="M 20,0 Q 30,20 40,0 T 60,0" fill="none" stroke="#bae6fd" stroke-width="0.8" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGradCheque)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="15" width="1020" height="52" rx="14" fill="url(#bannerGradCheque)" filter="url(#shadowCheque)" stroke="#38bdf8" stroke-width="2"/>
+  <text x="550" y="49" fill="#ffffff" font-size="21" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    📑 NCERT कक्षा 10: भरे हुए बैंक चेक का नमूना एवं उसके घटक (Sample Filled Bank Cheque)
+  </text>
+
+  <!-- CHEQUE CONTAINER -->
+  <g transform="translate(60, 85)" filter="url(#shadowCheque)">
+    <!-- Cheque Background Body -->
+    <rect width="980" height="420" rx="14" fill="#f0f9ff" stroke="#0284c7" stroke-width="3.5"/>
+    <!-- Security Pattern Overlay -->
+    <rect width="980" height="420" rx="14" fill="url(#guilloche)" opacity="0.5"/>
+    <rect x="8" y="8" width="964" height="404" rx="10" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="8 4"/>
+
+    <!-- A/C PAYEE Crossing (Top Left) -->
+    <line x1="20" y1="15" x2="130" y2="75" stroke="#1e3a8a" stroke-width="2.5"/>
+    <line x1="35" y1="15" x2="145" y2="75" stroke="#1e3a8a" stroke-width="2.5"/>
+    <text x="75" y="45" fill="#1e3a8a" font-size="11" font-weight="900" font-family="system-ui, sans-serif" transform="rotate(28, 75, 45)">A/C PAYEE ONLY</text>
+
+    <!-- Bank Name and Branch Header -->
+    <text x="165" y="45" fill="#0369a1" font-size="22" font-weight="900" font-family="system-ui, sans-serif">🏛️ भारतीय स्टेट बैंक (STATE BANK OF INDIA)</text>
+    <text x="165" y="66" fill="#475569" font-size="13" font-weight="900" font-family="system-ui, sans-serif">शाखा: मुख्य बाजार, नई दिल्ली | IFSC: SBIN0001234</text>
+
+    <!-- Date Box (Top Right) -->
+    <g transform="translate(680, 25)">
+      <text x="-50" y="24" fill="#0f172a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">दिनांक / Date:</text>
+      <!-- D D M M Y Y Y Y boxes -->
+      <rect x="50" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="74" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="104" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="128" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="158" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="182" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="206" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <rect x="230" y="5" width="24" height="28" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+      <!-- Date Values: 2 5 1 0 2 0 2 6 -->
+      <text x="62" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">2</text>
+      <text x="86" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">5</text>
+      <text x="116" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">1</text>
+      <text x="140" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">0</text>
+      <text x="170" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">2</text>
+      <text x="194" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">0</text>
+      <text x="218" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">2</text>
+      <text x="242" y="25" fill="#1e3a8a" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">6</text>
+    </g>
+
+    <!-- PAY ROW -->
+    <text x="35" y="115" fill="#0f172a" font-size="16" font-weight="900" font-family="system-ui, sans-serif">Pay / अदा करें :</text>
+    <line x1="165" y1="120" x2="800" y2="120" stroke="#64748b" stroke-width="1.5"/>
+    <text x="180" y="112" fill="#0f172a" font-size="20" font-weight="900" font-family="'Courier New', monospace">श्री प्रेम कुमार (Prem Kumar)</text>
+    <text x="815" y="115" fill="#475569" font-size="15" font-weight="900" font-family="system-ui, sans-serif">या धारक को / or Bearer</text>
+
+    <!-- RUPEES ROW -->
+    <text x="35" y="165" fill="#0f172a" font-size="16" font-weight="900" font-family="system-ui, sans-serif">Rupees / रुपये :</text>
+    <line x1="165" y1="170" x2="680" y2="170" stroke="#64748b" stroke-width="1.5"/>
+    <text x="180" y="162" fill="#0f172a" font-size="18" font-weight="900" font-family="'Courier New', monospace">सत्तावन हजार रुपये मात्र (Fifty-Seven Thousand Only)</text>
+    <line x1="35" y1="205" x2="680" y2="205" stroke="#64748b" stroke-width="1.5"/>
+    <text x="45" y="198" fill="#0f172a" font-size="18" font-weight="900" font-family="'Courier New', monospace">---------------------------------------------------------</text>
+
+    <!-- AMOUNT BOX (₹ 57,000/-) -->
+    <g transform="translate(710, 145)">
+      <rect width="235" height="58" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2.5"/>
+      <text x="25" y="38" fill="#0369a1" font-size="28" font-weight="900" font-family="system-ui, sans-serif">₹</text>
+      <text x="60" y="39" fill="#0f172a" font-size="26" font-weight="900" font-family="'Courier New', monospace">57,000 /-</text>
+    </g>
+
+    <!-- ACCOUNT NUMBER BOX -->
+    <g transform="translate(35, 235)">
+      <rect width="360" height="50" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <text x="15" y="24" fill="#0369a1" font-size="13" font-weight="900" font-family="system-ui, sans-serif">खाता सं. / A/c No.</text>
+      <text x="15" y="44" fill="#0f172a" font-size="18" font-weight="900" font-family="monospace">1133557799024</text>
+    </g>
+
+    <!-- SIGNATURE AREA -->
+    <g transform="translate(720, 235)">
+      <text x="110" y="20" fill="#475569" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">हस्ताक्षर / Authorized Signature</text>
+      <!-- Artistic Signature Path -->
+      <path d="M 30,55 Q 60,25 90,55 T 150,45 Q 180,65 210,35" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+      <text x="110" y="75" fill="#1e3a8a" font-size="17" font-weight="900" font-family="'Brush Script MT', cursive, sans-serif" text-anchor="middle">Salim (सलीम)</text>
+    </g>
+
+    <!-- BOTTOM MICR BAND (WHITE STRIP) -->
+    <rect x="0" y="340" width="980" height="80" rx="0" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="490" y="388" fill="#0f172a" font-size="24" font-weight="900" font-family="'Courier New', monospace" text-anchor="middle" letter-spacing="4">
+      ⑈ 045124 ⑈   110002015 ⑆   000245 ⑈   29
+    </text>
+  </g>
+
+  <!-- ANNOTATION CALLOUTS (BOTTOM EXPLANATION BAR) -->
+  <g transform="translate(60, 520)" filter="url(#shadowCheque)">
+    <rect width="980" height="110" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    
+    <!-- Callout 1 -->
+    <rect x="15" y="12" width="225" height="86" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1"/>
+    <text x="127" y="34" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">1. चेक संख्या (Cheque No.)</text>
+    <text x="127" y="58" fill="#facc15" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">045124</text>
+    <text x="127" y="80" fill="#94a3b8" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">6 अंकों की विशिष्ट संख्या</text>
+
+    <!-- Callout 2 -->
+    <rect x="255" y="12" width="225" height="86" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1"/>
+    <text x="367" y="34" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">2. बैंक कोडिंग (MICR Code)</text>
+    <text x="367" y="58" fill="#facc15" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">110002015</text>
+    <text x="367" y="80" fill="#94a3b8" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">कंप्यूटर ऑटो-क्लीयरिंग कोड</text>
+
+    <!-- Callout 3 -->
+    <rect x="495" y="12" width="225" height="86" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1"/>
+    <text x="607" y="34" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">3. भुगतान राशि (Amount)</text>
+    <text x="607" y="58" fill="#4ade80" font-size="16" font-weight="900" font-family="monospace" text-anchor="middle">₹ 57,000 /-</text>
+    <text x="607" y="80" fill="#94a3b8" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">शब्दों व अंकों में एकसमान</text>
+
+    <!-- Callout 4 -->
+    <rect x="735" y="12" width="230" height="86" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1"/>
+    <text x="850" y="34" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">4. वैध हस्ताक्षर (Signature)</text>
+    <text x="850" y="58" fill="#f472b6" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">सलीम (खाताधारक)</text>
+    <text x="850" y="80" fill="#94a3b8" font-size="11" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">बैंक रिकॉर्ड से मिलान अनिवार्य</text>
+  </g>
+</svg>

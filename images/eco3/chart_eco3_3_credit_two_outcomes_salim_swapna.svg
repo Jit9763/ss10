@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGrad3)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad3)" filter="url(#shadow3)" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    ⚖️ साख की दो विभिन्न स्थितियां: सलीम (सकारात्मक लाभ) vs स्वप्ना (ऋण-जाल Debt-Trap)
+  </text>
+
+  <!-- LEFT CARD: CASE 1 (SALIM - SHOE MAKER) -->
+  <g transform="translate(45, 95)" filter="url(#shadow3)">
+    <rect width="490" height="420" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3.5"/>
+    <rect width="490" height="48" rx="16" fill="#065f46"/>
+    <rect y="30" width="490" height="18" fill="#065f46"/>
+    <text x="245" y="34" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      👞 स्थिति 1: सलीम (जूता निर्माता) — सकारात्मक एवं उत्पादक साख
+    </text>
+
+    <!-- Content 1 -->
+    <rect x="20" y="65" width="450" height="95" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+    <text x="35" y="90" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📦 अवसर एवं साख की आवश्यकता:</text>
+    <text x="35" y="112" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• त्यौहार के मौसम में 3,000 जोड़ी जूतों का बड़ा आर्डर मिला।</text>
+    <text x="35" y="132" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कार्यशील पूंजी (कच्चा माल व कारीगरों की मजदूरी) हेतु ऋण लिया।</text>
+    <text x="35" y="150" fill="#6ee7b7" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  (चमड़ा व्यापारी से उधारी + व्यापारी से 1000 जूतों का अग्रिम नकद)</text>
+
+    <!-- Content 2 -->
+    <rect x="20" y="172" width="450" height="105" rx="10" fill="#064e3b"/>
+    <text x="35" y="197" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🚀 उत्पादन प्रक्रिया एवं परिणाम:</text>
+    <text x="35" y="220" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• सलीम ने समय पर जूते तैयार करके सफलतापूर्वक आपूर्ति की।</text>
+    <text x="35" y="240" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• पूरा भुगतान प्राप्त हुआ और सारा ऋण समय पर चुका दिया।</text>
+    <text x="35" y="260" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बहुत अच्छा लाभ कमाया $ightarrow$ व्यवसाय का विस्तार हुआ।</text>
+
+    <!-- Content 3 -->
+    <rect x="20" y="290" width="450" height="105" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="245" y="315" fill="#34d399" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      ✅ साख की भूमिका: उत्पादक एवं कल्याणकारी
+    </text>
+    <text x="35" y="340" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• साख ने उत्पादन के चालू खर्चों को पूरा करने में मदद की।</text>
+    <text x="35" y="360" fill="#4ade80" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• सलीम की आय बढ़ी और उसकी आर्थिक स्थिति पहले से बेहतर हुई।</text>
+    <text x="35" y="380" fill="#93c5fd" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• साख एक 'सकारात्मक संपत्ति' (Asset) साबित हुई।</text>
+  </g>
+
+  <!-- RIGHT CARD: CASE 2 (SWAPNA - GROUNDNUT FARMER) -->
+  <g transform="translate(565, 95)" filter="url(#shadow3)">
+    <rect width="490" height="420" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="3.5"/>
+    <rect width="490" height="48" rx="16" fill="#991b1b"/>
+    <rect y="30" width="490" height="18" fill="#991b1b"/>
+    <text x="245" y="34" fill="#ffffff" font-size="18" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      🌾 स्थिति 2: स्वप्ना (किसान) — ऋण-जाल (Debt-Trap) की त्रासदी
+    </text>
+
+    <!-- Content 1 -->
+    <rect x="20" y="65" width="450" height="95" rx="10" fill="#0f172a" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="35" y="90" fill="#f87171" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🌱 कृषि खर्च व साहूकार से ऋण:</text>
+    <text x="35" y="112" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• 3 एकड़ जमीन पर मूंगफली उगाने हेतु साहूकार से ऋण लिया।</text>
+    <text x="35" y="132" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• उम्मीद थी कि फसल अच्छी होने पर सारा कर्ज चुका देगी।</text>
+    <text x="35" y="150" fill="#fca5a5" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  (खाद, बीज, कीटनाशक व सिंचाई के भारी खर्च)</text>
+
+    <!-- Content 2 -->
+    <rect x="20" y="172" width="450" height="105" rx="10" fill="#7f1d1d"/>
+    <text x="35" y="197" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">⚡ फसल विफलता एवं कर्ज का बोझ:</text>
+    <text x="35" y="220" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कीड़ों व सूखे से फसल बर्बाद $ightarrow$ महंगे स्प्रे भी काम न आए।</text>
+    <text x="35" y="240" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• साहूकार का कर्ज नहीं चुका पाई $ightarrow$ ब्याज जुड़कर रकम बहुत बड़ी हुई।</text>
+    <text x="35" y="260" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• अगले साल फिर नया कर्ज लिया पर सामान्य फसल से कर्ज नहीं उतरा।</text>
+
+    <!-- Content 3 -->
+    <rect x="20" y="290" width="450" height="105" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="245" y="315" fill="#f87171" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      ❌ साख की भूमिका: ऋण-जाल (Debt Trap)
+    </text>
+    <text x="35" y="340" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कर्ज चुकाने के लिए अपनी जमीन का एक हिस्सा बेचना पड़ा।</text>
+    <text x="35" y="360" fill="#f87171" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• साख ने स्वप्ना को ऐसी स्थिति में धकेला जहां से निकलना कष्टदायी है।</text>
+    <text x="35" y="380" fill="#fca5a5" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• उसकी आर्थिक स्थिति पहले की तुलना में बहुत बदतर हो गई।</text>
+  </g>
+
+  <!-- BOTTOM TAKEAWAY BAR -->
+  <g transform="translate(45, 530)" filter="url(#shadow3)">
+    <rect width="1010" height="95" rx="14" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+    <text x="505" y="558" fill="#a5b4fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      💡 महत्वपूर्ण निष्कर्ष: साख उपयोगी होगी या नुकसानदेह, यह किस बात पर निर्भर करता है?
+    </text>
+    <text x="505" y="582" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      1. गतिविधि में जोखिम का स्तर (Risk Factor) | 2. हानि होने पर सुरक्षा या सहयोग की व्यवस्था (Crop Insurance/Support) | 3. ब्याज दर एवं साख की शर्तें
+    </text>
+    <text x="505" y="605" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+      यदि जोखिम अधिक हो और सुरक्षा न हो तो साख कर्जदार को ऋण-जाल में फंसा सकती है।
+    </text>
+  </g>
+</svg>

@@ -188,7 +188,7 @@
     ],
     "category": "Banking & Finance",
     "dimensions": "1200x675",
-    "size_kb": 186
+    "size_kb": 194
   },
   {
     "id": "eco2_real_6_transport_logistics.webp",
@@ -207,7 +207,7 @@
     ],
     "category": "Transport & Infrastructure",
     "dimensions": "1200x675",
-    "size_kb": 229
+    "size_kb": 215
   },
   {
     "id": "eco2_real_7_final_goods_biscuits.webp",
@@ -900,6 +900,478 @@
     "category": "General Visual Asset",
     "dimensions": "SVG",
     "size_kb": 10
+  },
+  {
+    "id": "eco2_real_5_tertiary_banking.svg",
+    "path": "images/eco2/eco2_real_5_tertiary_banking.svg",
+    "chapter": "eco2",
+    "title": "Eco Real Tertiary Banking Svg",
+    "tags": [
+      "eco",
+      "real",
+      "tertiary",
+      "banking",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 15
+  },
+  {
+    "id": "chart_eco3_1_barter_vs_modern_money.svg",
+    "path": "images/eco3/chart_eco3_1_barter_vs_modern_money.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Barter Vs Modern Money Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "barter",
+      "modern",
+      "money",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 12
+  },
+  {
+    "id": "chart_eco3_2_bank_credit_mechanism.svg",
+    "path": "images/eco3/chart_eco3_2_bank_credit_mechanism.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Bank Credit Mechanism Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "bank",
+      "credit",
+      "mechanism",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 11
+  },
+  {
+    "id": "chart_eco3_3_credit_two_outcomes_salim_swapna.svg",
+    "path": "images/eco3/chart_eco3_3_credit_two_outcomes_salim_swapna.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Credit Two Outcomes Salim Swapna Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "credit",
+      "two",
+      "outcomes",
+      "salim",
+      "swapna",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "chart_eco3_4_formal_vs_informal_credit_and_rbi.svg",
+    "path": "images/eco3/chart_eco3_4_formal_vs_informal_credit_and_rbi.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Formal Vs Informal Credit And Rbi Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "formal",
+      "informal",
+      "credit",
+      "and",
+      "rbi",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 13
+  },
+  {
+    "id": "chart_eco3_5_shg_model_and_women_empowerment.svg",
+    "path": "images/eco3/chart_eco3_5_shg_model_and_women_empowerment.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Shg Model And Women Empowerment Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "shg",
+      "model",
+      "and",
+      "women",
+      "empowerment",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 12
+  },
+  {
+    "id": "chart_eco3_cheque_sample_filled.svg",
+    "path": "images/eco3/chart_eco3_cheque_sample_filled.svg",
+    "chapter": "eco3",
+    "title": "Chart Eco Cheque Sample Filled Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "cheque",
+      "sample",
+      "filled",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "eco3_real_10_swapna_groundnut_farm_loss.webp",
+    "path": "images/eco3/eco3_real_10_swapna_groundnut_farm_loss.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Swapna Groundnut Farm Loss Webp",
+    "tags": [
+      "eco",
+      "real",
+      "swapna",
+      "groundnut",
+      "farm",
+      "loss",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 230
+  },
+  {
+    "id": "eco3_real_11_collateral_land_property_assets.webp",
+    "path": "images/eco3/eco3_real_11_collateral_land_property_assets.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Collateral Land Property Assets Webp",
+    "tags": [
+      "eco",
+      "real",
+      "collateral",
+      "land",
+      "property",
+      "assets",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 121
+  },
+  {
+    "id": "eco3_real_12_formal_sector_commercial_bank.webp",
+    "path": "images/eco3/eco3_real_12_formal_sector_commercial_bank.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Formal Sector Commercial Bank Webp",
+    "tags": [
+      "eco",
+      "real",
+      "formal",
+      "sector",
+      "commercial",
+      "bank",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 174
+  },
+  {
+    "id": "eco3_real_13_rural_cooperative_credit_society.webp",
+    "path": "images/eco3/eco3_real_13_rural_cooperative_credit_society.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Rural Cooperative Credit Society Webp",
+    "tags": [
+      "eco",
+      "real",
+      "rural",
+      "cooperative",
+      "credit",
+      "society",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 341
+  },
+  {
+    "id": "eco3_real_14_informal_moneylender_village.webp",
+    "path": "images/eco3/eco3_real_14_informal_moneylender_village.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Informal Moneylender Village Webp",
+    "tags": [
+      "eco",
+      "real",
+      "informal",
+      "moneylender",
+      "village",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 196
+  },
+  {
+    "id": "eco3_real_15_reserve_bank_of_india_hq.webp",
+    "path": "images/eco3/eco3_real_15_reserve_bank_of_india_hq.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Reserve Bank Of India Hq Webp",
+    "tags": [
+      "eco",
+      "real",
+      "reserve",
+      "bank",
+      "india",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 243
+  },
+  {
+    "id": "eco3_real_16_women_shg_meeting_village.webp",
+    "path": "images/eco3/eco3_real_16_women_shg_meeting_village.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Women Shg Meeting Village Webp",
+    "tags": [
+      "eco",
+      "real",
+      "women",
+      "shg",
+      "meeting",
+      "village",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 270
+  },
+  {
+    "id": "eco3_real_17_shg_microenterprise_handicraft.webp",
+    "path": "images/eco3/eco3_real_17_shg_microenterprise_handicraft.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Shg Microenterprise Handicraft Webp",
+    "tags": [
+      "eco",
+      "real",
+      "shg",
+      "microenterprise",
+      "handicraft",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 264
+  },
+  {
+    "id": "eco3_real_18_grameen_bank_microcredit.webp",
+    "path": "images/eco3/eco3_real_18_grameen_bank_microcredit.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Grameen Bank Microcredit Webp",
+    "tags": [
+      "eco",
+      "real",
+      "grameen",
+      "bank",
+      "microcredit",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 296
+  },
+  {
+    "id": "eco3_real_19_affordable_credit_economic_growth.webp",
+    "path": "images/eco3/eco3_real_19_affordable_credit_economic_growth.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Affordable Credit Economic Growth Webp",
+    "tags": [
+      "eco",
+      "real",
+      "affordable",
+      "credit",
+      "economic",
+      "growth",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 244
+  },
+  {
+    "id": "eco3_real_1_barter_system_market.webp",
+    "path": "images/eco3/eco3_real_1_barter_system_market.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Barter System Market Webp",
+    "tags": [
+      "eco",
+      "real",
+      "barter",
+      "system",
+      "market",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 288
+  },
+  {
+    "id": "eco3_real_20_financial_literacy_camp.webp",
+    "path": "images/eco3/eco3_real_20_financial_literacy_camp.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Financial Literacy Camp Webp",
+    "tags": [
+      "eco",
+      "real",
+      "financial",
+      "literacy",
+      "camp",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 257
+  },
+  {
+    "id": "eco3_real_2_ancient_coins_history.webp",
+    "path": "images/eco3/eco3_real_2_ancient_coins_history.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Ancient Coins History Webp",
+    "tags": [
+      "eco",
+      "real",
+      "ancient",
+      "coins",
+      "history",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 207
+  },
+  {
+    "id": "eco3_real_3_modern_currency_notes.webp",
+    "path": "images/eco3/eco3_real_3_modern_currency_notes.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Modern Currency Notes Webp",
+    "tags": [
+      "eco",
+      "real",
+      "modern",
+      "currency",
+      "notes",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 181
+  },
+  {
+    "id": "eco3_real_4_bank_deposit_counter.webp",
+    "path": "images/eco3/eco3_real_4_bank_deposit_counter.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Bank Deposit Counter Webp",
+    "tags": [
+      "eco",
+      "real",
+      "bank",
+      "deposit",
+      "counter",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 129
+  },
+  {
+    "id": "eco3_real_5_cheque_payment_concept.webp",
+    "path": "images/eco3/eco3_real_5_cheque_payment_concept.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Cheque Payment Concept Webp",
+    "tags": [
+      "eco",
+      "real",
+      "cheque",
+      "payment",
+      "concept",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 79
+  },
+  {
+    "id": "eco3_real_6_digital_upi_payment.webp",
+    "path": "images/eco3/eco3_real_6_digital_upi_payment.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Digital Upi Payment Webp",
+    "tags": [
+      "eco",
+      "real",
+      "digital",
+      "upi",
+      "payment",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 182
+  },
+  {
+    "id": "eco3_real_7_bank_atm_withdrawal.webp",
+    "path": "images/eco3/eco3_real_7_bank_atm_withdrawal.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Bank Atm Withdrawal Webp",
+    "tags": [
+      "eco",
+      "real",
+      "bank",
+      "atm",
+      "withdrawal",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 102
+  },
+  {
+    "id": "eco3_real_8_bank_credit_loan_desk.webp",
+    "path": "images/eco3/eco3_real_8_bank_credit_loan_desk.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Bank Credit Loan Desk Webp",
+    "tags": [
+      "eco",
+      "real",
+      "bank",
+      "credit",
+      "loan",
+      "desk",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 116
+  },
+  {
+    "id": "eco3_real_9_salim_leather_footwear_workshop.webp",
+    "path": "images/eco3/eco3_real_9_salim_leather_footwear_workshop.webp",
+    "chapter": "eco3",
+    "title": "Eco Real Salim Leather Footwear Workshop Webp",
+    "tags": [
+      "eco",
+      "real",
+      "salim",
+      "leather",
+      "footwear",
+      "workshop",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 263
   },
   {
     "id": "ai_geo1_10_land_degradation_reclamation.webp",
@@ -5287,174 +5759,6 @@
     "size_kb": 405
   },
   {
-    "id": "genai_hist4_topic10_manchester_comes_to_india.jpg",
-    "path": "images/hist4/genai_hist4_topic10_manchester_comes_to_india.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भरत म मनचसटर क आन Mancheste Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "भरत",
-      "मनचसटर",
-      "mancheste",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 33
-  },
-  {
-    "id": "genai_hist4_topic11_factories_come_up.jpg",
-    "path": "images/hist4/genai_hist4_topic11_factories_come_up.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग भरत म फकटरय क आन एव शरआत Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "भरत",
-      "फकटरय",
-      "शरआत",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 34
-  },
-  {
-    "id": "genai_hist4_topic14_peculiarities_of_industrial_growth.jpg",
-    "path": "images/hist4/genai_hist4_topic14_peculiarities_of_industrial_growth.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग औदयगक वकस क अनख वशषतए Pec Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "औदयगक",
-      "वकस",
-      "अनख",
-      "वशषतए",
-      "pec",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 34
-  },
-  {
-    "id": "genai_hist4_topic15_impact_of_ww1_on_industries.jpg",
-    "path": "images/hist4/genai_hist4_topic15_impact_of_ww1_on_industries.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic परथम वशव यदध क चमतकरक परभव Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "परथम",
-      "वशव",
-      "यदध",
-      "चमतकरक",
-      "परभव",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 34
-  },
-  {
-    "id": "genai_hist4_topic17_market_for_goods.jpg",
-    "path": "images/hist4/genai_hist4_topic17_market_for_goods.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग वसतओ क लए बजर Market For Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "वसतओ",
-      "बजर",
-      "market",
-      "for",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 33
-  },
-  {
-    "id": "genai_hist4_topic18_summary_key_takeaways.jpg",
-    "path": "images/hist4/genai_hist4_topic18_summary_key_takeaways.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग हमन कय सख पठ क सर Key T Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "हमन",
-      "key",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 33
-  },
-  {
-    "id": "genai_hist4_topic1_before_industrial_revolution.jpg",
-    "path": "images/hist4/genai_hist4_topic1_before_industrial_revolution.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग औदयगक करत स पहल Before Th Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "औदयगक",
-      "करत",
-      "पहल",
-      "before",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 33
-  },
-  {
-    "id": "genai_hist4_topic4_hand_labour_steam_power.jpg",
-    "path": "images/hist4/genai_hist4_topic4_hand_labour_steam_power.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग हथ क शरम और भप क शकत Hand Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "शरम",
-      "शकत",
-      "hand",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 33
-  },
-  {
-    "id": "genai_hist4_topic7_industrialisation_in_colonies.jpg",
-    "path": "images/hist4/genai_hist4_topic7_industrialisation_in_colonies.jpg",
-    "chapter": "hist4",
-    "title": "Genai Hist Topic भग औपनवशक भरत म औदयगकरण Indu Jpg",
-    "tags": [
-      "genai",
-      "hist",
-      "topic",
-      "औपनवशक",
-      "भरत",
-      "औदयगकरण",
-      "indu",
-      "jpg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "820x460",
-    "size_kb": 34
-  },
-  {
     "id": "ncert_ch4_fig10_houseless_hungry.webp",
     "path": "images/hist4/ncert_ch4_fig10_houseless_hungry.webp",
     "chapter": "hist4",
@@ -5467,8 +5771,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1436x904",
-    "size_kb": 376
+    "dimensions": "1200x896",
+    "size_kb": 385
   },
   {
     "id": "ncert_ch4_fig11_spinning_jenny.webp",
@@ -5483,8 +5787,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "868x652",
-    "size_kb": 69
+    "dimensions": "1536x1024",
+    "size_kb": 808
   },
   {
     "id": "ncert_ch4_fig12_london_underground_railway.webp",
@@ -5500,8 +5804,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1884x1308",
-    "size_kb": 513
+    "dimensions": "1200x896",
+    "size_kb": 570
   },
   {
     "id": "ncert_ch4_fig13_surat_english_factory.webp",
@@ -5517,8 +5821,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1576x1192",
-    "size_kb": 544
+    "dimensions": "1200x896",
+    "size_kb": 519
   },
   {
     "id": "ncert_ch4_fig14_gujarat_weaver.webp",
@@ -5533,8 +5837,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "956x996",
-    "size_kb": 96
+    "dimensions": "1200x896",
+    "size_kb": 476
   },
   {
     "id": "ncert_ch4_fig15_bombay_harbour.webp",
@@ -5549,8 +5853,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "2044x1196",
-    "size_kb": 688
+    "dimensions": "1200x896",
+    "size_kb": 521
   },
   {
     "id": "ncert_ch4_fig16_jamsetjee_jeejeebhoy.webp",
@@ -5565,8 +5869,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "488x632",
-    "size_kb": 31
+    "dimensions": "1024x1024",
+    "size_kb": 318
   },
   {
     "id": "ncert_ch4_fig17_dwarkanath_tagore.webp",
@@ -5581,8 +5885,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "468x652",
-    "size_kb": 52
+    "dimensions": "1024x1024",
+    "size_kb": 379
   },
   {
     "id": "ncert_ch4_fig18_tata_partners.webp",
@@ -5597,8 +5901,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x672",
-    "size_kb": 101
+    "dimensions": "1200x896",
+    "size_kb": 411
   },
   {
     "id": "ncert_ch4_fig19_bombay_mill_young_workers.webp",
@@ -5615,8 +5919,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "716x964",
-    "size_kb": 113
+    "dimensions": "1200x896",
+    "size_kb": 549
   },
   {
     "id": "ncert_ch4_fig1_dawn_of_century.webp",
@@ -5631,8 +5935,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1152x1368",
-    "size_kb": 430
+    "dimensions": "1200x896",
+    "size_kb": 526
   },
   {
     "id": "ncert_ch4_fig20_head_jobber.webp",
@@ -5647,8 +5951,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "744x1036",
-    "size_kb": 54
+    "dimensions": "1024x1024",
+    "size_kb": 435
   },
   {
     "id": "ncert_ch4_fig21_ahmedabad_mill_spinners.webp",
@@ -5664,8 +5968,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1156x856",
-    "size_kb": 150
+    "dimensions": "1200x896",
+    "size_kb": 534
   },
   {
     "id": "ncert_ch4_fig22_madras_chamber_commerce.webp",
@@ -5681,8 +5985,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1272x892",
-    "size_kb": 208
+    "dimensions": "1200x896",
+    "size_kb": 547
   },
   {
     "id": "ncert_ch4_fig23_handwoven_cloth.webp",
@@ -5697,8 +6001,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "500x820",
-    "size_kb": 125
+    "dimensions": "1200x896",
+    "size_kb": 631
   },
   {
     "id": "ncert_ch4_fig24_map_industries_1931.webp",
@@ -5730,8 +6034,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "884x1088",
-    "size_kb": 195
+    "dimensions": "896x1200",
+    "size_kb": 612
   },
   {
     "id": "ncert_ch4_fig26a_manchester_label.webp",
@@ -5746,8 +6050,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "656x848",
-    "size_kb": 175
+    "dimensions": "1024x559",
+    "size_kb": 242
   },
   {
     "id": "ncert_ch4_fig26b_ranjit_singh_label.webp",
@@ -5763,8 +6067,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "696x848",
-    "size_kb": 157
+    "dimensions": "896x1200",
+    "size_kb": 650
   },
   {
     "id": "ncert_ch4_fig27_sunlight_soap_calendar.webp",
@@ -5780,8 +6084,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "828x1140",
-    "size_kb": 197
+    "dimensions": "896x1200",
+    "size_kb": 516
   },
   {
     "id": "ncert_ch4_fig28_indian_mill_cloth_label.webp",
@@ -5798,8 +6102,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x1096",
-    "size_kb": 270
+    "dimensions": "896x1200",
+    "size_kb": 609
   },
   {
     "id": "ncert_ch4_fig2_two_magicians.webp",
@@ -5814,8 +6118,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x1152",
-    "size_kb": 220
+    "dimensions": "1200x896",
+    "size_kb": 507
   },
   {
     "id": "ncert_ch4_fig3_spinning_18th_century.webp",
@@ -5830,8 +6134,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1100x844",
-    "size_kb": 214
+    "dimensions": "1536x1024",
+    "size_kb": 834
   },
   {
     "id": "ncert_ch4_fig4_lancashire_mill.webp",
@@ -5846,8 +6150,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "896x1204",
-    "size_kb": 172
+    "dimensions": "1024x1024",
+    "size_kb": 501
   },
   {
     "id": "ncert_ch4_fig5_industrial_manchester.webp",
@@ -5862,8 +6166,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1544x952",
-    "size_kb": 257
+    "dimensions": "1536x1024",
+    "size_kb": 817
   },
   {
     "id": "ncert_ch4_fig6_railway_fitting_shop.webp",
@@ -5879,8 +6183,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x556",
-    "size_kb": 190
+    "dimensions": "1536x1024",
+    "size_kb": 862
   },
   {
     "id": "ncert_ch4_fig7_spinning_factory_1830.webp",
@@ -5895,8 +6199,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1388x796",
-    "size_kb": 323
+    "dimensions": "1536x1024",
+    "size_kb": 805
   },
   {
     "id": "ncert_ch4_fig8_workers_search_work.webp",
@@ -5912,8 +6216,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1156x908",
-    "size_kb": 198
+    "dimensions": "1536x1024",
+    "size_kb": 643
   },
   {
     "id": "ncert_ch4_fig9_iron_works.webp",
@@ -5928,8 +6232,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x832",
-    "size_kb": 201
+    "dimensions": "1536x1024",
+    "size_kb": 807
   },
   {
     "id": "ai_ch5_1_chinese_woodblock_printing.webp",
@@ -5990,8 +6294,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1152x876",
-    "size_kb": 427
+    "dimensions": "1024x559",
+    "size_kb": 180
   },
   {
     "id": "ai_ch5_6_traditional_indian_manuscripts.webp",
@@ -6005,8 +6309,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "988x1292",
-    "size_kb": 381
+    "dimensions": "1024x559",
+    "size_kb": 194
   },
   {
     "id": "ai_ch5_8_women_and_print_reading.webp",
@@ -6021,8 +6325,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1656x1328",
-    "size_kb": 440
+    "dimensions": "1024x559",
+    "size_kb": 190
   },
   {
     "id": "ncert_ch5_fig10_macabre_dance.webp",
@@ -6037,8 +6341,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1152x876",
-    "size_kb": 492
+    "dimensions": "1024x765",
+    "size_kb": 415
   },
   {
     "id": "ncert_ch5_fig11_french_revolution_nobility.webp",
@@ -6054,8 +6358,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1492x1144",
-    "size_kb": 467
+    "dimensions": "512x382",
+    "size_kb": 115
   },
   {
     "id": "ncert_ch5_fig12_penny_magazine.webp",
@@ -6070,8 +6374,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "988x1292",
-    "size_kb": 455
+    "dimensions": "765x1024",
+    "size_kb": 352
   },
   {
     "id": "ncert_ch5_fig13_railway_station_ads.webp",
@@ -6087,8 +6391,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1644x848",
-    "size_kb": 540
+    "dimensions": "1024x765",
+    "size_kb": 461
   },
   {
     "id": "ncert_ch5_fig14_manuscript_pages.webp",
@@ -6103,8 +6407,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1656x1328",
-    "size_kb": 532
+    "dimensions": "1024x765",
+    "size_kb": 337
   },
   {
     "id": "ncert_ch5_fig15_diwan_e_hafiz.webp",
@@ -6119,8 +6423,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "480x896",
-    "size_kb": 101
+    "dimensions": "765x1024",
+    "size_kb": 330
   },
   {
     "id": "ncert_ch5_fig16_rigveda_manuscript.webp",
@@ -6135,8 +6439,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1284x408",
-    "size_kb": 87
+    "dimensions": "1024x765",
+    "size_kb": 357
   },
   {
     "id": "ncert_ch5_fig17_raja_ravi_varma_painting.webp",
@@ -6153,8 +6457,25 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1120x1648",
-    "size_kb": 275
+    "dimensions": "1024x864",
+    "size_kb": 320
+  },
+  {
+    "id": "ncert_ch5_fig17b_raja_ravi_varma.webp",
+    "path": "images/hist5/ncert_ch5_fig17b_raja_ravi_varma.webp",
+    "chapter": "hist5",
+    "title": "Ncert Ch Fig B Raja Ravi Varma Webp",
+    "tags": [
+      "ncert",
+      "fig",
+      "raja",
+      "ravi",
+      "varma",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "696x1024",
+    "size_kb": 259
   },
   {
     "id": "ncert_ch5_fig18_indian_charivari.webp",
@@ -6169,8 +6490,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x1016",
-    "size_kb": 267
+    "dimensions": "1024x765",
+    "size_kb": 358
   },
   {
     "id": "ncert_ch5_fig19_ghor_kali.webp",
@@ -6185,8 +6506,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1532x1104",
-    "size_kb": 516
+    "dimensions": "1024x765",
+    "size_kb": 437
   },
   {
     "id": "ncert_ch5_fig1_bookmaking.webp",
@@ -6200,8 +6521,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1028x1396",
-    "size_kb": 251
+    "dimensions": "1200x896",
+    "size_kb": 511
   },
   {
     "id": "ncert_ch5_fig20_indian_couple_caricature.webp",
@@ -6217,8 +6538,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "676x1004",
-    "size_kb": 207
+    "dimensions": "1024x559",
+    "size_kb": 264
   },
   {
     "id": "ncert_ch5_fig21_european_couple.webp",
@@ -6233,8 +6554,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1152x856",
-    "size_kb": 281
+    "dimensions": "1024x559",
+    "size_kb": 239
   },
   {
     "id": "ncert_ch5_fig22_lakshminath_bezbaroa.webp",
@@ -6249,8 +6570,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "336x448",
-    "size_kb": 19
+    "dimensions": "1024x1024",
+    "size_kb": 324
   },
   {
     "id": "ncert_ch5_fig2a_diamond_sutra.webp",
@@ -6265,8 +6586,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "856x1100",
-    "size_kb": 265
+    "dimensions": "1200x896",
+    "size_kb": 628
   },
   {
     "id": "ncert_ch5_fig2b_tripitaka_koreana.webp",
@@ -6281,8 +6602,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "700x468",
-    "size_kb": 60
+    "dimensions": "1200x896",
+    "size_kb": 419
   },
   {
     "id": "ncert_ch5_fig3_ukiyo_art.webp",
@@ -6297,8 +6618,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "400x524",
-    "size_kb": 50
+    "dimensions": "896x1200",
+    "size_kb": 571
   },
   {
     "id": "ncert_ch5_fig4a_morning_scene.webp",
@@ -6313,8 +6634,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1180x796",
-    "size_kb": 201
+    "dimensions": "896x1200",
+    "size_kb": 482
   },
   {
     "id": "ncert_ch5_fig4b_jikji.webp",
@@ -6328,8 +6649,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "668x476",
-    "size_kb": 81
+    "dimensions": "896x1200",
+    "size_kb": 431
   },
   {
     "id": "ncert_ch5_fig5_gutenberg_portrait.webp",
@@ -6344,8 +6665,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "492x588",
-    "size_kb": 88
+    "dimensions": "1024x1024",
+    "size_kb": 329
   },
   {
     "id": "ncert_ch5_fig6_gutenberg_press.webp",
@@ -6360,8 +6681,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "860x972",
-    "size_kb": 227
+    "dimensions": "1200x896",
+    "size_kb": 300
   },
   {
     "id": "ncert_ch5_fig7_gutenberg_bible.webp",
@@ -6376,8 +6697,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "748x1208",
-    "size_kb": 278
+    "dimensions": "1024x1536",
+    "size_kb": 948
   },
   {
     "id": "ncert_ch5_fig8_printer_workshop.webp",
@@ -6392,8 +6713,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "2044x964",
-    "size_kb": 825
+    "dimensions": "1536x1024",
+    "size_kb": 919
   },
   {
     "id": "ncert_ch5_fig9_limprimerie.webp",
@@ -6407,8 +6728,8 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "1124x1444",
-    "size_kb": 582
+    "dimensions": "1024x559",
+    "size_kb": 227
   },
   {
     "id": "ncert_ch5_p1_illustration1.webp",
@@ -6435,7 +6756,7 @@
       "webp"
     ],
     "category": "General Visual Asset",
-    "dimensions": "792x668",
-    "size_kb": 142
+    "dimensions": "1024x559",
+    "size_kb": 219
   }
 ]
