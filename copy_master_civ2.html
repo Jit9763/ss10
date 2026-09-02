@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 राजनीति विज्ञान - अध्याय 2: संघवाद | Master Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-accent: #0284c7;
+            --secondary: #1e1b4b;
+            --accent-green: #059669;
+            --accent-gold: #d97706;
+            --accent-red: #dc2626;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Hero Header */
+        .hero-header {
+            background: linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #1e1b4b 100%);
+            color: #ffffff;
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid #0284c7;
+        }
+
+        .hero-header h1 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #f8fafc;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-header p {
+            font-size: 22px;
+            color: #bae6fd;
+            font-weight: 600;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #0f172a 0%, #0369a1 100%);
+            color: #ffffff;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-size: 26px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: var(--shadow-sm);
+            border-left: 8px solid #0284c7;
+        }
+
+        p { margin-bottom: 18px; text-align: justify; }
+
+        .concept-card {
+            background: #f0f9ff;
+            border-left: 6px solid #0284c7;
+            border-radius: 14px;
+            padding: 24px;
+            margin: 25px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .concept-card h4 {
+            font-size: 20px;
+            font-weight: 900;
+            color: #0369a1;
+            margin-bottom: 12px;
+        }
+
+        ul.custom-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        ul.custom-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .img-box {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 18px;
+            padding: 16px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .img-box img {
+            width: 100%;
+            max-height: 650px !important;
+            max-width: 1100px !important;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .img-caption {
+            font-size: 20px;
+            font-weight: 900;
+            color: #0f172a;
+            margin-top: 8px;
+            -webkit-text-stroke: 0.5px #000000;
+        }
+
+        .img-desc {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 17px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .styled-table thead tr {
+            background-color: #0f172a;
+            color: #ffffff;
+            text-align: left;
+            font-weight: 900;
+            font-size: 19px;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) { background-color: #f8fafc; }
+
+        .fact-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #16a34a;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+
+        .fact-box h4 {
+            color: #15803d;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO HEADER -->
+    <div class="hero-header">
+        <h1>🏛️ कक्षा 10 राजनीति विज्ञान (लोकतांत्रिक राजनीति-2)</h1>
+        <p>अध्याय 2: संघवाद (Federalism) | मास्टर नोट्स</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">📌 1. संघवाद क्या है? (What is Federalism?)</div>
+    
+    <p>संघवाद शासन की वह व्यवस्था है जिसमें <b>सत्ता का विभाजन एक केंद्रीय प्राधिकरण और देश की विभिन्न क्षेत्रीय या प्रांतीय इकाइयों के बीच होता है</b>। सामान्यतः संघात्मक व्यवस्था में दो स्तरों की सरकारें होती हैं—एक पूरे देश के लिए (केंद्र सरकार) जो राष्ट्रीय महत्व के विषयों को देखती है, और दूसरी प्रांतों या राज्यों के लिए (राज्य सरकार) जो दिन-प्रतिदिन के प्रांतीय प्रशासन का संचालन करती है।</p>
+
+    <!-- CHART 2.1 -->
+    <div class="img-box">
+        <img src="images/pol2/chart_pol2_1_unitary_vs_federal_system.svg" alt="चार्ट 2.1: एकात्मक बनाम संघात्मक शासन तुलना चार्ट"/>
+        <div class="img-caption">🏛️ चार्ट 2.1: एकात्मक बनाम संघात्मक शासन व्यवस्था (Unitary vs Federal System)</div>
+        <div class="img-desc">एकल केंद्रीय सत्ता बनाम केंद्र और राज्यों के बीच स्वायत्त शक्तियों के बंटवारे की तुलना।</div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">⭐ 2. संघात्मक व्यवस्था की 7 मुख्य विशेषताएं</div>
+
+    <!-- CHART 2.2 -->
+    <div class="img-box">
+        <img src="images/pol2/chart_pol2_2_seven_features_of_federalism.svg" alt="चार्ट 2.2: संघात्मक व्यवस्था की 7 मूलभूत विशेषताएं चार्ट"/>
+        <div class="img-caption">⭐ चार्ट 2.2: संघात्मक व्यवस्था की 7 मुख्य विशेषताएं (7 Key Features of Federalism)</div>
+        <div class="img-desc">बहुस्तरीय सरकार, स्वतंत्र अधिकार क्षेत्र, संवैधानिक सुरक्षा, कठोर संशोधन, स्वतंत्र न्यायपालिका, वित्तीय स्वायत्तता व दोहरा उद्देश्य।</div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">🤝 3. संघ बनाने के दो तरीके (Coming Together vs Holding Together)</div>
+
+    <p>इतिहास और राजनीतिक परिस्थितियों के आधार पर दुनिया में <b>दो तरीकों से संघों का गठन होता है</b>:</p>
+
+    <!-- CHART 2.3 -->
+    <div class="img-box">
+        <img src="images/pol2/chart_pol2_3_coming_together_vs_holding_together.svg" alt="चार्ट 2.3: साथ आकर बनाम साथ लेकर संघ बनाने की तुलना"/>
+        <div class="img-caption">🤝 चार्ट 2.3: साथ आकर बनाम साथ लेकर संघ बनाने का मॉडल (Federal Formation)</div>
+        <div class="img-desc">स्वतंत्र राज्यों का अपनी मर्जी से मिलना (USA/स्विट्जरलैंड) बनाम बड़े देश द्वारा शक्तियों का विभाजन (भारत/स्पेन)।</div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">📜 4. भारत में संघात्मक व्यवस्था और विधायी सूचियां</div>
+
+    <p>भारतीय संविधान ने भारत को 'राज्यों का संघ' (Union of States) घोषित किया है। भारतीय संविधान में केंद्र और राज्य सरकारों के बीच विधायी शक्तियों को <b>तीन स्पष्ट सूचियों (Lists) में विभाजित किया गया है</b>:</p>
+
+    <!-- CHART 2.4 -->
+    <div class="img-box">
+        <img src="images/pol2/chart_pol2_4_three_legislative_lists.svg" alt="चार्ट 2.4: भारतीय संविधान की 3 विधायी सूचियां"/>
+        <div class="img-caption">📜 चार्ट 2.4: भारतीय संविधान की 3 विधायी सूचियां (Union, State & Concurrent Lists)</div>
+        <div class="img-desc">संघ सूची (रक्षा/बैंकिंग/विदेश), राज्य सूची (पुलिस/कृषि), समवर्ती सूची (शिक्षा/वन) एवं अवशिष्ट शक्तियां (IT)।</div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section-title">🏡 5. भारत में विकेंद्रीकरण और 1992 का संशोधन</div>
+
+    <p>जब केंद्र और राज्य सरकार से शक्तियाँ लेकर स्थानीय सरकारों को दी जाती हैं, तो इसे <b>सत्ता का विकेंद्रीकरण (Decentralization)</b> कहते हैं। 1992 में संविधान के <b>73वें और 74वें संशोधन</b> द्वारा स्थानीय स्वशासन (पंचायती राज व नगर पालिका) को मजबूत और असरदार बनाया गया।</p>
+
+    <!-- CHART 2.5 -->
+    <div class="img-box">
+        <img src="images/pol2/chart_pol2_5_decentralization_act_1992.svg" alt="चार्ट 2.5: भारत में 1992 का विकेंद्रीकरण अधिनियम"/>
+        <div class="img-caption">🏡 चार्ट 2.5: 1992 का ऐतिहासिक विकेंद्रीकरण (Local Self-Government Reforms)</div>
+        <div class="img-desc">नियमित स्वतंत्र चुनाव, 33% महिला आरक्षण, स्वतंत्र राज्य चुनाव आयोग एवं वित्तीय संसाधनों का अनिवार्य बंटवारा।</div>
+    </div>
+
+    <!-- FACT BOX -->
+    <div class="fact-box">
+        <h4>💡 परीक्षा हेतु त्वरित स्मरणीय तथ्य (Quick Exam Takeaways):</h4>
+        <ul class="custom-list">
+            <li><b>एकात्मक शासन:</b> ब्रिटेन, श्रीलंका, चीन (केवल 1 केंद्रीय सरकार)।</li>
+            <li><b>संघात्मक शासन:</b> भारत, अमेरिका, बेल्जियम, कनाडा (2 या अधिक स्तर)।</li>
+            <li><b>साथ आकर (Coming Together):</b> USA, स्विट्जरलैंड, ऑस्ट्रेलिया।</li>
+            <li><b>साथ लेकर (Holding Together):</b> भारत, स्पेन, बेल्जियम।</li>
+            <li><b>संघ सूची:</b> रक्षा, विदेश मामले, बैंकिंग, मुद्रा, संचार (केवल केंद्र)।</li>
+            <li><b>राज्य सूची:</b> पुलिस, व्यापार, कृषि, सिंचाई, जेल (केवल राज्य)।</li>
+            <li><b>समवर्ती सूची:</b> शिक्षा, वन, मजदूर संघ, विवाह (केंद्र + राज्य दोनों; टकराव में केंद्र मान्य)।</li>
+            <li><b>1992 विकेंद्रीकरण संशोधन:</b> 73वां (पंचायती राज) व 74वां (नगर पालिका) अधिनियम, 33% महिला आरक्षण।</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
