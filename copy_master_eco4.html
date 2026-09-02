@@ -1,624 +1,637 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NCERT कक्षा 10 अर्थशास्त्र - अध्याय 4: वैश्वीकरण और भारतीय अर्थव्यवस्था</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0284c7;
-      --primary-dark: #0369a1;
-      --secondary-color: #f59e0b;
-      --accent-color: #10b981;
-      --bg-dark: #0f172a;
-      --card-bg: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: #334155;
-      --gold-accent: #facc15;
+<meta charset="utf-8"/>
+<title>अर्थशास्त्र (कक्षा 10) - अध्याय 4: वैश्वीकरण और भारतीय अर्थव्यवस्था (Globalization and the Indian Economy - Master Notes)</title>
+<style>
+    body, p, li, td, th {
+        font-size: 26pt !important;
+        line-height: 2.0 !important;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span {
+        font-weight: 900 !important;
+        -webkit-text-stroke: 1.1px #000000;
+        text-shadow: 0 0 1px #000;
     }
-
-    body {
-      font-family: 'Tiro Devanagari Hindi', serif;
-      background-color: #090d16;
-      color: var(--text-main);
-      padding: 30px 20px;
-      line-height: 2.0 !important;
-      font-size: 26pt !important;
-      font-weight: 900 !important;
-      -webkit-text-stroke: 1.1px #000000;
+    #contentToCopy {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
+    .hero-title {
+        text-align: center !important;
+        color: #ffffff !important;
+        background-color: #047857 !important;
+        border: 6px solid #10b981 !important;
+        border-radius: 24px !important;
+        padding: 35px !important;
+        margin-bottom: 50px !important;
+        font-size: 48pt !important;
+        font-weight: 900 !important;
+        box-shadow: 0 10px 30px rgba(4, 120, 87, 0.5) !important;
     }
-
-    /* Master Top Banner */
-    .hero-banner {
-      background: linear-gradient(135deg, #0369a1 0%, #0284c7 50%, #38bdf8 100%);
-      border: 3px solid #7dd3fc;
-      border-radius: 20px;
-      padding: 35px 25px;
-      text-align: center;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    .hero-title span {
+        color: #a7f3d0 !important;
+        font-size: 32pt !important;
+        display: block;
+        margin-top: 15px;
     }
-
-    .hero-banner h1 {
-      font-size: 38pt !important;
-      font-weight: 900 !important;
-      color: #ffffff;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      -webkit-text-stroke: 1.4px #000000;
-    }
-
-    .hero-banner p {
-      font-size: 26pt !important;
-      color: #fef08a;
-      font-weight: 900 !important;
-    }
-
-    /* Section Parts */
-    .part-section {
-      background: var(--card-bg);
-      border: 2.5px solid var(--border-color);
-      border-radius: 20px;
-      padding: 35px;
-      margin-bottom: 45px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    }
-
     .part-header {
-      background: linear-gradient(90deg, #1e3a8a 0%, #0284c7 100%);
-      border-left: 10px solid var(--gold-accent);
-      border-radius: 12px;
-      padding: 18px 25px;
-      margin-bottom: 30px;
-      font-size: 30pt !important;
-      font-weight: 900 !important;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        color: #065f46 !important;
+        background-color: #d1fae5 !important;
+        border-left: 18px solid #059669 !important;
+        padding: 24px 30px !important;
+        border-radius: 16px !important;
+        font-size: 42pt !important;
+        font-weight: 900 !important;
+        margin-top: 55px !important;
+        margin-bottom: 35px !important;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
     }
-
-    /* Concept & Fact Cards */
+    .topic-header {
+        color: #1e3a8a !important;
+        background-color: #eff6ff !important;
+        border-left: 16px solid #2563eb !important;
+        padding: 20px 28px !important;
+        border-radius: 14px !important;
+        font-size: 34pt !important;
+        font-weight: 900 !important;
+        margin-top: 45px !important;
+        margin-bottom: 30px !important;
+    }
+    .img-box {
+        text-align: center;
+        margin: 40px 0;
+        background: #f8fafc;
+        padding: 25px;
+        border-radius: 20px;
+        border: 4px solid #cbd5e1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .img-box img {
+        max-width: 100% !important;
+        max-height: 650px !important;
+        width: 1100px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 16px;
+        border: 4px solid #047857;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    .img-caption {
+        font-size: 28pt !important;
+        color: #065f46 !important;
+        margin-top: 15px !important;
+        font-weight: 900 !important;
+    }
+    .img-desc {
+        font-size: 22pt !important;
+        color: #334155 !important;
+        line-height: 1.8 !important;
+        margin-top: 10px !important;
+        font-weight: 900 !important;
+    }
     .concept-card {
-      background: #0f172a;
-      border: 2px solid #38bdf8;
-      border-radius: 16px;
-      padding: 25px 30px;
-      margin: 25px 0;
+        background: #f0fdf4;
+        border: 4px solid #86efac;
+        border-radius: 18px;
+        padding: 30px;
+        margin: 35px 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
-
     .concept-card h3 {
-      font-size: 28pt !important;
-      color: #38bdf8;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+        color: #15803d;
+        font-size: 30pt;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #86efac;
+        padding-bottom: 10px;
     }
-
     .fact-box {
-      background: #14532d;
-      border: 2.5px solid #4ade80;
-      border-radius: 16px;
-      padding: 25px 30px;
-      margin: 25px 0;
-      color: #ffffff;
+        background: #fefce8;
+        border: 4px solid #fde047;
+        border-radius: 18px;
+        padding: 30px;
+        margin: 35px 0;
     }
-
-    .fact-box h4 {
-      font-size: 28pt !important;
-      color: #facc15;
-      margin-bottom: 12px;
+    .fact-box h3 {
+        color: #a16207;
+        font-size: 30pt;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
-
     .warn-box {
-      background: #7f1d1d;
-      border: 2.5px solid #f87171;
-      border-radius: 16px;
-      padding: 25px 30px;
-      margin: 25px 0;
-      color: #ffffff;
+        background: #fef2f2;
+        border: 4px solid #fca5a5;
+        border-radius: 18px;
+        padding: 30px;
+        margin: 35px 0;
     }
-
-    .warn-box h4 {
-      font-size: 28pt !important;
-      color: #fef08a;
-      margin-bottom: 12px;
+    .warn-box h3 {
+        color: #b91c1c;
+        font-size: 30pt;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
-
-    /* Comparison Table */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 25px 0;
-      background: #0f172a;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 2px solid #475569;
+    table.data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 35px 0;
+        font-size: 24pt;
     }
-
-    .data-table th, .data-table td {
-      padding: 18px 20px;
-      text-align: left;
-      border: 1.5px solid #334155;
-      font-size: 24pt !important;
-      font-weight: 900 !important;
+    table.data-table th, table.data-table td {
+        border: 3px solid #059669;
+        padding: 18px;
+        text-align: left;
     }
-
-    .data-table th {
-      background: #0369a1;
-      color: #ffffff;
-      font-size: 26pt !important;
+    table.data-table th {
+        background-color: #047857;
+        color: #ffffff;
+        font-size: 26pt;
     }
-
-    .data-table tr:nth-child(even) {
-      background: #1e293b;
+    table.data-table tr:nth-child(even) {
+        background-color: #f0fdf4;
     }
-
-    /* Visual Media Styling */
-    .visual-wrapper {
-      margin: 30px 0;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 3px solid #38bdf8;
-      background: #000000;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-    }
-
-    .visual-wrapper img, .visual-wrapper svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .visual-caption {
-      background: #0f172a;
-      padding: 14px 20px;
-      font-size: 22pt !important;
-      color: #93c5fd;
-      font-weight: 900 !important;
-      text-align: center;
-      border-top: 1.5px solid #334155;
-    }
-
-    .svg-chart-wrapper {
-      margin: 35px 0;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 3px solid #a855f7;
-      background: #0f172a;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-    }
-
-    .svg-chart-wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Bullet Lists */
     ul, ol {
-      margin-left: 35px;
-      margin-top: 15px;
-      margin-bottom: 20px;
+        padding-left: 45px;
     }
-
     li {
-      margin-bottom: 12px;
+        margin-bottom: 18px;
     }
-
-    .highlight-gold {
-      color: var(--gold-accent);
-    }
-    
-    .highlight-green {
-      color: #4ade80;
-    }
-
-    .highlight-cyan {
-      color: #38bdf8;
-    }
-  </style>
+</style>
 </head>
 <body>
+<div id="contentToCopy">
 
-<div class="container">
-
-  <!-- TOP HERO BANNER -->
-  <div class="hero-banner">
-    <h1>🌍 NCERT कक्षा 10 अर्थशास्त्र - अध्याय 4</h1>
-    <p>वैश्वीकरण और भारतीय अर्थव्यवस्था (Globalization and the Indian Economy)</p>
-  </div>
-
-  <!-- PART 1 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🛍️ भाग 1: विगत कुछ दशकों में भारतीय बाजार में परिवर्तन</span>
+    <!-- HERO TITLE -->
+    <div class="hero-title">
+        अर्थशास्त्र (कक्षा 10) - अध्याय 4
+        <span>वैश्वीकरण और भारतीय अर्थव्यवस्था (Globalization and the Indian Economy)</span>
     </div>
 
-    <p>आज एक उपभोक्ता के रूप में हमारे सामने विभिन्न प्रकार की वस्तुओं और सेवाओं के व्यापक विकल्प उपलब्ध हैं। विश्व के शीर्ष विनिर्माताओं द्वारा उत्पादित डिजिटल कैमरे, मोबाइल फोन, स्मार्ट टीवी और ऑटोमोबाइल हमारे बाजारों में आसानी से खरीदे जा सकते हैं।</p>
+    <!-- PART 1 -->
+    <div class="part-header">📌 भाग 1: विगत कुछ दशकों में भारतीय बाजार में परिवर्तन</div>
 
+    <div class="topic-header">1.1 उपभोक्ताओं के सामने विकल्पों की भरमार (Transformation of Consumer Markets)</div>
     <div class="concept-card">
-      <h3>📜 1. 1990 से पूर्व का भारतीय बाजार (Pre-1991 Market):</h3>
-      <ul>
-        <li>1990 के दशक के प्रारंभ तक भारतीय सड़कों पर केवल दो मुख्य कारें दिखाई देती थीं — <strong>एंबेसडर (Ambassador)</strong> और <strong>प्रीमियर पद्मिनी (Premier Padmini)</strong>।</li>
-        <li>विदेशी उत्पादकों के प्रवेश पर भारी प्रतिबंध थे, जिससे उपभोक्ताओं के पास बहुत सीमित विकल्प थे।</li>
-      </ul>
+        <h3>🛍️ भारतीय बाजार में क्रांतिकारी बदलाव</h3>
+        <ul>
+            <li><b>आधुनिक उपभोक्ता विकल्प:</b> आज भारत के बाजारों में दुनिया के शीर्ष ब्रांड्स के डिजिटल कैमरे, मोबाइल फोन, टेलीविजन और परिधान आसानी से उपलब्ध हैं।</li>
+            <li><b>ऑटोमोबाइल क्षेत्र में बदलाव:</b>
+                <ul>
+                    <li><b>1990 से पूर्व:</b> भारतीय सड़कों पर केवल दो मुख्य कारें (एंबेसडर और फिएट/पद्मिनी) ही दिखाई देती थीं।</li>
+                    <li><b>वर्तमान स्थिति:</b> आज विश्व की लगभग सभी शीर्ष कार निर्माता कंपनियां (हुंडई, टोयोटा, होंडा, फोर्ड, सुजुकी आदि) भारत में नवीनतम मॉडल बेच रही हैं।</li>
+                </ul>
+            </li>
+            <li><b>बाजारों का तीव्र रूपांतरण:</b> मात्र दो से तीन दशकों में भारतीय बाजार सीमित विकल्प वाले बाजार से बदलकर विश्वस्तरीय प्रतिस्पर्धी बाजार बन चुका है।</li>
+        </ul>
     </div>
 
-    <!-- Image 1 & Image 2 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_1_modern_consumer_market_variety.webp" alt="आधुनिक भारतीय बाजार" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Modern+Consumer+Market'">
-      <div class="visual-caption">चित्र 4.1: आधुनिक भारतीय बाजार - बहुराष्ट्रीय ब्रांड्स एवं इलेक्ट्रॉनिक उत्पादों की प्रचुरता</div>
+    <!-- IMAGE 4.1 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_1_modern_consumer_market_variety.webp" alt="चित्र 4.1: आधुनिक भारतीय उपभोक्ता बाजार में अंतरराष्ट्रीय ब्रांड्स के उत्पादों की प्रचुरता"/>
+        <div class="img-caption">🖼️ चित्र 4.1: आधुनिक भारतीय उपभोक्ता बाजार (Modern Consumer Variety)</div>
+        <div class="img-desc">आधुनिक शॉपिंग मॉल में स्मार्ट इलेक्ट्रॉनिक्स, गैजेट्स और अंतरराष्ट्रीय उपभोक्ता वस्तुओं के प्रचुर विकल्प।</div>
     </div>
 
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_2_vintage_indian_market_past.webp" alt="1990 से पूर्व का भारतीय बाजार" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Vintage+Indian+Market+1980s'">
-      <div class="visual-caption">चित्र 4.2: 1980 के दशक का परंपरागत भारतीय बाजार - सीमित विकल्प एवं एंबेसडर कारों का दौर</div>
+    <!-- IMAGE 4.2 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_2_vintage_indian_market_past.webp" alt="चित्र 4.2: 1990 से पूर्व का भारतीय बाजार - सीमित उत्पाद व परंपरागत एंबेसडर कारें"/>
+        <div class="img-caption">🚗 चित्र 4.2: 1990 से पूर्व का भारतीय बाजार (Pre-1991 Restricted Market)</div>
+        <div class="img-desc">उदारीकरण से पूर्व भारतीय सड़कों पर केवल एंबेसडर व पद्मिनी कारें और दुकानों में सीमित स्थानीय उत्पाद ही मिलते थे।</div>
+    </div>
+
+    <!-- PART 2 -->
+    <div class="part-header">📌 भाग 2: अंतरदेशीय उत्पादन एवं बहुराष्ट्रीय कंपनियां (MNCs)</div>
+
+    <div class="topic-header">2.1 बहुराष्ट्रीय कंपनी (MNC) की परिभाषा एवं वैश्विक उत्पादन विभाजन</div>
+    <div class="concept-card">
+        <h3>🏢 बहुराष्ट्रीय कंपनी (MNC - Multinational Corporation)</h3>
+        <ul>
+            <li><b>परिभाषा:</b> बहुराष्ट्रीय कंपनी वह कंपनी है जो एक से अधिक देशों में उत्पादन पर स्वामित्व या नियंत्रण रखती है।</li>
+            <li><b>कार्यालय व कारखानों की स्थापना:</b> MNCs उन क्षेत्रों में अपने कार्यालय और कारखाने स्थापित करती हैं जहाँ उन्हें <b>सस्ता श्रम, कुशल कार्यबल और अन्य अनुकूल संसाधन</b> कम लागत पर मिलते हैं।</li>
+            <li><b>उद्देश्य:</b> उत्पादन लागत में <b>50% से 60% तक की बचत</b> करना और अधिक से अधिक वैश्विक लाभ अर्जित करना।</li>
+            <li><b>उत्पादन का जटिल भौगोलिक विभाजन (NCERT क्लासिक उदाहरण):</b>
+                <ul>
+                    <li><b>अमेरिका/यूरोप:</b> उच्च-स्तरीय अनुसंधान (R&amp;D) और औद्योगिक उत्पादों का डिजाइन तैयार करना।</li>
+                    <li><b>चीन व पूर्वी एशिया:</b> कम लागत पर विनिर्माण (Manufacturing) एवं बड़े पैमाने पर पार्ट्स बनाना।</li>
+                    <li><b>मेक्सिको व पूर्वी यूरोप:</b> अमेरिका और यूरोपीय बाजारों के निकट होने के कारण अंतिम उत्पादों की त्वरित असेंबली।</li>
+                    <li><b>भारत:</b> कुशल अंग्रेजी-भाषी इंजीनियर एवं ग्राहक सेवा हेतु 24×7 आधुनिक BPO व कॉल सेंटर सपोर्ट।</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CHART 4.1 -->
+    <div class="img-box">
+        <img src="images/eco4/chart_eco4_1_mnc_global_production_network.svg" alt="चार्ट 4.1: बहुराष्ट्रीय कंपनी (MNC) का जटिल वैश्विक उत्पादन नेटवर्क"/>
+        <div class="img-caption">📊 चार्ट 4.1: बहुराष्ट्रीय कंपनी का वैश्विक उत्पादन मॉडल (Global Production Chain)</div>
+        <div class="img-desc">डिजाइन (USA) $ightarrow$ कलपुर्जे निर्माण (चीन) $ightarrow$ असेंबली (मेक्सिको) $ightarrow$ आईटी व ग्राहक सेवा (भारत) का संपूर्ण प्रवाह।</div>
+    </div>
+
+    <!-- IMAGE 4.3 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_3_global_mnc_corporate_headquarters.webp" alt="चित्र 4.3: गगनचुंबी आधुनिक बहुराष्ट्रीय कंपनी का वैश्विक कॉर्पोरेट मुख्यालय"/>
+        <div class="img-caption">🏙️ चित्र 4.3: बहुराष्ट्रीय कंपनी (MNC) का मुख्यालय (Global Headquarters)</div>
+        <div class="img-desc">वैश्विक स्तर पर उत्पादन, निवेश और विपणन की केंद्रीय रणनीति बनाने वाला आधुनिक बहुराष्ट्रीय मुख्यालय।</div>
+    </div>
+
+    <!-- IMAGE 4.4 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_4_industrial_design_rnd_lab.webp" alt="चित्र 4.4: विकसित देशों में उत्पाद अनुसंधान एवं अत्याधुनिक 3D औद्योगिक डिजाइन केंद्र"/>
+        <div class="img-caption">🔬 चित्र 4.4: अनुसंधान व उत्पाद डिजाइन (R&amp;D in Developed Nations)</div>
+        <div class="img-desc">अत्याधुनिक 3D मॉडलिंग और सॉफ्टवेयर सिमुलेशन द्वारा नए उत्पादों का नवाचार व प्रोटोटाइप डिजाइन।</div>
+    </div>
+
+    <!-- IMAGE 4.5 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_5_mass_electronics_manufacturing_factory.webp" alt="चित्र 4.5: चीन व पूर्वी एशिया में विशाल पैमाने पर इलेक्ट्रॉनिक्स विनिर्माण संयंत्र"/>
+        <div class="img-caption">🏭 चित्र 4.5: विशाल विनिर्माण केंद्र (Mass Manufacturing in Asia)</div>
+        <div class="img-desc">सस्ते श्रम और विशाल इंफ्रास्ट्रक्चर की बदौलत दुनिया भर के लिए इलेक्ट्रॉनिक्स कलपुर्जों का उत्पादन।</div>
+    </div>
+
+    <!-- IMAGE 4.6 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_6_automated_automobile_assembly_line.webp" alt="चित्र 4.6: मेक्सिको व यूरोप में रोबोटिक कार एवं भारी उपकरण असेंबली लाइन"/>
+        <div class="img-caption">🤖 चित्र 4.6: स्वचालित असेंबली लाइन (Robotic Assembly Plants)</div>
+        <div class="img-desc">बाजारों के समीप रोबोटिक आर्म्स द्वारा कार और इलेक्ट्रॉनिक्स उपकरणों की त्वरित असेंबली।</div>
+    </div>
+
+    <!-- IMAGE 4.7 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_7_indian_it_bpo_call_center.webp" alt="चित्र 4.7: भारत में 24×7 आधुनिक BPO कॉल सेंटर और आईटी सपोर्ट सेवाएं"/>
+        <div class="img-caption">📞 चित्र 4.7: भारत का आईटी व BPO क्षेत्र (IT &amp; Customer Support in India)</div>
+        <div class="img-desc">अंग्रेजी-भाषी कुशल युवाओं द्वारा विश्वभर के ग्राहकों को 24×7 तकनीकी व ग्राहक सहायता सेवाएं।</div>
+    </div>
+
+    <!-- PART 3 -->
+    <div class="part-header">📌 भाग 3: विश्व भर के उत्पादन को आपस में जोड़ना (Interlinking Production)</div>
+
+    <div class="topic-header">3.1 विदेशी निवेश और MNCs द्वारा उत्पादन नियंत्रण के 4 प्रमुख तरीके</div>
+    <div class="concept-card">
+        <h3>🌐 विदेशी निवेश (Foreign Investment) एवं 4 मार्ग</h3>
+        <ul>
+            <li><b>विदेशी निवेश:</b> बहुराष्ट्रीय कंपनियों (MNCs) द्वारा लाभ कमाने के उद्देश्य से भूमि, भवन, मशीनें और अन्य उपकरण खरीदने में किए गए धन व्यय को <b>'विदेशी निवेश'</b> कहते हैं।</li>
+            <li><b>उत्पादन को जोड़ने के 4 प्रमुख तरीके:</b>
+                <ol>
+                    <li><b>स्थानीय कंपनियों के साथ संयुक्त उपक्रम (Joint Venture):</b>
+                        <ul>
+                            <li>MNCs स्थानीय कंपनी के साथ मिलकर साझेदारी में उत्पादन करती हैं।</li>
+                            <li><i>स्थानीय कंपनी को लाभ:</i> अतिरिक्त पूंजी निवेश एवं नवीनतम आधुनिक तकनीक की प्राप्ति।</li>
+                            <li><i>उदाहरण:</i> फोर्ड मोटर्स और महिंद्रा एंड महिंद्रा (1995)।</li>
+                        </ul>
+                    </li>
+                    <li><b>स्थानीय कंपनियों का सीधा अधिग्रहण (Buying Up Local Companies):</b>
+                        <ul>
+                            <li>यह MNCs का सबसे आम तरीका है। स्थानीय कंपनी को खरीदकर अपने उत्पादन का त्वरित विस्तार करना।</li>
+                            <li><i>NCERT केस:</i> अमेरिकी MNC <b>कारगिल फूड्स (Cargill Foods)</b> ने भारत की <b>परख फूड्स (Parakh Foods)</b> को खरीदा। परख फूड्स के 4 बड़े तेल रिफाइनरी प्लांट और विशाल विपणन नेटवर्क पर कारगिल का एकाधिकार हो गया (50 लाख पैकेट तेल दैनिक क्षमता)।</li>
+                        </ul>
+                    </li>
+                    <li><b>छोटे उत्पादकों को अनुबंध पर ऑर्डर देना (Contract Manufacturing / Outsourcing):</b>
+                        <ul>
+                            <li>गारमेंट्स, जूते-चप्पल और खेल के सामान में MNCs छोटे उत्पादकों को माल बनाने का ऑर्डर देती हैं और फिर अपने ब्रांड नेम से वैश्विक बाजारों में ऊंचे दामों पर बेचती हैं।</li>
+                        </ul>
+                    </li>
+                    <li><b>कड़ी प्रतिस्पर्धा और आपूर्ति श्रृंखला नियंत्रण:</b>
+                        <ul>
+                            <li>स्थानीय कंपनियों के साथ कड़ी प्रतिस्पर्धा करके या उन्हें अपनी आपूर्ति श्रृंखला (Supply Chain) में शामिल करके नियंत्रण स्थापित करना।</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CHART 4.2 -->
+    <div class="img-box">
+        <img src="images/eco4/chart_eco4_2_four_ways_mnc_investment.svg" alt="चार्ट 4.2: बहुराष्ट्रीय कंपनियों द्वारा उत्पादन जोड़ने के 4 प्रमुख तरीके"/>
+        <div class="img-caption">📊 चार्ट 4.2: अंतरदेशीय उत्पादन जोड़ने के 4 तरीके (4 Modes of Global Production)</div>
+        <div class="img-desc">संयुक्त उपक्रम, स्थानीय कंपनियों का अधिग्रहण (कारगिल केस), अनुबंध आउटसोर्सिंग व कड़ी प्रतिस्पर्धा का तुलनात्मक मॉडल।</div>
+    </div>
+
+    <!-- IMAGE 4.8 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_8_cargill_parakh_foods_edible_oil_refinery.webp" alt="चित्र 4.8: MNC द्वारा स्थानीय कंपनी का अधिग्रहण - आधुनिक खाद्य तेल रिफाइनरी एवं पैकेजिंग प्लांट"/>
+        <div class="img-caption">🛢️ चित्र 4.8: स्थानीय कंपनी का अधिग्रहण (Cargill &amp; Parakh Foods Case)</div>
+        <div class="img-desc">कारगिल फूड्स द्वारा परख फूड्स के अधिग्रहण के बाद अत्याधुनिक रिफाइनरी और विशाल खाद्य तेल पैकेजिंग बुनियादी ढांचा।</div>
+    </div>
+
+    <!-- IMAGE 4.9 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_9_ford_mahindra_joint_venture_plant.webp" alt="चित्र 4.9: संयुक्त साझेदारी - भारत में ऑटोमोबाइल प्लांट में अत्याधुनिक SUV का निर्माण"/>
+        <div class="img-caption">🤝 चित्र 4.9: संयुक्त उपक्रम (Indo-Global Automotive Joint Venture)</div>
+        <div class="img-desc">भारतीय व विदेशी इंजीनियरों का संयुक्त सहयोग, जिसमें आधुनिक तकनीक व स्थानीय विनिर्माण क्षमता का संगम हुआ।</div>
+    </div>
+
+    <!-- IMAGE 4.10 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_10_garment_contract_manufacturing_apparel.webp" alt="चित्र 4.10: अनुबंध विनिर्माण - निर्यात परिधान व वस्त्र निर्माण कार्यशाला"/>
+        <div class="img-caption">🧵 चित्र 4.10: अनुबंध विनिर्माण (Apparel Contract Manufacturing)</div>
+        <div class="img-desc">विश्वस्तरीय ब्रांड्स के लिए भारतीय परिधान कारखानों में कुशल कामगारों द्वारा गुणवत्तापूर्ण वस्त्र सिलाई।</div>
+    </div>
+
+    <!-- PART 4 -->
+    <div class="part-header">📌 भाग 4: विदेशी व्यापार और बाजारों का एकीकरण (Foreign Trade &amp; Integration)</div>
+
+    <div class="topic-header">4.1 विदेशी व्यापार के लाभ एवं केस स्टडी: भारत में चीनी खिलौने</div>
+    <div class="concept-card">
+        <h3>🚢 विदेशी व्यापार की भूमिका</h3>
+        <ul>
+            <li><b>उत्पादकों के लिए अवसर:</b> उत्पादक अपने देश के घरेलू बाजारों से बाहर निकलकर विश्व के अन्य देशों के बाजारों में अपनी वस्तुएं बेच सकते हैं।</li>
+            <li><b>उपभोक्ताओं के लिए लाभ:</b> उपभोक्ताओं को कम कीमत पर उत्तम गुणवत्ता और विविध प्रकार के विकल्प मिलते हैं।</li>
+            <li><b>मूल्यों का साम्य:</b> व्यापार के माध्यम से विभिन्न देशों के बाजारों में समान वस्तुओं की कीमतें एक जैसी होने लगती हैं।</li>
+        </ul>
     </div>
 
     <div class="fact-box">
-      <h4>💡 बाजार परिवर्तन का मुख्य कारण:</h4>
-      <p>भारतीय बाजारों में यह अभूतपूर्व क्रांति मुख्य रूप से <strong>वैश्वीकरण (Globalization)</strong>, <strong>व्यापार के उदारीकरण (Liberalization)</strong> और <strong>बहुराष्ट्रीय कंपनियों (MNCs)</strong> के आगमन के कारण संभव हुई है।</p>
+        <h3>🧸 NCERT केस स्टडी: भारत में चीनी खिलौनों का प्रभाव (Chinese Toys Case)</h3>
+        <ul>
+            <li><b>कारण:</b> चीनी खिलौना निर्माताओं को भारत में खिलौने निर्यात करने का अवसर मिला। प्लास्टिक के खिलौने नए डिजाइन और बहुत सस्ते थे।</li>
+            <li><b>भारतीय उपभोक्ताओं पर प्रभाव:</b> भारतीय खरीदारों को अधिक विकल्प और सस्ते, आकर्षक खिलौने मिले। एक ही वर्ष में <b>70% से 80% दुकानों</b> में भारतीय खिलौनों की जगह चीनी खिलौनों ने ले ली।</li>
+            <li><b>चीनी निर्माताओं पर प्रभाव:</b> चीन के खिलौना निर्माताओं को भारी व्यापारिक लाभ हुआ और उनका व्यवसाय तेजी से बढ़ा।</li>
+            <li><b>भारतीय खिलौना निर्माताओं पर प्रभाव:</b> भारतीय पारंपरिक खिलौना निर्माताओं को भारी घाटा हुआ और कई लघु कुटीर इकाइयां बंद हो गईं।</li>
+        </ul>
     </div>
-  </div>
 
-  <!-- PART 2 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🌐 भाग 2: बहुराष्ट्रीय कंपनियां (MNCs) एवं उत्पादन का वैश्विक प्रसार</span>
+    <!-- CHART 4.3 -->
+    <div class="img-box">
+        <img src="images/eco4/chart_eco4_3_chinese_toys_trade_impact.svg" alt="चार्ट 4.3: भारत में चीनी खिलौनों का व्यापारिक प्रभाव - केस स्टडी"/>
+        <div class="img-caption">📊 चार्ट 4.3: चीनी खिलौने केस स्टडी (Impact of Chinese Toys in India)</div>
+        <div class="img-desc">सस्ते मूल्य व आकर्षक डिजाइन $ightarrow$ 70-80% बाजार पर कब्जा $ightarrow$ उपभोक्ता लाभ vs भारतीय लघु खिलौना उद्योग का संकट।</div>
+    </div>
+
+    <!-- IMAGE 4.11 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_11_chinese_toys_indian_retail_shop.webp" alt="चित्र 4.11: भारतीय खुदरा दुकानों में रंग-बिरंगे सस्ते चीनी खिलौनों की भरमार"/>
+        <div class="img-caption">🧸 चित्र 4.11: भारतीय दुकानों में चीनी खिलौने (Chinese Toys in Retail Markets)</div>
+        <div class="img-desc">आकर्षक डिजाइन, बैटरी चालित कारें व सस्ते रोबोटिक खिलौने जिन्होंने भारतीय बाजार पर एकाधिकार किया।</div>
+    </div>
+
+    <!-- IMAGE 4.12 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_12_traditional_indian_toy_maker_struggle.webp" alt="चित्र 4.12: पारंपरिक भारतीय लकड़ी का खिलौना कारीगर - बाजार प्रतिस्पर्धा का सामना करते हुए"/>
+        <div class="img-caption">🪵 चित्र 4.12: पारंपरिक कारीगरों का संघर्ष (Traditional Toy Artisan)</div>
+        <div class="img-desc">हस्तनिर्मित लकड़ी और मिट्टी के पारंपरिक भारतीय खिलौनों की बिक्री में आई गिरावट और कारीगरों का संकट।</div>
+    </div>
+
+    <!-- PART 5 -->
+    <div class="part-header">📌 भाग 5: वैश्वीकरण क्या है और इसे संभव बनाने वाले कारक?</div>
+
+    <div class="topic-header">5.1 वैश्वीकरण की परिभाषा एवं प्रेरक कारक (Factors Enabling Globalization)</div>
+    <div class="concept-card">
+        <h3>🌍 वैश्वीकरण (Globalization)</h3>
+        <ul>
+            <li><b>परिभाषा:</b> विभिन्न देशों के बीच <b>तीव्र एकीकरण या परस्पर संबंध की प्रक्रिया</b> को 'वैश्वीकरण' कहते हैं।</li>
+            <li>वैश्वीकरण की प्रक्रिया में MNCs सबसे केंद्रीय भूमिका निभा रही हैं।</li>
+            <li><b>देशों के मध्य जुड़ाव के 3 मुख्य माध्यम:</b>
+                <ol>
+                    <li><b>वस्तुओं और सेवाओं का प्रवाह (Flow of Goods &amp; Services)</b></li>
+                    <li><b>पूंजी और विदेशी निवेश का प्रवाह (Flow of Capital &amp; Investments)</b></li>
+                    <li><b>प्रौद्योगिकी एवं लोगों का आवागमन (Flow of Technology &amp; Migration of People for Jobs/Education)</b></li>
+                </ol>
+            </li>
+        </ul>
     </div>
 
     <div class="concept-card">
-      <h3>🏢 बहुराष्ट्रीय कंपनी (Multinational Corporation - MNC) क्या है?</h3>
-      <p><strong>बहुराष्ट्रीय कंपनी वह कंपनी है जो एक से अधिक देशों में उत्पादन पर नियंत्रण अथवा स्वामित्व रखती है।</strong></p>
-      <ul>
-        <li>ये कंपनियां उन देशों या स्थानों पर कार्यालय और कारखाने स्थापित करती हैं जहां उन्हें <strong>सस्ता श्रम (Cheap Labour)</strong> और <strong>अन्य संसाधन</strong> आसानी से मिल सकें।</li>
-        <li><strong>उद्देश्य:</strong> उत्पादन लागत में न्यूनतम व्यय और अधिकतम लाभ कमाना।</li>
-      </ul>
+        <h3>⚡ वैश्वीकरण को सक्षम बनाने वाले 2 प्रमुख कारक</h3>
+        <ul>
+            <li><b>1. परिवहन प्रौद्योगिकी में तीव्र सुधार (Transportation Revolution):</b>
+                <ul>
+                    <li>विगत 50 वर्षों में परिवहन तकनीक में भारी प्रगति हुई है। लंबी दूरियों तक वस्तुओं की ढुलाई बहुत तेज गति से और अत्यंत कम लागत पर संभव हो गई है।</li>
+                    <li><b>कंटेनर परिवहन (Containerization):</b> विशालकाय कंटेनरों में माल भरकर जहाजों, ट्रेनों और ट्रकों पर सीधे लादा जा सकता है। इससे बंदरगाहों पर लोडिंग-अनलोडिंग का समय और लागत दोनों में भारी कमी आई।</li>
+                    <li><b>वायु परिवहन (Air Freight):</b> हवाई माल ढुलाई की लागत घटने से शीघ्र खराब होने वाली वस्तुएं और उच्च मूल्यवान उपकरण कुछ ही घंटों में विश्वभर में पहुंचाए जा रहे हैं।</li>
+                </ul>
+            </li>
+            <li><b>2. सूचना एवं संचार प्रौद्योगिकी में क्रांति (Information &amp; Communication Technology - ICT):</b>
+                <ul>
+                    <li>टेलीकम्यूनिकेशन, कंप्यूटर, मोबाइल फोन, सैटेलाइट और <b>इंटरनेट (World Wide Web)</b> ने पूरी दुनिया को एक वैश्विक गांव (Global Village) बना दिया है।</li>
+                    <li><b>NCERT लंदन मैगजीन केस स्टडी:</b> लंदन के पाठकों के लिए एक समाचार पत्रिका का संपादन व डिजाइन दिल्ली के एक आधुनिक स्टूडियो में कंप्यूटर सॉफ्टवेयर द्वारा किया जाता है। इंटरनेट द्वारा लंदन से टेक्स्ट भेजा जाता है, दिल्ली में डिजाइनिंग होती है, और लंदन के एक बैंक से दिल्ली के बैंक खाते में तुरंत ई-बैंकिंग द्वारा भुगतान हो जाता है।</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_3_global_mnc_corporate_headquarters.webp" alt="MNC मुख्यालय" onerror="this.src='https://via.placeholder.com/1200x675.png?text=MNC+Headquarters'">
-      <div class="visual-caption">चित्र 4.3: बहुराष्ट्रीय कंपनी (MNC) - आधुनिक गगनचुंबी कॉर्पोरेट मुख्यालय</div>
+    <!-- CHART 4.4 -->
+    <div class="img-box">
+        <img src="images/eco4/chart_eco4_4_factors_enabling_globalization_ict_transport.svg" alt="चार्ट 4.4: वैश्वीकरण को संभव बनाने वाले 2 प्रमुख इंजन - परिवहन क्रांति एवं ICT"/>
+        <div class="img-caption">📊 चार्ट 4.4: वैश्वीकरण के 2 मुख्य प्रेरक कारक (Two Drivers of Globalization)</div>
+        <div class="img-desc">कंटेनर लॉजिस्टिक्स व हवाई ढुलाई + टेलीकॉम, 5G, सैटेलाइट, सबमरीन ऑप्टिकल फाइबर व इंटरनेट का संयुक्त प्रभाव।</div>
     </div>
 
-    <!-- SVG CHART 1: MNC GLOBAL PRODUCTION NETWORK -->
-    <div class="svg-chart-wrapper">
-      <img src="images/eco4/chart_eco4_1_mnc_global_production_network.svg" alt="MNC वैश्विक उत्पादन नेटवर्क">
+    <!-- IMAGE 4.13 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_13_cargo_container_ship_port_logistics.webp" alt="चित्र 4.13: कंटेनर परिवहन क्रांति - आधुनिक बंदरगाह पर विशाल मालवाहक जहाज और गेंट्री क्रेन"/>
+        <div class="img-caption">🚢 चित्र 4.13: कंटेनर परिवहन क्रांति (Containerization &amp; Global Seaports)</div>
+        <div class="img-desc">हजारों मानकीकृत कंटेनरों से लदे विशाल मालवाहक जहाज, जिन्होंने वैश्विक व्यापार की लागत को 90% तक घटा दिया।</div>
     </div>
 
+    <!-- IMAGE 4.14 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_14_air_freight_cargo_airport.webp" alt="चित्र 4.14: तीव्र हवाई माल ढुलाई - अंतरराष्ट्रीय एयरपोर्ट कार्गो टर्मिनल पर तेज लोडिंग"/>
+        <div class="img-caption">✈️ चित्र 4.14: हवाई माल ढुलाई (Air Freight Cargo Logistics)</div>
+        <div class="img-desc">विशाल कार्गो विमानों द्वारा कुछ ही घंटों में अंतरराष्ट्रीय सीमाओं के पार आवश्यक उपकरणों व उत्पादों की आपूर्ति।</div>
+    </div>
+
+    <!-- IMAGE 4.15 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_15_satellite_telecom_submarine_cables_ict.webp" alt="चित्र 4.15: सूचना एवं संचार प्रौद्योगिकी - 5G टेलीकॉम टॉवर, सैटेलाइट और ऑप्टिकल फाइबर"/>
+        <div class="img-caption">📡 चित्र 4.15: सूचना एवं संचार क्रांति (ICT &amp; Digital Connectivity)</div>
+        <div class="img-desc">हाई-स्पीड 5G टेलीकॉम टॉवर, ऑप्टिकल फाइबर केबल्स और सैटेलाइट्स द्वारा मिली सेकंड्स में वैश्विक डेटा स्थानांतरण।</div>
+    </div>
+
+    <!-- IMAGE 4.16 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_16_delhi_magazine_design_london_client.webp" alt="चित्र 4.16: NCERT उदाहरण - दिल्ली में डिजाइनर लंदन के क्लाइंट की पत्रिका तैयार करते हुए"/>
+        <div class="img-caption">💻 चित्र 4.16: दिल्ली डिजाइन स्टूडियो - लंदन पत्रिका (Delhi IT for London Client)</div>
+        <div class="img-desc">इंटरनेट द्वारा लंदन से डेटा प्राप्त कर दिल्ली के युवा डिजाइनरों द्वारा 4K मॉनिटर्स पर अंतरराष्ट्रीय पत्रिका का लेआउट तैयार करना।</div>
+    </div>
+
+    <!-- PART 6 -->
+    <div class="part-header">📌 भाग 6: विदेश व्यापार तथा विदेशी निवेश नीति का उदारीकरण</div>
+
+    <div class="topic-header">6.1 व्यापार अवरोधक एवं 1991 की नई आर्थिक नीति (New Economic Policy 1991)</div>
     <div class="concept-card">
-      <h3>⚙️ उत्पादन का जटिल भौगोलिक विभाजन (Complex Division of Labour):</h3>
-      <ol>
-        <li><strong>USA:</strong> उच्च तकनीक प्रयोगशालाओं में उत्पादों का अनुसंधान (R&D) एवं डिजाइन तैयार किया जाता है।</li>
-        <li><strong>चीन (China):</strong> सस्ते विनिर्माण और विशाल औद्योगिक आधार के कारण यहां कलपुर्जों का उत्पादन होता है।</li>
-        <li><strong>मेक्सिको एवं पूर्वी यूरोप:</strong> अमेरिका और यूरोपीय बाजारों से भौगोलिक निकटता के कारण यहां पुर्जों को असेंबल (जोड़ा) किया जाता है।</li>
-        <li><strong>भारत (India):</strong> यहां अंग्रेजी बोलने वाले कुशल युवा और तकनीकी इंजीनियर उपलब्ध हैं, जो 24×7 कॉल सेंटर एवं ग्राहक सेवा (Customer Care) प्रदान करते हैं।</li>
-      </ol>
-    </div>
-
-    <!-- Images 4, 5, 6, 7 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_4_industrial_design_rnd_lab.webp" alt="अनुसंधान व डिजाइन केंद्र" onerror="this.src='https://via.placeholder.com/1200x675.png?text=R%26D+Design+Lab'">
-      <div class="visual-caption">चित्र 4.4: उत्पाद अनुसंधान एवं उच्च तकनीक 3D डिजाइन केंद्र (USA/Europe)</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_5_mass_electronics_manufacturing_factory.webp" alt="इलेक्ट्रॉनिक्स विनिर्माण" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Mass+Electronics+Factory'">
-      <div class="visual-caption">चित्र 4.5: बड़े पैमाने पर स्वचालित इलेक्ट्रॉनिक्स विनिर्माण संयंत्र (चीन)</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_6_automated_automobile_assembly_line.webp" alt="रोबोटिक असेंबली लाइन" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Automated+Assembly+Line'">
-      <div class="visual-caption">चित्र 4.6: स्वचालित रोबोटिक असेंबली लाइन (मेक्सिको / पूर्वी यूरोप)</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_7_indian_it_bpo_call_center.webp" alt="भारतीय BPO कॉल सेंटर" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Indian+IT+Call+Center'">
-      <div class="visual-caption">चित्र 4.7: भारत में 24×7 आधुनिक BPO कॉल सेंटर एवं आईटी सपोर्ट हब</div>
+        <h3>🚧 व्यापार अवरोधक (Trade Barriers)</h3>
+        <ul>
+            <li><b>परिभाषा:</b> सरकार द्वारा विदेशी व्यापार को नियमित या नियंत्रित करने के लिए लगाए गए प्रतिबंधों (जैसे- <b>आयात कर / टैरिफ और कोटा</b>) को 'व्यापार अवरोधक' कहते हैं।</li>
+            <li><b>स्वतंत्रता के बाद भारत की नीति (1950-1990):</b>
+                <ul>
+                    <li>भारतीय उद्योग नवजात (Infant) अवस्था में थे। इसलिए विदेशी प्रतिस्पर्धा से बचाने के लिए केवल अनिवार्य वस्तुओं (पेट्रोलियम, मशीनरी, उर्वरक) के आयात की अनुमति थी।</li>
+                </ul>
+            </li>
+            <li><b>1991 का ऐतिहासिक मोड़ (उदारीकरण - Liberalisation):</b>
+                <ul>
+                    <li>1991 में सरकार ने महसूस किया कि भारतीय उत्पादकों को विश्वभर के उत्पादकों के साथ प्रतिस्पर्धा करनी चाहिए ताकि गुणवत्ता में सुधार हो सके।</li>
+                    <li><b>उदारीकरण की परिभाषा:</b> सरकार द्वारा व्यापार और निवेश पर से अनावश्यक प्रतिबंधों व नियंत्रणों को हटाने की प्रक्रिया <b>'उदारीकरण' (Liberalisation)</b> कहलाती है।</li>
+                    <li>आयात-निर्यात पर से लाइसेंसिंग व्यवस्था और टैरिफ अवरोधकों को बड़े पैमाने पर समाप्त कर दिया गया।</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
     <div class="fact-box">
-      <h4>💰 लागत में भारी बचत:</h4>
-      <p>इस प्रकार उत्पादन को वैश्विक रूप से विभाजित करके MNCs अपनी कुल उत्पादन लागत में <strong>50% से 60%</strong> तक की बचत करती हैं!</p>
-    </div>
-  </div>
-
-  <!-- PART 3 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🤝 भाग 3: विभिन्न देशों में उत्पादन को आपस में जोड़ना</span>
-    </div>
-
-    <p>परिसंपत्तियों (भूमि, भवन, मशीनें आदि) की खरीद में व्यय की गई मुद्रा को <strong>निवेश (Investment)</strong> कहते हैं। जब यह निवेश किसी बहुराष्ट्रीय कंपनी (MNC) द्वारा किया जाता है, तो इसे <strong>विदेशी निवेश (Foreign Investment)</strong> कहा जाता है।</p>
-
-    <!-- SVG CHART 2: 4 WAYS OF MNC INVESTMENT -->
-    <div class="svg-chart-wrapper">
-      <img src="images/eco4/chart_eco4_2_four_ways_mnc_investment.svg" alt="MNCs द्वारा निवेश के 4 तरीके">
+        <h3>🏗️ विदेशी निवेश को आकर्षित करने के कदम: विशेष आर्थिक क्षेत्र (SEZ)</h3>
+        <ul>
+            <li><b>विशेष आर्थिक क्षेत्र (SEZ - Special Economic Zones):</b> केंद्र और राज्य सरकारों द्वारा विदेशी कंपनियों को आकर्षित करने के लिए स्थापित विश्वस्तरीय औद्योगिक पार्क।</li>
+            <li><b>SEZ की प्रमुख सुविधाएं:</b>
+                <ul>
+                    <li>बिजली, पानी, सड़क, परिवहन, भंडारण और मनोरंजन की विश्वस्तरीय सुविधाएं।</li>
+                    <li><b>कर छूट (Tax Holiday):</b> SEZ में उत्पादन इकाइयां स्थापित करने वाली कंपनियों को प्रारंभिक <b>5 वर्षों तक कोई आयकर (Tax)</b> नहीं देना पड़ता।</li>
+                    <li><b>श्रम कानूनों में लचीलापन:</b> विदेशी कंपनियों को आकर्षित करने के लिए श्रम नियमों में विशेष छूट दी जाती है।</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>तरीका</th>
-          <th>कार्यप्रणाली</th>
-          <th>NCERT वास्तविक उदाहरण</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>1. प्रत्यक्ष नई इकाई</strong></td>
-          <td>भूमि खरीदकर स्वयं का नया कारखाना लगाना।</td>
-          <td>सैमसंग द्वारा नोएडा में विश्व का सबसे बड़ा मोबाइल प्लांट।</td>
-        </tr>
-        <tr>
-          <td><strong>2. स्थानीय कंपनियों का अधिग्रहण</strong></td>
-          <td>पहले से स्थापित स्थानीय कंपनियों को खरीद लेना (सर्वाधिक प्रचलित)।</td>
-          <td><strong>कारगिल फूड्स (USA)</strong> द्वारा भारतीय कंपनी <strong>परख फूड्स</strong> का अधिग्रहण (4 तेल रिफाइनरियों पर कब्जा)।</td>
-        </tr>
-        <tr>
-          <td><strong>3. संयुक्त साझेदारी (Joint Venture)</strong></td>
-          <td>स्थानीय कंपनियों के साथ मिलकर संयुक्त रूप से उत्पादन करना।</td>
-          <td><strong>फोर्ड मोटर्स (USA)</strong> ने <strong>महिंद्रा एंड महिंद्रा (भारत)</strong> के साथ मिलकर ₹1700 करोड़ का प्लांट लगाया।</td>
-        </tr>
-        <tr>
-          <td><strong>4. छोटे उत्पादकों को आर्डर</strong></td>
-          <td>वस्त्र, जूते, खेल सामान आदि छोटे उत्पादकों से बनवाकर अपने ब्रांड नाम से बेचना।</td>
-          <td>नाइकी, एडिडास, गैप (Nike, Adidas, GAP) द्वारा अनुबंध विनिर्माण।</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Images 8, 9, 10 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_8_cargill_parakh_foods_edible_oil_refinery.webp" alt="खाद्य तेल रिफाइनरी" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Edible+Oil+Refinery'">
-      <div class="visual-caption">चित्र 4.8: MNC अधिग्रहण - खाद्य तेल रिफाइनरी एवं स्वचालित पैकेजिंग संयंत्र (कारगिल-परख फूड्स केस)</div>
+    <!-- IMAGE 4.17 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_17_special_economic_zone_sez_industrial_park.webp" alt="चित्र 4.17: विशेष आर्थिक क्षेत्र (SEZ) - विश्वस्तरीय औद्योगिक इंफ्रास्ट्रक्चर पार्क"/>
+        <div class="img-caption">🏭 चित्र 4.17: विशेष आर्थिक क्षेत्र (Special Economic Zone - SEZ)</div>
+        <div class="img-desc">चौड़ी सड़कें, निरंतर सौर/विद्युत आपूर्ति, कांच की आधुनिक फैक्ट्रियां और टैक्स छूट युक्त विश्वस्तरीय इंडस्ट्रियल पार्क।</div>
     </div>
 
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_9_ford_mahindra_joint_venture_plant.webp" alt="संयुक्त ऑटोमोबाइल प्लांट" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Joint+Venture+Plant'">
-      <div class="visual-caption">चित्र 4.9: संयुक्त साझेदारी - चेन्नई ऑटोमोबाइल प्लांट में आधुनिक SUV निर्माण (फोर्ड-महिंद्रा)</div>
-    </div>
+    <!-- PART 7 -->
+    <div class="part-header">📌 भाग 7: विश्व व्यापार संगठन (WTO - World Trade Organisation)</div>
 
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_10_garment_contract_manufacturing_apparel.webp" alt="अनुबंध वस्त्र विनिर्माण" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Garment+Contract+Manufacturing'">
-      <div class="visual-caption">चित्र 4.10: अनुबंध विनिर्माण - छोटे उत्पादकों द्वारा वैश्विक ब्रांड्स हेतु परिधान तैयार करना</div>
-    </div>
-  </div>
-
-  <!-- PART 4 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🧸 भाग 4: विदेशी व्यापार और बाजारों का एकीकरण</span>
-    </div>
-
-    <p>विदेशी व्यापार घरेलू उत्पादकों को अपने देश के स्थानीय बाजारों से बाहर निकलकर वैश्विक बाजारों में पहुंचने का अवसर देता है। साथ ही, खरीदारों को विभिन्न देशों में उत्पादित वस्तुओं के अनेक विकल्प मिलते हैं।</p>
-
-    <!-- SVG CHART 3: CHINESE TOYS TRADE IMPACT -->
-    <div class="svg-chart-wrapper">
-      <img src="images/eco4/chart_eco4_3_chinese_toys_trade_impact.svg" alt="चीनी खिलौनों का केस स्टडी">
-    </div>
-
+    <div class="topic-header">7.1 WTO की स्थापना, उद्देश्य एवं विकसित बनाम विकासशील देश विवाद</div>
     <div class="concept-card">
-      <h3>📦 NCERT केस स्टडी: भारत में चीनी खिलौने (Chinese Toys in India):</h3>
-      <ul>
-        <li><strong>अवसर:</strong> चीनी खिलौना निर्माताओं को भारत में महंगे खिलौनों की जगह अपने सस्ते खिलौने बेचने का अवसर दिखा।</li>
-        <li><strong>उपभोक्ताओं को लाभ:</strong> भारतीय खरीदारों को नए डिजाइन और प्लास्टिक के सस्ते खिलौने मिले। एक ही वर्ष में 70% से 80% दुकानों में भारतीय खिलौनों की जगह चीनी खिलौने आ गए।</li>
-        <li><strong>भारतीय उत्पादकों को नुकसान:</strong> भारतीय खिलौना निर्माता प्रतिस्पर्धा में पिछड़ गए, उनकी बिक्री घटी और कई इकाइयां बंद हो गईं।</li>
-      </ul>
+        <h3>🏛️ विश्व व्यापार संगठन (WTO)</h3>
+        <ul>
+            <li><b>स्थापना:</b> 1995 (मुख्यालय: जिनेवा, स्विट्जरलैंड)। जुलाई 2016 तक विश्व के <b>164 देश</b> इसके सदस्य हैं।</li>
+            <li><b>उद्देश्य:</b> अंतरराष्ट्रीय व्यापार को मुक्त, खुला और बिना किसी बाधा के संचालित करना तथा सभी देशों के लिए व्यापार नियम बनाना।</li>
+            <li><b>विवाद और दोहरा मापदंड (Debate on Unfair Trade Practices):</b>
+                <ul>
+                    <li>सैद्धांतिक रूप से WTO सभी देशों के लिए मुक्त व्यापार की वकालत करता है।</li>
+                    <li><b>व्यवहार में दोहरा मापदंड:</b> अमेरिका और यूरोपीय संघ जैसे विकसित देश अपने किसानों को भारी सब्सिडी (Financial Grants) देते हैं, जिससे उनके कृषि उत्पाद विश्व बाजार में कृत्रिम रूप से अत्यंत सस्ते हो जाते हैं।</li>
+                    <li>वहीं दूसरी ओर, WTO के नियमों के तहत विकासशील देशों (जैसे भारत) पर दबाव डाला जाता है कि वे अपने गरीब किसानों को दी जाने वाली उर्वरक व बीज सब्सिडी को घटाएं। यह विकासशील देशों के साथ अन्यायपूर्ण है।</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <!-- Images 11, 12 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_11_chinese_toys_indian_retail_shop.webp" alt="चीनी खिलौने दुकान" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Chinese+Toys+in+India'">
-      <div class="visual-caption">चित्र 4.11: भारतीय बाजार में रंग-बिरंगे, सस्ते व इलेक्ट्रॉनिक चीनी खिलौनों का प्रभुत्व</div>
+    <!-- CHART 4.5 -->
+    <div class="img-box">
+        <img src="images/eco4/chart_eco4_5_wto_and_fair_globalization.svg" alt="चार्ट 4.5: WTO के नियम, कृषि सब्सिडी विवाद एवं न्यायसंगत वैश्वीकरण"/>
+        <div class="img-caption">📊 CHART 4.5: WTO और न्यायसंगत वैश्वीकरण (WTO &amp; Fair Globalization)</div>
+        <div class="img-desc">1991 उदारीकरण, WTO के दोहरे मापदंड (सब्सिडी विवाद) एवं न्यायसंगत वैश्वीकरण सुनिश्चित करने के सरकारी उपाय।</div>
     </div>
 
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_12_traditional_indian_toy_maker_struggle.webp" alt="पारंपरिक खिलौना कारीगर" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Traditional+Toy+Maker'">
-      <div class="visual-caption">चित्र 4.12: पारंपरिक भारतीय लकड़ी के खिलौना कारीगर - आयातित माल से कड़ी प्रतिस्पर्धा का सामना</div>
-    </div>
-  </div>
+    <!-- PART 8 -->
+    <div class="part-header">📌 भाग 8: भारत में वैश्वीकरण का प्रभाव एवं न्यायसंगत वैश्वीकरण</div>
 
-  <!-- PART 5 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🚀 भाग 5: वैश्वीकरण के प्रेरक कारक (प्रौद्योगिकी क्रांति)</span>
-    </div>
-
+    <div class="topic-header">8.1 भारत पर वैश्वीकरण का सकारात्मक व नकारात्मक प्रभाव</div>
     <div class="concept-card">
-      <h3>🌐 वैश्वीकरण (Globalization) की परिभाषा:</h3>
-      <p><strong>"विभिन्न देशों के बीच परस्पर संबंध और तीव्र एकीकरण की प्रक्रिया ही वैश्वीकरण कहलाती है।"</strong></p>
-      <p>वैश्वीकरण की इस प्रक्रिया में बहुराष्ट्रीय कंपनियां (MNCs) मुख्य भूमिका निभा रही हैं।</p>
-    </div>
-
-    <!-- SVG CHART 4: FACTORS ENABLING GLOBALIZATION -->
-    <div class="svg-chart-wrapper">
-      <img src="images/eco4/chart_eco4_4_factors_enabling_globalization_ict_transport.svg" alt="वैश्वीकरण के प्रेरक कारक">
-    </div>
-
-    <div class="concept-card">
-      <h3>🚢 1. तीव्र परिवहन प्रौद्योगिकी (Containerization):</h3>
-      <ul>
-        <li><strong>कंटेनरों का उपयोग:</strong> माल को विशाल मानकीकृत कंटेनरों में भरा जाता है, जिन्हें बिना तोड़े-फोड़े सीधे जहाजों, ट्रेनों और ट्रकों पर लाद दिया जाता है।</li>
-        <li><strong>परिणाम:</strong> बंदरगाहों पर लोडिंग का समय घटा, ढुलाई लागत में भारी कमी आई और माल बहुत तेजी से गंतव्य तक पहुंचने लगा।</li>
-      </ul>
-    </div>
-
-    <div class="concept-card">
-      <h3>💻 2. सूचना एवं संचार प्रौद्योगिकी (ICT Revolution):</h3>
-      <ul>
-        <li><strong>दूरसंचार, कंप्यूटर व इंटरनेट:</strong> उपग्रह संचार और ऑप्टिकल फाइबर केबलों ने दुनिया भर में संपर्क को तात्कालिक बना दिया।</li>
-        <li><strong>NCERT उदाहरण (लंदन पत्रिका):</strong> लंदन की एक समाचार पत्रिका का पूरा लेआउट और डिजाइन दिल्ली के एक कार्यालय में कंप्यूटर द्वारा तैयार किया जाता है। इंटरनेट से डिजाइन लंदन भेजा जाता है और छपाई के बाद हवाई जहाज से लंदन पहुंचा दिया जाता है!</li>
-      </ul>
-    </div>
-
-    <!-- Images 13, 14, 15, 16 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_13_cargo_container_ship_port_logistics.webp" alt="कंटेनर मालवाहक जहाज" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Container+Ship+Port'">
-      <div class="visual-caption">चित्र 4.13: कंटेनर परिवहन क्रांति - विशाल मालवाहक जहाज एवं आधुनिक बंदरगाह क्रेन लॉजिस्टिक्स</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_14_air_freight_cargo_airport.webp" alt="एयर कार्गो टर्मिनल" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Air+Freight+Cargo'">
-      <div class="visual-caption">चित्र 4.14: तीव्र हवाई माल ढुलाई - अंतरराष्ट्रीय एयर कार्गो टर्मिनल पर तेज लोडिंग</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_15_satellite_telecom_submarine_cables_ict.webp" alt="सूचना एवं संचार प्रौद्योगिकी" onerror="this.src='https://via.placeholder.com/1200x675.png?text=ICT+Global+Connectivity'">
-      <div class="visual-caption">चित्र 4.15: सूचना एवं संचार क्रांति (ICT) - सबमरीन ऑप्टिकल केबल, सैटेलाइट व 5G नेटवर्क</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_16_delhi_magazine_design_london_client.webp" alt="दिल्ली पत्रिका डिजाइन स्टूडियो" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Delhi+Designers+London+Magazine'">
-      <div class="visual-caption">चित्र 4.16: NCERT उदाहरण - दिल्ली के डिजाइनर कंप्यूटर द्वारा लंदन की पत्रिका तैयार करते हुए</div>
-    </div>
-  </div>
-
-  <!-- PART 6 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🔓 भाग 6: विदेश व्यापार एवं विदेशी निवेश का उदारीकरण</span>
-    </div>
-
-    <div class="concept-card">
-      <h3>🛑 व्यापार अवरोधक (Trade Barriers) क्या हैं?</h3>
-      <p>सरकार द्वारा आयात या निर्यात पर लगाए गए प्रतिबंधों को <strong>व्यापार अवरोधक</strong> कहते हैं (जैसे <strong>आयात कर / Custom Duty / Tariff</strong> और <strong>आयात कोटा</strong>)।</p>
-      <ul>
-        <li><strong>स्वतंत्रता के बाद (1947 से 1991):</strong> भारत सरकार ने घरेलू उत्पादकों को विदेशी प्रतिस्पर्धा से बचाने के लिए केवल अनिवार्य वस्तुओं (मशीनरी, उर्वरक, पेट्रोलियम) के आयात की अनुमति दी थी।</li>
-      </ul>
-    </div>
-
-    <div class="fact-box">
-      <h4>🇮🇳 1991 की नई आर्थिक नीति एवं उदारीकरण (Liberalization 1991):</h4>
-      <p><strong>"सरकार द्वारा व्यापार पर से अनावश्यक प्रतिबंधों व नियंत्रणों को हटाने की प्रक्रिया को उदारीकरण कहते हैं।"</strong></p>
-      <ul>
-        <li>1991 में सरकार ने महसूस किया कि भारतीय उत्पादकों को अब विश्व स्तर पर प्रतिस्पर्धा करनी चाहिए ताकि वे गुणवत्ता में सुधार कर सकें।</li>
-        <li>आयात-निर्यात पर से कर घटाए गए, लाइसेंसिंग प्रणाली हटाई गई और विदेशी कंपनियों को भारत में निवेश करने की खुली अनुमति दी गई।</li>
-      </ul>
-    </div>
-
-    <div class="concept-card">
-      <h3>🏭 विशेष आर्थिक क्षेत्र (Special Economic Zones - SEZs):</h3>
-      <ul>
-        <li>विदेशी कंपनियों को आकर्षित करने के लिए केंद्र व राज्य सरकारों ने <strong>SEZ (विशेष आर्थिक क्षेत्र)</strong> स्थापित किए।</li>
-        <li><strong>सुविधाएं:</strong> 24 घंटे बिजली, पानी, सड़क, परिवहन, भंडारण और मनोरंजन की विश्वस्तरीय सुविधाएं।</li>
-        <li><strong>प्रोत्साहन:</strong> SEZ में उद्योग लगाने वाली कंपनियों को <strong>आरंभिक 5 वर्षों तक कोई आयकर (Tax) नहीं</strong> देना पड़ता।</li>
-      </ul>
-    </div>
-
-    <!-- Image 17 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_17_special_economic_zone_sez_industrial_park.webp" alt="विशेष आर्थिक क्षेत्र SEZ" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Special+Economic+Zone+SEZ'">
-      <div class="visual-caption">चित्र 4.17: विशेष आर्थिक क्षेत्र (SEZ) - विश्वस्तरीय औद्योगिक अवसंरचना एवं कर-मुक्त निवेश पार्क</div>
-    </div>
-  </div>
-
-  <!-- PART 7 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>🌐 भाग 7: विश्व व्यापार संगठन (WTO) एवं विवाद</span>
-    </div>
-
-    <div class="concept-card">
-      <h3>🏛️ विश्व व्यापार संगठन (World Trade Organization - WTO):</h3>
-      <ul>
-        <li><strong>स्थापना एवं उद्देश्य:</strong> अंतर्राष्ट्रीय व्यापार को उदार, नियमबद्ध और निष्पक्ष बनाना। सभी देशों को समान अवसर देना।</li>
-        <li><strong>मुख्यालय:</strong> जिनेवा (स्विट्जरलैंड)। जुलाई 2016 तक विश्व के लगभग <strong>165 देश</strong> इसके सदस्य हैं।</li>
-      </ul>
+        <h3>📈 वैश्वीकरण का सकारात्मक प्रभाव (Positive Impacts)</h3>
+        <ul>
+            <li><b>उपभोक्ताओं को लाभ:</b> संपन्न शहरी उपभोक्ताओं को बेहतर गुणवत्ता वाली कारें, इलेक्ट्रॉनिक्स, शीतल पेय और फास्ट फूड कम कीमतों पर उपलब्ध हुए।</li>
+            <li><b>नए रोजगारों का सृजन:</b> सेल फोन, ऑटोमोबाइल, इलेक्ट्रॉनिक्स, बैंकिंग और आईटी सेवाओं में लाखों नए उच्च-वेतन रोजगार पैदा हुए।</li>
+            <li><b>भारतीय कंपनियां बनीं बहुराष्ट्रीय (Indian Multinationals):</b>
+                <ul>
+                    <li><b>टाटा मोटर्स (Tata Motors):</b> ऑटोमोबाइल / कारें।</li>
+                    <li><b>इन्फोसिस (Infosys):</b> सूचना प्रौद्योगिकी (IT)।</li>
+                    <li><b>रेनबैक्सी (Ranbaxy):</b> दवाइयां / फार्मास्युटिकल्स।</li>
+                    <li><b>एशियन पेंट्स (Asian Paints):</b> रंग-रोगन व पेंट्स।</li>
+                    <li><b>सुंदरम फास्टनर्स (Sundram Fasteners):</b> नट और बोल्ट।</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
     <div class="warn-box">
-      <h4>⚠️ WTO में विकसित देशों का दोहरा मापदंड (कृषि सब्सिडी विवाद):</h4>
-      <ul>
-        <li><strong>विकासशील देशों पर दबाव:</strong> WTO नियमों के तहत भारत जैसे विकासशील देशों को अपनी कृषि पर से सब्सिडी और व्यापार अवरोधक हटाने को विवश किया गया।</li>
-        <li><strong>विकसित देशों की मनमानी:</strong> USA और यूरोपीय देशों ने अपने नियमों का उल्लंघन करते हुए अपने किसानों को अरबों डॉलर की भारी सरकारी सब्सिडी जारी रखी।</li>
-        <li><strong>परिणाम:</strong> अमेरिकी किसान अपने अनाज को विश्व बाजार में लागत से भी कम दामों पर बेचते हैं, जिससे भारतीय किसान उनके सामने टिक नहीं पाते। यह खुला अन्याय है!</li>
-      </ul>
+        <h3>📉 वैश्वीकरण का नकारात्मक प्रभाव एवं चुनौतियां (Challenges &amp; Negative Impacts)</h3>
+        <ul>
+            <li><b>लघु व कुटीर उद्योगों पर संकट:</b> बैटरी, कैपेसिटर, प्लास्टिक खिलौने, टायर्स, डेयरी उत्पाद और खाद्य तेल बनाने वाली छोटी भारतीय इकाइयां सस्ती विदेशी वस्तुओं से प्रतिस्पर्धा न कर पाने के कारण बंद हो गईं और लाखों मजदूर बेरोजगार हुए।</li>
+            <li><b>श्रमिकों के जीवन पर अनिश्चितता:</b> लागत घटाने के लिए MNCs और निर्यातक अब श्रमिकों को स्थायी रोजगार देने के बजाय <b>'अस्थायी / अनुबंध' (Flexibility in Labor Laws)</b> पर रखते हैं। लंबे कार्य के घंटे, कम मजदूरी और सामाजिक सुरक्षा (PF, पेंशन) का अभाव श्रमिकों की स्थिति दयनीय बनाता है।</li>
+        </ul>
     </div>
 
-    <!-- SVG CHART 5: WTO & FAIR GLOBALIZATION -->
-    <div class="svg-chart-wrapper">
-      <img src="images/eco4/chart_eco4_5_wto_and_fair_globalization.svg" alt="WTO एवं न्यायसंगत वैश्वीकरण">
-    </div>
-  </div>
-
-  <!-- PART 8 -->
-  <div class="part-section">
-    <div class="part-header">
-      <span>⚖️ भाग 8: भारत में वैश्वीकरण का प्रभाव एवं 'न्यायसंगत वैश्वीकरण'</span>
+    <!-- IMAGE 4.18 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_18_small_scale_battery_capacitor_struggle.webp" alt="चित्र 4.18: लघु उद्योगों पर असर - इलेक्ट्रॉनिक उपकरण व कैपेसिटर निर्माण इकाई का संघर्ष"/>
+        <div class="img-caption">⚙️ चित्र 4.18: लघु उद्योगों का संघर्ष (Small Scale Industry Struggle)</div>
+        <div class="img-desc">सस्ते विदेशी इलेक्ट्रॉनिक कंपोनेंट्स के आयात से घरेलू विनिर्माण इकाइयों पर कड़ी प्रतिस्पर्धा का दबाव।</div>
     </div>
 
-    <p>वैश्वीकरण का प्रभाव सभी लोगों पर एक समान नहीं रहा है। इसके सकारात्मक और नकारात्मक दोनों पहलू सामने आए हैं:</p>
+    <!-- IMAGE 4.19 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_19_indian_multinational_corporation_global_presence.webp" alt="चित्र 4.19: MNC बनीं भारतीय कंपनियां - ग्लोबल ऑटो एक्सपो में भारतीय बहुराष्ट्रीय ब्रांड्स का दबदबा"/>
+        <div class="img-caption">🌟 चित्र 4.19: भारतीय बहुराष्ट्रीय कंपनियां (Indian MNCs Going Global)</div>
+        <div class="img-desc">टाटा, इन्फोसिस और महिंद्रा जैसी भारतीय कंपनियों की वैश्विक स्तर पर मजबूत उपस्थिति और अंतरराष्ट्रीय अनुबंध।</div>
+    </div>
 
+    <div class="topic-header">8.2 न्यायसंगत वैश्वीकरण के लिए संघर्ष (The Struggle for Fair Globalization)</div>
+    <div class="concept-card">
+        <h3>⚖️ न्यायसंगत वैश्वीकरण (Fair Globalization) क्या है?</h3>
+        <ul>
+            <li><b>परिभाषा:</b> न्यायसंगत वैश्वीकरण वह व्यवस्था है जो समाज के सभी वर्गों (श्रमिकों, किसानों, छोटे उत्पादकों और उपभोक्ताओं) के लिए समान अवसर पैदा करे और यह सुनिश्चित करे कि वैश्वीकरण के लाभों में सबकी उचित हिस्सेदारी हो।</li>
+            <li><b>सरकार की महत्वपूर्ण भूमिका (Role of Government):</b>
+                <ol>
+                    <li><b>श्रम कानूनों का कड़ाई से क्रियान्वयन:</b> सरकार यह सुनिश्चित करे कि श्रमिकों के अधिकारों की रक्षा हो और उन्हें उचित वेतन व सुरक्षित कार्यदशाएं मिलें।</li>
+                    <li><b>छोटे उत्पादकों को संरक्षण व सहायता:</b> जब तक छोटे उद्योग प्रतिस्पर्धा करने में सक्षम न हो जाएं, तब तक उन्हें सरकारी सहायता, सस्ती बिजली और प्रौद्योगिकी उपलब्ध कराना।</li>
+                    <li><b>व्यापार अवरोधकों का रणनीतिक उपयोग:</b> घरेलू किसानों और संवेदनशील उद्योगों को अनुचित विदेशी डंपिंग से बचाने के लिए आवश्यकता पड़ने पर आयात शुल्क (Taxes) का उपयोग करना।</li>
+                    <li><b>WTO में विकासशील देशों का एकजुट मोर्चा:</b> विकसित देशों के वर्चस्व और अन्यायपूर्ण सब्सिडी नियमों के खिलाफ अन्य विकासशील देशों के साथ मिलकर संयुक्त मोर्चा बनाना।</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <!-- IMAGE 4.20 -->
+    <div class="img-box">
+        <img src="images/eco4/eco4_real_20_fair_globalization_labor_empowerment.webp" alt="चित्र 4.20: न्यायसंगत वैश्वीकरण - स्वच्छ फैक्ट्री में सुरक्षा हेलमेट व वर्दी पहने भारतीय श्रमिकों की गरिमा व मुस्कान"/>
+        <div class="img-caption">🤝 चित्र 4.20: न्यायसंगत वैश्वीकरण एवं श्रमिक गरिमा (Fair Globalization &amp; Labor Dignity)</div>
+        <div class="img-desc">सुरक्षित कार्य वातावरण, उचित वेतन, निष्पक्ष श्रम अधिकार और समावेशी विकास का सशक्त प्रतीक।</div>
+    </div>
+
+    <!-- SUMMARY TABLE -->
+    <div class="topic-header">📌 अध्याय 4 का त्वरित सारांश सारणी (Summary Table)</div>
     <table class="data-table">
-      <thead>
-        <tr>
-          <th>सकारात्मक प्रभाव (लाभांवित वर्ग)</th>
-          <th>नकारात्मक प्रभाव (पीड़ित वर्ग)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>1. शहरी धनी उपभोक्ता:</strong> उच्च गुणवत्ता, कम कीमत और वस्तुओं के विविध विकल्प।</td>
-          <td><strong>1. छोटे व कुटीर उत्पादक:</strong> बैटरी, कैपेसिटर, प्लास्टिक खिलौने, डेयरी उद्योग बंद।</td>
-        </tr>
-        <tr>
-          <td><strong>2. भारतीय बहुराष्ट्रीय कंपनियां (MNCs):</strong> टाटा मोटर्स (ऑटो), इंफोसिस (IT), रैनबैक्सी (दवा), एशियन पेंट्स, सुंदरम फास्टनर्स (नट-बोल्ट) वैश्विक मंच पर उभरे।</td>
-          <td><strong>2. श्रमिकों की असुरक्षा:</strong> लचीले श्रम कानूनों के कारण स्थायी नौकरियों का खत्म होना; कम वेतन पर अनुबंध/अस्थायी रोजगार।</td>
-        </tr>
-        <tr>
-          <td><strong>3. सेवा क्षेत्र का विस्तार:</strong> IT, डेटा प्रोसेसिंग, कॉल सेंटर, इंजीनियरिंग में लाखों नए रोजगार।</td>
-          <td><strong>3. असमान लाभ:</strong> केवल शिक्षित, कुशल और धनवान लोगों ने ही वैश्वीकरण का सबसे अधिक लाभ उठाया।</td>
-        </tr>
-      </tbody>
+        <thead>
+            <tr>
+                <th style="width: 25%;">प्रमुख अवधारणा</th>
+                <th style="width: 35%;">मुख्य विशेषता / अर्थ</th>
+                <th style="width: 40%;">भारतीय अर्थव्यवस्था पर उदाहरण व प्रभाव</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>बहुराष्ट्रीय कंपनी (MNC)</b></td>
+                <td>एक से अधिक देशों में उत्पादन पर स्वामित्व व नियंत्रण रखने वाली कंपनी।</td>
+                <td>कारगिल फूड्स, फोर्ड मोटर्स; लागत में 50-60% बचत हेतु भारत में R&amp;D/BPO केंद्र।</td>
+            </tr>
+            <tr>
+                <td><b>विदेशी निवेश</b></td>
+                <td>MNCs द्वारा लाभ कमाने हेतु भूमि, भवन व मशीनरी खरीदने में किया गया व्यय।</td>
+                <td>1991 के बाद भारत में भारी विदेशी मुद्रा व आधुनिक तकनीक का आगमन।</td>
+            </tr>
+            <tr>
+                <td><b>उदारीकरण (Liberalisation)</b></td>
+                <td>व्यापार व निवेश पर से सरकारी प्रतिबंधों, लाइसेंसिंग व टैरिफ को हटाना।</td>
+                <td>1991 की नई आर्थिक नीति; अंतरराष्ट्रीय उत्पादों की भारतीय बाजार में प्रचुरता।</td>
+            </tr>
+            <tr>
+                <td><b>विशेष आर्थिक क्षेत्र (SEZ)</b></td>
+                <td>5 वर्ष तक कर छूट एवं विश्वस्तरीय इंफ्रास्ट्रक्चर युक्त औद्योगिक क्षेत्र।</td>
+                <td>विदेशी कंपनियों को आकर्षित करने हेतु भारत में स्थापित आधुनिक इंडस्ट्रियल पार्क।</td>
+            </tr>
+            <tr>
+                <td><b>विश्व व्यापार संगठन (WTO)</b></td>
+                <td>अंतरराष्ट्रीय मुक्त व्यापार का नियमन करने वाली 164 देशों की संस्था।</td>
+                <td>विकसित देशों की अनुचित कृषि सब्सिडी के खिलाफ विकासशील देशों का संघर्ष।</td>
+            </tr>
+            <tr>
+                <td><b>न्यायसंगत वैश्वीकरण</b></td>
+                <td>सभी वर्गों के लिए समान अवसर, श्रम सुरक्षा व लाभों का न्यायपूर्ण वितरण।</td>
+                <td>श्रम कानूनों का पालन, लघु उद्योगों को समर्थन व विकासशील देशों का एकजुट मोर्चा।</td>
+            </tr>
+        </tbody>
     </table>
 
-    <!-- Images 18, 19, 20 -->
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_18_small_scale_battery_capacitor_struggle.webp" alt="लघु उद्योग पर प्रभाव" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Small+Scale+Industry+Struggle'">
-      <div class="visual-caption">चित्र 4.18: वैश्वीकरण का लघु उद्योगों पर संकट - आयातित सस्ते सामान से बंद होती कैपेसिटर व बैटरी इकाइयां</div>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_19_indian_multinational_corporation_global_presence.webp" alt="भारतीय बहुराष्ट्रीय कंपनियां" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Indian+MNCs+Global+Footprint'">
-      <div class="visual-caption">चित्र 4.19: भारतीय बहुराष्ट्रीय कंपनियों (Tata, Infosys, Ranbaxy) का वैश्विक मंच पर गौरवशाली उभार</div>
-    </div>
-
-    <div class="fact-box">
-      <h4>🌱 न्यायसंगत वैश्वीकरण (Fair Globalization) के लिए सरकार के 4 मुख्य कदम:</h4>
-      <ol>
-        <li><strong>श्रम कानूनों का कड़ाई से क्रियान्वयन:</strong> श्रमिकों को उचित वेतन और सुरक्षित कार्यदशाएं अनिवार्य रूप से मिलें।</li>
-        <li><strong>छोटे उत्पादकों को समर्थन:</strong> जब तक छोटे उद्योग मजबूत न हो जाएं, तब तक उन्हें सरकारी संरक्षण और वित्तीय सहायता दी जाए।</li>
-        <li><strong>न्यायसंगत व्यापार अवरोधकों का उपयोग:</strong> आवश्यकता पड़ने पर सरकार आयात शुल्क और कोटा का उपयोग कर सकती है।</li>
-        <li><strong>WTO में विकासशील देशों की एकजुटता:</strong> विकसित देशों के प्रभुत्व के विरुद्ध अन्य विकासशील देशों के साथ मिलकर साझा रणनीति बनाना।</li>
-      </ol>
-    </div>
-
-    <div class="visual-wrapper">
-      <img src="images/eco4/eco4_real_20_fair_globalization_labor_empowerment.webp" alt="न्यायसंगत वैश्वीकरण" onerror="this.src='https://via.placeholder.com/1200x675.png?text=Fair+Globalization+Labor+Dignity'">
-      <div class="visual-caption">चित्र 4.20: न्यायसंगत वैश्वीकरण - श्रमिकों के अधिकारों की सुरक्षा, उचित पारिश्रमिक एवं सतत समावेशी विकास</div>
-    </div>
-  </div>
-
 </div>
-
 </body>
 </html>
