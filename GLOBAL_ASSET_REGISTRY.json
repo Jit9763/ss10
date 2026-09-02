@@ -1374,6 +1374,469 @@
     "size_kb": 263
   },
   {
+    "id": "chart_eco4_1_mnc_global_production_network.svg",
+    "path": "images/eco4/chart_eco4_1_mnc_global_production_network.svg",
+    "chapter": "eco4",
+    "title": "Chart Eco Mnc Global Production Network Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "mnc",
+      "global",
+      "production",
+      "network",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 14
+  },
+  {
+    "id": "chart_eco4_2_four_ways_mnc_investment.svg",
+    "path": "images/eco4/chart_eco4_2_four_ways_mnc_investment.svg",
+    "chapter": "eco4",
+    "title": "Chart Eco Four Ways Mnc Investment Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "four",
+      "ways",
+      "mnc",
+      "investment",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 14
+  },
+  {
+    "id": "chart_eco4_3_chinese_toys_trade_impact.svg",
+    "path": "images/eco4/chart_eco4_3_chinese_toys_trade_impact.svg",
+    "chapter": "eco4",
+    "title": "Chart Eco Chinese Toys Trade Impact Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "chinese",
+      "toys",
+      "trade",
+      "impact",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 12
+  },
+  {
+    "id": "chart_eco4_4_factors_enabling_globalization_ict_transport.svg",
+    "path": "images/eco4/chart_eco4_4_factors_enabling_globalization_ict_transport.svg",
+    "chapter": "eco4",
+    "title": "Chart Eco Factors Enabling Globalization Ict Transport Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "factors",
+      "enabling",
+      "globalization",
+      "ict",
+      "transport",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 10
+  },
+  {
+    "id": "chart_eco4_5_wto_and_fair_globalization.svg",
+    "path": "images/eco4/chart_eco4_5_wto_and_fair_globalization.svg",
+    "chapter": "eco4",
+    "title": "Chart Eco Wto And Fair Globalization Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "wto",
+      "and",
+      "fair",
+      "globalization",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 12
+  },
+  {
+    "id": "eco4_real_10_garment_contract_manufacturing_apparel.webp",
+    "path": "images/eco4/eco4_real_10_garment_contract_manufacturing_apparel.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Garment Contract Manufacturing Apparel Webp",
+    "tags": [
+      "eco",
+      "real",
+      "garment",
+      "contract",
+      "manufacturing",
+      "apparel",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 280
+  },
+  {
+    "id": "eco4_real_11_chinese_toys_indian_retail_shop.webp",
+    "path": "images/eco4/eco4_real_11_chinese_toys_indian_retail_shop.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Chinese Toys Indian Retail Shop Webp",
+    "tags": [
+      "eco",
+      "real",
+      "chinese",
+      "toys",
+      "indian",
+      "retail",
+      "shop",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 247
+  },
+  {
+    "id": "eco4_real_12_traditional_indian_toy_maker_struggle.webp",
+    "path": "images/eco4/eco4_real_12_traditional_indian_toy_maker_struggle.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Traditional Indian Toy Maker Struggle Webp",
+    "tags": [
+      "eco",
+      "real",
+      "traditional",
+      "indian",
+      "toy",
+      "maker",
+      "struggle",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 234
+  },
+  {
+    "id": "eco4_real_13_cargo_container_ship_port_logistics.webp",
+    "path": "images/eco4/eco4_real_13_cargo_container_ship_port_logistics.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Cargo Container Ship Port Logistics Webp",
+    "tags": [
+      "eco",
+      "real",
+      "cargo",
+      "container",
+      "ship",
+      "port",
+      "logistics",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 289
+  },
+  {
+    "id": "eco4_real_14_air_freight_cargo_airport.webp",
+    "path": "images/eco4/eco4_real_14_air_freight_cargo_airport.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Air Freight Cargo Airport Webp",
+    "tags": [
+      "eco",
+      "real",
+      "air",
+      "freight",
+      "cargo",
+      "airport",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 169
+  },
+  {
+    "id": "eco4_real_15_satellite_telecom_submarine_cables_ict.webp",
+    "path": "images/eco4/eco4_real_15_satellite_telecom_submarine_cables_ict.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Satellite Telecom Submarine Cables Ict Webp",
+    "tags": [
+      "eco",
+      "real",
+      "satellite",
+      "telecom",
+      "submarine",
+      "cables",
+      "ict",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 240
+  },
+  {
+    "id": "eco4_real_16_delhi_magazine_design_london_client.webp",
+    "path": "images/eco4/eco4_real_16_delhi_magazine_design_london_client.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Delhi Magazine Design London Client Webp",
+    "tags": [
+      "eco",
+      "real",
+      "delhi",
+      "magazine",
+      "design",
+      "london",
+      "client",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 189
+  },
+  {
+    "id": "eco4_real_17_special_economic_zone_sez_industrial_park.webp",
+    "path": "images/eco4/eco4_real_17_special_economic_zone_sez_industrial_park.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Special Economic Zone Sez Industrial Park Webp",
+    "tags": [
+      "eco",
+      "real",
+      "special",
+      "economic",
+      "zone",
+      "sez",
+      "industrial",
+      "park",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 263
+  },
+  {
+    "id": "eco4_real_18_small_scale_battery_capacitor_struggle.webp",
+    "path": "images/eco4/eco4_real_18_small_scale_battery_capacitor_struggle.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Small Scale Battery Capacitor Struggle Webp",
+    "tags": [
+      "eco",
+      "real",
+      "small",
+      "scale",
+      "battery",
+      "capacitor",
+      "struggle",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 247
+  },
+  {
+    "id": "eco4_real_19_indian_multinational_corporation_global_presence.webp",
+    "path": "images/eco4/eco4_real_19_indian_multinational_corporation_global_presence.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Indian Multinational Corporation Global Presence Webp",
+    "tags": [
+      "eco",
+      "real",
+      "indian",
+      "multinational",
+      "corporation",
+      "global",
+      "presence",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 222
+  },
+  {
+    "id": "eco4_real_1_modern_consumer_market_variety.webp",
+    "path": "images/eco4/eco4_real_1_modern_consumer_market_variety.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Modern Consumer Market Variety Webp",
+    "tags": [
+      "eco",
+      "real",
+      "modern",
+      "consumer",
+      "market",
+      "variety",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 192
+  },
+  {
+    "id": "eco4_real_20_fair_globalization_labor_empowerment.webp",
+    "path": "images/eco4/eco4_real_20_fair_globalization_labor_empowerment.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Fair Globalization Labor Empowerment Webp",
+    "tags": [
+      "eco",
+      "real",
+      "fair",
+      "globalization",
+      "labor",
+      "empowerment",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 232
+  },
+  {
+    "id": "eco4_real_2_vintage_indian_market_past.webp",
+    "path": "images/eco4/eco4_real_2_vintage_indian_market_past.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Vintage Indian Market Past Webp",
+    "tags": [
+      "eco",
+      "real",
+      "vintage",
+      "indian",
+      "market",
+      "past",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 277
+  },
+  {
+    "id": "eco4_real_3_global_mnc_corporate_headquarters.webp",
+    "path": "images/eco4/eco4_real_3_global_mnc_corporate_headquarters.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Global Mnc Corporate Headquarters Webp",
+    "tags": [
+      "eco",
+      "real",
+      "global",
+      "mnc",
+      "corporate",
+      "headquarters",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 190
+  },
+  {
+    "id": "eco4_real_4_industrial_design_rnd_lab.webp",
+    "path": "images/eco4/eco4_real_4_industrial_design_rnd_lab.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Industrial Design Rnd Lab Webp",
+    "tags": [
+      "eco",
+      "real",
+      "industrial",
+      "design",
+      "rnd",
+      "lab",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 133
+  },
+  {
+    "id": "eco4_real_5_mass_electronics_manufacturing_factory.webp",
+    "path": "images/eco4/eco4_real_5_mass_electronics_manufacturing_factory.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Mass Electronics Manufacturing Factory Webp",
+    "tags": [
+      "eco",
+      "real",
+      "mass",
+      "electronics",
+      "manufacturing",
+      "factory",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 214
+  },
+  {
+    "id": "eco4_real_6_automated_automobile_assembly_line.webp",
+    "path": "images/eco4/eco4_real_6_automated_automobile_assembly_line.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Automated Automobile Assembly Line Webp",
+    "tags": [
+      "eco",
+      "real",
+      "automated",
+      "automobile",
+      "assembly",
+      "line",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 266
+  },
+  {
+    "id": "eco4_real_7_indian_it_bpo_call_center.webp",
+    "path": "images/eco4/eco4_real_7_indian_it_bpo_call_center.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Indian It Bpo Call Center Webp",
+    "tags": [
+      "eco",
+      "real",
+      "indian",
+      "bpo",
+      "call",
+      "center",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 217
+  },
+  {
+    "id": "eco4_real_8_cargill_parakh_foods_edible_oil_refinery.webp",
+    "path": "images/eco4/eco4_real_8_cargill_parakh_foods_edible_oil_refinery.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Cargill Parakh Foods Edible Oil Refinery Webp",
+    "tags": [
+      "eco",
+      "real",
+      "cargill",
+      "parakh",
+      "foods",
+      "edible",
+      "oil",
+      "refinery",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 192
+  },
+  {
+    "id": "eco4_real_9_ford_mahindra_joint_venture_plant.webp",
+    "path": "images/eco4/eco4_real_9_ford_mahindra_joint_venture_plant.webp",
+    "chapter": "eco4",
+    "title": "Eco Real Ford Mahindra Joint Venture Plant Webp",
+    "tags": [
+      "eco",
+      "real",
+      "ford",
+      "mahindra",
+      "joint",
+      "venture",
+      "plant",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 239
+  },
+  {
     "id": "ai_geo1_10_land_degradation_reclamation.webp",
     "path": "images/geo1/ai_geo1_10_land_degradation_reclamation.webp",
     "chapter": "geo1",

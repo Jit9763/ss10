@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGradEco4_2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGradEco4_2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="shadowEco4_2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGradEco4_2)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGradEco4_2)" filter="url(#shadowEco4_2)" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🤝 MNCs द्वारा अंतरदेशीय उत्पादन जोड़ने के 4 प्रमुख तरीके (4 Ways of Foreign Investment)
+  </text>
+
+  <!-- 4 COLUMN CARDS -->
+  <!-- 1. DIRECT PRODUCTION SETUP -->
+  <g transform="translate(45, 95)" filter="url(#shadowEco4_2)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#0369a1"/>
+    <rect y="26" width="235" height="18" fill="#0369a1"/>
+    <text x="117" y="30" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏭 1. प्रत्यक्ष नई इकाई</text>
+
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+    <text x="20" y="80" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif">🏗️ ग्रीनफील्ड निवेश:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• भूमि, भवन व मशीनें</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  स्वयं खरीदकर नया</text>
+    <text x="20" y="142" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  कारखाना लगाना।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#0c4a6e"/>
+    <text x="117" y="190" fill="#bae6fd" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 प्रमुख लाभ:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• पूर्ण 100% स्वामित्व</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  और प्रबंधन नियंत्रण।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• अत्याधुनिक तकनीक</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  का प्रत्यक्ष आयात।</text>
+    <text x="20" y="315" fill="#4ade80" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• लंबा निवेश चक्र।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+    <text x="117" y="385" fill="#38bdf8" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💡 उदाहरण:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• सैमसंग / एप्पल द्वारा</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  नोएडा में मेगा प्लांट।</text>
+  </g>
+
+  <!-- 2. ACQUISITION OF LOCAL FIRMS -->
+  <g transform="translate(295, 95)" filter="url(#shadowEco4_2)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#b45309"/>
+    <rect y="26" width="235" height="18" fill="#b45309"/>
+    <text x="117" y="30" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏢 2. कंपनियों का अधिग्रहण</text>
+
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#d97706" stroke-width="1"/>
+    <text x="20" y="80" fill="#fbbf24" font-size="13" font-weight="900" font-family="system-ui, sans-serif">🛒 स्थापित कंपनी खरीदना:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• स्थानीय कंपनियों को</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  खरीदकर उत्पादन का</text>
+    <text x="20" y="142" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  तेजी से प्रसार करना।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#78350f"/>
+    <text x="117" y="190" fill="#fde68a" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 सबसे प्रचलित तरीका:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• पहले से बना हुआ विशाल</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  विपणन व वितरण नेटवर्क।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• स्थानीय ब्रांड वैल्यू व</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  ग्राहकों का आधार।</text>
+    <text x="20" y="315" fill="#38bdf8" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• रातों-रात बाजार पर कब्जा।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#d97706" stroke-width="1"/>
+    <text x="117" y="385" fill="#fbbf24" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💡 NCERT केस स्टडी:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• कारगिल फूड्स (USA) द्वारा</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  परख फूड्स (भारत) की खरीद।</text>
+  </g>
+
+  <!-- 3. JOINT VENTURES -->
+  <g transform="translate(545, 95)" filter="url(#shadowEco4_2)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#065f46"/>
+    <rect y="26" width="235" height="18" fill="#065f46"/>
+    <text x="117" y="30" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🤝 3. संयुक्त साझेदारी</text>
+
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#059669" stroke-width="1"/>
+    <text x="20" y="80" fill="#34d399" font-size="13" font-weight="900" font-family="system-ui, sans-serif">🔗 संयुक्त उपक्रम (JV):</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• स्थानीय कंपनी के साथ</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  साझेदारी में संयुक्त</text>
+    <text x="20" y="142" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  उत्पादन प्रारंभ करना।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#064e3b"/>
+    <text x="117" y="190" fill="#a7f3d0" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 स्थानीय कंपनी को दोहरा लाभ:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">1. अतिरिक्त पूंजी निवेश</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">   (नई मशीनों हेतु धन)।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">2. नवीनतम तकनीक</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">   का प्रत्यक्ष हस्तांतरण।</text>
+    <text x="20" y="315" fill="#93c5fd" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• जोखिम का बंटवारा।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#059669" stroke-width="1"/>
+    <text x="117" y="385" fill="#34d399" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💡 NCERT केस स्टडी:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• फोर्ड मोटर्स (USA) व</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  महिंद्रा एंड महिंद्रा (भारत)।</text>
+  </g>
+
+  <!-- 4. CONTRACT MANUFACTURING TO SMALL PRODUCERS -->
+  <g transform="translate(795, 95)" filter="url(#shadowEco4_2)">
+    <rect width="260" height="485" rx="14" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect width="260" height="44" rx="14" fill="#9d174d"/>
+    <rect y="26" width="260" height="18" fill="#9d174d"/>
+    <text x="130" y="30" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🧵 4. छोटे उत्पादकों को आर्डर</text>
+
+    <rect x="12" y="58" width="236" height="95" rx="8" fill="#0f172a" stroke="#db2777" stroke-width="1"/>
+    <text x="20" y="80" fill="#f472b6" font-size="13" font-weight="900" font-family="system-ui, sans-serif">📦 अनुबंध विनिर्माण (Contract):</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• छोटे उत्पादकों को माल तैयार</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  करने के आर्डर देना।</text>
+    <text x="20" y="142" fill="#fbcfe8" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• वस्त्र, जूते, खेल सामान आदि।</text>
+
+    <rect x="12" y="165" width="236" height="180" rx="8" fill="#831843"/>
+    <text x="130" y="190" fill="#fbcfe8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🏷️ ब्रांड नेम से बिक्री:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• MNCs अपने प्रसिद्ध ब्रांड नाम</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  का ठप्पा लगाकर बेचती हैं।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• मूल्य, गुणवत्ता, डिलीवरी व</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  शर्तें तय करने की अपार शक्ति।</text>
+    <text x="20" y="315" fill="#4ade80" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• उत्पादक पर जोखिम।</text>
+
+    <rect x="12" y="360" width="236" height="110" rx="8" fill="#0f172a" stroke="#db2777" stroke-width="1"/>
+    <text x="130" y="385" fill="#f472b6" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💡 उदाहरण:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• नाइकी / एडिडास द्वारा</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  गारमेंट्स व फुटवियर आर्डर।</text>
+  </g>
+
+  <!-- Bottom Footer Bar -->
+  <rect x="40" y="598" width="1020" height="38" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="550" y="623" fill="#94a3b8" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    💡 निष्कर्ष: MNCs इन 4 तरीकों से दूर-दराज के स्थानों पर फैले उत्पादन को आपस में जोड़ देती हैं।
+  </text>
+</svg>

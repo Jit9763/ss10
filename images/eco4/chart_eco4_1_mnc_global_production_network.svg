@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGradEco4_1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bannerGradEco4_1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadowEco4_1" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgGradEco4_1)"/>
+
+  <!-- Master Top Banner -->
+  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGradEco4_1)" filter="url(#shadowEco4_1)" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    🌐 बहुराष्ट्रीय कंपनियों (MNCs) का वैश्विक उत्पादन नेटवर्क (Global Production Network)
+  </text>
+
+  <!-- 4 COLUMN CARDS: GEOGRAPHICAL DIVISION OF PRODUCTION -->
+  <!-- CARD 1: USA (R&D / DESIGN) -->
+  <g transform="translate(45, 95)" filter="url(#shadowEco4_1)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#0369a1"/>
+    <rect y="26" width="235" height="18" fill="#0369a1"/>
+    <text x="117" y="30" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🇺🇸 1. USA (अनुसंधान)</text>
+    
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+    <text x="20" y="80" fill="#38bdf8" font-size="13" font-weight="900" font-family="system-ui, sans-serif">💡 उत्पाद डिजाइनिंग:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• तकनीकी अनुसंधान व</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  उत्पादों का नवीन डिजाइन।</text>
+    <text x="20" y="142" fill="#93c5fd" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• उच्च कौशल संपन्न वैज्ञानिक।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#0c4a6e"/>
+    <text x="117" y="190" fill="#bae6fd" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎯 MNC का मुख्य उद्देश्य:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• पेटेंट एवं उच्च तकनीक</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  पर नियंत्रण बनाए रखना।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• वैश्विक बाजार के अनुकूल</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  उत्पाद तैयार करना।</text>
+    <text x="20" y="315" fill="#4ade80" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• मुख्यालय (HQ) नियंत्रण।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+    <text x="117" y="385" fill="#38bdf8" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📦 योगदान:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• बौद्धिक संपदा और</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  सॉफ्टवेयर आर्किटेक्चर।</text>
+  </g>
+
+  <!-- CARD 2: CHINA (MANUFACTURING) -->
+  <g transform="translate(295, 95)" filter="url(#shadowEco4_1)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#b45309"/>
+    <rect y="26" width="235" height="18" fill="#b45309"/>
+    <text x="117" y="30" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🇨🇳 2. चीन (विनिर्माण)</text>
+    
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#d97706" stroke-width="1"/>
+    <text x="20" y="80" fill="#fbbf24" font-size="13" font-weight="900" font-family="system-ui, sans-serif">⚙️ विनिर्माण केंद्र:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• पुर्जों (Components) का</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  सस्ता विशाल उत्पादन।</text>
+    <text x="20" y="142" fill="#fde68a" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• दुनिया का कारखाना (Factory)।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#78350f"/>
+    <text x="117" y="190" fill="#fde68a" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💰 लागत लाभ (Cost Benefit):</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• सस्ता कच्चा माल और</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  सस्ते श्रमिक उपलब्ध।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• विशाल पैमाने की बचत</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  (Economies of Scale)।</text>
+    <text x="20" y="315" fill="#38bdf8" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• उन्नत औद्योगिक पार्क।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#d97706" stroke-width="1"/>
+    <text x="117" y="385" fill="#fbbf24" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📦 उत्पाद:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• इलेक्ट्रॉनिक सर्किट, चिप्स,</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  प्लास्टिक व धातु पुर्जे।</text>
+  </g>
+
+  <!-- CARD 3: MEXICO & EASTERN EUROPE (ASSEMBLY) -->
+  <g transform="translate(545, 95)" filter="url(#shadowEco4_1)">
+    <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+    <rect width="235" height="44" rx="14" fill="#065f46"/>
+    <rect y="26" width="235" height="18" fill="#065f46"/>
+    <text x="117" y="30" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🇲🇽 मेक्सिको/यूरोप (संयोजन)</text>
+    
+    <rect x="12" y="58" width="211" height="95" rx="8" fill="#0f172a" stroke="#059669" stroke-width="1"/>
+    <text x="20" y="80" fill="#34d399" font-size="13" font-weight="900" font-family="system-ui, sans-serif">🔧 पुर्जों की असेंबली:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• सभी देशों से आए पुर्जों को</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  जोड़कर तैयार उत्पाद बनाना।</text>
+    <text x="20" y="142" fill="#6ee7b7" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• गुणवत्ता परीक्षण व पैकिंग।</text>
+
+    <rect x="12" y="165" width="211" height="180" rx="8" fill="#064e3b"/>
+    <text x="117" y="190" fill="#a7f3d0" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🚚 बाजार से निकटता:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• USA और यूरोपीय संघ के</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  बाजारों से भौगोलिक निकटता।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• त्वरित डिलीवरी और</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  परिवहन लागत में भारी कमी।</text>
+    <text x="20" y="315" fill="#93c5fd" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• सीमा शुल्क में रियायतें।</text>
+
+    <rect x="12" y="360" width="211" height="110" rx="8" fill="#0f172a" stroke="#059669" stroke-width="1"/>
+    <text x="117" y="385" fill="#34d399" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">📦 परिणाम:</text>
+    <text x="20" y="410" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• कारें, कंप्यूटर, मोबाइल</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  का अंतिम रूप तैयार।</text>
+  </g>
+
+  <!-- CARD 4: INDIA (CALL CENTERS / IT SUPPORT) -->
+  <g transform="translate(795, 95)" filter="url(#shadowEco4_1)">
+    <rect width="260" height="485" rx="14" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect width="260" height="44" rx="14" fill="#9d174d"/>
+    <rect y="26" width="260" height="18" fill="#9d174d"/>
+    <text x="130" y="30" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🇮🇳 4. भारत (कॉल सेंटर/IT)</text>
+    
+    <rect x="12" y="58" width="236" height="95" rx="8" fill="#0f172a" stroke="#db2777" stroke-width="1"/>
+    <text x="20" y="80" fill="#f472b6" font-size="13" font-weight="900" font-family="system-ui, sans-serif">📞 ग्राहक सेवा व बैक-ऑफिस:</text>
+    <text x="20" y="102" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• 24×7 वैश्विक कॉल सेंटर।</text>
+    <text x="20" y="122" fill="#cbd5e1" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• IT व सॉफ्टवेयर सहायता।</text>
+    <text x="20" y="142" fill="#fbcfe8" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• वित्तीय डेटा प्रोसेसिंग।</text>
+
+    <rect x="12" y="165" width="236" height="180" rx="8" fill="#831843"/>
+    <text x="130" y="190" fill="#fbcfe8" font-size="13" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🎓 भारत की मुख्य ताकत:</text>
+    <text x="20" y="215" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• अंग्रेजी बोलने वाले शिक्षित</text>
+    <text x="20" y="235" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  कुशल व दक्ष युवा।</text>
+    <text x="20" y="265" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• उच्च प्रशिक्षित तकनीकी</text>
+    <text x="20" y="285" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  इंजीनियर (कम लागत में)।</text>
+    <text x="20" y="315" fill="#4ade80" font-size="11" font-weight="900" font-family="system-ui, sans-serif">• समय क्षेत्र (Time-Zone) लाभ।</text>
+
+    <rect x="12" y="360" width="236" height="110" rx="8" fill="#0f172a" stroke="#db2777" stroke-width="1"/>
+    <text x="130" y="385" fill="#f472b6" font-size="12" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💎 समग्र लाभ:</text>
+    <text x="20" y="410" fill="#ffffff" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• MNCs उत्पादन लागत में</text>
+    <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  50% से 60% की बचत करती हैं।</text>
+  </g>
+
+  <!-- Bottom Footer Bar -->
+  <rect x="40" y="598" width="1020" height="38" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="550" y="623" fill="#94a3b8" font-size="14" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+    💡 मुख्य निष्कर्ष: बहुराष्ट्रीय कंपनियां उत्पादन को वैश्विक स्तर पर ऐसे विभाजित करती हैं जिससे लागत न्यूनतम और लाभ अधिकतम हो।
+  </text>
+</svg>
