@@ -1,82 +1,82 @@
 # 🏛️ Political Science Chapter 1: Power Sharing (सत्ता की साझेदारी)
-## 📸 Master GenAI Image Prompts (NCERT Textbook Matched & Projector-Optimized)
+## 📸 NCERT 1:1 Exact Textbook Visuals, Maps & Cartoons Prompts
 
 ---
 
-### 1. Brussels EU Capital & Parliament (चित्र 1.1 - NCERT Reference)
-**File**: `images/pol1/pol1_real_1_belgium_brussels_parliament_flag.webp`
+### 1. जर्मन गठबंधन सरकार कार कार्टून (NCERT Fig 1.1 Cartoon)
+**File**: `images/pol1/pol1_real_1_german_coalition_car_cartoon.webp`
 ```text
-A panoramic ultra-bright 16:9 documentary photograph matching NCERT Chapter 1 opening visuals of the European Union Parliament building in Brussels, Belgium. Flying European Union and Belgian flags in front of modern glass architectural facades under a clear blue sky. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A photorealistic 16:9 3D rendering recreating NCERT Chapter 1 Fig 1.1 cartoon: A modern German government passenger car on a sunny highway with two separate steering wheels fitted on the front dashboard, held by two coalition political leaders attempting to steer the car in different directions. High-contrast vivid saturated colors, bright daylight, crystal clear focus for classroom projector display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 2. Dutch & French Cultural Dialogue (चित्र 1.2 - NCERT Reference)
-**File**: `images/pol1/pol1_real_2_ethnic_diversity_dutch_french_meeting.webp`
+### 2. बेल्जियम एवं श्रीलंका का भौगोलिक मानचित्र (NCERT Fig 1.2 Map)
+**File**: `images/pol1/pol1_real_2_belgium_srilanka_ethnic_map.webp`
 ```text
-A warm sunlit 16:9 photograph matching NCERT's Brussels accommodation concept showing Flemish Dutch-speaking and Walloon French-speaking community leaders in a modern conference room in Brussels. Friendly handshakes, open discussion documents, natural window lighting, peaceful democratic dialogue. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A high-resolution 16:9 photorealistic 3D topographic relief map matching NCERT Fig 1.2 showing Europe's Belgium (highlighting Flemish Dutch region in yellow, Wallonia French region in red, and Brussels capital in orange) alongside the island country of Sri Lanka (highlighting Sinhala areas in yellow and Tamil areas in orange/pink). Bright saturated projector colors, photorealistic, zero text.
 ```
 
 ---
 
-### 3. 1956 Sinhala Only Act & Rally (चित्र 1.3 - NCERT Reference)
-**File**: `images/pol1/pol1_real_3_sri_lankan_buddhist_monk_sinhala_rally.webp`
+### 3. ब्रुसेल्स की द्विभाषी सड़क पट्टिकाएं (NCERT Fig 1.3 Street Signboard)
+**File**: `images/pol1/pol1_real_3_brussels_bilingual_street_sign.webp`
 ```text
-A dramatic 16:9 historical documentary photograph matching NCERT's Sri Lanka majoritarianism section depicting a public gathering in Sri Lanka following the 1956 Official Language Act. Buddhist monks and Sinhala community citizens gathered under bright tropical sunshine outside government buildings. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A crisp sunlit 16:9 street photograph in Brussels Grand Place matching NCERT Fig 1.3 showing a historic metal wall signboard displaying street names simultaneously in two languages: French and Dutch. Historic Belgian architecture background, bright daylight, high contrast vivid colors for classroom projector display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 4. Sri Lanka Civil War Impact (चित्र 1.4 - NCERT Reference)
-**File**: `images/pol1/pol1_real_4_sri_lanka_civil_war_aftermath_protest.webp`
+### 4. पुतिन और बुश - रूसी लोकतंत्र कार्टून (NCERT Fig 1.4 Cartoon)
+**File**: `images/pol1/pol1_real_4_putin_bush_russian_democracy_cartoon.webp`
 ```text
-A poignant 16:9 documentary photograph matching NCERT's Sri Lanka civil war impact depicting peaceful Tamil citizens in a sunlit Sri Lankan coastal village plaza. Coconut palms, traditional South Asian attire, emotional human resilience, hopeful daylight. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A photorealistic 16:9 artistic recreation of NCERT Fig 1.4 cartoon: A horse-drawn carriage named Democracy being driven down a city road, where two political leaders (representing Russia and US presidents) hold the reins tightly to control the direction of the horse. High-contrast vivid saturated colors, bright daylight, projector-optimized display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 5. Community Government Voting (चित्र 1.5 - NCERT Reference)
-**File**: `images/pol1/pol1_real_5_belgium_community_government_voting.webp`
+### 5. कॉर्पोरेट धनबल व अमेरिकी चुनाव कार्टून (NCERT Fig 1.5 Moneybags Cartoon)
+**File**: `images/pol1/pol1_real_5_us_election_corporate_money_cartoon.webp`
 ```text
-A bright, cheerful 16:9 photograph matching NCERT's Belgian Community Government concept showing Belgian citizens casting ballots in a clean, modern voting station. Wooden ballot boxes, clear glass windows, peaceful civic participation. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A high-contrast 16:9 photorealistic 3D artwork recreating NCERT Fig 1.5 cartoon: A giant Uncle Sam figure representing corporate money power carrying a massive sack of dollar currency into a democratic election voting hall, symbolizing financial influence over politics. Bright saturated projector colors, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 6. Coalition Car Dual Steering Wheels (चित्र 1.6 - NCERT Fig 1.1 Cartoon)
-**File**: `images/pol1/pol1_real_6_coalition_car_dual_steering_cartoon.webp`
+### 6. श्रीलंका में 1956 का कानून व तमिल विरोध रैली (NCERT Textbook Visual)
+**File**: `images/pol1/pol1_real_6_sri_lanka_1956_act_protest.webp`
 ```text
-A high-contrast 16:9 photorealistic recreation of NCERT Fig 1.1 German Grand Coalition cartoon: a modern car with two separate steering wheels on the front dashboard operated simultaneously by two political leaders steering in different directions on a sunny road. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A dramatic 16:9 historical documentary photograph matching NCERT Sri Lanka section: Tamil citizens gathered in a peaceful protest march outside government buildings in Colombo following the 1956 Sinhala Only Act. Palm trees, tropical sunlight, high contrast vivid colors for classroom projector display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 7. Horizontal Power Sharing - 3 Organs (चित्र 1.7 - NCERT Reference)
-**File**: `images/pol1/pol1_real_7_horizontal_power_sharing_three_organs.webp`
+### 7. श्रीलंका गृहयुद्ध के बाद की मानवीय स्थिति (NCERT Textbook Visual)
+**File**: `images/pol1/pol1_real_7_sri_lanka_civil_war_impact.webp`
 ```text
-A majestic 16:9 composite panoramic photograph matching NCERT's horizontal power sharing section showcasing the three democratic organs: Parliament (Legislature), Executive Secretariat, and Supreme Court (Judiciary). High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A poignant 16:9 documentary photograph matching NCERT Sri Lanka civil war impact: peaceful Tamil refugees and local villagers gathered in a coastal village under bright morning sun. Emotional resilience, hope for peace, high-contrast vivid saturated colors, crystal clear focus for classroom projector display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 8. Vertical Power Sharing - Federalism (चित्र 1.8 - NCERT Reference)
-**File**: `images/pol1/pol1_real_8_vertical_federalism_central_state_government.webp`
+### 8. बेल्जियम में सामुदायिक सरकार मतदान (NCERT Textbook Visual)
+**File**: `images/pol1/pol1_real_8_belgium_community_government_voting.webp`
 ```text
-An inspiring 16:9 photograph matching NCERT's vertical power sharing section depicting federal government architecture: a central national parliament house at top and state legislative assembly building below. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A bright, cheerful 16:9 photograph matching NCERT Belgium Community Government concept showing citizens casting votes in a modern polling station for language and cultural council elections. Clear glass windows, wooden ballot boxes, bright daylight, projector-optimized display, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 9. Coalition Government Press Conference (चित्र 1.9 - NCERT Reference)
-**File**: `images/pol1/pol1_real_9_coalition_government_press_conference.webp`
+### 9. यूरोपीय संघ (EU) मुख्यालय ब्रुसेल्स (NCERT Opening Photo)
+**File**: `images/pol1/pol1_real_9_brussels_eu_headquarters.webp`
 ```text
-A vibrant 16:9 photograph matching NCERT's coalition alliance concept showing leaders from different political parties holding a joint press conference at a podium, smiling and shaking hands. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A panoramic ultra-bright 16:9 photograph matching NCERT's opening chapter photo of the European Union Parliament building in Brussels, Belgium. Flying European Union and Belgian flags in front of glass architecture under a clear blue sky. Bright daylight, high contrast vivid colors, photorealistic 16:9, zero text.
 ```
 
 ---
 
-### 10. Reserved Constituency & Women Leaders (चित्र 1.10 - NCERT Reference)
-**File**: `images/pol1/pol1_real_10_reserved_constituency_women_representatives.webp`
+### 10. भारत में गठबंधन सरकार और क्षेत्रीय दल (NCERT Section Visual)
+**File**: `images/pol1/pol1_real_10_indian_coalition_government_press.webp`
 ```text
-An empowering 16:9 photograph matching NCERT's social group power sharing section depicting Indian female parliamentarians and minority community leaders standing proudly on the steps of the Indian Parliament building. High-contrast vivid saturated colors, bright daylight, crystal clear focus optimized for classroom projector display, photorealistic 16:9, zero text.
+A vibrant 16:9 photograph matching NCERT Indian coalition politics concept: leaders of multiple national and regional parties shaking hands and smiling during a joint press conference at a podium. Camera flashes, collaborative governance, high-contrast vivid saturated colors for classroom projector display, photorealistic 16:9, zero text.
 ```
