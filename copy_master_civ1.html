@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 राजनीति विज्ञान - अध्याय 1: सत्ता की साझेदारी | Master Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e1b4b;
+            --primary-accent: #6366f1;
+            --secondary: #0f172a;
+            --accent-blue: #0284c7;
+            --accent-green: #059669;
+            --accent-gold: #d97706;
+            --accent-red: #dc2626;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+            --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Hero Header */
+        .hero-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            color: #ffffff;
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid #6366f1;
+        }
+
+        .hero-header h1 {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #f8fafc;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-header p {
+            font-size: 22px;
+            color: #c7d2fe;
+            font-weight: 600;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #1e1b4b 0%, #312e81 100%);
+            color: #ffffff;
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-size: 26px;
+            font-weight: 900;
+            margin: 45px 0 25px 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: var(--shadow-sm);
+            border-left: 8px solid #6366f1;
+        }
+
+        .sub-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: #1e1b4b;
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #6366f1;
+            display: inline-block;
+        }
+
+        p { margin-bottom: 18px; text-align: justify; }
+
+        /* Concept Card */
+        .concept-card {
+            background: #f1f5f9;
+            border-left: 6px solid #6366f1;
+            border-radius: 14px;
+            padding: 24px;
+            margin: 25px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .concept-card h4 {
+            font-size: 20px;
+            font-weight: 900;
+            color: #1e1b4b;
+            margin-bottom: 12px;
+        }
+
+        /* Highlight List */
+        ul.custom-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        ul.custom-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        /* Image Box Container */
+        .img-box {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 18px;
+            padding: 16px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .img-box:hover {
+            transform: translateY(-4px);
+        }
+
+        .img-box img {
+            width: 100%;
+            max-height: 650px !important;
+            max-width: 1100px !important;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .img-caption {
+            font-size: 20px;
+            font-weight: 900;
+            color: #1e1b4b;
+            margin-top: 8px;
+
+            -webkit-text-stroke: 0.5px #000000;
+        }
+
+        .img-desc {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        /* Comparative Table */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 17px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .styled-table thead tr {
+            background-color: #1e1b4b;
+            color: #ffffff;
+            text-align: left;
+            font-weight: 900;
+            font-size: 19px;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f8fafc;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #e0e7ff;
+        }
+
+        /* Fact Box */
+        .fact-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .fact-box h4 {
+            color: #1d4ed8;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            .hero-header h1 { font-size: 28px; }
+            .section-title { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO HEADER -->
+    <div class="hero-header">
+        <h1>🏛️ कक्षा 10 राजनीति विज्ञान (लोकतांत्रिक राजनीति-2)</h1>
+        <p>अध्याय 1: सत्ता की साझेदारी (Power Sharing) | मास्टर नोट्स</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">📌 1. सत्ता की साझेदारी का परिचय एवं पृष्ठभूमि</div>
+    
+    <p>लोकतंत्र का सबसे मूलभूत सिद्धांत यह है कि <b>जनता ही समस्त राजनीतिक शक्ति का स्रोत है</b>। लोकतंत्र में लोग स्वशासन की संस्थाओं के माध्यम से अपना शासन खुद चलाते हैं। एक अच्छे लोकतांत्रिक शासन में समाज के विभिन्न समूहों और उनके विचारों को उचित सम्मान दिया जाता है। सत्ता की साझेदारी का अर्थ है—<b>सरकार के विभिन्न अंगों, स्तरों और सामाजिक समूहों के बीच शक्ति का न्यायपूर्ण व लोकतांत्रिक बंटवारा करना</b>।</p>
+
+    <!-- IMAGE 1.1 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_1_belgium_brussels_parliament_flag.webp" alt="चित्र 1.1: बेल्जियम की राजधानी ब्रुसेल्स में यूरोपीय संघ का संसद भवन और बेल्जियम का राष्ट्रीय ध्वज"/>
+        <div class="img-caption">🇧🇪 चित्र 1.1: बेल्जियम की राजधानी ब्रुसेल्स एवं यूरोपीय संघ (Brussels EU Capital)</div>
+        <div class="img-desc">यूरोप का छोटा सा देश बेल्जियम, जिसने अपनी भाषाई विविधता को आपसी समझ और शांतिपूर्ण सत्ता की साझेदारी से सुलझाया।</div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">🇧🇪 2. बेल्जियम की जातीय बनावट और विविधता</div>
+
+    <p>बेल्जियम यूरोप का एक बहुत छोटा सा देश है, जिसकी क्षेत्रफल में तुलना हमारे हरियाणा राज्य से की जा सकती है। इसकी सीमाएं फ्रांस, नीदरलैंड, जर्मनी और लक्समबर्ग से लगती हैं। इसकी कुल आबादी लगभग 1.1 करोड़ है। देश की कुल आबादी का <b>59% हिस्सा फलेमिश (Flemish) क्षेत्र में रहता है और डच भाषा बोलता है</b>। दूसरा हिस्सा <b>40% वेलोनिया (Wallonia) क्षेत्र में रहता है और फ्रेंच भाषा बोलता है</b>। शेष 1% लोग जर्मन बोलते हैं।</p>
+
+    <div class="concept-card">
+        <h4>🏛️ राजधानी ब्रुसेल्स (Brussels) की विशेष जटिलता:</h4>
+        <ul class="custom-list">
+            <li><b>ब्रुसेल्स में उल्टा समीकरण:</b> जहाँ पूरे देश में डच भाषी लोग बहुसंख्यक (59%) थे, वहीं राजधानी ब्रुसेल्स में <b>80% लोग फ्रेंच भाषी</b> थे और केवल <b>20% लोग डच भाषी</b> थे।</li>
+            <li><b>आर्थिक विषमता:</b> अल्पसंख्यक फ्रेंच भाषी लोग तुलनात्मक रूप से अधिक समृद्ध, शक्तिशाली और शिक्षित थे। डच भाषी लोगों को आर्थिक विकास और शिक्षा का लाभ बहुत बाद में मिला।</li>
+            <li><b>1950 और 1960 का तनाव:</b> इस आर्थिक और भाषाई असमानता के कारण डच और फ्रेंच भाषी समूहों के बीच 1950-60 के दशक में गंभीर तनाव पैदा हो गया।</li>
+        </ul>
+    </div>
+
+    <!-- CHART 1.1 -->
+    <div class="img-box">
+        <img src="images/pol1/chart_pol1_1_ethnic_composition_belgium_srilanka.svg" alt="चार्ट 1.1: बेल्जियम बनाम श्रीलंका की जातीय बनावट तुलना चार्ट"/>
+        <div class="img-caption">📊 चार्ट 1.1: बेल्जियम बनाम श्रीलंका - जातीय बनावट (Ethnic Composition Comparison)</div>
+        <div class="img-desc">बेल्जियम और श्रीलंका दोनों देशों की जनसंख्या, भाषाई विविधता और क्षेत्रीय बनावट का तुलनात्मक आरेख।</div>
+    </div>
+
+    <!-- IMAGE 1.2 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_2_ethnic_diversity_dutch_french_meeting.webp" alt="चित्र 1.2: बेल्जियम में डच और फ्रेंच भाषी प्रतिनिधियों की गोलमेज बैठक"/>
+        <div class="img-caption">🤝 चित्र 1.2: बेल्जियम में भाषाई सद्भाव एवं गोलमेज बैठक (Ethnic Diversity Dialogue)</div>
+        <div class="img-desc">फलेमिश और वेलोनिया समुदायों के प्रतिनिधि शांतिपूर्ण सह-अस्तित्व हेतु आपसी बातचीत करते हुए।</div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">🇱🇰 3. श्रीलंका में बहुसंख्यकवाद (Majoritarianism in Sri Lanka)</div>
+
+    <p>श्रीलंका भारत के दक्षिण तट से कुछ किलोमीटर की दूरी पर स्थित एक द्वीपीय देश है, जिसकी आबादी लगभग 2 करोड़ (हरियाणा के बराबर) है। श्रीलंका की आबादी में भी कई सामाजिक समूह हैं। सबसे बड़ा सामाजिक समूह <b>सिंहलियों का है जिनकी कुल आबादी में हिस्सेदारी 74% है</b>। दूसरा बड़ा समूह <b>तमिलों का है जिनकी आबादी 18% है</b>।</p>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>सामाजिक / भाषाई समूह</th>
+                <th>जनसंख्या प्रतिशत</th>
+                <th>धार्मिक स्थिति एवं मुख्य विशेषताएं</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>सिंहली भाषी (Sinhala)</b></td>
+                <td>74%</td>
+                <td>मुख्यतः बौद्ध धर्मानुयायी, देश के बहुसंख्यक वर्ग।</td>
+            </tr>
+                <td><b>श्रीलंकाई तमिल (Sri Lankan Tamils)</b></td>
+                <td>13%</td>
+                <td>उत्तर और पूर्वी प्रांतों में बसे मूल निवासी (हिंदू व मुस्लिम)।</td>
+            </tr>
+            <tr>
+                <td><b>भारतीय तमिल (Indian Tamils)</b></td>
+                <td>05%</td>
+                <td>औपनिवेशिक काल में बागानों में काम करने भारत से लाए गए मजदूरों के वंशज।</td>
+            </tr>
+            <tr>
+                <td><b>ईसाई (Christians)</b></td>
+                <td>07%</td>
+                <td>सिंहली और तमिल दोनों भाषाएं बोलने वाला मिश्रित समुदाय।</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-card">
+        <h4>🔥 1956 का बहुसंख्यकवादी कानून और उसके परिणाम:</h4>
+        <p>1948 में श्रीलंका स्वतंत्र राष्ट्र बना। सिंहली समुदाय के नेताओं ने अपनी बहुसंख्या के बल पर शासन पर प्रभुत्व जमाना चाहा। इसके तहत <b>1956 में एक कानून बनाया गया</b>:</p>
+        <ul class="custom-list">
+            <li><b>सिंहली एकमात्र आधिकारिक भाषा:</b> तमिल भाषा की उपेक्षा करके सिंहली को एकमात्र राजभाषा घोषित किया गया।</li>
+            <li><b>नौकरियों व शिक्षा में प्राथमिकता:</b> विश्वविद्यालयों और सरकारी नौकरियों में सिंहली आवेदकों को प्राथमिकता देने की नीति चली।</li>
+            <li><b>बौद्ध धर्म को राजकीय संरक्षण:</b> नए संविधान में यह प्रावधान किया गया कि सरकार बौद्ध मत को संरक्षण और बढ़ावा देगी।</li>
+        </ul>
+    </div>
+
+    <!-- CHART 1.3 -->
+    <div class="img-box">
+        <img src="images/pol1/chart_pol1_3_sri_lanka_majoritarianism_timeline.svg" alt="चार्ट 1.3: श्रीलंका में बहुसंख्यकवाद से गृहयुद्ध तक का घटनाक्रम चार्ट"/>
+        <div class="img-caption">🔥 चार्ट 1.3: श्रीलंका - बहुसंख्यकवाद से गृहयुद्ध की टाइमलाइन (Sri Lanka Timeline)</div>
+        <div class="img-desc">1948 स्वतंत्रता ➔ 1956 सिंहली कानून ➔ तमिल अलगाव ➔ 2009 तक चला विनाशकारी गृहयुद्ध।</div>
+    </div>
+
+    <!-- IMAGE 1.3 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_3_sri_lankan_buddhist_monk_sinhala_rally.webp" alt="चित्र 1.3: 1956 के कानून के बाद श्रीलंका में बहुसंख्यकवादी प्रदर्शन"/>
+        <div class="img-caption">🇱🇰 चित्र 1.3: 1956 का बहुसंख्यकवादी कानून एवं असंतोष (1956 Act Impact)</div>
+        <div class="img-desc">एकतरफा सरकारी नीतियों के कारण श्रीलंकाई तमिलों में अलगाव और बेगानेपन की तीव्र भावना पैदा हुई।</div>
+    </div>
+
+    <!-- IMAGE 1.4 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_4_sri_lanka_civil_war_aftermath_protest.webp" alt="चित्र 1.4: श्रीलंका गृहयुद्ध का विनाशकारी दृश्य एवं शरणार्थी संकट"/>
+        <div class="img-caption">💥 चित्र 1.4: श्रीलंका गृहयुद्ध के विनाशकारी परिणाम (Sri Lanka Civil War Aftermath)</div>
+        <div class="img-desc">तमिल ईलम की मांग को लेकर हुए गृहयुद्ध में हजारों लोग मारे गए और देश की अर्थव्यवस्था तबाह हुई।</div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">🤝 4. बेल्जियम की समझदारी और संविधान संशोधन</div>
+
+    <p>बेल्जियम के नेताओं ने श्रीलंका से अलग रास्ता अपनाया। उन्होंने समझदारी दिखाते हुए क्षेत्रीय अंतरों और सांस्कृतिक विविधताओं को स्वीकार किया। <b>1970 और 1993 के बीच उन्होंने अपने संविधान में 4 बार संशोधन किए</b> ताकि देश में रहने वाले सभी लोग मिल-जुलकर रह सकें।</p>
+
+    <!-- CHART 1.2 -->
+    <div class="img-box">
+        <img src="images/pol1/chart_pol1_2_belgium_four_constitutional_adjustments.svg" alt="चार्ट 1.2: बेल्जियम मॉडल के 4 प्रमुख संवैधानिक संशोधन"/>
+        <div class="img-caption">🏛️ चार्ट 1.2: बेल्जियम मॉडल के 4 संवैधानिक स्तंभ (Belgium Accommodation Model)</div>
+        <div class="img-desc">समान केंद्रीय मंत्री, स्वतंत्र राज्य सरकारें, ब्रुसेल्स की अलग सरकार एवं 3री सामुदायिक सरकार।</div>
+    </div>
+
+    <!-- IMAGE 1.5 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_5_belgium_community_government_voting.webp" alt="चित्र 1.5: बेल्जियम में सामुदायिक सरकार के चुनाव हेतु मतदान करते नागरिक"/>
+        <div class="img-caption">🗳️ चित्र 1.5: तीसरी सामुदायिक सरकार का चुनाव (Community Government Elections)</div>
+        <div class="img-desc">डच, फ्रेंच और जर्मन भाषी लोग अपनी संस्कृति, भाषा और शिक्षा हेतु अलग सामुदायिक सरकार चुनते हैं।</div>
+    </div>
+
+    <!-- IMAGE 1.6 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_6_european_union_headquarters_brussels.webp" alt="चित्र 1.6: ब्रुसेल्स में यूरोपीय संघ का विशाल मुख्यालय भवन"/>
+        <div class="img-caption">🇪🇺 चित्र 1.6: यूरोपीय संघ का मुख्यालय ब्रुसेल्स (European Union HQ Brussels)</div>
+        <div class="img-desc">शांतिपूर्ण मॉडल और आदर्श सत्ता की साझेदारी के कारण यूरोपीय देशों ने ब्रुसेल्स को EU का मुख्यालय चुना।</div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section-title">⚖️ 5. सत्ता की साझेदारी क्यों आवश्यक है?</div>
+
+    <p>सत्ता की साझेदारी के पक्ष में <b>दो मुख्य प्रकार के तर्क (Reasons) दिए जाते हैं</b>, जो लोकतंत्र की सफलता के लिए अत्यंत महत्वपूर्ण हैं:</p>
+
+    <!-- CHART 1.4 -->
+    <div class="img-box">
+        <img src="images/pol1/chart_pol1_4_prudential_vs_moral_reasons.svg" alt="चार्ट 1.4: सत्ता की साझेदारी के युक्तिपरक बनाम नैतिक तर्क"/>
+        <div class="img-caption">⚖️ चार्ट 1.4: सत्ता की साझेदारी के दो मुख्य तर्क (Prudential vs Moral Reasons)</div>
+        <div class="img-desc">समझदारी पर आधारित युक्तिपरक तर्क (हिंसा रोकना) बनाम लोकतंत्र की आत्मा पर आधारित नैतिक तर्क।</div>
+    </div>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>तर्क का प्रकार</th>
+                <th>मूल आधार एवं सिद्धांत</th>
+                <th>मुख्य उद्देश्य व लाभ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>1. युक्तिपरक तर्क (Prudential Reason)</b></td>
+                <td>लाभ-हानि का सावधानीपूर्वक हिसाब लगाकर लिया गया निर्णय।</td>
+                <td>विभिन्न सामाजिक समूहों के बीच टकराव और हिंसा को रोकना, राजनीतिक स्थिरता स्थापित करना।</td>
+            </tr>
+            <tr>
+                <td><b>2. नैतिक तर्क (Moral Reason)</b></td>
+                <td>लोकतंत्र के अंतर्निहित मूल्यों और आत्मा पर आधारित।</td>
+                <td>जनता की शासन में प्रत्यक्ष भागीदारी सुनिश्चित करना; सत्ता का बंटवारा अपने आप में कीमती है।</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 6 -->
+    <div class="section-title">🌐 6. सत्ता की साझेदारी के 4 आधुनिक रूप (Forms of Power Sharing)</div>
+
+    <p>आधुनिक लोकतांत्रिक व्यवस्थाओं में सत्ता की साझेदारी कई रूपों में हो सकती है। इसे निम्नलिखित <b>4 मुख्य श्रेणियों में विभाजित किया गया है</b>:</p>
+
+    <!-- CHART 1.5 -->
+    <div class="img-box">
+        <img src="images/pol1/chart_pol1_5_forms_of_power_sharing_matrix.svg" alt="चार्ट 1.5: सत्ता की साझेदारी के 4 आधुनिक रूपों का मैट्रिक्स चार्ट"/>
+        <div class="img-caption">🌐 चार्ट 1.5: सत्ता की साझेदारी के 4 मुख्य रूप (Forms of Power Sharing Matrix)</div>
+        <div class="img-desc">क्षैतिज वितरण, ऊर्ध्वाधर संघवाद, सामाजिक समूह साझेदारी एवं राजनीतिक दल/गठबंधन व्यवस्था।</div>
+    </div>
+
+    <!-- IMAGE 1.7 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_7_horizontal_power_sharing_three_organs.webp" alt="चित्र 1.7: सरकार के तीन अंगों - संसद, राष्ट्रपति भवन व सर्वोच्च न्यायालय की भव्य इमारतें"/>
+        <div class="img-caption">⚖️ चित्र 1.7: क्षैतिज वितरण - नियंत्रण एवं संतुलन (Horizontal Power Sharing)</div>
+        <div class="img-desc">विधायिका, कार्यपालिका और न्यायपालिका एक ही स्तर पर रहकर एक-दूसरे की शक्तियों पर अंकुश रखती हैं।</div>
+    </div>
+
+    <!-- IMAGE 1.8 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_8_vertical_federalism_central_state_government.webp" alt="चित्र 1.8: केंद्र सरकार और राज्य सरकार के प्रशासनिक भवनों का संघात्मक ढांचा"/>
+        <div class="img-caption">🏛️ चित्र 1.8: ऊर्ध्वाधर वितरण - संघात्मक शासन (Vertical Federal Sharing)</div>
+        <div class="img-desc">केंद्रीय सरकार, राज्य सरकार तथा स्थानीय निकायों (पंचायत/नगर पालिका) के बीच शक्तियों का विभाजन।</div>
+    </div>
+
+    <!-- IMAGE 1.9 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_9_coalition_government_press_conference.webp" alt="चित्र 1.9: बहुदलीय गठबंधन सरकार के प्रमुख नेताओं की सयुंक्त प्रेस वार्ता"/>
+        <div class="img-caption">🤝 चित्र 1.9: गठबंधन सरकार एवं बहुदलीय व्यवस्था (Coalition Government)</div>
+        <div class="img-desc">जब दो या दो से अधिक दल मिलकर सरकार बनाते हैं, तो सत्ता में प्रत्यक्ष राजनीतिक साझेदारी होती है।</div>
+    </div>
+
+    <!-- IMAGE 1.10 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_10_reserved_constituency_women_representatives.webp" alt="चित्र 1.10: संसद में आरक्षित सीटों पर चुनी गई महिला एवं समाज के कमजोर वर्ग के प्रतिनिधि"/>
+        <div class="img-caption">👩‍💼 चित्र 1.10: सामाजिक समूहों में साझेदारी एवं आरक्षण (Reserved Representation)</div>
+        <div class="img-desc">महिलाओं, अनुसूचित जातियों व जनजातियों हेतु आरक्षित चुनाव क्षेत्र ताकि बेगानेपन की भावना न रहे।</div>
+    </div>
+
+    <!-- MORE IMAGES 1.11 to 1.20 -->
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_11_pressure_groups_labor_union_demonstration.webp" alt="चित्र 1.11: श्रमिक संघ और किसान हित समूहों की शांतिपूर्ण रैली"/>
+        <div class="img-caption">📢 चित्र 1.11: दबाव समूह एवं हित समूह (Pressure Groups & Unions)</div>
+        <div class="img-desc">व्यापारी, किसान और मजदूर संघ सरकार की नीतियों को प्रभावित करके निर्णय प्रक्रिया में हिस्सेदार बनते हैं।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_12_checks_and_balances_judiciary_court.webp" alt="चित्र 1.12: सर्वोच्च न्यायालय में निष्पक्ष न्याय की सुनवाई"/>
+        <div class="img-caption">🏛️ चित्र 1.12: न्यायपालिका द्वारा कार्यपालिका पर अंकुश (System of Checks & Balances)</div>
+        <div class="img-desc">न्यायाधीशों की नियुक्ति कार्यपालिका करती है, किंतु न्यायपालिका ही विधायिका के कानूनों की समीक्षा करती है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_13_dutch_flemish_culture_festival.webp" alt="चित्र 1.13: बेल्जियम में फलेमिश डच संस्कृति महोत्सव का दृश्य"/>
+        <div class="img-caption">🎭 चित्र 1.13: सांस्कृतिक विविधता का सम्मान (Cultural Autonomy)</div>
+        <div class="img-desc">सामुदायिक सरकार द्वारा भाषाई और सांस्कृतिक पहचान को कानूनी संरक्षण प्राप्त होता है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_14_french_walloon_parliamentary_debate.webp" alt="चित्र 1.14: वेलोनिया फ्रेंच संसद में शांतिपूर्ण बहस"/>
+        <div class="img-caption">💬 चित्र 1.14: भाषाई अल्पसंख्यकों के अधिकार (Minority Rights Protection)</div>
+        <div class="img-desc">किसी भी भाषाई समुदाय पर दूसरे समुदाय की इच्छा जबरन नहीं थोपी जा सकती।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_15_tamil_minority_rights_symposium.webp" alt="चित्र 1.15: तमिल नागरिकों के मानवाधिकार सम्मेलन का आयोजन"/>
+        <div class="img-caption">🕊️ चित्र 1.15: अल्पसंख्यक अधिकारों का वैश्विक विचार (Minority Protection)</div>
+        <div class="img-desc">बहुसंख्यकवाद के स्थान पर समावेशी लोकतंत्र ही किसी भी देश की अखंडता का एकमात्र आधार है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_16_peaceful_power_sharing_roundtable.webp" alt="चित्र 1.16: विभिन्न समुदायों की संयुक्त शांति सम्मेलन बैठक"/>
+        <div class="img-caption">🕊️ चित्र 1.16: शांतिपूर्ण सत्ता की साझेदारी (Peaceful Conflict Resolution)</div>
+        <div class="img-desc">संवाद और सहमति के आधार पर बनी सरकारें देश को गृहयुद्ध और विभाजन से बचाती हैं।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_17_local_panchayat_community_decision.webp" alt="चित्र 1.17: भारत में ग्राम पंचायत की चौपाल में एकत्रित ग्रामीण"/>
+        <div class="img-caption">🏡 चित्र 1.17: स्थानीय स्वशासन व पंचायती राज (Local Self-Government)</div>
+        <div class="img-desc">तीसरे स्तर की सरकार के रूप में पंचायतों और नगर पालिकाओं में आम जनता की प्रत्यक्ष भागीदारी।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_18_democratic_voting_ballot_box.webp" alt="चित्र 1.18: निष्पक्ष लोकतांत्रिक मतदान केंद्र में वोट डालती महिला"/>
+        <div class="img-caption">🗳️ चित्र 1.18: सार्वभौमिक वयस्क मताधिकार (Universal Adult Suffrage)</div>
+        <div class="img-desc">लोकतंत्र में हर वयस्क नागरिक का एक वोट और हर वोट का समान मूल्य होता है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_19_constitution_of_india_preamble_justice.webp" alt="चित्र 1.19: भारत का संविधान और उसकी उद्देशिका (Preamble of India)"/>
+        <div class="img-caption">📜 चित्र 1.19: भारतीय संविधान एवं न्याय की गारंटी (Constitution of India)</div>
+        <div class="img-desc">संविधान सभी नागरिकों को सामाजिक, आर्थिक और राजनीतिक न्याय की गारंटी देता है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol1/pol1_real_20_harmonious_inclusive_democratic_society.webp" alt="चित्र 20: एकजुट और खुशहाल लोकतांत्रिक भारत का दृश्य"/>
+        <div class="img-caption">🌟 चित्र 1.20: समावेशी एवं सशक्त लोकतंत्र (Inclusive Democratic Society)</div>
+        <div class="img-desc">विविधता में एकता और सत्ता की निष्पक्ष साझेदारी ही एक मजबूत राष्ट्र का निर्माण करती है।</div>
+    </div>
+
+    <!-- FACT BOX FOR EXAMS -->
+    <div class="fact-box">
+        <h4>💡 परीक्षा हेतु त्वरित स्मरणीय तथ्य (Quick Exam Takeaways):</h4>
+        <ul class="custom-list">
+            <li><b>बेल्जियम की आबादी:</b> 59% डच (फलेमिश), 40% फ्रेंच (वेलोनिया), 1% जर्मन।</li>
+            <li><b>ब्रुसेल्स की आबादी:</b> 80% फ्रेंच, 20% डच।</li>
+            <li><b>श्रीलंका की आबादी:</b> 74% सिंहली (बौद्ध), 18% तमिल (13% मूल तमिल, 5% भारतीय तमिल)।</li>
+            <li><b>1956 का श्रीलंका कानून:</b> सिंहली को एकमात्र राजभाषा बनाया, बौद्ध धर्म को संरक्षण दिया।</li>
+            <li><b>बेल्जियम संविधान संशोधन:</b> 1970 से 1993 के बीच 4 बार संशोधन किए गए।</li>
+            <li><b>सामुदायिक सरकार (Community Govt):</b> संस्कृति, भाषा और शिक्षा संबंधी फैसले लेने की विशेष संस्था।</li>
+            <li><b>क्षैतिज वितरण (Horizontal):</b> विधायिका, कार्यपालिका, न्यायपालिका (नियंत्रण और संतुलन प्रणाली)।</li>
+            <li><b>ऊर्ध्वाधर वितरण (Vertical):</b> केंद्र सरकार, राज्य सरकार, स्थानीय स्वशासन (संघात्मक व्यवस्था)।</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329"/>
+      <stop offset="50%" stop-color="#111c38"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="titleGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Title -->
+  <g filter="url(#shadow5)">
+    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#c084fc" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">🌐 सत्ता की साझेदारी के 4 आधुनिक रूप (Forms of Power Sharing)</text>
+  </g>
+
+  <!-- 4 Form Cards Grid -->
+  <!-- 1. Horizontal Distribution -->
+  <g transform="translate(45, 125)" filter="url(#shadow5)">
+    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="480" height="50" rx="16" fill="#0284c7"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. शासन के अंगों के बीच (क्षैतिज वितरण - Horizontal)</text>
+    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• विधायिका (Legislature), कार्यपालिका (Executive), न्यायपालिका (Judiciary)।</text>
+    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• एक ही स्तर पर रहकर अपनी-अपनी शक्तियों का प्रयोग करते हैं।</text>
+    <text x="20" y="160" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">⚖️ नियंत्रण और संतुलन की व्यवस्था (Checks and Balances System)।</text>
+  </g>
+
+  <!-- 2. Vertical Federal Distribution -->
+  <g transform="translate(575, 125)" filter="url(#shadow5)">
+    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="0" y="0" width="480" height="50" rx="16" fill="#059669"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. सरकार के विभिन्न स्तरों में (ऊर्ध्वाधर वितरण - Vertical)</text>
+    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• केंद्र सरकार ➔ राज्य सरकार ➔ स्थानीय निकाय (नगर पालिका/पंचायत)।</text>
+    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• उच्चतर और निम्नतर स्तर की सरकारों के बीच शक्तियों का विभाजन।</text>
+    <text x="20" y="160" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">🏛️ इसे संघात्मक सरकार (Federal Division of Power) कहते हैं।</text>
+  </g>
+
+  <!-- 3. Among Social Groups -->
+  <g transform="translate(45, 380)" filter="url(#shadow5)">
+    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="480" height="50" rx="16" fill="#d97706"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">3. सामाजिक समूहों के बीच (Social Groups Sharing)</text>
+    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• धार्मिक, भाषाई व कमजोर वर्गों के बीच सत्ता की साझेदारी।</text>
+    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• उदाहरण: बेल्जियम की 'सामुदायिक सरकार' व भारत में 'आरक्षित चुनाव क्षेत्र'।</text>
+    <text x="20" y="160" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">🤝 अल्पसंख्यकों को सत्ता में हिस्सेदारी देकर बेगानापन दूर करना।</text>
+  </g>
+
+  <!-- 4. Parties, Pressure Groups & Movements -->
+  <g transform="translate(575, 380)" filter="url(#shadow5)">
+    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#f472b6" stroke-width="2.5"/>
+    <rect x="0" y="0" width="480" height="50" rx="16" fill="#db2777"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">4. राजनीतिक दलों व दबाव समूहों में (Parties & Pressure Groups)</text>
+    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• चुनाव में विभिन्न राजनीतिक दलों के बीच सत्ता हासिल करने की प्रतिस्पर्धा।</text>
+    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• गठबंधन सरकार (Coalition Government) के रूप में सीधी साझेदारी।</text>
+    <text x="20" y="160" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">📢 व्यापारी, किसान, मजदूर संघ अपने दबाव से नीतियों को प्रभावित करते हैं।</text>
+  </g>
+</svg>
