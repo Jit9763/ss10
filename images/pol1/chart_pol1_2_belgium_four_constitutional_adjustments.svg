@@ -2,66 +2,58 @@
   <defs>
     <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#070d1e"/>
-      <stop offset="50%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
     <linearGradient id="titleGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="0%" stop-color="#facc15"/>
       <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
     <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
     </filter>
   </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad2)" stroke="#334155" stroke-width="2.5"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad2)" stroke="#334155" stroke-width="3"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#facc15" stroke-width="1.5" stroke-opacity="0.4"/>
 
   <!-- Title -->
   <g filter="url(#shadow2)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#10b981" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad2)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">🏛️ बेल्जियम मॉडल के 4 प्रमुख संवैधानिक संशोधन (Belgium Accommodation Model)</text>
+    <rect x="30" y="24" width="1040" height="76" rx="16" fill="#090d16" stroke="#facc15" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad2)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="24" font-weight="900" text-anchor="middle">⭐ बेल्जियम मॉडल के 4 प्रमुख संवैधानिक संशोधन (1970 - 1993)</text>
   </g>
 
-  <!-- 4 Pillar Cards (2x2 Grid) -->
-  <!-- Pillar 1: Equal Central Ministers -->
-  <g transform="translate(45, 125)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#059669"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. केंद्र सरकार में समान मंत्री (Equal Representation)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• डच और फ्रेंच भाषी मंत्रियों की संख्या समान (50-50%) होगी।</text>
-    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• विशेष कानून दोनों भाषाई समूहों के बहुमत समर्थन से ही बनेंगे।</text>
-    <text x="20" y="160" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">🎯 एकतरफा निर्णय की संभावना को पूरी तरह समाप्त किया गया।</text>
+  <!-- 4 Grid Cards -->
+  <g transform="translate(35, 125)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="55" rx="16" fill="#0284c7"/>
+    <text x="250" y="38" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. केंद्र में समान मंत्री (Equal Ministers)</text>
+    <text x="15" y="105" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• केंद्र सरकार में डच व फ्रेंच मंत्रियों की संख्या समान।</text>
+    <text x="15" y="155" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• विशेष कानून दोनों भाषाई बहुमत से ही पास होंगे।</text>
   </g>
 
-  <!-- Pillar 2: State Governments Independence -->
-  <g transform="translate(575, 125)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#0284c7"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. राज्य सरकारों को स्वतंत्रता (State Autonomy)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• केंद्र सरकार की कई शक्तियाँ दोनों क्षेत्रीय राज्य सरकारों को दी गईं।</text>
-    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• राज्य सरकारें केंद्र सरकार के अधीन (Subordinate) नहीं हैं।</text>
-    <text x="20" y="160" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">🌐 सच्चे संघात्मक शासन (True Federalism) का उत्कृष्ट उदाहरण।</text>
+  <g transform="translate(565, 125)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="55" rx="16" fill="#059669"/>
+    <text x="250" y="38" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. स्वतंत्र राज्य सरकारें (State Power)</text>
+    <text x="15" y="105" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• केंद्र की अनेक शक्तियां राज्य सरकारों को दी गईं।</text>
+    <text x="15" y="155" fill="#a7f3d0" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• राज्य सरकारें केंद्र सरकार के अधीन नहीं हैं।</text>
   </g>
 
-  <!-- Pillar 3: Brussels Separate Government -->
-  <g transform="translate(45, 380)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">3. ब्रुसेल्स की अलग सरकार (Brussels Model)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• ब्रुसेल्स की अलग सरकार में दोनों समूहों का समान प्रतिनिधित्व है।</text>
-    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• फ्रेंच भाषियों ने ब्रुसेल्स में डच भाषियों की समानता स्वीकार की,</text>
-    <text x="20" y="160" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">क्योंकि डच भाषियों ने केंद्र में फ्रेंच भाषियों की समानता मानी थी।</text>
+  <g transform="translate(35, 380)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="55" rx="16" fill="#d97706"/>
+    <text x="250" y="38" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. ब्रुसेल्स में अलग सरकार (Brussels HQ)</text>
+    <text x="15" y="105" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• ब्रुसेल्स में दोनों समुदायों को समान प्रतिनिधित्व।</text>
+    <text x="15" y="155" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• फ्रेंच भाषियों ने केंद्र में डच बराबरी स्वीकार की।</text>
   </g>
 
-  <!-- Pillar 4: Community Government -->
-  <g transform="translate(575, 380)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#9333ea"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">4. तीसरी सामुदायिक सरकार (Community Government)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• डच, फ्रेंच व जर्मन भाषियों द्वारा अपनी अलग सरकार का चुनाव।</text>
-    <text x="20" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• अधिकार: संस्कृति, शिक्षा और भाषा संबंधी फैसले लेने की शक्ति।</text>
-    <text x="20" y="160" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">🇪🇺 यूरोपीय संघ (EU) ने ब्रुसेल्स को अपना मुख्यालय चुना।</text>
+  <g transform="translate(565, 380)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="55" rx="16" fill="#9333ea"/>
+    <text x="250" y="38" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. सामुदायिक सरकार (Community Govt)</text>
+    <text x="15" y="105" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• संस्कृति, शिक्षा व भाषा हेतु तीसरी सरकार का गठन।</text>
+    <text x="15" y="155" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• इसका चुनाव एक ही भाषा के लोग करते हैं।</text>
   </g>
 </svg>

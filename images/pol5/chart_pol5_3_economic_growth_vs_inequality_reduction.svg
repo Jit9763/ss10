@@ -24,10 +24,10 @@
     <text x="550" y="72" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">📈 आर्थिक संवृद्धि बनाम गरीबी व असमानता में कमी</text>
   </g>
 
-  <g transform="translate(45, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. आर्थिक संवृद्धि (Economic Growth)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. आर्थिक संवृद्धि (Economic Growth)</text>
     
     <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• तानाशाही बनाम लोकतंत्र का रिकॉर्ड:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">1950 से 2000 के बीच तानाशाही वाले देशों में आर्थिक संवृद्धि दर थोड़ी बेहतर रही।</text>
@@ -40,10 +40,10 @@
     <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">विकास की थोड़ी कम दर के बावजूद लोकतंत्र बेहतर है।</text>
   </g>
 
-  <g transform="translate(575, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. गरीबी व असमानता में कमी (Inequality Reduction)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. गरीबी व असमानता में कमी (Inequality Reduction)</text>
     
     <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• धन के वितरण में असमानता:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">मुट्ठी भर अमीर लोग राष्ट्रीय आय के बहुत बड़े हिस्से पर कब्जा रखते हैं।</text>

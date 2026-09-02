@@ -25,10 +25,10 @@
   </g>
 
   <!-- Left: State Party Criteria -->
-  <g transform="translate(45, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. राज्यस्तरीय दल (State/Regional Party)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. राज्यस्तरीय दल (State/Regional Party)</text>
     
     <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">चुनाव आयोग की निर्धारित शर्तें:</text>
     <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• राज्य विधानसभा चुनाव में पड़े कुल वोटों का <b>कम से कम 6% वोट</b> हासिल करना।</text>
@@ -40,10 +40,10 @@
   </g>
 
   <!-- Right: National Party Criteria -->
-  <g transform="translate(575, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. राष्ट्रीय दल (National Party)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. राष्ट्रीय दल (National Party)</text>
     
     <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">चुनाव आयोग की निर्धारित शर्तें:</text>
     <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• लोकसभा चुनाव या 4 राज्यों के विधानसभा चुनाव में <b>6% वोट</b> हासिल करना।</text>

@@ -25,10 +25,10 @@
   </g>
 
   <!-- Left: Coming Together -->
-  <g transform="translate(45, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. साथ आकर संघ बनाना (Coming Together)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. साथ आकर संघ बनाना (Coming Together)</text>
     
     <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• स्वतंत्र राज्यों का अपनी मर्जी से साथ आना:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">दो या अधिक स्वतंत्र राष्ट्र अपनी सुरक्षा व संप्रभुता बढ़ाने हेतु मिलकर एक बड़ा संघ बनाते हैं।</text>
@@ -42,10 +42,10 @@
   </g>
 
   <!-- Right: Holding Together -->
-  <g transform="translate(575, 125)" filter="url(#shadow3)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#db2777"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. साथ लेकर संघ बनाना (Holding Together)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow3)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. साथ लेकर संघ बनाना (Holding Together)</text>
     
     <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• बड़े देश द्वारा आंतरिक विभाजन:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">एक बड़ा देश अपनी आंतरिक विविधता को ध्यान में रखकर राज्य और केंद्र में शक्तियां बांटता है।</text>

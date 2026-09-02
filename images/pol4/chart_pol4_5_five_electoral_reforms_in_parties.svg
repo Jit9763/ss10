@@ -24,7 +24,7 @@
     <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🛠️ राजनीतिक दलों में सुधार के 5 प्रमुख उपाय (Reforms in Political Parties)</text>
   </g>
 
-  <g transform="translate(45, 120)" filter="url(#shadow5)">
+  <g transform="translate(35, 120)" filter="url(#shadow5)">
     <rect width="1010" height="495" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
     
     <text x="35" y="55" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">1. दल-बदल विरोधी कानून (Anti-Defection Law):</text>

@@ -25,34 +25,34 @@
   </g>
 
   <!-- 4 Step Flow Grid -->
-  <g transform="translate(45, 125)" filter="url(#shadow3)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. रोजमर्रा के पूर्वग्रह (Everyday Beliefs)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow3)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#d97706"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. रोजमर्रा के पूर्वग्रह (Everyday Beliefs)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• धार्मिक पूर्वाग्रह, पारंपरिक अवधारणाएं और दूसरे धर्मों को नीचा मानना।</text>
     <text x="20" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• यह साम्प्रदायिकता का सबसे आम और व्यापक रूप है।</text>
   </g>
 
-  <g transform="translate(575, 125)" filter="url(#shadow3)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#fb923c" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#ea580c"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. राजनीतिक प्रभुत्व की चाह (Political Dominance)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow3)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#fb923c" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#ea580c"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. राजनीतिक प्रभुत्व की चाह (Political Dominance)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• बहुसंख्यक समुदाय अपने धर्म का राजनीतिक वर्चस्व कायम करना चाहता है।</text>
     <text x="20" y="130" fill="#fed7aa" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• अल्पसंख्यक समुदाय अलग राजनीतिक इकाई की मांग करता है।</text>
   </g>
 
-  <g transform="translate(45, 380)" filter="url(#shadow3)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#dc2626"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">3. धर्म के आधार पर ध्रुवीकरण (Communal Mobilization)</text>
+  <g transform="translate(35, 380)" filter="url(#shadow3)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#dc2626"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. धर्म के आधार पर ध्रुवीकरण (Communal Mobilization)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• चुनाव में धर्म गुरुओं, पवित्र प्रतीकों व भावनात्मक अपीलों का इस्तेमाल।</text>
     <text x="20" y="130" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• एक धर्म के मतदाताओं को दूसरे धर्म के खिलाफ डराकर वोट हासिल करना।</text>
   </g>
 
-  <g transform="translate(575, 380)" filter="url(#shadow3)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#b91c1c" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#991b1b"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">4. साम्प्रदायिक हिंसा व दंगे (Communal Violence & Riots)</text>
+  <g transform="translate(565, 380)" filter="url(#shadow3)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#b91c1c" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#991b1b"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. साम्प्रदायिक हिंसा व दंगे (Communal Violence & Riots)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• साम्प्रदायिकता का सबसे भयानक और हिंसक रूप।</text>
     <text x="20" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• विभाजन के समय भयानक नरसंहार तथा आजादी के बाद के साम्प्रदायिक दंगे।</text>
   </g>

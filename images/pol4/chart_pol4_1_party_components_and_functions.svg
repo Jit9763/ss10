@@ -25,10 +25,10 @@
   </g>
 
   <!-- 3 Components Box -->
-  <g transform="translate(45, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. राजनीतिक दल के 3 हिस्से (Components)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. राजनीतिक दल के 3 हिस्से (Components)</text>
     
     <text x="25" y="110" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">1. नेता (Leaders):</text>
     <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">चुनाव लड़ते हैं और सरकार में पद संभालते हैं।</text>
@@ -41,10 +41,10 @@
   </g>
 
   <!-- Functions Box -->
-  <g transform="translate(575, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. राजनीतिक दलों के 6 मुख्य कार्य (Functions)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. राजनीतिक दलों के 6 मुख्य कार्य (Functions)</text>
     
     <text x="25" y="100" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• चुनाव लड़ना व उम्मीदवार खड़े करना।</text>
     <text x="25" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• नीतियां व कार्यक्रम जनता के सामने रखना।</text>

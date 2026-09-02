@@ -25,10 +25,10 @@
   </g>
 
   <!-- 2 Conditions Grid -->
-  <g transform="translate(45, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">शर्त 1: बहुमत केवल बहुसंख्यकों का शासन न बने</text>
+  <g transform="translate(35, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">शर्त 1: बहुमत केवल बहुसंख्यकों का शासन न बने</text>
     
     <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• अल्पसंख्यकों के साथ मिलकर काम करना:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">बहुमत की राय में अल्पसंख्यकों के हितों की भी अभिव्यक्ति होनी चाहिए।</text>
@@ -37,10 +37,10 @@
     <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">अलग-अलग विषयों व चुनावों में अलग-अलग लोग बहुमत का हिस्सा बन सकते हैं।</text>
   </g>
 
-  <g transform="translate(575, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#9333ea"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">शर्त 2: धर्म व जाति के आधार पर शासन न हो</text>
+  <g transform="translate(565, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#9333ea"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">शर्त 2: धर्म व जाति के आधार पर शासन न हो</text>
     
     <text x="25" y="100" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• बहुसंख्यक समुदाय का वर्चस्व नहीं:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">बहुमत का मतलब केवल किसी एक धर्म या जाति के समुदाय का शासन नहीं है।</text>

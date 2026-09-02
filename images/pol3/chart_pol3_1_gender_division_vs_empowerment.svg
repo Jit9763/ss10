@@ -25,10 +25,10 @@
   </g>
 
   <!-- Left: Traditional Division -->
-  <g transform="translate(45, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#dc2626"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. श्रम का पारंपरिक लैंगिक विभाजन</text>
+  <g transform="translate(35, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#dc2626"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. श्रम का पारंपरिक लैंगिक विभाजन</text>
     
     <text x="25" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• निजी बनाम सार्वजनिक का विभाजन:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">घर के अंदर का सारा काम (खाना पकाना, कपड़े धोना) महिलाओं के जिम्मे।</text>
@@ -42,10 +42,10 @@
   </g>
 
   <!-- Right: Feminist Movement & Empowerment -->
-  <g transform="translate(575, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#db2777"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. नारीवादी आंदोलन एवं राजनीतिक सशक्तिकरण</text>
+  <g transform="translate(565, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. नारीवादी आंदोलन एवं राजनीतिक सशक्तिकरण</text>
     
     <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• नारीवादी आंदोलन (Feminist Movement):</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">महिला और पुरुष के समान अधिकारों और अवसरों में विश्वास करने वाला आंदोलन।</text>

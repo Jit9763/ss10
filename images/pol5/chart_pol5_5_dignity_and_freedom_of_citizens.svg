@@ -25,10 +25,10 @@
   </g>
 
   <!-- 2 Cards -->
-  <g transform="translate(45, 125)" filter="url(#shadow5)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#db2777"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. महिलाओं की गरिमा व समान अवसर</text>
+  <g transform="translate(35, 125)" filter="url(#shadow5)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. महिलाओं की गरिमा व समान अवसर</text>
     
     <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• पुरुषों के वर्चस्व के खिलाफ निरंतर संघर्ष:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">लंबे संघर्ष के बाद आज यह स्वीकार किया गया है कि महिलाओं से आदर का व्यवहार लोकतंत्र की अनिवार्य शर्त है।</text>
@@ -37,10 +37,10 @@
     <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">अन्याय के खिलाफ महिलाओं के पास अब कानूनी लड़ाई लड़ने का आधार मौजूद है।</text>
   </g>
 
-  <g transform="translate(575, 125)" filter="url(#shadow5)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. वंचित जातियों की गरिमा व दावों को बल</text>
+  <g transform="translate(565, 125)" filter="url(#shadow5)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. वंचित जातियों की गरिमा व दावों को बल</text>
     
     <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• भेदभाव के खिलाफ अधिकार:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सदियों से शोषित जातियों को लोकतंत्र ने अपनी गरिमा और अवसरों की मांग करने का नैतिक बल दिया।</text>

@@ -15,48 +15,44 @@
     </filter>
   </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad4)" stroke="#334155" stroke-width="2.5"/>
+  <rect width="1100" height="650" rx="24" fill="url(#bgGrad4)" stroke="#334155" stroke-width="3"/>
   <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#facc15" stroke-width="1.5" stroke-opacity="0.4"/>
 
   <!-- Title -->
   <g filter="url(#shadow4)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#facc15" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">⚖️ सत्ता की साझेदारी क्यों जरूरी है? (Prudential vs Moral Reasons)</text>
+    <rect x="30" y="24" width="1040" height="76" rx="16" fill="#090d16" stroke="#facc15" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="25" font-weight="900" text-anchor="middle">⚖️ सत्ता की साझेदारी के युक्तिपरक बनाम नैतिक तर्क</text>
   </g>
 
-  <!-- Left Box: Prudential Reasons (युक्तिपरक तर्क) -->
-  <g transform="translate(45, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="24" font-weight="900" text-anchor="middle">1. युक्तिपरक तर्क (Prudential Reasons - समझदारी)</text>
-    
-    <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">लाभ-हानि का विचार करके लिया गया फैसला:</text>
-    <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• सामाजिक समूहों के बीच टकराव के अंदेशे को कम करता है।</text>
+  <!-- Left: Prudential Reasons -->
+  <g transform="translate(35, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="65" rx="18" fill="#0284c7"/>
+    <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">1. युक्तिपरक तर्क (Prudential Reasons)</text>
 
-    <text x="25" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• राजनीतिक व्यवस्था के स्थायित्व (Stability) के लिए आवश्यक।</text>
+    <text x="15" y="115" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• लाभ-हानि का समझदारी भरा गणित:</text>
+    <text x="15" y="160" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• सामाजिक समूहों के बीच टकराव को कम करता है।</text>
+    <text x="15" y="205" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• राजनीतिक व्यवस्था के स्थायित्व हेतु बेहतर।</text>
+    <text x="15" y="250" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• हिंसा और अशांति से बचाव करता है।</text>
 
-    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• बहुसंख्यकों की इच्छा को दूसरों पर थोपना अल्पकाल में ठीक लग सकता है, पर दीर्घकाल में देश की अखंडता को कमजोर करता है।</text>
-
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="240" y="355" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य निष्कर्ष:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">सत्ता की साझेदारी बेहतर परिणामों को जन्म देती है।</text>
+    <rect x="15" y="315" width="470" height="145" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="235" y="355" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 मुख्य उद्देश्य:</text>
+    <text x="235" y="405" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="bold" text-anchor="middle">बेहतर परिणाम (Better Outcomes)</text>
   </g>
 
-  <!-- Right Box: Moral Reasons (नैतिक तर्क) -->
-  <g transform="translate(575, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="24" font-weight="900" text-anchor="middle">2. नैतिक तर्क (Moral Reasons - लोकतंत्र की आत्मा)</text>
-    
-    <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">लोकतंत्र का अंतर्निहित महत्व एवं मूल्य:</text>
-    <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• सत्ता की साझेदारी लोकतंत्र की आत्मा (Spirit of Democracy) है।</text>
+  <!-- Right: Moral Reasons -->
+  <g transform="translate(565, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="65" rx="18" fill="#059669"/>
+    <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">2. नैतिक तर्क (Moral Reasons)</text>
 
-    <text x="25" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• वैध सरकार वही है जिसमें सभी नागरिक भागीदारी के माध्यम से शासन व्यवस्था से जुड़ते हैं।</text>
+    <text x="15" y="115" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• लोकतंत्र की आत्मा और मूलभूत नियम:</text>
+    <text x="15" y="160" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• लोगों की भागीदारी के बिना लोकतंत्र अधूरा है।</text>
+    <text x="15" y="205" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• नागरिकों का यह अधिकार है कि उनसे पूछा जाए।</text>
+    <text x="15" y="250" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">• वैध सरकार वही है जहाँ जनता हिस्सा लेती है।</text>
 
-    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• लोगों को अधिकार है कि उनसे परामर्श किया जाए कि उन पर शासन कैसे हो।</text>
-
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
-    <text x="240" y="355" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य निष्कर्ष:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">सत्ता का बंटवारा अपने आप में कीमती एवं मूल्यवान है।</text>
+    <rect x="15" y="315" width="470" height="145" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <text x="235" y="355" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 मुख्य उद्देश्य:</text>
+    <text x="235" y="405" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="bold" text-anchor="middle">लोकतंत्र का अंतर्निहित मूल्य (Intrinsic)</text>
   </g>
 </svg>

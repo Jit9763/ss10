@@ -25,10 +25,10 @@
   </g>
 
   <!-- Unitary Left Box -->
-  <g transform="translate(45, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#dc2626"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="24" font-weight="900" text-anchor="middle">1. एकात्मक शासन (Unitary System)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#dc2626"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. एकात्मक शासन (Unitary System)</text>
     
     <text x="25" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">केवल एक ही स्तर की केंद्रीय सरकार:</text>
     <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• समस्त शक्तियां एक केंद्रीय सरकार के पास निहित होती हैं।</text>
@@ -41,10 +41,10 @@
   </g>
 
   <!-- Federal Right Box -->
-  <g transform="translate(575, 125)" filter="url(#shadow1)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="24" font-weight="900" text-anchor="middle">2. संघात्मक शासन (Federal System)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow1)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. संघात्मक शासन (Federal System)</text>
     
     <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">दो या दो से अधिक स्तरों की सरकारें:</text>
     <text x="25" y="145" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• शक्तियां संविधान द्वारा केंद्र व राज्य में स्पष्ट विभाजित।</text>

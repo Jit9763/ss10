@@ -26,10 +26,10 @@
 
   <!-- 2 Side-by-Side Boxes -->
   <!-- Left: Caste in Politics -->
-  <g transform="translate(45, 125)" filter="url(#shadow5)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. राजनीति में जाति (Caste in Politics)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow5)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. राजनीति में जाति (Caste in Politics)</text>
     
     <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• उम्मीदवार तय करते समय जातिगत समीकरण:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">राजनीतिक दल क्षेत्र की जातिगत आबादी देखकर उम्मीदवार चुनते हैं।</text>
@@ -43,10 +43,10 @@
   </g>
 
   <!-- Right: Politics in Caste -->
-  <g transform="translate(575, 125)" filter="url(#shadow5)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#9333ea"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. जाति में राजनीति (Politics in Caste)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow5)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#9333ea"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. जाति में राजनीति (Politics in Caste)</text>
     
     <text x="25" y="100" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जातियों का अपना आधार बड़ा करना:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">उप-जातियों को अपने साथ जोड़कर बड़ा समूह बनाने का प्रयास।</text>

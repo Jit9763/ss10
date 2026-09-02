@@ -25,10 +25,10 @@
   </g>
 
   <!-- Left: Traditional Caste System -->
-  <g transform="translate(45, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#dc2626"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. पारंपरिक जाति व्यवस्था (Traditional Caste System)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#dc2626"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. पारंपरिक जाति व्यवस्था (Traditional Caste System)</text>
     
     <text x="25" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जन्म पर आधारित सामाजिक पदानुक्रम:</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">पेशा, शादी और खान-पान केवल अपनी जाति तक सीमित।</text>
@@ -42,10 +42,10 @@
   </g>
 
   <!-- Right: Modern Transformation -->
-  <g transform="translate(575, 125)" filter="url(#shadow4)">
-    <rect width="480" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="480" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. आधुनिक भारत में परिवर्तन (Modern Social Change)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow4)">
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
+    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. आधुनिक भारत में परिवर्तन (Modern Social Change)</text>
     
     <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• आर्थिक विकास व शहरीकरण (Urbanization):</text>
     <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">शहरों में बसने से पुरानी जातिगत पहचान कमजोर हुई।</text>

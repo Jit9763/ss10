@@ -25,34 +25,34 @@
   </g>
 
   <!-- 4 Grid Cards -->
-  <g transform="translate(45, 125)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#059669"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">1. कोई राजकीय धर्म नहीं (No State Religion)</text>
+  <g transform="translate(35, 125)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#059669"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. कोई राजकीय धर्म नहीं (No State Religion)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• भारतीय राज्य का अपना कोई धर्म नहीं है (श्रीलंका या पाकिस्तान की तरह नहीं)।</text>
     <text x="20" y="130" fill="#a7f3d0" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• सभी धर्मों को सरकार के समक्ष समान दर्जा प्राप्त है।</text>
   </g>
 
-  <g transform="translate(575, 125)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#0284c7"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">2. धार्मिक स्वतंत्रता का अधिकार (Freedom of Religion)</text>
+  <g transform="translate(565, 125)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#0284c7"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. धार्मिक स्वतंत्रता का अधिकार (Freedom of Religion)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• सभी नागरिकों को किसी भी धर्म का पालन, प्रचार करने या न मानने की स्वतंत्रता।</text>
     <text x="20" y="130" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• अनुच्छेद 25-28 के तहत मौलिक अधिकार के रूप में गारंटी।</text>
   </g>
 
-  <g transform="translate(45, 380)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">3. धर्म आधारित भेदभाव पर रोक (Prohibition of Discrimination)</text>
+  <g transform="translate(35, 380)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#d97706"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. धर्म आधारित भेदभाव पर रोक (Prohibition of Discrimination)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• संविधान धर्म के आधार पर किसी भी नागरिक से भेदभाव को अवैध घोषित करता है।</text>
     <text x="20" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• नौकरियों व सार्वजनिक स्थलों पर समानता की कानूनी गारंटी।</text>
   </g>
 
-  <g transform="translate(575, 380)" filter="url(#shadow2)">
-    <rect width="480" height="235" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2.5"/>
-    <rect x="0" y="0" width="480" height="50" rx="16" fill="#9333ea"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">4. राज्य का सुधारात्मक हस्तक्षेप (State Intervention)</text>
+  <g transform="translate(565, 380)" filter="url(#shadow2)">
+    <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2.5"/>
+    <rect x="0" y="0" width="500" height="50" rx="16" fill="#9333ea"/>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. राज्य का सुधारात्मक हस्तक्षेप (State Intervention)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• धार्मिक समुदायों में समानता हेतु राज्य हस्तक्षेप कर सकता है।</text>
     <text x="20" y="130" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• उदाहरण: छुआछूत (Untouchability) का अंत व लैंगिक न्याय हेतु कानून।</text>
   </g>
