@@ -52,7 +52,7 @@
   <g transform="translate(565, 380)" filter="url(#shadow3)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#b91c1c" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#991b1b"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. साम्प्रदायिक हिंसा व दंगे (Communal Violence & Riots)</text>
+    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. साम्प्रदायिक हिंसा व दंगे (Communal Violence &amp; Riots)</text>
     <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• साम्प्रदायिकता का सबसे भयानक और हिंसक रूप।</text>
     <text x="20" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• विभाजन के समय भयानक नरसंहार तथा आजादी के बाद के साम्प्रदायिक दंगे।</text>
   </g>

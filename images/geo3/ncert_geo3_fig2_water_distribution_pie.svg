@@ -38,7 +38,7 @@
     <text x="35" y="175" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff">💧 भौम जल: लगभग 30%</text>
     <text x="35" y="198" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#dcfce7">कुओं, नलकूपों व जलभरों में</text>
 
-    <!-- Item 3: Rivers & Lakes (<1%) -->
+    <!-- Item 3: Rivers &amp; Lakes (<1%) -->
     <rect x="20" y="225" width="230" height="65" rx="10" fill="#d97706"/>
     <text x="35" y="255" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="20" font-weight="900" fill="#ffffff">🌊 नदियां, झीलें: &lt; 1%</text>
     <text x="35" y="278" font-family="'Segoe UI', 'Noto Sans Devanagari', Arial" font-size="15" font-weight="700" fill="#fef3c7">प्रत्यक्ष मानव उपयोग हेतु उपलब्ध</text>

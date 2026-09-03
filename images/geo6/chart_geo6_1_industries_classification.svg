@@ -80,7 +80,7 @@
     <text x="75" y="601" fill="#92400e" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="14" font-weight="900">👥 सहकारी (Cooperative): उत्पादकों व श्रमिकों का साझा (महाराष्ट्र चीनी, अमूल)</text>
   </g>
 
-  <!-- Card 4: Capital & Weight -->
+  <!-- Card 4: Capital &amp; Weight -->
   <g filter="url(#shadow1)">
     <rect x="570" y="360" width="490" height="260" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
     <rect x="578" y="368" width="474" height="40" rx="10" fill="#7c3aed"/>

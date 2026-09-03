@@ -22,7 +22,7 @@
     🤝 निर्धनों के स्वयं सहायता समूह (Self-Help Groups - SHG) एवं महिला सशक्तिकरण
   </text>
 
-  <!-- COLUMN 1: STRUCTURE & SAVINGS -->
+  <!-- COLUMN 1: STRUCTURE &amp; SAVINGS -->
   <g transform="translate(45, 95)" filter="url(#shadow5)">
     <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#ec4899" stroke-width="3"/>
     <rect width="320" height="46" rx="16" fill="#9d174d"/>
@@ -52,7 +52,7 @@
     <text x="25" y="464" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  बचत की आदत का निर्माण।</text>
   </g>
 
-  <!-- COLUMN 2: BANK LINKAGE & COLLATERAL-FREE LOANS -->
+  <!-- COLUMN 2: BANK LINKAGE &amp; COLLATERAL-FREE LOANS -->
   <g transform="translate(390, 95)" filter="url(#shadow5)">
     <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#a855f7" stroke-width="3"/>
     <rect width="320" height="46" rx="16" fill="#6b21a8"/>
@@ -82,7 +82,7 @@
     <text x="25" y="464" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  हथकरघा व कुटीर उद्योग हेतु।</text>
   </g>
 
-  <!-- COLUMN 3: SOCIO-ECONOMIC EMPOWERMENT & GRAMEEN BANK -->
+  <!-- COLUMN 3: SOCIO-ECONOMIC EMPOWERMENT &amp; GRAMEEN BANK -->
   <g transform="translate(735, 95)" filter="url(#shadow5)">
     <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
     <rect width="320" height="46" rx="16" fill="#065f46"/>

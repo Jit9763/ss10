@@ -52,7 +52,7 @@
 
     <text x="15" y="85" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold">स्थानीय महत्व के विषय (राज्य):</text>
     <text x="15" y="120" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• पुलिस (Police)</text>
-    <text x="15" y="150" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• व्यापार (Trade & Commerce)</text>
+    <text x="15" y="150" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• व्यापार (Trade &amp; Commerce)</text>
     <text x="15" y="180" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• कृषि (Agriculture)</text>
     <text x="15" y="210" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• सिंचाई (Irrigation)</text>
     <text x="15" y="240" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">• जेल व स्थानीय व्यवस्था</text>
@@ -63,7 +63,7 @@
     <text x="148" y="400" fill="#fbbf24" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="17" font-weight="bold" text-anchor="middle">राज्य सरकारें कानून बनाती हैं।</text>
   </g>
 
-  <!-- 3. Concurrent List & Residuary -->
+  <!-- 3. Concurrent List &amp; Residuary -->
   <g transform="translate(740, 125)" filter="url(#shadow4)">
     <rect width="320" height="490" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
     <rect x="0" y="0" width="320" height="50" rx="16" fill="#059669"/>

@@ -69,7 +69,7 @@
     <text x="75" y="495" fill="#075985" font-family="'Segoe UI', 'Noto Sans Devanagari', sans-serif" font-size="15" font-weight="900">• कठोरता व जंगरोधक क्षमता हेतु <b>मैंगनीज, निकेल, क्रोमियम</b> मिलाना।</text>
   </g>
 
-  <!-- Step 4: Shaping & Rolling -->
+  <!-- Step 4: Shaping &amp; Rolling -->
   <g filter="url(#shadow3)">
     <rect x="570" y="350" width="490" height="210" rx="16" fill="#ffffff" stroke="#15803d" stroke-width="4"/>
     <rect x="578" y="358" width="474" height="40" rx="10" fill="#15803d"/>

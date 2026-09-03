@@ -35,7 +35,7 @@
   <polygon points="720,420 860,220 990,420" fill="#14532d"/>
   <polygon points="860,220 835,260 860,270 885,260" fill="#ffffff"/>
 
-  <!-- Land & Underground -->
+  <!-- Land &amp; Underground -->
   <rect x="20" y="420" width="960" height="120" fill="#78350f"/>
   <rect x="20" y="400" width="600" height="30" fill="#22c55e"/> <!-- Grass -->
 

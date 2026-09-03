@@ -21,7 +21,7 @@
   <!-- Title -->
   <g filter="url(#shadow1)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#f472b6" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">👩‍💼 श्रम का लैंगिक विभाजन बनाम महिला सशक्तिकरण (Gender & Power)</text>
+    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">👩‍💼 श्रम का लैंगिक विभाजन बनाम महिला सशक्तिकरण (Gender &amp; Power)</text>
   </g>
 
   <!-- Left: Traditional Division -->
@@ -41,7 +41,7 @@
     <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">राजनीति और सार्वजनिक जीवन में महिलाओं की नगण्य भूमिका।</text>
   </g>
 
-  <!-- Right: Feminist Movement & Empowerment -->
+  <!-- Right: Feminist Movement &amp; Empowerment -->
   <g transform="translate(565, 125)" filter="url(#shadow1)">
     <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
     <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>

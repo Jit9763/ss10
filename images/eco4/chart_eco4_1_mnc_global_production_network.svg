@@ -77,7 +77,7 @@
     <text x="20" y="430" fill="#facc15" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  प्लास्टिक व धातु पुर्जे।</text>
   </g>
 
-  <!-- CARD 3: MEXICO & EASTERN EUROPE (ASSEMBLY) -->
+  <!-- CARD 3: MEXICO &amp; EASTERN EUROPE (ASSEMBLY) -->
   <g transform="translate(545, 95)" filter="url(#shadowEco4_1)">
     <rect width="235" height="485" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
     <rect width="235" height="44" rx="14" fill="#065f46"/>

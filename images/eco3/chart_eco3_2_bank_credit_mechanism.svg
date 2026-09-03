@@ -33,7 +33,8 @@
     <text x="25" y="85" fill="#34d399" font-size="14" font-weight="900" font-family="system-ui, sans-serif">💰 धन जमा करना:</text>
     <text x="25" y="108" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• लोग अपनी अतिरिक्त नकदी को</text>
     <text x="25" y="128" fill="#e2e8f0" font-size="13" font-weight="900" font-family="system-ui, sans-serif">  सुरक्षा हेतु बैंक में जमा करते हैं।</text>
-    <text x="25" y="146" fill="#a7f3d0" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  $ightarrow$ मांग पर कभी भी निकासी संभव।</text>
+    <text x="25" y="146" fill="#a7f3d0" font-size="12" font-weight="900" font-family="system-ui, sans-serif">  $
+ightarrow$ मांग पर कभी भी निकासी संभव।</text>
 
     <rect x="15" y="168" width="260" height="105" rx="10" fill="#064e3b"/>
     <text x="25" y="193" fill="#6ee7b7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">📈 ब्याज प्राप्ति (अल्प दर):</text>

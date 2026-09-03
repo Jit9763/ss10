@@ -5,7 +5,7 @@
   <rect x="40" y="25" width="1320" height="100" rx="20" fill="#047857" stroke="#34d399" stroke-width="6"/>
   <text x="700" y="88" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">चित्र 2.3: IUCN प्रजातियों का 6-स्तरीय वर्गीकरण</text>
 
-  <!-- Row 1: Box 1 & Box 2 -->
+  <!-- Row 1: Box 1 &amp; Box 2 -->
   <!-- Box 1 (Normal) -->
   <rect x="40" y="150" width="630" height="230" rx="18" fill="#064e3b" stroke="#22c55e" stroke-width="5"/>
   <text x="70" y="198" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#86efac">1. सामान्य प्रजातियां (Normal Species)</text>
@@ -18,7 +18,7 @@
   <text x="760" y="248" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• लुप्त होने का गंभीर खतरा बना हुआ है।</text>
   <text x="760" y="292" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fca5a5">  उदाहरण: काला हिरण, गेंडा, मगरमच्छ।</text>
 
-  <!-- Row 2: Box 3 & Box 4 -->
+  <!-- Row 2: Box 3 &amp; Box 4 -->
   <!-- Box 3 (Vulnerable) -->
   <rect x="40" y="405" width="630" height="230" rx="18" fill="#064e3b" stroke="#f59e0b" stroke-width="5"/>
   <text x="70" y="453" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#fde68a">3. सुभेद्य प्रजातियां (Vulnerable Species)</text>
@@ -31,7 +31,7 @@
   <text x="760" y="503" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#ffffff">• संख्या बहुत कम या विषम स्थिति में है।</text>
   <text x="760" y="547" font-family="'Segoe UI', Devanagari, sans-serif" font-size="23" font-weight="900" fill="#fef08a">  उदाहरण: भूरा भालू, जंगली भैंसा।</text>
 
-  <!-- Row 3: Box 5 & Box 6 -->
+  <!-- Row 3: Box 5 &amp; Box 6 -->
   <!-- Box 5 (Endemic) -->
   <rect x="40" y="660" width="630" height="230" rx="18" fill="#064e3b" stroke="#3b82f6" stroke-width="5"/>
   <text x="70" y="708" font-family="'Segoe UI', Devanagari, sans-serif" font-size="26" font-weight="900" fill="#93c5fd">5. स्थानिक प्रजातियां (Endemic Species)</text>

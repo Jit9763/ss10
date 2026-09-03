@@ -23,7 +23,7 @@
   </text>
 
   <!-- 2 BIG SPLIT PANELS -->
-  <!-- PANEL 1: TRANSPORTATION TECHNOLOGY & CONTAINERIZATION -->
+  <!-- PANEL 1: TRANSPORTATION TECHNOLOGY &amp; CONTAINERIZATION -->
   <g transform="translate(45, 95)" filter="url(#shadowEco4_4)">
     <rect width="490" height="420" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
     <rect width="490" height="48" rx="16" fill="#1e3a8a"/>
@@ -56,7 +56,7 @@
     <text x="35" y="380" fill="#38bdf8" font-size="12" font-weight="900" font-family="system-ui, sans-serif">• अंतर्राष्ट्रीय व्यापार की मात्रा में कई गुना उछाल।</text>
   </g>
 
-  <!-- PANEL 2: INFORMATION & COMMUNICATION TECHNOLOGY (ICT) -->
+  <!-- PANEL 2: INFORMATION &amp; COMMUNICATION TECHNOLOGY (ICT) -->
   <g transform="translate(565, 95)" filter="url(#shadowEco4_4)">
     <rect width="490" height="420" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
     <rect width="490" height="48" rx="16" fill="#065f46"/>

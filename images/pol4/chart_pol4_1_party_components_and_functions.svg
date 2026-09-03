@@ -21,7 +21,7 @@
   <!-- Title -->
   <g filter="url(#shadow1)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">📢 राजनीतिक दल के 3 घटक व मुख्य कार्य (Components & Functions)</text>
+    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">📢 राजनीतिक दल के 3 घटक व मुख्य कार्य (Components &amp; Functions)</text>
   </g>
 
   <!-- 3 Components Box -->

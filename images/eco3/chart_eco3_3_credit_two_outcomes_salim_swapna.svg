@@ -43,7 +43,8 @@
     <text x="35" y="197" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif">🚀 उत्पादन प्रक्रिया एवं परिणाम:</text>
     <text x="35" y="220" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• सलीम ने समय पर जूते तैयार करके सफलतापूर्वक आपूर्ति की।</text>
     <text x="35" y="240" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• पूरा भुगतान प्राप्त हुआ और सारा ऋण समय पर चुका दिया।</text>
-    <text x="35" y="260" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बहुत अच्छा लाभ कमाया $ightarrow$ व्यवसाय का विस्तार हुआ।</text>
+    <text x="35" y="260" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• बहुत अच्छा लाभ कमाया $
+ightarrow$ व्यवसाय का विस्तार हुआ।</text>
 
     <!-- Content 3 -->
     <rect x="20" y="290" width="450" height="105" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
@@ -74,8 +75,10 @@
     <!-- Content 2 -->
     <rect x="20" y="172" width="450" height="105" rx="10" fill="#7f1d1d"/>
     <text x="35" y="197" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">⚡ फसल विफलता एवं कर्ज का बोझ:</text>
-    <text x="35" y="220" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कीड़ों व सूखे से फसल बर्बाद $ightarrow$ महंगे स्प्रे भी काम न आए।</text>
-    <text x="35" y="240" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• साहूकार का कर्ज नहीं चुका पाई $ightarrow$ ब्याज जुड़कर रकम बहुत बड़ी हुई।</text>
+    <text x="35" y="220" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• कीड़ों व सूखे से फसल बर्बाद $
+ightarrow$ महंगे स्प्रे भी काम न आए।</text>
+    <text x="35" y="240" fill="#facc15" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• साहूकार का कर्ज नहीं चुका पाई $
+ightarrow$ ब्याज जुड़कर रकम बहुत बड़ी हुई।</text>
     <text x="35" y="260" fill="#ffffff" font-size="13" font-weight="900" font-family="system-ui, sans-serif">• अगले साल फिर नया कर्ज लिया पर सामान्य फसल से कर्ज नहीं उतरा।</text>
 
     <!-- Content 3 -->

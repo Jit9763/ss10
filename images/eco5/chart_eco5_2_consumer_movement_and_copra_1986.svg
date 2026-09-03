@@ -46,7 +46,7 @@
     <rect x="12" y="74" width="228" height="38" rx="10" fill="#450a0a"/>
     <text x="126" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🔥 उपभोक्ता असंतोष</text>
     
-    <!-- Points (Bigger Fonts 18px & 16px) -->
+    <!-- Points (Bigger Fonts 18px &amp; 16px) -->
     <text x="16" y="148" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• अत्यधिक जमाखोरी</text>
     <text x="16" y="174" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">व्यापारियों द्वारा स्टॉक छिपाना</text>
     
@@ -56,7 +56,7 @@
     <text x="16" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• कालाबाजारी व मुनाफाखोरी</text>
     <text x="16" y="306" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">एमआरपी से अधिक दाम वसूली</text>
 
-    <!-- Bottom Highlight (Bigger Fonts 18px & 16px) -->
+    <!-- Bottom Highlight (Bigger Fonts 18px &amp; 16px) -->
     <rect x="12" y="355" width="228" height="148" rx="14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
     <text x="126" y="388" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">⚠️ स्थिति:</text>
     <text x="20" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">उपभोक्ताओं की सुरक्षा हेतु</text>
@@ -79,7 +79,7 @@
     <rect x="12" y="74" width="228" height="38" rx="10" fill="#451a03"/>
     <text x="126" y="100" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">✊ संगठित आंदोलन</text>
     
-    <!-- Points (Bigger Fonts 18px & 16px) -->
+    <!-- Points (Bigger Fonts 18px &amp; 16px) -->
     <text x="16" y="148" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• उपभोक्ता समूहों का गठन</text>
     <text x="16" y="174" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">स्थानीय स्तर पर नागरिक समूह</text>
     
@@ -89,7 +89,7 @@
     <text x="16" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• पत्रिकाओं में लेख व प्रदर्शन</text>
     <text x="16" y="306" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">जनमत तैयार करने का प्रयास</text>
 
-    <!-- Bottom Highlight (Bigger Fonts 18px & 16px) -->
+    <!-- Bottom Highlight (Bigger Fonts 18px &amp; 16px) -->
     <rect x="12" y="355" width="228" height="148" rx="14" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
     <text x="126" y="388" fill="#fbbf24" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">📣 प्रभाव:</text>
     <text x="20" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">भारत सरकार पर नया</text>
@@ -112,7 +112,7 @@
     <rect x="12" y="74" width="228" height="38" rx="10" fill="#064e3b"/>
     <text x="126" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">⚖️ कोपरा कानून 1986</text>
     
-    <!-- Points (Bigger Fonts 18px & 16px) -->
+    <!-- Points (Bigger Fonts 18px &amp; 16px) -->
     <text x="16" y="148" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• संसद द्वारा पारित कानून</text>
     <text x="16" y="174" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">24 दिसंबर 1986 को स्वीकृत</text>
     
@@ -122,7 +122,7 @@
     <text x="16" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• त्रि-स्तरीय उपभोक्ता अदालतें</text>
     <text x="16" y="306" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">जिला, राज्य व राष्ट्रीय आयोग</text>
 
-    <!-- Bottom Highlight (Bigger Fonts 18px & 16px) -->
+    <!-- Bottom Highlight (Bigger Fonts 18px &amp; 16px) -->
     <rect x="12" y="355" width="228" height="148" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
     <text x="126" y="388" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🎯 उपलब्धि:</text>
     <text x="20" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">आम नागरिकों को 6 मौलिक</text>
@@ -145,7 +145,7 @@
     <rect x="12" y="74" width="228" height="38" rx="10" fill="#0c4a6e"/>
     <text x="126" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">💻 आधुनिक ई-कॉमर्स</text>
     
-    <!-- Points (Bigger Fonts 18px & 16px) -->
+    <!-- Points (Bigger Fonts 18px &amp; 16px) -->
     <text x="16" y="148" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• ऑनलाइन शॉपिंग शामिल</text>
     <text x="16" y="174" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">Amazon/Flipkart दायरे में</text>
     
@@ -155,7 +155,7 @@
     <text x="16" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• ई-दाखिल व डिजिटल केस</text>
     <text x="16" y="306" fill="#cbd5e1" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">घर बैठे ऑनलाइन सुनवाई</text>
 
-    <!-- Bottom Highlight (Bigger Fonts 18px & 16px) -->
+    <!-- Bottom Highlight (Bigger Fonts 18px &amp; 16px) -->
     <rect x="12" y="355" width="228" height="148" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
     <text x="126" y="388" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🔒 नया कड़ा कानून:</text>
     <text x="20" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">भ्रामक विज्ञापनों व झूठे</text>

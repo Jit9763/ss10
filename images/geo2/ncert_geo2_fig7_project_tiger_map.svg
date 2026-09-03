@@ -18,7 +18,7 @@
 
 
     <!-- 3 Regional Columns -->
-    <!-- Column 1: North & East India -->
+    <!-- Column 1: North &amp; East India -->
     <rect x="40" y="425" width="410" height="485" rx="20" fill="#064e3b" stroke="#10b981" stroke-width="5"/>
     <text x="245" y="475" font-size="26" fill="#86efac" text-anchor="middle">🗺️ उत्तर व पूर्व भारत</text>
 
@@ -36,7 +36,7 @@
     <text x="65" y="850" font-size="22" fill="#fbbf24">• दुधवा पार्क: उत्तर प्रदेश</text>
 
 
-    <!-- Column 2: West & Central India -->
+    <!-- Column 2: West &amp; Central India -->
     <rect x="495" y="425" width="410" height="485" rx="20" fill="#064e3b" stroke="#eab308" stroke-width="5"/>
     <text x="700" y="475" font-size="26" fill="#fef08a" text-anchor="middle">🏰 पश्चिमी व मध्य भारत</text>
 
