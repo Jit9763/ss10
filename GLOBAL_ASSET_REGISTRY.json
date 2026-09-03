@@ -902,22 +902,6 @@
     "size_kb": 10
   },
   {
-    "id": "eco2_real_5_tertiary_banking.svg",
-    "path": "images/eco2/eco2_real_5_tertiary_banking.svg",
-    "chapter": "eco2",
-    "title": "Eco Real Tertiary Banking Svg",
-    "tags": [
-      "eco",
-      "real",
-      "tertiary",
-      "banking",
-      "svg"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "SVG",
-    "size_kb": 15
-  },
-  {
     "id": "chart_eco3_1_barter_vs_modern_money.svg",
     "path": "images/eco3/chart_eco3_1_barter_vs_modern_money.svg",
     "chapter": "eco3",
@@ -1835,6 +1819,512 @@
     "category": "General Visual Asset",
     "dimensions": "1200x675",
     "size_kb": 239
+  },
+  {
+    "id": "chart_eco5_1_consumer_exploitation_forms.svg",
+    "path": "images/eco5/chart_eco5_1_consumer_exploitation_forms.svg",
+    "chapter": "eco5",
+    "title": "Chart Eco Consumer Exploitation Forms Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "consumer",
+      "exploitation",
+      "forms",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "chart_eco5_2_consumer_movement_and_copra_1986.svg",
+    "path": "images/eco5/chart_eco5_2_consumer_movement_and_copra_1986.svg",
+    "chapter": "eco5",
+    "title": "Chart Eco Consumer Movement And Copra Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "consumer",
+      "movement",
+      "and",
+      "copra",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 13
+  },
+  {
+    "id": "chart_eco5_3_three_tier_quasi_judicial_machinery.svg",
+    "path": "images/eco5/chart_eco5_3_three_tier_quasi_judicial_machinery.svg",
+    "chapter": "eco5",
+    "title": "Chart Eco Three Tier Quasi Judicial Machinery Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "three",
+      "tier",
+      "quasi",
+      "judicial",
+      "machinery",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_eco5_4_six_consumer_rights_copra.svg",
+    "path": "images/eco5/chart_eco5_4_six_consumer_rights_copra.svg",
+    "chapter": "eco5",
+    "title": "Chart Eco Six Consumer Rights Copra Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "six",
+      "consumer",
+      "rights",
+      "copra",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 9
+  },
+  {
+    "id": "chart_eco5_5_standardization_marks_and_duties.svg",
+    "path": "images/eco5/chart_eco5_5_standardization_marks_and_duties.svg",
+    "chapter": "eco5",
+    "title": "Chart Eco Standardization Marks And Duties Svg",
+    "tags": [
+      "chart",
+      "eco",
+      "standardization",
+      "marks",
+      "and",
+      "duties",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 8
+  },
+  {
+    "id": "eco5_real_10_rti_act_application_in_government_office.webp",
+    "path": "images/eco5/eco5_real_10_rti_act_application_in_government_office.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Rti Act Application In Government Office Webp",
+    "tags": [
+      "eco",
+      "real",
+      "rti",
+      "act",
+      "application",
+      "government",
+      "office",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 198
+  },
+  {
+    "id": "eco5_real_11_district_consumer_forum_court_hearing.webp",
+    "path": "images/eco5/eco5_real_11_district_consumer_forum_court_hearing.webp",
+    "chapter": "eco5",
+    "title": "Eco Real District Consumer Forum Court Hearing Webp",
+    "tags": [
+      "eco",
+      "real",
+      "district",
+      "consumer",
+      "forum",
+      "court",
+      "hearing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 176
+  },
+  {
+    "id": "eco5_real_12_consumer_compensation_check_redressal.webp",
+    "path": "images/eco5/eco5_real_12_consumer_compensation_check_redressal.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Consumer Compensation Check Redressal Webp",
+    "tags": [
+      "eco",
+      "real",
+      "consumer",
+      "compensation",
+      "check",
+      "redressal",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 305
+  },
+  {
+    "id": "eco5_real_13_isi_mark_lpg_cylinder_electrical.webp",
+    "path": "images/eco5/eco5_real_13_isi_mark_lpg_cylinder_electrical.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Isi Mark Lpg Cylinder Electrical Webp",
+    "tags": [
+      "eco",
+      "real",
+      "isi",
+      "mark",
+      "lpg",
+      "cylinder",
+      "electrical",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 180
+  },
+  {
+    "id": "eco5_real_14_agmark_spices_edible_oil_quality.webp",
+    "path": "images/eco5/eco5_real_14_agmark_spices_edible_oil_quality.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Agmark Spices Edible Oil Quality Webp",
+    "tags": [
+      "eco",
+      "real",
+      "agmark",
+      "spices",
+      "edible",
+      "oil",
+      "quality",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 217
+  },
+  {
+    "id": "eco5_real_15_hallmark_gold_jewelry_magnifying_glass.webp",
+    "path": "images/eco5/eco5_real_15_hallmark_gold_jewelry_magnifying_glass.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Hallmark Gold Jewelry Magnifying Glass Webp",
+    "tags": [
+      "eco",
+      "real",
+      "hallmark",
+      "gold",
+      "jewelry",
+      "magnifying",
+      "glass",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 206
+  },
+  {
+    "id": "eco5_real_16_ecomark_earthen_pot_green_product.webp",
+    "path": "images/eco5/eco5_real_16_ecomark_earthen_pot_green_product.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Ecomark Earthen Pot Green Product Webp",
+    "tags": [
+      "eco",
+      "real",
+      "ecomark",
+      "earthen",
+      "pot",
+      "green",
+      "product",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 332
+  },
+  {
+    "id": "eco5_real_17_asking_for_cash_memo_receipt_shop.webp",
+    "path": "images/eco5/eco5_real_17_asking_for_cash_memo_receipt_shop.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Asking For Cash Memo Receipt Shop Webp",
+    "tags": [
+      "eco",
+      "real",
+      "asking",
+      "for",
+      "cash",
+      "memo",
+      "receipt",
+      "shop",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 205
+  },
+  {
+    "id": "eco5_real_18_jago_grahak_jago_awareness_campaign.webp",
+    "path": "images/eco5/eco5_real_18_jago_grahak_jago_awareness_campaign.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Jago Grahak Jago Awareness Campaign Webp",
+    "tags": [
+      "eco",
+      "real",
+      "jago",
+      "grahak",
+      "jago",
+      "awareness",
+      "campaign",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 249
+  },
+  {
+    "id": "eco5_real_19_online_shopping_ecommerce_consumer_grievance.webp",
+    "path": "images/eco5/eco5_real_19_online_shopping_ecommerce_consumer_grievance.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Online Shopping Ecommerce Consumer Grievance Webp",
+    "tags": [
+      "eco",
+      "real",
+      "online",
+      "shopping",
+      "ecommerce",
+      "consumer",
+      "grievance",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 167
+  },
+  {
+    "id": "eco5_real_1_consumer_in_modern_supermarket.png",
+    "path": "images/eco5/eco5_real_1_consumer_in_modern_supermarket.png",
+    "chapter": "eco5",
+    "title": "Eco Real Consumer In Modern Supermarket Png",
+    "tags": [
+      "eco",
+      "real",
+      "consumer",
+      "modern",
+      "supermarket",
+      "png"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1554x1029",
+    "size_kb": 144
+  },
+  {
+    "id": "eco5_real_1_consumer_in_modern_supermarket.webp",
+    "path": "images/eco5/eco5_real_1_consumer_in_modern_supermarket.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Consumer In Modern Supermarket Webp",
+    "tags": [
+      "eco",
+      "real",
+      "consumer",
+      "modern",
+      "supermarket",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 269
+  },
+  {
+    "id": "eco5_real_20_empowered_conscious_consumer_society.webp",
+    "path": "images/eco5/eco5_real_20_empowered_conscious_consumer_society.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Empowered Conscious Consumer Society Webp",
+    "tags": [
+      "eco",
+      "real",
+      "empowered",
+      "conscious",
+      "consumer",
+      "society",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 287
+  },
+  {
+    "id": "eco5_real_2_faulty_weights_measuring_malpractice.webp",
+    "path": "images/eco5/eco5_real_2_faulty_weights_measuring_malpractice.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Faulty Weights Measuring Malpractice Webp",
+    "tags": [
+      "eco",
+      "real",
+      "faulty",
+      "weights",
+      "measuring",
+      "malpractice",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 244
+  },
+  {
+    "id": "eco5_real_3_food_adulteration_spices_testing.webp",
+    "path": "images/eco5/eco5_real_3_food_adulteration_spices_testing.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Food Adulteration Spices Testing Webp",
+    "tags": [
+      "eco",
+      "real",
+      "food",
+      "adulteration",
+      "spices",
+      "testing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 145
+  },
+  {
+    "id": "eco5_real_4_misleading_advertisements_billboard.webp",
+    "path": "images/eco5/eco5_real_4_misleading_advertisements_billboard.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Misleading Advertisements Billboard Webp",
+    "tags": [
+      "eco",
+      "real",
+      "misleading",
+      "advertisements",
+      "billboard",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 267
+  },
+  {
+    "id": "eco5_real_5_historic_consumer_protest_rally.webp",
+    "path": "images/eco5/eco5_real_5_historic_consumer_protest_rally.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Historic Consumer Protest Rally Webp",
+    "tags": [
+      "eco",
+      "real",
+      "historic",
+      "consumer",
+      "protest",
+      "rally",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 276
+  },
+  {
+    "id": "eco5_real_6_national_consumer_day_celebration.webp",
+    "path": "images/eco5/eco5_real_6_national_consumer_day_celebration.webp",
+    "chapter": "eco5",
+    "title": "Eco Real National Consumer Day Celebration Webp",
+    "tags": [
+      "eco",
+      "real",
+      "national",
+      "consumer",
+      "day",
+      "celebration",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 292
+  },
+  {
+    "id": "eco5_real_7_pressure_cooker_safety_valve_testing.webp",
+    "path": "images/eco5/eco5_real_7_pressure_cooker_safety_valve_testing.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Pressure Cooker Safety Valve Testing Webp",
+    "tags": [
+      "eco",
+      "real",
+      "pressure",
+      "cooker",
+      "safety",
+      "valve",
+      "testing",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 235
+  },
+  {
+    "id": "eco5_real_8_reading_product_label_mrp_expiry.webp",
+    "path": "images/eco5/eco5_real_8_reading_product_label_mrp_expiry.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Reading Product Label Mrp Expiry Webp",
+    "tags": [
+      "eco",
+      "real",
+      "reading",
+      "product",
+      "label",
+      "mrp",
+      "expiry",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 153
+  },
+  {
+    "id": "eco5_real_9_consumer_choosing_variety_telecom.webp",
+    "path": "images/eco5/eco5_real_9_consumer_choosing_variety_telecom.webp",
+    "chapter": "eco5",
+    "title": "Eco Real Consumer Choosing Variety Telecom Webp",
+    "tags": [
+      "eco",
+      "real",
+      "consumer",
+      "choosing",
+      "variety",
+      "telecom",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1200x675",
+    "size_kb": 198
+  },
+  {
+    "id": "tmp_page_16.png",
+    "path": "images/eco5/tmp_page_16.png",
+    "chapter": "eco5",
+    "title": "Tmp Page Png",
+    "tags": [
+      "tmp",
+      "page",
+      "png"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1400x900",
+    "size_kb": 88
+  },
+  {
+    "id": "tmp_page_vis_16.png",
+    "path": "images/eco5/tmp_page_vis_16.png",
+    "chapter": "eco5",
+    "title": "Tmp Page Vis Png",
+    "tags": [
+      "tmp",
+      "page",
+      "vis",
+      "png"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1280x720",
+    "size_kb": 87
   },
   {
     "id": "ai_geo1_10_land_degradation_reclamation.webp",
@@ -4112,21 +4602,6 @@
     "category": "General Visual Asset",
     "dimensions": "600x450",
     "size_kb": 105
-  },
-  {
-    "id": "geo6_importance_infographic.webp",
-    "path": "images/geo6/geo6_importance_infographic.webp",
-    "chapter": "geo6",
-    "title": "Geo Importance Infographic Webp",
-    "tags": [
-      "geo",
-      "importance",
-      "infographic",
-      "webp"
-    ],
-    "category": "General Visual Asset",
-    "dimensions": "1024x1396",
-    "size_kb": 601
   },
   {
     "id": "geo6_pollution_1_air.webp",
@@ -7221,5 +7696,725 @@
     "category": "General Visual Asset",
     "dimensions": "1024x559",
     "size_kb": 219
+  },
+  {
+    "id": "chart_pol1_1_ethnic_composition_belgium_srilanka.svg",
+    "path": "images/pol1/chart_pol1_1_ethnic_composition_belgium_srilanka.svg",
+    "chapter": "pol1",
+    "title": "Chart Pol Ethnic Composition Belgium Srilanka Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "ethnic",
+      "composition",
+      "belgium",
+      "srilanka",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol1_2_belgium_four_constitutional_adjustments.svg",
+    "path": "images/pol1/chart_pol1_2_belgium_four_constitutional_adjustments.svg",
+    "chapter": "pol1",
+    "title": "Chart Pol Belgium Four Constitutional Adjustments Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "belgium",
+      "four",
+      "constitutional",
+      "adjustments",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol1_3_sri_lanka_majoritarianism_timeline.svg",
+    "path": "images/pol1/chart_pol1_3_sri_lanka_majoritarianism_timeline.svg",
+    "chapter": "pol1",
+    "title": "Chart Pol Sri Lanka Majoritarianism Timeline Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "sri",
+      "lanka",
+      "majoritarianism",
+      "timeline",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol1_4_prudential_vs_moral_reasons.svg",
+    "path": "images/pol1/chart_pol1_4_prudential_vs_moral_reasons.svg",
+    "chapter": "pol1",
+    "title": "Chart Pol Prudential Vs Moral Reasons Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "prudential",
+      "moral",
+      "reasons",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol1_5_forms_of_power_sharing_matrix.svg",
+    "path": "images/pol1/chart_pol1_5_forms_of_power_sharing_matrix.svg",
+    "chapter": "pol1",
+    "title": "Chart Pol Forms Of Power Sharing Matrix Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "forms",
+      "power",
+      "sharing",
+      "matrix",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "pol1_real_1.webp",
+    "path": "images/pol1/pol1_real_1.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1024x572",
+    "size_kb": 430
+  },
+  {
+    "id": "pol1_real_10.webp",
+    "path": "images/pol1/pol1_real_10.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 866
+  },
+  {
+    "id": "pol1_real_11.webp",
+    "path": "images/pol1/pol1_real_11.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1078
+  },
+  {
+    "id": "pol1_real_12.webp",
+    "path": "images/pol1/pol1_real_12.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1157
+  },
+  {
+    "id": "pol1_real_13.webp",
+    "path": "images/pol1/pol1_real_13.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1000
+  },
+  {
+    "id": "pol1_real_14.webp",
+    "path": "images/pol1/pol1_real_14.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1095
+  },
+  {
+    "id": "pol1_real_15.webp",
+    "path": "images/pol1/pol1_real_15.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 842
+  },
+  {
+    "id": "pol1_real_16.webp",
+    "path": "images/pol1/pol1_real_16.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1011
+  },
+  {
+    "id": "pol1_real_17.webp",
+    "path": "images/pol1/pol1_real_17.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 983
+  },
+  {
+    "id": "pol1_real_18.webp",
+    "path": "images/pol1/pol1_real_18.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1190
+  },
+  {
+    "id": "pol1_real_19.webp",
+    "path": "images/pol1/pol1_real_19.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 780
+  },
+  {
+    "id": "pol1_real_2.webp",
+    "path": "images/pol1/pol1_real_2.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 784
+  },
+  {
+    "id": "pol1_real_20.webp",
+    "path": "images/pol1/pol1_real_20.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 864
+  },
+  {
+    "id": "pol1_real_3.webp",
+    "path": "images/pol1/pol1_real_3.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1111
+  },
+  {
+    "id": "pol1_real_4.webp",
+    "path": "images/pol1/pol1_real_4.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 970
+  },
+  {
+    "id": "pol1_real_5.webp",
+    "path": "images/pol1/pol1_real_5.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 820
+  },
+  {
+    "id": "pol1_real_6.webp",
+    "path": "images/pol1/pol1_real_6.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1233
+  },
+  {
+    "id": "pol1_real_7.webp",
+    "path": "images/pol1/pol1_real_7.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 1089
+  },
+  {
+    "id": "pol1_real_8.webp",
+    "path": "images/pol1/pol1_real_8.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 900
+  },
+  {
+    "id": "pol1_real_9.webp",
+    "path": "images/pol1/pol1_real_9.webp",
+    "chapter": "pol1",
+    "title": "Pol Real Webp",
+    "tags": [
+      "pol",
+      "real",
+      "webp"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "1376x768",
+    "size_kb": 966
+  },
+  {
+    "id": "chart_pol2_1_unitary_vs_federal_system.svg",
+    "path": "images/pol2/chart_pol2_1_unitary_vs_federal_system.svg",
+    "chapter": "pol2",
+    "title": "Chart Pol Unitary Vs Federal System Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "unitary",
+      "federal",
+      "system",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol2_2_seven_features_of_federalism.svg",
+    "path": "images/pol2/chart_pol2_2_seven_features_of_federalism.svg",
+    "chapter": "pol2",
+    "title": "Chart Pol Seven Features Of Federalism Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "seven",
+      "features",
+      "federalism",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "chart_pol2_3_coming_together_vs_holding_together.svg",
+    "path": "images/pol2/chart_pol2_3_coming_together_vs_holding_together.svg",
+    "chapter": "pol2",
+    "title": "Chart Pol Coming Together Vs Holding Together Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "coming",
+      "together",
+      "holding",
+      "together",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol2_4_three_legislative_lists.svg",
+    "path": "images/pol2/chart_pol2_4_three_legislative_lists.svg",
+    "chapter": "pol2",
+    "title": "Chart Pol Three Legislative Lists Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "three",
+      "legislative",
+      "lists",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 7
+  },
+  {
+    "id": "chart_pol2_5_decentralization_act_1992.svg",
+    "path": "images/pol2/chart_pol2_5_decentralization_act_1992.svg",
+    "chapter": "pol2",
+    "title": "Chart Pol Decentralization Act Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "decentralization",
+      "act",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol3_1_gender_division_vs_empowerment.svg",
+    "path": "images/pol3/chart_pol3_1_gender_division_vs_empowerment.svg",
+    "chapter": "pol3",
+    "title": "Chart Pol Gender Division Vs Empowerment Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "gender",
+      "division",
+      "empowerment",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol3_2_secular_state_principles.svg",
+    "path": "images/pol3/chart_pol3_2_secular_state_principles.svg",
+    "chapter": "pol3",
+    "title": "Chart Pol Secular State Principles Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "secular",
+      "state",
+      "principles",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol3_3_four_forms_of_communalism.svg",
+    "path": "images/pol3/chart_pol3_3_four_forms_of_communalism.svg",
+    "chapter": "pol3",
+    "title": "Chart Pol Four Forms Of Communalism Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "four",
+      "forms",
+      "communalism",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol3_4_caste_inequalities_and_modern_change.svg",
+    "path": "images/pol3/chart_pol3_4_caste_inequalities_and_modern_change.svg",
+    "chapter": "pol3",
+    "title": "Chart Pol Caste Inequalities And Modern Change Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "caste",
+      "inequalities",
+      "and",
+      "modern",
+      "change",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol3_5_caste_and_politics_matrix.svg",
+    "path": "images/pol3/chart_pol3_5_caste_and_politics_matrix.svg",
+    "chapter": "pol3",
+    "title": "Chart Pol Caste And Politics Matrix Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "caste",
+      "and",
+      "politics",
+      "matrix",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol4_1_party_components_and_functions.svg",
+    "path": "images/pol4/chart_pol4_1_party_components_and_functions.svg",
+    "chapter": "pol4",
+    "title": "Chart Pol Party Components And Functions Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "party",
+      "components",
+      "and",
+      "functions",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol4_2_three_party_system_models.svg",
+    "path": "images/pol4/chart_pol4_2_three_party_system_models.svg",
+    "chapter": "pol4",
+    "title": "Chart Pol Three Party System Models Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "three",
+      "party",
+      "system",
+      "models",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 6
+  },
+  {
+    "id": "chart_pol4_3_national_vs_regional_party_criteria.svg",
+    "path": "images/pol4/chart_pol4_3_national_vs_regional_party_criteria.svg",
+    "chapter": "pol4",
+    "title": "Chart Pol National Vs Regional Party Criteria Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "national",
+      "regional",
+      "party",
+      "criteria",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol4_4_four_challenges_to_political_parties.svg",
+    "path": "images/pol4/chart_pol4_4_four_challenges_to_political_parties.svg",
+    "chapter": "pol4",
+    "title": "Chart Pol Four Challenges To Political Parties Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "four",
+      "challenges",
+      "political",
+      "parties",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol4_5_five_electoral_reforms_in_parties.svg",
+    "path": "images/pol4/chart_pol4_5_five_electoral_reforms_in_parties.svg",
+    "chapter": "pol4",
+    "title": "Chart Pol Five Electoral Reforms In Parties Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "five",
+      "electoral",
+      "reforms",
+      "parties",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "chart_pol5_1_five_evaluation_metrics.svg",
+    "path": "images/pol5/chart_pol5_1_five_evaluation_metrics.svg",
+    "chapter": "pol5",
+    "title": "Chart Pol Five Evaluation Metrics Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "five",
+      "evaluation",
+      "metrics",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "chart_pol5_2_accountable_responsive_legitimate_govt.svg",
+    "path": "images/pol5/chart_pol5_2_accountable_responsive_legitimate_govt.svg",
+    "chapter": "pol5",
+    "title": "Chart Pol Accountable Responsive Legitimate Govt Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "accountable",
+      "responsive",
+      "legitimate",
+      "govt",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol5_3_economic_growth_vs_inequality_reduction.svg",
+    "path": "images/pol5/chart_pol5_3_economic_growth_vs_inequality_reduction.svg",
+    "chapter": "pol5",
+    "title": "Chart Pol Economic Growth Vs Inequality Reduction Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "economic",
+      "growth",
+      "inequality",
+      "reduction",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 5
+  },
+  {
+    "id": "chart_pol5_4_accommodation_of_social_diversity.svg",
+    "path": "images/pol5/chart_pol5_4_accommodation_of_social_diversity.svg",
+    "chapter": "pol5",
+    "title": "Chart Pol Accommodation Of Social Diversity Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "accommodation",
+      "social",
+      "diversity",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
+  },
+  {
+    "id": "chart_pol5_5_dignity_and_freedom_of_citizens.svg",
+    "path": "images/pol5/chart_pol5_5_dignity_and_freedom_of_citizens.svg",
+    "chapter": "pol5",
+    "title": "Chart Pol Dignity And Freedom Of Citizens Svg",
+    "tags": [
+      "chart",
+      "pol",
+      "dignity",
+      "and",
+      "freedom",
+      "citizens",
+      "svg"
+    ],
+    "category": "General Visual Asset",
+    "dimensions": "SVG",
+    "size_kb": 4
   }
 ]
