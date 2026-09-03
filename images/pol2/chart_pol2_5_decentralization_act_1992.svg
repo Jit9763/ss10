@@ -20,40 +20,67 @@
 
   <!-- Title -->
   <g filter="url(#shadow5)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#c084fc" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🏡 भारत में विकेंद्रीकरण: 1992 का ऐतिहासिक संवैधानिक संशोधन</text>
+    <rect x="40" y="22" width="1020" height="74" rx="16" fill="#090d16" stroke="#c084fc" stroke-width="3"/>
+    <text x="550" y="68" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🏡 भारत में विकेंद्रीकरण: 1992 का ऐतिहासिक संवैधानिक संशोधन</text>
   </g>
 
-  <!-- 4 Grid Cards -->
-  <g transform="translate(35, 125)" filter="url(#shadow5)">
+  <!-- Card 1: Elections -->
+  <g transform="translate(35, 120)" filter="url(#shadow5)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#0284c7"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. नियमित स्वतंत्र चुनाव (Mandatory Elections)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• स्थानीय स्वशासी निकायों के चुनाव नियमित रूप से कराना संवैधानिक बाध्यता बना।</text>
-    <text x="20" y="130" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• 73वां संविधान संशोधन (पंचायती राज) व 74वां संशोधन (नगर पालिका)।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. नियमित स्वतंत्र चुनाव (Mandatory Elections)</text>
+    <text x="20" y="85" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">
+      <tspan x="20" dy="0">• स्थानीय स्वशासी निकायों के चुनाव नियमित रूप से</tspan>
+      <tspan x="20" dy="24">  कराना अनिवार्य संवैधानिक बाध्यता बना।</tspan>
+    </text>
+    <text x="20" y="145" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">
+      <tspan x="20" dy="0">• 73वां संशोधन (पंचायती राज - ग्रामीण क्षेत्र)</tspan>
+      <tspan x="20" dy="24">• 74वां संशोधन (नगर पालिका - शहरी क्षेत्र)</tspan>
+    </text>
   </g>
 
-  <g transform="translate(565, 125)" filter="url(#shadow5)">
+  <!-- Card 2: Reservation -->
+  <g transform="translate(565, 120)" filter="url(#shadow5)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#059669"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. आरक्षित सीटें (Seat Reservation)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• अनुसूचित जाति (SC), जनजाति (ST) और पिछड़ी जातियों (OBC) हेतु सीटें आरक्षित।</text>
-    <text x="20" y="130" fill="#a7f3d0" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• कम से कम 1/3 (33%) पद महिलाओं के लिए अनिवार्य रूप से आरक्षित।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. आरक्षित सीटें (Seat Reservation)</text>
+    <text x="20" y="85" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">
+      <tspan x="20" dy="0">• अनुसूचित जाति (SC), जनजाति (ST) और पिछड़ी</tspan>
+      <tspan x="20" dy="24">  जातियों (OBC) हेतु सीटें आरक्षित की गईं।</tspan>
+    </text>
+    <text x="20" y="145" fill="#a7f3d0" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="900">
+      <tspan x="20" dy="0">• कम से कम 1/3 (33%) पद महिलाओं के लिए</tspan>
+      <tspan x="20" dy="24">  अनिवार्य रूप से आरक्षित किए गए।</tspan>
+    </text>
   </g>
 
+  <!-- Card 3: Election Commission -->
   <g transform="translate(35, 380)" filter="url(#shadow5)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. राज्य चुनाव आयोग (State Election Commission)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• प्रत्येक राज्य में पंचायत व नगर पालिका चुनाव कराने हेतु स्वतंत्र आयोग का गठन।</text>
-    <text x="20" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• राज्य चुनाव आयोग स्वतंत्र और निष्पक्ष रूप से चुनाव संचालित करता है।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. राज्य चुनाव आयोग (State Election Commission)</text>
+    <text x="20" y="85" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">
+      <tspan x="20" dy="0">• प्रत्येक राज्य में पंचायत व नगर पालिका चुनाव</tspan>
+      <tspan x="20" dy="24">  कराने हेतु स्वतंत्र राज्य चुनाव आयोग का गठन।</tspan>
+    </text>
+    <text x="20" y="145" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">
+      <tspan x="20" dy="0">• चुनाव पूरी निष्पक्षता और स्वायत्तता से संपन्न</tspan>
+      <tspan x="20" dy="24">  कराने की संवैधानिक जिम्मेदारी।</tspan>
+    </text>
   </g>
 
+  <!-- Card 4: Revenue Sharing -->
   <g transform="translate(565, 380)" filter="url(#shadow5)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f472b6" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#db2777"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. राजस्व व अधिकारों का बंटवारा (Revenue Sharing)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• राज्य सरकारों को अपने वित्तीय संसाधनों का कुछ हिस्सा स्थानीय निकायों को देना अनिवार्य।</text>
-    <text x="20" y="130" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• ग्राम सभा को गांव के विकास की प्रत्यक्ष शक्ति मिली।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. राजस्व व अधिकारों का बंटवारा (Revenue Sharing)</text>
+    <text x="20" y="85" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">
+      <tspan x="20" dy="0">• राज्य सरकारों द्वारा अपने वित्तीय संसाधनों व</tspan>
+      <tspan x="20" dy="24">  राजस्व का कुछ हिस्सा स्थानीय निकायों को देना अनिवार्य।</tspan>
+    </text>
+    <text x="20" y="145" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">
+      <tspan x="20" dy="0">• ग्राम सभा को गांव के विकास और बजट की</tspan>
+      <tspan x="20" dy="24">  प्रत्यक्ष निगरानी की वास्तविक शक्ति मिली।</tspan>
+    </text>
   </g>
 </svg>
