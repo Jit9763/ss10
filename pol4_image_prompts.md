@@ -1,162 +1,85 @@
-# 🏛️ Political Science Chapter 4: Political Parties (राजनीतिक दल)
-## 📸 Master GenAI Image Prompts Documentation (20 Photorealistic Visuals)
+# 📚 कक्षा 10 राजनीति विज्ञान - अध्याय 4: राजनीतिक दल (Political Parties)
+## 🎯 सभी 20 विज़ुअल्स की संपूर्ण रूपरेखा एवं कॉपी-पेस्ट रेडी प्रॉम्प्ट्स (NCERT Master Guide)
+
+> **डिज़ाइन मानक (Design Rules):**
+> 1. **पहलू अनुपात:** 16:9 वाइडस्क्रीन (क्लासरूम प्रोजेक्टर एवं प्रिंट अनुकूल)।
+> 2. **लेआउट शैली:** "समानुपातिक न्याय" (ऊपर बोल्ड देवनागरी शीर्षक व उपशीर्षक, केंद्र में 2-पैनल तुलनात्मक या 4-कार्ड ग्रिड, नीचे 3 डार्क राउंडेड बैज)।
+> 3. **सख्त नियम (0% Politicians Rule):** किसी भी जीवित या वास्तविक भारतीय राजनेता का कोई चित्र नहीं; केवल सामान्य काल्पनिक नागरिक, छात्र, जागरूक मतदाता एवं प्रतीकात्मक कार्टून।
+> 4. **शुद्ध भाषा:** 100% शुद्ध हिंदी देवनागरी टेक्स्ट।
 
 ---
 
-### 1. Political Party Workers Campaigning (चित्र 4.1)
-**File**: `images/pol4/pol4_real_1_political_party_campaigning.webp`
+### 📋 20 विज़ुअल्स की विस्तृत सूची (Visuals Overview)
+
+| क्र.सं. | इमेज फ़ाइल | शीर्षक एवं मुख्य शैक्षणिक विषय |
+|:---:|---|---|
+| **4.1** | `pol4_real_1.webp` | **राजनीतिक दल: परिभाषा और 3 प्रमुख अंग** (नेता, सक्रिय सदस्य, और अनुयायी/समर्थक) |
+| **4.2** | `pol4_real_2.webp` | **राजनीतिक दलों के 7 प्रमुख कार्य: समग्र अवलोकन** (चुनाव, नीतियां, कानून, सरकार, विपक्ष, जनमत, कल्याण) |
+| **4.3** | `pol4_real_3.webp` | **कार्य ①: चुनाव लड़ना और उम्मीदवार चयन** (पार्टी टिकट, जनसभाएं और चुनावी घोषणापत्र) |
+| **4.4** | `pol4_real_4.webp` | **कार्य ②: नीतियां और कार्यक्रम बनाना** (जनता की विभिन्न प्राथमिकताओं को एकीकृत नीतियां बनाना) |
+| **4.5** | `pol4_real_5.webp` | **कार्य ③: कानून निर्माण में निर्णायक भूमिका** (संसद और विधानसभाओं में बहस व विधेयक पारित कराना) |
+| **4.6** | `pol4_real_6.webp` | **कार्य ④: सरकार बनाना और चलाना** (मंत्रिमंडल गठन, नीति क्रियान्वयन और प्रशासनिक नियंत्रण) |
+| **4.7** | `pol4_real_7.webp` | **कार्य ⑤: विपक्ष की सशक्त भूमिका** (NCERT कार्टून: सरकार की कमियों को उजागर करना व जवाबदेही तय करना) |
+| **4.8** | `pol4_real_8.webp` | **कार्य ⑥: जनमत निर्माण और जागरूकता** (नागरिकों की समस्याओं पर आंदोलन, धरने व मीडिया संवाद) |
+| **4.9** | `pol4_real_9.webp` | **कार्य ⑦: सरकारी मशीनरी और कल्याणकारी योजनाओं तक पहुंच** (नागरिक और अधिकारी के बीच दल एक सेतु) |
+| **4.10** | `pol4_real_10.webp` | **राजनीतिक दलों की आवश्यकता: बिना दलों के लोकतंत्र की कल्पना** (निर्दलीय उम्मीदवारों की अराजकता बनाम जवाबदेही) |
+| **4.11** | `pol4_real_11.webp` | **दलीय व्यवस्था के 3 प्रकार** (एक-दलीय: चीन, दो-दलीय: अमेरिका/ब्रिटेन, बहु-दलीय: भारत) |
+| **4.12** | `pol4_real_12.webp` | **गठबंधन सरकार और साझा न्यूनतम कार्यक्रम** (NCERT कार्टून: कई दलों का मिलकर सरकार चलाना - CMP) |
+| **4.13** | `pol4_real_13.webp` | **राष्ट्रीय दल बनाम क्षेत्रीय दल: मान्यता के मानक** (चुनाव आयोग के कड़े नियम: 6% वोट + 4 सीटें) |
+| **4.14** | `pol4_real_14.webp` | **क्षेत्रीय दलों का उभार और संघवाद का सशक्तीकरण** (राज्य स्तरीय दलों का राष्ट्रीय राजनीति में महत्व) |
+| **4.15** | `pol4_real_15.webp` | **चुनौती ①: आंतरिक लोकतंत्र का अभाव** (NCERT कार्टून: शीर्ष नेताओं का एकाधिकार, कोई आंतरिक चुनाव नहीं) |
+| **4.16** | `pol4_real_16.webp` | **चुनौती ②: वंशवाद की राजनीति (Dynasty Trap)** (NCERT कार्टून: पिता से पुत्र को पार्टी की गद्दी, कार्यकर्ताओं की उपेक्षा) |
+| **4.17** | `pol4_real_17.webp` | **चुनौती ③: धन और बाहुबल/अपराधीकरण** (NCERT कार्टून: कॉर्पोरेट चंदा और चुनावी बाहुबलियों को टिकट) |
+| **4.18** | `pol4_real_18.webp` | **चुनौती ④: सार्थक विकल्प की कमी** (NCERT कार्टून: 'एक ही थाली के चट्टे-बट्टे' - नीतियों में कोई बड़ा अंतर नहीं) |
+| **4.19** | `pol4_real_19.webp` | **सुधार के संवैधानिक व कानूनी उपाय** (दल-बदल विरोधी कानून, हलफनामा, सांगठनिक चुनाव व आयकर ऑडिट) |
+| **4.20** | `pol4_real_20.webp` | **भावी सुधार: जन-सहभागिता और जवाबदेह लोकतंत्र** (चुनावों का सरकारी खर्च, महिला आरक्षण व जागरूक नागरिक) |
+
+---
+
+### 🎨 विज़ुअल 4.1 का रेडी प्रॉम्प्ट (Visual 4.1: राजनीतिक दल के 3 अंग)
 ```text
-A vibrant 16:9 documentary photograph depicting Indian political party volunteers holding party symbols and talking to citizens in a sunlit town market square. Active election atmosphere, democratic participation, photorealistic, zero text.
+A vibrant 16:9 educational vector illustration in comic textbook infographic style matching the 'समानुपातिक न्याय' layout, illustrating NCERT Class 10 Chapter 4 on the definition and three components of a political party. Strictly ZERO real-life politicians.
+
+At top center, bold Devanagari Hindi title: 'राजनीतिक दल: परिभाषा और 3 प्रमुख अंग' with subtitle: 'NCERT अवधारणा: सत्ता प्राप्ति और जनहित नीतियों के क्रियान्वयन हेतु संगठित नागरिकों का समूह'.
+
+The center features a clean 3-pillar architectural pyramid showing the three essential components of a political party:
+- Component 1 (शीर्ष - Leader): '1. नेता (The Leaders)' - Shows visionary party leaders discussing public policies on a blueprint.
+- Component 2 (मध्य - Active Members): '2. सक्रिय सदस्य (Active Members)' - Shows dedicated grassroots workers setting up campaign booths, meeting citizens, and organizing local rallies.
+- Component 3 (आधार - Followers/Supporters): '3. अनुयायी व समर्थक (Followers/Supporters)' - Shows diverse ordinary citizens, voters, and youth proudly casting votes and supporting party policies.
+
+Completely generic, fictional citizens, stylized educational 2D comic vector art.
+
+At the bottom, three clear dark rounded badge banners with bold white Hindi text:
+- Left Badge: '1. नेता (मार्गदर्शक)'
+- Center Badge: '2. सक्रिय कार्यकर्ता (रीढ़)'
+- Right Badge: '3. समर्थक व मतदाता'
+
+Clean 2D comic vector style, bright classroom projector colors, high contrast, 16:9 widescreen aspect ratio.
 ```
 
 ---
 
-### 2. Multi-Party General Elections (चित्र 4.2)
-**File**: `images/pol4/pol4_real_2_multi_party_general_elections.webp`
+### 🎨 विज़ुअल 4.2 का रेडी प्रॉम्प्ट (Visual 4.2: राजनीतिक दलों के 7 प्रमुख कार्य)
 ```text
-An impressive wide-angle 16:9 photograph of an Indian election polling station plaza with voters queuing up under bright morning sun. Multi-party democracy in action, photorealistic, zero text.
-```
+A vibrant 16:9 educational vector infographic diagram matching the 'समानुपातिक न्याय' layout, illustrating NCERT Class 10 Chapter 4 on the 7 core functions of political parties. Strictly ZERO real politicians.
 
----
+At top center, bold Devanagari Hindi title: 'राजनीतिक दलों के 7 प्रमुख कार्य' with subtitle: 'NCERT समग्र विश्लेषण: चुनाव लड़ने से लेकर सरकार बनाने, कानून निर्माण व जनमत तैयार करने तक'.
 
-### 3. Party Manifesto & Policy Announcement (चित्र 4.3)
-**File**: `images/pol4/pol4_real_3_party_manifesto_policy_announcement.webp`
-```text
-A professional 16:9 photograph of political party leaders holding a press conference to release their election manifesto. Media cameras, microphones, policy promises, photorealistic, zero text.
-```
+The center features an impressive circular 7-spoke democratic wheel showing the 7 core functions:
+1. '1. चुनाव लड़ना' (Ballot box icon)
+2. '2. नीतियां व कार्यक्रम तय करना' (Policy document icon)
+3. '3. कानून निर्माण में भूमिका' (Parliament assembly gavel icon)
+4. '4. सरकार बनाना व चलाना' (Cabinet administration icon)
+5. '5. विपक्ष की सशक्त भूमिका' (Accountability magnifying glass icon)
+6. '6. जनमत का निर्माण' (Public speech and awareness rally icon)
+7. '7. सरकारी योजनाओं तक पहुंच' (Bridge between citizen and welfare office)
 
----
+Completely stylized educational 2D flat geometric art, high-contrast pedagogical icons.
 
-### 4. Opposition Party Role in Parliament (चित्र 4.4)
-**File**: `images/pol4/pol4_real_4_opposition_party_role_parliament.webp`
-```text
-A dignified 16:9 interior photograph of the opposition bench leaders in parliament questioning government policies during question hour. Democratic accountability, photorealistic, zero text.
-```
+At the bottom, three clear dark rounded badge banners with bold white Hindi text:
+- Left Badge: 'शासन और कानून निर्माण'
+- Center Badge: 'विपक्ष और जनमत निर्माण'
+- Right Badge: 'लोकतंत्र के 7 आधार स्तंभ'
 
----
-
-### 5. Coalition Government Formation (चित्र 4.5)
-**File**: `images/pol4/pol4_real_5_coalition_government_formation.webp`
-```text
-An inspiring 16:9 photograph of alliance leaders from various regional and national parties shaking hands at a round table to form a coalition government. Multiparty harmony, photorealistic, zero text.
-```
-
----
-
-### 6. One-Party System Demonstration (China) (चित्र 4.6)
-**File**: `images/pol4/pol4_real_6_one_party_system_china.webp`
-```text
-A wide 16:9 photograph of the Great Hall of the People in Beijing, China during a Communist Party national congress session. Single-party state structure, photorealistic, zero text.
-```
-
----
-
-### 7. Two-Party System Demonstration (USA/UK) (चित्र 4.7)
-**File**: `images/pol4/pol4_real_7_two_party_system_usa_uk.webp`
-```text
-A crisp 16:9 photograph showcasing the US Capitol building in Washington D.C. with Democratic and Republican political debate symbols. Two-party democracy, photorealistic, zero text.
-```
-
----
-
-### 8. National Political Party Headquarters (BJP/INC) (चित्र 4.8)
-**File**: `images/pol4/pol4_real_8_national_party_headquarters_delhi.webp`
-```text
-An impressive 16:9 photograph of a national political party headquarters building in New Delhi under bright daylight. Party workers, national flags, photorealistic, zero text.
-```
-
----
-
-### 9. Regional Party State Headquarters (चित्र 4.9)
-**File**: `images/pol4/pol4_real_9_regional_party_state_headquarters.webp`
-```text
-A sunlit 16:9 photograph of a regional state party office building in a state capital like Lucknow, Chennai, or Kolkata. Regional identity, state politics, photorealistic, zero text.
-```
-
----
-
-### 10. Election Commission Symbol Allocation (चित्र 4.10)
-**File**: `images/pol4/pol4_real_10_election_commission_symbol_allocation.webp`
-```text
-A official 16:9 photograph of Election Commission of India officers issuing official election symbol registration certificates to party delegates. Democratic procedures, photorealistic, zero text.
-```
-
----
-
-### 11. Lack of Internal Democracy Challenge (चित्र 4.11)
-**File**: `images/pol4/pol4_real_11_lack_of_internal_democracy.webp`
-```text
-A serious 16:9 documentary photograph depicting party workers standing outside a closed party executive committee meeting hall. Lack of internal elections, photorealistic, zero text.
-```
-
----
-
-### 12. Dynastic Politics Challenge (चित्र 4.12)
-**File**: `images/pol4/pol4_real_12_dynastic_politics_challenge.webp`
-```text
-A dramatic 16:9 artistic photograph depicting family succession in political leadership versus young grassroots party workers. Dynastic challenge concept, photorealistic, zero text.
-```
-
----
-
-### 13. Money & Muscle Power in Elections (चित्र 4.13)
-**File**: `images/pol4/pol4_real_13_money_and_muscle_power_elections.webp`
-```text
-A high-contrast 16:9 photograph showing Election Commission flying squads inspecting cash seizures and enforcing the Model Code of Conduct during elections. Electoral integrity, photorealistic, zero text.
-```
-
----
-
-### 14. Anti-Defection Law (Schedule 10) (चित्र 4.14)
-**File**: `images/pol4/pol4_real_14_anti_defection_law_schedule_10.webp`
-```text
-A formal 16:9 interior photograph of the Speaker of the Legislative Assembly reviewing a disqualification petition under the Anti-Defection Law. Constitutional rule, photorealistic, zero text.
-```
-
----
-
-### 15. Candidate Affidavit Filing (ECI) (चित्र 4.15)
-**File**: `images/pol4/pol4_real_15_candidate_affidavit_filing_eci.webp`
-```text
-A clear 16:9 photograph of an election candidate submitting a notarized affidavit declaring assets and criminal record to the Returning Officer. Electoral transparency, photorealistic, zero text.
-```
-
----
-
-### 16. Mandatory Organizational Elections & IT Returns (चित्र 4.16)
-**File**: `images/pol4/pol4_real_16_mandatory_organizational_elections_tax.webp`
-```text
-A professional 16:9 photograph of political party treasurers filing income tax returns and submitting membership audit registers to the Election Commission. Financial accountability, photorealistic, zero text.
-```
-
----
-
-### 17. State Funding of Elections Proposal (चित्र 4.17)
-**File**: `images/pol4/pol4_real_17_state_funding_of_elections.webp`
-```text
-A sunlit 16:9 photograph showing official government-provided campaign vehicles and petrol coupons distributed equally to all recognized party candidates. Level playing field, photorealistic, zero text.
-```
-
----
-
-### 18. Citizen Pressure & Electoral Reform Movements (चित्र 4.18)
-**File**: `images/pol4/pol4_real_18_citizen_pressure_electoral_reforms.webp`
-```text
-An inspiring 16:9 photograph of civil society activists and students conducting an electoral reform awareness rally with 'Clean Politics' posters. Active citizenship, photorealistic, zero text.
-```
-
----
-
-### 19. EVM Voting & VVPAT Verification (चित्र 4.19)
-**File**: `images/pol4/pol4_real_19_evm_vvpat_voting_system.webp`
-```text
-A close-up 16:9 photograph of an Electronic Voting Machine (EVM) and VVPAT printer inside a polling booth with a voter pressing the blue button. Secure Indian voting, photorealistic, zero text.
-```
-
----
-
-### 20. Vibrant & Accountable Multi-Party Democracy (चित्र 4.20)
-**File**: `images/pol4/pol4_real_20_vibrant_accountable_multi_party_democracy.webp`
-```text
-A triumphant panoramic 16:9 photograph depicting citizens celebrating a fair election victory outside the Parliament building in New Delhi. Democratic strength, photorealistic, zero text.
+Clean 2D comic vector style, bright classroom projector colors, high contrast, 16:9 widescreen aspect ratio.
 ```
