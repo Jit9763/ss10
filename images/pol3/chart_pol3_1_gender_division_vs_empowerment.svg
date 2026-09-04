@@ -21,40 +21,40 @@
   <!-- Title -->
   <g filter="url(#shadow1)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#f472b6" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">👩‍💼 श्रम का लैंगिक विभाजन बनाम महिला सशक्तिकरण (Gender &amp; Power)</text>
+    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">👩‍💼 श्रम का लैंगic विभाजन बनाम महिला सशक्तिकरण (Gender &amp; Power)</text>
   </g>
 
   <!-- Left: Traditional Division -->
   <g transform="translate(35, 125)" filter="url(#shadow1)">
     <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
     <rect x="0" y="0" width="500" height="60" rx="18" fill="#dc2626"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. श्रम का पारंपरिक लैंगिक विभाजन</text>
+    <text x="250" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. श्रम का पारंपरिक लैंगिक विभाजन</text>
     
-    <text x="25" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• निजी बनाम सार्वजनिक का विभाजन:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">घर के अंदर का सारा काम (खाना पकाना, कपड़े धोना) महिलाओं के जिम्मे।</text>
+    <text x="20" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• निजी बनाम सार्वजनिक का विभाजन:</text>
+    <text x="20" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">घर के अंदर का सारा काम (खाना, सफाई) महिलाओं के जिम्मे।</text>
 
-    <text x="25" y="200" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• अवैतनिक श्रम (Unpaid Labor):</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">महिलाओं के घरेलू श्रम का कोई मूल्य या वेतन नहीं माना जाता।</text>
+    <text x="20" y="205" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• अवैतनिक श्रम (Unpaid Labor):</text>
+    <text x="20" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">महिलाओं के घरेलू श्रम का कोई आर्थिक मूल्य नहीं आंका जाता।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
-    <text x="240" y="355" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">💥 सामाजिक परिणाम:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">राजनीति और सार्वजनिक जीवन में महिलाओं की नगण्य भूमिका।</text>
+    <rect x="20" y="320" width="460" height="140" rx="14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+    <text x="250" y="355" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">💥 सामाजिक परिणाम:</text>
+    <text x="250" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">राजनीति और सार्वजनिक जीवन में महिलाओं की कम भूमिका।</text>
   </g>
 
-  <!-- Right: Feminist Movement &amp; Empowerment -->
+  <!-- Right: Feminist Movement & Empowerment -->
   <g transform="translate(565, 125)" filter="url(#shadow1)">
     <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
     <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. नारीवादी आंदोलन एवं राजनीतिक सशक्तिकरण</text>
+    <text x="250" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. नारीवादी आंदोलन एवं राजनीतिक सशक्तिकरण</text>
     
-    <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• नारीवादी आंदोलन (Feminist Movement):</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">महिला और पुरुष के समान अधिकारों और अवसरों में विश्वास करने वाला आंदोलन।</text>
+    <text x="20" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• नारीवादी आंदोलन (Feminist Movement):</text>
+    <text x="20" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">महिला-पुरुष के समान अधिकारों व अवसरों हेतु आंदोलन।</text>
 
-    <text x="25" y="200" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• राजनीतिक आरक्षण व कानून:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">पंचायतों में 33% आरक्षण व नारी शक्ति वंदन अधिनियम (संसद आरक्षण)।</text>
+    <text x="20" y="205" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• राजनीतिक आरक्षण व कानून:</text>
+    <text x="20" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">पंचायतों में 33% आरक्षण व नारी शक्ति वंदन अधिनियम।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
-    <text x="240" y="355" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य उपलब्धि:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">सार्वजनिक क्षेत्र व निर्णय प्रक्रिया में महिलाओं की भागीदारी वृद्धि।</text>
+    <rect x="20" y="320" width="460" height="140" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="250" y="355" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">🎯 मुख्य उपलब्धि:</text>
+    <text x="250" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">सार्वजनिक क्षेत्र व निर्णय प्रक्रिया में महिलाओं की हिस्सेदारी।</text>
   </g>
 </svg>

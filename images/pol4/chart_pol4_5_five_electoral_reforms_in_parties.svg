@@ -21,28 +21,28 @@
   <!-- Title -->
   <g filter="url(#shadow5)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#34d399" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🛠️ राजनीतिक दलों में सुधार के 5 प्रमुख उपाय (Reforms in Political Parties)</text>
+    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">🛠️ राजनीतिक दलों में सुधार के 5 प्रमुख उपाय (Reforms in Political Parties)</text>
   </g>
 
   <g transform="translate(35, 120)" filter="url(#shadow5)">
     <rect width="1010" height="495" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
     
-    <text x="35" y="55" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">1. दल-बदल विरोधी कानून (Anti-Defection Law):</text>
-    <text x="420" y="55" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">जीतने के बाद पार्टी बदलने वाले विधायकों/सांसदों की सदस्यता रद्द।</text>
+    <text x="25" y="55" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">1. दल-बदल विरोधी कानून:</text>
+    <text x="380" y="55" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">जीतने के बाद दल बदलने वाले विधायकों/सांसदों की सदस्यता रद्द।</text>
 
-    <text x="35" y="125" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">2. संपत्ति व आपराधिक रिकॉर्ड का हलफनामा:</text>
-    <text x="420" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">उम्मीदवारों को अपनी संपत्ति व मुकदमों का Affidavit देना अनिवार्य।</text>
+    <text x="25" y="125" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">2. संपत्ति व मुकदमों का हलफनामा:</text>
+    <text x="380" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">उम्मीदवारों को अपनी संपत्ति व मुकदमों का Affidavit देना अनिवार्य।</text>
 
-    <text x="35" y="195" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">3. संगठनात्मक चुनाव व टैक्स रिटर्न:</text>
-    <text x="420" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">चुनाव आयोग द्वारा दलों में आंतरिक चुनाव व आय-कर फाइलिंग अनिवार्य।</text>
+    <text x="25" y="195" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">3. सांगठनिक चुनाव व टैक्स रिटर्न:</text>
+    <text x="380" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">दलों में नियमित आंतरिक चुनाव व आय-कर आईटीआर भरना अनिवार्य।</text>
 
-    <text x="35" y="265" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">4. आंतरिक लोकतंत्र हेतु कानून:</text>
-    <text x="420" y="265" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सदस्यों के लिए रजिस्टर रखना व विवादों हेतु स्वतंत्र संस्था बनाना।</text>
+    <text x="25" y="265" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">4. आंतरिक लोकतंत्र हेतु कानून:</text>
+    <text x="380" y="265" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">सदस्यों का रजिस्टर रखना व विवादों हेतु स्वतंत्र तंत्र बनाना।</text>
 
-    <text x="35" y="335" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">5. चुनाव का सरकारी खर्च (State Funding):</text>
-    <text x="420" y="335" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">पेट्रोल, कागज, फोन हेतु सरकार द्वारा वित्तीय मदद देना।</text>
+    <text x="25" y="335" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">5. चुनाव का सरकारी खर्च (State Funding):</text>
+    <text x="380" y="335" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">पेट्रोल, कागज, फोन हेतु सरकार द्वारा वित्तीय सहायता देना।</text>
 
     <rect x="25" y="390" width="960" height="75" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
-    <text x="505" y="435" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">💡 जनता का दबाव व आंदोलन ही राजनीतिक दलों में वास्तविक सुधार ला सकता है!</text>
+    <text x="505" y="435" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">💡 जनता का दबाव व आंदोलन ही राजनीतिक दलों में वास्तविक सुधार ला सकता है!</text>
   </g>
 </svg>

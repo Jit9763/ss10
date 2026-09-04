@@ -1,82 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
-  <defs>
-    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-    <linearGradient id="bannerGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#047857"/>
-      <stop offset="50%" stop-color="#059669"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
-    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
-    </filter>
-  </defs>
+ <defs>
+ <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+ <stop offset="0%" stop-color="#0f172a"/>
+ <stop offset="100%" stop-color="#1e293b"/>
+ </linearGradient>
+ <linearGradient id="bannerGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+ <stop offset="0%" stop-color="#047857"/>
+ <stop offset="50%" stop-color="#059669"/>
+ <stop offset="100%" stop-color="#10b981"/>
+ </linearGradient>
+ <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+ <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+ </filter>
+ </defs>
 
-  <rect width="1100" height="650" fill="url(#bgGrad5)"/>
+ <rect width="1100" height="650" fill="url(#bgGrad5)"/>
 
-  <!-- Master Top Banner -->
-  <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad5)" filter="url(#shadow5)" stroke="#6ee7b7" stroke-width="2"/>
-  <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
-    🌱 विकास की धारणीयता: प्राकृतिक संसाधन क्षरण चक्र (Sustainability of Development)
-  </text>
+ <!-- Master Top Banner -->
+ <rect x="40" y="18" width="1020" height="54" rx="14" fill="url(#bannerGrad5)" filter="url(#shadow5)" stroke="#6ee7b7" stroke-width="2"/>
+ <text x="550" y="53" fill="#ffffff" font-size="22" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+ 🌱 विकास की धारणीयता: प्राकृतिक संसाधन क्षरण चक्र (Sustainability of Development)
+ </text>
 
-  <!-- Left: Groundwater Crisis (Renewable Overuse) -->
-  <g transform="translate(45, 95)" filter="url(#shadow5)">
-    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#0284c7" stroke-width="3"/>
-    <rect width="485" height="50" rx="18" fill="#0369a1"/>
-    <rect y="32" width="485" height="18" fill="#0369a1"/>
-    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💧 1. नवीकरणीय संसाधन: भूजल संकट (Groundwater)</text>
-    
-    <rect x="20" y="70" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="35" y="96" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">📉 भारत में गंभीर भूजल संकट (Alarming Data):</text>
-    <text x="35" y="124" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• देश के <tspan fill="#f87171" font-weight="900">300+ जिलों</tspan> में जल स्तर 20 वर्षों में <tspan fill="#facc15">4 मीटर</tspan> गिरा है।</text>
+ <!-- Left: Groundwater Crisis (Renewable Overuse) -->
+ <g transform="translate(45, 95)" filter="url(#shadow5)">
+ <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#0284c7" stroke-width="3"/>
+ <rect width="485" height="50" rx="18" fill="#0369a1"/>
+ <rect y="32" width="485" height="18" fill="#0369a1"/>
+ <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">💧 1. नवीकरणीय संसाधन: भूजल संकट (Groundwater)</text>
+ 
+ <rect x="20" y="70" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
+ <text x="35" y="96" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">📉 भारत में गंभीर भूजल संकट (Alarming Data):</text>
+ <text x="35" y="124" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• देश के <tspan fill="#f87171" font-weight="900">300+ जिलों</tspan> में जल स्तर 20 वर्षों में <tspan fill="#facc15">4 मीटर</tspan> गिरा है।</text>
 
-    <rect x="20" y="155" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="35" y="181" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🚜 अति-दोहन वाले क्षेत्र (Overused Regions):</text>
-    <text x="35" y="209" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• पंजाब, हरियाणा, पश्चिमी यूपी (कृषि) एवं दक्षिण भारत पठार।</text>
+ <rect x="20" y="155" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
+ <text x="35" y="181" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🚜 अति-दोहन वाले क्षेत्र (Overused Regions):</text>
+ <text x="35" y="209" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• पंजाब, हरियाणा, पश्चिमी यूपी (कृषि) एवं दक्षिण भारत पठार।</text>
 
-    <rect x="20" y="240" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="35" y="266" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">⚠️ भविष्य की चेतावनी (Future Threat):</text>
-    <text x="35" y="294" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• 25 वर्षों में देश का <tspan fill="#f87171" font-weight="900">60% भाग</tspan> भूजल का अति-दोहन कर रहा होगा।</text>
+ <rect x="20" y="240" width="445" height="75" rx="10" fill="#082f49" stroke="#38bdf8" stroke-width="1.5"/>
+ <text x="35" y="266" fill="#7dd3fc" font-size="15" font-weight="900" font-family="system-ui, sans-serif">⚠️ भविष्य की चेतावनी (Future Threat):</text>
+ <text x="35" y="294" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• 25 वर्षों में देश का <tspan fill="#f87171" font-weight="900">60% भाग</tspan> भूजल का अति-दोहन कर रहा होगा।</text>
 
-    <rect x="20" y="325" width="445" height="145" rx="10" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
-    <text x="242" y="355" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛡️ धारणीय समाधान (Sustainable Action):</text>
-    <text x="35" y="385" fill="#e0f2fe" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• वर्षा जल संचयन (Rooftop Rainwater Harvesting)।</text>
-    <text x="35" y="415" fill="#bae6fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• ड्रिप व स्प्रिंकलर माइक्रो-सिंचाई तकनीकों का प्रयोग।</text>
-    <text x="35" y="445" fill="#facc15" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• प्राकृतिक पुनर्भरण दर से अधिक जल न निकालना।</text>
-  </g>
+ <rect x="20" y="325" width="445" height="145" rx="10" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+ <text x="242" y="355" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛡️ धारणीय समाधान (Sustainable Action):</text>
+ <text x="35" y="385" fill="#e0f2fe" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• वर्षा जल संचयन (Rooftop Rainwater Harvesting)।</text>
+ <text x="35" y="415" fill="#bae6fd" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• ड्रिप व स्प्रिंकलर माइक्रो-सिंचाई तकनीकों का प्रयोग।</text>
+ <text x="35" y="445" fill="#facc15" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• प्राकृतिक पुनर्भरण दर से अधिक जल न निकालना।</text>
+ </g>
 
-  <!-- Right: Crude Oil Depletion (Non-Renewable Exhaustion) -->
-  <g transform="translate(570, 95)" filter="url(#shadow5)">
-    <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
-    <rect width="485" height="50" rx="18" fill="#b45309"/>
-    <rect y="32" width="485" height="18" fill="#b45309"/>
-    <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛢️ 2. गैर-नवीकरणीय: कच्चा तेल भंडार (Crude Oil)</text>
-    
-    <rect x="20" y="70" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="35" y="96" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">⏱️ वैश्विक तेल भंडार जीवन (Global Reserves):</text>
-    <text x="35" y="124" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• वर्तमान उपभोग दर पर विश्व का तेल केवल <tspan fill="#f87171" font-weight="900">50 वर्ष</tspan> चलेगा।</text>
+ <!-- Right: Crude Oil Depletion (Non-Renewable Exhaustion) -->
+ <g transform="translate(570, 95)" filter="url(#shadow5)">
+ <rect width="485" height="490" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+ <rect width="485" height="50" rx="18" fill="#b45309"/>
+ <rect y="32" width="485" height="18" fill="#b45309"/>
+ <text x="242" y="34" fill="#ffffff" font-size="19" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">🛢️ 2. गैर-नवीकरणीय: कच्चा तेल भंडार (Crude Oil)</text>
+ 
+ <rect x="20" y="70" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+ <text x="35" y="96" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">⏱️ वैश्विक तेल भंडार जीवन (Global Reserves):</text>
+ <text x="35" y="124" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• वर्तमान उपभोग दर पर विश्व का तेल केवल <tspan fill="#f87171" font-weight="900">50 वर्ष</tspan> चलेगा।</text>
 
-    <rect x="20" y="155" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="35" y="181" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🗺️ क्षेत्रीय भंडार स्थिति (Regional Lifespan):</text>
-    <text x="35" y="209" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• मध्य पूर्व = 70 वर्ष | अमेरिका = केवल 10.5 वर्ष शेष।</text>
+ <rect x="20" y="155" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+ <text x="35" y="181" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🗺️ क्षेत्रीय भंडार स्थिति (Regional Lifespan):</text>
+ <text x="35" y="209" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• मध्य पूर्व = 70 वर्ष | अमेरिका = केवल 10.5 वर्ष शेष।</text>
 
-    <rect x="20" y="240" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="35" y="266" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif">🇮🇳 भारत पर प्रभाव (Impact on India):</text>
-    <text x="35" y="294" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• भारत अपनी जरूरत का <tspan fill="#f87171" font-weight="900">85% कच्चा तेल आयात</tspan> करता है।</text>
+ <rect x="20" y="240" width="445" height="75" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+ <text x="35" y="266" fill="#fde68a" font-size="15" font-weight="900" font-family="system-ui, sans-serif"> भारत पर प्रभाव (Impact on India):</text>
+ <text x="35" y="294" fill="#ffffff" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• भारत अपनी जरूरत का <tspan fill="#f87171" font-weight="900">85% कच्चा तेल आयात</tspan> करता है।</text>
 
-    <rect x="20" y="325" width="445" height="145" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
-    <text x="242" y="355" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">☀️ नवीकरणीय ऊर्जा संक्रमण (Energy Transition):</text>
-    <text x="35" y="385" fill="#fef3c7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• सौर ऊर्जा (Solar), पवन ऊर्जा व ग्रीन हाइड्रोजन।</text>
-    <text x="35" y="415" fill="#fde68a" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• इलेक्ट्रिक वाहन (EV) एवं सार्वजनिक परिवहन का विस्तार।</text>
-    <text x="35" y="445" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• भावी पीढ़ियों के लिए संसाधनों का विवेकपूर्ण संरक्षण।</text>
-  </g>
+ <rect x="20" y="325" width="445" height="145" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+ <text x="242" y="355" fill="#ffffff" font-size="16" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">☀️ नवीकरणीय ऊर्जा संक्रमण (Energy Transition):</text>
+ <text x="35" y="385" fill="#fef3c7" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• सौर ऊर्जा (Solar), पवन ऊर्जा व ग्रीन हाइड्रोजन।</text>
+ <text x="35" y="415" fill="#fde68a" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• इलेक्ट्रिक वाहन (EV) एवं सार्वजनिक परिवहन का विस्तार।</text>
+ <text x="35" y="445" fill="#a7f3d0" font-size="14" font-weight="900" font-family="system-ui, sans-serif">• भावी पीढ़ियों के लिए संसाधनों का विवेकपूर्ण संरक्षण।</text>
+ </g>
 
-  <!-- Bottom Core Takeaway Badge -->
-  <rect x="40" y="605" width="1020" height="34" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1.5"/>
-  <text x="550" y="628" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
-    📌 सतत पोषणीय विकास की परिभाषा: "विकास ऐसा हो जो पर्यावरण को नुकसान पहुंचाए बिना वर्तमान की आवश्यकताओं को पूरा करे तथा भावी पीढ़ियों की क्षमता से समझौता न करे।"
-  </text>
+ <!-- Bottom Core Takeaway Badge -->
+ <rect x="40" y="605" width="1020" height="34" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1.5"/>
+ <text x="550" y="628" fill="#ffffff" font-size="15" font-weight="900" font-family="system-ui, sans-serif" text-anchor="middle">
+ 📌 सतत पोषणीय विकास की परिभाषा: "विकास ऐसा हो जो पर्यावरण को नुकसान पहुंचाए बिना वर्तमान की आवश्यकताओं को पूरा करे तथा भावी पीढ़ियों की क्षमता से समझौता न करे।"
+ </text>
 </svg>

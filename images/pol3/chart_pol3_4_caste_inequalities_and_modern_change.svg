@@ -21,40 +21,40 @@
   <!-- Title -->
   <g filter="url(#shadow4)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#facc15" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">📊 जातिगत असमानता व आधुनिक भारत में परिवर्तन (Caste Inequalities &amp; Social Mobility)</text>
+    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">⚖️ जातिगत असमानता एवं आधुनिक बदलाव (Caste &amp; Modern Changes)</text>
   </g>
 
   <!-- Left: Traditional Caste System -->
   <g transform="translate(35, 125)" filter="url(#shadow4)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#dc2626"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. पारंपरिक जाति व्यवस्था (Traditional Caste System)</text>
+    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#facc15" stroke-width="3"/>
+    <rect x="0" y="0" width="500" height="60" rx="18" fill="#ca8a04"/>
+    <text x="250" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. पारंपरिक जाति व्यवस्था का रूप</text>
     
-    <text x="25" y="100" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जन्म पर आधारित सामाजिक पदानुक्रम:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">पेशा, शादी और खान-पान केवल अपनी जाति तक सीमित।</text>
+    <text x="20" y="100" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• जन्म आधारित कार्य एवं छुआछूत:</text>
+    <text x="20" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">पेशे का वंशानुगत निर्धारण व ऊंच-नीच का सामाजिक भेदभाव।</text>
 
-    <text x="25" y="200" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• अछूत प्रथा (Untouchability):</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">निचली जातियों के साथ अमानवीय व्यवहार व संसाधनों से बेदखली।</text>
+    <text x="20" y="205" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• अपनी ही जाति में विवाह का नियम:</text>
+    <text x="20" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">शादी-विवाह और भोजन अपनी ही जाति तक सीमित रहना।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
-    <text x="240" y="355" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">⚠️ पुरानी स्थिति:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">अवसरों से वंचित रखना व सामाजिक गतिशीलता का अभाव।</text>
+    <rect x="20" y="320" width="460" height="140" rx="14" fill="#0f172a" stroke="#facc15" stroke-width="2"/>
+    <text x="250" y="355" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">💔 सामाजिक बुराई:</text>
+    <text x="250" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">अछूत मानी जाने वाली जातियों का उत्पीड़न व वंचना।</text>
   </g>
 
-  <!-- Right: Modern Transformation -->
+  <!-- Right: Factors of Modern Change -->
   <g transform="translate(565, 125)" filter="url(#shadow4)">
     <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
     <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. आधुनिक भारत में परिवर्तन (Modern Social Change)</text>
+    <text x="250" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. आधुनिक बदलाव लाने वाले 5 कारक</text>
     
-    <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• आर्थिक विकास व शहरीकरण (Urbanization):</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">शहरों में बसने से पुरानी जातिगत पहचान कमजोर हुई।</text>
+    <text x="20" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• आर्थिक विकास व शहरीकरण (Urbanization):</text>
+    <text x="20" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">शहरों में बसों व होटलों में जाति पूछकर काम नहीं होता।</text>
 
-    <text x="25" y="200" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• शिक्षा, कानून व संवैधानिक संरक्षण:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">साक्षरता वृद्धि, छुआछूत का अंत व आरक्षित चुनाव क्षेत्र।</text>
+    <text x="20" y="205" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• साक्षरता, संविधान व कानूनी रोक:</text>
+    <text x="20" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">अनुच्छेद 17 द्वारा अस्पृश्यता का अंत व शिक्षा का प्रसार।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
-    <text x="240" y="355" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 सुधारकों का योगदान:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">गांधी जी, डॉ. आंबेडकर, जोतिबा फुले, पेरियार।</text>
+    <rect x="20" y="320" width="460" height="140" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <text x="250" y="355" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">🎯 आधुनिक स्थिति:</text>
+    <text x="250" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">पुराने जातिगत बंधन टूट रहे हैं, फिर भी विषमता मौजूद।</text>
   </g>
 </svg>

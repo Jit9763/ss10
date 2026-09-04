@@ -21,39 +21,39 @@
   <!-- Title -->
   <g filter="url(#shadow4)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#ef4444" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">⚠️ राजनीतिक दलों के सामने 4 प्रमुख चुनौतियां (4 Challenges)</text>
+    <text x="550" y="72" fill="url(#titleGrad4)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">⚠️ राजनीतिक दलों के सामने 4 प्रमुख चुनौतियां (4 Challenges)</text>
   </g>
 
   <!-- 4 Grid Cards -->
   <g transform="translate(35, 125)" filter="url(#shadow4)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. आंतरिक लोकतंत्र की कमी (Lack of Internal Democracy)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• दलों के अंदर नियमित संगठनात्मक चुनाव नहीं होते।</text>
-    <text x="20" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• सारी शक्ति शीर्ष 1-2 नेताओं के पास ही केंद्रित रहती है।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">1. आंतरिक लोकतंत्र की कमी</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• नियमित सांगठनिक चुनावों का अभाव।</text>
+    <text x="15" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• शीर्ष 1-2 नेताओं के पास ही शक्ति का केंद्र होना।</text>
   </g>
 
   <g transform="translate(565, 125)" filter="url(#shadow4)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#fb923c" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#ea580c"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. वंशवाद की चुनौती (Dynastic Succession)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• शीर्ष पदों पर केवल एक ही परिवार के लोगों का कब्जा रहना।</text>
-    <text x="20" y="130" fill="#fed7aa" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• आम कार्यकर्ताओं को आगे बढ़ने का मौका न मिलना।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">2. वंशवाद की चुनौती (Dynasty)</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• शीर्ष पदों पर केवल 1 परिवार का नियंत्रण।</text>
+    <text x="15" y="130" fill="#fed7aa" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• आम व योग्य कार्यकर्ताओं की उपेक्षा।</text>
   </g>
 
   <g transform="translate(35, 380)" filter="url(#shadow4)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#dc2626"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. धन और बाहुबल का प्रभाव (Money and Muscle Power)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• चुनाव जीतने हेतु अमीर उम्मीदवारों व अपराधियों को टिकट देना।</text>
-    <text x="20" y="130" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• उद्योगपतियों द्वारा दिए गए चंदे से सरकारी नीतियां प्रभावित होना।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">3. धन और बाहुबल का प्रभाव</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• धनवानों व अपराधियों को चुनाव टिकट देना।</text>
+    <text x="15" y="130" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• चंदा देने वाली कंपनियों का नीतियों पर प्रभाव।</text>
   </g>
 
   <g transform="translate(565, 380)" filter="url(#shadow4)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#b91c1c" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#991b1b"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. सार्थक विकल्प की कमी (Lack of Meaningful Choice)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• सभी दलों की नीतियों और विचारों में कोई खास अंतर न होना।</text>
-    <text x="20" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• मतदाताओं के सामने असली वैचारिक विकल्प का अभाव।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">4. सार्थक विकल्प की कमी</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• विभिन्न दलों की नीतियों में वैचारिक एकरूपता।</text>
+    <text x="15" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• मतदाताओं के पास असली नीतियों का अभाव।</text>
   </g>
 </svg>

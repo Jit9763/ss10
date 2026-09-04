@@ -21,39 +21,39 @@
   <!-- Title -->
   <g filter="url(#shadow3)">
     <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#ef4444" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🔥 राजनीति में साम्प्रदायिकता के 4 रूप (4 Forms of Communalism)</text>
+    <text x="550" y="72" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">⚠️ सांप्रदायिकता के 4 प्रमुख रूप (Forms of Communalism)</text>
   </g>
 
-  <!-- 4 Step Flow Grid -->
+  <!-- 4 Grid Cards -->
   <g transform="translate(35, 125)" filter="url(#shadow3)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#d97706"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. रोजमर्रा के पूर्वग्रह (Everyday Beliefs)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• धार्मिक पूर्वाग्रह, पारंपरिक अवधारणाएं और दूसरे धर्मों को नीचा मानना।</text>
-    <text x="20" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• यह साम्प्रदायिकता का सबसे आम और व्यापक रूप है।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">1. दैनिक जीवन में धार्मिक पूर्वाग्रह</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• धार्मिक रूढ़िवादिता और दूसरों को नीचा समझना।</text>
+    <text x="15" y="130" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• अपने धर्म को ही सर्वश्रेष्ठ मानने का अहंकार।</text>
   </g>
 
   <g transform="translate(565, 125)" filter="url(#shadow3)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#fb923c" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#ea580c"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. राजनीतिक प्रभुत्व की चाह (Political Dominance)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• बहुसंख्यक समुदाय अपने धर्म का राजनीतिक वर्चस्व कायम करना चाहता है।</text>
-    <text x="20" y="130" fill="#fed7aa" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• अल्पसंख्यक समुदाय अलग राजनीतिक इकाई की मांग करता है।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">2. राजनीतिक गोलबंदी (Mobilization)</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• धार्मिक प्रतीकों, धर्मगुरुओं व भावनाओं का उपयोग।</text>
+    <text x="15" y="130" fill="#fed7aa" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• चुनाव में वोटों के लिए धार्मिक ध्रुवीकरण।</text>
   </g>
 
   <g transform="translate(35, 380)" filter="url(#shadow3)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#dc2626"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">3. धर्म के आधार पर ध्रुवीकरण (Communal Mobilization)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• चुनाव में धर्म गुरुओं, पवित्र प्रतीकों व भावनात्मक अपीलों का इस्तेमाल।</text>
-    <text x="20" y="130" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• एक धर्म के मतदाताओं को दूसरे धर्म के खिलाफ डराकर वोट हासिल करना।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">3. बहुसंख्यकवाद व पृथकतावाद</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• बहुसंख्यकों का वर्चस्व स्थापित करने का प्रयास।</text>
+    <text x="15" y="130" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• अल्पसंख्यकों द्वारा अलग राज्य की मांग करना।</text>
   </g>
 
   <g transform="translate(565, 380)" filter="url(#shadow3)">
     <rect width="500" height="235" rx="16" fill="#1e293b" stroke="#b91c1c" stroke-width="2.5"/>
     <rect x="0" y="0" width="500" height="50" rx="16" fill="#991b1b"/>
-    <text x="240" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">4. साम्प्रदायिक हिंसा व दंगे (Communal Violence &amp; Riots)</text>
-    <text x="20" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold">• साम्प्रदायिकता का सबसे भयानक और हिंसक रूप।</text>
-    <text x="20" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">• विभाजन के समय भयानक नरसंहार तथा आजादी के बाद के साम्प्रदायिक दंगे।</text>
+    <text x="250" y="34" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">4. सांप्रदायिक हिंसा व दंगे</text>
+    <text x="15" y="90" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• हिंसा, दंगे और नरसंहार का भयानक रूप लेना।</text>
+    <text x="15" y="130" fill="#f87171" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16" font-weight="bold">• विभाजन के समय और बाद के सांप्रदायिक दंगे।</text>
   </g>
 </svg>

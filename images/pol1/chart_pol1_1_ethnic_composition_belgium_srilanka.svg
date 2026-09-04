@@ -1,59 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
-  <defs>
-    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="50%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="titleGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#34d399"/>
-    </linearGradient>
-    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
-    </filter>
-  </defs>
+ <defs>
+ <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+ <stop offset="0%" stop-color="#0f172a"/>
+ <stop offset="50%" stop-color="#1e1b4b"/>
+ <stop offset="100%" stop-color="#0f172a"/>
+ </linearGradient>
+ <linearGradient id="titleGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+ <stop offset="0%" stop-color="#38bdf8"/>
+ <stop offset="50%" stop-color="#818cf8"/>
+ <stop offset="100%" stop-color="#34d399"/>
+ </linearGradient>
+ <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+ <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+ </filter>
+ </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad1)" stroke="#334155" stroke-width="3"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4"/>
+ <rect width="1100" height="650" rx="24" fill="url(#bgGrad1)" stroke="#334155" stroke-width="3"/>
+ <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4"/>
 
-  <!-- Title -->
-  <g filter="url(#shadow1)">
-    <rect x="30" y="24" width="1040" height="76" rx="16" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="25" font-weight="900" text-anchor="middle">📊 बेल्जियम बनाम श्रीलंका की जातीय बनावट (Demographics)</text>
-  </g>
+ <!-- Title -->
+ <g filter="url(#shadow1)">
+ <rect x="30" y="24" width="1040" height="76" rx="16" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
+ <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="25" font-weight="900" text-anchor="middle">📊 बेल्जियम बनाम श्रीलंका की जातीय बनावट (Demographics)</text>
+ </g>
 
-  <!-- Left: Belgium Box -->
-  <g transform="translate(35, 125)" filter="url(#shadow1)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="65" rx="18" fill="#0284c7"/>
-    <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🇧🇪 1. बेल्जियम की जातीय बनावट</text>
+ <!-- Left: Belgium Box -->
+ <g transform="translate(35, 125)" filter="url(#shadow1)">
+ <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+ <rect x="0" y="0" width="500" height="65" rx="18" fill="#0284c7"/>
+ <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle"> 1. बेल्जियम की जातीय बनावट</text>
 
-    <text x="20" y="115" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• डच भाषी (Flemish): 59% (बहुसंख्या)</text>
-    <text x="20" y="165" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• फ्रेंच भाषी (Wallonia): 40% (समृद्ध)</text>
-    <text x="20" y="215" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जर्मन भाषी: केवल 1%</text>
+ <text x="20" y="115" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• डच भाषी (Flemish): 59% (बहुसंख्या)</text>
+ <text x="20" y="165" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• फ्रेंच भाषी (Wallonia): 40% (समृद्ध)</text>
+ <text x="20" y="215" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जर्मन भाषी: केवल 1%</text>
 
-    <rect x="15" y="270" width="470" height="195" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="235" y="310" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🏛️ ब्रुसेल्स की अनूठी स्थिति:</text>
-    <text x="235" y="355" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold" text-anchor="middle">80% फ्रेंच भाषी (बहुसंख्या)</text>
-    <text x="235" y="400" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold" text-anchor="middle">20% डच भाषी (अल्पसंख्या)</text>
-  </g>
+ <rect x="15" y="270" width="470" height="195" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+ <text x="235" y="310" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🏛️ ब्रुसेल्स की अनूठी स्थिति:</text>
+ <text x="235" y="355" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold" text-anchor="middle">80% फ्रेंच भाषी (बहुसंख्या)</text>
+ <text x="235" y="400" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold" text-anchor="middle">20% डच भाषी (अल्पसंख्या)</text>
+ </g>
 
-  <!-- Right: Sri Lanka Box -->
-  <g transform="translate(565, 125)" filter="url(#shadow1)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="65" rx="18" fill="#db2777"/>
-    <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🇱🇰 2. श्रीलंका की जातीय बनावट</text>
+ <!-- Right: Sri Lanka Box -->
+ <g transform="translate(565, 125)" filter="url(#shadow1)">
+ <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+ <rect x="0" y="0" width="500" height="65" rx="18" fill="#db2777"/>
+ <text x="250" y="42" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle"> 2. श्रीलंका की जातीय बनावट</text>
 
-    <text x="20" y="115" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• सिंहली भाषी: 74% (बौद्ध धर्म)</text>
-    <text x="20" y="165" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• तमिल भाषी: 18% (हिंदू व मुस्लिम)</text>
-    <text x="40" y="210" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">↳ श्रीलंकाई तमिल: 13%</text>
-    <text x="40" y="250" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">↳ भारतीय मूल के तमिल: 5%</text>
-    <text x="20" y="295" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• ईसाई (सिंहली + तमिल): 7%</text>
+ <text x="20" y="115" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• सिंहली भाषी: 74% (बौद्ध धर्म)</text>
+ <text x="20" y="165" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• तमिल भाषी: 18% (हिंदू व मुस्लिम)</text>
+ <text x="40" y="210" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">↳ श्रीलंकाई तमिल: 13%</text>
+ <text x="40" y="250" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">↳ भारतीय मूल के तमिल: 5%</text>
+ <text x="20" y="295" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• ईसाई (सिंहली + तमिल): 7%</text>
 
-    <rect x="15" y="335" width="470" height="135" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
-    <text x="235" y="375" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">⚠️ सिंहली बहुसंख्यकवाद</text>
-    <text x="235" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">तमिलों की उपेक्षा व भीषण गृहयुद्ध</text>
-  </g>
+ <rect x="15" y="335" width="470" height="135" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+ <text x="235" y="375" fill="#fca5a5" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">⚠️ सिंहली बहुसंख्यकवाद</text>
+ <text x="235" y="420" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">तमिलों की उपेक्षा व भीषण गृहयुद्ध</text>
+ </g>
 </svg>

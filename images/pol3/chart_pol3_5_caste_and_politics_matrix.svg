@@ -6,9 +6,9 @@
       <stop offset="100%" stop-color="#1e1b4b"/>
     </linearGradient>
     <linearGradient id="titleGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="0%" stop-color="#34d399"/>
       <stop offset="50%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
     <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
@@ -16,46 +16,33 @@
   </defs>
 
   <rect width="1100" height="650" rx="24" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2.5"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4"/>
 
   <!-- Title -->
   <g filter="url(#shadow5)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#c084fc" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">⚖️ राजनीति में जाति बनाम जाति में राजनीति (Caste &amp; Politics Matrix)</text>
+    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#34d399" stroke-width="3"/>
+    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="26" font-weight="900" text-anchor="middle">🗳️ राजनीति में जाति बनाम जाति में राजनीति (Caste &amp; Politics)</text>
   </g>
 
-  <!-- 2 Side-by-Side Boxes -->
-  <!-- Left: Caste in Politics -->
-  <g transform="translate(35, 125)" filter="url(#shadow5)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. राजनीति में जाति (Caste in Politics)</text>
+  <g transform="translate(35, 120)" filter="url(#shadow5)">
+    <rect width="1010" height="495" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="2.5"/>
     
-    <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• उम्मीदवार तय करते समय जातिगत समीकरण:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">राजनीतिक दल क्षेत्र की जातिगत आबादी देखकर उम्मीदवार चुनते हैं।</text>
+    <text x="25" y="55" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">1. राजनीति में जाति (Caste in Politics):</text>
+    <text x="380" y="55" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">उम्मीदवार चुनते समय निर्वाचन क्षेत्र के जातिगत समीकरण का ध्यान रखना।</text>
 
-    <text x="25" y="200" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जातिगत आधार पर मतों का ध्रुवीकरण:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">भावनात्मक जातिगत अपीलें करके वोट बैंक तैयार किया जाता है।</text>
+    <text x="25" y="125" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">2. जातिगत गोलबंदी व वोट बैंक:</text>
+    <text x="380" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">जातिगत भावनाओं को उकसाकर चुनाव में राजनीतिक समर्थन जुटाना।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="240" y="355" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य तथ्य:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">कोई भी चुनाव केवल एक जाति के दम पर नहीं जीता जा सकता।</text>
-  </g>
+    <text x="25" y="195" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">3. केवल जाति ही निर्णायक नहीं:</text>
+    <text x="380" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">कोई भी सांसदीय क्षेत्र केवल 1 ही जाति के बहुमत वाला नहीं होता।</text>
 
-  <!-- Right: Politics in Caste -->
-  <g transform="translate(565, 125)" filter="url(#shadow5)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#c084fc" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#9333ea"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. जाति में राजनीति (Politics in Caste)</text>
-    
-    <text x="25" y="100" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• जातियों का अपना आधार बड़ा करना:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">उप-जातियों को अपने साथ जोड़कर बड़ा समूह बनाने का प्रयास।</text>
+    <text x="25" y="265" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">4. जाति में राजनीति (Politics in Caste):</text>
+    <text x="380" y="265" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">हर जाति खुद को बड़ा बनाने हेतु उप-जातियों को साथ लाने का प्रयास करती है।</text>
 
-    <text x="25" y="200" fill="#e9d5ff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• नए जातिगत गठबंधनों का निर्माण:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">जैसे 'अग्रड़ा बनाम पिछड़ा' या 'दलित व बहुजन' गठबंधन।</text>
+    <text x="25" y="335" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900">5. सकारात्मक पहलू:</text>
+    <text x="380" y="335" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="16">वंचित व पिछड़ी जातियों को सत्ता में साझेदारी व आवाज़ उठाने का अवसर।</text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#c084fc" stroke-width="2"/>
-    <text x="240" y="355" fill="#c084fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य निष्कर्ष:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">जाति और राजनीति एक-दूसरे को प्रभावित करते हैं।</text>
+    <rect x="25" y="390" width="960" height="75" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+    <text x="505" y="435" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900" text-anchor="middle">💡 केवल जाति नहीं, बल्कि विकास, शिक्षा व सरकार का काम ही अंतिम फैसला तय करता है!</text>
   </g>
 </svg>

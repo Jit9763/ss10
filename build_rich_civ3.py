@@ -1,0 +1,336 @@
+import os
+
+html_content = """<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<title>राजनीति विज्ञान (कक्षा 10) - अध्याय 3: जाति, धर्म और लैंगिक मसले - मास्टर नोट्स</title>
+
+<style>
+    body, p, li, td, th { font-size: 26pt !important; line-height: 2.0 !important; }
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span { font-weight: 900 !important; -webkit-text-stroke: 1.1px #000000; text-shadow: 0 0 1px #000; }
+    #contentToCopy { max-width: 1400px; margin: 0 auto; background: #ffffff; padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .hero-title { text-align: center !important; color: #ffffff !important; background-color: #1e3a8a !important; border: 6px solid #3b82f6 !important; border-radius: 24px !important; padding: 35px !important; margin-bottom: 50px !important; font-size: 46pt !important; font-weight: 900 !important; box-shadow: 0 10px 30px rgba(30, 58, 138, 0.5) !important; }
+    .hero-title span { color: #93c5fd !important; font-size: 30pt !important; display: block; margin-top: 15px; }
+    .part-header { color: #1e3a8a !important; background-color: #dbeafe !important; border-left: 18px solid #2563eb !important; padding: 24px 30px !important; border-radius: 16px !important; font-size: 40pt !important; font-weight: 900 !important; margin-top: 60px !important; margin-bottom: 35px !important; box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important; }
+    .topic-header { color: #065f46 !important; background-color: #d1fae5 !important; border-left: 16px solid #059669 !important; padding: 20px 28px !important; border-radius: 14px !important; font-size: 34pt !important; font-weight: 900 !important; margin-top: 45px !important; margin-bottom: 30px !important; }
+    .sub-header-red { color: #991b1b !important; background-color: #fee2e2 !important; border-left: 16px solid #b91c1c !important; padding: 18px 26px !important; border-radius: 12px !important; font-size: 30pt !important; font-weight: 900 !important; margin-top: 35px !important; margin-bottom: 20px !important; box-shadow: 0 4px 12px rgba(185, 28, 28, 0.1) !important; }
+    .img-box { text-align: center; margin: 45px 0; background: #f8fafc; padding: 25px; border-radius: 20px; border: 4px solid #cbd5e1; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .img-box img { max-width: 100% !important; max-height: 650px !important; width: 1100px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; border: 4px solid #1e3a8a; box-shadow: 0 12px 24px rgba(0,0,0,0.15); display: block; margin: 0 auto 20px auto; }
+    .img-caption { font-size: 28pt !important; color: #1e3a8a !important; margin-top: 15px !important; font-weight: 900 !important; }
+    .img-desc { font-size: 22pt !important; color: #334155 !important; line-height: 1.8 !important; margin-top: 10px !important; font-weight: 900 !important; }
+    .img-desc b, li b, .concept-card b, .warn-box b, .fact-box b, .point-tag-red {
+        color: #991b1b !important;
+        background-color: #fee2e2 !important;
+        border: 2px solid #fca5a5 !important;
+        padding: 4px 14px !important;
+        border-radius: 10px !important;
+        display: inline-block !important;
+        margin-right: 8px !important;
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        font-size: 22pt !important;
+        font-weight: 900 !important;
+        box-shadow: 0 3px 8px rgba(185, 28, 28, 0.15) !important;
+        -webkit-text-stroke: 0.5px #7f1d1d !important;
+    }
+    .concept-card { background: #eff6ff; border: 4px solid #93c5fd; border-radius: 18px; padding: 30px; margin: 35px 0; box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .concept-card h3 { color: #1d4ed8; font-size: 30pt; margin-top: 0; margin-bottom: 20px; border-bottom: 3px solid #93c5fd; padding-bottom: 10px; }
+    .fact-box { background: #fefce8; border: 4px solid #fde047; border-radius: 18px; padding: 30px; margin: 35px 0; }
+    .fact-box h3 { color: #a16207; font-size: 30pt; margin-top: 0; margin-bottom: 20px; }
+    .warn-box { background: #fef2f2; border: 4px solid #fca5a5; border-radius: 18px; padding: 30px; margin: 35px 0; }
+    .warn-box h3 { color: #b91c1c; font-size: 30pt; margin-top: 0; margin-bottom: 20px; }
+    table.data-table { width: 100%; border-collapse: collapse; margin: 35px 0; font-size: 24pt; }
+    table.data-table th, table.data-table td { border: 3px solid #1e3a8a; padding: 18px; text-align: left; }
+    table.data-table th { background-color: #1e3a8a; color: #ffffff; font-size: 26pt; }
+    table.data-table tr:nth-child(even) { background-color: #eff6ff; }
+    ul, ol { padding-left: 45px; }
+    li { margin-bottom: 18px; }
+    .fraction-box { display: inline-flex; align-items: center; justify-content: center; background: #ffffff; border: 3px solid #2563eb; border-radius: 14px; padding: 14px 28px; margin: 15px 0; font-size: 26pt; font-weight: 900; box-shadow: 0 4px 12px rgba(37,99,235,0.15); }
+    .fraction-title { color: #1e3a8a; margin-right: 18px; }
+    .fraction-calc { display: inline-flex; flex-direction: column; align-items: center; text-align: center; }
+    .fraction-num { color: #2563eb; border-bottom: 3px solid #1e3a8a; padding-bottom: 6px; padding-left: 10px; padding-right: 10px; }
+    .fraction-den { color: #0f766e; padding-top: 6px; padding-left: 10px; padding-right: 10px; }
+</style>
+
+</head>
+<body>
+<div id="contentToCopy">
+    <div class="hero-title">
+        🏛️ कक्षा 10 राजनीति विज्ञान (लोकतांत्रिक राजनीति-2)
+        <span>अध्याय 3: जाति, धर्म और लैंगिक मसले (Gender, Religion & Caste) - मास्टर नोट्स</span>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- भाग 1: लैंगिक मसले और राजनीति -->
+    <!-- ===================================================================== -->
+    <div class="part-header">📌 भाग 1: लैंगिक मसले और राजनीति (Gender and Politics)</div>
+
+    <p>लोकतंत्र में सामाजिक विविधता का पहला महत्वपूर्ण आयाम <b>लैंगिक विभाजन (Gender Division)</b> है। लैंगिक असमानता कोई जैविक (Biological) नहीं, बल्कि समाज द्वारा बनाई गई रूढ़िवादिता और <b>पितृसत्तात्मक व्यवस्था (Patriarchy)</b> की उपज है।</p>
+
+    <div class="topic-header">🔹 1. श्रम का लैंगिक विभाजन (Sexual Division of Labour)</div>
+
+    <p>श्रम के लैंगिक विभाजन का अर्थ है कि समाज ने काम का ऐसा बंटवारा कर दिया है जिसमें घर के सारे अंदरूनी काम (खाना पकाना, सफाई, कपड़े धोना और बच्चों की देखरेख) औरतों के जिम्मे डाल दिए गए हैं और बाहर का काम पुरुषों के जिम्मे रहता है:</p>
+
+    <ul>
+        <li><b>अवैतनिक श्रम की उपेक्षा:</b> औरतें दिन भर घरेलू काम में खटती हैं, लेकिन उनके श्रम का कोई आर्थिक मूल्य नहीं आंका जाता और न ही उसे समाज में उत्पादक माना जाता है।</li>
+        <li><b>काम की प्रकृति:</b> ऐसा नहीं है कि पुरुष घरेलू काम नहीं कर सकते। जब उन्हीं कामों के पैसे मिलते हैं (जैसे बड़े होटलों में रसोइया या दर्जी का काम), तो पुरुष इसे खुशी-खुशी अपना पेशा बना लेते हैं।</li>
+    </ul>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_1.webp" alt="चित्र 3.1: श्रम का लैंगिक विभाजन"/>
+        <div class="img-caption">🍳 चित्र 3.1: श्रम का लैंगिक विभाजन (Sexual Division of Labour)</div>
+        <div class="img-desc"><b>1. घरेलू अवैतनिक कार्य:</b> महिलाओं द्वारा घर के अंदर भोजन पकाना, सफाई व बच्चों की देखरेख करना | <b>2. बाहर का रोजगार:</b> पुरुषों द्वारा बाहर दफ्तरों, खेतों व कारखानों में आय अर्जित करना।</div>
+    </div>
+
+    <div class="topic-header">🔹 2. नारीवादी आंदोलन एवं महिलाओं का राजनीतिक प्रतिनिधित्व</div>
+
+    <p>महिलाओं ने अपने अधिकारों के लिए दुनिया भर में संघर्ष किया और <b>नारीवादी आंदोलन (Feminist Movement)</b> की शुरुआत की। नारीवादी आंदोलन उन आंदोलनों को कहते हैं जो महिलाओं के लिए पुरुषों के समान अधिकारों और अवसरों की मांग करते हैं।</p>
+
+    <div class="concept-card">
+        <h3>👩‍💼 नारीवादी आंदोलनों की मुख्य मांगें:</h3>
+        <ul>
+            <li><b>1. वोट का अधिकार (Suffrage):</b> महिलाओं को मतदान और चुनाव लड़ने का समान राजनीतिक अधिकार देना।</li>
+            <li><b>2. शिक्षा व रोजगार:</b> महिलाओं के लिए उच्च शिक्षा और सभी पेशों में समान अवसर सुनिश्चित करना।</li>
+            <li><b>3. पारिवारिक समानता:</b> व्यक्तिगत और पारिवारिक कानूनों में महिलाओं को पुरुषों के समान अधिकार देना।</li>
+        </ul>
+    </div>
+
+    <div class="fraction-box">
+        <span class="fraction-title">📊 पंचायतों में महिला आरक्षण (Panchayati Raj):</span>
+        <div class="fraction-calc"><span class="fraction-num">1</span><span class="fraction-den">3</span></div>
+        <span style="margin-left: 15px;">(कम से कम 33% सीटें स्थानीय निकायों में महिलाओं के लिए आरक्षित)</span>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_8.webp" alt="चित्र 3.8: नारीवादी आंदोलन"/>
+        <div class="img-caption">📢 चित्र 3.8: नारीवादी आंदोलन व समान अधिकार (Feminist Movement)</div>
+        <div class="img-desc"><b>1. मताधिकार व रैलियां:</b> वोट का अधिकार व राजनीतिक समानता हेतु महिला जुलूस व रैलियां | <b>2. समान अवसर:</b> शिक्षा, स्वास्थ्य व कार्यक्षेत्र में पुरुषों के समान अधिकार हासिल करना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_10.webp" alt="चित्र 3.10: महिलाओं का राजनीतिक प्रतिनिधित्व"/>
+        <div class="img-caption">🏛️ चित्र 3.10: महिलाओं का राजनीतिक प्रतिनिधित्व व कानून (Women Political Representation)</div>
+        <div class="img-desc"><b>1. पंचायती राज में 33% आरक्षण:</b> स्थानीय निकायों में 10 लाख से अधिक निर्वाचित महिला प्रतिनिधि | <b>2. नारी शक्ति वंदन अधिनियम:</b> संसद व विधानसभाओं में 33% सीटें आरक्षित करने वाला ऐतिहासिक कानून।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_9.webp" alt="चित्र 3.9: भारत में महिलाओं के साथ भेदभाव"/>
+        <div class="img-caption">⚠️ चित्र 3.9: भारत में महिलाओं के साथ भेदभाव (Gender Discrimination)</div>
+        <div class="img-desc"><b>1. कम साक्षरता दर:</b> पुरुषों की तुलना में महिलाओं की कम साक्षरता दर व बीच में पढ़ाई छूटना | <b>2. समान कार्य हेतु कम वेतन:</b> खेल, सिनेमा व कारखानों में समान काम के बावजूद महिलाओं को कम मजदूरी मिलना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/chart_pol3_1_gender_division_vs_empowerment.svg" alt="चार्ट 3.1: श्रम का लैंगिक विभाजन बनाम महिला सशक्तिकरण"/>
+        <div class="img-caption">📊 चार्ट 3.1: श्रम का लैंगिक विभाजन बनाम महिला सशक्तिकरण का समग्र चार्ट</div>
+        <div class="img-desc">पारंपरिक अवैतनिक श्रम vs नारीवादी आंदोलन, पंचायती राज आरक्षण व संसद में महिला भागीदारी।</div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- भाग 2: धर्म, सांप्रदायिकता और राजनीति -->
+    <!-- ===================================================================== -->
+    <div class="part-header">📌 भाग 2: धर्म, सांप्रदायिकता और राजनीति (Religion & Communalism)</div>
+
+    <p>सामाजिक विभाजन का दूसरा रूप **धर्म पर आधारित विभेद** है। धर्म और राजनीति का संबंध लैंगिक विभाजन जितना सीधा नहीं है। महात्मा गांधी कहा करते थे कि <i>"धर्म को राजनीति से कभी अलग नहीं किया जा सकता।"</i> उनका तात्पर्य धर्म से नैतिक मूल्यों से था जो सभी धर्मों में समान हैं।</p>
+
+    <div class="topic-header">🔹 1. सांप्रदायिकता (Communalism) की समस्या</div>
+
+    <div class="warn-box">
+        <h3>⚠️ सांप्रदायिकता किसे कहते हैं?</h3>
+        <p>जब धर्म को राष्ट्र का मुख्य आधार मान लिया जाता है और एक धर्म के लोग दूसरे धर्म के लोगों के खिलाफ खड़े हो जाते हैं, तो इसे <b>सांप्रदायिकता (Communalism)</b> कहते हैं। इसमें यह माना जाता है कि एक ही धर्म के लोगों के हित समान होते हैं और अलग-अलग धर्मों के लोगों के हित आपस में टकराते हैं।</p>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_2.webp" alt="चित्र 3.2: धर्म और राजनीति"/>
+        <div class="img-caption">🕊️ चित्र 3.2: धर्म और राजनीति का सकारात्मक संबंध (Religion & Politics)</div>
+        <div class="img-desc"><b>1. गांधीजी का विचार:</b> धर्म से तात्पर्य अहिंसा, सत्य व नैतिक मूल्य हैं जो राजनीति का मार्गदर्शन करते हैं | <b>2. मानवाधिकार आंदोलन:</b> धार्मिक अल्पसंख्यकों के अधिकारों व सुरक्षा हेतु सरकार से मांग उठाना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_11.webp" alt="चित्र 3.11: दैनिक जीवन में सांप्रदायिकता"/>
+        <div class="img-caption">⚠️ चित्र 3.11: दैनिक जीवन में सांप्रदायिकता (Communal Prejudices)</div>
+        <div class="img-desc"><b>1. धार्मिक पूर्वाग्रह:</b> अन्य धर्मों के प्रति मन में दुराग्रह व नीचा समझने की सोच | <b>2. धार्मिक कट्टरता:</b> अपने ही धर्म को श्रेष्ठ मानकर दूसरों से घृणा करना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_12.webp" alt="चित्र 3.12: राजनीति में सांप्रदायिक गोलबंदी"/>
+        <div class="img-caption">📢 चित्र 3.12: राजनीति में सांप्रदायिक गोलबंदी (Communal Mobilization)</div>
+        <div class="img-desc"><b>1. धार्मिक प्रतीकों का इस्तेमाल:</b> चुनाव जीतने हेतु धार्मिक झंडों, पवित्र प्रतीकों व धर्मगुरुओं का प्रयोग | <b>2. वोटों का ध्रुवीकरण:</b> चुनावी फायदे के लिए एक समुदाय की भावनाओं को भड़काकर वोट मांगना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_3.webp" alt="चित्र 3.3: सांप्रदायिक हिंसा व दंगे"/>
+        <div class="img-caption">💥 चित्र 3.3: सांप्रदायिक हिंसा, दंगे व नरसंहार (Communal Violence & Riots)</div>
+        <div class="img-desc"><b>1. विभाजन का भयावह अनुभव:</b> 1947 में भारत-पाक विभाजन के समय भीषण सांप्रदायिक हिंसा | <b>2. आजादी के बाद के दंगे:</b> दंगाग्रस्त क्षेत्रों में संपत्ति का नुकसान व नागरिकों का विस्थापन (सांप्रदायिकता का सबसे भयानक रूप)।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/chart_pol3_3_four_forms_of_communalism.svg" alt="चार्ट 3.3: सांप्रदायिकता के 4 प्रमुख रूप"/>
+        <div class="img-caption">⚠️ चार्ट 3.3: सांप्रदायिकता के 4 प्रमुख रूप (Four Forms of Communalism)</div>
+        <div class="img-desc">दैनिक पूर्वाग्रह, राजनीतिक गोलबंदी, बहुसंख्यकवाद/पृथकतावाद तथा सांप्रदायिक दंगे व हिंसा।</div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- भाग 3: धर्मनिरपेक्ष राज्य -->
+    <!-- ===================================================================== -->
+    <div class="part-header">📌 भाग 3: धर्मनिरपेक्ष राज्य (Secular State)</div>
+
+    <p>सांप्रदायिकता से निपटने के लिए हमारे संविधान निर्माताओं ने <b>धर्मनिरपेक्ष राज्य (Secular State)</b> का मॉडल चुना। भारत का कोई भी राजकीय धर्म नहीं है।</p>
+
+    <div class="concept-card">
+        <h3>🏛️ भारतीय संविधान के धर्मनिरपेक्ष सिद्धांत:</h3>
+        <ul>
+            <li><b>1. कोई सरकारी धर्म नहीं:</b> भारत राज्य किसी भी धर्म को आधिकारिक धर्म के रूप में स्वीकार नहीं करता (जैसे श्रीलंका में बौद्ध, पाकिस्तान में इस्लाम या ब्रिटेन में ईसाई धर्म है)।</li>
+            <li><b>2. धार्मिक स्वतंत्रता (अनुच्छेद 25):</b> प्रत्येक नागरिक और समुदाय को किसी भी धर्म का पालन करने, प्रचार करने या न मानने की पूरी स्वतंत्रता है।</li>
+            <li><b>3. भेदभाव पर रोक (अनुच्छेद 15):</b> धर्म के आधार पर किसी भी नागरिक के साथ सरकारी नौकरियों या संस्थाओं में भेदभाव नहीं किया जा सकता।</li>
+            <li><b>4. राज्य का हस्तक्षेप:</b> संविधान राज्य को धार्मिक मामलों में हस्तक्षेप करने की अनुमति देता है यदि वह समानता स्थापित करने हेतु हो (जैसे छुआछूत पर रोक)।</li>
+        </ul>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_13.webp" alt="चित्र 3.13: धर्मनिरपेक्ष राज्य का सिद्धांत"/>
+        <div class="img-caption">🏛️ चित्र 3.13: धर्मनिरपेक्ष राज्य के 4 संवैधानिक स्तंभ (Secular State)</div>
+        <div class="img-desc"><b>1. कोई राजकीय धर्म नहीं:</b> सभी धर्मों को समान संवैधानिक संरक्षण | <b>2. धार्मिक स्वतंत्रता (Art 25):</b> बिना किसी भय के अपने धर्म के अनुसार पूजा-अर्चना की आज़ादी।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_14.webp" alt="चित्र 3.14: सर्वधर्म समभाव"/>
+        <div class="img-caption">🕊️ चित्र 3.14: सर्वधर्म समभाव व धार्मिक सद्भाव (Religious Harmony)</div>
+        <div class="img-desc"><b>1. सर्वधर्म प्रार्थना:</b> मंदिर, मस्जिद, गुरुद्वारे व चर्च के प्रतीकों का सम्मान | <b>2. सामाजिक बंधुत्व:</b> विभिन्न धर्मावलंबियों द्वारा मिलकर राष्ट्रीय पर्व व त्योहार मनाना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/chart_pol3_2_secular_state_principles.svg" alt="चार्ट 3.2: धर्मनिरपेक्ष राज्य के 4 सिद्धांत"/>
+        <div class="img-caption">🕊️ चार्ट 3.2: धर्मनिरपेक्ष राज्य के 4 मुख्य संवैधानिक सिद्धांत</div>
+        <div class="img-desc">राजकीय धर्म का अभाव, धार्मिक स्वतंत्रता (Art 25), भेदभाव पर रोक (Art 15) तथा राज्य का सुधारात्मक हस्तक्षेप।</div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- भाग 4: जाति और राजनीति -->
+    <!-- ===================================================================== -->
+    <div class="part-header">📌 भाग 4: जाति और राजनीति (Caste and Politics)</div>
+
+    <p>लैंगिक मसले और धर्म की तरह **जातिगत असमानता** भी भारत के समाज में गहराई से समाई हुई है। दुनिया के अन्य समाजों में भी पेशा वंशानुगत होता है, परंतु भारत में इसने <b>जाति व्यवस्था (Caste System)</b> का एक विशेष रूप ले लिया।</p>
+
+    <div class="topic-header">🔹 1. जातिगत असमानता के रूप और बदलाव के कारक</div>
+
+    <div class="fact-box">
+        <h3>🌾 जाति व्यवस्था में बदलाव लाने वाले 5 मुख्य कारक:</h3>
+        <ul>
+            <li><b>1. आर्थिक विकास:</b> औद्योगीकरण और शहरीकरण के कारण शहरों में यह पता करना कठिन है कि बस या होटल में आपके बगल में कौन सी जाति का व्यक्ति बैठा है।</li>
+            <li><b>2. साक्षरता और शिक्षा का प्रसार:</b> आधुनिक शिक्षा ने पुरानी जातिगत सोच को कमजोर किया है।</li>
+            <li><b>3. पेशा चुनने की आजादी:</b> अब लोग वंशानुगत पेशे को छोड़कर अपनी योग्यता के अनुसार काम चुन रहे हैं।</li>
+            <li><b>4. जमींदारी व्यवस्था का अंत:</b> गांवों में पुरानी जमींदारी व्यवस्था टूटने से जातिगत पकड़ ढीली हुई है।</li>
+            <li><b>5. संवैधानिक प्रावधान:</b> संविधान के अनुच्छेद 17 द्वारा छुआछूत (Unclouchability) को दंडनीय अपराध घोषित किया गया है।</li>
+        </ul>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_15.webp" alt="चित्र 3.15: पारंपरिक जाति व्यवस्था"/>
+        <div class="img-caption">🌾 चित्र 3.15: पारंपरिक जाति व्यवस्था व वर्ण व्यवस्था (Traditional Caste System)</div>
+        <div class="img-desc"><b>1. जन्म पर आधारित पेशा:</b> बढ़ई, लोहार, कुम्हार जैसी वंशानुगत श्रम व्यवस्था | <b>2. सामाजिक ऊंच-नीच:</b> जाति के आधार पर भोजन, शादी व सामाजिक मेलजोल पर कड़े प्रतिबंध।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_4.webp" alt="चित्र 3.16: छुआछूत का अंत व संवैधानिक प्रावधान"/>
+        <div class="img-caption">⚖️ चित्र 3.16: छुआछूत का अंत व संवैधानिक प्रावधान (Abolition of Untouchability)</div>
+        <div class="img-desc"><b>1. अनुच्छेद 17 द्वारा छुआछूत का अंत:</b> संविधान द्वारा अस्पृश्यता को कानूनन दंडनीय अपराध बनाना | <b>2. समानता का अधिकार:</b> दलितों व वंचित वर्गों को कुओं, मंदिरों व सार्वजनिक स्थानों का समान अधिकार।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_16.webp" alt="चित्र 3.16: आधुनिक शहरीकरण व जातिगत बदलाव"/>
+        <div class="img-caption">🏙️ चित्र 3.16: आधुनिक शहरीकरण व जातिगत बदलाव (Urbanization & Caste Decline)</div>
+        <div class="img-desc"><b>1. शहरों में सार्वजनिक परिवहन:</b> बस, मेट्रो व होटलों में बिना जाति पूछे साथ सफर व भोजन | <b>2. योग्यता आधारित रोजगार:</b> आईटी, इंजीनियरिंग व व्यापार में जाति के बजाय शैक्षणिक योग्यता का महत्व।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/chart_pol3_4_caste_inequalities_and_modern_change.svg" alt="चार्ट 3.4: जातिगत असमानता एवं आधुनिक बदलाव"/>
+        <div class="img-caption">⚖️ चार्ट 3.4: जातिगत असमानता एवं आधुनिक बदलाव के 5 प्रमुख कारक</div>
+        <div class="img-desc">पारंपरिक वर्ण व्यवस्था vs शहरीकरण, साक्षरता प्रसार, पेशे की आजादी व अस्पृश्यता पर कानूनी रोक।</div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- भाग 5: राजनीति में जाति और जाति में राजनीति -->
+    <!-- ===================================================================== -->
+    <div class="part-header">📌 भाग 5: राजनीति में जाति और जाति में राजनीति (Caste in Politics & Politics in Caste)</div>
+
+    <p>जाति और राजनीति के बीच संबंध के दो पहलू हैं: एक तरफ **राजनीति में जाति** की भूमिका है, तो दूसरी तरफ **जाति के अंदर राजनीति** का प्रवेश है।</p>
+
+    <div class="topic-header">🔹 1. राजनीति में जाति के रूप (Caste in Politics)</div>
+
+    <div class="concept-card">
+        <h3>🗳️ चुनाव में जाति की भूमिका:</h3>
+        <ul>
+            <li><b>1. टिकटों का बंटवारा:</b> पार्टियां उम्मीदवार तय करते समय चुनाव क्षेत्र की जातियों के हिसाब से टिकट बांटती हैं ताकि चुनाव जीतने लायक वोट मिल सकें।</li>
+            <li><b>2. मंत्रिमंडल का गठन:</b> सरकार बनाते समय इस बात का ध्यान रखा जाता है कि विभिन्न जातियों के प्रतिनिधियों को मंत्रिमंडल में जगह मिले।</li>
+            <li><b>3. जातिगत वोट बैंक:</b> राजनीतिक दल जातिगत भावनाओं को उकसाकर अपना 'वोट बैंक' मजबूत करने का प्रयास करते हैं।</li>
+        </ul>
+    </div>
+
+    <div class="warn-box">
+        <h3>❓ क्या केवल जाति ही चुनाव तय करती है? (भ्रांति का निवारण)</h3>
+        <p>यह सोचना गलत है कि चुनाव केवल जाति के आधार पर जीते जाते हैं। <b>वास्तविकता यह है कि:</b></p>
+        <ul>
+            <li><b>1. कोई भी संसदीय क्षेत्र केवल 1 जाति का नहीं है:</b> भारत में कोई भी ऐसा चुनाव क्षेत्र नहीं है जहाँ केवल एक ही जाति के मतदाता हों। हर उम्मीदवार को जीतने के लिए एक से अधिक जातियों का वोट चाहिए होता है।</li>
+            <li><b>2. एक ही जाति के कई उम्मीदवार:</b> अक्सर चुनाव में एक ही जाति के कई प्रत्याशी मैदान में होते हैं, जिससे जाति का वोट बंट जाता है।</li>
+            <li><b>3. सरकार का कामकाज (Performance):</b> यदि लोग केवल अपनी जाति को ही वोट देते तो सत्ताधारी विधायक/सांसद कभी चुनाव न हारते। जनता सरकार के काम से असंतुष्ट होने पर अपनी ही जाति के नेता को हरा देती है।</li>
+        </ul>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_17.webp" alt="चित्र 3.17: राजनीति में जाति"/>
+        <div class="img-caption">🗳️ चित्र 3.17: टिकट बंटवारे में जातिगत गणित (Caste Calculations in Politics)</div>
+        <div class="img-desc"><b>1. प्रत्याशी चयन में जातिगत आंकड़ा:</b> क्षेत्र की बहुसंख्यक जातियों के आधार पर पार्टी टिकट तय करना | <b>2. दलीय गठजोड़:</b> चुनाव जीतने के लिए विभिन्न जातिगत समूहों का सामाजिक समीकरण बनाना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_5.webp" alt="चित्र 3.5: वोट बैंक की राजनीति"/>
+        <div class="img-caption">📊 चित्र 3.5: वोट बैंक की राजनीति व जातिगत अपील (Vote Bank Politics)</div>
+        <div class="img-desc"><b>1. जातिगत वोट बैंक की धारणा:</b> किसी विशेष जाति का वोट किसी एक दल की बपौती मानना | <b>2. नेताओं की अपील:</b> अपनी जाति के मतदाताओं को भावनात्मक भाषण देकर गोलबंद करना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_18.webp" alt="चित्र 3.18: जाति में राजनीति"/>
+        <div class="img-caption">🔄 चित्र 3.18: जाति में राजनीति व नए जातिगत समूह (Politics in Caste)</div>
+        <div class="img-desc"><b>1. उप-जातियों को साथ लाना:</b> अपनी जाति को बड़ा बनाने के लिए आस-पास की उप-जातियों को जोड़ना | <b>2. 'अग्रड़ा' व 'पिछड़ा' मोर्चा:</b> चुनावी सौदेबाज़ी हेतु जातियों द्वारा 'अग्रड़ा', 'पिछड़ा' व 'दलित' गठबंधन बनाना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_19.webp" alt="चित्र 3.19: जातिगत राजनीति का सकारात्मक पहलू"/>
+        <div class="img-caption">✊ चित्र 3.19: जातिगत राजनीति का सकारात्मक पहलू (Empowerment of Marginalized Castes)</div>
+        <div class="img-desc"><b>1. दलित व पिछड़ों की आवाज़:</b> राजनीति के ज़रिए बहुजन व वंचित जातियों को अपनी मांगें उठाने का मंच मिलना | <b>2. सत्ता में हिस्सेदारी:</b> सदियों से दबे-कुचले वर्गों को सरकार व प्रशासन में बराबरी का अधिकार मिलना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_6.webp" alt="चित्र 3.6: विकास व सरकार का काम"/>
+        <div class="img-caption">💡 चित्र 3.6: विकास, शिक्षा व सरकार का काम ही अंतिम निर्णय तय करता है (Governance Matters)</div>
+        <div class="img-desc"><b>1. जाति से ऊपर उठकर मतदान:</b> बिजली, सड़क, पानी, अस्पताल व स्कूल के विकास कार्यों पर वोट देना | <b>2. एंटी-इंकंबेंसी:</b> काम न करने वाले नेताओं को जनता जाति की परवाह किए बिना चुनाव में हरा देती है।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_20.webp" alt="चित्र 3.20: समावेशी व समतामूलक भारतीय लोकतंत्र"/>
+        <div class="img-caption">🇮🇳 चित्र 3.20: समावेशी व समतामूलक भारतीय लोकतंत्र (Inclusive & Equitable Democracy)</div>
+        <div class="img-desc"><b>1. विविधता में एकता:</b> जाति, धर्म व लिंग से परे सभी 140 करोड़ भारतीयों का समान नागरिक अधिकार | <b>2. सशक्त लोकतंत्र:</b> सामाजिक सद्भाव, बंधुत्व व संवैधानिक मूल्यों पर आधारित महान भारत।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/pol3_real_7.webp" alt="चित्र 3.7: जातिगत राजनीति का नकारात्मक पहलू"/>
+        <div class="img-caption">⚠️ चित्र 3.7: जातिगत राजनीति का नकारात्मक पहलू (Negative Aspects of Caste Politics)</div>
+        <div class="img-desc"><b>1. समाज में तनाव व बिखराव:</b> केवल जातिगत मुद्दों में उलझने से गरीबी, बेरोजगारी व विकास के असली मुद्दे दब जाना | <b>2. सामाजिक वैमनस्य:</b> जातियों के बीच आपसी रंजिश व कटुता पैदा होना।</div>
+    </div>
+
+    <div class="img-box">
+        <img src="images/pol3/chart_pol3_5_caste_and_politics_matrix.svg" alt="चार्ट 3.5: राजनीति में जाति बनाम जाति में राजनीति"/>
+        <div class="img-caption">🗳️ चार्ट 3.5: राजनीति में जाति बनाम जाति में राजनीति का समग्र चार्ट</div>
+        <div class="img-desc">प्रत्याशी चयन व वोट बैंक vs उप-जातियों का विलय, पिछड़ों का सशक्तीकरण व विकास आधारित मतदान।</div>
+    </div>
+
+</div>
+</body>
+</html>
+"""
+
+with open(r'c:\Users\jiten\Desktop\class11\ss10\copy_master_civ3.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("SUCCESSFULLY BUILT RICH copy_master_civ3.html! Total length:", len(html_content))

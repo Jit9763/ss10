@@ -1,40 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="100%" height="100%">
-  <rect width="1400" height="950" fill="#0f172a"/>
-  
-  <!-- Title Header -->
-  <rect x="50" y="25" width="1300" height="95" rx="20" fill="#065f46" stroke="#34d399" stroke-width="6"/>
-  <text x="700" y="85" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">मानचित्र: बक्सा टाइगर रिजर्व एवं डोलोमाइट खनन क्षेत्र (पश्चिम बंगाल)</text>
+ <rect width="1400" height="950" fill="#0f172a"/>
+ 
+ <!-- Title Header -->
+ <rect x="50" y="25" width="1300" height="95" rx="20" fill="#065f46" stroke="#34d399" stroke-width="6"/>
+ <text x="700" y="85" font-family="'Segoe UI', Devanagari, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">मानचित्र: बक्सा टाइगर रिजर्व एवं डोलोमाइट खनन क्षेत्र (पश्चिम बंगाल)</text>
 
-  <!-- Map Canvas Frame -->
-  <rect x="50" y="150" width="1300" height="750" rx="20" fill="#022c22" stroke="#10b981" stroke-width="5"/>
+ <!-- Map Canvas Frame -->
+ <rect x="50" y="150" width="1300" height="750" rx="20" fill="#022c22" stroke="#10b981" stroke-width="5"/>
 
-  <!-- Bhutan Country Border Line -->
-  <path d="M 100 240 L 1300 280" stroke="#fbbf24" stroke-width="8" stroke-dasharray="15,10"/>
-  <text x="700" y="225" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fbbf24" text-anchor="middle">🇧🇹 अंतरराष्ट्रीय सीमा - भूटान देश (Bhutan Border)</text>
+ <!-- Bhutan Country Border Line -->
+ <path d="M 100 240 L 1300 280" stroke="#fbbf24" stroke-width="8" stroke-dasharray="15,10"/>
+ <text x="700" y="225" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fbbf24" text-anchor="middle"> अंतरराष्ट्रीय सीमा - भूटान देश (Bhutan Border)</text>
 
-  <!-- Buxa Forest Polygon Area -->
-  <path d="M 180 320 L 720 290 L 1250 350 L 1280 720 L 850 820 L 320 800 L 150 550 Z" fill="#064e3b" stroke="#34d399" stroke-width="6"/>
-  <text x="450" y="370" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#a7f3d0">🌲 बक्सा टाइगर रिजर्व (सघन वन क्षेत्र)</text>
+ <!-- Buxa Forest Polygon Area -->
+ <path d="M 180 320 L 720 290 L 1250 350 L 1280 720 L 850 820 L 320 800 L 150 550 Z" fill="#064e3b" stroke="#34d399" stroke-width="6"/>
+ <text x="450" y="370" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#a7f3d0">🌲 बक्सा टाइगर रिजर्व (सघन वन क्षेत्र)</text>
 
-  <!-- Jayanti River -->
-  <path d="M 680 290 Q 720 450 780 600 T 880 820" fill="none" stroke="#38bdf8" stroke-width="8"/>
-  <text x="800" y="550" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#38bdf8" transform="rotate(60, 800, 550)">🌊 जयंती नदी (Jayanti River)</text>
+ <!-- Jayanti River -->
+ <path d="M 680 290 Q 720 450 780 600 T 880 820" fill="none" stroke="#38bdf8" stroke-width="8"/>
+ <text x="800" y="550" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#38bdf8" transform="rotate(60, 800, 550)">🌊 जयंती नदी (Jayanti River)</text>
 
-  <!-- Mining Red Zone -->
-  <rect x="680" y="400" width="280" height="150" rx="15" fill="#7f1d1d" stroke="#f87171" stroke-width="5"/>
-  <text x="820" y="445" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#fca5a5" text-anchor="middle">⛏️ डोलोमाइट खनन क्षेत्र</text>
-  <text x="820" y="485" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">(Dolomite Mining Quarry Zone)</text>
-  <text x="820" y="525" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fca5a5" text-anchor="middle">🚨 हाथियों का प्रवास बाधित</text>
+ <!-- Mining Red Zone -->
+ <rect x="680" y="400" width="280" height="150" rx="15" fill="#7f1d1d" stroke="#f87171" stroke-width="5"/>
+ <text x="820" y="445" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#fca5a5" text-anchor="middle">⛏️ डोलोमाइट खनन क्षेत्र</text>
+ <text x="820" y="485" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">(Dolomite Mining Quarry Zone)</text>
+ <text x="820" y="525" font-family="'Segoe UI', Devanagari, sans-serif" font-size="28" font-weight="900" fill="#fca5a5" text-anchor="middle">🚨 हाथियों का प्रवास बाधित</text>
 
-  <!-- Elephant Migration Corridor Line -->
-  <path d="M 220 500 L 670 480 M 970 480 L 1220 520" stroke="#f59e0b" stroke-width="8" stroke-dasharray="12,8"/>
-  <text x="420" y="460" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#fde68a">🐘 हाथियों का आवागमन मार्ग (Elephant Corridor)</text>
+ <!-- Elephant Migration Corridor Line -->
+ <path d="M 220 500 L 670 480 M 970 480 L 1220 520" stroke="#f59e0b" stroke-width="8" stroke-dasharray="12,8"/>
+ <text x="420" y="460" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#fde68a">🐘 हाथियों का आवागमन मार्ग (Elephant Corridor)</text>
 
-  <!-- Legend Box (Bottom Left) -->
-  <rect x="80" y="620" width="480" height="250" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
-  <text x="100" y="660" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#38bdf8">🗺️ मानचित्र संकेतिका (Map Legend):</text>
-  <text x="100" y="705" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#a7f3d0">🟩 हरा क्षेत्र: बक्सा राष्ट्रीय उद्यान (अलीपुरद्वार, प. बंगाल)</text>
-  <text x="100" y="745" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#fca5a5">🟥 लाल क्षेत्र: खनन प्रभावित क्षेत्र (डोलोमाइट उत्खनन)</text>
-  <text x="100" y="785" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#fde68a">🟧 पीली रेखा: एशियाई हाथियों का विखंडित प्राकृतिक मार्ग</text>
-  <text x="100" y="825" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#38bdf8">🟦 नीली रेखा: जयंती नदी जल मार्ग</text>
+ <!-- Legend Box (Bottom Left) -->
+ <rect x="80" y="620" width="480" height="250" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+ <text x="100" y="660" font-family="'Segoe UI', Devanagari, sans-serif" font-size="32" font-weight="900" fill="#38bdf8">🗺️ मानचित्र संकेतिका (Map Legend):</text>
+ <text x="100" y="705" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#a7f3d0">🟩 हरा क्षेत्र: बक्सा राष्ट्रीय उद्यान (अलीपुरद्वार, प. बंगाल)</text>
+ <text x="100" y="745" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#fca5a5">🟥 लाल क्षेत्र: खनन प्रभावित क्षेत्र (डोलोमाइट उत्खनन)</text>
+ <text x="100" y="785" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#fde68a">🟧 पीली रेखा: एशियाई हाथियों का विखंडित प्राकृतिक मार्ग</text>
+ <text x="100" y="825" font-family="'Segoe UI', Devanagari, sans-serif" font-size="21" font-weight="900" fill="#38bdf8">🟦 नीली रेखा: जयंती नदी जल मार्ग</text>
 </svg>
