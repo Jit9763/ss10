@@ -808,7 +808,7 @@ window.MathJax = {
       <label>पार्टी E सीटें: <input type="number" id="sim1_e" value="10" min="0" max="100" style="width:70px;" oninput="updateSim1()"></label>
     </div>
     <div class="sim-canvas-box">
-      <svg id="sim1_svg" width="100%" height="220" viewBox="0 0 500 220"></svg>
+      <svg id="sim1_svg" width="100%" height="380" viewBox="0 0 920 380"></svg>
     </div>
     <div class="sim-output" id="sim1_out">
       सर्वोच्च दंड: पार्टी A (75 सीटें)
@@ -826,7 +826,7 @@ window.MathJax = {
       <label>वर्ग 4 (600-700): <input type="range" id="sim2_f4" min="5" max="100" value="62" oninput="updateSim2()"><span id="sim2_v4">62</span></label>
     </div>
     <div class="sim-canvas-box">
-      <svg id="sim2_svg" width="100%" height="220" viewBox="0 0 500 220"></svg>
+      <svg id="sim2_svg" width="100%" height="380" viewBox="0 0 920 380"></svg>
     </div>
     <div class="sim-output" id="sim2_out">
       कुल बारंबारता = 218, उच्चतम बारंबारता वाला अंतराल = 500 - 600 (86)
@@ -842,7 +842,7 @@ window.MathJax = {
       <label>सेक्शन B स्कोर गुणक: <input type="range" id="sim3_scaleB" min="5" max="25" value="10" oninput="updateSim3()"><span id="sim3_vb">10</span></label>
     </div>
     <div class="sim-canvas-box">
-      <svg id="sim3_svg" width="100%" height="220" viewBox="0 0 500 220"></svg>
+      <svg id="sim3_svg" width="100%" height="380" viewBox="0 0 920 380"></svg>
     </div>
     <div class="sim-output" id="sim3_out">
       नीली रेखा = सेक्शन A, लाल रेखा = सेक्शन B (दोनों बहुभुज $X$-अक्ष पर संलग्न हैं)
@@ -970,49 +970,82 @@ function updateSim1() {
   const e = parseFloat(document.getElementById('sim1_e').value) || 0;
 
   const data = [
-    { label: 'A', val: a, col: '#0d9488' },
-    { label: 'B', val: b, col: '#3b82f6' },
-    { label: 'C', val: c, col: '#8b5cf6' },
-    { label: 'D', val: d, col: '#f59e0b' },
-    { label: 'E', val: e, col: '#ef4444' }
+    { label: 'पार्टी A', val: a, col: '#0d9488' },
+    { label: 'पार्टी B', val: b, col: '#3b82f6' },
+    { label: 'पार्टी C', val: c, col: '#8b5cf6' },
+    { label: 'पार्टी D', val: d, col: '#f59e0b' },
+    { label: 'पार्टी E', val: e, col: '#ef4444' }
   ];
 
-  const maxVal = Math.max(80, a, b, c, d, e);
+  // Wide Container Layout: 920x380
+  // Y-axis with step of 10: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+  const maxInput = Math.max(a, b, c, d, e, 1);
+  const yMax = Math.max(100, Math.ceil(maxInput / 10) * 10);
+  const xBase = 75;
+  const xEnd = 880;
+  const yBase = 320;
+  const yTop = 40;
+  const plotH = yBase - yTop; // 280px total height
+  const step = 10; // Exactly 10 units per grid line
+
   const svg = document.getElementById('sim1_svg');
   let html = '';
-  // Horizontal Grid Lines & Y-axis Numbers (0, 20, 40, 60, 80, 100)
-  for (let yv = 0; yv <= 100; yv += 20) {
-    const yPos = 180 - (yv / 100) * 150;
-    html += `<line x1="45" y1="${yPos}" x2="480" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
-    html += `<text x="38" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
-    html += `<line x1="40" y1="${yPos}" x2="45" y2="${yPos}" stroke="#000000" stroke-width="2.5"/>`;
+
+  // Horizontal Grid Lines & Y-axis Numbers at every 10 units
+  for (let yv = 0; yv <= yMax; yv += step) {
+    const yPos = yBase - (yv / yMax) * plotH;
+    const isMajor = (yv % 20 === 0);
+    const strokeCol = isMajor ? '#94a3b8' : '#e2e8f0';
+    const strokeW = isMajor ? '1.8' : '1.2';
+    const strokeDash = isMajor ? 'none' : '3,3';
+
+    html += `<line x1="${xBase}" y1="${yPos}" x2="${xEnd}" y2="${yPos}" stroke="${strokeCol}" stroke-width="${strokeW}" stroke-dasharray="${strokeDash}"/>`;
+    html += `<text x="${xBase - 12}" y="${yPos + 5}" font-size="${isMajor ? '15' : '13'}" font-weight="${isMajor ? '900' : '700'}" fill="${isMajor ? '#0f172a' : '#475569'}" text-anchor="end">${yv}</text>`;
+    html += `<line x1="${xBase - (isMajor ? 8 : 4)}" y1="${yPos}" x2="${xBase}" y2="${yPos}" stroke="#000000" stroke-width="${isMajor ? '3' : '1.5'}"/>`;
   }
+
   // Solid Dark Axes
-  html += '<line x1="45" y1="180" x2="480" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<line x1="45" y1="20" x2="45" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<text x="485" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
-  html += '<text x="45" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
+  html += `<line x1="${xBase}" y1="${yBase}" x2="${xEnd}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<line x1="${xBase}" y1="${yTop - 15}" x2="${xBase}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<text x="${xEnd + 8}" y="${yBase + 6}" font-size="16" font-weight="900" fill="#000000">X</text>`;
+  html += `<text x="${xBase}" y="${yTop - 25}" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">Y (सीटें)</text>`;
+
+  // 5 Wide Bars
+  const barWidth = 95;
+  const xPositions = [110, 265, 420, 575, 730];
 
   data.forEach((item, i) => {
-    const x = 70 + i * 80;
-    const barH = (item.val / maxVal) * 150;
-    const y = 180 - barH;
-    html += `<rect x="${x}" y="${y}" width="45" height="${barH}" fill="${item.col}" rx="4"/>`;
-    html += `<text x="${x + 22}" y="${y - 6}" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">${item.val}</text>`;
-    html += `<text x="${x + 22}" y="198" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">${item.label}</text>`;
+    const x = xPositions[i];
+    const barH = (item.val / yMax) * plotH;
+    const y = yBase - barH;
+
+    // Bar rectangle
+    html += `<rect x="${x}" y="${y}" width="${barWidth}" height="${barH}" fill="${item.col}" rx="6" stroke="#0f172a" stroke-width="2"/>`;
+
+    // Number badge above bar with clean white pill so it never clashes with grid lines
+    html += `<rect x="${x + barWidth / 2 - 22}" y="${y - 25}" width="44" height="20" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="1.8"/>`;
+    html += `<text x="${x + barWidth / 2}" y="${y - 10}" font-size="14" font-weight="900" fill="#0f172a" text-anchor="middle">${item.val}</text>`;
+
+    // If bar is tall enough, also show value inside bar
+    if (barH >= 35) {
+      html += `<text x="${x + barWidth / 2}" y="${y + 24}" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">${item.val}</text>`;
+    }
+
+    // Party Label under bar
+    html += `<text x="${x + barWidth / 2}" y="${yBase + 28}" font-size="16" font-weight="900" fill="#1e293b" text-anchor="middle">${item.label}</text>`;
   });
 
   svg.innerHTML = html;
   const top = [...data].sort((x, y) => y.val - x.val)[0];
-  document.getElementById('sim1_out').innerText = `सर्वोच्च दंड: पार्टी ${top.label} (${top.val} सीटें)`;
+  document.getElementById('sim1_out').innerText = `सर्वोच्च दंड: ${top.label} (${top.val} सीटें)`;
 }
 
 // Simulator 2: Histogram
 function updateSim2() {
-  const f1 = parseInt(document.getElementById('sim2_f1').value);
-  const f2 = parseInt(document.getElementById('sim2_f2').value);
-  const f3 = parseInt(document.getElementById('sim2_f3').value);
-  const f4 = parseInt(document.getElementById('sim2_f4').value);
+  const f1 = parseInt(document.getElementById('sim2_f1').value) || 0;
+  const f2 = parseInt(document.getElementById('sim2_f2').value) || 0;
+  const f3 = parseInt(document.getElementById('sim2_f3').value) || 0;
+  const f4 = parseInt(document.getElementById('sim2_f4').value) || 0;
 
   document.getElementById('sim2_v1').innerText = f1;
   document.getElementById('sim2_v2').innerText = f2;
@@ -1020,92 +1053,159 @@ function updateSim2() {
   document.getElementById('sim2_v4').innerText = f4;
 
   const heights = [f1, f2, f3, f4];
-  const maxF = Math.max(100, ...heights);
+  const maxF = Math.max(...heights, 1);
+  const yMax = Math.max(100, Math.ceil(maxF / 10) * 10);
+  const xBase = 75;
+  const xEnd = 880;
+  const yBase = 320;
+  const yTop = 40;
+  const plotH = yBase - yTop; // 280px
+  const step = 10;
   const svg = document.getElementById('sim2_svg');
 
   let html = '';
-  // Horizontal Grid Lines & Y-axis Numbers (0, 25, 50, 75, 100)
-  for (let yv = 0; yv <= 100; yv += 25) {
-    const yPos = 180 - (yv / 100) * 150;
-    html += `<line x1="50" y1="${yPos}" x2="470" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
-    html += `<text x="44" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
-    html += `<line x1="45" y1="${yPos}" x2="50" y2="${yPos}" stroke="#000000" stroke-width="2.5"/>`;
-  }
-  // Solid Dark Axes
-  html += '<line x1="50" y1="180" x2="470" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<line x1="50" y1="20" x2="50" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<text x="475" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
-  html += '<text x="50" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
+  // Horizontal Grid Lines & Y-axis Numbers at every 10 units
+  for (let yv = 0; yv <= yMax; yv += step) {
+    const yPos = yBase - (yv / yMax) * plotH;
+    const isMajor = (yv % 20 === 0);
+    const strokeCol = isMajor ? '#94a3b8' : '#e2e8f0';
+    const strokeW = isMajor ? '1.8' : '1.2';
+    const strokeDash = isMajor ? 'none' : '3,3';
 
-  const labels = ['300-400', '400-500', '500-600', '600-700'];
+    html += `<line x1="${xBase}" y1="${yPos}" x2="${xEnd}" y2="${yPos}" stroke="${strokeCol}" stroke-width="${strokeW}" stroke-dasharray="${strokeDash}"/>`;
+    html += `<text x="${xBase - 12}" y="${yPos + 5}" font-size="${isMajor ? '15' : '13'}" font-weight="${isMajor ? '900' : '700'}" fill="${isMajor ? '#0f172a' : '#475569'}" text-anchor="end">${yv}</text>`;
+    html += `<line x1="${xBase - (isMajor ? 8 : 4)}" y1="${yPos}" x2="${xBase}" y2="${yPos}" stroke="#000000" stroke-width="${isMajor ? '3' : '1.5'}"/>`;
+  }
+
+  // Solid Dark Axes
+  html += `<line x1="${xBase}" y1="${yBase}" x2="${xEnd}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<line x1="${xBase}" y1="${yTop - 15}" x2="${xBase}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<text x="${xEnd + 8}" y="${yBase + 6}" font-size="16" font-weight="900" fill="#000000">X</text>`;
+  html += `<text x="${xBase}" y="${yTop - 25}" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">Y (बारंबारता)</text>`;
+
+  // 4 Contiguous Rectangles filling width
+  const labels = ['300 - 400', '400 - 500', '500 - 600', '600 - 700'];
+  const rectWidth = 190;
+  const startX = 100;
+
   heights.forEach((h, i) => {
-    const x = 70 + i * 95;
-    const barH = (h / maxF) * 150;
-    const y = 180 - barH;
-    html += `<rect x="${x}" y="${y}" width="95" height="${barH}" fill="#14b8a6" stroke="#0f766e" stroke-width="1.5"/>`;
-    html += `<text x="${x + 47}" y="${y - 6}" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">${h}</text>`;
-    html += `<text x="${x + 47}" y="196" font-size="11" fill="#475569" text-anchor="middle">${labels[i]}</text>`;
+    const x = startX + i * rectWidth;
+    const barH = (h / yMax) * plotH;
+    const y = yBase - barH;
+
+    // Contiguous histogram rectangle (0 gap)
+    html += `<rect x="${x}" y="${y}" width="${rectWidth}" height="${barH}" fill="#14b8a6" stroke="#0f766e" stroke-width="2.5"/>`;
+
+    // Number badge above rectangle
+    html += `<rect x="${x + rectWidth / 2 - 22}" y="${y - 25}" width="44" height="20" rx="6" fill="#ffffff" stroke="#0f766e" stroke-width="1.8"/>`;
+    html += `<text x="${x + rectWidth / 2}" y="${y - 10}" font-size="14" font-weight="900" fill="#0f766e" text-anchor="middle">${h}</text>`;
+
+    if (barH >= 35) {
+      html += `<text x="${x + rectWidth / 2}" y="${y + 24}" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">${h}</text>`;
+    }
+
+    // Interval label below
+    html += `<text x="${x + rectWidth / 2}" y="${yBase + 28}" font-size="15" font-weight="900" fill="#1e293b" text-anchor="middle">${labels[i]}</text>`;
   });
 
   svg.innerHTML = html;
   const total = f1 + f2 + f3 + f4;
-  document.getElementById('sim2_out').innerText = `कुल बारंबारता = ${total} | उच्चतम बारंबारता = ${Math.max(...heights)}`;
+  document.getElementById('sim2_out').innerText = `कुल बारंबारता = ${total} | उच्चतम बारंबारता वाला वर्ग = ${labels[heights.indexOf(Math.max(...heights))]} (${Math.max(...heights)})`;
 }
 
 // Simulator 3: Frequency Polygon
 function updateSim3() {
-  const sa = parseInt(document.getElementById('sim3_scaleA').value);
-  const sb = parseInt(document.getElementById('sim3_scaleB').value);
+  const sa = parseInt(document.getElementById('sim3_scaleA').value) || 15;
+  const sb = parseInt(document.getElementById('sim3_scaleB').value) || 10;
   document.getElementById('sim3_va').innerText = sa;
   document.getElementById('sim3_vb').innerText = sb;
 
-  const ptsA = [
-    {x: 50, y: 180},
-    {x: 120, y: 180 - sa * 5},
-    {x: 190, y: 180 - sa * 8},
-    {x: 260, y: 180 - sa * 6},
-    {x: 330, y: 180 - sa * 4},
-    {x: 400, y: 180}
+  const fA = [
+    0,
+    Math.round(3 * (sa / 15)),
+    Math.round(9 * (sa / 15)),
+    Math.round(17 * (sa / 15)),
+    Math.round(12 * (sa / 15)),
+    Math.round(9 * (sa / 15)),
+    0
   ];
 
-  const ptsB = [
-    {x: 50, y: 180},
-    {x: 120, y: 180 - sb * 7},
-    {x: 190, y: 180 - sb * 6},
-    {x: 260, y: 180 - sb * 7},
-    {x: 330, y: 180 - sb * 3},
-    {x: 400, y: 180}
+  const fB = [
+    0,
+    Math.round(5 * (sb / 10)),
+    Math.round(19 * (sb / 10)),
+    Math.round(15 * (sb / 10)),
+    Math.round(10 * (sb / 10)),
+    Math.round(1 * (sb / 10)),
+    0
   ];
+
+  const xPositions = [85, 210, 335, 460, 585, 710, 835];
+  const xLabels = [-5, 5, 15, 25, 35, 45, 55];
+  const xBase = 65;
+  const xEnd = 880;
+  const yBase = 320;
+  const yTop = 45;
+  const plotH = yBase - yTop; // 275px
+  const yMax = 20;
+
+  const ptsA = fA.map((val, idx) => ({
+    x: xPositions[idx],
+    y: yBase - (val / yMax) * plotH,
+    val: val
+  }));
+
+  const ptsB = fB.map((val, idx) => ({
+    x: xPositions[idx],
+    y: yBase - (val / yMax) * plotH,
+    val: val
+  }));
 
   const polyA = ptsA.map(p => `${p.x},${p.y}`).join(' ');
   const polyB = ptsB.map(p => `${p.x},${p.y}`).join(' ');
 
   const svg = document.getElementById('sim3_svg');
   let html = '';
+
   // Y-axis grid & numbers (0, 5, 10, 15, 20)
-  for (let yv = 0; yv <= 20; yv += 5) {
-    const yPos = 180 - yv * 7.5;
-    html += `<line x1="45" y1="${yPos}" x2="450" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
-    html += `<text x="40" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
+  for (let yv = 0; yv <= yMax; yv += 5) {
+    const yPos = yBase - (yv / yMax) * plotH;
+    html += `<line x1="${xBase}" y1="${yPos}" x2="${xEnd}" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.8" stroke-dasharray="4,4"/>`;
+    html += `<text x="${xBase - 12}" y="${yPos + 5}" font-size="16" font-weight="900" fill="#0f172a" text-anchor="end">${yv}</text>`;
+    html += `<line x1="${xBase - 8}" y1="${yPos}" x2="${xBase}" y2="${yPos}" stroke="#000000" stroke-width="3"/>`;
   }
-  // X-axis numbers (Class marks: -5, 5, 15, 25, 35, 45, 55)
-  const xLabels = [-5, 5, 15, 25, 35, 45, 55];
-  const xPositions = [50, 120, 190, 260, 330, 400, 430];
+
+  // X-axis numbers (Class marks)
   xLabels.forEach((lbl, idx) => {
     const xp = xPositions[idx];
-    html += `<line x1="${xp}" y1="180" x2="${xp}" y2="185" stroke="#000000" stroke-width="2.5"/>`;
-    html += `<text x="${xp}" y="198" font-size="12" font-weight="900" fill="#000000" text-anchor="middle">${lbl}</text>`;
+    html += `<line x1="${xp}" y1="${yBase}" x2="${xp}" y2="${yBase + 8}" stroke="#000000" stroke-width="3"/>`;
+    html += `<text x="${xp}" y="${yBase + 28}" font-size="16" font-weight="900" fill="#0f172a" text-anchor="middle">${lbl}</text>`;
   });
-  // Solid Dark Axes
-  html += '<line x1="45" y1="180" x2="450" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<line x1="45" y1="20" x2="45" y2="180" stroke="#000000" stroke-width="4"/>';
-  html += '<text x="455" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
-  html += '<text x="45" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
-  html += `<polyline points="${polyA}" fill="none" stroke="#2563eb" stroke-width="3"/>`;
-  html += `<polyline points="${polyB}" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="6,4"/>`;
 
-  ptsA.forEach(p => { html += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#2563eb"/>`; });
-  ptsB.forEach(p => { html += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#dc2626"/>`; });
+  // Solid Dark Axes
+  html += `<line x1="${xBase}" y1="${yBase}" x2="${xEnd}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<line x1="${xBase}" y1="${yTop - 15}" x2="${xBase}" y2="${yBase}" stroke="#000000" stroke-width="4.5"/>`;
+  html += `<text x="${xEnd + 8}" y="${yBase + 6}" font-size="17" font-weight="900" fill="#000000">X (वर्ग चिह्न)</text>`;
+  html += `<text x="${xBase}" y="${yTop - 25}" font-size="17" font-weight="900" fill="#000000" text-anchor="middle">Y (अंक)</text>`;
+
+  // Polylines
+  html += `<polyline points="${polyA}" fill="none" stroke="#2563eb" stroke-width="4.5"/>`;
+  html += `<polyline points="${polyB}" fill="none" stroke="#dc2626" stroke-width="4.5" stroke-dasharray="8,5"/>`;
+
+  // Data Points with frequency numbers
+  ptsA.forEach((p, idx) => {
+    html += `<circle cx="${p.x}" cy="${p.y}" r="6" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>`;
+    if (idx > 0 && idx < 6) {
+      html += `<text x="${p.x}" y="${p.y - 12}" font-size="15" font-weight="900" fill="#1e40af" text-anchor="middle">${p.val}</text>`;
+    }
+  });
+
+  ptsB.forEach((p, idx) => {
+    html += `<circle cx="${p.x}" cy="${p.y}" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>`;
+    if (idx > 0 && idx < 6) {
+      html += `<text x="${p.x}" y="${p.y + 22}" font-size="15" font-weight="900" fill="#991b1b" text-anchor="middle">${p.val}</text>`;
+    }
+  });
 
   svg.innerHTML = html;
 }
