@@ -1,152 +1,501 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NCERT कक्षा 9 गणित अध्याय 1: संख्या पद्धति (Number Systems) - मास्टर Q&A हल</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 1: संख्या पद्धति (संपूर्ण 100% प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
 
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+<!-- MathJax Configuration with Bold Fraction Lines -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
       }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <style>
-    *, *:before, *:after {
-      box-sizing: border-box;
-    }
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #cbd5e1;
+    padding: 30px 15px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Devanagari', Arial, sans-serif;
+  }
+
+  /* BASE TYPOGRAPHY (Exact Class 10 Math Standard: 26pt, 2.0 line-height, 900 weight, 1.1px stroke) */
+  body, p, li, td, th, div, span, a, label {
+    font-size: 26pt !important;
+    line-height: 2.0 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+    color: #000000;
+  }
+
+  p, li, h1, h2, h3, h4, td, th {
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+  }
+
+  /* MULTI-COLOR BADGES */
+  .badge-blue {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border: 3px solid #3b82f6 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #1e3a8a !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.15) !important;
+  }
+
+  .badge-orange {
+    color: #9a3412 !important;
+    background-color: #ffedd5 !important;
+    border: 3px solid #f97316 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #9a3412 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.15) !important;
+  }
+
+  .badge-purple {
+    color: #581c87 !important;
+    background-color: #f3e8ff !important;
+    border: 3px solid #a855f7 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #581c87 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(168, 85, 247, 0.15) !important;
+  }
+
+  .badge-green {
+    color: #064e3b !important;
+    background-color: #d1fae5 !important;
+    border: 3px solid #10b981 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #064e3b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15) !important;
+  }
+
+  .badge-red {
+    color: #991b1b !important;
+    background-color: #fee2e2 !important;
+    border: 3px solid #ef4444 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #991b1b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15) !important;
+  }
+
+  /* STEP BOXES */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 3px solid #93c5fd !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    text-shadow: 0 0 1px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    text-shadow: 0 0 1px #1e3a8a !important;
+    display: inline !important;
+  }
+  .text-purple {
+    color: #6b21a8 !important;
+    -webkit-text-stroke: 0.8px #6b21a8 !important;
+  }
+  .text-green {
+    color: #065f46 !important;
+    -webkit-text-stroke: 0.8px #065f46 !important;
+  }
+
+  /* COLORFUL MATHJAX STYLING */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  mjx-mn {
+    color: #000000;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+  }
+
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+  }
+
+  mjx-line, mjx-frac mjx-line, .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+  }
+
+  mjx-surd {
+    color: #7c3aed !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #7c3aed !important;
+  }
+
+  mjx-mi {
+    color: #0f172a !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.7px #0f172a !important;
+  }
+
+  .math-line, .math-scroll {
+    max-width: 100% !important;
+    padding: 6px 0 !important;
+    margin: 8px 0 !important;
+    display: block !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  /* MAIN CONTAINER */
+  #contentToCopy {
+    width: 100% !important;
+    max-width: 1350px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #065f46 0%, #059669 100%) !important;
+    border: 6px solid #34d399 !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 44pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 30pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #065f46 !important;
+    background-color: #ecfdf5 !important;
+    border-left: 18px solid #059669 !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 38pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.12) !important;
+    -webkit-text-stroke: 0.8px #065f46 !important;
+  }
+
+  /* FORMULA BOX (Golden Warm Palette) */
+  .formula-box {
+    background-color: #fefce8 !important;
+    border: 4px solid #facc15 !important;
+    border-left: 18px solid #d97706 !important;
+    padding: 30px !important;
+    border-radius: 18px !important;
+    margin-bottom: 45px !important;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.1) !important;
+  }
+  .formula-box h3 {
+    color: #b45309 !important;
+    font-size: 34pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #fde047;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #b45309 !important;
+  }
+
+  /* QA BLOCK */
+  .qa-block {
+    background: #ffffff;
+    border: 4px solid #a7f3d0;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 35px 0;
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.08);
+  }
+  .question-heading {
+    color: #065f46 !important;
+    font-size: 30pt !important;
+    margin-top: 0;
+    margin-bottom: 22px;
+    border-bottom: 3px solid #a7f3d0;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #065f46 !important;
+  }
+
+  /* FINAL ANSWER HIGHLIGHT */
+  .answer-highlight {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important;
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important;
+    border-radius: 16px !important;
+    color: #064e3b !important;
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+  }
+
+  /* INLINE SIMULATOR CARD */
+  .inline-simulator-card {
+    background: #ffffff !important;
+    border: 4px solid #0284c7 !important;
+    border-left: 20px solid #0369a1 !important;
+    border-radius: 20px !important;
+    padding: 28px !important;
+    margin: 35px 0 !important;
+    box-shadow: 0 12px 28px rgba(2, 132, 199, 0.15) !important;
+  }
+  .sim-title {
+    color: #0369a1 !important;
+    font-size: 30pt !important;
+    margin-top: 0;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    -webkit-text-stroke: 0.8px #0369a1 !important;
+  }
+  .sim-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f0f9ff;
+    padding: 18px;
+    border-radius: 14px;
+    border: 2px solid #bae6fd;
+  }
+  .sim-input {
+    font-size: 24pt !important;
+    padding: 8px 16px;
+    border: 3px solid #0284c7;
+    border-radius: 10px;
+    font-weight: 900;
+    width: 140px;
+    text-align: center;
+    background: #ffffff;
+    color: #0f172a;
+  }
+  .sim-btn-calc {
+    font-size: 24pt !important;
+    font-weight: 900;
+    padding: 10px 24px;
+    background: #0284c7;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    -webkit-text-stroke: 0.5px #000 !important;
+    transition: transform 0.15s ease;
+  }
+  .sim-btn-calc:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+  }
+  .sim-output-box {
+    background: #f8fafc;
+    border: 3px solid #cbd5e1;
+    border-radius: 14px;
+    padding: 20px;
+    font-size: 24pt;
+    line-height: 1.9;
+  }
+
+  ul, ol {
+    padding-left: 45px;
+  }
+  li {
+    margin-bottom: 18px;
+  }
+
+  /* RESPONSIVE FULLSCREEN & MOBILE */
+  @media (max-width: 1000px) {
     body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
-      background: #cbd5e1;
-      color: #0f172a;
-      line-height: 1.8;
-      font-size: 26pt !important;
-      font-weight: 800 !important;
-      -webkit-text-stroke: 1.1px #000000;
+      padding: 10px 5px;
     }
-    .action-bar {
-      position: sticky;
-      top: 15px;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      background: rgba(15, 23, 42, 0.94);
-      padding: 12px 20px;
-      border-radius: 50px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      backdrop-filter: blur(8px);
-      max-width: 900px;
-      margin: 0 auto 25px auto;
-      flex-wrap: wrap;
+    #contentToCopy {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 20px 14px !important;
+      border-radius: 16px;
+    }
+    body, p, li, td, th, div, span, a, label {
+      font-size: 1.22rem !important;
+      line-height: 1.8 !important;
+      -webkit-text-stroke: 0.4px #000000;
+    }
+    .hero-title {
+      font-size: 1.8rem !important;
+      padding: 22px 14px !important;
+    }
+    .hero-title span {
+      font-size: 1.25rem !important;
+    }
+    .part-header {
+      font-size: 1.45rem !important;
+      padding: 16px 18px !important;
+    }
+    .qa-block, .formula-box, .inline-simulator-card {
+      padding: 18px 14px !important;
+    }
+    .question-heading, .formula-box h3, .sim-title {
+      font-size: 1.3rem !important;
+    }
+    .badge-blue, .badge-orange, .badge-purple, .badge-green, .badge-red {
+      font-size: 1.15rem !important;
+      padding: 2px 10px !important;
+    }
+    .answer-highlight {
+      font-size: 1.22rem !important;
+      padding: 14px 16px !important;
     }
     .action-btn {
-      background: #334155;
-      color: #ffffff !important;
-      border: 2px solid #64748b;
+      padding: 5px 10px;
+      font-size: 1.1rem !important;
+    }
+    .btn-nav {
+      font-size: 1.1rem !important;
       padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 16pt !important;
-      font-weight: bold;
-      cursor: pointer;
-      -webkit-text-stroke: 0px !important;
-      transition: all 0.2s ease;
     }
-    .action-btn:hover {
-      background: #10b981;
-      border-color: #34d399;
-      transform: translateY(-2px);
-    }
-    .action-btn.success {
-      background: #10b981 !important;
-      border-color: #34d399 !important;
-    }
-    .container {
-      max-width: 1350px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      border: 6px solid #94a3b8;
-    }
-    .chapter-header {
-      text-align: center;
-      border-bottom: 6px solid #10b981;
-      padding-bottom: 25px;
-      margin-bottom: 35px;
-      background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
-      border-radius: 14px;
-      padding-top: 20px;
-    }
-    .badge-class {
-      display: inline-block;
-      background: #047857;
-      color: #ffffff !important;
-      -webkit-text-stroke: 0px !important;
-      padding: 6px 20px;
-      border-radius: 10px;
-      font-size: 20pt !important;
-      margin-bottom: 12px;
-    }
-    h1 {
-      color: #065f46;
-      margin: 5px 0 10px 0;
-      font-size: 38pt !important;
-      -webkit-text-stroke: 1.4px #065f46;
-    }
-    .qa-card {
-      border: 3px solid #cbd5e1;
-      border-radius: 16px;
-      padding: 25px;
-      margin-bottom: 35px;
-      background: #ffffff;
-    }
-    .badge-blue { background: #2563eb; color: #ffffff; padding: 4px 12px; border-radius: 6px; }
-    .badge-green { background: #059669; color: #ffffff; padding: 4px 12px; border-radius: 6px; }
-    .badge-orange { background: #ea580c; color: #ffffff; padding: 4px 12px; border-radius: 6px; }
-    .badge-purple { background: #7c3aed; color: #ffffff; padding: 4px 12px; border-radius: 6px; }
-    .step-box-blue { border-left: 6px solid #2563eb; background: #eff6ff; padding: 15px 20px; border-radius: 8px; margin: 15px 0; }
-    .step-box-orange { border-left: 6px solid #ea580c; background: #fff7ed; padding: 15px 20px; border-radius: 8px; margin: 15px 0; }
-    .step-box-green { border-left: 6px solid #059669; background: #f0fdf4; padding: 15px 20px; border-radius: 8px; margin: 15px 0; }
-    .step-box-purple { border-left: 6px solid #7c3aed; background: #faf5ff; padding: 15px 20px; border-radius: 8px; margin: 15px 0; }
-    .answer-box { background: #ecfdf5; border: 2px solid #a7f3d0; border-radius: 10px; padding: 15px; margin-top: 20px; }
-    .math-line { margin: 10px 0; }
-    .sim-card {
-      background: #f8fafc;
-      border: 4px solid #059669;
-      border-radius: 16px;
-      padding: 22px;
-      margin: 30px 0;
-      box-shadow: 0 6px 18px rgba(5,150,105,0.12);
-    }
-    .sim-header {
-      font-size: 24pt;
-      color: #065f46;
-      font-weight: 900;
-      margin-bottom: 12px;
-      border-bottom: 3px solid #cbd5e1;
-      padding-bottom: 8px;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-<!-- Floating Action Bar -->
+<!-- Floating Action Bar for Projector and Copying (Natural Flow at Top) -->
 <div class="action-bar">
   <button class="action-btn" onclick="adjustWidth(50)" title="चौड़ाई बढ़ाएं (W+)">W+</button>
   <button class="action-btn" onclick="adjustWidth(-50)" title="चौड़ाई घटाएं (W-)">W-</button>
@@ -156,397 +505,932 @@
   <button class="action-btn" onclick="adjustFontWeight(-100)" title="मोटाई घटाएं (B-)">B-</button>
   <button class="action-btn" id="floatingCopyBtn" onclick="copyEntireContent()" title="पूरा पेज कॉपी करें">📋</button>
   <button class="action-btn" onclick="window.print()" title="प्रिंट करें">🖨️</button>
-  <button class="action-btn" onclick="window.location.href='math9.html'" title="कक्षा 9 गणित पोर्टल पर लौटें">🏠</button>
+  <button class="action-btn" onclick="window.location.href='math9.html'" title="कक्षा 9 पोर्टल पर लौटें">🏠</button>
 </div>
 
-<!-- Main Canvas -->
-<div id="contentToCopy" class="container">
+<div id="contentToCopy">
 
-  <!-- Top Navigation Chaining -->
-  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; max-width:1350px; margin:0 auto 25px auto;">
-    <a href="math9.html" style="background:#0f172a; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #64748b;">⬅️ कक्षा 9 गणित पोर्टल</a>
-    <a href="math10.html" style="background:#1e3a8a; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #3b82f6;">📐 कक्षा 10 गणित पोर्टल</a>
-    <a href="qa_master_math9_2.html" style="background:#047857; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #059669;">अगला अध्याय (Ch 2) ➔</a>
+  <!-- Top Navigation Links -->
+  <div class="nav-bar">
+    <a href="math9.html" class="btn-nav">📐 कक्षा 9 गणित पोर्टल</a>
+    <a href="math10.html" class="btn-nav" style="background:#0284c7; border-color:#38bdf8;">📐 कक्षा 10 गणित पोर्टल</a>
+    <a href="qa_master_math9_2.html" class="btn-nav" style="background:#047857; border-color:#10b981;">अगला अध्याय (Ch 2: बहुपद) ➔</a>
   </div>
 
-  <!-- Chapter Header -->
-  <div class="chapter-header">
-    <div class="badge-class">NCERT कक्षा 9 • गणित (Mathematics)</div>
-    <h1>अध्याय 1: संख्या पद्धति</h1>
-    <div style="color: #047857; font-size: 24pt; font-weight: 800;">
-      (Number Systems) • संपूर्ण अभ्यास व बोर्ड मास्टर हल
-    </div>
+  <!-- HERO TITLE -->
+  <div class="hero-title">
+    कक्षा 9 गणित — अध्याय 1: संख्या पद्धति
+    <span>NCERT संपूर्ण अभ्यास 1.1 से 1.5 तक 100% प्रश्नोत्तर व 5 लाइव सिमुलेटर</span>
   </div>
 
-  <!-- Formula & Concept Summary Box -->
-  <div style="background: #f0fdf4; border: 4px solid #059669; border-radius: 18px; padding: 25px 30px; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);">
-    <div style="color: #065f46; font-size: 28pt; font-weight: 900; border-bottom: 3px solid #a7f3d0; padding-bottom: 10px; margin-bottom: 15px;">
-      ⚡ <strong>अध्याय 1: मुख्य सूत्र एवं महत्वपूर्ण संकल्पनाएँ</strong>
-    </div>
-    <div class="math-line">1. <strong>प्राकृतिक संख्याएँ ($\mathbb{N}$):</strong> $1, 2, 3, 4, \dots$</div>
-    <div class="math-line">2. <strong>पूर्ण संख्याएँ ($\mathbb{W}$):</strong> $0, 1, 2, 3, \dots$ (प्रत्येक प्राकृतिक संख्या पूर्ण संख्या है)</div>
-    <div class="math-line">3. <strong>पूर्णांक ($\mathbb{Z}$):</strong> $\dots, -3, -2, -1, 0, 1, 2, 3, \dots$</div>
-    <div class="math-line">4. <strong>परिमेय संख्या ($\mathbb{Q}$):</strong> जिसे $\frac{p}{q}$ के रूप में लिखा जा सके, जहाँ $p, q \in \mathbb{Z}$ तथा $q \neq 0$</div>
-    <div class="math-line">5. <strong>अपरिमेय संख्या:</strong> जिसे $\frac{p}{q}$ रूप में न लिखा जा सके (जैसे $\sqrt{2}, \sqrt{3}, \pi, 0.1010010001\dots$)</div>
-    <div class="math-line">6. <strong>हर का परिमेयकरण:</strong> $\frac{1}{\sqrt{a} + \sqrt{b}} = \frac{\sqrt{a} - \sqrt{b}}{a - b}$</div>
-    <div class="math-line">7. <strong>घातांक नियम:</strong> $a^m \cdot a^n = a^{m+n}, \quad (a^m)^n = a^{mn}, \quad \frac{a^m}{a^n} = a^{m-n}, \quad a^m \cdot b^m = (ab)^m$</div>
+  <!-- FORMULA REVISION CARD (Golden Palette) -->
+  <div class="formula-box">
+    <h3>📌 अध्याय 1: महत्वपूर्ण सूत्र, परिभाषाएँ एवं घातांक नियम</h3>
+    <ul>
+      <li><span class="badge-blue">प्राकृतिक संख्याएँ (N):</span> $1, 2, 3, 4, 5, \dots$</li>
+      <li><span class="badge-orange">पूर्ण संख्याएँ (W):</span> $0, 1, 2, 3, 4, \dots$ (शून्य + प्राकृतिक संख्याएँ)</li>
+      <li><span class="badge-purple">पूर्णांक (Z):</span> $\dots, -3, -2, -1, 0, 1, 2, 3, \dots$</li>
+      <li><span class="badge-green">परिमेय संख्याएँ (Q):</span> जिसे $\frac{p}{q}$ के रूप में लिखा जा सके, जहाँ $p, q$ पूर्णांक हों तथा $q \neq 0$ हो। (दशमलव प्रसार <b>सांत</b> या <b>अनवसानी आवर्ती</b> होता है)</li>
+      <li><span class="badge-red">अपरिमेय संख्याएँ:</span> जिसे $\frac{p}{q}$ के रूप में न लिखा जा सके। (दशमलव प्रसार <b>अनवसानी अनावर्ती</b> होता है, जैसे $\sqrt{2}, \sqrt{3}, \sqrt{5}, \pi, 0.1010010001\dots$)</li>
+      <li><span class="badge-blue">वास्तविक संख्याएँ (R):</span> सभी परिमेय और अपरिमेय संख्याओं का संपूर्ण संग्रह।</li>
+      <li>
+        <span class="badge-orange">वास्तविक संख्याओं के महत्वपूर्ण घातांक नियम:</span>
+        <div class="math-scroll">$$\mathbf{a^m \cdot a^n = a^{m+n} \quad \Big| \quad (a^m)^n = a^{mn} \quad \Big| \quad \frac{a^m}{a^n} = a^{m-n} \quad \Big| \quad a^m \cdot b^m = (ab)^m \quad \Big| \quad a^{-n} = \frac{1}{a^n} \quad \Big| \quad a^0 = 1}$$</div>
+      </li>
+    </ul>
   </div>
 
-  <!-- ========================================================
-       प्रश्नावली 1.1: परिमेय संख्याएँ एवं मध्य संख्याएँ
-       ======================================================== -->
-  <div style="background: #047857; color: #ffffff; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0;">
-    <span style="font-size: 28pt; font-weight: 900;">📌 प्रश्नावली 1.1 (परिमेय संख्याएँ एवं निरूपण)</span>
+  <!-- =========================================================
+       प्रश्नावली 1.1 (EXERCISE 1.1) - 100% COMPLETE
+       ========================================================= -->
+  <div class="part-header">
+    📖 प्रश्नावली 1.1 (Exercise 1.1) — संपूर्ण NCERT हल
   </div>
 
   <!-- Ex 1.1 Q1 -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-green">प्रश्न 1</span> क्या शून्य एक परिमेय संख्या है? क्या इसे आप $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ $p$ और $q$ पूर्णांक हैं और $q \neq 0$ है?</div>
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: क्या शून्य एक परिमेय संख्या है? क्या इसे आप $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ $p$ और $q$ पूर्णांक हैं और $q \neq 0$ है?</h3>
     <div class="step-box-green">
-      <div class="math-line"><strong>उत्तर:</strong> हाँ, शून्य ($0$) एक परिमेय संख्या है।</div>
-      <div class="math-line"><strong>कारण:</strong> हम $0$ को $\frac{p}{q}$ के रूप में लिख सकते हैं:</div>
-      <div class="math-line" style="padding-left: 20px;">$0 = \frac{0}{1} = \frac{0}{2} = \frac{0}{-5}$</div>
-      <div class="math-line">यहाँ अंश $p = 0$ तथा हर $q = 1, 2, \dots$ दोनों पूर्णांक हैं और हर $q \neq 0$ है।</div>
+      <p><b>उत्तर:</b> <strong>हाँ, शून्य ($0$) एक परिमेय संख्या है।</strong></p>
+      <p><b>स्पष्टीकरण:</b></p>
+      <p>शून्य को हम $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ अंश $p = 0$ है तथा हर $q$ कोई भी शून्येतर पूर्णांक (जैसे $1, 2, 3, -1, -5$) हो सकता है।</p>
+      <div class="math-scroll">$$0 = \frac{0}{1} = \frac{0}{2} = \frac{0}{5} = \frac{0}{-3}$$</div>
+      <p>यहाँ $p = 0$ (पूर्णांक) और $q = 1, 2, 5 \neq 0$ (पूर्णांक) हैं। अतः सभी शर्तें पूरी होती हैं।</p>
     </div>
-    <div class="answer-box">
-      <strong>🎯 अंतिम निष्कर्ष:</strong> $0$ एक परिमेय संख्या है क्योंकि इसे $\frac{0}{1}$ के रूप में व्यक्त किया जा सकता है।
-    </div>
-  </div>
-
-  <!-- ========================================================
-       सिमुलेटर 1: संख्या वर्गीकरण व प्रकार परीक्षक
-       ======================================================== -->
-  <div class="sim-card" id="simulators">
-    <div class="sim-header">⚡ लाइव सिमुलेटर 1: संख्या प्रकार व वर्गीकरण परीक्षक</div>
-    <p>कोई भी संख्या चुनिए और जानिए वह किस वर्ग में आती है:</p>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-      <button onclick="testNumType('0')" class="action-btn" style="background:#047857;">जाँचें: 0</button>
-      <button onclick="testNumType('-5')" class="action-btn" style="background:#047857;">जाँचें: -5</button>
-      <button onclick="testNumType('2/3')" class="action-btn" style="background:#047857;">जाँचें: 2/3</button>
-      <button onclick="testNumType('sqrt(2)')" class="action-btn" style="background:#047857;">जाँचें: √2</button>
-      <button onclick="testNumType('pi')" class="action-btn" style="background:#047857;">जाँचें: π</button>
-    </div>
-    <div id="sim1_result" style="background:#ffffff; border:2px solid #059669; border-radius:12px; padding:15px; font-size:22pt; font-weight:800; color:#065f46;">
-      ऊपर दिए गए बटनों पर क्लिक करके संख्या का प्रकार देखें।
+    <div class="answer-highlight">
+      ✅ निष्कर्ष: हाँ, शून्य एक परिमेय संख्या है और इसे $\frac{0}{1}$ के रूप में लिखा जा सकता है।
     </div>
   </div>
 
-  <!-- Ex 1.1 Q2: 3 और 4 के बीच छह परिमेय संख्याएँ -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-green">प्रश्न 2</span> $3$ और $4$ के बीच में छह ($6$) परिमेय संख्याएँ ज्ञात कीजिए:</div>
+  <!-- Ex 1.1 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: $3$ और $4$ के बीच में छह ($6$) परिमेय संख्याएँ ज्ञात कीजिए।</h3>
     <div class="step-box-blue">
-      <div class="math-line"><span class="badge-blue">चरण 1: हर का निर्धारण</span></div>
-      <div class="math-line">हमें $6$ परिमेय संख्याएँ ज्ञात करनी हैं, अतः:</div>
-      <div class="math-line" style="padding-left: 20px;">$n = 6$</div>
-      <div class="math-line" style="padding-left: 20px;">$n + 1 = 6 + 1 = 7$</div>
-      <div class="math-line">अब $3$ और $4$ के अंश व हर में $7$ से गुणा करने पर:</div>
+      <p><b>चरण 1:</b> हमें $6$ परिमेय संख्याएँ ज्ञात करनी हैं, अतः हम $n + 1 = 6 + 1 = 7$ लेते हैं।</p>
+      <p><b>चरण 2:</b> संख्याओं $3$ और $4$ को हर $7$ वाली तुल्य भिन्नों में बदलते हैं:</p>
+      <div class="math-scroll">$$3 = \frac{3 \times 7}{7} = \frac{21}{7}$$</div>
+      <div class="math-scroll">$$4 = \frac{4 \times 7}{7} = \frac{28}{7}$$</div>
+      <p><b>चरण 3:</b> अब $\frac{21}{7}$ और $\frac{28}{7}$ के बीच के अंशों ($22, 23, 24, 25, 26, 27$) को लिखते हैं:</p>
+      <div class="math-scroll">$$\frac{22}{7}, \quad \frac{23}{7}, \quad \frac{24}{7}, \quad \frac{25}{7}, \quad \frac{26}{7}, \quad \frac{27}{7}$$</div>
     </div>
-    <div class="step-box-orange">
-      <div class="math-line"><span class="badge-orange">चरण 2: समतुल्य परिमेय संख्या बनाना</span></div>
-      <div class="math-line">$3 = \frac{3 \times 7}{7} = \frac{21}{7}$</div>
-      <div class="math-line">$4 = \frac{4 \times 7}{7} = \frac{28}{7}$</div>
-    </div>
-    <div class="step-box-green">
-      <div class="math-line"><span class="badge-green">चरण 3: बीच की संख्याएँ लिखना</span></div>
-      <div class="math-line">$\frac{21}{7}$ और $\frac{28}{7}$ के बीच छह परिमेय संख्याएँ:</div>
-      <div class="math-line" style="padding-left: 20px;">$\mathbf{\frac{22}{7}, \ \frac{23}{7}, \ \frac{24}{7}, \ \frac{25}{7}, \ \frac{26}{7}, \ \frac{27}{7}}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 अभीष्ट छह परिमेय संख्याएँ:</strong> $\mathbf{\frac{22}{7}, \frac{23}{7}, \frac{24}{7}, \frac{25}{7}, \frac{26}{7}, \frac{27}{7}}$
+    <div class="answer-highlight">
+      ✅ अभीष्ट $6$ परिमेय संख्याएँ: $\frac{22}{7}, \frac{23}{7}, \frac{24}{7}, \frac{25}{7}, \frac{26}{7}, \frac{27}{7}$ हैं।
     </div>
   </div>
 
-  <!-- ========================================================
-       सिमुलेटर 2: दो संख्याओं के बीच परिमेय संख्या जनरेटर
-       ======================================================== -->
-  <div class="sim-card">
-    <div class="sim-header">⚡ लाइव सिमुलेटर 2: दो परिमेय संख्याओं के बीच 'n' परिमेय संख्या जनरेटर</div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 15px;">
-      <div>
-        <label>संख्या A = </label>
-        <input type="number" id="sim2_a" value="3" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <div>
-        <label>संख्या B = </label>
-        <input type="number" id="sim2_b" value="4" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <div>
-        <label>कितनी संख्याएँ (n) = </label>
-        <input type="number" id="sim2_n" value="5" min="1" max="10" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <button onclick="calcBetweenRationals()" class="action-btn" style="background:#059669;">संख्याएँ निकालें</button>
-    </div>
-    <div id="sim2_result" style="background:#ffffff; border:2px solid #059669; border-radius:12px; padding:15px; font-size:22pt; font-weight:800; color:#065f46;">
-      परिणाम देखने के लिए 'संख्याएँ निकालें' पर क्लिक करें।
-    </div>
-  </div>
-
-  <!-- Ex 1.1 Q3: 3/5 और 4/5 के बीच पाँच परिमेय संख्याएँ -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-green">प्रश्न 3</span> $\frac{3}{5}$ और $\frac{4}{5}$ के बीच पाँच ($5$) परिमेय संख्याएँ ज्ञात कीजिए:</div>
-    <div class="step-box-blue">
-      <div class="math-line"><span class="badge-blue">चरण 1: गुणक का चयन</span></div>
-      <div class="math-line">हमें $5$ संख्याएँ चाहिए, अतः $n + 1 = 5 + 1 = 6$</div>
-      <div class="math-line">दोनों संख्याओं के अंश व हर में $6$ से गुणा करने पर:</div>
-    </div>
-    <div class="step-box-orange">
-      <div class="math-line"><span class="badge-orange">चरण 2: समतुल्य भिन्न निर्माण</span></div>
-      <div class="math-line">$\frac{3}{5} = \frac{3 \times 6}{5 \times 6} = \frac{18}{30}$</div>
-      <div class="math-line">$\frac{4}{5} = \frac{4 \times 6}{5 \times 6} = \frac{24}{30}$</div>
-    </div>
-    <div class="step-box-green">
-      <div class="math-line"><span class="badge-green">चरण 3: मध्य संख्याएँ</span></div>
-      <div class="math-line">$\frac{18}{30}$ और $\frac{24}{30}$ के बीच की पाँच परिमेय संख्याएँ:</div>
-      <div class="math-line" style="padding-left: 20px;">$\mathbf{\frac{19}{30}, \ \frac{20}{30}, \ \frac{21}{30}, \ \frac{22}{30}, \ \frac{23}{30}}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> अभीष्ट पाँच परिमेय संख्याएँ $\mathbf{\frac{19}{30}, \frac{20}{30}, \frac{21}{30}, \frac{22}{30}, \frac{23}{30}}$ हैं।
-    </div>
-  </div>
-
-  <!-- ========================================================
-       प्रश्नावली 1.3: दशमलव प्रसार एवं p/q रूप
-       ======================================================== -->
-  <div style="background: #047857; color: #ffffff; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0;">
-    <span style="font-size: 28pt; font-weight: 900;">📌 प्रश्नावली 1.3 (दशमलव प्रसार एवं p/q रूप में रूपांतरण)</span>
-  </div>
-
-  <!-- Ex 1.3 Q3 (i): 0.6 बार को p/q में बदलना -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-blue">प्रश्न 3 (i)</span> निम्नलिखित को $\frac{p}{q}$ के रूप में व्यक्त कीजिए, जहाँ $p$ और $q$ पूर्णांक हैं तथा $q \neq 0$ है: $0.\bar{6}$</div>
-    <div class="step-box-blue">
-      <div class="math-line"><span class="badge-blue">चरण 1: x मानना</span></div>
-      <div class="math-line">माना $x = 0.\bar{6}$</div>
-      <div class="math-line">$x = 0.6666\dots \quad \text{--- (1)}$</div>
-    </div>
-    <div class="step-box-orange">
-      <div class="math-line"><span class="badge-orange">चरण 2: 10 से गुणा करना</span></div>
-      <div class="math-line">चूँकि केवल एक अंक की पुनरावृत्ति है, अतः समीकरण (1) को $10$ से गुणा करने पर:</div>
-      <div class="math-line">$10x = 6.6666\dots \quad \text{--- (2)}$</div>
-    </div>
-    <div class="step-box-green">
-      <div class="math-line"><span class="badge-green">चरण 3: समीकरण (2) में से समीकरण (1) घटाने पर</span></div>
-      <div class="math-line">$10x - x = (6.6666\dots) - (0.6666\dots)$</div>
-      <div class="math-line">$9x = 6$</div>
-      <div class="math-line">$x = \frac{6}{9}$</div>
-      <div class="math-line">$\mathbf{x = \frac{2}{3}}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $0.\bar{6} = \mathbf{\frac{2}{3}}$
-    </div>
-  </div>
-
-  <!-- ========================================================
-       सिमुलेटर 3: आवर्ती दशमलव से p/q कनवर्टर
-       ======================================================== -->
-  <div class="sim-card">
-    <div class="sim-header">⚡ लाइव सिमुलेटर 3: आवर्ती दशमलव ($0.\bar{x}$) से p/q कनवर्टर</div>
-    <p>किसी भी आवर्ती दशमलव के बार (Bar) वाले अंक दर्ज करें:</p>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 15px;">
-      <div>
-        <label>0. बार वाला अंक (उदा. 6, 47, 001): </label>
-        <input type="text" id="sim3_bar" value="6" style="width:100px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <button onclick="calcRecurringToFraction()" class="action-btn" style="background:#059669;">p/q में बदलें</button>
-    </div>
-    <div id="sim3_result" style="background:#ffffff; border:2px solid #059669; border-radius:12px; padding:15px; font-size:22pt; font-weight:800; color:#065f46;">
-      बटन दबाकर स्टेप-बाय-स्टेप हल देखें।
-    </div>
-  </div>
-
-  <!-- Ex 1.3 Q3 (ii): 0.47 बार -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-blue">प्रश्न 3 (ii)</span> $0.4\bar{7}$ को $\frac{p}{q}$ रूप में व्यक्त कीजिए:</div>
-    <div class="step-box-blue">
-      <div class="math-line"><span class="badge-blue">चरण 1: मानना</span></div>
-      <div class="math-line">माना $x = 0.4\bar{7} = 0.4777\dots \quad \text{--- (1)}$</div>
-    </div>
-    <div class="step-box-orange">
-      <div class="math-line"><span class="badge-orange">चरण 2: 10 व 100 से गुणा करना</span></div>
-      <div class="math-line">समीकरण (1) को $10$ से गुणा करने पर:</div>
-      <div class="math-line">$10x = 4.7777\dots \quad \text{--- (2)}$</div>
-      <div class="math-line">समीकरण (1) को $100$ से गुणा करने पर:</div>
-      <div class="math-line">$100x = 47.7777\dots \quad \text{--- (3)}$</div>
-    </div>
-    <div class="step-box-green">
-      <div class="math-line"><span class="badge-green">चरण 3: घटाने पर</span></div>
-      <div class="math-line">समीकरण (3) में से समीकरण (2) घटाने पर:</div>
-      <div class="math-line">$100x - 10x = 47.7777\dots - 4.7777\dots$</div>
-      <div class="math-line">$90x = 43$</div>
-      <div class="math-line">$\mathbf{x = \frac{43}{90}}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $0.4\bar{7} = \mathbf{\frac{43}{90}}$
-    </div>
-  </div>
-
-  <!-- ========================================================
-       प्रश्नावली 1.4: हर का परिमेयकरण (Rationalization)
-       ======================================================== -->
-  <div style="background: #047857; color: #ffffff; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0;">
-    <span style="font-size: 28pt; font-weight: 900;">📌 प्रश्नावली 1.4 (हर का परिमेयकरण - Rationalization)</span>
-  </div>
-
-  <!-- Ex 1.4 Q5 (i): 1/sqrt(7) -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-purple">प्रश्न 5 (i)</span> निम्नलिखित के हरों का परिमेयकरण कीजिए: $\frac{1}{\sqrt{7}}$</div>
+  <!-- Ex 1.1 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: $\frac{3}{5}$ और $\frac{4}{5}$ के बीच पाँच ($5$) परिमेय संख्याएँ ज्ञात कीजिए।</h3>
     <div class="step-box-purple">
-      <div class="math-line">अंश और हर दोनों में $\sqrt{7}$ से गुणा करने पर:</div>
-      <div class="math-line">$\frac{1}{\sqrt{7}} \times \frac{\sqrt{7}}{\sqrt{7}}$</div>
-      <div class="math-line">$= \frac{\sqrt{7}}{(\sqrt{7})^2}$</div>
-      <div class="math-line">$\mathbf{= \frac{\sqrt{7}}{7}}$</div>
+      <p><b>चरण 1:</b> हमें $5$ संख्याएँ निकालनी हैं, अतः $n + 1 = 5 + 1 = 6$ से अंश तथा हर में गुणा करेंगे।</p>
+      <p><b>चरण 2:</b> दोनों भिन्नों को तुल्य रूप में बदलते हैं:</p>
+      <div class="math-scroll">$$\frac{3}{5} = \frac{3 \times 6}{5 \times 6} = \frac{18}{30}$$</div>
+      <div class="math-scroll">$$\frac{4}{5} = \frac{4 \times 6}{5 \times 6} = \frac{24}{30}$$</div>
+      <p><b>चरण 3:</b> $\frac{18}{30}$ और $\frac{24}{30}$ के बीच की संख्याएँ:</p>
+      <div class="math-scroll">$$\frac{19}{30}, \quad \frac{20}{30} \left(=\frac{2}{3}\right), \quad \frac{21}{30} \left(=\frac{7}{10}\right), \quad \frac{22}{30} \left(=\frac{11}{15}\right), \quad \frac{23}{30}$$</div>
     </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $\mathbf{\frac{\sqrt{7}}{7}}$ (हर $7$ एक परिमेय संख्या बन गया)
+    <div class="answer-highlight">
+      ✅ अभीष्ट $5$ परिमेय संख्याएँ: $\frac{19}{30}, \frac{20}{30}, \frac{21}{30}, \frac{22}{30}, \frac{23}{30}$ हैं।
     </div>
   </div>
 
-  <!-- Ex 1.4 Q5 (ii): 1/(sqrt(7) - sqrt(6)) -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-purple">प्रश्न 5 (ii)</span> हर का परिमेयकरण कीजिए: $\frac{1}{\sqrt{7} - \sqrt{6}}$</div>
-    <div class="step-box-purple">
-      <div class="math-line"><span class="badge-purple">चरण 1: संयुग्मी (Conjugate) से गुणा</span></div>
-      <div class="math-line">$(\sqrt{7} - \sqrt{6})$ का संयुग्मी $(\sqrt{7} + \sqrt{6})$ है।</div>
-      <div class="math-line">अंश और हर दोनों में $(\sqrt{7} + \sqrt{6})$ से गुणा करने पर:</div>
-      <div class="math-line">$= \frac{1}{\sqrt{7} - \sqrt{6}} \times \frac{\sqrt{7} + \sqrt{6}}{\sqrt{7} + \sqrt{6}}$</div>
+  <!-- =========================================================
+       LIVE SIMULATOR 1: RATIONAL NUMBERS GENERATOR (Right at Ex 1.1)
+       ========================================================= -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: किन्हीं दो संख्याओं/भिन्नों के बीच परिमेय संख्याएँ जनरेटर</h3>
+    <p>कक्षा में लाइव प्रयोग करें: कोई भी दो संख्याएँ भरें और चुनें कि बीच में कितनी परिमेय संख्याएँ निकालनी हैं!</p>
+    
+    <div class="sim-controls">
+      <label>संख्या 1 ($a$):</label>
+      <input type="number" id="sim1_n1" class="sim-input" value="3" step="any">
+      
+      <label>संख्या 2 ($b$):</label>
+      <input type="number" id="sim1_n2" class="sim-input" value="4" step="any">
+      
+      <label>संख्याओं की संख्या ($n$):</label>
+      <input type="number" id="sim1_count" class="sim-input" value="6" min="1" max="20">
+      
+      <button class="sim-btn-calc" onclick="calculateSim1()">हल करें ➔</button>
     </div>
+
+    <div id="sim1_output" class="sim-output-box">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <!-- Ex 1.1 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: नीचे दिए गए कथन सत्य हैं या असत्य? कारण के साथ अपने उत्तर दीजिए:</h3>
+    
+    <div class="step-box-blue">
+      <p><b>(i) प्रत्येक प्राकृतिक संख्या एक पूर्ण संख्या होती है।</b></p>
+      <p><strong>उत्तर: सत्य</strong></p>
+      <p><b>कारण:</b> पूर्ण संख्याओं के संग्रह ($W = \{0, 1, 2, 3, \dots\}$) में सभी प्राकृतिक संख्याएँ ($N = \{1, 2, 3, \dots\}$) समाहित होती हैं।</p>
+    </div>
+
     <div class="step-box-orange">
-      <div class="math-line"><span class="badge-orange">चरण 2: सर्वसमिका (a - b)(a + b) = a² - b² का प्रयोग</span></div>
-      <div class="math-line">$= \frac{\sqrt{7} + \sqrt{6}}{(\sqrt{7})^2 - (\sqrt{6})^2}$</div>
-      <div class="math-line">$= \frac{\sqrt{7} + \sqrt{6}}{7 - 6}$</div>
-      <div class="math-line">$= \frac{\sqrt{7} + \sqrt{6}}{1}$</div>
-      <div class="math-line">$\mathbf{= \sqrt{7} + \sqrt{6}}$</div>
+      <p><b>(ii) प्रत्येक पूर्णांक एक पूर्ण संख्या होती है।</b></p>
+      <p><strong>उत्तर: असत्य</strong></p>
+      <p><b>कारण:</b> ऋणात्मक पूर्णांक (जैसे $-1, -2, -3$) पूर्ण संख्याएँ नहीं होते, क्योंकि पूर्ण संख्याएँ केवल $0$ और धनात्मक होती हैं।</p>
     </div>
-    <div class="answer-box">
-      <strong>🎯 अंतिम उत्तर:</strong> $\mathbf{\sqrt{7} + \sqrt{6}}$
+
+    <div class="step-box-red">
+      <p><b>(iii) प्रत्येक परिमेय संख्या एक पूर्ण संख्या होती है।</b></p>
+      <p><strong>उत्तर: असत्य</strong></p>
+      <p><b>कारण:</b> $\frac{1}{2}, \frac{3}{4}, -\frac{5}{7}$ जैसी भिन्नें परिमेय संख्याएँ हैं परंतु ये पूर्ण संख्याएँ नहीं हैं।</p>
     </div>
   </div>
 
-  <!-- ========================================================
-       सिमुलेटर 4: हर का परिमेयकरण लाइव सॉल्वर
-       ======================================================== -->
-  <div class="sim-card">
-    <div class="sim-header">⚡ लाइव सिमुलेटर 4: हर का परिमेयकरण (1/(√A - √B)) सॉल्वर</div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 15px;">
-      <div>
-        <label>A = </label>
-        <input type="number" id="sim4_a" value="7" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <div>
-        <label>B = </label>
-        <input type="number" id="sim4_b" value="6" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <button onclick="calcRationalize()" class="action-btn" style="background:#059669;">परिमेयकरण करें</button>
-    </div>
-    <div id="sim4_result" style="background:#ffffff; border:2px solid #059669; border-radius:12px; padding:15px; font-size:22pt; font-weight:800; color:#065f46;">
-      परिणाम देखने के लिए बटन दबाएं।
-    </div>
+  <!-- =========================================================
+       प्रश्नावली 1.2 (EXERCISE 1.2) - 100% COMPLETE
+       ========================================================= -->
+  <div class="part-header">
+    📖 प्रश्नावली 1.2 (Exercise 1.2) — संपूर्ण NCERT हल
   </div>
 
-  <!-- ========================================================
-       प्रश्नावली 1.5: वास्तविक संख्याओं के लिए घातांक नियम
-       ======================================================== -->
-  <div style="background: #047857; color: #ffffff; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0;">
-    <span style="font-size: 28pt; font-weight: 900;">📌 प्रश्नावली 1.5 (घातांक नियम - Laws of Exponents)</span>
-  </div>
-
-  <!-- Ex 1.5 Q1 (i): 64^(1/2) -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-blue">प्रश्न 1 (i)</span> मान ज्ञात कीजिए: $64^{\frac{1}{2}}$</div>
-    <div class="step-box-blue">
-      <div class="math-line">$64 = 8^2$</div>
-      <div class="math-line">$64^{\frac{1}{2}} = (8^2)^{\frac{1}{2}}$</div>
-      <div class="math-line">घातांक नियम $(a^m)^n = a^{m \times n}$ द्वारा:</div>
-      <div class="math-line">$= 8^{2 \times \frac{1}{2}}$</div>
-      <div class="math-line">$= 8^1$</div>
-      <div class="math-line">$\mathbf{= 8}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $\mathbf{8}$
-    </div>
-  </div>
-
-  <!-- Ex 1.5 Q1 (iii): 125^(1/3) -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-blue">प्रश्न 1 (iii)</span> मान ज्ञात कीजिए: $125^{\frac{1}{3}}$</div>
-    <div class="step-box-blue">
-      <div class="math-line">$125 = 5 \times 5 \times 5 = 5^3$</div>
-      <div class="math-line">$125^{\frac{1}{3}} = (5^3)^{\frac{1}{3}}$</div>
-      <div class="math-line">$= 5^{3 \times \frac{1}{3}}$</div>
-      <div class="math-line">$= 5^1$</div>
-      <div class="math-line">$\mathbf{= 5}$</div>
-    </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $\mathbf{5}$
-    </div>
-  </div>
-
-  <!-- Ex 1.5 Q3 (i): 2^(2/3) . 2^(1/5) -->
-  <div class="qa-card">
-    <div class="math-line"><span class="badge-green">प्रश्न 3 (i)</span> सरल कीजिए: $2^{\frac{2}{3}} \cdot 2^{\frac{1}{5}}$</div>
+  <!-- Ex 1.2 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: नीचे दिए गए कथन सत्य हैं या असत्य? कारण के साथ अपने उत्तर दीजिए:</h3>
+    
     <div class="step-box-green">
-      <div class="math-line">घातांक नियम $a^m \cdot a^n = a^{m + n}$ से:</div>
-      <div class="math-line">$= 2^{\frac{2}{3} + \frac{1}{5}}$</div>
-      <div class="math-line">घातों का ल.स.प. (LCM) $= 15$:</div>
-      <div class="math-line">$\frac{2}{3} + \frac{1}{5} = \frac{10 + 3}{15} = \frac{13}{15}$</div>
-      <div class="math-line">$\mathbf{= 2^{\frac{13}{15}}}$</div>
+      <p><b>(i) प्रत्येक अपरिमेय संख्या एक वास्तविक संख्या होती है।</b></p>
+      <p><strong>उत्तर: सत्य</strong></p>
+      <p><b>कारण:</b> वास्तविक संख्याएँ सभी परिमेय और अपरिमेय संख्याओं का संग्रह होती हैं। अतः प्रत्येक अपरिमेय संख्या वास्तविक संख्या संग्रह का ही हिस्सा है।</p>
     </div>
-    <div class="answer-box">
-      <strong>🎯 उत्तर:</strong> $\mathbf{2^{\frac{13}{15}}}$
-    </div>
-  </div>
 
-  <!-- ========================================================
-       सिमुलेटर 5: घातांक नियम कैलकुलेटर
-       ======================================================== -->
-  <div class="sim-card">
-    <div class="sim-header">⚡ लाइव सिमुलेटर 5: घातांक नियम कैलकुलेटर (aᵐ × aⁿ)</div>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 15px;">
-      <div>
-        <label>आधार (Base a) = </label>
-        <input type="number" id="sim5_base" value="2" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <div>
-        <label>घात m = </label>
-        <input type="number" id="sim5_m" value="3" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <div>
-        <label>घात n = </label>
-        <input type="number" id="sim5_n" value="4" style="width:70px; font-size:18pt; font-weight:bold; padding:4px;">
-      </div>
-      <button onclick="calcExponentRule()" class="action-btn" style="background:#059669;">हल निकालें</button>
+    <div class="step-box-orange">
+      <p><b>(ii) संख्या रेखा का प्रत्येक बिंदु $\sqrt{m}$ के रूप का होता है, जहाँ $m$ एक प्राकृतिक संख्या है।</b></p>
+      <p><strong>उत्तर: असत्य</strong></p>
+      <p><b>कारण:</b> संख्या रेखा पर ऋणात्मक संख्याएँ (जैसे $-2, -3$) भी होती हैं, और कोई भी ऋणात्मक संख्या किसी वास्तविक प्राकृतिक संख्या का वर्गमूल नहीं हो सकती।</p>
     </div>
-    <div id="sim5_result" style="background:#ffffff; border:2px solid #059669; border-radius:12px; padding:15px; font-size:22pt; font-weight:800; color:#065f46;">
-      परिणाम देखने के लिए बटन दबाएं।
+
+    <div class="step-box-red">
+      <p><b>(iii) प्रत्येक वास्तविक संख्या एक अपरिमेय संख्या होती है।</b></p>
+      <p><strong>उत्तर: असत्य</strong></p>
+      <p><b>कारण:</b> वास्तविक संख्या $2$ एक परिमेय संख्या है, अपरिमेय नहीं। (इसी प्रकार $5, \frac{3}{4}$ आदि भी परिमेय हैं)।</p>
     </div>
   </div>
 
-  <!-- Revision Tip -->
-  <div style="background: linear-gradient(135deg, #065f46, #0f172a); color: #ffffff !important; border-radius: 16px; padding: 25px 30px; margin-top: 40px; text-align: center;">
-    <h3 style="color: #34d399; font-size: 28pt !important; margin-bottom: 10px; -webkit-text-stroke: 0px !important;">
-      💡 परीक्षा उपयोगी मास्टर टिप (Board Exam Strategy)
-    </h3>
-    <p style="color: #e2e8f0; font-size: 22pt !important; line-height: 1.8; -webkit-text-stroke: 0px !important;">
-      1. हर का परिमेयकरण करते समय हर के बीच का चिह्न बदलकर ही अंश और हर में गुणा करें।<br>
-      2. आवर्ती दशमलव ($0.\bar{x}$) को हल करते समय जितने अंकों पर बार हो, उतने ही शून्य वाली संख्या ($10, 100, 1000$) से गुणा करें।<br>
-      3. घातांक नियमों में यदि आधार समान हो तो गुणा में घातें जुड़ती हैं ($a^m \cdot a^n = a^{m+n}$) तथा भाग में घटती हैं ($a^m / a^n = a^{m-n}$)।
-    </p>
+  <!-- Ex 1.2 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: क्या सभी धनात्मक पूर्णांकों के वर्गमूल अपरिमेय होते हैं? यदि नहीं, तो एक ऐसी संख्या के वर्गमूल का उदाहरण दीजिए जो एक परिमेय संख्या है।</h3>
+    <div class="step-box-blue">
+      <p><b>उत्तर:</b> <strong>नहीं, सभी धनात्मक पूर्णांकों के वर्गमूल अपरिमेय नहीं होते।</strong></p>
+      <p><b>उदाहरण:</b></p>
+      <div class="math-scroll">$$\sqrt{4} = 2 = \frac{2}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
+      <div class="math-scroll">$$\sqrt{9} = 3 = \frac{3}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
+      <div class="math-scroll">$$\sqrt{16} = 4 = \frac{4}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
+    </div>
+    <div class="answer-highlight">
+      ✅ स्पष्ट उत्तर: पूर्ण वर्ग संख्याओं (जैसे $4, 9, 16, 25$) के वर्गमूल परिमेय संख्याएँ होते हैं।
+    </div>
   </div>
 
-</div>
+  <!-- Ex 1.2 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: दिखाइए कि संख्या रेखा पर $\sqrt{5}$ को किस प्रकार निरूपित किया जा सकता है।</h3>
+    <div class="step-box-purple">
+      <p><b>पाइथागोरस प्रमेय का प्रयोग:</b></p>
+      <p>हम $5$ को दो पूर्ण वर्गों के योग के रूप में लिखते हैं: $5 = 2^2 + 1^2 = 4 + 1$</p>
+      <p>समकोण त्रिभुज $OAB$ में, जहाँ आधार $OA = 2$ मात्रक और लम्ब $AB = 1$ मात्रक हो:</p>
+      <div class="math-scroll">$$OB^2 = OA^2 + AB^2 = 2^2 + 1^2 = 4 + 1 = 5$$</div>
+      <div class="math-scroll">$$OB = \sqrt{5} \text{ मात्रक}$$</div>
+      <p><b>रचना के चरण:</b></p>
+      <ol>
+        <li>संख्या रेखा पर बिंदु $O$ को $0$ और बिंदु $A$ को $2$ पर लें (अर्थात् $OA = 2$ इकाई)।</li>
+        <li>बिंदु $A$ पर $1$ इकाई का लम्ब $AB$ खींचें ($AB = 1$ इकाई)।</li>
+        <li>$O$ को $B$ से मिलाएँ। पाइथागोरस प्रमेय से $OB = \sqrt{5}$ इकाई होगा।</li>
+        <li>परकार में $O$ को केंद्र मानकर $OB$ त्रिज्या का चाप संख्या रेखा पर लगाएँ जो संख्या रेखा को बिंदु $P$ पर काटता है।</li>
+        <li>बिंदु $P$ संख्या रेखा पर <b>$\sqrt{5}$</b> को निरूपित करता है।</li>
+      </ol>
+      
+      <!-- SVG Diagram for Sqrt 5 -->
+      <div style="text-align:center; margin:20px 0;">
+        <svg width="550" height="220" viewBox="0 0 550 220" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:12px;">
+          <!-- Number Line -->
+          <line x1="40" y1="170" x2="510" y2="170" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)" />
+          <!-- Ticks -->
+          <line x1="80" y1="160" x2="80" y2="180" stroke="#0f172a" stroke-width="4" />
+          <text x="75" y="205" font-size="20" font-weight="900">-1</text>
+          
+          <line x1="180" y1="160" x2="180" y2="180" stroke="#0f172a" stroke-width="4" />
+          <text x="175" y="205" font-size="22" font-weight="900">0 (O)</text>
+          
+          <line x1="280" y1="160" x2="280" y2="180" stroke="#0f172a" stroke-width="4" />
+          <text x="275" y="205" font-size="20" font-weight="900">1</text>
+          
+          <line x1="380" y1="160" x2="380" y2="180" stroke="#0f172a" stroke-width="4" />
+          <text x="370" y="205" font-size="22" font-weight="900">2 (A)</text>
+          
+          <!-- Perpendicular AB -->
+          <line x1="380" y1="170" x2="380" y2="70" stroke="#dc2626" stroke-width="5" />
+          <text x="390" y="115" font-size="20" font-weight="900" fill="#dc2626">1 इकाई</text>
+          <text x="375" y="60" font-size="22" font-weight="900" fill="#dc2626">B</text>
+          
+          <!-- Base OA -->
+          <line x1="180" y1="170" x2="380" y2="170" stroke="#2563eb" stroke-width="6" />
+          <text x="260" y="155" font-size="20" font-weight="900" fill="#2563eb">2 इकाई</text>
+          
+          <!-- Hypotenuse OB -->
+          <line x1="180" y1="170" x2="380" y2="70" stroke="#059669" stroke-width="5" />
+          <text x="245" y="105" font-size="22" font-weight="900" fill="#059669">OB = √5</text>
+          
+          <!-- Arc -->
+          <path d="M 380 70 A 223 223 0 0 1 403 170" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6,6" />
+          <circle cx="403" cy="170" r="6" fill="#7c3aed" />
+          <text x="395" y="205" font-size="22" font-weight="900" fill="#7c3aed">P (√5 ≈ 2.236)</text>
+        </svg>
+      </div>
+    </div>
+    <div class="answer-highlight">
+      ✅ बिंदु $P$, मूलबिंदु $O$ से $\sqrt{5} \approx 2.236$ इकाई की दूरी पर स्थित है।
+    </div>
+  </div>
 
-<!-- Interactive Controller Functions -->
+  <!-- Ex 1.2 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: कक्षा के लिए क्रियाकलाप (वर्गमूल सर्पिल की रचना - Square Root Spiral Construction):</h3>
+    <div class="step-box-orange">
+      <p>कागज की एक बड़ी शीट लीजिए और नीचे दी गई विधि से 'वर्गमूल सर्पिल' (Square root spiral) की रचना कीजिए:</p>
+      <ul>
+        <li>बिंदु $O$ लीजिए और $1$ मात्रक लंबाई का रेखाखंड $OP_1$ खींचिए।</li>
+        <li>$P_1$ पर $1$ मात्रक का लम्ब $P_1P_2$ खींचिए। $OP_2 = \sqrt{1^2 + 1^2} = \sqrt{2}$ होगा।</li>
+        <li>अब $OP_2$ पर $1$ मात्रक का लम्ब $P_2P_3$ खींचिए। $OP_3 = \sqrt{(\sqrt{2})^2 + 1^2} = \sqrt{3}$ होगा।</li>
+        <li>इसी प्रकार आगे बढ़ते हुए $\sqrt{4}, \sqrt{5}, \sqrt{6}, \dots, \sqrt{n}$ के बिंदु प्राप्त करते हुए एक सुंदर चक्राकार सर्पिल बनता है।</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       LIVE SIMULATOR 2: REAL NUMBER LINE & SQUARE ROOT SPIRAL (Right at Ex 1.2)
+       ========================================================= -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: संख्या रेखा पर अपरिमेय संख्या (√n) एवं लाइव वर्गमूल सर्पिल</h3>
+    <p>नीचे कोई भी मान चुनें (√2, √3, √5, √7, √10) और देखें कि ज्यामितीय रूप से संख्या रेखा पर इसका स्थान कहाँ आता है!</p>
+
+    <div class="sim-controls">
+      <label>अपरिमेय संख्या चुनें (√n):</label>
+      <select id="sim2_n" class="sim-input" style="width:260px; font-size:20pt;" onchange="drawSim2()">
+        <option value="2">√2 (≈ 1.414)</option>
+        <option value="3">√3 (≈ 1.732)</option>
+        <option value="5" selected>√5 (≈ 2.236)</option>
+        <option value="6">√6 (≈ 2.449)</option>
+        <option value="7">√7 (≈ 2.645)</option>
+        <option value="10">√10 (≈ 3.162)</option>
+      </select>
+      <button class="sim-btn-calc" onclick="drawSim2()">रचना देखें ➔</button>
+    </div>
+
+    <div style="text-align:center; background:#ffffff; border-radius:12px; padding:15px; border:2px solid #cbd5e1;">
+      <canvas id="sim2_canvas" width="700" height="280" style="max-width:100%; height:auto;"></canvas>
+      <div id="sim2_text" style="margin-top:10px; font-weight:900; font-size:24pt; color:#065f46;"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       प्रश्नावली 1.3 (EXERCISE 1.3) - 100% COMPLETE
+       ========================================================= -->
+  <div class="part-header">
+    📖 प्रश्नावली 1.3 (Exercise 1.3) — संपूर्ण NCERT हल
+  </div>
+
+  <!-- Ex 1.3 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: निम्नलिखित भिन्नों को दशमलव रूप में लिखिए और बताइए कि प्रत्येक का दशमलव प्रसार किस प्रकार का है:</h3>
+    
+    <div class="step-box-blue">
+      <p><b>(i) $\frac{36}{100}$</b></p>
+      <div class="math-scroll">$$\frac{36}{100} = 0.36 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><b>(ii) $\frac{1}{11}$</b></p>
+      <p>भाग देने पर शेषफल बार-बार $1$ आता है:</p>
+      <div class="math-scroll">$$\frac{1}{11} = 0.090909\dots = 0.\overline{09} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती \text{ (Non-terminating Repeating)}}$$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(iii) $4\frac{1}{8} = \frac{33}{8}$</b></p>
+      <div class="math-scroll">$$\frac{33}{8} = 4.125 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><b>(iv) $\frac{3}{13}$</b></p>
+      <div class="math-scroll">$$\frac{3}{13} = 0.230769230769\dots = 0.\overline{230769} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती}$$</div>
+    </div>
+
+    <div class="step-box-red">
+      <p><b>(v) $\frac{2}{11}$</b></p>
+      <div class="math-scroll">$$\frac{2}{11} = 0.181818\dots = 0.\overline{18} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती}$$</div>
+    </div>
+
+    <div class="step-box-blue">
+      <p><b>(vi) $\frac{329}{400}$</b></p>
+      <div class="math-scroll">$$\frac{329}{400} = \frac{329}{4 \times 100} = \frac{82.25}{100} = 0.8225 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: आप जानते हैं कि $\frac{1}{7} = 0.\overline{142857}$ है। वास्तव में लंबा भाग दिए बिना क्या आप यह बता सकते हैं कि $\frac{2}{7}, \frac{3}{7}, \frac{4}{7}, \frac{5}{7}, \frac{6}{7}$ के दशमलव प्रसार क्या हैं? यदि हाँ, तो कैसे?</h3>
+    <div class="step-box-green">
+      <p><b>उत्तर: हाँ, हम बिना लंबा भाग दिए मान बता सकते हैं।</b></p>
+      <p>चूँकि $\frac{1}{7} = 0.\overline{142857}$ है, अतः अन्य मान ज्ञात करने के लिए $0.142857$ को क्रमशः $2, 3, 4, 5, 6$ से गुणा करेंगे:</p>
+      <div class="math-scroll">$$\frac{2}{7} = 2 \times \frac{1}{7} = 2 \times 0.\overline{142857} = \mathbf{0.\overline{285714}}$$</div>
+      <div class="math-scroll">$$\frac{3}{7} = 3 \times \frac{1}{7} = 3 \times 0.\overline{142857} = \mathbf{0.\overline{428571}}$$</div>
+      <div class="math-scroll">$$\frac{4}{7} = 4 \times \frac{1}{7} = 4 \times 0.\overline{142857} = \mathbf{0.\overline{571428}}$$</div>
+      <div class="math-scroll">$$\frac{5}{7} = 5 \times \frac{1}{7} = 5 \times 0.\overline{142857} = \mathbf{0.\overline{714285}}$$</div>
+      <div class="math-scroll">$$\frac{6}{7} = 6 \times \frac{1}{7} = 6 \times 0.\overline{142857} = \mathbf{0.\overline{857142}}$$</div>
+    </div>
+    <div class="answer-highlight">
+      ✅ ध्यान दें: सभी परिणामों में अंक वही रहते हैं ($1, 4, 2, 8, 5, 7$), केवल उनका आरंभिक बिंदु बदलता है!
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: निम्नलिखित को $\frac{p}{q}$ के रूप में व्यक्त कीजिए, जहाँ $p$ और $q$ पूर्णांक हैं तथा $q \neq 0$ है:</h3>
+    
+    <!-- Q3(i) -->
+    <div class="step-box-blue">
+      <p><b>(i) $0.\bar{6} = 0.6666\dots$</b></p>
+      <p>माना $x = 0.6666\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>यहाँ केवल $1$ अंक की पुनरावृत्ति है, अतः दोनों पक्षों को $10$ से गुणा करने पर:</p>
+      <div class="math-scroll">$$10x = 6.6666\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <p>समीकरण (2) में से समीकरण (1) को नीचे ऊपर रखकर घटाने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        10x &= 6.6666\dots \\
+        -\quad x &= 0.6666\dots \\
+        \hline
+        9x &= 6.0000 \\
+        x &= \frac{6}{9} = \mathbf{\frac{2}{3}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ $0.\bar{6} = \frac{2}{3}$</div>
+    </div>
+
+    <!-- Q3(ii) -->
+    <div class="step-box-orange">
+      <p><b>(ii) $0.4\bar{7} = 0.47777\dots$</b></p>
+      <p>माना $x = 0.47777\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>पहले $10$ से गुणा करने पर (दशमलव आवर्ती अंक के पास लाने हेतु):</p>
+      <div class="math-scroll">$$10x = 4.7777\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <p>अब समीकरण (2) को पुनः $10$ से गुणा करने पर ($100$ से):</p>
+      <div class="math-scroll">$$100x = 47.7777\dots \quad \text{--- (समीकरण 3)}$$</div>
+      <p>समीकरण (3) में से समीकरण (2) घटाने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        100x &= 47.7777\dots \\
+        -\quad 10x &= 4.7777\dots \\
+        \hline
+        90x &= 43.0000 \\
+        x &= \mathbf{\frac{43}{90}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ $0.4\bar{7} = \frac{43}{90}$</div>
+    </div>
+
+    <!-- Q3(iii) -->
+    <div class="step-box-purple">
+      <p><b>(iii) $0.\overline{001} = 0.001001001\dots$</b></p>
+      <p>माना $x = 0.001001001\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>यहाँ $3$ अंकों पर बार है, अतः दोनों पक्षों को $1000$ से गुणा करने पर:</p>
+      <div class="math-scroll">$$1000x = 1.001001001\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <p>समीकरण (2) में से समीकरण (1) घटाने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        1000x &= 1.001001001\dots \\
+        -\quad x &= 0.001001001\dots \\
+        \hline
+        999x &= 1.0000 \\
+        x &= \mathbf{\frac{1}{999}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ $0.\overline{001} = \frac{1}{999}$</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       LIVE SIMULATOR 3: RECURRING DECIMAL TO P/Q (Right at Ex 1.3)
+       ========================================================= -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: आवर्ती दशमलव (0.ā) को p/q भिन्न में बदलने का लाइव सॉल्वर</h3>
+    <p>किसी भी आवर्ती दशमलव संख्या का मान भरें और दोनों समीकरणों के घटाव के साथ पूरा चरणबद्ध हल देखें!</p>
+
+    <div class="sim-controls">
+      <label>पूर्णांक भाग:</label>
+      <input type="number" id="sim3_int" class="sim-input" value="0" style="width:90px;">
+      
+      <label>अनावर्ती दशमलव भाग:</label>
+      <input type="text" id="sim3_nonrep" class="sim-input" value="4" style="width:110px;" placeholder="जैसे 4">
+      
+      <label>आवर्ती भाग (बार वाले अंक):</label>
+      <input type="text" id="sim3_rep" class="sim-input" value="7" style="width:110px;" placeholder="जैसे 7">
+
+      <button class="sim-btn-calc" onclick="calculateSim3()">p/q में बदलें ➔</button>
+    </div>
+
+    <div id="sim3_output" class="sim-output-box">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: $0.99999\dots$ को $\frac{p}{q}$ के रूप में व्यक्त कीजिए। क्या आप अपने उत्तर से आश्चर्यचकित हैं?</h3>
+    <div class="step-box-green">
+      <p><b>चरण 1:</b> माना $x = 0.99999\dots \quad \text{--- (1)}$</p>
+      <p><b>चरण 2:</b> $10$ से दोनों ओर गुणा करने पर:</p>
+      <div class="math-scroll">$$10x = 9.99999\dots \quad \text{--- (2)}$$</div>
+      <p><b>चरण 3:</b> समीकरण (2) में से (1) घटाने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        10x - x &= 9.99999\dots - 0.99999\dots \\
+        9x &= 9 \\
+        x &= \frac{9}{9} = \mathbf{1}
+        \end{aligned}$$
+      </div>
+      <p><b>चर्चा एवं आश्चर्य:</b> हाँ, $0.99999\dots = 1$ आना आश्चर्यजनक प्रतीत होता है।</p>
+      <p>परंतु $1$ और $0.99999\dots$ के बीच कोई अंतर नहीं है (अंतर $= 0.0000\dots = 0$)! जैसे-जैसे $9$ की संख्या अनंत तक बढ़ती है, यह मान ठीक $1$ के बराबर हो जाता है।</p>
+    </div>
+    <div class="answer-highlight">
+      ✅ उत्तर: $0.99999\dots = 1$
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: $\frac{1}{17}$ के दशमलव प्रसार में अंकों के पुनरावृत्ति खंड में अंकों की अधिकतम संख्या क्या हो सकती है? अपने उत्तर की जाँच के लिए विभाजन क्रिया कीजिए।</h3>
+    <div class="step-box-blue">
+      <p><b>नियम:</b> किसी भी भिन्न $\frac{1}{q}$ में पुनरावृत्ति खंड में अंकों की अधिकतम संख्या हमेशा <b>$(q - 1)$</b> हो सकती है।</p>
+      <p>यहाँ $q = 17$ है, अतः अधिकतम संभव अंकों की संख्या $= 17 - 1 = \mathbf{16}$ हो सकती है।</p>
+      <p><b>विभाजन क्रिया द्वारा मान:</b></p>
+      <div class="math-scroll">$$\frac{1}{17} = \mathbf{0.\overline{0588235294117647}}$$</div>
+      <p>यहाँ ठीक $16$ अंकों के बाद पुनः शेषफल $1$ आ जाता है और अंकों का वही क्रम दोबारा शुरू होता है।</p>
+    </div>
+    <div class="answer-highlight">
+      ✅ पुनरावृत्ति खंड में अंकों की कुल संख्या = 16 अंक।
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: $\frac{p}{q}$ ($q \neq 0$) के रूप की परिमेय संख्याओं के अनेक उदाहरण लीजिए जहाँ $p$ और $q$ में $1$ के अतिरिक्त कोई अन्य उभयनिष्ठ गुणनखंड न हो और जिसका सांत दशमलव निरूपण हो। क्या आप अनुमान लगा सकते हैं कि $q$ को कौन सा गुण अवश्य संतुष्ट करना चाहिए?</h3>
+    <div class="step-box-purple">
+      <p><b>उदाहरण:</b></p>
+      <ul>
+        <li>$\frac{1}{2} = 0.5 \quad (q = 2 = 2^1)$</li>
+        <li>$\frac{7}{5} = 1.4 \quad (q = 5 = 5^1)$</li>
+        <li>$\frac{3}{4} = 0.75 \quad (q = 4 = 2^2)$</li>
+        <li>$\frac{13}{10} = 1.3 \quad (q = 10 = 2^1 \times 5^1)$</li>
+        <li>$\frac{9}{25} = 0.36 \quad (q = 25 = 5^2)$</li>
+      </ul>
+      <p><b>निष्कर्ष / गुण:</b></p>
+      <p>किसी परिमेय संख्या $\frac{p}{q}$ का दशमलव प्रसार केवल तभी <b>सांत (Terminating)</b> होता है जब हर $q$ के अभाज्य गुणनखंडन में <b>केवल $2$ की घातें, केवल $5$ की घातें, या दोनों की घातें ($2^m \times 5^n$)</b> उपस्थित हों।</p>
+    </div>
+    <div class="answer-highlight">
+      ✅ अनिवार्य गुण: हर $q$ का अभाज्य गुणनखंड रूप $2^m \times 5^n$ (जहाँ $m, n$ ऋणेतर पूर्णांक हैं) होना चाहिए।
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q7 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 7: ऐसी तीन संख्याएँ लिखिए जिनके दशमलव प्रसार अनवसानी अनावर्ती (Non-terminating Non-repeating) हों।</h3>
+    <div class="step-box-orange">
+      <p>अनवसानी अनावर्ती दशमलव प्रसार वाली संख्याएँ <b>अपरिमेय संख्याएँ</b> होती हैं। तीन उदाहरण:</p>
+      <div class="math-scroll">$$\text{संख्या 1: } 0.101001000100001000001\dots$$</div>
+      <div class="math-scroll">$$\text{संख्या 2: } 0.202002000200002000002\dots$$</div>
+      <div class="math-scroll">$$\text{संख्या 3: } \sqrt{2} = 1.414213562373095\dots$$</div>
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q8 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 8: परिमेय संख्याओं $\frac{5}{7}$ और $\frac{9}{11}$ के बीच तीन अलग-अलग अपरिमेय संख्याएँ ज्ञात कीजिए।</h3>
+    <div class="step-box-green">
+      <p><b>चरण 1:</b> दोनों भिन्नों का दशमलव प्रसार निकालते हैं:</p>
+      <div class="math-scroll">$$\frac{5}{7} = 0.714285\dots$$</div>
+      <div class="math-scroll">$$\frac{9}{11} = 0.818181\dots$$</div>
+      <p><b>चरण 2:</b> हमें $0.714285\dots$ और $0.818181\dots$ के बीच तीन अनवसानी अनावर्ती संख्याएँ लिखनी हैं:</p>
+      <div class="math-scroll">$$\text{पहली संख्या: } \mathbf{0.7307300730007300007\dots}$$</div>
+      <div class="math-scroll">$$\text{दूसरी संख्या: } \mathbf{0.7507500750007500007\dots}$$</div>
+      <div class="math-scroll">$$\text{तीसरी संख्या: } \mathbf{0.7907900790007900007\dots}$$</div>
+    </div>
+    <div class="answer-highlight">
+      ✅ अभीष्ट अपरिमेय संख्याएँ: $0.7307300\dots, 0.7507500\dots, 0.7907900\dots$
+    </div>
+  </div>
+
+  <!-- Ex 1.3 Q9 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 9: बताइए कि निम्नलिखित संख्याओं में कौन-कौन संख्याएँ परिमेय और कौन-कौन संख्याएँ अपरिमेय हैं:</h3>
+    
+    <div class="step-box-red">
+      <p><b>(i) $\sqrt{23}$</b> $\rightarrow$ <strong>अपरिमेय (Irrational)</strong> (चूँकि $23$ एक पूर्ण वर्ग नहीं है)</p>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(ii) $\sqrt{225} = 15 = \frac{15}{1}$</b> $\rightarrow$ <strong>परिमेय (Rational)</strong> (यह एक पूर्ण वर्ग है)</p>
+    </div>
+
+    <div class="step-box-blue">
+      <p><b>(iii) $0.3796$</b> $\rightarrow$ <strong>परिमेय (Rational)</strong> (इसका दशमलव प्रसार सांत है)</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p><b>(iv) $7.478478\dots = 7.\overline{478}$</b> $\rightarrow$ <strong>परिमेय (Rational)</strong> (अनवसानी आवर्ती है)</p>
+    </div>
+
+    <div class="step-box-red">
+      <p><b>(v) $1.101001000100001\dots$</b> $\rightarrow$ <strong>अपरिमेय (Irrational)</strong> (अनवसानी अनावर्ती है)</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       प्रश्नावली 1.4 (EXERCISE 1.4) - 100% COMPLETE
+       ========================================================= -->
+  <div class="part-header">
+    📖 प्रश्नावली 1.4 (Exercise 1.4) — संपूर्ण NCERT हल
+  </div>
+
+  <!-- Ex 1.4 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: बताइए नीचे दी गई संख्याओं में कौन-कौन परिमेय हैं और कौन-कौन अपरिमेय हैं:</h3>
+    
+    <div class="step-box-red">
+      <p><b>(i) $2 - \sqrt{5}$</b></p>
+      <p><strong>उत्तर: अपरिमेय</strong></p>
+      <p><b>कारण:</b> एक परिमेय संख्या और एक अपरिमेय संख्या का अंतर सदैव अपरिमेय होता है।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(ii) $(3 + \sqrt{23}) - \sqrt{23}$</b></p>
+      <div class="math-scroll">$$= 3 + \sqrt{23} - \sqrt{23} = 3 = \frac{3}{1}$$</div>
+      <p><strong>उत्तर: परिमेय</strong></p>
+    </div>
+
+    <div class="step-box-blue">
+      <p><b>(iii) $\frac{2\sqrt{7}}{7\sqrt{7}}$</b></p>
+      <div class="math-scroll">$$= \frac{2}{7}$$</div>
+      <p><strong>उत्तर: परिमेय</strong></p>
+    </div>
+
+    <div class="step-box-red">
+      <p><b>(iv) $\frac{1}{\sqrt{2}}$</b></p>
+      <p><strong>उत्तर: अपरिमेय</strong> (परिमेय और अपरिमेय संख्या का भागफल अपरिमेय होता है)</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><b>(v) $2\pi$</b></p>
+      <p><strong>उत्तर: अपरिमेय</strong> ($\pi$ एक अपरिमेय संख्या है, अतः $2 \times \pi$ भी अपरिमेय होगी)</p>
+    </div>
+  </div>
+
+  <!-- Ex 1.4 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: निम्नलिखित व्यंजकों में से प्रत्येक व्यंजक को सरल कीजिए:</h3>
+    
+    <!-- Q2(i) -->
+    <div class="step-box-blue">
+      <p><b>(i) $(3 + \sqrt{3})(2 + \sqrt{2})$</b></p>
+      <p>वितरण नियम से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        &= 3(2 + \sqrt{2}) + \sqrt{3}(2 + \sqrt{2}) \\
+        &= 6 + 3\sqrt{2} + 2\sqrt{3} + \sqrt{6}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $6 + 3\sqrt{2} + 2\sqrt{3} + \sqrt{6}$</div>
+    </div>
+
+    <!-- Q2(ii) -->
+    <div class="step-box-green">
+      <p><b>(ii) $(3 + \sqrt{3})(3 - \sqrt{3})$</b></p>
+      <p>सर्वसमिका $(a+b)(a-b) = a^2 - b^2$ का प्रयोग करने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        &= 3^2 - (\sqrt{3})^2 \\
+        &= 9 - 3 = \mathbf{6}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: 6</div>
+    </div>
+
+    <!-- Q2(iii) -->
+    <div class="step-box-orange">
+      <p><b>(iii) $(\sqrt{5} + \sqrt{2})^2$</b></p>
+      <p>सर्वसमिका $(a+b)^2 = a^2 + 2ab + b^2$ से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        &= (\sqrt{5})^2 + 2(\sqrt{5})(\sqrt{2}) + (\sqrt{2})^2 \\
+        &= 5 + 2\sqrt{10} + 2 = \mathbf{7 + 2\sqrt{10}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $7 + 2\sqrt{10}$</div>
+    </div>
+
+    <!-- Q2(iv) -->
+    <div class="step-box-purple">
+      <p><b>(iv) $(\sqrt{5} - \sqrt{2})(\sqrt{5} + \sqrt{2})$</b></p>
+      <p>सर्वसमिका $(a-b)(a+b) = a^2 - b^2$ से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        &= (\sqrt{5})^2 - (\sqrt{2})^2 \\
+        &= 5 - 2 = \mathbf{3}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: 3</div>
+    </div>
+  </div>
+
+  <!-- Ex 1.4 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: याद कीजिए कि $\pi$ को एक वृत्त की परिधि ($c$) और उसके व्यास ($d$) के अनुपात से परिभाषित किया जाता है, अर्थात् $\pi = \frac{c}{d}$। यह इस तथ्य का अंतर्विरोध करता प्रतीत होता है कि $\pi$ अपरिमेय है। इस अंतर्विरोध का आप किस प्रकार निराकरण करेंगे?</h3>
+    <div class="step-box-green">
+      <p><b>निराकरण / स्पष्टीकरण:</b></p>
+      <p><strong>यहाँ कोई अंतर्विरोध नहीं है।</strong></p>
+      <p>जब भी हम किसी पैमाने (Scale) या अन्य किसी युक्ति से किसी लंबाई को मापते हैं, तो हमें केवल एक <b>सन्निकट (Approximate) परिमेय मान</b> ही प्राप्त होता है, यथार्थ मान नहीं।</p>
+      <p>अतः हम यह अनुभव नहीं कर पाते कि परिधि $c$ या व्यास $d$ में से कोई एक (या दोनों) अपरिमेय संख्या है। चूँकि $c$ या $d$ में से कम से कम एक अपरिमेय है, इसलिए उनका अनुपात $\frac{c}{d} = \pi$ एक <b>अपरिमेय संख्या</b> ही होती है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 1.4 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: संख्या रेखा पर $\sqrt{9.3}$ को निरूपित कीजिए (ज्यामितीय विधि)।</h3>
+    <div class="step-box-blue">
+      <p><b>रचना के चरण:</b></p>
+      <ol>
+        <li>एक रेखा पर रेखाखंड $AB = 9.3$ सेमी खींचिए।</li>
+        <li>$B$ से $1$ सेमी की दूरी पर एक बिंदु $C$ लीजिए, जिससे $AC = 9.3 + 1 = 10.3$ सेमी हो जाए।</li>
+        <li>रेखाखंड $AC$ का लम्ब-समद्विभाजक खींचकर उसका मध्य बिंदु $O$ ज्ञात कीजिए ($OA = OC = \frac{10.3}{2} = 5.15$ सेमी)।</li>
+        <li>$O$ को केंद्र मानकर $OA$ त्रिज्या का एक अर्धवृत्त खींचिए।</li>
+        <li>बिंदु $B$ पर रेखा $AC$ पर लम्ब खींचिए जो अर्धवृत्त को बिंदु $D$ पर काटता है। ज्यामिति से <b>$BD = \sqrt{9.3}$</b> होगा।</li>
+        <li>अब $B$ को मूलबिंदु ($0$) मानकर तथा $BD$ त्रिज्या लेकर एक चाप लगाएँ जो संख्या रेखा को बिंदु $E$ पर काटता है। बिंदु $E$, $\sqrt{9.3}$ को निरूपित करता है।</li>
+      </ol>
+    </div>
+    <div class="answer-highlight">
+      ✅ दूरी $BE = \sqrt{9.3} \approx 3.05$ सेमी।
+    </div>
+  </div>
+
+  <!-- Ex 1.4 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: निम्नलिखित के हरों का परिमेयकरण कीजिए:</h3>
+    
+    <!-- Q5(i) -->
+    <div class="step-box-blue">
+      <p><b>(i) $\frac{1}{\sqrt{7}}$</b></p>
+      <p>अंश और हर में $\sqrt{7}$ से गुणा करने पर:</p>
+      <div class="math-scroll">$$\frac{1}{\sqrt{7}} = \frac{1 \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} = \mathbf{\frac{\sqrt{7}}{7}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{7}}{7}$</div>
+    </div>
+
+    <!-- Q5(ii) -->
+    <div class="step-box-green">
+      <p><b>(ii) $\frac{1}{\sqrt{7} - \sqrt{6}}$</b></p>
+      <p>हर के संयुग्मी $(\sqrt{7} + \sqrt{6})$ से अंश व हर में गुणा करने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        \frac{1}{\sqrt{7} - \sqrt{6}} &= \frac{1 \times (\sqrt{7} + \sqrt{6})}{(\sqrt{7} - \sqrt{6})(\sqrt{7} + \sqrt{6})} \\
+        &= \frac{\sqrt{7} + \sqrt{6}}{(\sqrt{7})^2 - (\sqrt{6})^2} \\
+        &= \frac{\sqrt{7} + \sqrt{6}}{7 - 6} = \mathbf{\sqrt{7} + \sqrt{6}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $\sqrt{7} + \sqrt{6}$</div>
+    </div>
+
+    <!-- Q5(iii) -->
+    <div class="step-box-purple">
+      <p><b>(iii) $\frac{1}{\sqrt{5} + \sqrt{2}}$</b></p>
+      <p>संयुग्मी $(\sqrt{5} - \sqrt{2})$ से अंश व हर में गुणा करने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        \frac{1}{\sqrt{5} + \sqrt{2}} &= \frac{1 \times (\sqrt{5} - \sqrt{2})}{(\sqrt{5} + \sqrt{2})(\sqrt{5} - \sqrt{2})} \\
+        &= \frac{\sqrt{5} - \sqrt{2}}{(\sqrt{5})^2 - (\sqrt{2})^2} \\
+        &= \frac{\sqrt{5} - \sqrt{2}}{5 - 2} = \mathbf{\frac{\sqrt{5} - \sqrt{2}}{3}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{5} - \sqrt{2}}{3}$</div>
+    </div>
+
+    <!-- Q5(iv) -->
+    <div class="step-box-orange">
+      <p><b>(iv) $\frac{1}{\sqrt{7} - 2}$</b></p>
+      <p>संयुग्मी $(\sqrt{7} + 2)$ से अंश व हर में गुणा करने पर:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        \frac{1}{\sqrt{7} - 2} &= \frac{1 \times (\sqrt{7} + 2)}{(\sqrt{7} - 2)(\sqrt{7} + 2)} \\
+        &= \frac{\sqrt{7} + 2}{(\sqrt{7})^2 - (2)^2} \\
+        &= \frac{\sqrt{7} + 2}{7 - 4} = \mathbf{\frac{\sqrt{7} + 2}{3}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{7} + 2}{3}$</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       LIVE SIMULATOR 4: RATIONALIZING THE DENOMINATOR (Right at Ex 1.4)
+       ========================================================= -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: हर का परिमेयकरण (Rationalising Denominators) लाइव सॉल्वर</h3>
+    <p>किसी भी करणी मान को भरें और संयुग्मी से गुणा करके हर का परिमेयकरण चरणबद्ध रूप से देखें!</p>
+
+    <div class="sim-controls">
+      <label>अंश ($N$):</label>
+      <input type="number" id="sim4_num" class="sim-input" value="1" style="width:90px;">
+      
+      <label>हर पहला पद ($a$): $\sqrt{a} \rightarrow$</label>
+      <input type="number" id="sim4_a" class="sim-input" value="7" style="width:90px;">
+      
+      <label>चिन्ह:</label>
+      <select id="sim4_sign" class="sim-input" style="width:90px;">
+        <option value="-">-</option>
+        <option value="+">+</option>
+      </select>
+
+      <label>हर दूसरा पद ($b$): $\sqrt{b} \rightarrow$</label>
+      <input type="number" id="sim4_b" class="sim-input" value="6" style="width:90px;">
+
+      <button class="sim-btn-calc" onclick="calculateSim4()">परिमेयकरण करें ➔</button>
+    </div>
+
+    <div id="sim4_output" class="sim-output-box">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+  <!-- =========================================================
+       प्रश्नावली 1.5 (EXERCISE 1.5) - 100% COMPLETE
+       ========================================================= -->
+  <div class="part-header">
+    📖 प्रश्नावली 1.5 (Exercise 1.5) — संपूर्ण NCERT हल (घातांक नियम)
+  </div>
+
+  <!-- Ex 1.5 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: मान ज्ञात कीजिए:</h3>
+    
+    <div class="step-box-blue">
+      <p><b>(i) $64^{1/2}$</b></p>
+      <p>$64 = 8^2$ लिखने पर, नियम $(a^m)^n = a^{mn}$ से:</p>
+      <div class="math-scroll">$$64^{1/2} = (8^2)^{1/2} = 8^{2 \times \frac{1}{2}} = 8^1 = \mathbf{8}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 8</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(ii) $32^{1/5}$</b></p>
+      <p>$32 = 2^5$ लिखने पर:</p>
+      <div class="math-scroll">$$32^{1/5} = (2^5)^{1/5} = 2^{5 \times \frac{1}{5}} = 2^1 = \mathbf{2}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 2</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><b>(iii) $125^{1/3}$</b></p>
+      <p>$125 = 5^3$ लिखने पर:</p>
+      <div class="math-scroll">$$125^{1/3} = (5^3)^{1/3} = 5^{3 \times \frac{1}{3}} = 5^1 = \mathbf{5}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 5</div>
+    </div>
+  </div>
+
+  <!-- Ex 1.5 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: मान ज्ञात कीजिए:</h3>
+    
+    <div class="step-box-blue">
+      <p><b>(i) $9^{3/2}$</b></p>
+      <p>$9 = 3^2$ लिखने पर:</p>
+      <div class="math-scroll">$$9^{3/2} = (3^2)^{3/2} = 3^{2 \times \frac{3}{2}} = 3^3 = 3 \times 3 \times 3 = \mathbf{27}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 27</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(ii) $32^{2/5}$</b></p>
+      <p>$32 = 2^5$ लिखने पर:</p>
+      <div class="math-scroll">$$32^{2/5} = (2^5)^{2/5} = 2^{5 \times \frac{2}{5}} = 2^2 = \mathbf{4}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 4</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><b>(iii) $16^{3/4}$</b></p>
+      <p>$16 = 2^4$ लिखने पर:</p>
+      <div class="math-scroll">$$16^{3/4} = (2^4)^{3/4} = 2^{4 \times \frac{3}{4}} = 2^3 = \mathbf{8}$$</div>
+      <div class="answer-highlight">✅ उत्तर: 8</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><b>(iv) $125^{-1/3}$</b></p>
+      <p>$125 = 5^3$ तथा नियम $a^{-n} = \frac{1}{a^n}$ से:</p>
+      <div class="math-scroll">$$125^{-1/3} = (5^3)^{-1/3} = 5^{3 \times \left(-\frac{1}{3}\right)} = 5^{-1} = \mathbf{\frac{1}{5}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: $\frac{1}{5}$</div>
+    </div>
+  </div>
+
+  <!-- Ex 1.5 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: सरल कीजिए:</h3>
+    
+    <div class="step-box-blue">
+      <p><b>(i) $2^{2/3} \cdot 2^{1/5}$</b></p>
+      <p>नियम $a^m \cdot a^n = a^{m+n}$ से घातांकों को जोड़ते हैं:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        2^{2/3} \cdot 2^{1/5} &= 2^{\frac{2}{3} + \frac{1}{5}} \\
+        &= 2^{\frac{10 + 3}{15}} = \mathbf{2^{13/15}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $2^{13/15}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><b>(ii) $\left(\frac{1}{3^3}\right)^7$</b></p>
+      <p>नियम $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$ तथा $(a^m)^n = a^{mn}$ से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        \left(\frac{1}{3^3}\right)^7 &= \frac{1^7}{(3^3)^7} = \frac{1}{3^{3 \times 7}} = \mathbf{\frac{1}{3^{21}}} \text{ या } \mathbf{3^{-21}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $\frac{1}{3^{21}}$ या $3^{-21}$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><b>(iii) $\frac{11^{1/2}}{11^{1/4}}$</b></p>
+      <p>नियम $\frac{a^m}{a^n} = a^{m-n}$ से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        \frac{11^{1/2}}{11^{1/4}} &= 11^{\frac{1}{2} - \frac{1}{4}} \\
+        &= 11^{\frac{2 - 1}{4}} = \mathbf{11^{1/4}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $11^{1/4}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><b>(iv) $7^{1/2} \cdot 8^{1/2}$</b></p>
+      <p>नियम $a^m \cdot b^m = (ab)^m$ से:</p>
+      <div class="math-scroll">
+        $$\begin{aligned}
+        7^{1/2} \cdot 8^{1/2} &= (7 \times 8)^{1/2} = \mathbf{56^{1/2}}
+        \end{aligned}$$
+      </div>
+      <div class="answer-highlight">✅ उत्तर: $56^{1/2}$</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       LIVE SIMULATOR 5: LAWS OF EXPONENTS CALCULATOR (Right at Ex 1.5)
+       ========================================================= -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: वास्तविक संख्याओं के घातांक नियम (Laws of Exponents) लाइव सॉल्वर</h3>
+    <p>घातांक संक्रिया चुनें, आधार ($a$) और घातांक ($m, n$) भरें तथा तुरंत परिणाम व प्रयुक्त नियम देखें!</p>
+
+    <div class="sim-controls">
+      <label>नियम चुनें:</label>
+      <select id="sim5_op" class="sim-input" style="width:340px; font-size:20pt;" onchange="calculateSim5()">
+        <option value="mult">a^m × a^n = a^(m+n)</option>
+        <option value="div">a^m ÷ a^n = a^(m-n)</option>
+        <option value="pow">(a^m)^n = a^(m×n)</option>
+        <option value="diff_base">a^m × b^m = (ab)^m</option>
+      </select>
+
+      <label>आधार $a$:</label>
+      <input type="number" id="sim5_a" class="sim-input" value="2" style="width:90px;">
+
+      <label>घातांक $m$:</label>
+      <input type="number" id="sim5_m" class="sim-input" value="3" style="width:90px;">
+
+      <label id="sim5_label_n">घातांक $n$:</label>
+      <input type="number" id="sim5_n" class="sim-input" value="2" style="width:90px;">
+
+      <button class="sim-btn-calc" onclick="calculateSim5()">गणना करें ➔</button>
+    </div>
+
+    <div id="sim5_output" class="sim-output-box">
+      <!-- Generated via JS -->
+    </div>
+  </div>
+
+</div> <!-- /contentToCopy -->
+
+<!-- =========================================================
+     JAVASCRIPT: PROJECTOR CONTROLS & 5 INTERACTIVE SIMULATORS
+     ========================================================= -->
 <script>
+  // ==========================================================
+  // 1. MASTER PROJECTOR CONTROLLER WITH DYNAMIC CSS INJECTION
+  //    (Identical to Class 10 Math standard)
+  // ==========================================================
   var currentWidth = 1350;
   var sizeOffset = 0;
   var weightOffset = 0;
   var strokeOffset = 0;
 
   function getContainer() {
-    return document.getElementById('contentToCopy') || document.querySelector('.container') || document.querySelector('.page-container');
+    return document.getElementById('contentToCopy');
   }
 
-  // 1. W+ / W- : Adjust Canvas Width
+  // W+ / W- : Adjust Canvas Width
   function adjustWidth(amount) {
     currentWidth += amount;
     if (currentWidth < 600) currentWidth = 600;
@@ -564,10 +1448,10 @@
       styleEl.id = 'dynamic-projector-width';
       document.head.appendChild(styleEl);
     }
-    styleEl.innerHTML = '#contentToCopy, .container, .page-container { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
+    styleEl.innerHTML = '#contentToCopy, .container { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
   }
 
-  // 2. A+ / A- : Adjust Font Size Everywhere (Text + MathJax)
+  // A+ / A- : Adjust Font Size Everywhere (Text + MathJax)
   function adjustFontSize(amount) {
     sizeOffset += amount;
     if (sizeOffset < -16) sizeOffset = -16;
@@ -582,14 +1466,16 @@
     
     var basePt = 26 + sizeOffset;
     styleEl.innerHTML = 
-      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
-      'p, div, span, td, th, li, a, label, mjx-container, mjx-math, .MathJax { ' +
+      '#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, ' +
+      '.step-box-blue, .step-box-orange, .step-box-green, .step-box-purple, .step-box-red, ' +
+      '.qa-block, .formula-box, .answer-highlight, mjx-container, mjx-math, .MathJax { ' +
       'font-size: ' + basePt + 'pt !important; } ' +
-      'h1, .chapter-title { font-size: ' + (basePt + 10) + 'pt !important; } ' +
-      'h2, h3, .section-title { font-size: ' + (basePt + 4) + 'pt !important; }';
+      '.hero-title { font-size: ' + (basePt + 14) + 'pt !important; } ' +
+      '.part-header { font-size: ' + (basePt + 8) + 'pt !important; } ' +
+      '.question-heading, .formula-box h3, .sim-title { font-size: ' + (basePt + 4) + 'pt !important; }';
   }
 
-  // 3. B+ / B- : Adjust Font Weight & Text Stroke Everywhere (ALL Text + MathJax)
+  // B+ / B- : Adjust Font Weight & Text Stroke Everywhere
   function adjustFontWeight(amount) {
     weightOffset += amount;
     if (weightOffset < -500) weightOffset = -500;
@@ -610,164 +1496,302 @@
     }
 
     styleEl.innerHTML = 
-      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
-      'p, div, span, td, th, li, a, label, strong, b, mjx-container, mjx-math, mjx-c, .MathJax { ' +
+      '#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, ' +
+      '.step-box-blue, .step-box-orange, .step-box-green, .step-box-purple, .step-box-red, ' +
+      '.hero-title, .part-header, .question-heading, .formula-box, .answer-highlight, ' +
+      'strong, b, mjx-container, mjx-math, mjx-c, .MathJax { ' +
       'font-weight: ' + currentWeight + ' !important; ' +
       '-webkit-text-stroke: ' + currentStroke + 'px currentColor !important; }';
   }
 
-  // 4. Copy Entire Content
-  async function copyEntireContent() {
-    var btn = document.getElementById('floatingCopyBtn');
-    var target = getContainer();
-    if (!target || !btn) return;
-    var content = target.innerHTML;
-
+  // Copy Entire Page Content
+  function copyEntireContent() {
+    var container = getContainer();
+    if (!container) return;
+    var range = document.createRange();
+    range.selectNode(container);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
     try {
-      var blob = new Blob([content], { type: 'text/html' });
-      var item = new ClipboardItem({ 'text/html': blob });
-      await navigator.clipboard.write([item]);
-      btn.innerText = '✅';
-      btn.classList.add('success');
-      setTimeout(function() {
-        btn.innerText = '📋';
-        btn.classList.remove('success');
-      }, 3000);
-    } catch (err) {
-      try {
-        await navigator.clipboard.writeText(target.innerText);
-        btn.innerText = '✅';
-        btn.classList.add('success');
-        setTimeout(function() {
-          btn.innerText = '📋';
-          btn.classList.remove('success');
-        }, 3000);
-      } catch (e2) {
-        alert('कॉपी नहीं हो सका: ' + err);
+      document.execCommand('copy');
+      var btn = document.getElementById('floatingCopyBtn');
+      if (btn) {
+        var old = btn.innerHTML;
+        btn.innerHTML = '✅';
+        setTimeout(function() { btn.innerHTML = old; }, 2000);
       }
+    } catch (e) {}
+    window.getSelection().removeAllRanges();
+  }
+
+  // ==========================================================
+  // 2. SIMULATOR 1 LOGIC: Rational Numbers Generator
+  // ==========================================================
+  function calculateSim1() {
+    var n1 = parseFloat(document.getElementById('sim1_n1').value);
+    var n2 = parseFloat(document.getElementById('sim1_n2').value);
+    var count = parseInt(document.getElementById('sim1_count').value) || 5;
+    var out = document.getElementById('sim1_output');
+
+    if (isNaN(n1) || isNaN(n2)) {
+      out.innerHTML = '<span style="color:#dc2626;">कृपया दोनों संख्याएँ सही भरें।</span>';
+      return;
+    }
+    if (n1 > n2) {
+      var tmp = n1; n1 = n2; n2 = tmp;
+    }
+
+    var mult = count + 1;
+    var diff = (n2 - n1) / mult;
+    var nums = [];
+    for (var i = 1; i <= count; i++) {
+      var val = n1 + (i * diff);
+      nums.push(Number(val.toFixed(4)));
+    }
+
+    var html = '<strong>चरण 1:</strong> हमें ' + count + ' परिमेय संख्याएँ निकालनी हैं, अतः विभाजक गुणक $n + 1 = ' + count + ' + 1 = ' + mult + '$ लेंगे।<br>' +
+      '<strong>चरण 2:</strong> दोनों संख्याओं के बीच की दूरी $\\Delta = \\frac{' + n2 + ' - ' + n1 + '}{' + mult + '} = ' + Number(diff.toFixed(4)) + '$<br>' +
+      '<strong>चरण 3:</strong> अभीष्ट ' + count + ' परिमेय संख्याएँ:<br>' +
+      '<div style="background:#ecfdf5; border:2px solid #a7f3d0; padding:15px; border-radius:10px; margin-top:10px; color:#065f46; font-weight:900;">' +
+      nums.map(function(num, idx) { return 'संख्या ' + (idx + 1) + ': <strong>' + num + '</strong>'; }).join(' | ') +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
-  // 5. Keyboard Shortcuts
-  document.addEventListener('keydown', function(e) {
-    if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement && document.activeElement.tagName) !== -1) return;
-    if (e.key === 'w' || e.key === 'W') {
-      if (e.shiftKey) adjustWidth(-50);
-      else adjustWidth(50);
-    } else if (e.key === '+' || e.key === '=') {
-      adjustFontSize(2);
-    } else if (e.key === '-' || e.key === '_') {
-      adjustFontSize(-2);
-    } else if (e.key === 'b' || e.key === 'B') {
-      if (e.shiftKey) adjustFontWeight(-100);
-      else adjustFontWeight(100);
-    }
-  });
-
-  // Simulator 1: Number Type Classifier
-  function testNumType(val) {
-    var res = document.getElementById('sim1_result');
-    var out = '';
-    if (val === '0') {
-      out = 'संख्या <strong>0</strong>: यह एक <strong>पूर्ण संख्या (Whole Number)</strong>, <strong>पूर्णांक (Integer)</strong> तथा <strong>परिमेय संख्या (Rational Number, 0/1)</strong> है।';
-    } else if (val === '-5') {
-      out = 'संख्या <strong>-5</strong>: यह एक <strong>ऋणात्मक पूर्णांक (Negative Integer)</strong> तथा <strong>परिमेय संख्या (-5/1)</strong> है।';
-    } else if (val === '2/3') {
-      out = 'संख्या <strong>2/3</strong>: यह एक <strong>परिमेय संख्या (Rational Number)</strong> है (दशमलव प्रसार: 0.6666... अनवसानी आवर्ती)।';
-    } else if (val === 'sqrt(2)') {
-      out = 'संख्या <strong>√2</strong>: यह एक <strong>अपरिमेय संख्या (Irrational Number)</strong> है (दशमलव प्रसार: 1.41421356... अनवसानी अनावर्ती)।';
-    } else if (val === 'pi') {
-      out = 'संख्या <strong>π</strong>: यह एक <strong>अपरिमेय संख्या (Irrational Number)</strong> है (लगभग मान 22/7 केवल गणना के लिए प्रयुक्त होता है)।';
-    }
-    res.innerHTML = out;
-  }
-
-  // Simulator 2: Rational Between A and B
-  function calcBetweenRationals() {
-    var a = parseFloat(document.getElementById('sim2_a').value) || 0;
-    var b = parseFloat(document.getElementById('sim2_b').value) || 0;
+  // ==========================================================
+  // 3. SIMULATOR 2 LOGIC: Square Root Number Line & Spiral
+  // ==========================================================
+  function drawSim2() {
     var n = parseInt(document.getElementById('sim2_n').value) || 5;
-    var res = document.getElementById('sim2_result');
-    
-    if (b <= a) {
-      res.innerHTML = 'कृपया B का मान A से बड़ा रखें।';
-      return;
+    var canvas = document.getElementById('sim2_canvas');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W = canvas.width;
+    var H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    var sqrtVal = Math.sqrt(n);
+    var scale = 110;
+    var originX = 120;
+    var originY = 200;
+
+    // Number Line
+    ctx.beginPath();
+    ctx.moveTo(30, originY);
+    ctx.lineTo(W - 30, originY);
+    ctx.strokeStyle = '#0f172a';
+    ctx.lineWidth = 4;
+    ctx.stroke();
+
+    // Ticks
+    for (var i = -1; i <= 4; i++) {
+      var x = originX + (i * scale);
+      ctx.beginPath();
+      ctx.moveTo(x, originY - 10);
+      ctx.lineTo(x, originY + 10);
+      ctx.strokeStyle = '#0f172a';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      ctx.fillStyle = '#0f172a';
+      ctx.font = 'bold 20px system-ui';
+      ctx.textAlign = 'center';
+      ctx.fillText(i === 0 ? '0 (O)' : String(i), x, originY + 35);
     }
-    
-    var step = (b - a) / (n + 1);
-    var items = [];
-    for (var i = 1; i <= n; i++) {
-      var val = a + (i * step);
-      items.push(Math.round(val * 1000) / 1000);
+
+    // Pythagoras Triangle Base & Height
+    var baseUnits = (n === 2 ? 1 : (n === 3 ? Math.sqrt(2) : (n === 5 ? 2 : (n === 6 ? Math.sqrt(5) : (n === 7 ? Math.sqrt(6) : 3)))));
+    var baseX = originX + (baseUnits * scale);
+
+    // Draw Base
+    ctx.beginPath();
+    ctx.moveTo(originX, originY);
+    ctx.lineTo(baseX, originY);
+    ctx.strokeStyle = '#2563eb';
+    ctx.lineWidth = 6;
+    ctx.stroke();
+
+    // Draw Perpendicular
+    var perpY = originY - (1 * scale);
+    ctx.beginPath();
+    ctx.moveTo(baseX, originY);
+    ctx.lineTo(baseX, perpY);
+    ctx.strokeStyle = '#dc2626';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    // Draw Hypotenuse
+    ctx.beginPath();
+    ctx.moveTo(originX, originY);
+    ctx.lineTo(baseX, perpY);
+    ctx.strokeStyle = '#059669';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
+    // Arc to Number Line
+    var targetX = originX + (sqrtVal * scale);
+    ctx.beginPath();
+    ctx.setLineDash([6, 6]);
+    ctx.arc(originX, originY, sqrtVal * scale, -Math.atan2(1 * scale, baseUnits * scale), 0, false);
+    ctx.strokeStyle = '#7c3aed';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Point on Number line
+    ctx.beginPath();
+    ctx.arc(targetX, originY, 7, 0, 2 * Math.PI);
+    ctx.fillStyle = '#7c3aed';
+    ctx.fill();
+
+    ctx.fillStyle = '#7c3aed';
+    ctx.font = 'bold 22px system-ui';
+    ctx.fillText('P (√' + n + ')', targetX, originY - 15);
+
+    document.getElementById('sim2_text').innerHTML = 
+      'संख्या रेखा पर $\\mathbf{\\sqrt{' + n + '} \\approx ' + sqrtVal.toFixed(4) + '}$ इकाई दूरी (बिंदु P) पर स्थित है।';
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([document.getElementById('sim2_text')]).catch(function(){});
     }
-    
-    var out = '<strong>' + a + ' और ' + b + ' के बीच ' + n + ' परिमेय संख्याएँ:</strong><br>' +
-      items.join(', &nbsp; ');
-    res.innerHTML = out;
   }
 
-  // Simulator 3: Recurring to Fraction
-  function calcRecurringToFraction() {
-    var barStr = document.getElementById('sim3_bar').value.trim();
-    var res = document.getElementById('sim3_result');
-    if (!barStr || isNaN(barStr)) {
-      res.innerHTML = 'कृपया वैध अंक दर्ज करें (उदा. 6 या 47)';
+  // ==========================================================
+  // 4. SIMULATOR 3 LOGIC: Recurring Decimal to p/q
+  // ==========================================================
+  function calculateSim3() {
+    var intPart = parseInt(document.getElementById('sim3_int').value) || 0;
+    var nonRepStr = (document.getElementById('sim3_nonrep').value || '').trim();
+    var repStr = (document.getElementById('sim3_rep').value || '').trim();
+    var out = document.getElementById('sim3_output');
+
+    if (!repStr) {
+      out.innerHTML = '<span style="color:#dc2626;">कृपया आवर्ती (बार वाले) अंक अवश्य भरें।</span>';
       return;
     }
-    var len = barStr.length;
-    var den = Math.pow(10, len) - 1;
-    var num = parseInt(barStr);
 
-    function gcd(x, y) { return y === 0 ? x : gcd(y, x % y); }
-    var g = gcd(num, den);
-    var simpNum = num / g;
-    var simpDen = den / g;
+    var m = nonRepStr.length;
+    var k = repStr.length;
+    var fullNumStr = String(intPart) + nonRepStr + repStr;
+    var nonRepFullStr = String(intPart) + nonRepStr;
 
-    var out = '<strong>हल (चरण-दर-चरण):</strong><br>' +
-      'माना x = 0.' + barStr + barStr + barStr + '... &nbsp;&nbsp;--- (1)<br>' +
-      'दोनों पक्षों को ' + Math.pow(10, len) + ' से गुणा करने पर:<br>' +
-      Math.pow(10, len) + 'x = ' + barStr + '.' + barStr + barStr + '... &nbsp;&nbsp;--- (2)<br>' +
-      'समीकरण (2) में से समीकरण (1) घटाने पर:<br>' +
-      den + 'x = ' + num + '<br>' +
-      'x = ' + num + '/' + den + '<br>' +
-      '<strong style="color:#047857; font-size:24pt;">🎯 p/q रूप: ' + num + '/' + den + (g > 1 ? ' = ' + simpNum + '/' + simpDen : '') + '</strong>';
-    
-    res.innerHTML = out;
+    var fullVal = parseInt(fullNumStr);
+    var nonRepVal = parseInt(nonRepFullStr);
+
+    var numerator = fullVal - nonRepVal;
+    var denominator = parseInt('9'.repeat(k) + '0'.repeat(m));
+
+    function gcd(a, b) {
+      return b === 0 ? a : gcd(b, a % b);
+    }
+    var common = gcd(numerator, denominator);
+    var simpNum = numerator / common;
+    var simpDen = denominator / common;
+
+    var displayDecimal = intPart + '.' + nonRepStr + '<span style="text-decoration:overline; font-weight:900;">' + repStr + '</span>';
+
+    var html = '<strong>संख्या:</strong> $' + displayDecimal + '$<br>' +
+      '<strong>चरण 1:</strong> माना $x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots \\quad \\text{--- (1)}$<br>' +
+      (m > 0 ? '<strong>चरण 2:</strong> $10^{' + m + '} = ' + Math.pow(10, m) + '$ से गुणा करने पर:<br>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots \\quad \\text{--- (2)}$<br>' : '') +
+      '<strong>चरण ' + (m > 0 ? '3' : '2') + ':</strong> $10^{' + (m + k) + '} = ' + Math.pow(10, m + k) + '$ से गुणा करने पर:<br>$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots \\quad \\text{--- (3)}$<br>' +
+      '<strong>चरण ' + (m > 0 ? '4' : '3') + ':</strong> समीकरणों को आपस में घटाने पर:<br>' +
+      '$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + fullVal + ' - ' + nonRepVal + ' = ' + numerator + '$$' +
+      '<div style="background:#f0fdf4; border:3px solid #86efac; padding:15px; border-radius:12px; margin-top:10px;">' +
+      '$$\\mathbf{x = \\frac{' + numerator + '}{' + denominator + '} = \\frac{' + simpNum + '}{' + simpDen + '}}$$' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([out]).catch(function(){});
+    }
   }
 
-  // Simulator 4: Rationalize Denominator
-  function calcRationalize() {
+  // ==========================================================
+  // 5. SIMULATOR 4 LOGIC: Denominator Rationalisation
+  // ==========================================================
+  function calculateSim4() {
+    var num = parseInt(document.getElementById('sim4_num').value) || 1;
     var a = parseInt(document.getElementById('sim4_a').value) || 7;
+    var sign = document.getElementById('sim4_sign').value;
     var b = parseInt(document.getElementById('sim4_b').value) || 6;
-    var res = document.getElementById('sim4_result');
+    var out = document.getElementById('sim4_output');
 
-    var diff = a - b;
-    var out = '<strong>व्यंजक:</strong> 1 / (√' + a + ' - √' + b + ')<br>' +
-      'संयुग्मी (√' + a + ' + √' + b + ') से अंश व हर में गुणा करने पर:<br>' +
-      '= (√' + a + ' + √' + b + ') / [(√' + a + ')² - (√' + b + ')²]<br>' +
-      '= (√' + a + ' + √' + b + ') / (' + a + ' - ' + b + ')<br>' +
-      '<strong style="color:#047857; font-size:24pt;">🎯 परिमेयकृत रूप: ' + (diff === 1 ? '√' + a + ' + √' + b : '(√' + a + ' + √' + b + ') / ' + diff) + '</strong>';
+    var oppSign = (sign === '-' ? '+' : '-');
+    var denDiff = (sign === '-' ? (a - b) : (a - b));
 
-    res.innerHTML = out;
+    var html = '<strong>मूल व्यंजक:</strong> $$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$' +
+      '<strong>चरण 1:</strong> हर का संयुग्मी (Conjugate) $=\\mathbf{(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$ होगा।<br>' +
+      '<strong>चरण 2:</strong> अंश और हर दोनों में संयुग्मी से गुणा करने पर:<br>' +
+      '$$\\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$' +
+      '<strong>चरण 3:</strong> हर में $(a-b)(a+b) = a^2 - b^2$ लगाने पर हर $= (\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2 = ' + a + ' - ' + b + ' = ' + (a - b) + '$<br>' +
+      '<div style="background:#eff6ff; border:3px solid #93c5fd; padding:15px; border-radius:12px; margin-top:10px;">' +
+      '$$\\mathbf{\\text{सरल रूप: } ';
+    
+    if (a - b === 1) {
+      html += (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}';
+    } else {
+      html += '\\frac{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}}';
+    }
+    html += '$$</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([out]).catch(function(){});
+    }
   }
 
-  // Simulator 5: Exponent Rule Calculator
-  function calcExponentRule() {
-    var a = parseInt(document.getElementById('sim5_base').value) || 2;
-    var m = parseInt(document.getElementById('sim5_m').value) || 3;
-    var n = parseInt(document.getElementById('sim5_n').value) || 4;
-    var res = document.getElementById('sim5_result');
+  // ==========================================================
+  // 6. SIMULATOR 5 LOGIC: Laws of Exponents
+  // ==========================================================
+  function calculateSim5() {
+    var op = document.getElementById('sim5_op').value;
+    var a = parseFloat(document.getElementById('sim5_a').value) || 2;
+    var m = parseFloat(document.getElementById('sim5_m').value) || 3;
+    var n = parseFloat(document.getElementById('sim5_n').value) || 2;
+    var out = document.getElementById('sim5_output');
 
-    var sum = m + n;
-    var val = Math.pow(a, sum);
+    var html = '';
+    if (op === 'mult') {
+      var resExp = m + n;
+      var resVal = Math.pow(a, resExp);
+      html = '<strong>नियम:</strong> $a^m \\cdot a^n = a^{m+n}$<br>' +
+        '$$' + a + '^{' + m + '} \\cdot ' + a + '^{' + n + '} = ' + a + '^{' + m + ' + ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
+    } else if (op === 'div') {
+      var resExp = m - n;
+      var resVal = Math.pow(a, resExp);
+      html = '<strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$<br>' +
+        '$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}} = ' + a + '^{' + m + ' - ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
+    } else if (op === 'pow') {
+      var resExp = m * n;
+      var resVal = Math.pow(a, resExp);
+      html = '<strong>नियम:</strong> $(a^m)^n = a^{m \\times n}$<br>' +
+        '$$(' + a + '^{' + m + '})^{' + n + '} = ' + a + '^{' + m + ' \\times ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
+    } else {
+      var b = n;
+      var resVal = Math.pow(a * b, m);
+      html = '<strong>नियम:</strong> $a^m \\cdot b^m = (ab)^m$<br>' +
+        '$$' + a + '^{' + m + '} \\cdot ' + b + '^{' + m + '} = (' + a + ' \\times ' + b + ')^{' + m + '} = \\mathbf{(' + (a * b) + ')^{' + m + '}} = ' + resVal + '$$';
+    }
 
-    var out = '<strong>घातांक सूत्र:</strong> aᵐ · aⁿ = aᵐ⁺ⁿ<br>' +
-      a + '<sup>' + m + '</sup> · ' + a + '<sup>' + n + '</sup> = ' + a + '<sup>' + m + ' + ' + n + '</sup><br>' +
-      '= ' + a + '<sup>' + sum + '</sup><br>' +
-      '<strong style="color:#047857; font-size:24pt;">🎯 अंतिम मान = ' + val + '</strong>';
-
-    res.innerHTML = out;
+    out.innerHTML = html;
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([out]).catch(function(){});
+    }
   }
+
+  // ==========================================================
+  // INITIALIZE ALL SIMULATORS ON LOAD
+  // ==========================================================
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSim1();
+    drawSim2();
+    calculateSim3();
+    calculateSim4();
+    calculateSim5();
+  });
 </script>
 
 </body>
