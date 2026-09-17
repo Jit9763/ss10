@@ -687,7 +687,7 @@
     <!-- Ex 2.2 Q1 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 1: निम्नलिखित पर बहुपद $5x - 4x^2 + 3$ के मान ज्ञात कीजिए:</h3>
-      <p>मान लीजिए $p(x) = 5x - 4x^2 + 3 = -4x^2 + 5x + 3$</p>
+      <p>मान लीजिए $p(x) = 5x - 4x^2 + 3$ [मानक रूप: $-4x^2 + 5x + 3]$</p>
 
       <div class="step-box-blue">
         <p><b>(i) $x = 0$ पर:</b></p>
@@ -734,42 +734,107 @@
       
       <div class="step-box-blue">
         <p><b>(i) $p(y) = y^2 - y + 1$</b></p>
+        
+        <p class="step-txt"><strong>1. $y = 0$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(0) &= (0)^2 - (0) + 1 = 1 \\
-        p(1) &= (1)^2 - (1) + 1 = 1 - 1 + 1 = 1 \\
-        p(2) &= (2)^2 - (2) + 1 = 4 - 2 + 1 = 3
+        p(0) &= (0)^2 - (0) + 1 \\
+        &= 0 - 0 + 1 \\
+        &= 1
         \end{aligned}$$</div>
-        <p><b>उत्तर: $p(0) = 1, p(1) = 1, p(2) = 3$</b></p>
+        
+        <p class="step-txt"><strong>2. $y = 1$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= (1)^2 - (1) + 1 \\
+        &= 1 - 1 + 1 \\
+        &= 1
+        \end{aligned}$$</div>
+
+        <p class="step-txt"><strong>3. $y = 2$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= (2)^2 - (2) + 1 \\
+        &= 4 - 2 + 1 \\
+        &= 3
+        \end{aligned}$$</div>
+        
+        <p><b>उत्तर:</b> $p(0) = 1$, &emsp; $p(1) = 1$, &emsp; $p(2) = 3$</p>
       </div>
 
       <div class="step-box-orange">
         <p><b>(ii) $p(t) = 2 + t + 2t^2 - t^3$</b></p>
+        
+        <p class="step-txt"><strong>1. $t = 0$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(0) &= 2 + 0 + 2(0)^2 - (0)^3 = 2 \\
-        p(1) &= 2 + 1 + 2(1)^2 - (1)^3 = 2 + 1 + 2 - 1 = 4 \\
-        p(2) &= 2 + 2 + 2(2)^2 - (2)^3 = 2 + 2 + 8 - 8 = 4
+        p(0) &= 2 + 0 + 2(0)^2 - (0)^3 \\
+        &= 2 + 0 + 0 - 0 \\
+        &= 2
         \end{aligned}$$</div>
-        <p><b>उत्तर: $p(0) = 2, p(1) = 4, p(2) = 4$</b></p>
+
+        <p class="step-txt"><strong>2. $t = 1$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= 2 + 1 + 2(1)^2 - (1)^3 \\
+        &= 2 + 1 + 2 - 1 \\
+        &= 4
+        \end{aligned}$$</div>
+
+        <p class="step-txt"><strong>3. $t = 2$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= 2 + 2 + 2(2)^2 - (2)^3 \\
+        &= 2 + 2 + 8 - 8 \\
+        &= 4
+        \end{aligned}$$</div>
+        
+        <p><b>उत्तर:</b> $p(0) = 2$, &emsp; $p(1) = 4$, &emsp; $p(2) = 4$</p>
       </div>
 
       <div class="step-box-green">
         <p><b>(iii) $p(x) = x^3$</b></p>
+        
+        <p class="step-txt"><strong>1. $x = 0$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(0) &= (0)^3 = 0 \\
-        p(1) &= (1)^3 = 1 \\
-        p(2) &= (2)^3 = 8
+        p(0) &= (0)^3 \\
+        &= 0
         \end{aligned}$$</div>
-        <p><b>उत्तर: $p(0) = 0, p(1) = 1, p(2) = 8$</b></p>
+
+        <p class="step-txt"><strong>2. $x = 1$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= (1)^3 \\
+        &= 1
+        \end{aligned}$$</div>
+
+        <p class="step-txt"><strong>3. $x = 2$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= (2)^3 \\
+        &= 8
+        \end{aligned}$$</div>
+        
+        <p><b>उत्तर:</b> $p(0) = 0$, &emsp; $p(1) = 1$, &emsp; $p(2) = 8$</p>
       </div>
 
       <div class="step-box-purple">
-        <p><b>(iv) $p(x) = (x - 1)(x + 1) = x^2 - 1$</b></p>
+        <p><b>(iv) $p(x) = (x - 1)(x + 1)$</b></p>
+        
+        <p class="step-txt"><strong>1. $x = 0$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(0) &= (0 - 1)(0 + 1) = (-1)(1) = -1 \\
-        p(1) &= (1 - 1)(1 + 1) = (0)(2) = 0 \\
-        p(2) &= (2 - 1)(2 + 1) = (1)(3) = 3
+        p(0) &= (0 - 1)(0 + 1) \\
+        &= (-1)(1) \\
+        &= -1
         \end{aligned}$$</div>
-        <p><b>उत्तर: $p(0) = -1, p(1) = 0, p(2) = 3$</b></p>
+
+        <p class="step-txt"><strong>2. $x = 1$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= (1 - 1)(1 + 1) \\
+        &= (0)(2) \\
+        &= 0
+        \end{aligned}$$</div>
+
+        <p class="step-txt"><strong>3. $x = 2$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= (2 - 1)(2 + 1) \\
+        &= (1)(3) \\
+        &= 3
+        \end{aligned}$$</div>
+        
+        <p><b>उत्तर:</b> $p(0) = -1$, &emsp; $p(1) = 0$, &emsp; $p(2) = 3$</p>
       </div>
     </div>
 
@@ -779,59 +844,106 @@
       
       <div class="step-box-blue">
         <p><b>(i) $p(x) = 3x + 1, \quad x = -\frac{1}{3}$</b></p>
-        <div class="math-scroll">$$p\left(-\frac{1}{3}\right) = 3\left(-\frac{1}{3}\right) + 1 = -1 + 1 = 0$$</div>
-        <p><b>निष्कर्ष: हाँ, $x = -\frac{1}{3}$ बहुपद का शून्यक है।</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(-\frac{1}{3}\right) &= 3\left(-\frac{1}{3}\right) + 1 \\
+        &= -1 + 1 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> चूँकि $p\left(-\frac{1}{3}\right) = 0$ प्राप्त होता है, अतः <b>हाँ, $x = -\frac{1}{3}$ बहुपद का शून्यक है।</b></p>
       </div>
 
       <div class="step-box-red">
         <p><b>(ii) $p(x) = 5x - \pi, \quad x = \frac{4}{5}$</b></p>
-        <div class="math-scroll">$$p\left(\frac{4}{5}\right) = 5\left(\frac{4}{5}\right) - \pi = 4 - \pi \neq 0$$</div>
-        <p><b>निष्कर्ष: नहीं, $x = \frac{4}{5}$ बहुपद का शून्यक नहीं है।</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(\frac{4}{5}\right) &= 5\left(\frac{4}{5}\right) - \pi \\
+        &= 4 - \pi \neq 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> चूँकि $p\left(\frac{4}{5}\right) = 4 - \pi \neq 0$ है, अतः <b>नहीं, $x = \frac{4}{5}$ बहुपद का शून्यक नहीं है।</b></p>
       </div>
 
       <div class="step-box-green">
         <p><b>(iii) $p(x) = x^2 - 1, \quad x = 1, -1$</b></p>
+        <p class="step-txt"><strong>1. $x = 1$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(1) &= (1)^2 - 1 = 1 - 1 = 0 \\
-        p(-1) &= (-1)^2 - 1 = 1 - 1 = 0
+        p(1) &= (1)^2 - 1 \\
+        &= 1 - 1 \\
+        &= 0
         \end{aligned}$$</div>
-        <p><b>निष्कर्ष: हाँ, $x = 1$ और $x = -1$ दोनों शून्यक हैं।</b></p>
+        <p class="step-txt"><strong>2. $x = -1$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^2 - 1 \\
+        &= 1 - 1 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> दोनों मानों पर शेषफल $0$ है, अतः <b>हाँ, $x = 1$ और $x = -1$ दोनों बहुपद के शून्यक हैं।</b></p>
       </div>
 
       <div class="step-box-purple">
         <p><b>(iv) $p(x) = (x + 1)(x - 2), \quad x = -1, 2$</b></p>
+        <p class="step-txt"><strong>1. $x = -1$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(-1) &= (-1 + 1)(-1 - 2) = (0)(-3) = 0 \\
-        p(2) &= (2 + 1)(2 - 2) = (3)(0) = 0
+        p(-1) &= (-1 + 1)(-1 - 2) \\
+        &= (0)(-3) \\
+        &= 0
         \end{aligned}$$</div>
-        <p><b>निष्कर्ष: हाँ, $x = -1$ और $x = 2$ दोनों शून्यक हैं।</b></p>
+        <p class="step-txt"><strong>2. $x = 2$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= (2 + 1)(2 - 2) \\
+        &= (3)(0) \\
+        &= 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> दोनों मानों पर मान शून्य है, अतः <b>हाँ, $x = -1$ और $x = 2$ दोनों बहुपद के शून्यक हैं।</b></p>
       </div>
 
       <div class="step-box-blue">
         <p><b>(v) $p(x) = x^2, \quad x = 0$</b></p>
-        <div class="math-scroll">$$p(0) = (0)^2 = 0$$</div>
-        <p><b>निष्कर्ष: हाँ, $x = 0$ शून्यक है।</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= (0)^2 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> चूँकि $p(0) = 0$ है, अतः <b>हाँ, $x = 0$ बहुपद का शून्यक है।</b></p>
       </div>
 
       <div class="step-box-green">
         <p><b>(vi) $p(x) = lx + m, \quad x = -\frac{m}{l}$</b></p>
-        <div class="math-scroll">$$p\left(-\frac{m}{l}\right) = l\left(-\frac{m}{l}\right) + m = -m + m = 0$$</div>
-        <p><b>निष्कर्ष: हाँ, $x = -\frac{m}{l}$ शून्यक है।</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(-\frac{m}{l}\right) &= l\left(-\frac{m}{l}\right) + m \\
+        &= -m + m \\
+        &= 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b>निष्कर्ष:</b> चूँकि मान $0$ प्राप्त होता है, अतः <b>हाँ, $x = -\frac{m}{l}$ बहुपद का शून्यक है।</b></p>
       </div>
 
       <div class="step-box-orange">
-        <p><b>(vii) $p(x) = 3x^2 - 1, \quad x = -\frac{1}{\sqrt{3}}, \frac{2}{\sqrt{3}}$</b></p>
+        <p><b>(vii) $p(x) = 3x^2 - 1, \quad x = -\frac{1}{\sqrt{3}}, \; \frac{2}{\sqrt{3}}$</b></p>
+        <p class="step-txt"><strong>1. $x = -\frac{1}{\sqrt{3}}$ रखने पर:</strong></p>
         <div class="math-scroll">$$\begin{aligned}
-        p\left(-\frac{1}{\sqrt{3}}\right) &= 3\left(-\frac{1}{\sqrt{3}}\right)^2 - 1 = 3\left(\frac{1}{3}\right) - 1 = 1 - 1 = 0 \implies \text{शून्यक है} \\
-        p\left(\frac{2}{\sqrt{3}}\right) &= 3\left(\frac{2}{\sqrt{3}}\right)^2 - 1 = 3\left(\frac{4}{3}\right) - 1 = 4 - 1 = 3 \neq 0 \implies \text{शून्यक नहीं है}
+        p\left(-\frac{1}{\sqrt{3}}\right) &= 3\left(-\frac{1}{\sqrt{3}}\right)^2 - 1 \\
+        &= 3\left(\frac{1}{3}\right) - 1 \\
+        &= 1 - 1 \\
+        &= 0
         \end{aligned}$$</div>
-        <p><b>निष्कर्ष: $x = -\frac{1}{\sqrt{3}}$ शून्यक है, परन्तु $x = \frac{2}{\sqrt{3}}$ शून्यक नहीं है।</b></p>
+        <p class="step-txt" style="color:#065f46; font-weight:bold;">अतः $x = -\frac{1}{\sqrt{3}}$ बहुपद का शून्यक है।</p>
+        
+        <p class="step-txt"><strong>2. $x = \frac{2}{\sqrt{3}}$ रखने पर:</strong></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(\frac{2}{\sqrt{3}}\right) &= 3\left(\frac{2}{\sqrt{3}}\right)^2 - 1 \\
+        &= 3\left(\frac{4}{3}\right) - 1 \\
+        &= 4 - 1 \\
+        &= 3 \neq 0
+        \end{aligned}$$</div>
+        <p class="step-txt" style="color:#9f1239; font-weight:bold;">अतः $x = \frac{2}{\sqrt{3}}$ बहुपद का शून्यक नहीं है।</p>
+        <p class="step-txt"><b>निष्कर्ष:</b> $x = -\frac{1}{\sqrt{3}}$ बहुपद का शून्यक है, परन्तु $x = \frac{2}{\sqrt{3}}$ शून्यक नहीं है।</p>
       </div>
 
       <div class="step-box-red">
         <p><b>(viii) $p(x) = 2x + 1, \quad x = \frac{1}{2}$</b></p>
-        <div class="math-scroll">$$p\left(\frac{1}{2}\right) = 2\left(\frac{1}{2}\right) + 1 = 1 + 1 = 2 \neq 0$$</div>
-        <p><b>निष्कर्ष: नहीं, $x = \frac{1}{2}$ शून्यक नहीं है।</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(\frac{1}{2}\right) &= 2\left(\frac{1}{2}\right) + 1 \\
+        &= 1 + 1 \\
+        &= 2 \neq 0
+        \end{aligned}$$</div>
+        <p class="step-txt"><b> निष्कर्ष:</b> चूँकि $p\left(\frac{1}{2}\right) = 2 \neq 0$ है, अतः <b>नहीं, $x = \frac{1}{2}$ बहुपद का शून्यक नहीं है।</b></p>
       </div>
     </div>
 
@@ -882,7 +994,8 @@
         <p><b>(v) $p(x) = 3x$</b></p>
         <div class="math-scroll">$$\begin{aligned}
         3x &= 0 \\
-        x &= \frac{0}{3} = 0
+        x &= \frac{0}{3} \\
+        x &= 0
         \end{aligned}$$</div>
         <p><b>उत्तर: शून्यक $x = 0$ है।</b></p>
       </div>
@@ -891,13 +1004,14 @@
         <p><b>(vi) $p(x) = ax, \quad a \neq 0$</b></p>
         <div class="math-scroll">$$\begin{aligned}
         ax &= 0 \\
-        x &= \frac{0}{a} = 0
+        x &= \frac{0}{a} \\
+        x &= 0
         \end{aligned}$$</div>
         <p><b>उत्तर: शून्यक $x = 0$ है।</b></p>
       </div>
 
       <div class="step-box-orange">
-        <p><b>(vii) $p(x) = cx + d, \quad c \neq 0, c, d \text{ वास्तविक संख्याएँ हैं}$</b></p>
+        <p><b>(vii) $p(x) = cx + d$ &nbsp; [जहाँ $c \neq 0$ तथा $c, d$ वास्तविक संख्याएँ हैं]</b></p>
         <div class="math-scroll">$$\begin{aligned}
         cx + d &= 0 \\
         cx &= -d \\
@@ -905,9 +1019,7 @@
         \end{aligned}$$</div>
         <p><b>उत्तर: शून्यक $x = -\frac{d}{c}$ है।</b></p>
       </div>
-    </div>
-
-    <!-- =========================================================
+    </div>\n    <!-- =========================================================
          LIVE SIMULATOR 1: POLYNOMIAL ZERO EVALUATOR
          ========================================================= -->
     <div class="inline-simulator-card">
@@ -1047,7 +1159,8 @@
       <div class="step-box-blue">
         <p><b>(i) $p(x) = x^2 + x + k$</b></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(1) &= (1)^2 + (1) + k = 0 \\
+        p(1) &= 0 \\
+        (1)^2 + (1) + k &= 0 \\
         1 + 1 + k &= 0 \\
         2 + k &= 0 \\
         k &= -2
@@ -1058,7 +1171,8 @@
       <div class="step-box-orange">
         <p><b>(ii) $p(x) = 2x^2 + kx + \sqrt{2}$</b></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(1) &= 2(1)^2 + k(1) + \sqrt{2} = 0 \\
+        p(1) &= 0 \\
+        2(1)^2 + k(1) + \sqrt{2} &= 0 \\
         2 + k + \sqrt{2} &= 0 \\
         k &= -(2 + \sqrt{2})
         \end{aligned}$$</div>
@@ -1068,7 +1182,8 @@
       <div class="step-box-green">
         <p><b>(iii) $p(x) = kx^2 - \sqrt{2}x + 1$</b></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(1) &= k(1)^2 - \sqrt{2}(1) + 1 = 0 \\
+        p(1) &= 0 \\
+        k(1)^2 - \sqrt{2}(1) + 1 &= 0 \\
         k - \sqrt{2} + 1 &= 0 \\
         k &= \sqrt{2} - 1
         \end{aligned}$$</div>
@@ -1078,7 +1193,8 @@
       <div class="step-box-purple">
         <p><b>(iv) $p(x) = kx^2 - 3x + k$</b></p>
         <div class="math-scroll">$$\begin{aligned}
-        p(1) &= k(1)^2 - 3(1) + k = 0 \\
+        p(1) &= 0 \\
+        k(1)^2 - 3(1) + k &= 0 \\
         k - 3 + k &= 0 \\
         2k - 3 &= 0 \\
         2k &= 3 \\
@@ -1086,9 +1202,7 @@
         \end{aligned}$$</div>
         <p><b>उत्तर: $k = \frac{3}{2}$</b></p>
       </div>
-    </div>
-
-    <!-- Ex 2.3 Q4 -->
+    </div>\n\n    <!-- Ex 2.3 Q4 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 4: गुणनखंड कीजिए (मध्य पद को विभक्त करके - Middle Term Splitting):</h3>
       
@@ -1189,7 +1303,12 @@
         <p><b>चरण 1: ट्रायल विधि से पहला गुणनखंड:</b></p>
         <p>अचर पद $-5$ के गुणनखंड $\pm 1, \pm 5$ हैं।</p>
         <p>$x = -1$ रखने पर:</p>
-        <div class="math-scroll">$$p(-1) = (-1)^3 - 3(-1)^2 - 9(-1) - 5 = -1 - 3 + 9 - 5 = 0$$</div>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^3 - 3(-1)^2 - 9(-1) - 5 \\
+        &= -1 - 3 + 9 - 5 \\
+        &= -9 + 9 \\
+        &= 0
+        \end{aligned}$$</div>
         <p>अतः $(x + 1)$ बहुपद का एक गुणनखंड है।</p>
         <p><b>चरण 2: बहुपद को $(x + 1)$ से भाग देने पर:</b></p>
         <div class="math-scroll">$$\begin{aligned}
@@ -1209,7 +1328,12 @@
       <div class="step-box-green">
         <p><b>(iii) $p(x) = x^3 + 13x^2 + 32x + 20$</b></p>
         <p><b>चरण 1:</b> $x = -1$ रखने पर:</p>
-        <div class="math-scroll">$$p(-1) = (-1)^3 + 13(-1)^2 + 32(-1) + 20 = -1 + 13 - 32 + 20 = 33 - 33 = 0$$</div>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^3 + 13(-1)^2 + 32(-1) + 20 \\
+        &= -1 + 13 - 32 + 20 \\
+        &= 33 - 33 \\
+        &= 0
+        \end{aligned}$$</div>
         <p>अतः $(x + 1)$ एक गुणनखंड है।</p>
         <p><b>चरण 2: $(x + 1)$ के पदों में विभक्तिकरण:</b></p>
         <div class="math-scroll">$$\begin{aligned}
@@ -1603,7 +1727,8 @@
         &= x(x^2 - xy + y^2) + y(x^2 - xy + y^2) \\
         &= (x^3 - x^2y + xy^2) + (x^2y - xy^2 + y^3) \\
         &= x^3 - x^2y + x^2y + xy^2 - xy^2 + y^3 \\
-        &= x^3 + y^3 = \text{L.H.S.}
+        &= x^3 + y^3 \\
+        &= \text{L.H.S.}
         \end{aligned}$$</div>
         <p><b>इति सिद्धम् (Hence Proved)।</b></p>
       </div>
@@ -1616,7 +1741,8 @@
         &= x(x^2 + xy + y^2) - y(x^2 + xy + y^2) \\
         &= (x^3 + x^2y + xy^2) - (x^2y + xy^2 + y^3) \\
         &= x^3 + x^2y - x^2y + xy^2 - xy^2 - y^3 \\
-        &= x^3 - y^3 = \text{L.H.S.}
+        &= x^3 - y^3 \\
+        &= \text{L.H.S.}
         \end{aligned}$$</div>
         <p><b>इति सिद्धम् (Hence Proved)।</b></p>
       </div>
@@ -1676,7 +1802,8 @@
         &= \frac{1}{2}(x + y + z)\left[2x^2 + 2y^2 + 2z^2 - 2xy - 2yz - 2zx\right] \\
         &= \frac{1}{2}(x + y + z) \times 2\left[x^2 + y^2 + z^2 - xy - yz - zx\right] \\
         &= (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx) \\
-        &= x^3 + y^3 + z^3 - 3xyz = \text{L.H.S.}
+        &= x^3 + y^3 + z^3 - 3xyz \\
+        &= \text{L.H.S.}
         \end{aligned}$$</div>
         <p><b>इति सिद्धम् (Hence Proved)।</b></p>
       </div>
