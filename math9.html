@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>कक्षा 9 NCERT गणित संपूर्ण इंटरैक्टिव पोर्टल (Hindi Medium)</title>
+  <meta name="description" content="NCERT कक्षा 9 गणित (Mathematics) के सभी 12 अध्यायों के हिंदी माध्यम में संपूर्ण नोट्स, मुख्य सूत्र, इंटरैक्टिव सिमुलेटर और परीक्षा उपयोगी प्रश्न-उत्तर।">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* ============================================================
+       PREMIUM LIGHT THEME (NO DARK THEME)
+       Designed for maximum clarity, high contrast & projector readiness
+       ============================================================ */
+    :root {
+      --math9-primary: #059669;
+      --math9-secondary: #0284c7;
+      --math9-accent: #2563eb;
+    }
+
+    body {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif !important;
+    }
+
+    .bg-animation {
+      background: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(2, 132, 199, 0.06) 0%, transparent 40%) !important;
+      opacity: 1 !important;
+    }
+
+    /* Header / Hero */
+    .hero {
+      background: #ffffff !important;
+      border-bottom: 3px solid #cbd5e1 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+      padding: 40px 20px !important;
+    }
+
+    .nav-back-link {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border: 2px solid #cbd5e1 !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+      font-weight: 700 !important;
+    }
+    .nav-back-link:hover {
+      background: #f8fafc !important;
+      border-color: #059669 !important;
+      color: #059669 !important;
+    }
+
+    .math9-hero-badge {
+      border: 1.5px solid #a7f3d0 !important;
+      color: #065f46 !important;
+      background: #ecfdf5 !important;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.1) !important;
+      font-weight: 800 !important;
+    }
+
+    .hero h1 {
+      color: #0f172a !important;
+      font-weight: 900 !important;
+    }
+
+    .math9-gradient-title {
+      background: linear-gradient(135deg, #059669 0%, #0284c7 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    .hero p {
+      color: #334155 !important;
+      font-weight: 600 !important;
+      max-width: 800px !important;
+      margin: 12px auto 0 auto !important;
+    }
+
+    /* Senior Portals Section */
+    .senior-portal-header .c12-badge {
+      background: #e0e7ff !important;
+      color: #3730a3 !important;
+      border: 1.5px solid #c7d2fe !important;
+      font-weight: 800 !important;
+    }
+
+    .class-portal-card {
+      background: #ffffff !important;
+      border: 2px solid #e2e8f0 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+      border-radius: 16px !important;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+    }
+    .class-portal-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .class-portal-card h2 {
+      font-size: 1.35rem !important;
+      font-weight: 800 !important;
+      margin-bottom: 6px !important;
+    }
+
+    .class-portal-card p {
+      color: #475569 !important;
+      font-weight: 500 !important;
+      font-size: 0.95rem !important;
+      margin-bottom: 15px !important;
+    }
+
+    .c12-badge-pill {
+      display: inline-block !important;
+      align-self: flex-start !important;
+      padding: 4px 12px !important;
+      border-radius: 8px !important;
+      font-size: 0.8rem !important;
+      font-weight: 800 !important;
+      margin-bottom: 12px !important;
+    }
+
+    .card-class-tag {
+      display: inline-block !important;
+      padding: 3px 10px !important;
+      border-radius: 6px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 8px !important;
+    }
+
+    .c12-link-btn {
+      font-weight: 700 !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      display: inline-block !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    }
+
+    /* Search Bar */
+    .search-input-wrapper {
+      max-width: 650px;
+      margin: 30px auto 25px auto;
+      position: relative;
+    }
+    .search-input-wrapper input {
+      width: 100%;
+      background: #ffffff !important;
+      border: 2px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 14px 20px 14px 48px !important;
+      color: #0f172a !important;
+      font-size: 1.05rem !important;
+      font-weight: 600 !important;
+      font-family: inherit;
+      outline: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .search-input-wrapper input:focus {
+      border-color: #059669 !important;
+      box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15) !important;
+    }
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #64748b !important;
+    }
+
+    /* Unit Filter Tabs */
+    .filter-section {
+      margin-bottom: 30px;
+    }
+    .subject-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .unit-tab-btn {
+      background: #ffffff !important;
+      color: #334155 !important;
+      border: 2px solid #cbd5e1 !important;
+      padding: 10px 18px !important;
+      border-radius: 12px !important;
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      cursor: pointer;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+    .unit-tab-btn:hover {
+      border-color: #059669 !important;
+      color: #059669 !important;
+    }
+    .unit-tab-btn.active {
+      background: #059669 !important;
+      color: #ffffff !important;
+      border-color: #059669 !important;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3) !important;
+    }
+
+    /* Chapter Cards in Light Theme */
+    .math-card {
+      background: #ffffff !important;
+      border: 2px solid #e2e8f0 !important;
+      border-radius: 18px !important;
+      padding: 24px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .math-card:hover {
+      transform: translateY(-6px) !important;
+      border-color: #059669 !important;
+      box-shadow: 0 12px 28px rgba(5, 150, 105, 0.15) !important;
+    }
+    .math-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .unit-badge {
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      padding: 4px 12px !important;
+      border-radius: 20px !important;
+      background: #ecfdf5 !important;
+      color: #047857 !important;
+      border: 1.5px solid #a7f3d0 !important;
+    }
+    .chapter-num {
+      font-size: 0.95rem !important;
+      font-weight: 800 !important;
+      color: #64748b !important;
+    }
+    .math-chapter-title {
+      font-size: 1.6rem !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      margin-bottom: 4px !important;
+      line-height: 1.3 !important;
+    }
+    .math-chapter-en {
+      font-size: 0.95rem !important;
+      color: #64748b !important;
+      margin-bottom: 16px !important;
+      font-weight: 600 !important;
+    }
+    .topics-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .topic-pill {
+      font-size: 0.82rem !important;
+      background: #f8fafc !important;
+      color: #334155 !important;
+      padding: 4px 10px !important;
+      border-radius: 8px !important;
+      border: 1px solid #cbd5e1 !important;
+      font-weight: 600 !important;
+    }
+    .formula-preview-box {
+      background: #f0fdf4 !important;
+      border: 1.5px solid #86efac !important;
+      border-radius: 12px !important;
+      padding: 12px 14px !important;
+      margin-bottom: 20px !important;
+    }
+    .formula-label {
+      font-size: 0.82rem !important;
+      font-weight: 800 !important;
+      color: #047857 !important;
+      margin-bottom: 4px !important;
+    }
+    .formula-text {
+      font-size: 0.92rem !important;
+      color: #0f172a !important;
+      font-weight: 700 !important;
+      line-height: 1.5 !important;
+    }
+    .math-card-footer {
+      display: flex;
+      gap: 10px;
+    }
+    .math-action-btn {
+      flex: 1;
+      text-align: center;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .qa-btn {
+      background: #059669 !important;
+      color: #ffffff !important;
+      border: none !important;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25) !important;
+    }
+    .qa-btn:hover {
+      background: #047857 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35) !important;
+    }
+    .sim-btn {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      border: 1.5px solid #93c5fd !important;
+    }
+    .sim-btn:hover {
+      background: #2563eb !important;
+      color: #ffffff !important;
+      border-color: #2563eb !important;
+    }
+
+    /* Footer */
+    .footer {
+      background: #ffffff !important;
+      border-top: 2px solid #e2e8f0 !important;
+      color: #64748b !important;
+      padding: 25px 20px !important;
+      margin-top: 50px !important;
+      font-weight: 600 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <div style="margin-bottom: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="math10.html" class="nav-back-link" style="background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #38bdf8;">
+          📐 कक्षा 10 गणित पोर्टल
+        </a>
+        <a href="index.html" class="nav-back-link">
+          ← 🌐 कक्षा 10 सामाजिक विज्ञान पोर्टल
+        </a>
+      </div>
+
+      <div class="badge math9-hero-badge">
+        📐 NCERT गणित - कक्षा 9 (Hindi Medium)
+      </div>
+      <h1>कक्षा 9 <br><span class="gradient-text math9-gradient-title">गणित (Mathematics)</span></h1>
+      <p>नवीनतम NCERT पाठ्यक्रम पर आधारित सभी 12 अध्यायों के संपूर्ण अध्यायवार नोट्स, मुख्य सूत्र, ज्यामितीय प्रमेय, और इंटरैक्टिव सिमुलेटर।</p>
+
+      <!-- Portals Grid -->
+      <div class="senior-portals-wrapper" style="margin-top: 25px;">
+        <div class="senior-portal-header">
+          <span class="c12-badge" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: #10b981;">
+            🔗 सह-अध्ययन पोर्टल्स (Explore Connected Subject Portals)
+          </span>
+        </div>
+        <div class="senior-portal-grid">
+          <!-- Class 10 Mathematics -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #38bdf8 !important;">
+            <div class="c12-badge-pill" style="background: #0284c7 !important; color: #ffffff !important;">📐 कक्षा 10 विशेष</div>
+            <div class="c12-info">
+              <span class="card-class-tag" style="background: #e0f2fe !important; color: #0369a1 !important; border: 1px solid #bae6fd !important;">कक्षा 10 गणित</span>
+              <h2 style="color: #0369a1 !important;">कक्षा 10 गणित (Mathematics)</h2>
+              <p style="color: #475569 !important;">सभी 14 अध्यायों के बोर्ड नोट्स, 70+ लाइव सिमुलेटर व प्रोजेक्टर मास्टर हल।</p>
+            </div>
+            <a href="math10.html" class="c12-link-btn" style="background: #0284c7 !important; border: none !important; color: #ffffff !important;">
+              📐 कक्षा 10 गणित पोर्टल खोलें ➔
+            </a>
+          </div>
+
+          <!-- Class 10 Social Science Main -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #f59e0b !important;">
+            <div class="c12-badge-pill" style="background: #d97706 !important; color: #ffffff !important;">🌍 मुख्य पोर्टल</div>
+            <div class="c12-info">
+              <span class="card-class-tag" style="background: #fef3c7 !important; color: #b45309 !important; border: 1px solid #fde68a !important;">कक्षा 10 SST</span>
+              <h2 style="color: #b45309 !important;">कक्षा 10 सामाजिक विज्ञान</h2>
+              <p style="color: #475569 !important;">इतिहास, भूगोल, राजनीति और अर्थशास्त्र के सभी 22 अध्यायों के बोर्ड नोट्स।</p>
+            </div>
+            <a href="index.html" class="c12-link-btn" style="background: #d97706 !important; border: none !important; color: #ffffff !important;">
+              🌍 सामाजिक विज्ञान पोर्टल खोलें ➔
+            </a>
+          </div>
+
+          <!-- Class 11 Political Science -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #3b82f6 !important;">
+            <div class="c12-badge-pill" style="background: #2563eb !important; color: #ffffff !important;">📚 सीनियर पोर्टल</div>
+            <div class="c12-info">
+              <span class="card-class-tag" style="background: #dbeafe !important; color: #1d4ed8 !important; border: 1px solid #bfdbfe !important;">कक्षा 11 (Class 11)</span>
+              <h2 style="color: #1d4ed8 !important;">कक्षा 11 राजनीति विज्ञान</h2>
+              <p style="color: #475569 !important;">राजनीतिक सिद्धांत एवं भारत का संविधान के संपूर्ण नोट्स व अभ्यास प्रश्न।</p>
+            </div>
+            <a href="https://jit9763.github.io/CLASS11POL/" target="_blank" class="c12-link-btn" style="background: #2563eb !important; border: none !important; color: #ffffff !important;">
+              🚀 कक्षा 11 पोर्टल खोलें ➔
+            </a>
+          </div>
+
+          <!-- Class 12 Political Science -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #8b5cf6 !important;">
+            <div class="c12-badge-pill" style="background: #7c3aed !important; color: #ffffff !important;">🎓 बोर्ड विशेष</div>
+            <div class="c12-info">
+              <span class="card-class-tag" style="background: #ede9fe !important; color: #6d28d9 !important; border: 1px solid #ddd6fe !important;">कक्षा 12 (Class 12)</span>
+              <h2 style="color: #6d28d9 !important;">कक्षा 12 राजनीति विज्ञान</h2>
+              <p style="color: #475569 !important;">समकालीन विश्व राजनीति व स्वतंत्र भारत में राजनीति के बोर्ड नोट्स।</p>
+            </div>
+            <a href="https://jit9763.github.io/political-science/" target="_blank" class="c12-link-btn" style="background: #7c3aed !important; border: none !important; color: #ffffff !important;">
+              🚀 कक्षा 12 पोर्टल खोलें ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Chapters Section -->
+  <main class="container">
+    <!-- Search Bar -->
+    <div class="search-input-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="math9-search" placeholder="अध्याय का नाम, सूत्र या विषय खोजें (उदा. संख्या पद्धति, बहुपद, वृत्त)...">
+    </div>
+
+    <!-- Unit Filter Tabs -->
+    <div class="filter-section">
+      <div class="subject-tabs">
+        <button class="tab-btn unit-tab-btn active" data-unit="all">🌐 सभी अध्याय (All 12)</button>
+        <button class="tab-btn unit-tab-btn" data-unit="number">🔢 संख्या पद्धति</button>
+        <button class="tab-btn unit-tab-btn" data-unit="algebra">📐 बीजगणित</button>
+        <button class="tab-btn unit-tab-btn" data-unit="coord">📍 निर्देशांक ज्यामिति</button>
+        <button class="tab-btn unit-tab-btn" data-unit="geometry">🔺 ज्यामिति</button>
+        <button class="tab-btn unit-tab-btn" data-unit="mensuration">📦 क्षेत्रमिति</button>
+        <button class="tab-btn unit-tab-btn" data-unit="stats">📊 सांख्यिकी</button>
+      </div>
+    </div>
+
+    <!-- Chapter Grid Container -->
+    <div id="math9-chapter-grid" class="chapter-grid">
+      <!-- Injected via js/math9_main.js -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 NCERT Class 9 Mathematics Interactive Portal | Designed for High School Concept Mastery 💯</p>
+  </footer>
+
+  <script src="js/math9_main.js"></script>
+</body>
+</html>

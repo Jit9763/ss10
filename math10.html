@@ -11,6 +11,203 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ============================================================
+       PREMIUM LIGHT THEME (NO DARK THEME) FOR CLASS 10 MATH PORTAL
+       ============================================================ */
+    body {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif !important;
+    }
+
+    .bg-animation {
+      background: radial-gradient(circle at 15% 20%, rgba(2, 132, 199, 0.06) 0%, transparent 40%),
+                  radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.06) 0%, transparent 40%) !important;
+      opacity: 1 !important;
+    }
+
+    .hero {
+      background: #ffffff !important;
+      border-bottom: 3px solid #cbd5e1 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+      padding: 40px 20px !important;
+    }
+
+    .nav-back-link {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border: 2px solid #cbd5e1 !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+      font-weight: 700 !important;
+    }
+    .nav-back-link:hover {
+      background: #f8fafc !important;
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+    }
+
+    .hero h1 {
+      color: #0f172a !important;
+      font-weight: 900 !important;
+    }
+
+    .hero p {
+      color: #334155 !important;
+      font-weight: 600 !important;
+      max-width: 800px !important;
+      margin: 12px auto 0 auto !important;
+    }
+
+    .senior-portal-header .c12-badge {
+      background: #e0e7ff !important;
+      color: #3730a3 !important;
+      border: 1.5px solid #c7d2fe !important;
+      font-weight: 800 !important;
+    }
+
+    .class-portal-card {
+      background: #ffffff !important;
+      border: 2px solid #e2e8f0 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+      border-radius: 16px !important;
+      transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .class-portal-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    .class-portal-card h2 {
+      font-size: 1.35rem !important;
+      font-weight: 800 !important;
+      margin-bottom: 6px !important;
+    }
+    .class-portal-card p {
+      color: #475569 !important;
+      font-weight: 500 !important;
+      font-size: 0.95rem !important;
+      margin-bottom: 15px !important;
+    }
+
+    .c12-badge-pill {
+      display: inline-block !important;
+      align-self: flex-start !important;
+      padding: 4px 12px !important;
+      border-radius: 8px !important;
+      font-size: 0.8rem !important;
+      font-weight: 800 !important;
+      margin-bottom: 12px !important;
+    }
+
+    .card-class-tag {
+      display: inline-block !important;
+      padding: 3px 10px !important;
+      border-radius: 6px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 8px !important;
+    }
+
+    #mathSearchBar {
+      background: #ffffff !important;
+      border: 2px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      color: #0f172a !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+      font-weight: 600 !important;
+    }
+    #mathSearchBar:focus {
+      border-color: #0284c7 !important;
+      box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15) !important;
+    }
+
+    .unit-tab-btn {
+      background: #ffffff !important;
+      color: #334155 !important;
+      border: 2px solid #cbd5e1 !important;
+      font-weight: 700 !important;
+      border-radius: 12px !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+    }
+    .unit-tab-btn:hover {
+      border-color: #0284c7 !important;
+      color: #0284c7 !important;
+    }
+    .unit-tab-btn.active {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      border-color: #0284c7 !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3) !important;
+    }
+
+    /* Chapter Cards */
+    .chapter-card {
+      background: #ffffff !important;
+      border: 2px solid #e2e8f0 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+      border-radius: 18px !important;
+    }
+    .chapter-card:hover {
+      border-color: #0284c7 !important;
+      box-shadow: 0 12px 28px rgba(2, 132, 199, 0.15) !important;
+      transform: translateY(-5px) !important;
+    }
+    .chapter-title {
+      color: #0f172a !important;
+      font-weight: 800 !important;
+    }
+    .chapter-subtitle-en {
+      color: #64748b !important;
+      font-weight: 600 !important;
+    }
+    .math-topic-pill {
+      background: #f8fafc !important;
+      color: #334155 !important;
+      border: 1px solid #cbd5e1 !important;
+      font-weight: 600 !important;
+    }
+    .chapter-num {
+      color: #64748b !important;
+      font-weight: 800 !important;
+    }
+    .btn-formula {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      border: 1.5px solid #93c5fd !important;
+      font-weight: 800 !important;
+      border-radius: 10px !important;
+      padding: 10px !important;
+    }
+    .btn-qa-master {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      border: none !important;
+      font-weight: 800 !important;
+      border-radius: 10px !important;
+      padding: 10px !important;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+    }
+    .btn-qa-master:hover {
+      background: #0369a1 !important;
+      color: #ffffff !important;
+    }
+    .btn-explore {
+      background: #f8fafc !important;
+      color: #334155 !important;
+      border: 1.5px solid #cbd5e1 !important;
+      font-weight: 700 !important;
+      border-radius: 10px !important;
+    }
+
+    footer {
+      background: #ffffff !important;
+      border-top: 2px solid #e2e8f0 !important;
+      color: #64748b !important;
+      padding: 25px 20px !important;
+      margin-top: 50px !important;
+      font-weight: 600 !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Animated Background -->
@@ -18,57 +215,76 @@
 
   <header class="hero">
     <div class="hero-content">
-      <div style="margin-bottom: 15px;">
+      <div style="margin-bottom: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="math9.html" class="nav-back-link" style="background: #ffffff; border-color: #10b981; color: #059669;">
+          📐 कक्षा 9 गणित पोर्टल खोलें
+        </a>
         <a href="index.html" class="nav-back-link">
           ← 🌐 कक्षा 10 सामाजिक विज्ञान पोर्टल पर वापस जाएं
         </a>
       </div>
 
-      <div class="badge" style="border-color: #38bdf8; color: #38bdf8; background: rgba(56, 189, 248, 0.12); box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);">
+      <div class="badge" style="border: 1.5px solid #7dd3fc; color: #0284c7; background: #e0f2fe; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15); font-weight: 800;">
         📐 NCERT गणित - कक्षा 10 (Hindi Medium)
       </div>
-      <h1>कक्षा 10 <br><span class="gradient-text" style="background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">गणित (Mathematics)</span></h1>
+      <h1>कक्षा 10 <br><span class="gradient-text" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">गणित (Mathematics)</span></h1>
       <p>नवीनतम NCERT पाठ्यक्रम पर आधारित सभी 14 अध्यायों के संपूर्ण अध्यायवार नोट्स, आवश्यक सूत्र, प्रमेय (Theorems), और बोर्ड परीक्षा अभ्यास हल।</p>
 
       <div class="senior-portals-wrapper" style="margin-top: 25px;">
         <div class="senior-portal-header">
-          <span class="c12-badge" style="background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border-color: #6366f1;">
+          <span class="c12-badge" style="background: #e0e7ff; color: #3730a3; border: 1.5px solid #c7d2fe; font-weight: 800;">
             🔗 सह-अध्ययन पोर्टल्स (Explore Other Portals)
           </span>
         </div>
         <div class="senior-portal-grid">
-          <!-- Class 10 Social Science Main -->
-          <div class="class-portal-card" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95)); border-color: #fbbf24;">
+          <!-- Class 9 Mathematics -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #10b981 !important;">
+            <div class="c12-badge-pill" style="background: #059669 !important; color: #ffffff !important;">📐 कक्षा 9 विशेष</div>
             <div class="c12-info">
-              <span class="card-class-tag" style="background: rgba(251, 191, 36, 0.2); color: #fde68a;">कक्षा 10 SST</span>
-              <h2 style="color: #fbbf24;">कक्षा 10 सामाजिक विज्ञान</h2>
-              <p>इतिहास, भूगोल, राजनीति और अर्थशास्त्र के सभी 22 अध्यायों के बोर्ड नोट्स।</p>
+              <span class="card-class-tag" style="background: #ecfdf5 !important; color: #047857 !important; border: 1px solid #a7f3d0 !important;">कक्षा 9 गणित</span>
+              <h2 style="color: #047857 !important;">कक्षा 9 गणित (Mathematics)</h2>
+              <p style="color: #475569 !important;">संख्या पद्धति, बहुपद, वृत्त, हीरोन का सूत्र आदि सभी 12 अध्यायों के NCERT हल।</p>
             </div>
-            <a href="index.html" class="c12-link-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border-color: #fde68a; color: #fff;">
+            <a href="math9.html" class="c12-link-btn" style="background: #059669 !important; border: none !important; color: #ffffff !important;">
+              📐 कक्षा 9 गणित पोर्टल खोलें ➔
+            </a>
+          </div>
+
+          <!-- Class 10 Social Science Main -->
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #f59e0b !important;">
+            <div class="c12-badge-pill" style="background: #d97706 !important; color: #ffffff !important;">🌍 मुख्य पोर्टल</div>
+            <div class="c12-info">
+              <span class="card-class-tag" style="background: #fef3c7 !important; color: #b45309 !important; border: 1px solid #fde68a !important;">कक्षा 10 SST</span>
+              <h2 style="color: #b45309 !important;">कक्षा 10 सामाजिक विज्ञान</h2>
+              <p style="color: #475569 !important;">इतिहास, भूगोल, राजनीति और अर्थशास्त्र के सभी 22 अध्यायों के बोर्ड नोट्स।</p>
+            </div>
+            <a href="index.html" class="c12-link-btn" style="background: #d97706 !important; border: none !important; color: #ffffff !important;">
               🌍 सामाजिक विज्ञान पोर्टल खोलें ➔
             </a>
           </div>
 
           <!-- Class 11 Political Science -->
-          <div class="class-portal-card c11-card">
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #3b82f6 !important;">
+            <div class="c12-badge-pill" style="background: #2563eb !important; color: #ffffff !important;">📚 सीनियर पोर्टल</div>
             <div class="c12-info">
-              <span class="card-class-tag">कक्षा 11 (Class 11)</span>
-              <h2>कक्षा 11 राजनीति विज्ञान</h2>
-              <p>राजनीतिक सिद्धांत एवं भारत का संविधान के संपूर्ण नोट्स व अभ्यास प्रश्न।</p>
+              <span class="card-class-tag" style="background: #dbeafe !important; color: #1d4ed8 !important; border: 1px solid #bfdbfe !important;">कक्षा 11 (Class 11)</span>
+              <h2 style="color: #1d4ed8 !important;">कक्षा 11 राजनीति विज्ञान</h2>
+              <p style="color: #475569 !important;">राजनीतिक सिद्धांत एवं भारत का संविधान के संपूर्ण नोट्स व अभ्यास प्रश्न।</p>
             </div>
-            <a href="https://jit9763.github.io/CLASS11POL/" target="_blank" class="c12-link-btn c11-btn">
+            <a href="https://jit9763.github.io/CLASS11POL/" target="_blank" class="c12-link-btn" style="background: #2563eb !important; border: none !important; color: #ffffff !important;">
               🚀 कक्षा 11 पोर्टल खोलें ➔
             </a>
           </div>
 
           <!-- Class 12 Political Science -->
-          <div class="class-portal-card c12-card">
+          <div class="class-portal-card" style="background: #ffffff !important; border-color: #8b5cf6 !important;">
+            <div class="c12-badge-pill" style="background: #7c3aed !important; color: #ffffff !important;">🎓 बोर्ड विशेष</div>
             <div class="c12-info">
-              <span class="card-class-tag">कक्षा 12 (Class 12)</span>
-              <h2>कक्षा 12 राजनीति विज्ञान</h2>
-              <p>समकालीन विश्व राजनीति व स्वतंत्र भारत में राजनीति के बोर्ड नोट्स।</p>
+              <span class="card-class-tag" style="background: #ede9fe !important; color: #6d28d9 !important; border: 1px solid #ddd6fe !important;">कक्षा 12 (Class 12)</span>
+              <h2 style="color: #6d28d9 !important;">कक्षा 12 राजनीति विज्ञान</h2>
+              <p style="color: #475569 !important;">समकालीन विश्व राजनीति व स्वतंत्र भारत में राजनीति के बोर्ड नोट्स।</p>
             </div>
-            <a href="https://jit9763.github.io/political-science/" target="_blank" class="c12-link-btn">
+            <a href="https://jit9763.github.io/political-science/" target="_blank" class="c12-link-btn" style="background: #7c3aed !important; border: none !important; color: #ffffff !important;">
               🚀 कक्षा 12 पोर्टल खोलें ➔
             </a>
           </div>
