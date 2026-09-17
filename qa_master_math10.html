@@ -1261,5 +1261,135 @@
       updateSim5();
     });
   </script>
+<!-- Interactive Controller Functions -->
+<script>
+  var currentWidth = 1350;
+  var sizeOffset = 0;
+  var weightOffset = 0;
+  var strokeOffset = 0;
+
+  function getContainer() {
+    return document.getElementById('contentToCopy') || document.querySelector('.container') || document.querySelector('.page-container');
+  }
+
+  // 1. W+ / W- : Adjust Canvas Width
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 600) currentWidth = 600;
+    if (currentWidth > 3500) currentWidth = 3500;
+    
+    var container = getContainer();
+    if (container) {
+      container.style.setProperty('width', currentWidth + 'px', 'important');
+      container.style.setProperty('max-width', currentWidth + 'px', 'important');
+    }
+
+    var styleEl = document.getElementById('dynamic-projector-width');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-width';
+      document.head.appendChild(styleEl);
+    }
+    styleEl.innerHTML = '#contentToCopy, .container, .page-container { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
+  }
+
+  // 2. A+ / A- : Adjust Font Size Everywhere (Text + MathJax)
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -16) sizeOffset = -16;
+    if (sizeOffset > 40) sizeOffset = 40;
+
+    var styleEl = document.getElementById('dynamic-projector-fontsize');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-fontsize';
+      document.head.appendChild(styleEl);
+    }
+    
+    var basePt = 26 + sizeOffset;
+    styleEl.innerHTML = 
+      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
+      'p, div, span, td, th, li, a, label, mjx-container, mjx-math, .MathJax { ' +
+      'font-size: ' + basePt + 'pt !important; } ' +
+      'h1, .chapter-title { font-size: ' + (basePt + 10) + 'pt !important; } ' +
+      'h2, h3, .section-title { font-size: ' + (basePt + 4) + 'pt !important; }';
+  }
+
+  // 3. B+ / B- : Adjust Font Weight & Text Stroke Everywhere (ALL Text + MathJax)
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    if (weightOffset < -500) weightOffset = -500;
+    if (weightOffset > 800) weightOffset = 800;
+    
+    strokeOffset += (amount / 100) * 0.35;
+    if (strokeOffset < -1.0) strokeOffset = -1.0;
+    if (strokeOffset > 3.0) strokeOffset = 3.0;
+
+    var currentWeight = Math.max(400, Math.min(900, 900 + weightOffset));
+    var currentStroke = Math.max(0, 1.1 + strokeOffset);
+
+    var styleEl = document.getElementById('dynamic-projector-weight');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-weight';
+      document.head.appendChild(styleEl);
+    }
+
+    styleEl.innerHTML = 
+      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
+      'p, div, span, td, th, li, a, label, strong, b, mjx-container, mjx-math, mjx-c, .MathJax { ' +
+      'font-weight: ' + currentWeight + ' !important; ' +
+      '-webkit-text-stroke: ' + currentStroke + 'px currentColor !important; }';
+  }
+
+  // 4. Copy Entire Content
+  async function copyEntireContent() {
+    var btn = document.getElementById('floatingCopyBtn');
+    var target = getContainer();
+    if (!target || !btn) return;
+    var content = target.innerHTML;
+
+    try {
+      var blob = new Blob([content], { type: 'text/html' });
+      var item = new ClipboardItem({ 'text/html': blob });
+      await navigator.clipboard.write([item]);
+      btn.innerText = '✅';
+      btn.classList.add('success');
+      setTimeout(function() {
+        btn.innerText = '📋';
+        btn.classList.remove('success');
+      }, 3000);
+    } catch (err) {
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        btn.innerText = '✅';
+        btn.classList.add('success');
+        setTimeout(function() {
+          btn.innerText = '📋';
+          btn.classList.remove('success');
+        }, 3000);
+      } catch (e2) {
+        alert('कॉपी नहीं हो सका: ' + err);
+      }
+    }
+  }
+
+  // 5. Keyboard Shortcuts
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement && document.activeElement.tagName) !== -1) return;
+    if (e.key === 'w' || e.key === 'W') {
+      if (e.shiftKey) adjustWidth(-50);
+      else adjustWidth(50);
+    } else if (e.key === '+' || e.key === '=') {
+      adjustFontSize(2);
+    } else if (e.key === '-' || e.key === '_') {
+      adjustFontSize(-2);
+    } else if (e.key === 'b' || e.key === 'B') {
+      if (e.shiftKey) adjustFontWeight(-100);
+      else adjustFontWeight(100);
+    }
+  });
+</script>
+
 </body>
 </html>

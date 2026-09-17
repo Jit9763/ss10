@@ -1519,58 +1519,101 @@
 </div> <!-- End of #contentToCopy -->
 
 <!-- JAVASCRIPT CONTROLS (Identical to Class 10 SS) -->
+<!-- Interactive Controller Functions -->
 <script>
-  let containerWidth = 1350;
-  let sizeOffset = 0;
-  let weightOffset = 0;
-  let strokeOffset = 0;
+  var currentWidth = 1350;
+  var sizeOffset = 0;
+  var weightOffset = 0;
+  var strokeOffset = 0;
 
-  function adjustWidth(amount) {
-    containerWidth += amount;
-    if (containerWidth < 300) containerWidth = 300;
-    if (containerWidth > 6000) containerWidth = 6000;
-    const container = document.getElementById('contentToCopy');
-    if (container) {
-      container.style.width = containerWidth + 'px';
-      container.style.maxWidth = '100%';
-    }
+  function getContainer() {
+    return document.getElementById('contentToCopy') || document.querySelector('.container') || document.querySelector('.page-container');
   }
 
+  // 1. W+ / W- : Adjust Canvas Width
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 600) currentWidth = 600;
+    if (currentWidth > 3500) currentWidth = 3500;
+    
+    var container = getContainer();
+    if (container) {
+      container.style.setProperty('width', currentWidth + 'px', 'important');
+      container.style.setProperty('max-width', currentWidth + 'px', 'important');
+    }
+
+    var styleEl = document.getElementById('dynamic-projector-width');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-width';
+      document.head.appendChild(styleEl);
+    }
+    styleEl.innerHTML = '#contentToCopy, .container, .page-container { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
+  }
+
+  // 2. A+ / A- : Adjust Font Size Everywhere (Text + MathJax)
   function adjustFontSize(amount) {
     sizeOffset += amount;
-    if (sizeOffset < -18) sizeOffset = -18;
+    if (sizeOffset < -16) sizeOffset = -16;
     if (sizeOffset > 40) sizeOffset = 40;
-    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, #contentToCopy div, #contentToCopy span');
-    elements.forEach(el => {
-      el.style.fontSize = (26 + sizeOffset) + 'pt';
-    });
+
+    var styleEl = document.getElementById('dynamic-projector-fontsize');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-fontsize';
+      document.head.appendChild(styleEl);
+    }
+    
+    var basePt = 26 + sizeOffset;
+    styleEl.innerHTML = 
+      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
+      'p, div, span, td, th, li, a, label, mjx-container, mjx-math, .MathJax { ' +
+      'font-size: ' + basePt + 'pt !important; } ' +
+      'h1, .chapter-title { font-size: ' + (basePt + 10) + 'pt !important; } ' +
+      'h2, h3, .section-title { font-size: ' + (basePt + 4) + 'pt !important; }';
   }
 
+  // 3. B+ / B- : Adjust Font Weight & Text Stroke Everywhere (ALL Text + MathJax)
   function adjustFontWeight(amount) {
     weightOffset += amount;
-    if (weightOffset < -600) weightOffset = -600;
+    if (weightOffset < -500) weightOffset = -500;
     if (weightOffset > 800) weightOffset = 800;
-    strokeOffset += (amount / 100) * 0.3;
-    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy div, #contentToCopy span');
-    elements.forEach(el => {
-      el.style.fontWeight = (900 + weightOffset);
-      el.style.webkitTextStroke = (1.1 + strokeOffset) + 'px #000000';
-    });
+    
+    strokeOffset += (amount / 100) * 0.35;
+    if (strokeOffset < -1.0) strokeOffset = -1.0;
+    if (strokeOffset > 3.0) strokeOffset = 3.0;
+
+    var currentWeight = Math.max(400, Math.min(900, 900 + weightOffset));
+    var currentStroke = Math.max(0, 1.1 + strokeOffset);
+
+    var styleEl = document.getElementById('dynamic-projector-weight');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-projector-weight';
+      document.head.appendChild(styleEl);
+    }
+
+    styleEl.innerHTML = 
+      '#contentToCopy, #contentToCopy *, .container, .container *, .page-container, .page-container *, ' +
+      'p, div, span, td, th, li, a, label, strong, b, mjx-container, mjx-math, mjx-c, .MathJax { ' +
+      'font-weight: ' + currentWeight + ' !important; ' +
+      '-webkit-text-stroke: ' + currentStroke + 'px currentColor !important; }';
   }
 
+  // 4. Copy Entire Content
   async function copyEntireContent() {
-    const btn = document.getElementById('floatingCopyBtn');
-    const target = document.getElementById('contentToCopy');
+    var btn = document.getElementById('floatingCopyBtn');
+    var target = getContainer();
     if (!target || !btn) return;
-    const content = target.innerHTML;
+    var content = target.innerHTML;
 
     try {
-      const blob = new Blob([content], { type: 'text/html' });
-      const item = new ClipboardItem({ 'text/html': blob });
+      var blob = new Blob([content], { type: 'text/html' });
+      var item = new ClipboardItem({ 'text/html': blob });
       await navigator.clipboard.write([item]);
       btn.innerText = '✅';
       btn.classList.add('success');
-      setTimeout(() => {
+      setTimeout(function() {
         btn.innerText = '📋';
         btn.classList.remove('success');
       }, 3000);
@@ -1579,7 +1622,7 @@
         await navigator.clipboard.writeText(target.innerText);
         btn.innerText = '✅';
         btn.classList.add('success');
-        setTimeout(() => {
+        setTimeout(function() {
           btn.innerText = '📋';
           btn.classList.remove('success');
         }, 3000);
@@ -1589,24 +1632,23 @@
     }
   }
 
-  document.addEventListener('keydown', (e) => {
-    if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+  // 5. Keyboard Shortcuts
+  document.addEventListener('keydown', function(e) {
+    if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement && document.activeElement.tagName) !== -1) return;
     if (e.key === 'w' || e.key === 'W') {
       if (e.shiftKey) adjustWidth(-50);
       else adjustWidth(50);
     } else if (e.key === '+' || e.key === '=') {
-      adjustWidth(50);
-    } else if (e.key === '-') {
-      adjustWidth(-50);
+      adjustFontSize(2);
+    } else if (e.key === '-' || e.key === '_') {
+      adjustFontSize(-2);
+    } else if (e.key === 'b' || e.key === 'B') {
+      if (e.shiftKey) adjustFontWeight(-100);
+      else adjustFontWeight(100);
     }
   });
-
-  window.addEventListener('load', () => {
-    setTimeout(thickenFractionLines, 100);
-    setTimeout(thickenFractionLines, 500);
-    setTimeout(thickenFractionLines, 1200);
-  });
 </script>
+
 
 
 
