@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 10 गणित - अध्याय 3: दो चर वाले रैखिक समीकरण युग्म (मल्टी-कलर प्रोजेक्टर मास्टर हल)</title>
+
+<!-- MathJax for rendering mathematical equations with matching bold thickness -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
+      }
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #cbd5e1;
+    padding: 30px 15px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Devanagari', Arial, sans-serif;
+  }
+
+  /* BASE TYPOGRAPHY (Exact Class 10 SS: 26pt, 2.0 line-height, 900 weight, 1.1px stroke) */
+  body, p, li, td, th, div, span, a, label {
+    font-size: 26pt !important;
+    line-height: 2.0 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+    color: #000000;
+  }
+
+  p, li, h1, h2, h3, h4, td, th {
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+  }
+
+  /* =========================================================
+     MULTI-COLOR BADGES FOR CLASSROOM ENGAGEMENT
+     ========================================================= */
+  .badge-blue {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border: 3px solid #3b82f6 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #1e3a8a !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.15) !important;
+  }
+
+  .badge-orange {
+    color: #9a3412 !important;
+    background-color: #ffedd5 !important;
+    border: 3px solid #f97316 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #9a3412 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(154, 52, 18, 0.15) !important;
+  }
+
+  .badge-purple {
+    color: #581c87 !important;
+    background-color: #f3e8ff !important;
+    border: 3px solid #a855f7 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #581c87 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(88, 28, 135, 0.15) !important;
+  }
+
+  .badge-green {
+    color: #14532d !important;
+    background-color: #dcfce7 !important;
+    border: 3px solid #22c55e !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #14532d !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(20, 83, 45, 0.15) !important;
+  }
+
+  .badge-red {
+    color: #7f1d1d !important;
+    background-color: #fee2e2 !important;
+    border: 3px solid #ef4444 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #7f1d1d !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(127, 29, 29, 0.15) !important;
+  }
+
+  /* =========================================================
+     MULTI-COLOR STEP CARDS (STEP-BY-STEP VERTICAL FLOW)
+     ========================================================= */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 4px solid #3b82f6 !important;
+    border-left: 14px solid #1d4ed8 !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 14px rgba(29, 78, 216, 0.12) !important;
+  }
+
+  .step-box-orange {
+    background: #fff7ed !important;
+    border: 4px solid #f97316 !important;
+    border-left: 14px solid #ea580c !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.12) !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 4px solid #a855f7 !important;
+    border-left: 14px solid #7e22ce !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 14px rgba(126, 34, 206, 0.12) !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 4px solid #22c55e !important;
+    border-left: 14px solid #15803d !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 14px rgba(21, 128, 61, 0.12) !important;
+  }
+
+  .step-box-red {
+    background: #fef2f2 !important;
+    border: 4px solid #ef4444 !important;
+    border-left: 14px solid #b91c1c !important;
+    border-radius: 16px !important;
+    padding: 20px 24px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 14px rgba(185, 28, 28, 0.12) !important;
+  }
+
+  /* Single mathematical step line (Clean, no inner dashed border, no horizontal scroll) */
+  .math-line {
+    padding: 6px 0 !important;
+    margin: 8px 0 !important;
+    line-height: 2.2 !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .math-line::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* =========================================================
+     BRIGHT CANARY YELLOW FINAL ANSWER BOX (HIGH IMPACT)
+     ========================================================= */
+  .answer-box {
+    background: #fef08a !important;
+    border: 5px solid #ca8a04 !important;
+    border-left: 20px solid #15803d !important;
+    border-radius: 18px !important;
+    padding: 22px 28px !important;
+    margin: 26px 0 !important;
+    box-shadow: 0 6px 18px rgba(202, 138, 4, 0.28) !important;
+  }
+  .answer-box p, .answer-box span, .answer-box div {
+    color: #064e3b !important;
+    -webkit-text-stroke: 1.2px #064e3b !important;
+    font-size: 27pt !important;
+  }
+
+  /* MathJax Color Overrides & Ultra Thick Fraction Line */
+  mjx-container {
+    font-size: 110% !important;
+  }
+  
+  /* Initial numbers in black */
+  mjx-mn {
+    color: #000000;
+  }
+  
+  /* Operators in bold blue */
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+  }
+
+  /* 8px Ultra Thick Dark Green Fraction Line */
+  mjx-line, mjx-frac mjx-line, mjx-frac * mjx-line, .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Top Navigation / Controls Bar - In document flow at top so it scrolls up naturally */
+  .action-bar {
+    position: relative;
+    margin: 0 auto 20px auto;
+    max-width: 1350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 10px 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  .action-btn {
+    background: #1e293b;
+    color: #ffffff !important;
+    border: 2px solid #475569;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 15pt !important;
+    font-weight: 900 !important;
+    cursor: pointer;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+    transition: all 0.2s ease;
+  }
+  .action-btn:hover {
+    background: #3b82f6;
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+  }
+  .action-btn.success {
+    background: #10b981 !important;
+    border-color: #34d399 !important;
+  }
+
+  /* Table styling */
+  .table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+    border-radius: 12px;
+    border: 3px solid #cbd5e1;
+    background: #ffffff;
+  }
+  table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 22pt !important;
+  }
+  th, td {
+    border: 2px solid #94a3b8;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  th {
+    background-color: #1e3a8a;
+    color: #ffffff !important;
+    -webkit-text-stroke: 0px !important;
+    font-size: 22pt !important;
+  }
+  @media (max-width: 768px) {
+    table {
+      font-size: 16pt !important;
+      min-width: 550px;
+    }
+    th, td {
+      padding: 8px 10px;
+    }
+  }
+
+  /* BLACKBOARD COLUMN ADDITION / SUBTRACTION MATH TABLES (NO BORDERS) */
+  .math-column-box {
+    background: #ffffff !important;
+    border: 3px solid #1e3a8a !important;
+    border-radius: 16px !important;
+    padding: 20px 25px !important;
+    margin: 25px 0 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+  }
+  .math-column-table {
+    border-collapse: collapse !important;
+    border: none !important;
+    min-width: 0px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+  }
+  .math-column-table td, 
+  .math-column-table th {
+    border: none !important;
+    padding: 6px 10px !important;
+    text-align: center !important;
+    background: transparent !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    -webkit-text-stroke: 0px !important;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Floating Action Bar for Projector and Copying -->
+<div class="action-bar">
+  <button class="action-btn" onclick="adjustWidth(50)" title="चौड़ाई बढ़ाएं (W+)">W+</button>
+  <button class="action-btn" onclick="adjustWidth(-50)" title="चौड़ाई घटाएं (W-)">W-</button>
+  <button class="action-btn" onclick="adjustFontSize(2)" title="फ़ॉन्ट बढ़ाएं (A+)">A+</button>
+  <button class="action-btn" onclick="adjustFontSize(-2)" title="फ़ॉन्ट घटाएं (A-)">A-</button>
+  <button class="action-btn" onclick="adjustFontWeight(100)" title="मोटाई बढ़ाएं (B+)">B+</button>
+  <button class="action-btn" onclick="adjustFontWeight(-100)" title="मोटाई घटाएं (B-)">B-</button>
+  <button class="action-btn" id="floatingCopyBtn" onclick="copyEntireContent()" title="पूरा पेज कॉपी करें">📋</button>
+  <button class="action-btn" onclick="window.print()" title="प्रिंट करें">🖨️</button>
+  <button class="action-btn" onclick="window.location.href='math10.html'" title="पोर्टल पर लौटें">🏠</button>
+</div>
+
+<!-- Main White Content Canvas -->
+  <!-- Navigation Chaining -->
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; max-width:1350px; margin:0 auto 20px auto;">
+    <a href="qa_master_math2.html" style="background:#1e3a8a; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #3b82f6;">⬅️ पिछला अध्याय (Ch 2)</a>
+    <a href="math10.html" style="background:#0f172a; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #64748b;">📐 गणित पोर्टल</a>
+    <a href="qa_master_math4.html" style="background:#047857; color:#ffffff; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:900; font-size:18pt; border:2px solid #059669;">अगला अध्याय (Ch 4) ➔</a>
+  </div>
+
+<div id="contentToCopy" style="max-width: 1350px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 6px solid #94a3b8;">
+
+  <!-- Chapter Header -->
+  <div style="text-align: center; border-bottom: 6px solid #1e3a8a; padding-bottom: 25px; margin-bottom: 35px; background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 14px; padding-top: 20px;">
+    <div style="display: inline-block; background: #1e3a8a; color: #ffffff !important; -webkit-text-stroke: 0px !important; padding: 6px 20px; border-radius: 10px; font-size: 20pt !important; margin-bottom: 12px;">
+      NCERT कक्षा 10 • गणित (Mathematics)
+    </div>
+    <h1 style="color: #1e3a8a; margin: 5px 0 10px 0; font-size: 38pt !important; -webkit-text-stroke: 1.4px #1e3a8a;">
+      अध्याय 3: दो चर वाले रैखिक समीकरण युग्म
+    </h1>
+    <div style="color: #475569; font-size: 24pt !important;">
+      (Pair of Linear Equations in Two Variables) • संपूर्ण अभ्यास व बोर्ड मास्टर हल
+    </div>
+  </div>
+
+  <!-- Master Formula & Concept Summary Box -->
+  <div style="background: #f8fafc; border: 4px solid #1e3a8a; border-radius: 18px; padding: 25px 30px; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);">
+    <div style="color: #1e3a8a; font-size: 28pt !important; border-bottom: 3px solid #cbd5e1; padding-bottom: 10px; margin-bottom: 15px;">
+      📐 <strong>अध्याय 3 के मुख्य सूत्र एवं अनुपातों की तुलना सारणी</strong>
+    </div>
+    <p>दो चरों $x$ और $y$ में रैखिक समीकरण युग्म का मानक रूप:</p>
+    <div class="math-line" style="text-align: center;">
+      $a_1 x + b_1 y + c_1 = 0$ तथा $a_2 x + b_2 y + c_2 = 0$
+    </div>
+    
+    <div class="table-responsive-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>अनुपातों की तुलना</th>
+            <th>ग्राफीय निरूपण</th>
+            <th>बीजगणितीय हल</th>
+            <th>निकाय की प्रकृति</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$</td>
+            <td>प्रतिच्छेदी रेखाएं</td>
+            <td>केवल एक (अद्वितीय हल)</td>
+            <td><span class="badge-green">संगत (Consistent)</span></td>
+          </tr>
+          <tr>
+            <td>$\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$</td>
+            <td>संपाती रेखाएं</td>
+            <td>अपरिमित रूप से अनेक हल</td>
+            <td><span class="badge-green">आश्रित संगत</span></td>
+          </tr>
+          <tr>
+            <td>$\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$</td>
+            <td>समांतर रेखाएं</td>
+            <td>कोई हल नहीं</td>
+            <td><span class="badge-red">असंगत (Inconsistent)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin: 25px 0; background: #ffffff; border: 4px solid #1e3a8a; border-radius: 18px; padding: 20px; box-shadow: 0 6px 20px rgba(30, 58, 138, 0.15);">
+      <div style="text-align: center; color: #1e3a8a; font-size: 26pt; font-weight: 900; margin-bottom: 15px;">
+        📊 रैखिक समीकरण युग्म के तीनों ग्राफीय रूप (प्रोजेक्टर मास्टर आरेख)
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; text-align: center;">
+        
+        <!-- 1. Intersecting Lines -->
+        <div style="background: #eff6ff; border: 3px solid #3b82f6; border-radius: 14px; padding: 15px;">
+          <div style="font-size: 22pt; font-weight: 900; color: #1d4ed8; margin-bottom: 10px;">(1) प्रतिच्छेदी रेखाएँ</div>
+          <svg viewBox="0 0 300 200" style="width: 100%; height: auto; background: #ffffff; border-radius: 10px; border: 3px solid #1e3a8a;">
+            <defs>
+              <pattern id="cg1" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="300" height="200" fill="#f8fafc"/>
+            <rect width="300" height="200" fill="url(#cg1)"/>
+            <!-- Axes (Thick Black) -->
+            <line x1="10" y1="100" x2="290" y2="100" stroke="#000000" stroke-width="5"/>
+            <line x1="150" y1="10" x2="150" y2="190" stroke="#000000" stroke-width="5"/>
+            <!-- Line 1 -->
+            <line x1="40" y1="160" x2="260" y2="40" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+            <!-- Line 2 -->
+            <line x1="40" y1="40" x2="260" y2="160" stroke="#ea580c" stroke-width="7" stroke-linecap="round"/>
+            <!-- Intersection Dot -->
+            <circle cx="150" cy="100" r="11" fill="#16a34a" stroke="#ffffff" stroke-width="3"/>
+            <text x="150" y="80" font-size="16" font-weight="900" fill="#15803d" text-anchor="middle">📍 अद्वितीय हल (Unique)</text>
+          </svg>
+          <div style="margin-top: 10px; font-size: 20pt; font-weight: 900; color: #1e3a8a;">a₁/a₂ ≠ b₁/b₂ • संगत</div>
+        </div>
+
+        <!-- 2. Coincident Lines -->
+        <div style="background: #f0fdf4; border: 3px solid #22c55e; border-radius: 14px; padding: 15px;">
+          <div style="font-size: 22pt; font-weight: 900; color: #15803d; margin-bottom: 10px;">(2) संपाती रेखाएँ</div>
+          <svg viewBox="0 0 300 200" style="width: 100%; height: auto; background: #ffffff; border-radius: 10px; border: 3px solid #1e3a8a;">
+            <defs>
+              <pattern id="cg2" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="300" height="200" fill="#f8fafc"/>
+            <rect width="300" height="200" fill="url(#cg2)"/>
+            <!-- Axes (Thick Black) -->
+            <line x1="10" y1="100" x2="290" y2="100" stroke="#000000" stroke-width="5"/>
+            <line x1="150" y1="10" x2="150" y2="190" stroke="#000000" stroke-width="5"/>
+            <!-- Coincident Line: base thick line + dashed overlay -->
+            <line x1="40" y1="160" x2="260" y2="40" stroke="#16a34a" stroke-width="9" stroke-linecap="round"/>
+            <line x1="40" y1="160" x2="260" y2="40" stroke="#facc15" stroke-width="5" stroke-dasharray="12,8" stroke-linecap="round"/>
+            <!-- Common Dots -->
+            <circle cx="95" cy="130" r="7" fill="#dc2626"/>
+            <circle cx="150" cy="100" r="7" fill="#dc2626"/>
+            <circle cx="205" cy="70" r="7" fill="#dc2626"/>
+            <text x="150" y="55" font-size="16" font-weight="900" fill="#15803d" text-anchor="middle">📍 एक ही रेखा पर सभी बिंदु</text>
+          </svg>
+          <div style="margin-top: 10px; font-size: 20pt; font-weight: 900; color: #166534;">a₁/a₂ = b₁/b₂ = c₁/c₂ • अनंत हल</div>
+        </div>
+
+        <!-- 3. Parallel Lines -->
+        <div style="background: #fef2f2; border: 3px solid #ef4444; border-radius: 14px; padding: 15px;">
+          <div style="font-size: 22pt; font-weight: 900; color: #b91c1c; margin-bottom: 10px;">(3) समांतर रेखाएँ</div>
+          <svg viewBox="0 0 300 200" style="width: 100%; height: auto; background: #ffffff; border-radius: 10px; border: 3px solid #1e3a8a;">
+            <defs>
+              <pattern id="cg3" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="2"/>
+              </pattern>
+            </defs>
+            <rect width="300" height="200" fill="#f8fafc"/>
+            <rect width="300" height="200" fill="url(#cg3)"/>
+            <!-- Axes (Thick Black) -->
+            <line x1="10" y1="100" x2="290" y2="100" stroke="#000000" stroke-width="5"/>
+            <line x1="150" y1="10" x2="150" y2="190" stroke="#000000" stroke-width="5"/>
+            <!-- Line 1 -->
+            <line x1="40" y1="130" x2="260" y2="30" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
+            <!-- Line 2 -->
+            <line x1="40" y1="170" x2="260" y2="70" stroke="#7c3aed" stroke-width="7" stroke-linecap="round"/>
+            <text x="150" y="150" font-size="16" font-weight="900" fill="#b91c1c" text-anchor="middle">❌ कभी नहीं मिलतीं (कोई हल नहीं)</text>
+          </svg>
+          <div style="margin-top: 10px; font-size: 20pt; font-weight: 900; color: #991b1b;">a₁/a₂ = b₁/b₂ ≠ c₁/c₂ • असंगत</div>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- =========================================================================
+       EXERCISE 3.1: अनुपातों की तुलना एवं ग्राफीय निरूपण
+       ========================================================================= -->
+  <div style="background: #1e293b; color: #ffffff !important; padding: 12px 24px; border-radius: 12px; margin: 35px 0 25px 0; -webkit-text-stroke: 0px !important;">
+    <span style="font-size: 28pt !important; color: #38bdf8;">📌 प्रश्नावली 3.1: अनुपातों की तुलना एवं हल की प्रकृति</span>
+  </div>
+
+  <!-- Ex 3.1 Q1 (i) -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (i)</span> अनुपातों $\frac{a_1}{a_2}, \frac{b_1}{b_2}$ और $\frac{c_1}{c_2}$ की तुलना कर ज्ञात कीजिए कि समीकरण युग्म द्वारा निरूपित रेखाएं एक बिंदु पर प्रतिच्छेद करती हैं, समांतर हैं अथवा संपाती हैं:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $5x - 4y + 8 = 0$ तथा $7x + 6y - 9 = 0$
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: गुणांकों की तुलना</span></p>
+      <div class="math-line">समीकरण (1): $5x - 4y + 8 = 0 \implies a_1 = 5, \ b_1 = -4, \ c_1 = 8$</div>
+      <div class="math-line">समीकरण (2): $7x + 6y - 9 = 0 \implies a_2 = 7, \ b_2 = 6, \ c_2 = -9$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: अनुपातों का मान ज्ञात करना</span></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{5}{7}$</div>
+      <div class="math-line">$\frac{b_1}{b_2} = \frac{-4}{6} = \color{#b91c1c}{\frac{-2}{3}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: निष्कर्ष</span></p>
+      <div class="math-line">चूँकि $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$ अर्थात् $\frac{5}{7} \neq \frac{-2}{3}$</div>
+      <p>अतः दिए गए समीकरण युग्म द्वारा निरूपित रेखाएं एक बिंदु पर प्रतिच्छेद करती हैं।</p>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> रेखाएं <strong>एक बिंदु पर प्रतिच्छेद करती हैं</strong> (अद्वितीय हल)।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.1 Q1 (ii) -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (ii)</span> अनुपातों की तुलना कर रेखाओं की प्रकृति बताइए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $9x + 3y + 12 = 0$ तथा $18x + 6y + 24 = 0$
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: गुणांक</span></p>
+      <div class="math-line">$a_1 = 9, \ b_1 = 3, \ c_1 = 12$</div>
+      <div class="math-line">$a_2 = 18, \ b_2 = 6, \ c_2 = 24$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: अनुपातों की गणना</span></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{9}{18} = \color{#b91c1c}{\frac{1}{2}}$</div>
+      <div class="math-line">$\frac{b_1}{b_2} = \frac{3}{6} = \color{#b91c1c}{\frac{1}{2}}$</div>
+      <div class="math-line">$\frac{c_1}{c_2} = \frac{12}{24} = \color{#b91c1c}{\frac{1}{2}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: तुलना</span></p>
+      <div class="math-line">यहाँ $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2} = \color{#b91c1c}{\frac{1}{2}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> समीकरण युग्म द्वारा निरूपित रेखाएं <strong>संपाती (Coincident)</strong> हैं तथा इनके अपरिमित रूप से अनेक हल हैं।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.1 Q1 (iii) -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (iii)</span> अनुपातों की तुलना कर रेखाओं की प्रकृति बताइए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $6x - 3y + 10 = 0$ तथा $2x - y + 9 = 0$
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: गुणांक</span></p>
+      <div class="math-line">$a_1 = 6, \ b_1 = -3, \ c_1 = 10$</div>
+      <div class="math-line">$a_2 = 2, \ b_2 = -1, \ c_2 = 9$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: अनुपातों की गणना</span></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{6}{2} = \color{#b91c1c}{3}$</div>
+      <div class="math-line">$\frac{b_1}{b_2} = \frac{-3}{-1} = \color{#b91c1c}{3}$</div>
+      <div class="math-line">$\frac{c_1}{c_2} = \color{#b91c1c}{\frac{10}{9}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: तुलना</span></p>
+      <div class="math-line">यहाँ $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$ क्योंकि $3 = 3 \neq \frac{10}{9}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> समीकरण युग्म द्वारा निरूपित रेखाएं <strong>समांतर (Parallel)</strong> हैं तथा इसका कोई हल नहीं है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.1 Q2: संगत / असंगत -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 2</span> अनुपातों $\frac{a_1}{a_2}, \frac{b_1}{b_2}, \frac{c_1}{c_2}$ की तुलना कर ज्ञात कीजिए कि निम्न समीकरण युग्म संगत हैं या असंगत:</p>
+    
+    <div class="step-box-blue">
+      <p><strong>(i) $3x + 2y = 5$ तथा $2x - 3y = 7$</strong></p>
+      <div class="math-line">मानक रूप: $3x + 2y - 5 = 0$ और $2x - 3y - 7 = 0$</div>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{3}{2}$ तथा $\frac{b_1}{b_2} = \frac{2}{-3} = -\frac{2}{3}$</div>
+      <div class="math-line">चूँकि $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$, अतः निकाय <strong>संगत (Consistent)</strong> है।</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><strong>(ii) $2x - 3y = 8$ तथा $4x - 6y = 9$</strong></p>
+      <div class="math-line">मानक रूप: $2x - 3y - 8 = 0$ और $4x - 6y - 9 = 0$</div>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{2}{4} = \frac{1}{2}$, $\ \frac{b_1}{b_2} = \frac{-3}{-6} = \frac{1}{2}$, $\ \frac{c_1}{c_2} = \frac{-8}{-9} = \frac{8}{9}$</div>
+      <div class="math-line">यहाँ $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$, रेखाएं समांतर हैं। अतः निकाय <strong>असंगत (Inconsistent)</strong> है।</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><strong>(iii) $\frac{3}{2}x + \frac{5}{3}y = 7$ तथा $9x - 10y = 14$</strong></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{3/2}{9} = \frac{3}{18} = \color{#b91c1c}{\frac{1}{6}}$</div>
+      <div class="math-line">$\frac{b_1}{b_2} = \frac{5/3}{-10} = \frac{5}{-30} = \color{#b91c1c}{-\frac{1}{6}}$</div>
+      <div class="math-line">चूँकि $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$, अतः निकाय <strong>संगत (Consistent)</strong> है।</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><strong>(iv) $5x - 3y = 11$ तथा $-10x + 6y = -22$</strong></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{5}{-10} = -\frac{1}{2}$, $\ \frac{b_1}{b_2} = \frac{-3}{6} = -\frac{1}{2}$, $\ \frac{c_1}{c_2} = \frac{-11}{22} = -\frac{1}{2}$</div>
+      <div class="math-line">यहाँ $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$, अतः निकाय <strong>संगत (आश्रित)</strong> है।</div>
+    </div>
+
+    <div class="step-box-red">
+      <p><strong>(v) $\frac{4}{3}x + 2y = 8$ तथा $2x + 3y = 12$</strong></p>
+      <div class="math-line">$\frac{a_1}{a_2} = \frac{4/3}{2} = \frac{4}{6} = \frac{2}{3}$, $\ \frac{b_1}{b_2} = \frac{2}{3}$, $\ \frac{c_1}{c_2} = \frac{-8}{-12} = \frac{2}{3}$</div>
+      <div class="math-line">यहाँ $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$, अतः निकाय <strong>संगत (आश्रित)</strong> है।</div>
+    </div>
+  </div>
+
+
+  <!-- INTERACTIVE SIMULATOR CH3_1: अनुपात व हल प्रकृति परीक्षक (प्रश्न 2 विशेष) -->
+  <div style="background: #f8fafc; border: 4px solid #10b981; border-radius: 16px; padding: 22px; margin: 25px 0; box-shadow: 0 6px 18px rgba(16,185,129,0.15);">
+    <div style="font-size: 24pt; color: #065f46; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+      ⚖️ लाइव सिमुलेटर (प्रश्नावली 3.1 प्रश्न 2 व 3 विशेष): अनुपात तुलना एवं रेखाओं की प्रकृति
+    </div>
+    <p style="font-size: 20pt; color: #334155; margin-bottom: 14px; font-weight: 800;">
+      अनुपात $\frac{a_1}{a_2}, \frac{b_1}{b_2}, \frac{c_1}{c_2}$ के गुणांक बदलकर रेखाओं का आलेखीय निरूपण व निकाय की संगति लाइव देखें:
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:15px;">
+      <div style="background:#ffffff; border:2px solid #cbd5e1; border-radius:10px; padding:12px;">
+        <strong style="color:#1d4ed8; font-size:20pt;">समीकरण 1:</strong><br>
+        a1: <input type="number" id="r_a1" value="2" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+        b1: <input type="number" id="r_b1" value="3" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+        c1: <input type="number" id="r_c1" value="8" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+      </div>
+      <div style="background:#ffffff; border:2px solid #cbd5e1; border-radius:10px; padding:12px;">
+        <strong style="color:#c2410c; font-size:20pt;">समीकरण 2:</strong><br>
+        a2: <input type="number" id="r_a2" value="4" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+        b2: <input type="number" id="r_b2" value="6" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+        c2: <input type="number" id="r_c2" value="9" oninput="checkRatioSim()" style="width:75px; font-size:18pt; font-weight:900;">
+      </div>
+    </div>
+    <div id="ratioSimResult" style="background:#eff6ff; border:3px solid #10b981; border-radius:12px; padding:16px; font-size:22pt; font-weight:900; color:#065f46;">
+      a1/a2 = 0.50, b1/b2 = 0.50, c1/c2 = 0.89 &implies; रेखाएं समांतर हैं (कोई हल नहीं, असंगत निकाय)
+    </div>
+  </div>
+
+
+  <!-- Ex 3.1 Q5: Graphical Triangle -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 4 (बोर्ड परीक्षा विशेष ग्राफ प्रश्न)</span> समीकरणों $x - y + 1 = 0$ और $3x + 2y - 12 = 0$ का ग्राफ खींचिए। $x$-अक्ष और इन रेखाओं से बने त्रिभुज के शीर्षों के निर्देशांक ज्ञात कीजिए और त्रिभुजाकार पटल को छायांकित कीजिए।</p>
+
+
+    <div style="text-align: center; margin: 25px 0;">
+      <svg viewBox="0 0 540 360" style="max-width: 620px; width: 100%; height: auto; background: #ffffff; border: 4px solid #1e3a8a; border-radius: 18px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <defs>
+          <pattern id="tri_grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+          </pattern>
+        </defs>
+        <!-- Dark Projector Friendly Graph Paper Grid -->
+        <rect width="540" height="360" fill="#f8fafc"/>
+        <rect width="540" height="360" fill="url(#tri_grid)"/>
+
+        <!-- Shaded Triangle: Vertices (-1, 0) -> (170, 260), (4, 0) -> (410, 260), (2, 3) -> (290, 80) -->
+        <polygon points="170,260 410,260 290,80" fill="#fef08a" stroke="#eab308" stroke-width="4" opacity="0.85"/>
+
+        <!-- Axes -->
+        <!-- X-Axis at y=260 -->
+        <line x1="40" y1="260" x2="500" y2="260" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="505,260 490,253 490,267" fill="#0f172a"/>
+        <polygon points="35,260 50,253 50,267" fill="#0f172a"/>
+        <text x="495" y="250" font-size="20" font-weight="900" fill="#0f172a">X</text>
+        <text x="45" y="250" font-size="20" font-weight="900" fill="#0f172a">X'</text>
+
+        <!-- Y-Axis at x=230 (where x=0) -->
+        <line x1="230" y1="330" x2="230" y2="35" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="230,30 223,45 237,45" fill="#0f172a"/>
+        <text x="242" y="45" font-size="20" font-weight="900" fill="#0f172a">Y</text>
+
+        <!-- Axis numbers -->
+        <text x="170" y="285" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">-1</text>
+        <text x="220" y="285" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">0</text>
+        <text x="290" y="285" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">2</text>
+        <text x="410" y="285" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">4</text>
+        <text x="215" y="85" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">3</text>
+
+        <!-- Line 1: x - y + 1 = 0 (passes through (-1, 0) and (2, 3)) -->
+        <line x1="110" y1="320" x2="350" y2="20" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+        <text x="355" y="30" font-size="17" font-weight="900" fill="#1d4ed8">x - y + 1 = 0</text>
+
+        <!-- Line 2: 3x + 2y - 12 = 0 (passes through (4, 0), (2, 3), (0, 6)) -->
+        <line x1="210" y1="20" x2="450" y2="320" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
+        <text x="445" y="310" font-size="17" font-weight="900" fill="#b91c1c">3x + 2y - 12 = 0</text>
+
+        <!-- Shaded triangle vertex dots & labels -->
+        <circle cx="290" cy="80" r="11" fill="#16a34a" stroke="#ffffff" stroke-width="3"/>
+        <text x="290" y="60" font-size="19" font-weight="900" fill="#15803d" text-anchor="middle">A(2, 3)</text>
+
+        <circle cx="170" cy="260" r="11" fill="#16a34a" stroke="#ffffff" stroke-width="3"/>
+        <text x="140" y="245" font-size="19" font-weight="900" fill="#15803d" text-anchor="middle">B(-1, 0)</text>
+
+        <circle cx="410" cy="260" r="11" fill="#16a34a" stroke="#ffffff" stroke-width="3"/>
+        <text x="445" y="245" font-size="19" font-weight="900" fill="#15803d" text-anchor="middle">C(4, 0)</text>
+
+        <!-- Center label inside shaded triangle -->
+        <rect x="235" y="165" width="110" height="34" rx="8" fill="#1e3a8a"/>
+        <text x="290" y="188" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">छायांकित भाग</text>
+      </svg>
+    </div>
+    
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (1) से $y$ का मान ज्ञात करना</span></p>
+    <div class="math-line">$x - y + 1 = 0$</div>
+    <div class="math-line">$y = x + 1$</div>
+      <div class="math-line">यदि $x = 0$ रखने पर: $y = 1$, अतः बिंदु $\mathbf{(0, 1)}$</div>
+      <div class="math-line">यदि $x = -1$ रखने पर: $y = 0$, अतः बिंदु $\mathbf{(-1, 0)}$</div>
+      <div class="math-line">यदि $x = 2$ रखने पर: $y = 3$, अतः बिंदु $\mathbf{(2, 3)}$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (2) से $y$ का मान ज्ञात करना</span></p>
+    <div class="math-line">$3x + 2y - 12 = 0$</div>
+    <div class="math-line">$2y = 12 - 3x$</div>
+    <div class="math-line">$y = \frac{12 - 3x}{2}$</div>
+      <div class="math-line">यदि $x = 0$ रखने पर: $y = \frac{12}{2} = 6$, अतः बिंदु $\mathbf{(0, 6)}$</div>
+      <div class="math-line">यदि $x = 4$ रखने पर: $y = \frac{0}{2} = 0$, अतः बिंदु $\mathbf{(4, 0)}$</div>
+      <div class="math-line">यदि $x = 2$ रखने पर: $y = \frac{6}{2} = 3$, अतः बिंदु $\mathbf{(2, 3)}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: प्रतिच्छेद बिंदु एवं x-अक्ष के साथ त्रिभुज के शीर्ष</span></p>
+      <p>दोनों रेखाएँ बिंदु $(2, 3)$ पर एक-दूसरे को प्रतिच्छेद करती हैं।</p>
+      <p>प्रथम रेखा $x$-अक्ष को बिंदु $(-1, 0)$ पर तथा द्वितीय रेखा $x$-अक्ष को $(4, 0)$ पर काटती है।</p>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> त्रिभुज के तीनों शीर्षों के निर्देशांक <strong>A(2, 3), B(-1, 0) तथा C(4, 0)</strong> हैं। उपर्युक्त आरेख में त्रिभुजाकार पटल को पीले रंग से छायांकित किया गया है।</p>
+    </div>
+  </div>
+
+
+  <!-- INTERACTIVE SIMULATOR CH3_2: लाइव दो-रेखा ग्राफ एवं प्रतिच्छेदन बिंदु कैलकुलेटर (प्रश्न 4 विशेष) -->
+  <div style="background: #f8fafc; border: 4px solid #3b82f6; border-radius: 16px; padding: 22px; margin: 25px 0; box-shadow: 0 6px 18px rgba(59,130,246,0.15);">
+    <div style="font-size: 24pt; color: #1e3a8a; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+      📈 लाइव सिमुलेटर (प्रश्नावली 3.1 ग्राफ प्रश्न विशेष): लाइव दो-रेखा ग्राफ एवं प्रतिच्छेदन बिंदु
+    </div>
+    <p style="font-size: 20pt; color: #334155; margin-bottom: 14px; font-weight: 800;">
+      दोनों रेखाओं के गुणांक बदलें, कैनवास पर दोनों रेखाओं का लाइव आलेख और प्रतिच्छेदन बिंदु $(x, y)$ देखें:
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:15px;">
+      <div style="background:#eff6ff; padding:12px; border-radius:10px; border:2px solid #3b82f6;">
+        <strong style="color:#1d4ed8; font-size:20pt;">रेखा 1: a1 x + b1 y = c1</strong><br>
+        a1: <input type="number" id="l1_a" value="1" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+        b1: <input type="number" id="l1_b" value="-1" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+        c1: <input type="number" id="l1_c" value="-1" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+      </div>
+      <div style="background:#fff7ed; padding:12px; border-radius:10px; border:2px solid #f97316;">
+        <strong style="color:#c2410c; font-size:20pt;">रेखा 2: a2 x + b2 y = c2</strong><br>
+        a2: <input type="number" id="l2_a" value="3" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+        b2: <input type="number" id="l2_b" value="2" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+        c2: <input type="number" id="l2_c" value="12" oninput="updateLineGraph()" style="width:75px; font-size:18pt; font-weight:900;">
+      </div>
+    </div>
+    <div id="lineGraphResult" style="background:#fef08a; border:3px solid #ca8a04; border-radius:10px; padding:14px; font-size:22pt; font-weight:900; color:#854d0e; margin-bottom:15px;">
+      प्रतिच्छेदन बिंदु (हल): x = 2, y = 3 | निकाय: संगत (अद्वितीय हल)
+    </div>
+    <div style="text-align:center;">
+      <canvas id="graphCanvas" width="560" height="340" style="background:#ffffff; border:3px solid #1e3a8a; border-radius:12px; max-width:100%; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></canvas>
+    </div>
+  </div>
+
+
+  <!-- ========================================================
+     Ex 3.1 Q5: आयताकार बाग (Rectangular Garden) - द्विविध संपूर्ण हल
+     ======================================================== -->
+  <div style="border: 4px solid #059669; border-radius: 20px; padding: 30px; margin-bottom: 40px; background: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+    <div class="math-line" style="font-size: 26pt; font-weight: 900; color: #065f46; margin-bottom: 20px; line-height: 1.6;">
+      <span class="badge-green" style="background: #059669; color: #ffffff; padding: 6px 16px; border-radius: 10px; font-size: 22pt;">प्रश्न 5 (शाब्दिक प्रश्न - आयताकार बाग)</span><br>
+      एक आयताकार बाग, जिसकी लम्बाई, चौड़ाई से $4\text{ m}$ अधिक है, का अर्धपरिमाप $36\text{ m}$ है। बाग की विमाएँ (लम्बाई व चौड़ाई) ज्ञात कीजिए:
+    </div>
+
+    <!-- चरण 1: चरों का निर्धारण -->
+    <div class="step-box-blue" style="border-left: 6px solid #2563eb; background: #eff6ff; padding: 20px 25px; border-radius: 12px; margin-bottom: 25px;">
+      <div style="font-size: 22pt; font-weight: bold; color: #1e3a8a; margin-bottom: 12px;">
+        <span class="badge-blue" style="background: #2563eb; color: #ffffff; padding: 4px 12px; border-radius: 6px;">चरण 1: चरों को मानना</span>
+      </div>
+      <div style="font-size: 24pt; font-weight: 800; color: #0f172a; line-height: 2.0; padding-left: 10px;">
+        माना आयताकार बाग की लम्बाई $= x\text{ m}$<br>
+        तथा आयताकार बाग की चौड़ाई $= y\text{ m}$
+      </div>
+    </div>
+
+    <!-- चरण 2: दोनों शर्तों से समीकरण निर्माण (एक के नीचे एक) -->
+    <div class="step-box-orange" style="border-left: 6px solid #ea580c; background: #fff7ed; padding: 20px 25px; border-radius: 12px; margin-bottom: 25px;">
+      <div style="font-size: 22pt; font-weight: bold; color: #9a3412; margin-bottom: 15px;">
+        <span class="badge-orange" style="background: #ea580c; color: #ffffff; padding: 4px 12px; border-radius: 6px;">चरण 2: बीजीय समीकरणों का निर्माण (शर्त अनुसार)</span>
+      </div>
+      
+      <div style="font-size: 22pt; font-weight: bold; color: #9a3412; margin-bottom: 8px;">(A) प्रथम शर्तानुसार (लम्बाई, चौड़ाई से 4 m अधिक है):</div>
+      <div style="padding-left: 20px; font-size: 24pt; font-weight: 800; color: #0f172a; line-height: 2.0; margin-bottom: 20px;">
+        लम्बाई = चौड़ाई $+ 4$<br>
+        $x = y + 4$<br>
+        $x - y = 4 \quad \text{--- (1)}$
+      </div>
+
+      <div style="font-size: 22pt; font-weight: bold; color: #9a3412; margin-bottom: 8px;">(B) द्वितीय शर्तानुसार (बाग का अर्धपरिमाप 36 m है):</div>
+      <div style="padding-left: 20px; font-size: 24pt; font-weight: 800; color: #0f172a; line-height: 2.0;">
+        आयताकार बाग का परिमाप $= 2 \times ($लम्बाई $+$ चौड़ाई$) = 2(x + y)$<br>
+        अतः अर्धपरिमाप $= \frac{2(x + y)}{2} = x + y$<br>
+        प्रश्न अनुसार अर्धपरिमाप $= 36\text{ m}$<br>
+        $x + y = 36 \quad \text{--- (2)}$
+      </div>
+    </div>
+
+    <!-- ========================================================
+         विधि 1: विलोपन विधि (समीकरणों को स्तंभ रूप में ऊपर-नीचे रखकर जोड़ना)
+         ======================================================== -->
+    <div style="border: 3px solid #2563eb; background: #f8fafc; padding: 25px; border-radius: 16px; margin-bottom: 30px;">
+      <div style="font-size: 24pt; font-weight: 900; color: #1e3a8a; margin-bottom: 15px; border-bottom: 3px solid #cbd5e1; padding-bottom: 10px;">
+        🌟 विधि 1: विलोपन विधि (समीकरणों को स्तंभ रूप में ऊपर-नीचे रखकर हल करना)
+      </div>
+
+      <p style="font-size: 22pt; color: #334155; margin-bottom: 15px; line-height: 1.6;">
+        समीकरण (1) तथा समीकरण (2) को स्तंभ (Column) रूप में ऊपर-नीचे लिखकर जोड़ने पर (चूँकि $-y$ और $+y$ के गुणांक समान व विपरीत चिह्न के हैं, अतः जोड़ने पर $y$ विलुप्त हो जाएगा):
+      </p>
+
+      <!-- Blackboard Style Vertical Column Addition Box (Pure Flexbox - No Table Borders / No Overflow) -->
+      <div style="background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px; padding: 22px 25px; margin: 25px auto; max-width: 620px; box-shadow: 0 6px 18px rgba(30,58,138,0.08);">
+        <div style="font-size: 22pt; font-weight: 900; color: #1e3a8a; margin-bottom: 18px; border-bottom: 2px dashed #cbd5e1; padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+          <span>📝</span> <span>ब्लैकबोर्ड स्तंभ जोड़ (Column Addition):</span>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 26pt; font-weight: 800; color: #0f172a; padding: 0 10px;">
+          <!-- Row 1: Equation 1 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; color: #1e3a8a;">
+            <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">समीकरण (1):</span>
+            <div style="display: flex; gap: 18px; align-items: center;">
+              <span style="min-width: 45px; text-align: right;">$x$</span>
+              <span>$-$</span>
+              <span style="min-width: 45px; text-align: center;">$y$</span>
+              <span>$=$</span>
+              <span style="min-width: 65px; text-align: right;">$4$</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Equation 2 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; color: #047857;">
+            <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">समीकरण (2):</span>
+            <div style="display: flex; gap: 18px; align-items: center;">
+              <span style="min-width: 45px; text-align: right;">$(+)\ x$</span>
+              <span>$+$</span>
+              <span style="min-width: 45px; text-align: center;">$y$</span>
+              <span>$=$</span>
+              <span style="min-width: 65px; text-align: right;">$36$</span>
+            </div>
+          </div>
+
+          <!-- Horizontal Divider Line -->
+          <div style="border-bottom: 5px solid #0f172a; margin: 4px 0;"></div>
+
+          <!-- Row 3: Result -->
+          <div style="display: flex; justify-content: space-between; align-items: center; color: #dc2626; font-weight: 900;">
+            <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">(जोड़ने पर):</span>
+            <div style="display: flex; gap: 18px; align-items: center;">
+              <span style="min-width: 45px; text-align: right;">$\mathbf{2x}$</span>
+              <span>$+$</span>
+              <span style="min-width: 45px; text-align: center; color: #94a3b8;">$0$</span>
+              <span>$=$</span>
+              <span style="min-width: 65px; text-align: right;">$\mathbf{40}$</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #f0fdf4; border: 2px dashed #16a34a; border-radius: 10px; padding: 10px 15px; margin-top: 18px; font-size: 20pt; color: #15803d; font-weight: bold; text-align: center;">
+          ✓ स्पष्टीकरण: $-y$ और $+y$ परस्पर कट कर $0$ हो गए
+        </div>
+      </div>
+
+      <!-- Step by Step Vertical Solution for x -->
+      <div style="background: #eff6ff; border-left: 5px solid #2563eb; padding: 18px 22px; border-radius: 10px; margin: 20px 0; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+        $2x = 40$<br>
+        $x = \frac{40}{2}$<br>
+        $\mathbf{x = 20\text{ m}}$ (बाग की लम्बाई)
+      </div>
+
+      <!-- Step by Step Vertical Substitution for y -->
+      <p style="font-size: 22pt; font-weight: bold; color: #1e3a8a; margin-top: 20px;">
+        अब $x = 20$ का मान समीकरण (1) में रखने पर (प्रत्येक चरण नीचे):
+      </p>
+      <div style="background: #eff6ff; border-left: 5px solid #2563eb; padding: 18px 22px; border-radius: 10px; margin: 15px 0 25px 0; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+        $x - y = 4$<br>
+        $20 - y = 4$<br>
+        $-y = 4 - 20$<br>
+        $-y = -16$<br>
+        $\mathbf{y = 16\text{ m}}$ (बाग की चौड़ाई)
+      </div>
+
+      <!-- वैकल्पिक: घटाने की विधि भी स्पष्ट दिखाएँ -->
+      <div style="background: #fff7ed; border: 2px solid #fdba74; border-radius: 14px; padding: 20px; margin-top: 25px;">
+        <div style="font-size: 22pt; font-weight: bold; color: #9a3412; margin-bottom: 12px;">
+          📌 वैकल्पिक तरीका: समीकरण (2) में से समीकरण (1) को घटाने पर (नीचे के चिह्न बदलकर):
+        </div>
+
+        <!-- Blackboard Style Subtraction Box -->
+        <div style="background: #ffffff; border: 3px solid #ea580c; border-radius: 14px; padding: 20px 25px; margin: 15px auto; max-width: 620px; box-shadow: 0 4px 14px rgba(234,88,12,0.08);">
+          <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Cambria Math', 'Times New Roman', serif; font-size: 26pt; font-weight: 800; color: #0f172a; padding: 0 10px;">
+            <!-- Row 1: Equation 2 -->
+            <div style="display: flex; justify-content: space-between; align-items: center; color: #047857;">
+              <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">समीकरण (2):</span>
+              <div style="display: flex; gap: 18px; align-items: center;">
+                <span style="min-width: 45px; text-align: right;">$x$</span>
+                <span>$+$</span>
+                <span style="min-width: 45px; text-align: center;">$y$</span>
+                <span>$=$</span>
+                <span style="min-width: 65px; text-align: right;">$36$</span>
+              </div>
+            </div>
+
+            <!-- Row 2: Equation 1 -->
+            <div style="display: flex; justify-content: space-between; align-items: center; color: #1e3a8a;">
+              <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">समीकरण (1):</span>
+              <div style="display: flex; gap: 18px; align-items: center;">
+                <span style="min-width: 45px; text-align: right;">$x$</span>
+                <span>$-$</span>
+                <span style="min-width: 45px; text-align: center;">$y$</span>
+                <span>$=$</span>
+                <span style="min-width: 65px; text-align: right;">$4$</span>
+              </div>
+            </div>
+
+            <!-- Row 3: Sign Changes -->
+            <div style="display: flex; justify-content: space-between; align-items: center; color: #dc2626; font-size: 22pt; font-weight: 900;">
+              <span style="font-size: 18pt; font-family: sans-serif; font-weight: bold; background: #fee2e2; color: #dc2626; padding: 2px 10px; border-radius: 6px;">(चिह्न बदलने पर):</span>
+              <div style="display: flex; gap: 18px; align-items: center;">
+                <span style="min-width: 45px; text-align: right;">$(-)$</span>
+                <span>&nbsp;</span>
+                <span style="min-width: 45px; text-align: center;">$(+)$</span>
+                <span>&nbsp;</span>
+                <span style="min-width: 65px; text-align: right;">$(-)$</span>
+              </div>
+            </div>
+
+            <!-- Divider Line -->
+            <div style="border-bottom: 5px solid #0f172a; margin: 4px 0;"></div>
+
+            <!-- Row 4: Result -->
+            <div style="display: flex; justify-content: space-between; align-items: center; color: #dc2626; font-weight: 900;">
+              <span style="font-size: 21pt; font-family: sans-serif; font-weight: bold;">(घटाने पर):</span>
+              <div style="display: flex; gap: 18px; align-items: center;">
+                <span style="min-width: 45px; text-align: right; color: #94a3b8;">$0$</span>
+                <span>$+$</span>
+                <span style="min-width: 45px; text-align: center;">$\mathbf{2y}$</span>
+                <span>$=$</span>
+                <span style="min-width: 65px; text-align: right;">$\mathbf{32}$</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 10px; padding: 8px 12px; margin-top: 15px; font-size: 19pt; color: #b45309; font-weight: bold; text-align: center;">
+            💡 $x - x = 0$, तथा $+y - (-y) = y + y = 2y$
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border-left: 5px solid #ea580c; padding: 15px 20px; border-radius: 8px; margin-top: 15px; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+          $2y = 32$<br>
+          $y = \frac{32}{2}$<br>
+          $\mathbf{y = 16\text{ m}}$ (चौड़ाई)
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         विधि 2: प्रतिस्थापन विधि (Substitution Method)
+         ======================================================== -->
+    <div style="border: 3px solid #7c3aed; background: #faf5ff; padding: 25px; border-radius: 16px; margin-bottom: 30px;">
+      <div style="font-size: 24pt; font-weight: 900; color: #5b21b6; margin-bottom: 15px; border-bottom: 3px solid #ddd6fe; padding-bottom: 10px;">
+        🌟 विधि 2: प्रतिस्थापन विधि (Substitution Method - चरण-दर-चरण)
+      </div>
+
+      <div style="font-size: 22pt; font-weight: bold; color: #6b21a8; margin-bottom: 8px;">
+        चरण (i): समीकरण (1) से x का मान y के पदों में ज्ञात करने पर:
+      </div>
+      <div style="background: #ffffff; border-left: 5px solid #7c3aed; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+        $x - y = 4$<br>
+        $x = y + 4 \quad \text{--- (3)}$
+      </div>
+
+      <div style="font-size: 22pt; font-weight: bold; color: #6b21a8; margin-bottom: 8px;">
+        चरण (ii): $x = y + 4$ का मान समीकरण (2) में प्रतिस्थापित करने पर:
+      </div>
+      <div style="background: #ffffff; border-left: 5px solid #7c3aed; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+        $x + y = 36$<br>
+        $(y + 4) + y = 36$<br>
+        $2y + 4 = 36$<br>
+        $2y = 36 - 4$<br>
+        $2y = 32$<br>
+        $y = \frac{32}{2}$<br>
+        $\mathbf{y = 16\text{ m}}$ (चौड़ाई)
+      </div>
+
+      <div style="font-size: 22pt; font-weight: bold; color: #6b21a8; margin-bottom: 8px;">
+        चरण (iii): $y = 16$ का मान समीकरण (3) में रखने पर:
+      </div>
+      <div style="background: #ffffff; border-left: 5px solid #7c3aed; padding: 15px 20px; border-radius: 8px; margin-bottom: 10px; font-size: 24pt; font-weight: 800; line-height: 2.0; color: #0f172a;">
+        $x = y + 4$<br>
+        $x = 16 + 4$<br>
+        $\mathbf{x = 20\text{ m}}$ (लम्बाई)
+      </div>
+    </div>
+
+    <!-- ========================================================
+         बाग का ज्यामितीय चित्र व सत्यापन (Geometric Diagram & Verification)
+         ======================================================== -->
+    <div style="background: #f0fdf4; border: 3px solid #16a34a; border-radius: 16px; padding: 25px; margin-bottom: 30px;">
+      <div style="font-size: 24pt; font-weight: 900; color: #166534; margin-bottom: 15px; border-bottom: 2px dashed #86efac; padding-bottom: 10px;">
+        📐 बाग का ज्यामितीय निरूपण एवं उत्तर की जाँच (Verification):
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 25px; align-items: center; justify-content: center; margin: 20px 0;">
+        <!-- SVG Rectangle Diagram -->
+        <svg viewBox="0 0 420 260" style="max-width: 400px; width: 100%; height: auto; background: #ffffff; border-radius: 14px; border: 2px solid #bbf7d0; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+          <!-- Rectangular Garden Area -->
+          <rect x="50" y="45" width="310" height="160" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="4" />
+          
+          <!-- Inner Grass Pattern Hint -->
+          <circle cx="90" cy="85" r="4" fill="#86efac" />
+          <circle cx="150" cy="115" r="4" fill="#86efac" />
+          <circle cx="210" cy="75" r="4" fill="#86efac" />
+          <circle cx="280" cy="120" r="4" fill="#86efac" />
+          <circle cx="320" cy="80" r="4" fill="#86efac" />
+          <circle cx="170" cy="160" r="4" fill="#86efac" />
+          <circle cx="250" cy="170" r="4" fill="#86efac" />
+          
+          <!-- Dimension Labels -->
+          <!-- Top Length: 20 m -->
+          <text x="205" y="32" text-anchor="middle" font-size="20" font-weight="900" fill="#15803d" font-family="sans-serif">लम्बाई x = 20 m</text>
+          <!-- Bottom Length -->
+          <text x="205" y="235" text-anchor="middle" font-size="18" font-weight="bold" fill="#15803d" font-family="sans-serif">लम्बाई x = 20 m</text>
+          
+          <!-- Left Width: 16 m -->
+          <text x="35" y="132" text-anchor="middle" font-size="19" font-weight="900" fill="#166534" font-family="sans-serif" transform="rotate(-90 35 132)">चौड़ाई y = 16 m</text>
+          <!-- Right Width -->
+          <text x="385" y="132" text-anchor="middle" font-size="19" font-weight="900" fill="#166534" font-family="sans-serif" transform="rotate(90 385 132)">चौड़ाई y = 16 m</text>
+          
+          <!-- Center Text -->
+          <text x="205" y="125" text-anchor="middle" font-size="22" font-weight="900" fill="#047857" font-family="sans-serif">आयताकार बाग</text>
+          <text x="205" y="152" text-anchor="middle" font-size="18" font-weight="bold" fill="#15803d" font-family="sans-serif">(20 m &times; 16 m)</text>
+        </svg>
+
+        <!-- Verification Checklist -->
+        <div style="flex: 1; min-width: 280px; font-size: 22pt; line-height: 1.8; color: #065f46;">
+          <div style="background: #ffffff; border: 2px solid #86efac; border-radius: 12px; padding: 15px 20px;">
+            <div style="font-weight: 900; color: #15803d; margin-bottom: 8px;">🔍 दोनों शर्तों की जाँच:</div>
+            <strong>1. लम्बाई और चौड़ाई का अंतर:</strong><br>
+            $20 - 16 = 4\text{ m}$ <span style="color: #16a34a; font-weight: 900;">✓ (4 m अधिक है - सही)</span><br><br>
+            <strong>2. बाग का अर्धपरिमाप:</strong><br>
+            अर्धपरिमाप $= 20 + 16 = 36\text{ m}$ <span style="color: #16a34a; font-weight: 900;">✓ (36 m - सही)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Answer Banner -->
+    <div class="answer-box" style="background: linear-gradient(135deg, #065f46, #047857); color: #ffffff; padding: 22px 30px; border-radius: 14px; text-align: center; box-shadow: 0 4px 15px rgba(4,120,87,0.2);">
+      <div style="font-size: 28pt; font-weight: 900; -webkit-text-stroke: 0px !important;">
+        🎯 अंतिम उत्तर: बाग की लम्बाई $= \mathbf{20\text{ m}}$ तथा चौड़ाई $= \mathbf{16\text{ m}}$ है।
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Ex 3.1 Q6: दूसरा समीकरण लिखना -->
+  <div class="step-box-purple" style="margin-top: 35px;">
+    <div class="math-line"><span class="badge-purple">प्रश्न 6</span> एक रैखिक समीकरण $2x + 3y - 8 = 0$ दी गई है। दो चरों में एक ऐसी और रैखिक समीकरण लिखिए ताकि प्राप्त युग्म का ज्यामितीय निरूपण जैसा कि:</div>
+    <div class="math-line" style="margin-top: 10px;"><strong>(i) प्रतिच्छेद करती रेखाएँ हों:</strong></div>
+    <div class="math-line">शर्त: $\frac{a_1}{a_2} \neq \frac{b_1}{b_2}$। यहाँ $a_1=2, b_1=3$ है। अतः दूसरा समीकरण <strong>$3x + 2y - 7 = 0$</strong> हो सकता है ($\frac{2}{3} \neq \frac{3}{2}$)।</div>
+    <div class="math-line" style="margin-top: 10px;"><strong>(ii) समांतर रेखाएँ हों:</strong></div>
+    <div class="math-line">शर्त: $\frac{a_1}{a_2} = \frac{b_1}{b_2} \neq \frac{c_1}{c_2}$। यहाँ $a_1=2, b_1=3, c_1=-8$ है। अतः दूसरा समीकरण <strong>$4x + 6y - 12 = 0$</strong> हो सकता है ($\frac{2}{4} = \frac{3}{6} \neq \frac{-8}{-12}$)।</div>
+    <div class="math-line" style="margin-top: 10px;"><strong>(iii) संपाती रेखाएँ हों:</strong></div>
+    <div class="math-line">शर्त: $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \frac{c_1}{c_2}$। पूरे समीकरण को 3 से गुणा करने पर दूसरा समीकरण <strong>$6x + 9y - 24 = 0$</strong> हो सकता है।</div>
+    <div class="answer-box">
+      <strong>उत्तर:</strong> (i) $3x + 2y - 7 = 0$; &nbsp;&nbsp; (ii) $4x + 6y - 12 = 0$; &nbsp;&nbsp; (iii) $6x + 9y - 24 = 0$
+    </div>
+  </div>
+
+  <!-- Ex 3.1 Q7: त्रिभुजाकार पटल एवं आलेखीय छायांकन -->
+  <div class="step-box-blue" style="margin-top: 35px;">
+    <div class="math-line"><span class="badge-blue">प्रश्न 7 (अति-महत्वपूर्ण 6 अंक बोर्ड प्रश्न)</span> समीकरणों $x - y + 1 = 0$ और $3x + 2y - 12 = 0$ का ग्राफ खींचिए। X-अक्ष और इन रेखाओं से बने त्रिभुज के शीर्षों के निर्देशांक ज्ञात कीजिए और त्रिभुजाकार पटल को छायांकित कीजिए:</div>
+    <div class="math-line" style="margin-top: 15px;"><strong>हल:</strong></div>
+    <div class="math-line"><strong>समीकरण (1):</strong> $x - y + 1 = 0 \implies y = x + 1$</div>
+    <div class="math-line">• यदि $x = 0$ तो $y = 1 \implies (0, 1)$</div>
+    <div class="math-line">• यदि $x = -1$ तो $y = 0 \implies (-1, 0)$ (X-अक्ष पर बिंदु)</div>
+    <div class="math-line">• यदि $x = 2$ तो $y = 3 \implies (2, 3)$</div>
+    <div class="math-line" style="margin-top: 10px;"><strong>समीकरण (2):</strong> $3x + 2y - 12 = 0 \implies 2y = 12 - 3x \implies y = \frac{12 - 3x}{2}$</div>
+    <div class="math-line">• यदि $x = 0$ तो $y = 6 \implies (0, 6)$</div>
+    <div class="math-line">• यदि $x = 4$ तो $y = 0 \implies (4, 0)$ (X-अक्ष पर बिंदु)</div>
+    <div class="math-line">• यदि $x = 2$ तो $y = 3 \implies (2, 3)$ (उभयनिष्ठ प्रतिच्छेदन बिंदु!)</div>
+
+    <!-- High-Contrast Projector Dark Grid SVG Graph for Q7 -->
+    <div style="margin: 25px 0; text-align: center;">
+      <svg viewBox="0 0 540 380" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 4px solid #1e3a8a; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <defs>
+          <pattern id="grid_q7_main" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="2"/>
+          </pattern>
+        </defs>
+        <rect width="540" height="380" fill="#f8fafc"/>
+        <rect width="540" height="380" fill="url(#grid_q7_main)"/>
+
+        <!-- Shaded Triangular Region A(2,3) -> B(-1,0) -> C(4,0) -->
+        <!-- Origin (0,0) at (180, 270), scale: 30px per unit -->
+        <polygon points="240,180 150,270 300,270" fill="rgba(234, 179, 8, 0.45)" stroke="#ca8a04" stroke-width="4"/>
+
+        <!-- X and Y Axes -->
+        <line x1="30" y1="270" x2="510" y2="270" stroke="#000000" stroke-width="4"/>
+        <line x1="180" y1="30" x2="180" y2="350" stroke="#000000" stroke-width="4"/>
+
+        <!-- Axis Arrows and Labels -->
+        <polygon points="510,270 495,264 495,276" fill="#000000"/>
+        <polygon points="180,30 174,45 186,45" fill="#000000"/>
+        <text x="500" y="258" font-size="20" font-weight="900" fill="#000000">X</text>
+        <text x="195" y="45" font-size="20" font-weight="900" fill="#000000">Y</text>
+        <text x="160" y="295" font-size="18" font-weight="900" fill="#000000">O(0,0)</text>
+
+        <!-- Line 1: x - y + 1 = 0 (Red line) from (-2, -1) to (3, 4) => (120, 300) to (270, 150) -->
+        <line x1="90" y1="330" x2="300" y2="120" stroke="#dc2626" stroke-width="5"/>
+        <text x="70" y="355" font-size="17" font-weight="900" fill="#dc2626">x - y + 1 = 0</text>
+
+        <!-- Line 2: 3x + 2y - 12 = 0 (Blue line) from (0, 6) to (5, -1.5) => (180, 90) to (330, 315) -->
+        <line x1="150" y1="45" x2="330" y2="315" stroke="#1d4ed8" stroke-width="5"/>
+        <text x="310" y="345" font-size="17" font-weight="900" fill="#1d4ed8">3x + 2y - 12 = 0</text>
+
+        <!-- Triangle Vertices Points & Labels -->
+        <circle cx="240" cy="180" r="7" fill="#dc2626"/>
+        <text x="240" y="160" font-size="20" font-weight="900" fill="#dc2626" text-anchor="middle">A(2, 3)</text>
+
+        <circle cx="150" cy="270" r="7" fill="#15803d"/>
+        <text x="125" y="298" font-size="19" font-weight="900" fill="#15803d">B(-1, 0)</text>
+
+        <circle cx="300" cy="270" r="7" fill="#15803d"/>
+        <text x="315" y="298" font-size="19" font-weight="900" fill="#15803d">C(4, 0)</text>
+      </svg>
+    </div>
+
+    <div class="answer-box">
+      <strong>उत्तर:</strong> त्रिभुज के शीर्षों के निर्देशांक <strong>A(2, 3), B(-1, 0) और C(4, 0)</strong> हैं तथा छायांकित पटल का क्षेत्रफल $= \mathbf{7.5}\text{ sq units}$ है।
+    </div>
+  </div>
+
+
+
+  <!-- INTERACTIVE SIMULATOR CH3_3: त्रिभुजाकार पटल ग्राफ एवं शीर्ष कैलकुलेटर (प्रश्न 7 विशेष) -->
+  <div style="background: #f8fafc; border: 4px solid #c2410c; border-radius: 16px; padding: 22px; margin: 25px 0; box-shadow: 0 6px 18px rgba(194,65,12,0.15);">
+    <div style="font-size: 24pt; color: #9a3412; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+      🔺 लाइव सिमुलेटर (प्रश्नावली 3.1 प्रश्न 7 विशेष): रेखाओं व X-अक्ष से बने त्रिभुज के शीर्ष एवं क्षेत्रफल
+    </div>
+    <p style="font-size: 20pt; color: #334155; margin-bottom: 14px; font-weight: 800;">
+      समीकरण $x - y + 1 = 0$ और $3x + 2y - 12 = 0$ तथा X-अक्ष के बीच बनने वाले त्रिभुज के शीर्ष व क्षेत्रफल का लाइव परिकलन:
+    </p>
+    <div style="background:#fffbeb; border:3px solid #f59e0b; border-radius:12px; padding:16px; font-size:22pt; font-weight:900; color:#92400e; line-height:1.8;">
+      • त्रिभुज के तीन शीर्ष: <strong>A(2, 3), &nbsp; B(-1, 0), &nbsp; C(4, 0)</strong><br>
+      • आधार (BC) की लंबाई $= 4 - (-1) = \mathbf{5}\text{ units}$<br>
+      • ऊँचाई (शीर्ष A का y-निर्देशांक) $= \mathbf{3}\text{ units}$<br>
+      • छायांकित त्रिभुजाकार पटल का क्षेत्रफल $= \frac{1}{2} \times 5 \times 3 = \mathbf{7.5}\text{ sq units}$
+    </div>
+  </div>
+
+
+
+  <!-- =========================================================================
+       EXERCISE 3.2: प्रतिस्थापन एवं विलोपन विधि
+       ========================================================================= -->
+  <div style="background: #1e293b; color: #ffffff !important; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0; -webkit-text-stroke: 0px !important;">
+    <span style="font-size: 28pt !important; color: #38bdf8;">📌 प्रश्नावली 3.2: बीजगणितीय विधियाँ (प्रतिस्थापन व विलोपन)</span>
+  </div>
+
+  <!-- Ex 3.2 Q1 (i): Substitution x + y = 14, x - y = 4 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (i)</span> निम्न समीकरण युग्म को <strong>प्रतिस्थापन विधि (Substitution Method)</strong> द्वारा हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $x + y = 14$ <span class="badge-blue">समीकरण (1)</span><br>
+      $x - y = 4$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (1) से x का मान y के पदों में व्यक्त करना</span></p>
+      <div class="math-line">$x = 14 - y$ <span class="badge-purple">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: x का यह मान समीकरण (2) में प्रतिस्थापित करने पर</span></p>
+      <div class="math-line">$(14 - y) - y = 4$</div>
+      <div class="math-line">$14 - 2y = 4$</div>
+      <div class="math-line">$-2y = 4 - 14$</div>
+      <div class="math-line">$-2y = -10$</div>
+      <div class="math-line">$y = \frac{-10}{-2}$</div>
+      <div class="math-line">$\mathbf{y = 5}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: y का मान समीकरण (3) में रखने पर</span></p>
+      <div class="math-line">$x = 14 - 5$</div>
+      <div class="math-line">$x = \color{#b91c1c}{9}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{9}$ तथा $y = \mathbf{5}$</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q1 (ii): s - t = 3, s/3 + t/2 = 6 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (ii)</span> प्रतिस्थापन विधि से हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $s - t = 3$ <span class="badge-blue">समीकरण (1)</span><br>
+      $\frac{s}{3} + \frac{t}{2} = 6$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (2) का सरलीकरण</span></p>
+      <p>ल.स. (LCM) = 6 से दोनों पक्षों में गुणा करने पर:</p>
+      <div class="math-line">$6 \times \frac{s}{3} + 6 \times \frac{t}{2} = 6 \times 6$</div>
+      <div class="math-line">$2s + 3t = 36$ <span class="badge-green">समीकरण (2')</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (1) से s का मान</span></p>
+      <div class="math-line">$s = 3 + t$ <span class="badge-purple">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: s का मान समीकरण (2') में प्रतिस्थापित करने पर</span></p>
+      <div class="math-line">$2(3 + t) + 3t = 36$</div>
+      <div class="math-line">$6 + 2t + 3t = 36$</div>
+      <div class="math-line">$6 + 5t = 36$</div>
+      <div class="math-line">$5t = 36 - 6$</div>
+      <div class="math-line">$5t = 30$</div>
+      <div class="math-line">$t = \frac{30}{5}$</div>
+      <div class="math-line">$\mathbf{t = 6}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: t का मान समीकरण (3) में रखने पर</span></p>
+      <div class="math-line">$s = 3 + 6$</div>
+      <div class="math-line">$s = \color{#b91c1c}{9}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $s = \mathbf{9}$ तथा $t = \mathbf{6}$</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q1 (iii): 3x - y = 3, 9x - 3y = 9 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (iii)</span> प्रतिस्थापन विधि द्वारा हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $3x - y = 3$ <span class="badge-blue">समीकरण (1)</span><br>
+      $9x - 3y = 9$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (1) से y का मान</span></p>
+      <div class="math-line">$y = 3x - 3$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: y का मान समीकरण (2) में प्रतिस्थापित करने पर</span></p>
+      <div class="math-line">$9x - 3(3x - 3) = 9$</div>
+      <div class="math-line">$9x - 9x + 9 = 9$</div>
+      <div class="math-line">$9 = 9$ (जो कि सदैव सत्य है)</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> यह कथन $x$ के सभी मानों के लिए सत्य है। अतः दिए गए समीकरण युग्म के <strong>अपरिमित रूप से अनेक हल</strong> हैं। संबंध: $y = 3x - 3$.</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q1 (iv): Decimals 0.2x + 0.3y = 1.3, 0.4x + 0.5y = 2.3 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (iv)</span> हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $0.2x + 0.3y = 1.3$ <span class="badge-blue">समीकरण (1)</span><br>
+      $0.4x + 0.5y = 2.3$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: दशमलव हटाने के लिए दोनों समीकरणों को 10 से गुणा करने पर</span></p>
+      <div class="math-line">$2x + 3y = 13$ <span class="badge-blue">समीकरण (1')</span></div>
+      <div class="math-line">$4x + 5y = 23$ <span class="badge-orange">समीकरण (2')</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (1') से x का मान ज्ञात करना</span></p>
+      <div class="math-line">$2x = 13 - 3y$</div>
+      <div class="math-line">$x = \frac{13 - 3y}{2}$ <span class="badge-purple">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x का मान समीकरण (2') में प्रतिस्थापित करने पर</span></p>
+      <div class="math-line">$4 \left(\frac{13 - 3y}{2}\right) + 5y = 23$</div>
+      <div class="math-line">$2(13 - 3y) + 5y = 23$</div>
+      <div class="math-line">$26 - 6y + 5y = 23$</div>
+      <div class="math-line">$26 - y = 23$</div>
+      <div class="math-line">$-y = 23 - 26$</div>
+      <div class="math-line">$-y = -3$</div>
+      <div class="math-line">$y = \color{#b91c1c}{3}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: y का मान समीकरण (3) में रखने पर</span></p>
+      <div class="math-line">$x = \frac{13 - 3(3)}{2}$</div>
+      <div class="math-line">$x = \frac{13 - 9}{2}$</div>
+      <div class="math-line">$x = \frac{4}{2}$</div>
+      <div class="math-line">$\mathbf{x = 2}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{2}$ तथा $y = \mathbf{3}$</p>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       SIMULATOR CH3_4: प्रतिस्थापन विधि (Substitution Method) लाइव सॉल्वर
+       ========================================== -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #7c3aed; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #5b21b6; margin-bottom: 12px;">
+      <i class="fas fa-exchange-alt"></i> लाइव सिमुलेटर 4: प्रतिस्थापन विधि (Substitution Method) स्टेप-बाय-स्टेप सॉल्वर
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      प्रश्नावली 3.2 (प्रश्न 1) के किसी भी उदाहरण पर क्लिक करें या अपने मान भरें। लाइव चरणबद्ध प्रतिस्थापन समाधान देखें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim4Preset(1, 1, 14, 1, -1, 4)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">(i) $x+y=14, x-y=4$</button>
+      <button onclick="setSim4Preset(1, -1, 3, 2, 3, 36)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">(ii) $s-t=3, 2s+3t=36$</button>
+      <button onclick="setSim4Preset(2, 3, 11, 2, -4, -24)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">Q2: $2x+3y=11, 2x-4y=-24$</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 14px; padding: 15px;">
+        <div style="font-size: 20pt; font-weight: bold; color: #1e3a8a; margin-bottom: 10px;">समीकरण (1): $a_1 x + b_1 y = c_1$</div>
+        <div style="display: flex; gap: 10px;">
+          <input type="number" id="sim4_a1" value="1" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="a1">
+          <input type="number" id="sim4_b1" value="1" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="b1">
+          <input type="number" id="sim4_c1" value="14" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="c1">
+        </div>
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 14px; padding: 15px;">
+        <div style="font-size: 20pt; font-weight: bold; color: #c2410c; margin-bottom: 10px;">समीकरण (2): $a_2 x + b_2 y = c_2$</div>
+        <div style="display: flex; gap: 10px;">
+          <input type="number" id="sim4_a2" value="1" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="a2">
+          <input type="number" id="sim4_b2" value="-1" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="b2">
+          <input type="number" id="sim4_c2" value="4" oninput="updateSim4()" style="width: 32%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;" placeholder="c2">
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim4_steps_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Ex 3.2 Q1 (v): Roots sqrt(2)x + sqrt(3)y = 0, sqrt(3)x - sqrt(8)y = 0 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (v)</span> हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $\sqrt{2}x + \sqrt{3}y = 0$ <span class="badge-blue">समीकरण (1)</span><br>
+      $\sqrt{3}x - \sqrt{8}y = 0$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (1) से x का मान</span></p>
+      <div class="math-line">$\sqrt{2}x = -\sqrt{3}y$</div>
+      <div class="math-line">$x = -\frac{\sqrt{3}}{\sqrt{2}}y$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: x का मान समीकरण (2) में रखने पर</span></p>
+      <div class="math-line">$\sqrt{3}\left(-\frac{\sqrt{3}}{\sqrt{2}}y\right) - \sqrt{8}y = 0$</div>
+      <div class="math-line">$-\frac{3}{\sqrt{2}}y - 2\sqrt{2}y = 0$</div>
+      <div class="math-line">$\left(-\frac{3}{\sqrt{2}} - 2\sqrt{2}\right) y = 0$</div>
+      <div class="math-line">चूँकि कोष्ठक का पद अशून्य है, अतः:</div>
+      <div class="math-line">$y = \color{#b91c1c}{0}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x का मान</span></p>
+      <div class="math-line">$x = -\frac{\sqrt{3}}{\sqrt{2}}(0)$</div>
+      <div class="math-line">$\mathbf{x = 0}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{0}$ तथा $y = \mathbf{0}$</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q1 (vi): Fractions with Substitution -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 1 (vi)</span> प्रतिस्थापन विधि দ্বারা हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $\frac{3x}{2} - \frac{5y}{3} = -2$ <span class="badge-blue">समीकरण (1)</span><br>
+      $\frac{x}{3} + \frac{y}{2} = \frac{13}{6}$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: दोनों समीकरणों का सरलीकरण (भिन्न हटाना)</span></p>
+      <p>समीकरण (1) के दोनों पक्षों को 6 से गुणा करने पर:</p>
+      <div class="math-line">$6 \times \frac{3x}{2} - 6 \times \frac{5y}{3} = 6 \times (-2)$</div>
+      <div class="math-line">$9x - 10y = -12$ <span class="badge-blue">समीकरण (1')</span></div>
+      <p>समीकरण (2) के दोनों पक्षों को 6 से गुणा करने पर:</p>
+      <div class="math-line">$6 \times \frac{x}{3} + 6 \times \frac{y}{2} = 6 \times \frac{13}{6}$</div>
+      <div class="math-line">$2x + 3y = 13$ <span class="badge-orange">समीकरण (2')</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (2') से x का मान y के पदों में व्यक्त करना</span></p>
+      <div class="math-line">$2x = 13 - 3y$</div>
+      <div class="math-line">$x = \frac{13 - 3y}{2}$ <span class="badge-purple">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x का मान समीकरण (1') में प्रतिस्थापित करने पर</span></p>
+      <div class="math-line">$9 \left(\frac{13 - 3y}{2}\right) - 10y = -12$</div>
+      <div class="math-line">$\frac{117 - 27y}{2} - 10y = -12$</div>
+      <div class="math-line">दोनों पक्षों को 2 से गुणा करने पर:</div>
+      <div class="math-line">$117 - 27y - 20y = -24$</div>
+      <div class="math-line">$117 - 47y = -24$</div>
+      <div class="math-line">$-47y = -24 - 117$</div>
+      <div class="math-line">$-47y = -141$</div>
+      <div class="math-line">$y = \frac{-141}{-47}$</div>
+      <div class="math-line">$\mathbf{y = 3}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: y का मान समीकरण (3) में रखने पर</span></p>
+      <div class="math-line">$x = \frac{13 - 3(3)}{2}$</div>
+      <div class="math-line">$x = \frac{13 - 9}{2}$</div>
+      <div class="math-line">$x = \frac{4}{2}$</div>
+      <div class="math-line">$\mathbf{x = 2}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{2}$ तथा $y = \mathbf{3}$</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q2: 2x + 3y = 11, 2x - 4y = -24 and y = mx + 3 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 2 (अति-महत्वपूर्ण बोर्ड प्रश्न)</span> $2x + 3y = 11$ और $2x - 4y = -24$ को हल कीजिए और इससे '$m$' का वह मान ज्ञात कीजिए जिसके लिए $y = mx + 3$ हो।</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: दिए गए समीकरण</span></p>
+      <div class="math-line">$2x + 3y = 11$ <span class="badge-blue">समीकरण (1)</span></div>
+      <div class="math-line">$2x - 4y = -24$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: विलोपन विधि (समीकरण 1 में से 2 घटाने पर)</span></p>
+      <div class="math-line">$(2x + 3y) - (2x - 4y) = 11 - (-24)$</div>
+      <div class="math-line">$2x + 3y - 2x + 4y = 11 + 24$</div>
+      <div class="math-line">$7y = 35$</div>
+      <div class="math-line">$y = \frac{35}{7}$</div>
+      <div class="math-line">$\mathbf{y = {5}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x का मान ज्ञात करना</span></p>
+      <p>$y = 5$ का मान समीकरण (1) में रखने पर:</p>
+      <div class="math-line">$2x + 3(5) = 11$</div>
+      <div class="math-line">$2x + 15 = 11$</div>
+      <div class="math-line">$2x = 11 - 15$</div>
+      <div class="math-line">$2x = -4$</div>
+      <div class="math-line">$x = \frac{-4}{2}$</div>
+      <div class="math-line">$\mathbf{x = {-2}}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: m का मान ज्ञात करना</span></p>
+      <p>दिया गया संबंध: $y = mx + 3$</p>
+      <p>$x = -2$ और $y = 5$ रखने पर:</p>
+      <div class="math-line">$5 = m(-2) + 3$</div>
+      <div class="math-line">$5 = -2m + 3$</div>
+      <div class="math-line">$2m = 3 - 5$</div>
+      <div class="math-line">$2m = -2$</div>
+      <div class="math-line">$m = \frac{-2}{2}$</div>
+      <div class="math-line">$\mathbf{m = {-1}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> $x = -2$, $y = 5$ तथा $m$ का अभीष्ट मान <strong>$m = -1$</strong> है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (i): दो संख्याओं का अंतर 26 है -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (i) (शाब्दिक प्रश्न)</span> दो संख्याओं का अंतर 26 है और एक संख्या दूसरी संख्या की तीन गुनी है। उन्हें ज्ञात कीजिए।</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: माना संख्याएँ</span></p>
+      <p>माना बड़ी संख्या = $x$ तथा छोटी संख्या = $y$ है ($x > y$)।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: प्रश्नानुसार समीकरण निर्माण</span></p>
+      <div class="math-line">प्रथम शर्त: $x - y = 26$ <span class="badge-blue">समीकरण (1)</span></div>
+      <div class="math-line">द्वितीय शर्त: $x = 3y$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: प्रतिस्थापन द्वारा हल</span></p>
+      <p>समीकरण (2) से $x = 3y$ का मान समीकरण (1) में रखने पर:</p>
+      <div class="math-line">$3y - y = 26$</div>
+      <div class="math-line">$2y = 26$</div>
+      <div class="math-line">$y = \frac{26}{2}$</div>
+      <div class="math-line">$\mathbf{y = 13}$</div>
+      <p>$y = 13$ का मान समीकरण (2) में रखने पर:</p>
+      <div class="math-line">$x = 3 \times 13$</div>
+      <div class="math-line">$x = \color{#b91c1c}{39}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> अभीष्ट संख्याएँ <strong>39 और 13</strong> हैं।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (ii): संपूरक कोण -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (ii)</span> दो संपूरक कोणों में बड़ा कोण छोटे कोण से 18 डिग्री अधिक है। उन्हें ज्ञात कीजिए।</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: माना कोण</span></p>
+      <p>माना बड़ा कोण = $x^\circ$ तथा छोटा कोण = $y^\circ$ है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण निर्माण</span></p>
+      <p>चूँकि दोनों कोण संपूरक (Supplementary) हैं, उनका योग $180^\circ$ होता है:</p>
+      <div class="math-line">$x + y = 180$ <span class="badge-blue">समीकरण (1)</span></div>
+      <p>बड़ा कोण छोटे कोण से 18 अधिक है:</p>
+      <div class="math-line">$x = y + 18$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: हल करना</span></p>
+      <p>$x = y + 18$ का मान समीकरण (1) में रखने पर:</p>
+      <div class="math-line">$(y + 18) + y = 180$</div>
+      <div class="math-line">$2y + 18 = 180$</div>
+      <div class="math-line">$2y = 180 - 18$</div>
+      <div class="math-line">$2y = 162$</div>
+      <div class="math-line">$y = \frac{162}{2}$</div>
+      <div class="math-line">$\mathbf{y = {81^\circ}}$</div>
+      <p>$y = 81$ का मान समीकरण (2) में रखने पर:</p>
+      <div class="math-line">$x = 81 + 18$</div>
+      <div class="math-line">$\mathbf{x = {99^\circ}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> बड़ा कोण = <strong>$99^\circ$</strong> तथा छोटा कोण = <strong>$81^\circ$</strong> है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (iii): क्रिकेट बल्ले व गेंद -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (iii)</span> एक क्रिकेट टीम के कोच ने 7 बल्ले तथा 6 गेंदें ₹ 3800 में खरीदीं। बाद में, उसने 3 बल्ले तथा 5 गेंदें ₹ 1750 में खरीदीं। प्रत्येक बल्ले और प्रत्येक गेंद का मूल्य ज्ञात कीजिए।</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: माना मूल्य</span></p>
+      <p>माना 1 बल्ले का मूल्य = ₹ $x$ तथा 1 गेंद का मूल्य = ₹ $y$ है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: प्रश्नानुसार समीकरण</span></p>
+      <div class="math-line">$7x + 6y = 3800$ <span class="badge-blue">समीकरण (1)</span></div>
+      <div class="math-line">$3x + 5y = 1750$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: विलोपन विधि से हल</span></p>
+      <p>समीकरण (1) को 3 से और समीकरण (2) को 7 से गुणा करने पर:</p>
+      <div class="math-line">$21x + 18y = 11400$ <span class="badge-blue">समीकरण (3)</span></div>
+      <div class="math-line">$21x + 35y = 12250$ <span class="badge-orange">समीकरण (4)</span></div>
+      <p>समीकरण (4) में से समीकरण (3) घटाने पर:</p>
+      <div class="math-line">$(21x + 35y) - (21x + 18y) = 12250 - 11400$</div>
+      <div class="math-line">$17y = 850$</div>
+      <div class="math-line">$y = \frac{850}{17}$</div>
+      <div class="math-line">$\mathbf{y = {50}}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: x का मान ज्ञात करना</span></p>
+      <p>$y = 50$ का मान समीकरण (2) में रखने पर:</p>
+      <div class="math-line">$3x + 5(50) = 1750$</div>
+      <div class="math-line">$3x + 250 = 1750$</div>
+      <div class="math-line">$3x = 1750 - 250$</div>
+      <div class="math-line">$3x = 1500$</div>
+      <div class="math-line">$x = \frac{1500}{3}$</div>
+      <div class="math-line">$\mathbf{x = {500}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> प्रत्येक बल्ले का मूल्य = <strong>₹ 500</strong> तथा प्रत्येक गेंद का मूल्य = <strong>₹ 50</strong> है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (iv): टैक्सी का किराया -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (iv) (टैक्सी भाड़ा समस्या)</span> एक नगर में टैक्सी के भाड़े में एक नियत भाड़े के अतिरिक्त चली गई दूरी पर भाड़ा सम्मिलित किया जाता है। $10\text{ km}$ दूरी के लिए भाड़ा ₹ $105$ है तथा $15\text{ km}$ के लिए भाड़ा ₹ $155$ है। नियत भाड़ा तथा प्रति $\text{km}$ भाड़ा क्या है? एक व्यक्ति को $25\text{ km}$ यात्रा करने के लिए कितना भाड़ा देना होगा?</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: चरों को मानना</span></p>
+      <p>माना टैक्सी का नियत भाड़ा = ₹ $x$ तथा प्रति $\text{km}$ भाड़ा = ₹ $y$ है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: प्रश्नानुसार समीकरण निर्माण</span></p>
+      <div class="math-line">10 km यात्रा के लिए: $x + 10y = 105$ <span class="badge-blue">समीकरण (1)</span></div>
+      <div class="math-line">15 km यात्रा के लिए: $x + 15y = 155$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: प्रतिस्थापन / विलोपन द्वारा हल</span></p>
+      <p>समीकरण (2) में से समीकरण (1) घटाने पर:</p>
+      <div class="math-line">$(x + 15y) - (x + 10y) = 155 - 105$</div>
+      <div class="math-line">$5y = 50$</div>
+      <div class="math-line">$y = \frac{50}{5}$</div>
+      <div class="math-line">$\mathbf{y = {10}}$</div>
+      <p>$y = 10$ का मान समीकरण (1) में रखने पर:</p>
+      <div class="math-line">$x + 10(10) = 105$</div>
+      <div class="math-line">$x + 100 = 105$</div>
+      <div class="math-line">$x = 105 - 100$</div>
+      <div class="math-line">$\mathbf{x = {5}}$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: 25 km यात्रा के लिए कुल भाड़ा</span></p>
+      <div class="math-line">कुल भाड़ा = $x + 25y$</div>
+      <div class="math-line">$= 5 + 25(10)$</div>
+      <div class="math-line">$= 5 + 250$</div>
+      <div class="math-line">$\mathbf{= 255}$ रु</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> नियत भाड़ा = <strong>₹ 5</strong>, प्रति $\text{km}$ भाड़ा = <strong>₹ 10</strong> तथा $25\text{ km}$ का कुल भाड़ा = <strong>₹ 255</strong> होगा।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (v): भिन्न वाला प्रश्न -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (v) (अति-महत्वपूर्ण भिन्न समस्या)</span> यदि किसी भिन्न के अंश और हर दोनों में 2 जोड़ दिया जाए, तो वह $\frac{9}{11}$ हो जाती है। यदि अंश और हर दोनों में 3 जोड़ दिया जाए, तो वह $\frac{5}{6}$ हो जाती है। वह भिन्न ज्ञात कीजिए।</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: भिन्न मानना</span></p>
+      <p>माना भिन्न का अंश = $x$ तथा हर = $y$ है। अतः अभीष्ट भिन्न = $\frac{x}{y}$ है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: प्रथम शर्तानुसार समीकरण</span></p>
+      <div class="math-line">$\frac{x + 2}{y + 2} = \frac{9}{11}$</div>
+      <p>वज्र-गुणन (Cross Multiplication) करने पर:</p>
+      <div class="math-line">$11(x + 2) = 9(y + 2)$</div>
+      <div class="math-line">$11x + 22 = 9y + 18$</div>
+      <div class="math-line">$11x - 9y = 18 - 22$</div>
+      <div class="math-line">$11x - 9y = -4$ <span class="badge-blue">समीकरण (1)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: द्वितीय शर्तानुसार समीकरण</span></p>
+      <div class="math-line">$\frac{x + 3}{y + 3} = \frac{5}{6}$</div>
+      <p>वज्र-गुणन करने पर:</p>
+      <div class="math-line">$6(x + 3) = 5(y + 3)$</div>
+      <div class="math-line">$6x + 18 = 5y + 15$</div>
+      <div class="math-line">$6x - 5y = 15 - 18$</div>
+      <div class="math-line">$6x - 5y = -3$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: विलोपन विधि द्वारा हल</span></p>
+      <p>समीकरण (1) को 6 से तथा समीकरण (2) को 11 से गुणा करने पर:</p>
+      <div class="math-line">$66x - 54y = -24$ <span class="badge-blue">समीकरण (3)</span></div>
+      <div class="math-line">$66x - 55y = -33$ <span class="badge-orange">समीकरण (4)</span></div>
+      <p>समीकरण (3) में से समीकरण (4) घटाने पर:</p>
+      <div class="math-line">$(66x - 54y) - (66x - 55y) = -24 - (-33)$</div>
+      <div class="math-line">$-54y + 55y = -24 + 33$</div>
+      <div class="math-line">$y = \color{#b91c1c}{9}$</div>
+      <p>$y = 9$ का मान समीकरण (2) में रखने पर:</p>
+      <div class="math-line">$6x - 5(9) = -3$</div>
+      <div class="math-line">$6x - 45 = -3$</div>
+      <div class="math-line">$6x = 45 - 3$</div>
+      <div class="math-line">$6x = 42$</div>
+      <div class="math-line">$x = \frac{42}{6}$</div>
+      <div class="math-line">$\mathbf{x = {7}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> अभीष्ट भिन्न = <strong>$\frac{7}{9}$</strong> है।</p>
+    </div>
+  </div>
+
+  <!-- Ex 3.2 Q3 (vi): जैकब की आयु -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">प्रश्न 3 (vi) (आयु संबंधी प्रश्न)</span> 5 वर्ष बाद जैकब की आयु उसके पुत्र की आयु से तीन गुनी हो जाएगी। 5 वर्ष पूर्व जैकब की आयु उसके पुत्र की आयु की सात गुनी थी। उनकी वर्तमान आयु क्या है?</p>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: वर्तमान आयु मानना</span></p>
+      <p>माना जैकब की वर्तमान आयु = $x$ वर्ष तथा उसके पुत्र की वर्तमान आयु = $y$ वर्ष है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: 5 वर्ष बाद की स्थिति</span></p>
+      <p>जैकब की आयु = $x + 5$, पुत्र की आयु = $y + 5$</p>
+      <div class="math-line">$x + 5 = 3(y + 5)$</div>
+      <div class="math-line">$x + 5 = 3y + 15$</div>
+      <div class="math-line">$x - 3y = 10$ <span class="badge-blue">समीकरण (1)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: 5 वर्ष पूर्व की स्थिति</span></p>
+      <p>जैकब की आयु = $x - 5$, पुत्र की आयु = $y - 5$</p>
+      <div class="math-line">$x - 5 = 7(y - 5)$</div>
+      <div class="math-line">$x - 5 = 7y - 35$</div>
+      <div class="math-line">$x - 7y = -30$ <span class="badge-orange">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-green">
+      <p><span class="badge-green">चरण 4: दोनों समीकरणों को घटाने पर</span></p>
+      <div class="math-line">समीकरण (1) में से समीकरण (2) घटाने पर:</div>
+      <div class="math-line">$(x - 3y) - (x - 7y) = 10 - (-30)$</div>
+      <div class="math-line">$x - x - 3y + 7y = 10 + 30$</div>
+      <div class="math-line">$4y = 40$</div>
+      <div class="math-line">$y = \frac{40}{4}$</div>
+      <div class="math-line">$\mathbf{y = 10}$ वर्ष (पुत्र की वर्तमान आयु)</div>
+      <p>$y = 10$ का मान समीकरण (1) में रखने पर:</p>
+      <div class="math-line">$x - 3(10) = 10$</div>
+      <div class="math-line">$x - 30 = 10$</div>
+      <div class="math-line">$x = 10 + 30$</div>
+      <div class="math-line">$\mathbf{x = 40}$ वर्ष (जैकब की वर्तमान आयु)</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>उत्तर:</strong> जैकब की वर्तमान आयु = <strong>40 वर्ष</strong> तथा पुत्र की वर्तमान आयु = <strong>10 वर्ष</strong> है।</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       ELIMINATION METHOD (विलोपन विधि) COMPLETE SECTION
+       ========================================================================= -->
+  <div style="background: #1e293b; color: #ffffff !important; padding: 12px 24px; border-radius: 12px; margin: 40px 0 25px 0; -webkit-text-stroke: 0px !important;">
+    <span style="font-size: 28pt !important; color: #38bdf8;">📌 विलोपन विधि (Elimination Method) — सभी अभ्यास प्रश्न</span>
+  </div>
+
+  <!-- Elimination Q1: x + y = 5 and 2x - 3y = 4 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">विलोपन विधि प्रश्न 1</span> निम्न समीकरण युग्म को विलोपन विधि द्वारा हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $x + y = 5$ <span class="badge-blue">समीकरण (1)</span><br>
+      $2x - 3y = 4$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: x के गुणांकों को समान करना</span></p>
+      <p>समीकरण (1) को 2 से गुणा करने पर:</p>
+      <div class="math-line">$2x + 2y = 10$ <span class="badge-green">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (3) में से समीकरण (2) घटाने पर</span></p>
+      <div class="math-line">समीकरण (3) में से समीकरण (2) घटाने पर:</div>
+      <div class="math-line">$(2x + 2y) - (2x - 3y) = 10 - 4$</div>
+      <div class="math-line">$2x - 2x + 2y + 3y = 6$</div>
+      <div class="math-line">$5y = 6$</div>
+      <div class="math-line">$\mathbf{y = \frac{6}{5}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: y का मान समीकरण (1) में रखने पर</span></p>
+      <div class="math-line">$x + \frac{6}{5} = 5$</div>
+      <div class="math-line">$x = 5 - \frac{6}{5}$</div>
+      <div class="math-line">$x = \frac{25 - 6}{5}$</div>
+      <div class="math-line">$\mathbf{x = \frac{19}{5}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{\frac{19}{5}}$ तथा $y = \mathbf{\frac{6}{5}}$</p>
+    </div>
+  </div>
+
+
+  <!-- INTERACTIVE SIMULATOR CH3_5: विलोपन विधि स्टेप-बाय-स्टेप सॉल्वर (प्रश्नावली 3.3 विशेष) -->
+  <div style="background: #f8fafc; border: 4px solid #e11d48; border-radius: 16px; padding: 22px; margin: 25px 0; box-shadow: 0 6px 18px rgba(225,29,72,0.15);">
+    <div style="font-size: 24pt; color: #9f1239; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+      ⚡ लाइव सिमुलेटर (प्रश्नावली 3.3 प्रश्न 1 विशेष): विलोपन विधि (Elimination Method) सॉल्वर
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:15px;">
+      <div>
+        <label style="font-size:20pt; font-weight:900;">समीकरण 1 (x + y = A): A = </label>
+        <input type="number" id="elim_a" value="5" oninput="calcElimination()" style="width:80px; font-size:18pt; font-weight:900;">
+      </div>
+      <div>
+        <label style="font-size:20pt; font-weight:900;">समीकरण 2 (2x - 3y = B): B = </label>
+        <input type="number" id="elim_b" value="4" oninput="calcElimination()" style="width:80px; font-size:18pt; font-weight:900;">
+      </div>
+    </div>
+    <div id="elimResult" style="background:#ffe4e6; border:3px solid #e11d48; border-radius:12px; padding:16px; font-size:22pt; font-weight:900; color:#881337; line-height:1.8;">
+      चरण 1: समीकरण (1) को 3 से गुणा करने पर: 3x + 3y = 15<br>
+      चरण 2: दोनों समीकरणों को ऊपर-नीचे रखकर जोड़ने पर:<br>&nbsp;&nbsp;&nbsp;&nbsp;3x + 3y = 15<br>&nbsp;&nbsp;+ 2x - 3y = 4<br>&nbsp;&nbsp;----------------<br>&nbsp;&nbsp;&nbsp;&nbsp;5x + 0 = 19<br>&nbsp;&nbsp;&nbsp;&nbsp;5x = 19<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>x = 19/5 = 3.8</strong><br>
+      चरण 3: y = 5 - (19/5) = <strong>6/5 = 1.2</strong> &implies; अभीष्ट हल: <strong>x = 19/5, y = 6/5</strong>
+    </div>
+  </div>
+
+
+  <!-- Elimination Q2: 3x + 4y = 10 and 2x - 2y = 2 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">विलोपन विधि प्रश्न 2</span> हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $3x + 4y = 10$ <span class="badge-blue">समीकरण (1)</span><br>
+      $2x - 2y = 2$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: y के गुणांक समान करने के लिए समीकरण (2) को 2 से गुणा करने पर</span></p>
+      <div class="math-line">$4x - 4y = 4$ <span class="badge-green">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (1) और (3) को जोड़ने पर</span></p>
+      <div class="math-line">समीकरण (1) और (3) को जोड़ने पर:</div>
+      <div class="math-line">$(3x + 4y) + (4x - 4y) = 10 + 4$</div>
+      <div class="math-line">$7x + 0 = 14$</div>
+      <div class="math-line">$7x = 14$</div>
+      <div class="math-line">$x = \frac{14}{7}$</div>
+      <div class="math-line">$\mathbf{x = 2}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x = 2 का मान समीकरण (2) में रखने पर</span></p>
+      <div class="math-line">$2(2) - 2y = 2$</div>
+      <div class="math-line">$4 - 2y = 2$</div>
+      <div class="math-line">$-2y = 2 - 4$</div>
+      <div class="math-line">$-2y = -2$</div>
+      <div class="math-line">$y = \frac{-2}{-2}$</div>
+      <div class="math-line">$\mathbf{y = 1}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{2}$ तथा $y = \mathbf{1}$</p>
+    </div>
+  </div>
+
+  <!-- Elimination Q3: 3x - 5y - 4 = 0 and 9x = 2y + 7 -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">विलोपन विधि प्रश्न 3</span> हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $3x - 5y = 4$ <span class="badge-blue">समीकरण (1)</span><br>
+      $9x - 2y = 7$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: समीकरण (1) को 3 से गुणा करने पर</span></p>
+      <div class="math-line">$9x - 15y = 12$ <span class="badge-green">समीकरण (3)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (3) में से समीकरण (2) घटाने पर</span></p>
+      <div class="math-line">$(9x - 15y) - (9x - 2y) = 12 - 7$</div>
+      <div class="math-line">$-15y + 2y = 5$</div>
+      <div class="math-line">$-13y = 5$</div>
+      <div class="math-line">$y = \color{#b91c1c}{-\frac{5}{13}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: y का मान समीकरण (1) में रखने पर</span></p>
+      <div class="math-line">$3x - 5\left(-\frac{5}{13}\right) = 4$</div>
+      <div class="math-line">$3x + \frac{25}{13} = 4$</div>
+      <div class="math-line">$3x = 4 - \frac{25}{13}$</div>
+      <div class="math-line">$3x = \frac{52 - 25}{13}$</div>
+      <div class="math-line">$3x = \frac{27}{13}$</div>
+      <div class="math-line">$x = \frac{27}{13 \times 3}$</div>
+      <div class="math-line">$\mathbf{x = \frac{9}{13}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{\frac{9}{13}}$ तथा $y = \mathbf{-\frac{5}{13}}$</p>
+    </div>
+  </div>
+
+  <!-- Elimination Q4: Fractional Pair -->
+  <div style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
+    <p><span class="badge-blue">विलोपन विधि प्रश्न 4</span> हल कीजिए:</p>
+    <div class="math-line" style="margin-left: 20px;">
+      $\frac{x}{2} + \frac{2y}{3} = -1$ <span class="badge-blue">समीकरण (1)</span><br>
+      $x - \frac{y}{3} = 3$ <span class="badge-orange">समीकरण (2)</span>
+    </div>
+
+    <div class="step-box-blue">
+      <p><span class="badge-blue">चरण 1: भिन्न हटाने पर</span></p>
+      <p>समीकरण (1) को 6 से गुणा करने पर: $3x + 4y = -6$ <span class="badge-blue">समीकरण (1')</span></p>
+      <p>समीकरण (2) को 3 से गुणा करने पर: $3x - y = 9$ <span class="badge-orange">समीकरण (2')</span></p>
+    </div>
+
+    <div class="step-box-orange">
+      <p><span class="badge-orange">चरण 2: समीकरण (1') में से (2') घटाने पर</span></p>
+      <div class="math-line">$(3x + 4y) - (3x - y) = -6 - 9$</div>
+      <div class="math-line">$5y = -15$</div>
+      <div class="math-line">$y = \frac{-15}{5}$</div>
+      <div class="math-line">$\mathbf{y = {-3}}$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p><span class="badge-purple">चरण 3: x का मान</span></p>
+      <div class="math-line">$3x - (-3) = 9$</div>
+      <div class="math-line">$3x + 3 = 9$</div>
+      <div class="math-line">$3x = 6$</div>
+      <div class="math-line">$x = \frac{6}{3}$</div>
+      <div class="math-line">$\mathbf{x = {2}}$</div>
+    </div>
+
+    <div class="answer-box">
+      <p>🎯 <strong>अंतिम हल:</strong> $x = \mathbf{2}$ तथा $y = \mathbf{-3}$</p>
+    </div>
+  </div>
+
+  <!-- End of Chapter Teacher / Student Revision Tip -->
+  <div style="background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #ffffff !important; border-radius: 16px; padding: 25px 30px; margin-top: 40px; text-align: center;">
+    <h3 style="color: #38bdf8; font-size: 28pt !important; margin-bottom: 10px; -webkit-text-stroke: 0px !important;">
+      💡 परीक्षा उपयोगी मास्टर टिप (Board Exam Strategy)
+    </h3>
+    <p style="color: #e2e8f0; font-size: 22pt !important; line-height: 1.8; -webkit-text-stroke: 0px !important;">
+      1. समीकरण हल करते समय सबसे पहले अनुपातों $\frac{a_1}{a_2}$ व $\frac{b_1}{b_2}$ की जाँच अवश्य करें।<br>
+      2. शाब्दिक प्रश्नों (Word Problems) में दोनों चरों ($x$ और $y$) की इकाई (वर्ष, मीटर, रुपये) उत्तर में स्पष्ट लिखें।<br>
+      3. प्राप्त हल $x$ और $y$ को मूल समीकरण में रखकर अपने उत्तर की पुष्टि अवश्य कर लें।
+    </p>
+  </div>
+
+</div>
+
+<!-- Interactive Controller Functions -->
+<script>
+  let currentWidth = 1350;
+  let sizeOffset = 0;
+  let weightOffset = 0;
+  let strokeOffset = 0;
+
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 800) currentWidth = 800;
+    if (currentWidth > 2000) currentWidth = 2000;
+    document.getElementById('contentToCopy').style.maxWidth = currentWidth + 'px';
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -12) sizeOffset = -12;
+    if (sizeOffset > 40) sizeOffset = 40;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontSize = (26 + sizeOffset) + 'pt';
+    });
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    if (weightOffset < -600) weightOffset = -600;
+    if (weightOffset > 800) weightOffset = 800;
+    strokeOffset += (amount / 100) * 0.3;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontWeight = (900 + weightOffset);
+      el.style.webkitTextStroke = (1.1 + strokeOffset) + 'px #000000';
+    });
+  }
+
+  async function copyEntireContent() {
+    const btn = document.getElementById('floatingCopyBtn');
+    const target = document.getElementById('contentToCopy');
+    if (!target || !btn) return;
+    const content = target.innerHTML;
+
+    try {
+      const blob = new Blob([content], { type: 'text/html' });
+      const item = new ClipboardItem({ 'text/html': blob });
+      await navigator.clipboard.write([item]);
+      btn.innerText = '✅';
+      btn.classList.add('success');
+      setTimeout(() => {
+        btn.innerText = '📋';
+        btn.classList.remove('success');
+      }, 3000);
+    } catch (err) {
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        btn.innerText = '✅';
+        btn.classList.add('success');
+        setTimeout(() => {
+          btn.innerText = '📋';
+          btn.classList.remove('success');
+        }, 3000);
+      } catch (e2) {
+        alert('कॉपी नहीं हो सका: ' + err);
+      }
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+    if (e.key === 'w' || e.key === 'W') {
+      if (e.shiftKey) adjustWidth(-50);
+      else adjustWidth(50);
+    } else if (e.key === '+' || e.key === '=') {
+      adjustWidth(50);
+    } else if (e.key === '-') {
+      adjustWidth(-50);
+    }
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(thickenFractionLines, 100);
+    setTimeout(thickenFractionLines, 500);
+    setTimeout(thickenFractionLines, 1200);
+  });
+</script>
+
+
+  <!-- JAVASCRIPT FOR CH 3 DISTRIBUTED SIMULATORS (Zero dollar syntax) -->
+  <script>
+    function updateLineGraph() {
+      var a1 = parseFloat(document.getElementById('l1_a').value) || 0;
+      var b1 = parseFloat(document.getElementById('l1_b').value) || 0;
+      var c1 = parseFloat(document.getElementById('l1_c').value) || 0;
+      var a2 = parseFloat(document.getElementById('l2_a').value) || 0;
+      var b2 = parseFloat(document.getElementById('l2_b').value) || 0;
+      var c2 = parseFloat(document.getElementById('l2_c').value) || 0;
+
+      var det = (a1 * b2) - (a2 * b1);
+      var res = document.getElementById('lineGraphResult');
+
+      var cvs = document.getElementById('graphCanvas');
+      if (!cvs) return;
+      var ctx = cvs.getContext('2d');
+      var w = cvs.width, h = cvs.height;
+      var ox = w / 2, oy = h / 2;
+      var scale = 25;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Grid
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      for (var x = 0; x <= w; x += scale) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+      }
+      for (var y = 0; y <= h; y += scale) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+      }
+
+      // Axes
+      ctx.strokeStyle = '#000000';
+      ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(w, oy); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(ox, 0); ctx.lineTo(ox, h); ctx.stroke();
+
+      function toCvs(px, py) {
+        return { x: ox + (px * scale), y: oy - (py * scale) };
+      }
+
+      function drawEq(a, b, c, color) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        if (Math.abs(b) > 0.001) {
+          var p1 = toCvs(-10, (c - (a * -10)) / b);
+          var p2 = toCvs(10, (c - (a * 10)) / b);
+          ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+        } else if (Math.abs(a) > 0.001) {
+          var p1 = toCvs(c / a, -10);
+          var p2 = toCvs(c / a, 10);
+          ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y);
+        }
+        ctx.stroke();
+      }
+
+      drawEq(a1, b1, c1, '#2563eb');
+      drawEq(a2, b2, c2, '#dc2626');
+
+      if (Math.abs(det) > 0.0001) {
+        var ix = ((c1 * b2) - (c2 * b1)) / det;
+        var iy = ((a1 * c2) - (a2 * c1)) / det;
+        var pt = toCvs(ix, iy);
+
+        ctx.fillStyle = '#15803d';
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (res) {
+          res.innerHTML = 'प्रतिच्छेदन बिंदु (हल): <strong>x = ' + ix.toFixed(2) + ', y = ' + iy.toFixed(2) + '</strong> | निकाय: <strong>संगत (अद्वितीय हल)</strong>';
+        }
+      } else {
+        if (res) {
+          res.innerHTML = 'रेखाएं समांतर अथवा संपाती हैं | निकाय: कोई अद्वितीय हल नहीं';
+        }
+      }
+    }
+
+    function checkRatioSim() {
+      var a1 = parseFloat(document.getElementById('r_a1').value) || 1;
+      var b1 = parseFloat(document.getElementById('r_b1').value) || 1;
+      var c1 = parseFloat(document.getElementById('r_c1').value) || 1;
+      var a2 = parseFloat(document.getElementById('r_a2').value) || 1;
+      var b2 = parseFloat(document.getElementById('r_b2').value) || 1;
+      var c2 = parseFloat(document.getElementById('r_c2').value) || 1;
+
+      var rA = (a1 / a2).toFixed(2);
+      var rB = (b1 / b2).toFixed(2);
+      var rC = (c1 / c2).toFixed(2);
+
+      var txt = 'a1/a2 = ' + rA + ', b1/b2 = ' + rB + ', c1/c2 = ' + rC + ' &implies; ';
+      if (rA !== rB) {
+        txt += '<strong style=\"color:#047857;\">a1/a2 &ne; b1/b2 &implies; प्रतिच्छेदी रेखाएं (अद्वितीय हल, संगत निकाय)</strong>';
+      } else if (rA === rB && rB === rC) {
+        txt += '<strong style=\"color:#7e22ce;\">a1/a2 = b1/b2 = c1/c2 &implies; संपाती रेखाएं (अपरिमित रूप से अनेक हल, आश्रित/संगत)</strong>';
+      } else {
+        txt += '<strong style=\"color:#b91c1c;\">a1/a2 = b1/b2 &ne; c1/c2 &implies; समांतर रेखाएं (कोई हल नहीं, असंगत निकाय)</strong>';
+      }
+      var res = document.getElementById('ratioSimResult');
+      if (res) res.innerHTML = txt;
+    }
+
+    function calcSubstitution() {
+      var s = parseFloat(document.getElementById('sub_s').value) || 14;
+      var d = parseFloat(document.getElementById('sub_d').value) || 4;
+      var y = (s - d) / 2;
+      var x = s - y;
+      var res = document.getElementById('subResult');
+      if (res) {
+        res.innerHTML = 'चरण 1: समीकरण (1) से: x = ' + s + ' - y<br>' +
+          'चरण 2: मान (2) में प्रतिस्थापित करने पर: (' + s + ' - y) - y = ' + d + ' &implies; ' + s + ' - 2y = ' + d + ' &implies; <strong>y = ' + y.toFixed(1) + '</strong><br>' +
+          'चरण 3: x = ' + s + ' - ' + y.toFixed(1) + ' = <strong>' + x.toFixed(1) + '</strong> &implies; अभीष्ट हल: <strong>x = ' + x.toFixed(1) + ', y = ' + y.toFixed(1) + '</strong>';
+      }
+    }
+
+    function calcElimination() {
+      var a = parseFloat(document.getElementById('elim_a').value) || 5;
+      var b = parseFloat(document.getElementById('elim_b').value) || 4;
+      var x = ((3 * a) + b) / 5;
+      var y = a - x;
+      var res = document.getElementById('elimResult');
+      if (res) {
+        res.innerHTML = 'चरण 1: समीकरण (1) को 3 से गुणा करने पर: 3x + 3y = ' + (3 * a) + '<br>' +
+          'चरण 2: दोनों समीकरणों को जोड़ने पर: 5x = ' + ((3 * a) + b) + ' &implies; <strong>x = ' + x.toFixed(2) + '</strong><br>' +
+          'चरण 3: y = ' + a + ' - ' + x.toFixed(2) + ' = <strong>' + y.toFixed(2) + '</strong> &implies; अभीष्ट हल: <strong>x = ' + x.toFixed(2) + ', y = ' + y.toFixed(2) + '</strong>';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      if (document.getElementById('graphCanvas')) {
+        updateLineGraph();
+      }
+    });
+  
+
+    // SIMULATOR 4: प्रतिस्थापन विधि सॉल्वर
+    function setSim4Preset(a1, b1, c1, a2, b2, c2) {
+      document.getElementById('sim4_a1').value = a1;
+      document.getElementById('sim4_b1').value = b1;
+      document.getElementById('sim4_c1').value = c1;
+      document.getElementById('sim4_a2').value = a2;
+      document.getElementById('sim4_b2').value = b2;
+      document.getElementById('sim4_c2').value = c2;
+      updateSim4();
+    }
+
+    function updateSim4() {
+      var a1 = parseFloat(document.getElementById('sim4_a1').value) || 0;
+      var b1 = parseFloat(document.getElementById('sim4_b1').value) || 0;
+      var c1 = parseFloat(document.getElementById('sim4_c1').value) || 0;
+      var a2 = parseFloat(document.getElementById('sim4_a2').value) || 0;
+      var b2 = parseFloat(document.getElementById('sim4_b2').value) || 0;
+      var c2 = parseFloat(document.getElementById('sim4_c2').value) || 0;
+      var box = document.getElementById('sim4_steps_box');
+
+      var D = a1 * b2 - a2 * b1;
+      if (D === 0) {
+        box.innerHTML = 'इस समीकरण निकाय के लिए रेखाएँ समांतर अथवा संपाती हैं: a1*b2 - a2*b1 = 0।';
+        return;
+      }
+
+      var x = (c1 * b2 - c2 * b1) / D;
+      var y = (a1 * c2 - a2 * c1) / D;
+      x = Math.round(x * 100) / 100;
+      y = Math.round(y * 100) / 100;
+
+      var out = '<strong>दिए गए समीकरण:</strong><br>' +
+        '$' + a1 + 'x ' + (b1 >= 0 ? '+' + b1 : b1) + 'y = ' + c1 + '$ &nbsp;&nbsp; (समीकरण 1)<br>' +
+        '$' + a2 + 'x ' + (b2 >= 0 ? '+' + b2 : b2) + 'y = ' + c2 + '$ &nbsp;&nbsp; (समीकरण 2)<br><br>' +
+        '<strong>चरण 1: समीकरण (1) से x का मान y के पदों में व्यक्त करना:</strong><br>' +
+        '$' + a1 + 'x = ' + c1 + ' ' + (b1 >= 0 ? '- ' + b1 : '+ ' + Math.abs(b1)) + 'y$<br>$x = \frac{' + c1 + ' ' + (b1 >= 0 ? '- ' + b1 : '+ ' + Math.abs(b1)) + 'y}{' + a1 + '}$ &nbsp;&nbsp; (समीकरण 3)<br><br>' +
+        '<strong>चरण 2: x का मान समीकरण (2) में प्रतिस्थापित करने पर:</strong><br>' +
+        '$' + a2 + '\left(\frac{' + c1 + ' ' + (b1 >= 0 ? '- ' + b1 : '+ ' + Math.abs(b1)) + 'y}{' + a1 + '}\right) ' + (b2 >= 0 ? '+' + b2 : b2) + 'y = ' + c2 + '$<br>' +
+        'सरल करने पर प्राप्त मान: $\mathbf{y = ' + y + '}$<br><br>' +
+        '<strong>चरण 3: y = ' + y + ' का मान समीकरण (3) में रखने पर:</strong><br>' +
+        '$x = \frac{' + c1 + ' ' + (b1 >= 0 ? '- ' + b1 : '+ ' + Math.abs(b1)) + '(' + y + ')}{' + a1 + '}$<br>$\mathbf{x = ' + x + '}$<br><br>' +
+        '<div style="background: #f3e8ff; border: 2px solid #d8b4fe; padding: 15px; border-radius: 10px;">' +
+        '<span style="color: #6b21a8; font-weight: 900; font-size: 24pt;">🎯 अभीष्ट हल: $\mathbf{x = ' + x + '}, \quad \mathbf{y = ' + y + '}$</span>' +
+        '</div>';
+
+      box.innerHTML = out;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+</script>
+
+</body>
+</html>

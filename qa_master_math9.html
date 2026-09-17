@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मास्टर प्रश्न-उत्तर (Master Q&A): NCERT कक्षा 10 गणित अध्याय 9 - त्रिकोणमिति के अनुप्रयोग (Projector & Mobile Ready)</title>
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$', '$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-page: #cbd5e1;
+      --card-bg: #ffffff;
+      --text-main: #000000;
+      --primary-blue: #1e3a8a;
+      --badge-blue: #2563eb;
+      --badge-green: #15803d;
+      --badge-orange: #c2410c;
+      --badge-purple: #6b21a8;
+      --badge-rose: #be123c;
+      --border-card: #94a3b8;
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+      font-size: 26pt;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 6px solid var(--border-card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Natural flow top action bar */
+    .action-bar-top {
+      position: relative;
+      margin: 0 auto 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 18px;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn-action {
+      background: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 20pt;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #60a5fa;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-action-emerald {
+      background: #059669;
+      border-color: #34d399;
+    }
+    .btn-action-emerald:hover { background: #047857; }
+
+    /* Fraction Line Enhancement */
+    .mjx-mfrac > .mjx-line {
+      border-top: 8px solid #047857 !important;
+      background-color: #047857 !important;
+      height: 8px !important;
+      min-height: 8px !important;
+      opacity: 1 !important;
+    }
+    .MathJax .mfrac > span:not([class]) {
+      border-top: 8px solid #047857 !important;
+      min-height: 8px !important;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: 'Outfit', 'Mukta', sans-serif;
+      font-size: 44pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      text-align: center;
+      margin: 10px 0 20px 0;
+      line-height: 1.2;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 26pt;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .section-header {
+      background: #1e293b;
+      color: #ffffff !important;
+      padding: 16px 28px;
+      border-radius: 16px;
+      margin: 40px 0 30px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 30pt;
+      font-weight: 800;
+      border-left: 12px solid #3b82f6;
+    }
+
+    /* Question Cards */
+    .qa-box {
+      border: 4px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.2s ease;
+    }
+    .qa-box:hover {
+      border-color: #94a3b8;
+    }
+
+    .q-text {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .q-tag {
+      background: #1e3a8a;
+      color: #ffffff !important;
+      padding: 4px 16px;
+      border-radius: 10px;
+      font-size: 22pt;
+      font-weight: 900;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Step Boxes */
+    .step-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 24pt;
+      line-height: 1.6;
+    }
+    .step-blue {
+      background: #eff6ff;
+      border-left: 8px solid #2563eb;
+      color: #1e3a8a;
+    }
+    .step-orange {
+      background: #fff7ed;
+      border-left: 8px solid #ea580c;
+      color: #9a3412;
+    }
+    .step-green {
+      background: #f0fdf4;
+      border-left: 8px solid #16a34a;
+      color: #166534;
+    }
+    .step-purple {
+      background: #faf5ff;
+      border-left: 8px solid #9333ea;
+      color: #581c87;
+    }
+
+    .badge-step {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 20pt;
+      color: #ffffff !important;
+      margin-bottom: 10px;
+    }
+    .bg-blue { background: #2563eb; }
+    .bg-orange { background: #ea580c; }
+    .bg-green { background: #16a34a; }
+    .bg-purple { background: #9333ea; }
+
+    /* Answer Boxes */
+    .ans-box {
+      background: #ecfdf5;
+      border: 4px solid #10b981;
+      border-radius: 14px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      font-size: 26pt;
+      font-weight: 900;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Simulator Container Styles */
+    .sim-card {
+      background: #f8fafc;
+      border: 4px solid #3b82f6;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 35px 0 45px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .sim-title {
+      font-size: 28pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-desc {
+      font-size: 22pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .sim-control-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+    }
+    .sim-label {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .sim-slider {
+      flex: 1;
+      min-width: 220px;
+      height: 12px;
+      border-radius: 6px;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+    .sim-val-pill {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 22pt;
+      font-weight: 800;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .sim-display-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .sim-svg-wrap {
+      flex: 1;
+      min-width: 320px;
+      background: #ffffff;
+      border: 3px solid #94a3b8;
+      border-radius: 16px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sim-stats-wrap {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sim-stat-box {
+      background: #ffffff;
+      border-left: 6px solid #2563eb;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .sim-stat-label {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .sim-stat-val {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      flex: 1;
+      min-width: 220px;
+      background: #1e293b;
+      color: #ffffff !important;
+      text-align: center;
+      padding: 15px 25px;
+      font-size: 22pt;
+      font-weight: 800;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-nav:hover { background: #334155; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TOP ACTION BAR -->
+    <div class="action-bar-top">
+      <a href="index.html" class="btn-action"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math8.html" class="btn-action"><i class="fas fa-arrow-left"></i> Ch 8: त्रिकोणमिति परिचय</a>
+      <span style="color: #f8fafc; font-weight: 800; font-size: 22pt;">कक्षा 10 गणित: अध्याय 9</span>
+      <a href="qa_master_math10.html" class="btn-action btn-action-emerald">Ch 10: वृत्त <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- TITLE HEADER -->
+    <h1>अध्याय 9: त्रिकोणमिति के कुछ अनुप्रयोग (ऊँचाई और दूरी)</h1>
+    <div class="sub-title">NCERT संपूर्ण प्रश्नावली 9.1 (सभी 16 प्रश्न) • 100% चरणबद्ध हल • उच्च-कंट्रास्ट आरेख • 5 लाइव सिमुलेटर</div>
+
+    <!-- CONCEPT SUMMARY CARD -->
+    <div style="background: #f8fafc; border: 4px solid #3b82f6; border-radius: 20px; padding: 30px; margin-bottom: 40px;">
+      <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 20px;">
+        <i class="fas fa-binoculars"></i> दृष्टि रेखा, उन्नयन कोण एवं अवनमन कोण
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+        <div style="background: #eff6ff; border-left: 6px solid #2563eb; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #1e3a8a; font-size: 22pt;">उन्नयन कोण (Angle of Elevation)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            जब प्रेक्षक ऊपर की ओर किसी वस्तु को देखता है, तो दृष्टि रेखा और क्षैतिज रेखा के बीच बना कोण।<br>
+            $\tan\theta = \frac{\text{Height}}{\text{Distance}}$
+          </div>
+        </div>
+        <div style="background: #fff7ed; border-left: 6px solid #ea580c; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #9a3412; font-size: 22pt;">अवनमन कोण (Angle of Depression)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            जब प्रेक्षक ऊँचाई से नीचे किसी वस्तु को देखता है, तो क्षैतिज रेखा और दृष्टि रेखा के बीच बना कोण।<br>
+            $\text{Depression Angle} = \text{Elevation Angle}$ (एकांतर कोण)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 9.1 -->
+    <div class="section-header">
+      <i class="fas fa-mountain"></i> प्रश्नावली 9.1: ऊँचाई और दूरी के संपूर्ण 16 प्रश्न
+    </div>
+
+    <!-- Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> सर्कस का एक कलाकार एक $20\text{ m}$ लंबी डोरी पर चढ़ रहा है जो अच्छी तरह से तनी हुई है और भूमि पर सीधे लगे खंभे के शिखर से बंधी हुई है। यदि भूमि स्तर के साथ डोरी द्वारा बनाया गया कोण $30^\circ$ का हो, तो खंभे की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: त्रिभुज और कोण की पहचान</span>
+            <div>माना खंभे की ऊँचाई $AB = h\text{ m}$, डोरी $AC = 20\text{ m}$</div>
+            <div>भूमि पर डोरी का उन्नयन कोण $\angle C = 30^\circ$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: त्रिकोणमितीय अनुपात द्वारा हल</span>
+            <div>समकोण $\triangle ABC$ में:</div>
+            <div>$\sin 30^\circ = \frac{AB}{AC} = \frac{h}{20}$</div>
+            <div>$\frac{1}{2} = \frac{h}{20} \implies h = \frac{20}{2} = \mathbf{10\text{ m}}$</div>
+          </div>
+        </div>
+        <div style="width: 320px; text-align: center;">
+          <svg viewBox="0 0 240 220" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <polygon points="50,170 190,170 50,70" fill="#eff6ff" stroke="#1e3a8a" stroke-width="4"/>
+            <line x1="50" y1="170" x2="50" y2="70" stroke="#dc2626" stroke-width="5"/>
+            <rect x="50" y="152" width="18" height="18" fill="none" stroke="#0f172a" stroke-width="2"/>
+            <text x="30" y="65" font-size="14" font-weight="900" fill="#0f172a">A (शिखर)</text>
+            <text x="30" y="185" font-size="14" font-weight="900" fill="#0f172a">B</text>
+            <text x="200" y="180" font-size="14" font-weight="900" fill="#0f172a">C</text>
+            <text x="20" y="120" font-size="14" font-weight="900" fill="#dc2626">h=10m</text>
+            <text x="135" y="110" font-size="14" font-weight="900" fill="#1e3a8a">डोरी=20m</text>
+            <text x="145" y="162" font-size="14" font-weight="900" fill="#b91c1c">30°</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: खंभे की ऊँचाई = $\mathbf{10\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 1: CIRCUS ROPE & BROKEN TREE (Placed right under Q1 & Q2)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #2563eb;">
+      <div class="sim-title">
+        <i class="fas fa-ruler-vertical"></i> लाइव सिमुलेटर 1: डोरी/पेड़ ऊँचाई व उन्नयन कोण सॉल्वर (प्रश्न 1 व 2 विशेष)
+      </div>
+      <div class="sim-desc">
+        डोरी की लंबाई ($L$) एवं उन्नयन कोण ($\theta$) बदलकर खंभे की ऊँचाई ($h = L\sin\theta$) तथा पाद दूरी ($d = L\cos\theta$) लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">डोरी लंबाई ($L$):</span>
+        <input type="range" id="ch9_sim1_L" class="sim-slider" min="5" max="50" value="20" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch9_sim1_L_val">20 m</span>
+
+        <span class="sim-label" style="margin-left: 20px;">उन्नयन कोण ($\theta$):</span>
+        <input type="range" id="ch9_sim1_th" class="sim-slider" min="15" max="75" step="5" value="30" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch9_sim1_th_val">30°</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch9_sim1_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Height SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #dc2626;">
+            <div class="sim-stat-label">खंभे की ऊँचाई ($h = L\sin\theta$)</div>
+            <div class="sim-stat-val" id="ch9_sim1_h" style="color: #b91c1c;">10.00 m</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">भूमि पर पाद दूरी ($d = L\cos\theta$)</div>
+            <div class="sim-stat-val" id="ch9_sim1_d" style="color: #166534;">17.32 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> आँधी आने से एक पेड़ टूट जाता है और टूटा हुआ भाग इस तरह मुड़ जाता है कि पेड़ का शिखर जमीन को छूने लगता है और इसके साथ $30^\circ$ का कोण बनाता है। पेड़ के पाद-बिंदु की दूरी, जहाँ पेड़ का शिखर जमीन को छूता है, $8\text{ m}$ है। पेड़ की कुल ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: दोनों भागों का मान निकालना</span>
+        <div>माना पेड़ $B$ से मुड़कर जमीन $C$ पर छूता है। $AB$ खड़ा भाग है और $BC$ मुड़ा हुआ भाग (मूल पेड़ का ऊपरी हिस्सा) है।</div>
+        <div>पाद-बिंदु $A$ से दूरी $AC = 8\text{ m}$, कोण $\angle C = 30^\circ$</div>
+        <div>$\tan 30^\circ = \frac{AB}{AC} \implies \frac{1}{\sqrt{3}} = \frac{AB}{8} \implies AB = \frac{8}{\sqrt{3}}\text{ m}$</div>
+        <div>$\cos 30^\circ = \frac{AC}{BC} \implies \frac{\sqrt{3}}{2} = \frac{8}{BC} \implies BC = \frac{16}{\sqrt{3}}\text{ m}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: पेड़ की कुल ऊँचाई</span>
+        <div>पेड़ की कुल ऊँचाई $= AB + BC = \frac{8}{\sqrt{3}} + \frac{16}{\sqrt{3}} = \frac{24}{\sqrt{3}} = \frac{24\sqrt{3}}{3} = \mathbf{8\sqrt{3}\text{ m}}$</div>
+        <div>$= 8 \times 1.732 \approx \mathbf{13.856\text{ m}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: पेड़ की कुल ऊँचाई = $\mathbf{8\sqrt{3}\text{ m}}$ (लगभग $13.86\text{ m}$)</span>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> एक ठेकेदार बच्चों के खेलने के लिए एक पार्क में दो फिसलनपट्टी लगाना चाहता है। $5$ वर्ष से कम उम्र के बच्चों के लिए वह एक ऐसी फिसलनपट्टी लगाना चाहता है जिसका शिखर $1.5\text{ m}$ की ऊँचाई पर हो और भूमि के साथ $30^\circ$ के कोण पर झुका हुआ हो, जबकि इससे अधिक उम्र के बच्चों के लिए वह $3\text{ m}$ की ऊँचाई पर एक अधिक ढाल की फिसलनपट्टी लगाना चाहता है, जो भूमि के साथ $60^\circ$ का कोण बनाती हो। प्रत्येक स्थिति में फिसलनपट्टी की लंबाई क्या होनी चाहिए?
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">स्थिति 1: 5 वर्ष से कम उम्र के बच्चों के लिए</span>
+        <div>ऊँचाई $h_1 = 1.5\text{ m}$, कोण $\theta_1 = 30^\circ$</div>
+        <div>$\sin 30^\circ = \frac{1.5}{l_1} \implies \frac{1}{2} = \frac{1.5}{l_1} \implies \mathbf{l_1 = 3\text{ m}}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">स्थिति 2: अधिक उम्र के बच्चों के लिए</span>
+        <div>ऊँचाई $h_2 = 3\text{ m}$, कोण $\theta_2 = 60^\circ$</div>
+        <div>$\sin 60^\circ = \frac{3}{l_2} \implies \frac{\sqrt{3}}{2} = \frac{3}{l_2} \implies l_2 = \frac{6}{\sqrt{3}} = \mathbf{2\sqrt{3}\text{ m}} \approx 3.46\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: स्थिति 1 में लंबाई = $\mathbf{3\text{ m}}$; \quad स्थिति 2 में लंबाई = $\mathbf{2\sqrt{3}\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> भूमि के एक बिंदु से, जो मीनार के पाद-बिंदु से $30\text{ m}$ की दूरी पर है, मीनार के शिखर का उन्नयन कोण $30^\circ$ है। मीनार की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना मीनार की ऊँचाई $= h$, पाद दूरी $= 30\text{ m}$, कोण $= 30^\circ$</div>
+        <div>$\tan 30^\circ = \frac{h}{30} \implies \frac{1}{\sqrt{3}} = \frac{h}{30} \implies h = \frac{30}{\sqrt{3}} = \mathbf{10\sqrt{3}\text{ m}} \approx 17.32\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: मीनार की ऊँचाई = $\mathbf{10\sqrt{3}\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 2: TOWER & KITE (Placed right under Q4 & Q5)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #ea580c;">
+      <div class="sim-title">
+        <i class="fas fa-broadcast-tower"></i> लाइव सिमुलेटर 2: मीनार ऊँचाई एवं पतंग डोरी लंबाई कैलकुलेटर (प्रश्न 4 व 5)
+      </div>
+      <div class="sim-desc">
+        पाद से दूरी ($d$) एवं उन्नयन कोण ($\theta$) बदलकर मीनार की ऊँचाई ($h = d\tan\theta$) एवं दृष्टि दूरी ($L = d/\cos\theta$) लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">दूरी ($d$):</span>
+        <input type="range" id="ch9_sim2_d" class="sim-slider" min="5" max="60" value="30" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch9_sim2_d_val">30 m</span>
+
+        <span class="sim-label" style="margin-left: 20px;">उन्नयन कोण ($\theta$):</span>
+        <input type="range" id="ch9_sim2_th" class="sim-slider" min="15" max="75" step="5" value="30" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch9_sim2_th_val">30°</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch9_sim2_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Tower SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">मीनार ऊँचाई ($h = d\tan\theta$)</div>
+            <div class="sim-stat-val" id="ch9_sim2_h" style="color: #c2410c;">17.32 m (10√3)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">दृष्टि रेखा / डोरी लंबाई ($L = \sqrt{d^2 + h^2}$)</div>
+            <div class="sim-stat-val" id="ch9_sim2_L" style="color: #1e3a8a;">34.64 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> भूमि से $60\text{ m}$ की ऊँचाई पर एक पतंग उड़ रही है। पतंग में लगी डोरी को अस्थायी रूप से भूमि के एक बिंदु से बाँध दिया गया है। भूमि के साथ डोरी का झुकाव $60^\circ$ है। यह मानकर कि डोरी में कोई ढील नहीं है, डोरी की लंबाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>ऊँचाई $h = 60\text{ m}$, कोण $\theta = 60^\circ$</div>
+        <div>माना डोरी की लंबाई $= L$</div>
+        <div>$\sin 60^\circ = \frac{60}{L} \implies \frac{\sqrt{3}}{2} = \frac{60}{L} \implies L = \frac{120}{\sqrt{3}} = \mathbf{40\sqrt{3}\text{ m}} \approx 69.28\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: पतंग की डोरी की लंबाई = $\mathbf{40\sqrt{3}\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> $1.5\text{ m}$ लंबा एक लड़का $30\text{ m}$ ऊँचे एक भवन से कुछ दूरी पर खड़ा है। जब वह ऊँचे भवन की ओर जाता है तब उसकी आँख से भवन के शिखर का उन्नयन कोण $30^\circ$ से $60^\circ$ हो जाता है। बताइए कि वह भवन की ओर कितनी दूरी तक चलकर गया है।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: लड़के की आँख के ऊपर भवन की ऊँचाई</span>
+        <div>लड़के की ऊँचाई $= 1.5\text{ m}$, भवन $= 30\text{ m}$</div>
+        <div>आँख से ऊपर प्रभावी ऊँचाई $h = 30 - 1.5 = 28.5\text{ m} = \frac{57}{2}\text{ m}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: दोनों स्थितियों में दूरियाँ व तय दूरी</span>
+        <div>$\tan 30^\circ = \frac{28.5}{d_1} \implies d_1 = 28.5\sqrt{3}$</div>
+        <div>$\tan 60^\circ = \frac{28.5}{d_2} \implies d_2 = \frac{28.5}{\sqrt{3}}$</div>
+        <div>तय की गई दूरी $= d_1 - d_2 = 28.5\sqrt{3} - \frac{28.5}{\sqrt{3}} = 28.5 \left(\frac{3 - 1}{\sqrt{3}}\right) = \frac{57}{\sqrt{3}} = \mathbf{19\sqrt{3}\text{ m}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: भवन की ओर तय दूरी = $\mathbf{19\sqrt{3}\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7</span> भूमि के एक बिंदु से एक $20\text{ m}$ ऊँचे भवन के शिखर पर लगी एक संचार मीनार के तल और शिखर के उन्नयन कोण क्रमशः $45^\circ$ और $60^\circ$ हैं। मीनार की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: पाद बिंदु की दूरी ज्ञात करना</span>
+        <div>भवन की ऊँचाई $= 20\text{ m}$, तल का उन्नयन कोण $= 45^\circ$</div>
+        <div>$\tan 45^\circ = \frac{20}{x} \implies 1 = \frac{20}{x} \implies x = 20\text{ m}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: संचार मीनार की ऊँचाई</span>
+        <div>माना मीनार की ऊँचाई $= h$। कुल ऊँचाई $= 20 + h$</div>
+        <div>$\tan 60^\circ = \frac{20 + h}{20} \implies \sqrt{3} = \frac{20 + h}{20} \implies 20 + h = 20\sqrt{3}$</div>
+        <div>$h = 20(\sqrt{3} - 1)\text{ m} \approx 20(1.732 - 1) = \mathbf{14.64\text{ m}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: संचार मीनार की ऊँचाई = $\mathbf{20(\sqrt{3} - 1)\text{ m}}$ (लगभग $14.64\text{ m}$)</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 3: DUAL ANGLE SOLVER (Placed right under Q6 & Q7)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #16a34a;">
+      <div class="sim-title">
+        <i class="fas fa-walking"></i> लाइव सिमुलेटर 3: प्रेक्षक चाल व दोहरा उन्नयन कोण विश्लेषक (प्रश्न 6, 7 व 8)
+      </div>
+      <div class="sim-desc">
+        प्रभावी ऊँचाई ($h$) तथा दोनों उन्नयन कोण ($\theta_1, \theta_2$) बदलकर बीच की तय दूरी ($d = h(\cot\theta_1 - \cot\theta_2)$) लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">ऊँचाई ($h$):</span>
+        <input type="range" id="ch9_sim3_h" class="sim-slider" min="10" max="60" value="28.5" step="0.5" oninput="updateSim3()">
+        <span class="sim-val-pill" id="ch9_sim3_h_val">28.5 m</span>
+
+        <span class="sim-label" style="margin-left: 20px;">पहला कोण ($\theta_1$):</span>
+        <input type="range" id="ch9_sim3_th1" class="sim-slider" min="15" max="45" step="5" value="30" oninput="updateSim3()">
+        <span class="sim-val-pill" id="ch9_sim3_th1_val">30°</span>
+
+        <span class="sim-label" style="margin-left: 20px;">दूसरा कोण ($\theta_2$):</span>
+        <input type="range" id="ch9_sim3_th2" class="sim-slider" min="45" max="75" step="5" value="60" oninput="updateSim3()">
+        <span class="sim-val-pill" id="ch9_sim3_th2_val">60°</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch9_sim3_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Dual Angle SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">तय की गई दूरी ($d = h[\cot\theta_1 - \cot\theta_2]$)</div>
+            <div class="sim-stat-val" id="ch9_sim3_dist" style="color: #166534;">32.91 m (19√3)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">पाद से अंतिम निकट दूरी ($d_2 = h\cot\theta_2$)</div>
+            <div class="sim-stat-val" id="ch9_sim3_near" style="color: #1e3a8a;">16.45 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> एक पेडस्टल के शिखर पर एक $1.6\text{ m}$ ऊँची मूर्ति लगी है। भूमि के एक बिंदु से मूर्ति के शिखर का उन्नयन कोण $60^\circ$ है और उसी बिंदु से पेडस्टल के शिखर का उन्नयन कोण $45^\circ$ है। पेडस्टल की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना पेडस्टल की ऊँचाई $= h$। भूमि पर बिंदु की दूरी $= x$।</div>
+        <div>पेडस्टल के शिखर के लिए: $\tan 45^\circ = \frac{h}{x} \implies 1 = \frac{h}{x} \implies x = h$</div>
+        <div>मूर्ति के शिखर के लिए: $\tan 60^\circ = \frac{h + 1.6}{x} = \frac{h + 1.6}{h}$</div>
+        <div>$\sqrt{3}h = h + 1.6 \implies h(\sqrt{3} - 1) = 1.6 \implies h = \frac{1.6}{\sqrt{3} - 1} = \frac{1.6(\sqrt{3} + 1)}{2} = \mathbf{0.8(\sqrt{3} + 1)\text{ m}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: पेडस्टल की ऊँचाई = $\mathbf{0.8(\sqrt{3} + 1)\text{ m}}$ (लगभग $2.19\text{ m}$)</span>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 9</span> एक मीनार के पाद-बिंदु से एक भवन के शिखर का उन्नयन कोण $30^\circ$ है और भवन के पाद-बिंदु से मीनार के शिखर का उन्नयन कोण $60^\circ$ है। यदि मीनार $50\text{ m}$ ऊँची हो, तो भवन की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>मीनार $AB = 50\text{ m}$। भवन के पाद $D$ से मीनार का कोण $= 60^\circ$:</div>
+        <div>$\tan 60^\circ = \frac{50}{d} \implies \sqrt{3} = \frac{50}{d} \implies d = \frac{50}{\sqrt{3}}\text{ m}$</div>
+        <div style="margin-top: 10px;">मीनार के पाद $B$ से भवन $CD$ का कोण $= 30^\circ$:</div>
+        <div>$\tan 30^\circ = \frac{h}{d} \implies \frac{1}{\sqrt{3}} = \frac{h}{50/\sqrt{3}} \implies h = \frac{50}{3} = \mathbf{16\frac{2}{3}\text{ m}} \approx 16.67\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: भवन की ऊँचाई = $\mathbf{16\frac{2}{3}\text{ m}}$ ($16.67\text{ m}$)</span>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 10</span> एक $80\text{ m}$ चौड़ी सड़क के दोनों ओर आमने-सामने समान लंबाई वाले दो खंभे लगे हुए हैं। इन दोनों खंभों के बीच सड़क के एक बिंदु से खंभों के शिखर के उन्नयन कोण क्रमशः $60^\circ$ और $30^\circ$ हैं। खंभों की ऊँचाई और खंभों से बिंदु की दूरी ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: समीकरण बनाना</span>
+        <div>सड़क की कुल चौड़ाई $= 80\text{ m}$। माना बिंदु की पहले खंभे से दूरी $= x$, तब दूसरे से $= 80 - x$।</div>
+        <div>दोनों खंभों की ऊँचाई समान $= h$ है।</div>
+        <div>$\tan 60^\circ = \frac{h}{x} \implies h = \sqrt{3}x \quad \text{--- (1)}$</div>
+        <div>$\tan 30^\circ = \frac{h}{80 - x} \implies h = \frac{80 - x}{\sqrt{3}} \quad \text{--- (2)}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: $x$ और $h$ की गणना</span>
+        <div>$\sqrt{3}x = \frac{80 - x}{\sqrt{3}} \implies 3x = 80 - x \implies 4x = 80 \implies \mathbf{x = 20\text{ m}}$</div>
+        <div>दूसरे खंभे से दूरी $= 80 - 20 = \mathbf{60\text{ m}}$</div>
+        <div>खंभों की ऊँचाई $h = \sqrt{3}(20) = \mathbf{20\sqrt{3}\text{ m}} \approx 34.64\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: खंभों की ऊँचाई = $\mathbf{20\sqrt{3}\text{ m}}$, बिंदु की दूरियाँ = $\mathbf{20\text{ m}}$ तथा $\mathbf{60\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 4: TWO OPPOSITE POLES (Placed right under Q10)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #be123c;">
+      <div class="sim-title">
+        <i class="fas fa-arrows-alt-h"></i> लाइव सिमुलेटर 4: सड़क के दोनों ओर समान खंभे विश्लेषक (प्रश्न 10 विशेष)
+      </div>
+      <div class="sim-desc">
+        सड़क की कुल चौड़ाई ($W$) तथा दोनों उन्नयन कोण बदलकर बिंदु की दूरियाँ ($x_1, x_2$) एवं खंभों की ऊँचाई ($h$) लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">सड़क चौड़ाई ($W$):</span>
+        <input type="range" id="ch9_sim4_w" class="sim-slider" min="40" max="150" value="80" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch9_sim4_w_val">80 m</span>
+
+        <span class="sim-label" style="margin-left: 20px;">कोण 1:</span>
+        <select id="ch9_sim4_th1" onchange="updateSim4()" style="font-size: 20pt; font-weight: 800; padding: 6px 14px; border-radius: 10px; border: 2px solid #be123c;">
+          <option value="60" selected>60°</option>
+          <option value="45">45°</option>
+        </select>
+
+        <span class="sim-label" style="margin-left: 20px;">कोण 2:</span>
+        <select id="ch9_sim4_th2" onchange="updateSim4()" style="font-size: 20pt; font-weight: 800; padding: 6px 14px; border-radius: 10px; border: 2px solid #be123c;">
+          <option value="30" selected>30°</option>
+          <option value="45">45°</option>
+        </select>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch9_sim4_svg" viewBox="0 0 260 200" style="width: 260px; height: 200px;">
+            <!-- Dynamic 2 Poles SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #be123c;">
+            <div class="sim-stat-label">खंभों की उभयनिष्ठ ऊँचाई ($h$)</div>
+            <div class="sim-stat-val" id="ch9_sim4_h" style="color: #9f1239;">34.64 m (20√3)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">बिंदु की दूरियाँ ($x_1, x_2$)</div>
+            <div class="sim-stat-val" id="ch9_sim4_dists" style="color: #166534;">20.00 m तथा 60.00 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 11</span> एक नहर के एक तट पर एक टीवी टॉवर ऊर्ध्वाधरतः खड़ा है। टॉवर के ठीक सामने दूसरे तट के एक अन्य बिंदु से टॉवर के शिखर का उन्नयन कोण $60^\circ$ है। इसी तट पर इस बिंदु से $20\text{ m}$ दूर और इस बिंदु को मीनार के पाद से मिलाने वाली रेखा पर स्थित एक अन्य बिंदु से टॉवर के शिखर का उन्नयन कोण $30^\circ$ है। टॉवर की ऊँचाई और नहर की चौड़ाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना टॉवर की ऊँचाई $= h$, नहर की चौड़ाई $= x$।</div>
+        <div>$\tan 60^\circ = \frac{h}{x} \implies h = \sqrt{3}x$</div>
+        <div>$\tan 30^\circ = \frac{h}{x + 20} \implies \frac{1}{\sqrt{3}} = \frac{\sqrt{3}x}{x + 20} \implies 3x = x + 20 \implies 2x = 20 \implies \mathbf{x = 10\text{ m}}$</div>
+        <div>टॉवर की ऊँचाई $h = \sqrt{3}(10) = \mathbf{10\sqrt{3}\text{ m}} \approx 17.32\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: टॉवर की ऊँचाई = $\mathbf{10\sqrt{3}\text{ m}}$, \quad नहर की चौड़ाई = $\mathbf{10\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 12</span> $7\text{ m}$ ऊँचे भवन के शिखर से एक केबल टॉवर के शिखर का उन्नयन कोण $60^\circ$ है और इसके पाद का अवनमन कोण $45^\circ$ है। टॉवर की ऊँचाई ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: अवनमन कोण से क्षैतिज दूरी</span>
+        <div>भवन की ऊँचाई $= 7\text{ m}$। पाद का अवनमन कोण $= 45^\circ$</div>
+        <div>$\tan 45^\circ = \frac{7}{x} \implies 1 = \frac{7}{x} \implies x = 7\text{ m}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: केबल टॉवर की कुल ऊँचाई</span>
+        <div>भवन से ऊपर टॉवर की अतिरिक्त ऊँचाई $= h'$</div>
+        <div>$\tan 60^\circ = \frac{h'}{x} \implies \sqrt{3} = \frac{h'}{7} \implies h' = 7\sqrt{3}\text{ m}$</div>
+        <div>टॉवर की कुल ऊँचाई $= 7 + h' = 7 + 7\sqrt{3} = \mathbf{7(\sqrt{3} + 1)\text{ m}} \approx 19.12\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: केबल टॉवर की ऊँचाई = $\mathbf{7(\sqrt{3} + 1)\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 5: ELEVATION & DEPRESSION SOLVER (Placed right under Q12 & Q13)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #9333ea;">
+      <div class="sim-title">
+        <i class="fas fa-eye"></i> लाइव सिमुलेटर 5: उन्नयन एवं अवनमन कोण संयुक्त सॉल्वर (प्रश्न 12 व 13 विशेष)
+      </div>
+      <div class="sim-desc">
+        भवन/लाइटहाउस की ऊँचाई तथा दोनों कोण (उन्नयन व अवनमन) बदलकर टॉवर की कुल ऊँचाई अथवा जहाजों के बीच दूरी लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">प्रेक्षक ऊँचाई ($h$):</span>
+        <input type="range" id="ch9_sim5_h" class="sim-slider" min="5" max="100" value="7" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch9_sim5_h_val">7 m</span>
+
+        <span class="sim-label" style="margin-left: 20px;">शिखर उन्नयन कोण ($\alpha$):</span>
+        <input type="range" id="ch9_sim5_alpha" class="sim-slider" min="30" max="75" step="5" value="60" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch9_sim5_alpha_val">60°</span>
+
+        <span class="sim-label" style="margin-left: 20px;">पाद अवनमन कोण ($\beta$):</span>
+        <input type="range" id="ch9_sim5_beta" class="sim-slider" min="15" max="60" step="5" value="45" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch9_sim5_beta_val">45°</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch9_sim5_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Elevation/Depression SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #9333ea;">
+            <div class="sim-stat-label">टॉवर की कुल ऊँचाई ($H = h[1 + \frac{\tan\alpha}{\tan\beta}]$)</div>
+            <div class="sim-stat-val" id="ch9_sim5_totalH" style="color: #581c87;">19.12 m</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">क्षैतिज दूरी ($x = h\cot\beta$)</div>
+            <div class="sim-stat-val" id="ch9_sim5_x" style="color: #166534;">7.00 m</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 13</span> समुद्र-तल से $75\text{ m}$ ऊँची लाइट हाउस के शिखर से देखने पर दो समुद्री जहाजों के अवनमन कोण $30^\circ$ और $45^\circ$ हैं। यदि लाइट हाउस के एक ही ओर एक जहाज दूसरे जहाज के ठीक पीछे हो, तो दो जहाजों के बीच की दूरी ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>लाइटहाउस ऊँचाई $h = 75\text{ m}$। निकट जहाज का कोण $= 45^\circ \implies d_1 = 75\cot 45^\circ = 75\text{ m}$</div>
+        <div>दूर वाले जहाज का कोण $= 30^\circ \implies d_2 = 75\cot 30^\circ = 75\sqrt{3}\text{ m}$</div>
+        <div>दो जहाजों के बीच की दूरी $= d_2 - d_1 = 75\sqrt{3} - 75 = \mathbf{75(\sqrt{3} - 1)\text{ m}} \approx 75(0.732) = \mathbf{54.9\text{ m}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: जहाजों के बीच दूरी = $\mathbf{75(\sqrt{3} - 1)\text{ m}}$ (लगभग $54.9\text{ m}$)</span>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 14</span> $1.2\text{ m}$ लंबी एक लड़की भूमि से $88.2\text{ m}$ की ऊँचाई पर एक क्षैतिज रेखा में हवा में उड़ रहे गुब्बारे को देखती है। किसी भी क्षण लड़की की आँख से गुब्बारे का उन्नयन कोण $60^\circ$ है। कुछ समय बाद उन्नयन कोण घटकर $30^\circ$ हो जाता है। इस अंतराल के दौरान गुब्बारे द्वारा तय की गई दूरी ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>लड़की की आँख से प्रभावी ऊँचाई $h = 88.2 - 1.2 = 87\text{ m}$</div>
+        <div>$\tan 60^\circ = \frac{87}{d_1} \implies d_1 = \frac{87}{\sqrt{3}} = 29\sqrt{3}\text{ m}$</div>
+        <div>$\tan 30^\circ = \frac{87}{d_2} \implies d_2 = 87\sqrt{3}\text{ m}$</div>
+        <div>गुब्बारे द्वारा तय दूरी $= d_2 - d_1 = 87\sqrt{3} - 29\sqrt{3} = \mathbf{58\sqrt{3}\text{ m}} \approx 100.46\text{ m}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: गुब्बारे द्वारा तय दूरी = $\mathbf{58\sqrt{3}\text{ m}}$</span>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 15</span> एक सीधा राजमार्ग एक मीनार के पाद तक जाता है। मीनार के शिखर पर खड़ा एक आदमी एक कार को $30^\circ$ के अवनमन कोण पर देखता है जो कि मीनार के पाद की ओर एकसमान चाल से जाता है। $6$ सेकंड बाद कार का अवनमन कोण $60^\circ$ हो गया। इस बिंदु से मीनार के पाद तक पहुँचने में कार द्वारा लिया गया समय ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना मीनार की ऊँचाई $= h$, कार की चाल $= v$।</div>
+        <div>$6$ सेकंड में तय दूरी $CD = 6v$।</div>
+        <div>पाद $B$ से निकट दूरी $BC = x$।</div>
+        <div>$\tan 60^\circ = \frac{h}{x} \implies h = \sqrt{3}x$</div>
+        <div>$\tan 30^\circ = \frac{h}{x + 6v} \implies \frac{1}{\sqrt{3}} = \frac{\sqrt{3}x}{x + 6v} \implies 3x = x + 6v \implies 2x = 6v \implies x = 3v$</div>
+        <div>दूरी $x$ तय करने में लगा समय $= \frac{\text{Distance}}{\text{Speed}} = \frac{3v}{v} = \mathbf{3}\text{ seconds}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: मीनार के पाद तक पहुँचने में लगा समय = $\mathbf{3}\text{ seconds}$</span>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 16</span> मीनार के आधार से और एक सरल रेखा में $4\text{ m}$ और $9\text{ m}$ की दूरी पर स्थित दो बिंदुओं से मीनार के शिखर के उन्नयन कोण पूरक कोण हैं। सिद्ध कीजिए कि मीनार की ऊँचाई $6\text{ m}$ है।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">प्रमाण</span>
+        <div>माना मीनार की ऊँचाई $= h$। कोण परस्पर पूरक हैं, अतः माना एक कोण $\theta$ और दूसरा $90^\circ - \theta$ है।</div>
+        <div>$\tan\theta = \frac{h}{4} \quad \text{--- (1)}$</div>
+        <div>$\tan(90^\circ - \theta) = \cot\theta = \frac{h}{9} \quad \text{--- (2)}$</div>
+        <div>समीकरण (1) और (2) का गुणा करने पर:</div>
+        <div>$\tan\theta \times \cot\theta = \frac{h}{4} \times \frac{h}{9} \implies 1 = \frac{h^2}{36} \implies h^2 = 36 \implies \mathbf{h = 6\text{ m}}$</div>
+        <div>अतः मीनार की ऊँचाई $6\text{ m}$ सिद्ध हुई! (इति सिद्धम्)</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: सिद्ध हुआ कि मीनार की ऊँचाई $\mathbf{6\text{ m}}$ है।</span>
+      </div>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="nav-bar">
+      <a href="qa_master_math8.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 8)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math10.html" class="btn-nav">अगला अध्याय (Ch 10) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT FOR ALL 5 SIMULATORS (Strict Concatenation, No Dollar in Scripts)
+       ========================================================================= -->
+  <script>
+    // SIMULATOR 1: Rope and Pole
+    function updateSim1() {
+      var L = parseFloat(document.getElementById('ch9_sim1_L').value);
+      var th = parseFloat(document.getElementById('ch9_sim1_th').value);
+      document.getElementById('ch9_sim1_L_val').textContent = L + " m";
+      document.getElementById('ch9_sim1_th_val').textContent = th + "°";
+
+      var rad = (th * Math.PI) / 180.0;
+      var h = L * Math.sin(rad);
+      var d = L * Math.cos(rad);
+
+      document.getElementById('ch9_sim1_h').textContent = h.toFixed(2) + " m";
+      document.getElementById('ch9_sim1_d').textContent = d.toFixed(2) + " m";
+
+      var startX = 40, startY = 170;
+      var drawW = 160;
+      var drawH = Math.min(drawW * Math.tan(rad), 130);
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + startX + ',' + startY + ' ' + (startX + drawW) + ',' + startY + ' ' + startX + ',' + (startY - drawH) + '" fill="#eff6ff" stroke="#1e3a8a" stroke-width="4"/>' +
+                    '<line x1="' + startX + '" y1="' + startY + '" x2="' + startX + '" y2="' + (startY - drawH) + '" stroke="#dc2626" stroke-width="6"/>' +
+                    '<circle cx="' + (startX + drawW) + '" cy="' + startY + '" r="5" fill="#15803d"/>' +
+                    '<text x="' + (startX - 15) + '" y="' + (startY - drawH / 2) + '" font-size="13" font-weight="900" fill="#dc2626">h=' + h.toFixed(1) + '</text>' +
+                    '<text x="' + (startX + drawW / 2) + '" y="' + (startY + 22) + '" font-size="13" font-weight="900" fill="#1e3a8a" text-anchor="middle">d=' + d.toFixed(1) + '</text>' +
+                    '<text x="' + (startX + drawW / 2 + 10) + '" y="' + (startY - drawH / 2 - 5) + '" font-size="13" font-weight="900" fill="#15803d">L=' + L + 'm</text>';
+
+      document.getElementById('ch9_sim1_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 2: Tower Height
+    function updateSim2() {
+      var d = parseFloat(document.getElementById('ch9_sim2_d').value);
+      var th = parseFloat(document.getElementById('ch9_sim2_th').value);
+      document.getElementById('ch9_sim2_d_val').textContent = d + " m";
+      document.getElementById('ch9_sim2_th_val').textContent = th + "°";
+
+      var rad = (th * Math.PI) / 180.0;
+      var h = d * Math.tan(rad);
+      var L = Math.sqrt(d * d + h * h);
+
+      document.getElementById('ch9_sim2_h').textContent = h.toFixed(2) + " m";
+      document.getElementById('ch9_sim2_L').textContent = L.toFixed(2) + " m";
+
+      var startX = 40, startY = 170;
+      var drawW = 160;
+      var drawH = Math.min(drawW * Math.tan(rad), 130);
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + startX + ',' + startY + ' ' + (startX + drawW) + ',' + startY + ' ' + startX + ',' + (startY - drawH) + '" fill="#fff7ed" stroke="#ea580c" stroke-width="4"/>' +
+                    '<line x1="' + startX + '" y1="' + startY + '" x2="' + startX + '" y2="' + (startY - drawH) + '" stroke="#c2410c" stroke-width="6"/>' +
+                    '<text x="' + (startX - 15) + '" y="' + (startY - drawH / 2) + '" font-size="13" font-weight="900" fill="#c2410c">h=' + h.toFixed(1) + '</text>' +
+                    '<text x="' + (startX + drawW / 2) + '" y="' + (startY + 22) + '" font-size="13" font-weight="900" fill="#ea580c" text-anchor="middle">d=' + d + 'm</text>';
+
+      document.getElementById('ch9_sim2_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 3: Dual Angle
+    function updateSim3() {
+      var h = parseFloat(document.getElementById('ch9_sim3_h').value);
+      var th1 = parseFloat(document.getElementById('ch9_sim3_th1').value);
+      var th2 = parseFloat(document.getElementById('ch9_sim3_th2').value);
+      if (th1 >= th2) {
+        th1 = th2 - 5;
+        document.getElementById('ch9_sim3_th1').value = th1;
+      }
+      document.getElementById('ch9_sim3_h_val').textContent = h.toFixed(1) + " m";
+      document.getElementById('ch9_sim3_th1_val').textContent = th1 + "°";
+      document.getElementById('ch9_sim3_th2_val').textContent = th2 + "°";
+
+      var rad1 = (th1 * Math.PI) / 180.0;
+      var rad2 = (th2 * Math.PI) / 180.0;
+      var d1 = h / Math.tan(rad1);
+      var d2 = h / Math.tan(rad2);
+      var dist = d1 - d2;
+
+      document.getElementById('ch9_sim3_dist').textContent = dist.toFixed(2) + " m";
+      document.getElementById('ch9_sim3_near').textContent = d2.toFixed(2) + " m";
+
+      var startX = 40, startY = 170;
+      var scale = 160.0 / d1;
+      var drawD1 = 160;
+      var drawD2 = d2 * scale;
+      var drawH = 110;
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<line x1="' + startX + '" y1="' + startY + '" x2="' + startX + '" y2="' + (startY - drawH) + '" stroke="#0f172a" stroke-width="6"/>' +
+                    '<line x1="' + startX + '" y1="' + startY + '" x2="' + (startX + drawD1) + '" y2="' + startY + '" stroke="#0f172a" stroke-width="3"/>' +
+                    '<line x1="' + (startX + drawD1) + '" y1="' + startY + '" x2="' + startX + '" y2="' + (startY - drawH) + '" stroke="#2563eb" stroke-width="3"/>' +
+                    '<line x1="' + (startX + drawD2) + '" y1="' + startY + '" x2="' + startX + '" y2="' + (startY - drawH) + '" stroke="#16a34a" stroke-width="3"/>' +
+                    '<circle cx="' + (startX + drawD1) + '" cy="' + startY + '" r="5" fill="#2563eb"/>' +
+                    '<circle cx="' + (startX + drawD2) + '" cy="' + startY + '" r="5" fill="#16a34a"/>' +
+                    '<text x="' + (startX + drawD2 + (drawD1 - drawD2)/2) + '" y="' + (startY + 22) + '" font-size="13" font-weight="900" fill="#166534" text-anchor="middle">दूरी=' + dist.toFixed(1) + 'm</text>';
+
+      document.getElementById('ch9_sim3_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 4: 2 Opposite Poles
+    function updateSim4() {
+      var w = parseFloat(document.getElementById('ch9_sim4_w').value);
+      var th1 = parseFloat(document.getElementById('ch9_sim4_th1').value);
+      var th2 = parseFloat(document.getElementById('ch9_sim4_th2').value);
+
+      document.getElementById('ch9_sim4_w_val').textContent = w + " m";
+
+      var t1 = Math.tan((th1 * Math.PI) / 180.0);
+      var t2 = Math.tan((th2 * Math.PI) / 180.0);
+
+      // h = t1 * x1, h = t2 * x2, x1 + x2 = w => x1 * (t1/t2) + x1 = w => x1 = w / (1 + t1/t2)
+      var x1 = w / (1.0 + (t1 / t2));
+      var x2 = w - x1;
+      var h = t1 * x1;
+
+      document.getElementById('ch9_sim4_h').textContent = h.toFixed(2) + " m";
+      document.getElementById('ch9_sim4_dists').textContent = x1.toFixed(1) + " m तथा " + x2.toFixed(1) + " m";
+
+      var p1X = 30, p2X = 230, groundY = 160;
+      var pointX = p1X + (x1 / w) * (p2X - p1X);
+      var poleH = 90;
+
+      var svgHtml = '<rect width="260" height="200" fill="#fff1f2" rx="14"/>' +
+                    '<line x1="' + p1X + '" y1="' + groundY + '" x2="' + p2X + '" y2="' + groundY + '" stroke="#0f172a" stroke-width="4"/>' +
+                    '<!-- Left Pole -->' +
+                    '<line x1="' + p1X + '" y1="' + groundY + '" x2="' + p1X + '" y2="' + (groundY - poleH) + '" stroke="#b91c1c" stroke-width="6"/>' +
+                    '<!-- Right Pole -->' +
+                    '<line x1="' + p2X + '" y1="' + groundY + '" x2="' + p2X + '" y2="' + (groundY - poleH) + '" stroke="#b91c1c" stroke-width="6"/>' +
+                    '<!-- Sight lines -->' +
+                    '<line x1="' + pointX + '" y1="' + groundY + '" x2="' + p1X + '" y2="' + (groundY - poleH) + '" stroke="#2563eb" stroke-width="3"/>' +
+                    '<line x1="' + pointX + '" y1="' + groundY + '" x2="' + p2X + '" y2="' + (groundY - poleH) + '" stroke="#16a34a" stroke-width="3"/>' +
+                    '<circle cx="' + pointX + '" cy="' + groundY + '" r="6" fill="#0f172a"/>' +
+                    '<text x="' + (p1X + 15) + '" y="' + (groundY - poleH / 2) + '" font-size="12" font-weight="900" fill="#b91c1c">h=' + h.toFixed(1) + '</text>' +
+                    '<text x="' + pointX + '" y="' + (groundY + 22) + '" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">बिंदु</text>';
+
+      document.getElementById('ch9_sim4_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 5: Elevation and Depression
+    function updateSim5() {
+      var h = parseFloat(document.getElementById('ch9_sim5_h').value);
+      var alpha = parseFloat(document.getElementById('ch9_sim5_alpha').value);
+      var beta = parseFloat(document.getElementById('ch9_sim5_beta').value);
+
+      document.getElementById('ch9_sim5_h_val').textContent = h + " m";
+      document.getElementById('ch9_sim5_alpha_val').textContent = alpha + "°";
+      document.getElementById('ch9_sim5_beta_val').textContent = beta + "°";
+
+      var tA = Math.tan((alpha * Math.PI) / 180.0);
+      var tB = Math.tan((beta * Math.PI) / 180.0);
+
+      var x = h / tB;
+      var hPrime = x * tA;
+      var totalH = h + hPrime;
+
+      document.getElementById('ch9_sim5_totalH').textContent = totalH.toFixed(2) + " m";
+      document.getElementById('ch9_sim5_x').textContent = x.toFixed(2) + " m";
+
+      var svgHtml = '<rect width="260" height="220" fill="#faf5ff" rx="14"/>' +
+                    '<!-- Building Left -->' +
+                    '<rect x="30" y="110" width="40" height="60" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>' +
+                    '<!-- Tower Right -->' +
+                    '<line x1="200" y1="170" x2="200" y2="40" stroke="#7c3aed" stroke-width="6"/>' +
+                    '<!-- Ground -->' +
+                    '<line x1="20" y1="170" x2="240" y2="170" stroke="#0f172a" stroke-width="3"/>' +
+                    '<!-- Horizontal eye line -->' +
+                    '<line x1="70" y1="110" x2="200" y2="110" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,3"/>' +
+                    '<!-- Elevation to top -->' +
+                    '<line x1="70" y1="110" x2="200" y2="40" stroke="#2563eb" stroke-width="3"/>' +
+                    '<!-- Depression to bottom -->' +
+                    '<line x1="70" y1="110" x2="200" y2="170" stroke="#dc2626" stroke-width="3"/>' +
+                    '<text x="210" y="105" font-size="13" font-weight="900" fill="#7c3aed">H=' + totalH.toFixed(1) + 'm</text>';
+
+      document.getElementById('ch9_sim5_svg').innerHTML = svgHtml;
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSim1();
+      updateSim2();
+      updateSim3();
+      updateSim4();
+      updateSim5();
+    });
+  </script>
+</body>
+</html>

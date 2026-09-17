@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मास्टर प्रश्न-उत्तर (Master Q&A): NCERT कक्षा 10 गणित अध्याय 12 - पृष्ठीय क्षेत्रफल और आयतन (Projector & Mobile Ready)</title>
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$', '$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-page: #cbd5e1;
+      --card-bg: #ffffff;
+      --text-main: #000000;
+      --primary-blue: #1e3a8a;
+      --badge-blue: #2563eb;
+      --badge-green: #15803d;
+      --badge-orange: #c2410c;
+      --badge-purple: #6b21a8;
+      --badge-rose: #be123c;
+      --border-card: #94a3b8;
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+      font-size: 26pt;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 6px solid var(--border-card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Natural flow top action bar */
+    .action-bar-top {
+      position: relative;
+      margin: 0 auto 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 18px;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn-action {
+      background: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 20pt;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #60a5fa;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-action-emerald {
+      background: #059669;
+      border-color: #34d399;
+    }
+    .btn-action-emerald:hover { background: #047857; }
+
+    /* Fraction Line Enhancement */
+    .mjx-mfrac > .mjx-line {
+      border-top: 8px solid #047857 !important;
+      background-color: #047857 !important;
+      height: 8px !important;
+      min-height: 8px !important;
+      opacity: 1 !important;
+    }
+    .MathJax .mfrac > span:not([class]) {
+      border-top: 8px solid #047857 !important;
+      min-height: 8px !important;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: 'Outfit', 'Mukta', sans-serif;
+      font-size: 44pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      text-align: center;
+      margin: 10px 0 20px 0;
+      line-height: 1.2;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 26pt;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .section-header {
+      background: #1e293b;
+      color: #ffffff !important;
+      padding: 16px 28px;
+      border-radius: 16px;
+      margin: 40px 0 30px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 30pt;
+      font-weight: 800;
+      border-left: 12px solid #3b82f6;
+    }
+
+    /* Question Cards */
+    .qa-box {
+      border: 4px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.2s ease;
+    }
+    .qa-box:hover {
+      border-color: #94a3b8;
+    }
+
+    .q-text {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .q-tag {
+      background: #1e3a8a;
+      color: #ffffff !important;
+      padding: 4px 16px;
+      border-radius: 10px;
+      font-size: 22pt;
+      font-weight: 900;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Step Boxes */
+    .step-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 24pt;
+      line-height: 1.6;
+    }
+    .step-blue {
+      background: #eff6ff;
+      border-left: 8px solid #2563eb;
+      color: #1e3a8a;
+    }
+    .step-orange {
+      background: #fff7ed;
+      border-left: 8px solid #ea580c;
+      color: #9a3412;
+    }
+    .step-green {
+      background: #f0fdf4;
+      border-left: 8px solid #16a34a;
+      color: #166534;
+    }
+    .step-purple {
+      background: #faf5ff;
+      border-left: 8px solid #9333ea;
+      color: #581c87;
+    }
+
+    .badge-step {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 20pt;
+      color: #ffffff !important;
+      margin-bottom: 10px;
+    }
+    .bg-blue { background: #2563eb; }
+    .bg-orange { background: #ea580c; }
+    .bg-green { background: #16a34a; }
+    .bg-purple { background: #9333ea; }
+
+    /* Answer Boxes */
+    .ans-box {
+      background: #ecfdf5;
+      border: 4px solid #10b981;
+      border-radius: 14px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      font-size: 26pt;
+      font-weight: 900;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Simulator Container Styles */
+    .sim-card {
+      background: #f8fafc;
+      border: 4px solid #3b82f6;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 35px 0 45px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .sim-title {
+      font-size: 28pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-desc {
+      font-size: 22pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .sim-control-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+    }
+    .sim-label {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .sim-slider {
+      flex: 1;
+      min-width: 220px;
+      height: 12px;
+      border-radius: 6px;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+    .sim-val-pill {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 22pt;
+      font-weight: 800;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .sim-display-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .sim-svg-wrap {
+      flex: 1;
+      min-width: 320px;
+      background: #ffffff;
+      border: 3px solid #94a3b8;
+      border-radius: 16px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sim-stats-wrap {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sim-stat-box {
+      background: #ffffff;
+      border-left: 6px solid #2563eb;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .sim-stat-label {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .sim-stat-val {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      flex: 1;
+      min-width: 220px;
+      background: #1e293b;
+      color: #ffffff !important;
+      text-align: center;
+      padding: 15px 25px;
+      font-size: 22pt;
+      font-weight: 800;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-nav:hover { background: #334155; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TOP ACTION BAR -->
+    <div class="action-bar-top">
+      <a href="index.html" class="btn-action"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math11.html" class="btn-action"><i class="fas fa-arrow-left"></i> Ch 11: वृत्तों का क्षेत्रफल</a>
+      <span style="color: #f8fafc; font-weight: 800; font-size: 22pt;">कक्षा 10 गणित: अध्याय 12</span>
+      <a href="qa_master_math13.html" class="btn-action btn-action-emerald">Ch 13: सांख्यिकी <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- TITLE HEADER -->
+    <h1>अध्याय 12: पृष्ठीय क्षेत्रफल और आयतन</h1>
+    <div class="sub-title">NCERT संपूर्ण 17 प्रश्न (प्रश्नावली 12.1 व 12.2) • 100% चरणबद्ध हल • उच्च-कंट्रास्ट आरेख • 5 लाइव सिमुलेटर</div>
+
+    <!-- FORMULA SUMMARY CARD -->
+    <div style="background: #f8fafc; border: 4px solid #3b82f6; border-radius: 20px; padding: 30px; margin-bottom: 40px;">
+      <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 20px;">
+        <i class="fas fa-book-open"></i> ठोस आकृतियों के मानक सूत्र (Standard Formulas)
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div style="background: #eff6ff; border-left: 6px solid #2563eb; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #1e3a8a; font-size: 22pt;">1. बेलन (Cylinder)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            वक्र पृष्ठ = $2\pi rh$<br>
+            कुल पृष्ठ = $2\pi r(r + h)$<br>
+            आयतन = $\pi r^2 h$
+          </div>
+        </div>
+        <div style="background: #f0fdf4; border-left: 6px solid #16a34a; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #166534; font-size: 22pt;">2. शंकु (Cone)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            तिर्यक ऊँचाई $l = \sqrt{r^2 + h^2}$<br>
+            वक्र पृष्ठ = $\pi rl$<br>
+            आयतन = $\frac{1}{3}\pi r^2 h$
+          </div>
+        </div>
+        <div style="background: #fff7ed; border-left: 6px solid #ea580c; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #9a3412; font-size: 22pt;">3. गोला व अर्धगोला (Sphere)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            गोला पृष्ठ = $4\pi r^2$, आयतन = $\frac{4}{3}\pi r^3$<br>
+            अर्धगोला वक्र = $2\pi r^2$, कुल = $3\pi r^2$<br>
+            अर्धगोला आयतन = $\frac{2}{3}\pi r^3$
+          </div>
+        </div>
+        <div style="background: #faf5ff; border-left: 6px solid #9333ea; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #581c87; font-size: 22pt;">4. घन व घनाभ (Cuboid)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            घनाभ पृष्ठ = $2(lb + bh + hl)$<br>
+            घनाभ आयतन = $l \times b \times h$<br>
+            घन पृष्ठ = $6a^2$, आयतन = $a^3$
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         EXERCISE 12.1 HEADER
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-cube"></i> प्रश्नावली 12.1: ठोसों का संयोजन एवं पृष्ठीय क्षेत्रफल (प्रश्न 1 से 9)
+    </div>
+
+    <!-- 12.1 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> 2 घनों, जिनमें से प्रत्येक का आयतन $64\text{ cm}^3$ है, के संलग्न फलकों को मिलाकर एक ठोस बनाया जाता है। इससे प्राप्त घनाभ का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: घन की भुजा ज्ञात करना</span>
+            <div>माना प्रत्येक घन की भुजा = $a$</div>
+            <div>घन का आयतन $= a^3 = 64\text{ cm}^3 \implies a = \sqrt[3]{64} = 4\text{ cm}$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: नए बने घनाभ की विमाएँ एवं पृष्ठीय क्षेत्रफल</span>
+            <div>दो घनों को जोड़ने पर:<br>
+            लंबाई ($l$) = $4 + 4 = 8\text{ cm}$<br>
+            चौड़ाई ($b$) = $4\text{ cm}$, ऊँचाई ($h$) = $4\text{ cm}$</div>
+            <div style="margin-top: 10px;">घनाभ का पृष्ठीय क्षेत्रफल $= 2(lb + bh + hl)$</div>
+            <div>$= 2(8 \times 4 + 4 \times 4 + 4 \times 8) = 2(32 + 16 + 32) = 2(80) = \mathbf{160\text{ cm}^2}$</div>
+          </div>
+        </div>
+        <div style="width: 340px; text-align: center;">
+          <svg viewBox="0 0 280 180" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <!-- Cube 1 Front -->
+            <rect x="30" y="70" width="70" height="70" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
+            <!-- Cube 2 Front -->
+            <rect x="100" y="70" width="70" height="70" fill="#bfdbfe" stroke="#1e3a8a" stroke-width="3"/>
+            <!-- Top faces -->
+            <polygon points="30,70 60,40 130,40 100,70" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+            <polygon points="100,70 130,40 200,40 170,70" fill="#eff6ff" stroke="#1e3a8a" stroke-width="2"/>
+            <!-- Side face -->
+            <polygon points="170,70 200,40 200,110 170,140" fill="#60a5fa" stroke="#1e3a8a" stroke-width="2"/>
+            <text x="100" y="165" font-size="15" font-weight="900" fill="#1e3a8a" text-anchor="middle">l = 8 cm (4 + 4)</text>
+            <text x="220" y="115" font-size="14" font-weight="900" fill="#1e3a8a">b=4, h=4</text>
+            <text x="140" y="30" font-size="15" font-weight="900" fill="#0f172a" text-anchor="middle">संलग्न घनाभ (Cuboid)</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: प्राप्त घनाभ का पृष्ठीय क्षेत्रफल = $\mathbf{160\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 1: TWO CUBES TO CUBOID (Placed right under 12.1 Q1)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #2563eb;">
+      <div class="sim-title">
+        <i class="fas fa-cubes"></i> लाइव सिमुलेटर 1: घनों का संयोजन एवं घनाभ पृष्ठीय क्षेत्रफल सिमुलेटर
+      </div>
+      <div class="sim-desc">
+        घन का आयतन अथवा भुजा ($a$) बदलकर 2 घनों को जोड़ने पर बनने वाले घनाभ का कुल पृष्ठीय क्षेत्रफल एवं आयतन लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">घन की भुजा ($a$):</span>
+        <input type="range" id="ch12_sim1_a" class="sim-slider" min="1" max="15" value="4" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch12_sim1_a_val">4 cm</span>
+
+        <button onclick="setCubeVol(64)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">Q1 मान (a = 4, V = 64)</button>
+        <button onclick="setCubeVol(125)" class="btn-action btn-action-emerald" style="font-size: 16pt; padding: 6px 14px;">a = 5 (V = 125)</button>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch12_sim1_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Cuboid SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">1 घन का आयतन ($a^3$) व पृष्ठीय क्षेत्रफल ($6a^2$)</div>
+            <div class="sim-stat-val" id="ch12_sim1_single" style="color: #1e3a8a;">64 cm³, 96 cm²</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">प्राप्त घनाभ की विमाएँ ($2a \times a \times a$)</div>
+            <div class="sim-stat-val" id="ch12_sim1_dims" style="color: #c2410c;">8 × 4 × 4 cm</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">घनाभ का पृष्ठीय क्षेत्रफल ($10a^2$)</div>
+            <div class="sim-stat-val" id="ch12_sim1_tsa" style="color: #166534;">160 cm²</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12.1 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> कोई बर्तन एक खोखले अर्धगोले के आकार का है जिसके ऊपर एक खोखला बेलन अध्यारोपित है। अर्धगोले का व्यास $14\text{ cm}$ है और इस बर्तन की कुल ऊँचाई $13\text{ cm}$ है। इस बर्तन का आंतरिक पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: विमाएँ ज्ञात करना</span>
+            <div>व्यास = $14\text{ cm} \implies$ त्रिज्या ($r$) = $\frac{14}{2} = 7\text{ cm}$</div>
+            <div>अर्धगोले की गहराई (ऊँचाई) = त्रिज्या = $7\text{ cm}$</div>
+            <div>बेलनाकार भाग की ऊँचाई ($h$) = कुल ऊँचाई $-$ अर्धगोले की त्रिज्या $= 13 - 7 = 6\text{ cm}$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: आंतरिक पृष्ठीय क्षेत्रफल</span>
+            <div>कुल आंतरिक क्षेत्रफल = बेलन का वक्र पृष्ठ + अर्धगोले का वक्र पृष्ठ</div>
+            <div>$= 2\pi rh + 2\pi r^2 = 2\pi r(h + r)$</div>
+            <div>$= 2 \times \frac{22}{7} \times 7 \times (6 + 7) = 44 \times 13 = \mathbf{572\text{ cm}^2}$</div>
+          </div>
+        </div>
+        <div style="width: 320px; text-align: center;">
+          <svg viewBox="0 0 240 260" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <!-- Cylinder Top -->
+            <ellipse cx="120" cy="50" rx="60" ry="15" fill="#e2e8f0" stroke="#1e3a8a" stroke-width="3"/>
+            <!-- Cylinder Body -->
+            <rect x="60" y="50" width="120" height="90" fill="#f1f5f9" stroke="#1e3a8a" stroke-width="0"/>
+            <line x1="60" y1="50" x2="60" y2="140" stroke="#1e3a8a" stroke-width="3"/>
+            <line x1="180" y1="50" x2="180" y2="140" stroke="#1e3a8a" stroke-width="3"/>
+            <ellipse cx="120" cy="140" rx="60" ry="15" fill="#cbd5e1" stroke="#1e3a8a" stroke-width="2"/>
+            <!-- Hemisphere Bottom -->
+            <path d="M 60 140 A 60 60 0 0 0 180 140 Z" fill="#bfdbfe" stroke="#1e3a8a" stroke-width="3"/>
+            <!-- Labels -->
+            <line x1="200" y1="50" x2="200" y2="200" stroke="#dc2626" stroke-width="2"/>
+            <text x="215" y="130" font-size="14" font-weight="900" fill="#dc2626">13 cm</text>
+            <text x="120" y="100" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">बेलन (h = 6)</text>
+            <text x="120" y="175" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">अर्धगोला (r = 7)</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बर्तन का आंतरिक पृष्ठीय क्षेत्रफल = $\mathbf{572\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- 12.1 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> एक खिलौना त्रिज्या $3.5\text{ cm}$ वाले एक शंकु के आकार का है, जो उसी त्रिज्या वाले एक अर्धगोले पर अध्यारोपित है। इस खिलौने की संपूर्ण ऊँचाई $15.5\text{ cm}$ है। इस खिलौने का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: शंकु की विमाएँ व तिर्यक ऊँचाई ($l$)</span>
+            <div>त्रिज्या ($r$) = $3.5\text{ cm}$</div>
+            <div>शंकु की ऊँचाई ($h$) = कुल ऊँचाई $-$ अर्धगोले की त्रिज्या $= 15.5 - 3.5 = 12\text{ cm}$</div>
+            <div>तिर्यक ऊँचाई $l = \sqrt{r^2 + h^2} = \sqrt{(3.5)^2 + 12^2} = \sqrt{12.25 + 144} = \sqrt{156.25} = 12.5\text{ cm}$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: संपूर्ण पृष्ठीय क्षेत्रफल</span>
+            <div>खिलौने का पृष्ठीय क्षेत्रफल = शंकु का वक्र पृष्ठ + अर्धगोले का वक्र पृष्ठ</div>
+            <div>$= \pi rl + 2\pi r^2 = \pi r(l + 2r)$</div>
+            <div>$= \frac{22}{7} \times 3.5 \times (12.5 + 2 \times 3.5) = 11 \times (12.5 + 7) = 11 \times 19.5 = \mathbf{214.5\text{ cm}^2}$</div>
+          </div>
+        </div>
+        <div style="width: 320px; text-align: center;">
+          <svg viewBox="0 0 240 260" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <!-- Cone Top -->
+            <polygon points="120,30 65,140 175,140" fill="#fde68a" stroke="#d97706" stroke-width="3"/>
+            <ellipse cx="120" cy="140" rx="55" ry="14" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+            <!-- Hemisphere Bottom -->
+            <path d="M 65 140 A 55 55 0 0 0 175 140 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>
+            <!-- Dimension lines -->
+            <line x1="120" y1="30" x2="120" y2="140" stroke="#b45309" stroke-width="2" stroke-dasharray="4,3"/>
+            <text x="135" y="85" font-size="13" font-weight="900" fill="#b45309">h=12</text>
+            <text x="155" y="70" font-size="13" font-weight="900" fill="#d97706">l=12.5</text>
+            <text x="120" y="180" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">r = 3.5 cm</text>
+            <text x="120" y="240" font-size="15" font-weight="900" fill="#0f172a" text-anchor="middle">खिलौना (शंकु + अर्धगोला)</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: खिलौने का संपूर्ण पृष्ठीय क्षेत्रफल = $\mathbf{214.5\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 2: TOY TSA & VOLUME (Placed right under 12.1 Q3)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #d97706;">
+      <div class="sim-title">
+        <i class="fas fa-shapes"></i> लाइव सिमुलेटर 2: खिलौना (शंकु + अर्धगोला) पृष्ठीय क्षेत्रफल एवं आयतन
+      </div>
+      <div class="sim-desc">
+        त्रिज्या ($r$) और शंकु की ऊँचाई ($h$) बदलकर लाइव तिर्यक ऊँचाई ($l$), वक्र पृष्ठ एवं आयतन का विश्लेषण कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">त्रिज्या ($r$):</span>
+        <input type="range" id="ch12_sim2_r" class="sim-slider" min="1" max="15" step="0.5" value="3.5" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch12_sim2_r_val">3.5 cm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">शंकु ऊँचाई ($h$):</span>
+        <input type="range" id="ch12_sim2_h" class="sim-slider" min="2" max="25" step="0.5" value="12" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch12_sim2_h_val">12 cm</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch12_sim2_svg" viewBox="0 0 260 260" style="width: 260px; height: 260px;">
+            <!-- Dynamic Toy SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #d97706;">
+            <div class="sim-stat-label">तिर्यक ऊँचाई ($l = \sqrt{r^2 + h^2}$)</div>
+            <div class="sim-stat-val" id="ch12_sim2_l" style="color: #b45309;">12.50 cm</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">संपूर्ण पृष्ठीय क्षेत्रफल ($\pi rl + 2\pi r^2$)</div>
+            <div class="sim-stat-val" id="ch12_sim2_tsa" style="color: #1e3a8a;">214.50 cm²</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">खिलौने का कुल आयतन ($\frac{1}{3}\pi r^2 h + \frac{2}{3}\pi r^3$)</div>
+            <div class="sim-stat-val" id="ch12_sim2_vol" style="color: #166534;">243.83 cm³</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12.1 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> भुजा $7\text{ cm}$ वाले एक घनाकार ब्लॉक के ऊपर एक अर्धगोला रखा हुआ है। अर्धगोले का अधिकतम व्यास क्या हो सकता है? इस प्रकार बने ठोस का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: अधिकतम व्यास</span>
+        <div>अर्धगोला घन के फलक के ऊपर पूरी तरह समाहित होने के लिए उसका अधिकतम व्यास घन की भुजा के बराबर होगा।</div>
+        <div>अतः <strong>अधिकतम व्यास = $7\text{ cm}$</strong> $\implies$ त्रिज्या ($r$) = $\frac{7}{2} = 3.5\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: ठोस का पृष्ठीय क्षेत्रफल</span>
+        <div>ठोस का क्षेत्रफल = घन का संपूर्ण पृष्ठ + अर्धगोले का वक्र पृष्ठ $-$ अर्धगोले के आधार का क्षेत्रफल (ढका हुआ भाग)</div>
+        <div>$= 6a^2 + 2\pi r^2 - \pi r^2 = 6a^2 + \pi r^2$</div>
+        <div>$= 6(7^2) + \frac{22}{7} \times \frac{7}{2} \times \frac{7}{2} = 6(49) + 38.5 = 294 + 38.5 = \mathbf{332.5\text{ cm}^2}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: अधिकतम व्यास = $\mathbf{7\text{ cm}}$; \quad ठोस का पृष्ठीय क्षेत्रफल = $\mathbf{332.5\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- 12.1 Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> एक घनाकार ब्लॉक के एक फलक को अंदर की ओर से काटकर एक अर्धगोलाकार गड्ढा (Depression) इस प्रकार बनाया गया है कि अर्धगोले का व्यास $l$ घन के किनारे के बराबर है। शेष बचे ठोस का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: विमाएँ</span>
+        <div>घन का किनारा = $l$</div>
+        <div>अर्धगोले का व्यास = $l \implies$ त्रिज्या ($r$) = $\frac{l}{2}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: पृष्ठीय क्षेत्रफल की गणना</span>
+        <div>गड्ढा खोदने पर अंदर एक नया अर्धगोलाकार पृष्ठ $2\pi r^2$ बन जाता है और ऊपरी फलक से वृत्ताकार आधार $\pi r^2$ घट जाता है:</div>
+        <div>शेष ठोस का क्षेत्रफल = घन का कुल पृष्ठ + अर्धगोले का गड्ढा पृष्ठ $-$ वृत्ताकार आधार</div>
+        <div>$= 6l^2 + 2\pi r^2 - \pi r^2 = 6l^2 + \pi r^2$</div>
+        <div>$= 6l^2 + \pi \left(\frac{l}{2}\right)^2 = 6l^2 + \frac{\pi l^2}{4} = \mathbf{\frac{l^2}{4}(24 + \pi)}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: शेष ठोस का पृष्ठीय क्षेत्रफल = $\mathbf{\frac{l^2}{4}(24 + \pi)}$ वर्ग मात्रक</span>
+      </div>
+    </div>
+
+    <!-- 12.1 Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> दवा का एक कैप्सूल (Capsule) एक बेलन के आकार का है जिसके दोनों सिरों पर एक-एक अर्धगोला लगा हुआ है। पूरे कैप्सूल की लंबाई $14\text{ mm}$ है और उसका व्यास $5\text{ mm}$ है। इसका पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: विमाएँ</span>
+            <div>व्यास = $5\text{ mm} \implies$ त्रिज्या ($r$) = $\frac{5}{2} = 2.5\text{ mm}$</div>
+            <div>दोनों सिरों पर अर्धगोले हैं, अतः दोनों की त्रिज्याओं का योग = $2.5 + 2.5 = 5\text{ mm}$</div>
+            <div>बेलनाकार भाग की लंबाई ($h$) = कुल लंबाई $-$ दोनों अर्धगोलों की त्रिज्याएँ $= 14 - 5 = 9\text{ mm}$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: कैप्सूल का पृष्ठीय क्षेत्रफल</span>
+            <div>क्षेत्रफल = बेलन का वक्र पृष्ठ + $2 \times$ अर्धगोले का वक्र पृष्ठ</div>
+            <div>$= 2\pi rh + 2(2\pi r^2) = 2\pi r(h + 2r)$</div>
+            <div>$= 2 \times \frac{22}{7} \times \frac{5}{2} \times (9 + 5) = \frac{110}{7} \times 14 = 110 \times 2 = \mathbf{220\text{ mm}^2}$</div>
+          </div>
+        </div>
+        <div style="width: 340px; text-align: center;">
+          <svg viewBox="0 0 280 160" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <!-- Left Hemisphere -->
+            <path d="M 70 45 A 35 35 0 0 0 70 115 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+            <!-- Cylinder -->
+            <rect x="70" y="45" width="140" height="70" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+            <line x1="70" y1="45" x2="210" y2="45" stroke="#ca8a04" stroke-width="3"/>
+            <line x1="70" y1="115" x2="210" y2="115" stroke="#ca8a04" stroke-width="3"/>
+            <!-- Right Hemisphere -->
+            <path d="M 210 45 A 35 35 0 0 1 210 115 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+            <!-- Labels -->
+            <line x1="35" y1="135" x2="245" y2="135" stroke="#dc2626" stroke-width="2"/>
+            <text x="140" y="152" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">कुल लंबाई = 14 mm</text>
+            <text x="140" y="85" font-size="14" font-weight="900" fill="#854d0e" text-anchor="middle">बेलन (h = 9 mm)</text>
+            <line x1="260" y1="45" x2="260" y2="115" stroke="#0f172a" stroke-width="2"/>
+            <text x="270" y="85" font-size="13" font-weight="900" fill="#0f172a">5 mm</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: कैप्सूल का पृष्ठीय क्षेत्रफल = $\mathbf{220\text{ mm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 3: CAPSULE SURFACE AREA (Placed right under 12.1 Q6)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #ea580c;">
+      <div class="sim-title">
+        <i class="fas fa-capsules"></i> लाइव सिमुलेटर 3: कैप्सूल (बेलन + 2 अर्धगोले) पृष्ठीय क्षेत्रफल विश्लेषक
+      </div>
+      <div class="sim-desc">
+        कैप्सूल की कुल लंबाई ($L$) और व्यास ($d$) बदलकर बेलनाकार लंबाई, पृष्ठीय क्षेत्रफल एवं आयतन लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">कुल लंबाई ($L$):</span>
+        <input type="range" id="ch12_sim3_L" class="sim-slider" min="6" max="30" step="0.5" value="14" oninput="updateSim3()">
+        <span class="sim-val-pill" id="ch12_sim3_L_val">14 mm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">व्यास ($d$):</span>
+        <input type="range" id="ch12_sim3_d" class="sim-slider" min="2" max="10" step="0.5" value="5" oninput="updateSim3()">
+        <span class="sim-val-pill" id="ch12_sim3_d_val">5 mm</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch12_sim3_svg" viewBox="0 0 260 160" style="width: 260px; height: 160px;">
+            <!-- Dynamic Capsule SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">बेलनाकार भाग की ऊँचाई ($h = L - d$)</div>
+            <div class="sim-stat-val" id="ch12_sim3_h" style="color: #c2410c;">9.00 mm</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">कैप्सूल का पृष्ठीय क्षेत्रफल ($2\pi rh + 4\pi r^2$)</div>
+            <div class="sim-stat-val" id="ch12_sim3_tsa" style="color: #1e3a8a;">220.00 mm²</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">कैप्सूल का कुल आयतन ($\pi r^2 h + \frac{4}{3}\pi r^3$)</div>
+            <div class="sim-stat-val" id="ch12_sim3_vol" style="color: #166534;">209.44 mm³</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12.1 Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7</span> कोई तंबू एक बेलन के आकार का है जिस पर एक शंकु अध्यारोपित है। यदि बेलनाकार भाग की ऊँचाई और व्यास क्रमशः $2.1\text{ m}$ और $4\text{ m}$ हैं तथा शंकु की तिर्यक ऊँचाई $2.8\text{ m}$ है, तो इस तंबू को बनाने में प्रयुक्त कैनवास का क्षेत्रफल ज्ञात कीजिए। साथ ही, ₹$500$ प्रति $\text{m}^2$ की दर से इसमें प्रयुक्त कैनवास की लागत ज्ञात कीजिए। (ध्यान दीजिए कि तंबू का आधार कैनवास से नहीं ढका जाता है)।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: विमाएँ</span>
+        <div>व्यास = $4\text{ m} \implies$ त्रिज्या ($r$) = $2\text{ m}$</div>
+        <div>बेलन की ऊँचाई ($h$) = $2.1\text{ m}$</div>
+        <div>शंकु की तिर्यक ऊँचाई ($l$) = $2.8\text{ m}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: प्रयुक्त कैनवास का कुल क्षेत्रफल</span>
+        <div>कैनवास का क्षेत्रफल = बेलन का वक्र पृष्ठ + शंकु का वक्र पृष्ठ</div>
+        <div>$= 2\pi rh + \pi rl = \pi r(2h + l)$</div>
+        <div>$= \frac{22}{7} \times 2 \times [2(2.1) + 2.8] = \frac{44}{7} \times (4.2 + 2.8) = \frac{44}{7} \times 7 = \mathbf{44\text{ m}^2}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: कुल लागत की गणना</span>
+        <div>दर = ₹$500$ प्रति $\text{m}^2$</div>
+        <div>कुल लागत $= 44 \times 500 = \mathbf{₹ 22,000}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: कैनवास का क्षेत्रफल = $\mathbf{44\text{ m}^2}$; \quad कुल लागत = $\mathbf{₹ 22,000}$</span>
+      </div>
+    </div>
+
+    <!-- 12.1 Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> ऊँचाई $2.4\text{ cm}$ और व्यास $1.4\text{ cm}$ वाले एक ठोस बेलन में से इसी ऊँचाई और इसी व्यास वाला एक शंक्वाकार खोल (Cavity) काट लिया जाता है। शेष बचे ठोस का निकटतम वर्ग सेंटीमीटर तक पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: विमाएँ व शंकु की तिर्यक ऊँचाई</span>
+        <div>व्यास = $1.4\text{ cm} \implies$ त्रिज्या ($r$) = $0.7\text{ cm}$</div>
+        <div>ऊँचाई ($h$) = $2.4\text{ cm}$</div>
+        <div>तिर्यक ऊँचाई $l = \sqrt{r^2 + h^2} = \sqrt{(0.7)^2 + (2.4)^2} = \sqrt{0.49 + 5.76} = \sqrt{6.25} = 2.5\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: शेष ठोस का पृष्ठीय क्षेत्रफल</span>
+        <div>क्षेत्रफल = बेलन का वक्र पृष्ठ + निचला वृत्ताकार आधार + शंक्वाकार खोल का वक्र पृष्ठ</div>
+        <div>$= 2\pi rh + \pi r^2 + \pi rl = \pi r(2h + r + l)$</div>
+        <div>$= \frac{22}{7} \times 0.7 \times [2(2.4) + 0.7 + 2.5] = 2.2 \times [4.8 + 0.7 + 2.5] = 2.2 \times 8 = \mathbf{17.6\text{ cm}^2}$</div>
+        <div>निकटतम वर्ग सेंटीमीटर तक मान $= \mathbf{18\text{ cm}^2}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: शेष ठोस का क्षेत्रफल = $\mathbf{17.6\text{ cm}^2} \approx \mathbf{18\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- 12.1 Q9 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 9</span> लकड़ी के एक ठोस बेलन के प्रत्येक सिरे पर एक अर्धगोला खोदकर निकालते हुए, एक वस्तु बनाई गई है। यदि बेलन की ऊँचाई $10\text{ cm}$ है और आधार की त्रिज्या $3.5\text{ cm}$ है, तो इस वस्तु का संपूर्ण पृष्ठीय क्षेत्रफल ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: विमाएँ</span>
+        <div>त्रिज्या ($r$) = $3.5\text{ cm}$, ऊँचाई ($h$) = $10\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: वस्तु का संपूर्ण पृष्ठीय क्षेत्रफल</span>
+        <div>क्षेत्रफल = बेलन का वक्र पृष्ठ + $2 \times$ अर्धगोले का आंतरिक वक्र पृष्ठ</div>
+        <div>$= 2\pi rh + 2(2\pi r^2) = 2\pi r(h + 2r)$</div>
+        <div>$= 2 \times \frac{22}{7} \times 3.5 \times (10 + 2 \times 3.5) = 22 \times (10 + 7) = 22 \times 17 = \mathbf{374\text{ cm}^2}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: वस्तु का संपूर्ण पृष्ठीय क्षेत्रफल = $\mathbf{374\text{ cm}^2}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         EXERCISE 12.2 HEADER
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-fill-drip"></i> प्रश्नावली 12.2: ठोसों का संयोजन एवं आयतन (प्रश्न 1 से 8)
+    </div>
+
+    <!-- 12.2 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> एक ठोस एक अर्धगोले पर खड़े एक शंकु के आकार का है जिनकी त्रिज्याएँ $1\text{ cm}$ हैं तथा शंकु की ऊँचाई उसकी त्रिज्या के बराबर है। इस ठोस का आयतन $\pi$ के पदों में ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: दिए गए मान</span>
+        <div>त्रिज्या ($r$) = $1\text{ cm}$</div>
+        <div>शंकु की ऊँचाई ($h$) = $r = 1\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: ठोस का कुल आयतन</span>
+        <div>ठोस का आयतन = शंकु का आयतन + अर्धगोले का आयतन</div>
+        <div>$= \frac{1}{3}\pi r^2 h + \frac{2}{3}\pi r^3 = \frac{1}{3}\pi r^2(h + 2r)$</div>
+        <div>$= \frac{1}{3}\pi (1)^2 [1 + 2(1)] = \frac{1}{3}\pi \times 3 = \mathbf{\pi\text{ cm}^3}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: ठोस का कुल आयतन = $\mathbf{\pi\text{ cm}^3}$ (लगभग $3.14\text{ cm}^3$)</span>
+      </div>
+    </div>
+
+    <!-- 12.2 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> एक इंजीनियरिंग के विद्यार्थी रचेल से एक पतली एल्युमिनियम की शीट का प्रयोग करते हुए एक मॉडल बनाने को कहा गया जो एक ऐसे बेलन के आकार का हो जिसके दोनों सिरों पर दो शंकु जुड़े हुए हों। इस मॉडल का व्यास $3\text{ cm}$ है और इसकी कुल लंबाई $12\text{ cm}$ है। यदि प्रत्येक शंकु की ऊँचाई $2\text{ cm}$ हो, तो रचेल द्वारा बनाए गए मॉडल में अंतर्विष्ट हवा का आयतन ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: विमाएँ</span>
+        <div>व्यास = $3\text{ cm} \implies$ त्रिज्या ($r$) = $\frac{3}{2} = 1.5\text{ cm}$</div>
+        <div>प्रत्येक शंकु की ऊँचाई ($h_{\text{cone}}$) = $2\text{ cm}$</div>
+        <div>बेलनाकार भाग की लंबाई ($h_{\text{cyl}}$) = कुल लंबाई $- 2 \times 2 = 12 - 4 = 8\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: मॉडल का कुल आयतन</span>
+        <div>आयतन = बेलन का आयतन + $2 \times$ शंकु का आयतन</div>
+        <div>$= \pi r^2 h_{\text{cyl}} + 2 \times \frac{1}{3}\pi r^2 h_{\text{cone}} = \pi r^2 \left(h_{\text{cyl}} + \frac{2}{3}h_{\text{cone}}\right)$</div>
+        <div>$= \frac{22}{7} \times \left(\frac{3}{2}\right)^2 \times \left(8 + \frac{4}{3}\right) = \frac{22}{7} \times \frac{9}{4} \times \frac{28}{3} = \frac{22 \times 3 \times 1}{1} = \mathbf{66\text{ cm}^3}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: मॉडल में हवा का आयतन = $\mathbf{66\text{ cm}^3}$</span>
+      </div>
+    </div>
+
+    <!-- 12.2 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> एक गुलाब जामुन में उसके आयतन की लगभग $30\%$ चीनी की चाशनी होती है। $45$ गुलाब जामुनों में लगभग कितनी चाशनी होगी, यदि प्रत्येक गुलाब जामुन एक बेलन के आकार का है, जिसके दोनों सिरे अर्धगोलाकार हैं तथा इसकी कुल लंबाई $5\text{ cm}$ और व्यास $2.8\text{ cm}$ है?
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: 1 गुलाब जामुन की विमाएँ</span>
+        <div>व्यास = $2.8\text{ cm} \implies$ त्रिज्या ($r$) = $1.4\text{ cm}$</div>
+        <div>दोनों अर्धगोलों की लंबाई = $1.4 + 1.4 = 2.8\text{ cm}$</div>
+        <div>बेलनाकार भाग की लंबाई ($h$) = $5 - 2.8 = 2.2\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: 1 गुलाब जामुन का आयतन</span>
+        <div>आयतन = बेलन का आयतन + $2 \times$ अर्धगोले का आयतन $= \pi r^2 h + \frac{4}{3}\pi r^3 = \pi r^2 \left(h + \frac{4}{3}r\right)$</div>
+        <div>$= \frac{22}{7} \times 1.4 \times 1.4 \times \left(2.2 + \frac{4}{3} \times 1.4\right) = 6.16 \times \left(2.2 + 1.87\right) = 6.16 \times 4.07 \approx 25.05\text{ cm}^3$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: 45 गुलाब जामुन एवं चाशनी की मात्रा</span>
+        <div>$45$ गुलाब जामुनों का कुल आयतन $= 45 \times 25.05 \approx 1127.28\text{ cm}^3$</div>
+        <div>चाशनी की मात्रा ($30\%$) $= \frac{30}{100} \times 1127.28 \approx \mathbf{338\text{ cm}^3}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: लगभग चाशनी की मात्रा = $\mathbf{338\text{ cm}^3}$ (सटीक: $338.18\text{ cm}^3$)</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 4: GULAB JAMUN & SYRUP (Placed right under 12.2 Q3)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #be123c;">
+      <div class="sim-title">
+        <i class="fas fa-cookie-bite"></i> लाइव सिमुलेटर 4: गुलाब जामुन आयतन एवं चाशनी कैलकुलेटर
+      </div>
+      <div class="sim-desc">
+        गुलाब जामुन की संख्या ($N$), कुल लंबाई ($L$), व्यास ($d$) एवं चाशनी प्रतिशत बदलकर कुल चाशनी की मात्रा लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">संख्या ($N$):</span>
+        <input type="range" id="ch12_sim4_N" class="sim-slider" min="1" max="100" value="45" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch12_sim4_N_val">45</span>
+
+        <span class="sim-label" style="margin-left: 20px;">कुल लंबाई ($L$):</span>
+        <input type="range" id="ch12_sim4_L" class="sim-slider" min="3" max="10" step="0.2" value="5" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch12_sim4_L_val">5.0 cm</span>
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">व्यास ($d$):</span>
+        <input type="range" id="ch12_sim4_d" class="sim-slider" min="1.0" max="4.0" step="0.1" value="2.8" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch12_sim4_d_val">2.8 cm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">चाशनी %:</span>
+        <input type="range" id="ch12_sim4_pct" class="sim-slider" min="10" max="60" step="5" value="30" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch12_sim4_pct_val">30%</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch12_sim4_svg" viewBox="0 0 260 160" style="width: 260px; height: 160px;">
+            <!-- Dynamic Gulab Jamun SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #be123c;">
+            <div class="sim-stat-label">1 गुलाब जामुन का आयतन</div>
+            <div class="sim-stat-val" id="ch12_sim4_single_vol" style="color: #9f1239;">25.05 cm³</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">कुल गुलाब जामुनों का आयतन</div>
+            <div class="sim-stat-val" id="ch12_sim4_total_vol" style="color: #c2410c;">1127.25 cm³</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">आवश्यक चाशनी की मात्रा</div>
+            <div class="sim-stat-val" id="ch12_sim4_syrup" style="color: #166534;">338.18 cm³</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12.2 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> एक कलमदान (Pen Stand) घनाभ के आकार की एक लकड़ी से बना है जिसमें कलम रखने के लिए चार शंक्वाकार गड्ढे बने हुए हैं। घनाभ की विमाएँ $15\text{ cm} \times 10\text{ cm} \times 3.5\text{ cm}$ हैं। प्रत्येक गड्ढे की त्रिज्या $0.5\text{ cm}$ है और गहराई $1.4\text{ cm}$ है। पूरे कलमदान में लकड़ी का आयतन ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: घनाभ का आयतन</span>
+        <div>आयतन $= l \times b \times h = 15 \times 10 \times 3.5 = 150 \times 3.5 = \mathbf{525\text{ cm}^3}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: 4 शंक्वाकार गड्ढों का आयतन</span>
+        <div>$1$ गड्ढे का आयतन $= \frac{1}{3}\pi r^2 h = \frac{1}{3} \times \frac{22}{7} \times 0.5 \times 0.5 \times 1.4$</div>
+        <div>$= \frac{1}{3} \times 22 \times 0.25 \times 0.2 = \frac{1.1}{3} \approx 0.367\text{ cm}^3$</div>
+        <div>$4$ गड्ढों का कुल आयतन $= 4 \times \frac{1.1}{3} = \frac{4.4}{3} \approx \mathbf{1.47\text{ cm}^3}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: कलमदान में शेष लकड़ी का आयतन</span>
+        <div>लकड़ी का आयतन = घनाभ का आयतन $- 4$ गड्ढों का आयतन</div>
+        <div>$= 525 - 1.47 = \mathbf{523.53\text{ cm}^3}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: कलमदान में लकड़ी का आयतन = $\mathbf{523.53\text{ cm}^3}$</span>
+      </div>
+    </div>
+
+    <!-- 12.2 Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> एक बर्तन एक उल्टे शंकु के आकार का है। इसकी ऊँचाई $8\text{ cm}$ है और इसके खुले सिरे की त्रिज्या $5\text{ cm}$ है। यह ऊपर तक पानी से भरा हुआ है। जब इस बर्तन में सीसे की कुछ गोलियाँ, जिनमें प्रत्येक $0.5\text{ cm}$ त्रिज्या वाला एक गोला है, डाली जाती हैं, तो इसमें से भरे हुए पानी का एक-चौथाई भाग बाहर निकल जाता है। बर्तन में डाली गई सीसे की गोलियों की संख्या ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: बर्तन में भरे कुल पानी का आयतन व विस्थापित पानी</span>
+        <div>शंकु का आयतन $= \frac{1}{3}\pi R^2 H = \frac{1}{3}\pi \times 5^2 \times 8 = \frac{200\pi}{3}\text{ cm}^3$</div>
+        <div>बाहर निकले पानी का आयतन $= \frac{1}{4} \times \left(\frac{200\pi}{3}\right) = \mathbf{\frac{50\pi}{3}\text{ cm}^3}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: 1 सीसे की गोली का आयतन</span>
+        <div>गोली की त्रिज्या ($r$) = $0.5\text{ cm}$</div>
+        <div>$1$ गोली का आयतन $= \frac{4}{3}\pi r^3 = \frac{4}{3}\pi \times (0.5)^3 = \frac{4}{3}\pi \times \frac{1}{8} = \mathbf{\frac{\pi}{6}\text{ cm}^3}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: गोलियों की संख्या ($n$)</span>
+        <div>माना गोलियों की संख्या = $n$</div>
+        <div>$n \times V_{\text{shot}} = V_{\text{water}}$</div>
+        <div>$n \times \frac{\pi}{6} = \frac{50\pi}{3} \implies n = \frac{50\pi}{3} \times \frac{6}{\pi} = 50 \times 2 = \mathbf{100}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बर्तन में डाली गई सीसे की गोलियों की संख्या = $\mathbf{100}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 5: WATER DISPLACEMENT & LEAD SHOTS (Placed right under 12.2 Q5)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #0284c7;">
+      <div class="sim-title">
+        <i class="fas fa-water"></i> लाइव सिमुलेटर 5: जल विस्थापन एवं सीसे की गोलियों की संख्या सॉल्वर
+      </div>
+      <div class="sim-desc">
+        शंकु की त्रिज्या ($R$), ऊँचाई ($H$) एवं गोली की त्रिज्या ($r$) बदलकर विस्थापित जल एवं गोलियों की संख्या लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">शंकु त्रिज्या ($R$):</span>
+        <input type="range" id="ch12_sim5_R" class="sim-slider" min="2" max="15" value="5" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch12_sim5_R_val">5 cm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">शंकु ऊँचाई ($H$):</span>
+        <input type="range" id="ch12_sim5_H" class="sim-slider" min="4" max="20" value="8" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch12_sim5_H_val">8 cm</span>
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">गोली त्रिज्या ($r$):</span>
+        <input type="range" id="ch12_sim5_r" class="sim-slider" min="0.2" max="2.0" step="0.1" value="0.5" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch12_sim5_r_val">0.5 cm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">विस्थापित पानी भाग:</span>
+        <select id="ch12_sim5_frac" onchange="updateSim5()" style="font-size: 20pt; font-weight: 800; padding: 6px 14px; border-radius: 10px; border: 2px solid #2563eb;">
+          <option value="0.25" selected>1/4 भाग (25%)</option>
+          <option value="0.3333">1/3 भाग (33.3%)</option>
+          <option value="0.50">1/2 भाग (50%)</option>
+          <option value="1.00">संपूर्ण पानी (100%)</option>
+        </select>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch12_sim5_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Inverted Cone SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #0284c7;">
+            <div class="sim-stat-label">शंकु का कुल पानी आयतन</div>
+            <div class="sim-stat-val" id="ch12_sim5_vcone" style="color: #0369a1;">209.44 cm³</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">बाहर निकला विस्थापित पानी</div>
+            <div class="sim-stat-val" id="ch12_sim5_vout" style="color: #c2410c;">52.36 cm³</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">आवश्यक सीसे की गोलियों की संख्या ($n$)</div>
+            <div class="sim-stat-val" id="ch12_sim5_nshots" style="color: #166534;">100 गोलियाँ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12.2 Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> एक ठोस लोहे का खंभा $220\text{ cm}$ ऊँचे और $24\text{ cm}$ आधार व्यास वाले एक बेलन से बना है, जिस पर $60\text{ cm}$ ऊँचाई और $8\text{ cm}$ त्रिज्या वाला एक अन्य बेलन अध्यारोपित है। इस खंभे का द्रव्यमान ज्ञात कीजिए, जबकि दिया है कि $1\text{ cm}^3$ लोहे का द्रव्यमान लगभग $8\text{ g}$ होता है। ($\pi = 3.14$)
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: दोनों बेलनों का आयतन</span>
+        <div>निचला बड़ा बेलन: $R = \frac{24}{2} = 12\text{ cm}, H = 220\text{ cm}$</div>
+        <div>$V_1 = \pi R^2 H = 3.14 \times 12^2 \times 220 = 3.14 \times 144 \times 220 = 99475.2\text{ cm}^3$</div>
+        <div style="margin-top: 10px;">ऊपरी छोटा बेलन: $r = 8\text{ cm}, h = 60\text{ cm}$</div>
+        <div>$V_2 = \pi r^2 h = 3.14 \times 8^2 \times 60 = 3.14 \times 64 \times 60 = 12057.6\text{ cm}^3$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: खंभे का कुल आयतन एवं द्रव्यमान</span>
+        <div>कुल आयतन $= V_1 + V_2 = 99475.2 + 12057.6 = \mathbf{111532.8\text{ cm}^3}$</div>
+        <div>कुल द्रव्यमान $= 111532.8 \times 8\text{ g} = 892262.4\text{ g} = \mathbf{892.26\text{ kg}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: खंभे का कुल द्रव्यमान = $\mathbf{892.26\text{ kg}}$</span>
+      </div>
+    </div>
+
+    <!-- 12.2 Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7</span> एक ठोस में, ऊँचाई $120\text{ cm}$ और त्रिज्या $60\text{ cm}$ वाला एक शंकु सम्मिलित है, जो $60\text{ cm}$ त्रिज्या वाले एक अर्धगोले पर अध्यारोपित है। इस ठोस को पानी से भरे हुए एक लंब वृत्तीय बेलन में इस प्रकार सीधा डाल दिया जाता है कि यह बेलन की तली को स्पर्श करे। यदि बेलन की त्रिज्या $60\text{ cm}$ है और ऊँचाई $180\text{ cm}$ है, तो बेलन में शेष बचे पानी का आयतन ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: बेलन में कुल पानी का आयतन</span>
+        <div>बेलन: $r = 60\text{ cm}, H = 180\text{ cm}$</div>
+        <div>$V_{\text{cylinder}} = \pi r^2 H = \frac{22}{7} \times 60^2 \times 180 = \frac{22}{7} \times 3600 \times 180 = \frac{14256000}{7}\text{ cm}^3$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: ठोस (शंकु + अर्धगोला) का आयतन</span>
+        <div>$V_{\text{solid}} = \frac{1}{3}\pi r^2 h + \frac{2}{3}\pi r^3 = \frac{1}{3}\pi r^2(h + 2r)$</div>
+        <div>$= \frac{1}{3} \times \frac{22}{7} \times 3600 \times [120 + 2(60)] = \frac{22}{7} \times 1200 \times 240 = \frac{6336000}{7}\text{ cm}^3$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: शेष बचे पानी का आयतन</span>
+        <div>शेष पानी $= V_{\text{cylinder}} - V_{\text{solid}} = \frac{14256000 - 6336000}{7} = \frac{7920000}{7}\text{ cm}^3$</div>
+        <div>$= 1131428.57\text{ cm}^3 = \frac{1131428.57}{10^6}\text{ m}^3 \approx \mathbf{1.131\text{ m}^3}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बेलन में शेष बचे पानी का आयतन = $\mathbf{1.131\text{ m}^3}$</span>
+      </div>
+    </div>
+
+    <!-- 12.2 Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> एक गोलाकार कांच के बर्तन की एक बेलनाकार गर्दन है जिसकी लंबाई $8\text{ cm}$ है और व्यास $2\text{ cm}$ है जबकि गोलाकार भाग का व्यास $8.5\text{ cm}$ है। इसमें भरे जा सकने वाले पानी की मात्रा माप कर, एक बच्चे ने यह ज्ञात किया कि इस बर्तन का आयतन $345\text{ cm}^3$ है। जाँच कीजिए कि उस बच्चे का उत्तर सही है या नहीं, यह मानते हुए कि उपरोक्त मापन आंतरिक मापन है और $\pi = 3.14$।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: बेलनाकार गर्दन एवं गोलाकार भाग का आयतन</span>
+        <div>गर्दन: $r = \frac{2}{2} = 1\text{ cm}, h = 8\text{ cm}$</div>
+        <div>$V_{\text{neck}} = \pi r^2 h = 3.14 \times 1^2 \times 8 = 25.12\text{ cm}^3$</div>
+        <div style="margin-top: 10px;">गोलाकार भाग: $R = \frac{8.5}{2} = 4.25\text{ cm}$</div>
+        <div>$V_{\text{sphere}} = \frac{4}{3}\pi R^3 = \frac{4}{3} \times 3.14 \times (4.25)^3 = \frac{4}{3} \times 3.14 \times 76.7656 = 321.39\text{ cm}^3$</div>
+      </div>
+
+      <div class="step-box step-purple">
+        <span class="badge-step bg-purple">चरण 2: बर्तन का सही आयतन एवं निष्कर्ष</span>
+        <div>बर्तन का कुल आयतन $= 25.12 + 321.39 = \mathbf{346.51\text{ cm}^3}$</div>
+        <div>बच्चे द्वारा मापा गया आयतन $= 345\text{ cm}^3$</div>
+        <div>चूँकि सही आयतन $346.51\text{ cm}^3$ है, अतः <strong>बच्चे का उत्तर सही नहीं है</strong>।</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बच्चे का उत्तर सही नहीं है। बर्तन का सही आयतन = $\mathbf{346.51\text{ cm}^3}$</span>
+      </div>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="nav-bar">
+      <a href="qa_master_math11.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 11)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math13.html" class="btn-nav">अगला अध्याय (Ch 13) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT FOR ALL 5 SIMULATORS (Strict Concatenation, No Dollar in Scripts)
+       ========================================================================= -->
+  <script>
+    // SIMULATOR 1: Two Cubes joined to Cuboid
+    function setCubeVol(val) {
+      var a = Math.round(Math.cbrt(val));
+      document.getElementById('ch12_sim1_a').value = a;
+      updateSim1();
+    }
+    function updateSim1() {
+      var a = parseFloat(document.getElementById('ch12_sim1_a').value);
+      document.getElementById('ch12_sim1_a_val').textContent = a + " cm";
+
+      var singleVol = a * a * a;
+      var singleTsa = 6 * a * a;
+      var cuboidTsa = 10 * a * a;
+      var cuboidVol = 2 * singleVol;
+
+      document.getElementById('ch12_sim1_single').textContent = singleVol + " cm³, " + singleTsa + " cm²";
+      document.getElementById('ch12_sim1_dims').textContent = (2 * a) + " × " + a + " × " + a + " cm";
+      document.getElementById('ch12_sim1_tsa').textContent = cuboidTsa + " cm² (Vol: " + cuboidVol + " cm³)";
+
+      // Render Cuboid Isometric SVG
+      var w = 70, h = 60, d = 35;
+      var startX = 35, startY = 110;
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<!-- Left Cube Front -->' +
+                    '<rect x="' + startX + '" y="' + startY + '" width="' + w + '" height="' + h + '" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>' +
+                    '<!-- Right Cube Front -->' +
+                    '<rect x="' + (startX + w) + '" y="' + startY + '" width="' + w + '" height="' + h + '" fill="#bfdbfe" stroke="#1e3a8a" stroke-width="3"/>' +
+                    '<!-- Top Face Left -->' +
+                    '<polygon points="' + startX + ',' + startY + ' ' + (startX + d) + ',' + (startY - d) + ' ' + (startX + w + d) + ',' + (startY - d) + ' ' + (startX + w) + ',' + startY + '" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>' +
+                    '<!-- Top Face Right -->' +
+                    '<polygon points="' + (startX + w) + ',' + startY + ' ' + (startX + w + d) + ',' + (startY - d) + ' ' + (startX + 2 * w + d) + ',' + (startY - d) + ' ' + (startX + 2 * w) + ',' + startY + '" fill="#eff6ff" stroke="#1e3a8a" stroke-width="2"/>' +
+                    '<!-- Side Face Right -->' +
+                    '<polygon points="' + (startX + 2 * w) + ',' + startY + ' ' + (startX + 2 * w + d) + ',' + (startY - d) + ' ' + (startX + 2 * w + d) + ',' + (startY + h - d) + ' ' + (startX + 2 * w) + ',' + (startY + h) + '" fill="#60a5fa" stroke="#1e3a8a" stroke-width="2"/>' +
+                    '<text x="' + (startX + w) + '" y="' + (startY + h + 25) + '" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">l = ' + (2 * a) + ' cm</text>' +
+                    '<text x="' + (startX + 2 * w + d + 5) + '" y="' + (startY + h / 2) + '" font-size="13" font-weight="900" fill="#1e3a8a">h = ' + a + '</text>';
+
+      document.getElementById('ch12_sim1_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 2: Toy (Cone + Hemisphere)
+    function updateSim2() {
+      var r = parseFloat(document.getElementById('ch12_sim2_r').value);
+      var h = parseFloat(document.getElementById('ch12_sim2_h').value);
+      document.getElementById('ch12_sim2_r_val').textContent = r + " cm";
+      document.getElementById('ch12_sim2_h_val').textContent = h + " cm";
+
+      var l = Math.sqrt(r * r + h * h);
+      var csaCone = Math.PI * r * l;
+      var csaHemi = 2 * Math.PI * r * r;
+      var tsa = csaCone + csaHemi;
+      var vol = (1.0 / 3.0) * Math.PI * r * r * h + (2.0 / 3.0) * Math.PI * r * r * r;
+
+      document.getElementById('ch12_sim2_l').textContent = l.toFixed(2) + " cm";
+      document.getElementById('ch12_sim2_tsa').textContent = tsa.toFixed(2) + " cm²";
+      document.getElementById('ch12_sim2_vol').textContent = vol.toFixed(2) + " cm³";
+
+      // Render Toy SVG
+      var cx = 130, cy = 130, baseR = 50;
+      var coneTopY = cy - 80;
+
+      var svgHtml = '<rect width="260" height="260" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + cx + ',' + coneTopY + ' ' + (cx - baseR) + ',' + cy + ' ' + (cx + baseR) + ',' + cy + '" fill="#fde68a" stroke="#d97706" stroke-width="3"/>' +
+                    '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + baseR + '" ry="12" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>' +
+                    '<path d="M ' + (cx - baseR) + ' ' + cy + ' A ' + baseR + ' ' + baseR + ' 0 0 0 ' + (cx + baseR) + ' ' + cy + ' Z" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>' +
+                    '<line x1="' + cx + '" y1="' + coneTopY + '" x2="' + cx + '" y2="' + cy + '" stroke="#b45309" stroke-width="2" stroke-dasharray="4,3"/>' +
+                    '<text x="' + (cx + 10) + '" y="' + (coneTopY + 40) + '" font-size="13" font-weight="900" fill="#b45309">h=' + h + '</text>' +
+                    '<text x="' + cx + '" y="' + (cy + baseR + 25) + '" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">r = ' + r + ' cm</text>';
+
+      document.getElementById('ch12_sim2_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 3: Capsule TSA
+    function updateSim3() {
+      var L = parseFloat(document.getElementById('ch12_sim3_L').value);
+      var d = parseFloat(document.getElementById('ch12_sim3_d').value);
+      if (d >= L) {
+        d = L - 1;
+        document.getElementById('ch12_sim3_d').value = d;
+      }
+      document.getElementById('ch12_sim3_L_val').textContent = L + " mm";
+      document.getElementById('ch12_sim3_d_val').textContent = d + " mm";
+
+      var r = d / 2.0;
+      var h = L - d; // cylinder height
+      var csaCyl = 2 * Math.PI * r * h;
+      var csa2Hemi = 4 * Math.PI * r * r;
+      var tsa = csaCyl + csa2Hemi;
+      var vol = Math.PI * r * r * h + (4.0 / 3.0) * Math.PI * r * r * r;
+
+      document.getElementById('ch12_sim3_h').textContent = h.toFixed(2) + " mm";
+      document.getElementById('ch12_sim3_tsa').textContent = tsa.toFixed(2) + " mm²";
+      document.getElementById('ch12_sim3_vol').textContent = vol.toFixed(2) + " mm³";
+
+      // Render Capsule SVG
+      var cx = 130, cy = 80;
+      var cylW = 100, radPx = 30;
+
+      var svgHtml = '<rect width="260" height="160" fill="#f8fafc" rx="14"/>' +
+                    '<path d="M ' + (cx - cylW / 2) + ' ' + (cy - radPx) + ' A ' + radPx + ' ' + radPx + ' 0 0 0 ' + (cx - cylW / 2) + ' ' + (cy + radPx) + ' Z" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>' +
+                    '<rect x="' + (cx - cylW / 2) + '" y="' + (cy - radPx) + '" width="' + cylW + '" height="' + (2 * radPx) + '" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>' +
+                    '<line x1="' + (cx - cylW / 2) + '" y1="' + (cy - radPx) + '" x2="' + (cx + cylW / 2) + '" y2="' + (cy - radPx) + '" stroke="#ca8a04" stroke-width="3"/>' +
+                    '<line x1="' + (cx - cylW / 2) + '" y1="' + (cy + radPx) + '" x2="' + (cx + cylW / 2) + '" y2="' + (cy + radPx) + '" stroke="#ca8a04" stroke-width="3"/>' +
+                    '<path d="M ' + (cx + cylW / 2) + ' ' + (cy - radPx) + ' A ' + radPx + ' ' + radPx + ' 0 0 1 ' + (cx + cylW / 2) + ' ' + (cy + radPx) + ' Z" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>' +
+                    '<text x="' + cx + '" y="' + (cy + radPx + 24) + '" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">L = ' + L + ' mm, d = ' + d + ' mm</text>';
+
+      document.getElementById('ch12_sim3_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 4: Gulab Jamun Syrup
+    function updateSim4() {
+      var N = parseInt(document.getElementById('ch12_sim4_N').value);
+      var L = parseFloat(document.getElementById('ch12_sim4_L').value);
+      var d = parseFloat(document.getElementById('ch12_sim4_d').value);
+      var pct = parseFloat(document.getElementById('ch12_sim4_pct').value);
+
+      if (d >= L) {
+        d = L - 0.5;
+        document.getElementById('ch12_sim4_d').value = d;
+      }
+
+      document.getElementById('ch12_sim4_N_val').textContent = N;
+      document.getElementById('ch12_sim4_L_val').textContent = L.toFixed(1) + " cm";
+      document.getElementById('ch12_sim4_d_val').textContent = d.toFixed(1) + " cm";
+      document.getElementById('ch12_sim4_pct_val').textContent = pct + "%";
+
+      var r = d / 2.0;
+      var h = L - d; // cylinder length
+      var singleVol = Math.PI * r * r * h + (4.0 / 3.0) * Math.PI * r * r * r;
+      var totalVol = N * singleVol;
+      var syrup = (pct / 100.0) * totalVol;
+
+      document.getElementById('ch12_sim4_single_vol').textContent = singleVol.toFixed(2) + " cm³";
+      document.getElementById('ch12_sim4_total_vol').textContent = totalVol.toFixed(2) + " cm³";
+      document.getElementById('ch12_sim4_syrup').textContent = syrup.toFixed(2) + " cm³";
+
+      // Render Gulab Jamun SVG
+      var cx = 130, cy = 80;
+      var gjW = 90, gjR = 26;
+
+      var svgHtml = '<rect width="260" height="160" fill="#fdf2f8" rx="14"/>' +
+                    '<path d="M ' + (cx - gjW / 2) + ' ' + (cy - gjR) + ' A ' + gjR + ' ' + gjR + ' 0 0 0 ' + (cx - gjW / 2) + ' ' + (cy + gjR) + ' Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>' +
+                    '<rect x="' + (cx - gjW / 2) + '" y="' + (cy - gjR) + '" width="' + gjW + '" height="' + (2 * gjR) + '" fill="#92400e" stroke="#451a03" stroke-width="2"/>' +
+                    '<path d="M ' + (cx + gjW / 2) + ' ' + (cy - gjR) + ' A ' + gjR + ' ' + gjR + ' 0 0 1 ' + (cx + gjW / 2) + ' ' + (cy + gjR) + ' Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>' +
+                    '<text x="' + cx + '" y="' + (cy + 5) + '" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">गुलाब जामुन</text>' +
+                    '<text x="' + cx + '" y="' + (cy + gjR + 24) + '" font-size="14" font-weight="900" fill="#9f1239" text-anchor="middle">' + N + ' पीस • चाशनी: ' + pct + '%</text>';
+
+      document.getElementById('ch12_sim4_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 5: Water Displacement & Lead Shots
+    function updateSim5() {
+      var R = parseFloat(document.getElementById('ch12_sim5_R').value);
+      var H = parseFloat(document.getElementById('ch12_sim5_H').value);
+      var r = parseFloat(document.getElementById('ch12_sim5_r').value);
+      var frac = parseFloat(document.getElementById('ch12_sim5_frac').value);
+
+      document.getElementById('ch12_sim5_R_val').textContent = R + " cm";
+      document.getElementById('ch12_sim5_H_val').textContent = H + " cm";
+      document.getElementById('ch12_sim5_r_val').textContent = r + " cm";
+
+      var vCone = (1.0 / 3.0) * Math.PI * R * R * H;
+      var vOut = frac * vCone;
+      var vShot = (4.0 / 3.0) * Math.PI * r * r * r;
+      var n = Math.round(vOut / vShot);
+
+      document.getElementById('ch12_sim5_vcone').textContent = vCone.toFixed(2) + " cm³";
+      document.getElementById('ch12_sim5_vout').textContent = vOut.toFixed(2) + " cm³";
+      document.getElementById('ch12_sim5_nshots').textContent = n + " गोलियाँ";
+
+      // Render Inverted Cone SVG
+      var cx = 130, topY = 40, botY = 170, coneR = 65;
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + cx + ',' + botY + ' ' + (cx - coneR) + ',' + topY + ' ' + (cx + coneR) + ',' + topY + '" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>' +
+                    '<ellipse cx="' + cx + '" cy="' + topY + '" rx="' + coneR + '" ry="14" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>' +
+                    '<!-- Floating Lead Shots -->' +
+                    '<circle cx="' + (cx - 15) + '" cy="' + (topY + 40) + '" r="7" fill="#475569"/>' +
+                    '<circle cx="' + (cx + 10) + '" cy="' + (topY + 55) + '" r="7" fill="#475569"/>' +
+                    '<circle cx="' + (cx) + '" cy="' + (topY + 80) + '" r="7" fill="#475569"/>' +
+                    '<text x="' + cx + '" y="' + (botY + 25) + '" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">उल्टा शंकु • गोलियाँ: ' + n + '</text>';
+
+      document.getElementById('ch12_sim5_svg').innerHTML = svgHtml;
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSim1();
+      updateSim2();
+      updateSim3();
+      updateSim4();
+      updateSim5();
+    });
+  </script>
+</body>
+</html>

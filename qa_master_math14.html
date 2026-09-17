@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मास्टर प्रश्न-उत्तर: NCERT कक्षा 10 गणित अध्याय 14 - प्रायिकता (संपूर्ण 25 प्रश्न)</title>
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --bg-surface: #0f172a;
+      --border-color: #334155;
+      --text-main: #000000;
+      --accent-blue: #1d4ed8;
+      --accent-green: #047857;
+      --accent-orange: #c2410c;
+      --accent-purple: #7e22ce;
+      --accent-red: #b91c1c;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #cbd5e1;
+      padding: 30px 15px;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Devanagari', Arial, sans-serif;
+      color: #000000;
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      font-weight: 900 !important;
+      -webkit-font-smoothing: antialiased;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1350px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      border: 6px solid #94a3b8;
+    }
+
+    /* ACTION BAR - Natural flow at top so it scrolls up naturally */
+    .action-bar {
+      position: relative;
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 12px 18px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border: 2px solid #334155;
+    }
+    .action-btn {
+      background: #1e293b;
+      color: #ffffff !important;
+      border: 2px solid #475569;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 16pt !important;
+      font-weight: 900 !important;
+      cursor: pointer;
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .action-btn:hover { background: #3b82f6; border-color: #60a5fa; transform: translateY(-2px); }
+
+    /* TOP HEADER */
+    .top-header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border: 4px solid #38bdf8;
+      border-radius: 20px;
+      padding: 30px 40px;
+      margin-bottom: 35px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+    .top-header h1 {
+      font-size: 42pt !important;
+      font-weight: 900 !important;
+      color: #000000;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 10px;
+    }
+    .top-header .subtitle {
+      font-size: 28pt !important;
+      color: #fbbf24;
+      font-weight: 800 !important;
+    }
+
+    /* NAV BAR */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .btn-nav {
+      background: #1e293b;
+      color: #38bdf8;
+      border: 3px solid #38bdf8;
+      padding: 12px 28px;
+      border-radius: 14px;
+      font-size: 22pt;
+      font-weight: 900;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+    .btn-nav:hover { background: #38bdf8; color: #020617; transform: translateY(-2px); }
+
+    /* SECTION BANNER */
+    .section-banner {
+      background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 18px 30px;
+      border-radius: 16px;
+      font-size: 30pt !important;
+      font-weight: 900 !important;
+      margin: 40px 0 25px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      border-left: 12px solid #f59e0b;
+    }
+
+    /* QA CARD */
+    .qa-card {
+      background: #ffffff;
+      color: #000000;
+      border-radius: 20px;
+      padding: 35px 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+      border: 3px solid #cbd5e1;
+    }
+
+    /* QUESTION BOX */
+    .q-box {
+      background: #eff6ff;
+      border-left: 14px solid #2563eb;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-bottom: 25px;
+      font-size: 26pt !important;
+      font-weight: 900 !important;
+      color: #000000 !important;
+      -webkit-text-stroke: 1.1px #000000;
+      text-shadow: 0 0 1px #000;
+    }
+
+    .q-tag {
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 22pt;
+      padding: 4px 16px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: 900;
+      -webkit-text-stroke: 0px;
+    }
+
+    .ans-box {
+      font-size: 26pt !important;
+      font-weight: 900 !important;
+      color: #000000;
+      line-height: 2.2 !important;
+      -webkit-text-stroke: 1.1px #000000;
+      text-shadow: 0 0 1px #000;
+    }
+
+    .step-line {
+      margin-bottom: 18px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border-left: 8px solid #94a3b8;
+    }
+
+    /* FRACTION LINE 8PX SOLID DARK GREEN */
+    mjx-line, mjx-frac mjx-line, .mjx-line {
+      border-top-width: 8px !important;
+      border-top-style: solid !important;
+      border-top-color: #047857 !important;
+      opacity: 1 !important;
+    }
+
+    /* FINAL ANSWER BOX */
+    .final-ans {
+      background: #fef08a !important;
+      border: 5px solid #15803d !important;
+      border-left: 20px solid #15803d !important;
+      border-radius: 16px;
+      padding: 22px 30px;
+      margin-top: 25px;
+      font-size: 28pt !important;
+      font-weight: 900 !important;
+      color: #064e3b !important;
+      -webkit-text-stroke: 1.2px #064e3b;
+    }
+
+    /* BADGES */
+    .badge-blue { background-color: #1d4ed8; color: #ffffff !important; padding: 4px 14px; border-radius: 8px; font-weight: 900; -webkit-text-stroke: 0px; font-size: 20pt; }
+    .badge-orange { background-color: #c2410c; color: #ffffff !important; padding: 4px 14px; border-radius: 8px; font-weight: 900; -webkit-text-stroke: 0px; font-size: 20pt; }
+    .badge-purple { background-color: #7e22ce; color: #ffffff !important; padding: 4px 14px; border-radius: 8px; font-weight: 900; -webkit-text-stroke: 0px; font-size: 20pt; }
+    .badge-green { background-color: #047857; color: #ffffff !important; padding: 4px 14px; border-radius: 8px; font-weight: 900; -webkit-text-stroke: 0px; font-size: 20pt; }
+    .badge-red { background-color: #b91c1c; color: #ffffff !important; padding: 4px 14px; border-radius: 8px; font-weight: 900; -webkit-text-stroke: 0px; font-size: 20pt; }
+
+    /* RESPONSIVE TABLE WRAPPER */
+    .table-responsive-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 3px solid #cbd5e1;
+      background: #ffffff;
+    }
+    table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 22pt !important;
+    }
+    th, td {
+      border: 2px solid #94a3b8;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    th {
+      background-color: #1e3a8a;
+      color: #ffffff !important;
+      -webkit-text-stroke: 0px !important;
+      font-size: 22pt !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- TOP ACTION BAR: In natural flow so it scrolls up naturally -->
+    <div class="action-bar">
+      <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="पेज के शीर्ष पर जाएं"><i class="fas fa-arrow-up"></i> शीर्ष पर जाएं</button>
+      <button class="action-btn" onclick="document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) + 2) + 'px'" title="फ़ॉन्ट बढ़ाएं">A+</button>
+      <button class="action-btn" onclick="document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) - 2) + 'px'" title="फ़ॉन्ट घटाएं">A-</button>
+      <button class="action-btn" onclick="window.print()" title="प्रिंट करें"><i class="fas fa-print"></i> प्रिंट</button>
+      <a href="math10.html" class="action-btn" title="गणित मुख्य पोर्टल"><i class="fas fa-th-large"></i> गणित पोर्टल</a>
+      <a href="index.html" class="action-btn" title="होम"><i class="fas fa-home"></i> होम</a>
+    </div>
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+      <h1>NCERT कक्षा 10 गणित — अध्याय 14</h1>
+      <div class="subtitle">प्रायिकता (Probability) • ताश, पासा, सिक्का एवं संपूर्ण 25 प्रश्नों का मास्टर हल</div>
+    </div>
+
+    <!-- NAV BAR -->
+    <div class="nav-bar">
+      <a href="qa_master_math13.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 13)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math1.html" class="btn-nav">प्रथम अध्याय (Ch 1) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- CARDS & PROBABILITY MASTER CARD WITH SVG -->
+    <div class="qa-card" style="border: 4px solid #1e3a8a;">
+      <div style="font-size: 30pt; color: #1e3a8a; font-weight: 900; margin-bottom: 15px;">
+        📐 अध्याय 14: प्रायिकता के आधारभूत नियम एवं ताश के 52 पत्तों की संरचना
+      </div>
+      <div class="step-line"><span class="badge-blue">1. प्रायिकता सूत्र:</span> प्रायिकता $P(E) =$ (अनुकूल परिणामों की संख्या) / (कुल संभव परिणाम) $= \frac{n(E)}{n(S)}$</div>
+      <div class="step-line"><span class="badge-orange">2. सीमा एवं पूरक घटना:</span> $0 \le P(E) \le 1$ तथा घटना $E$ नहीं की प्रायिकता $P(\bar{E}) = 1 - P(E)$</div>
+      <div class="step-line"><span class="badge-purple">3. ताश के 52 पत्तों का संपूर्ण वर्गीकरण:</span><br>
+        • कुल पत्ते $= 52$ : लाल रंग के पत्ते $= 26$ (पान ♥ 13 $+$ ईंट ♦ 13) तथा काले रंग के पत्ते $= 26$ (हुकुम ♠ 13 $+$ चिड़ी ♣ 13)<br>
+        • फेस कार्ड (तस्वीर वाले पत्ते) $= 12$ (4 बादशाह $+ 4$ बेगम $+ 4$ गुलाम)<br>
+        • इक्के $= 4$ (2 लाल इक्के $+ 2$ काले इक्के)
+      </div>
+
+      <!-- Projector SVG for Probability Events with Dark Grid -->
+      <div style="margin-top: 25px; text-align: center;">
+        <svg viewBox="0 0 540 190" style="max-width: 580px; width: 100%; height: auto; background: #ffffff; border: 4px solid #1e3a8a; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+          <defs>
+            <pattern id="grid_ch14" width="30" height="30" patternUnits="userSpaceOnUse">
+              <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="2"/>
+            </pattern>
+          </defs>
+          <rect width="540" height="190" fill="#f8fafc"/>
+          <rect width="540" height="190" fill="url(#grid_ch14)"/>
+
+          <!-- 4 Suits Badges -->
+          <!-- Heart (Red) -->
+          <rect x="30" y="30" width="105" height="130" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/>
+          <text x="82" y="85" font-size="42" fill="#dc2626" text-anchor="middle">♥</text>
+          <text x="82" y="125" font-size="20" font-weight="900" fill="#dc2626" text-anchor="middle">पान (13)</text>
+          <text x="82" y="148" font-size="16" font-weight="800" fill="#991b1b" text-anchor="middle">लाल रंग</text>
+
+          <!-- Diamond (Red) -->
+          <rect x="155" y="30" width="105" height="130" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/>
+          <text x="207" y="85" font-size="42" fill="#dc2626" text-anchor="middle">♦</text>
+          <text x="207" y="125" font-size="20" font-weight="900" fill="#dc2626" text-anchor="middle">ईंट (13)</text>
+          <text x="207" y="148" font-size="16" font-weight="800" fill="#991b1b" text-anchor="middle">लाल रंग</text>
+
+          <!-- Spade (Black) -->
+          <rect x="280" y="30" width="105" height="130" rx="12" fill="#f1f5f9" stroke="#000000" stroke-width="4"/>
+          <text x="332" y="85" font-size="42" fill="#000000" text-anchor="middle">♠</text>
+          <text x="332" y="125" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">हुकुम (13)</text>
+          <text x="332" y="148" font-size="16" font-weight="800" fill="#334155" text-anchor="middle">काला रंग</text>
+
+          <!-- Club (Black) -->
+          <rect x="405" y="30" width="105" height="130" rx="12" fill="#f1f5f9" stroke="#000000" stroke-width="4"/>
+          <text x="457" y="85" font-size="42" fill="#000000" text-anchor="middle">♣</text>
+          <text x="457" y="125" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">चिड़ी (13)</text>
+          <text x="457" y="148" font-size="16" font-weight="800" fill="#334155" text-anchor="middle">काला रंग</text>
+        </svg>
+      </div>
+    </div>
+
+    
+    
+
+    <div class="section-banner">
+      <i class="fas fa-dice"></i> प्रश्नावली 14.1: संपूर्ण 25 प्रश्न (विस्तृत चरणबद्ध हल)
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 1 व 2</span> रिक्त स्थान एवं समप्रायिक परिणाम (Equally Likely Outcomes):
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 1 (रिक्त स्थान भरिए):</span><br>
+          (i) घटना $E$ की प्रायिकता $+$ घटना '$E$ नहीं' की प्रायिकता $= \mathbf{1}$ है।<br>
+          (ii) उस घटना की प्रायिकता जो घटित नहीं हो सकती $\mathbf{0}$ है। ऐसी घटना <strong>असंभव घटना (Impossible Event)</strong> कहलाती है।<br>
+          (iii) उस घटना की प्रायिकता जिसका घटित होना निश्चित है $\mathbf{1}$ है। ऐसी घटना <strong>निश्चित या अवश्यंभावी घटना (Sure Event)</strong> कहलाती है।<br>
+          (iv) किसी प्रयोग की सभी प्रारंभिक घटनाओं की प्रायिकताओं का योग $\mathbf{1}$ है।<br>
+          (v) किसी घटना की प्रायिकता $\mathbf{0}$ से बड़ी या उसके बराबर होती है तथा $\mathbf{1}$ से छोटी या उसके बराबर होती है ($0 \le P(E) \le 1$)।
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 2 (समप्रायिक परिणाम स्पष्टीकरण):</span><br>
+          (i) एक ड्राइवर कार चलाने का प्रयत्न करता है। कार चलना प्रारंभ हो जाती है या कार चलना प्रारंभ नहीं होती है:<br>
+          <strong>उत्तर: समप्रायिक नहीं है</strong> (क्योंकि यह कार की यांत्रिक स्थिति, पेट्रोल आदि पर निर्भर करता है)।<br>
+          (ii) एक खिलाड़ी बास्केटबॉल को बास्केट में डालने का प्रयत्न करती है। वह बास्केट में बॉल डाल पाती है या नहीं:<br>
+          <strong>उत्तर: समप्रायिक नहीं है</strong> (क्योंकि यह खिलाड़ी के व्यक्तिगत कौशल व अभ्यास पर निर्भर करता है)।<br>
+          (iii) एक सत्य-असत्य प्रश्न का अनुमान लगाया जाता है। उत्तर सही है या गलत होगा:<br>
+          <strong>उत्तर: समप्रायिक है</strong> (क्योंकि केवल दो ही निश्चित विकल्प हैं और प्रत्येक के चयन की संभावना समान $1/2$ है)।<br>
+          (iv) एक नवजात शिशु का जन्म होता है। वह एक लड़का है या एक लड़की है:<br>
+          <strong>उत्तर: समप्रायिक है</strong> (क्योंकि लड़का या लड़की होने की संभावना स्वाभाविक रूप से समान $1/2$ है)।
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 3 व 4</span> सिक्का उछालने का औचित्य एवं प्रायिकता की सीमा:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 3: फुटबॉल खेल में सिक्का उछालना न्यायसंगत विधि क्यों माना जाता है?</span><br>
+          <strong>कारण:</strong> जब एक निष्पक्ष सिक्के को उछाला जाता है, तो केवल दो ही परिणाम संभव होते हैं: <strong>चित (Head)</strong> या <strong>पट (Tail)</strong>।<br>
+          दोनों परिणामों के आने की संभावना पूर्णतः समान ($1/2$) होती है, अर्थात् ये समप्रायिक (Equally likely) हैं। सिक्का उछालने से पहले यह भविष्यवाणी नहीं की जा सकती कि कौन-सा पहलू ऊपर आएगा। अतः यह पूर्णतः निष्पक्ष व अनभिनत (Unbiased) निर्णय है।
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 4: निम्नलिखित में से कौन-सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?</span><br>
+          (A) $\frac{2}{3}$ &nbsp;&nbsp;&nbsp; (B) $-1.5$ &nbsp;&nbsp;&nbsp; (C) $15\%$ &nbsp;&nbsp;&nbsp; (D) $0.7$<br>
+          <strong>उत्तर: विकल्प (B) $-1.5$</strong><br>
+          <strong>कारण:</strong> हम जानते हैं कि किसी भी घटना की प्रायिकता सदैव $0$ और $1$ के बीच होती है ($0 \le P(E) \le 1$)। प्रायिकता कभी भी ऋणात्मक (Negative) नहीं हो सकती, अतः $-1.5$ किसी घटना की प्रायिकता नहीं हो सकती।
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 3: समप्रायिक व निष्पक्ष परिणाम; &nbsp;&nbsp; प्रश्न 4: विकल्प (B) $-1.5$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 5 से 8</span> पूरक घटना, गोलियां, जन्मदिन एवं थैले में गेंदें:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 5: यदि $P(E) = 0.05$ है, तो '$E$ नहीं' की प्रायिकता क्या है?</span><br>
+          सूत्र: $P(\bar{E}) = 1 - P(E)$<br>
+          $P(\bar{E}) = 1 - 0.05 = \mathbf{0.95}$
+        </div>
+
+        <!-- INTERACTIVE SIMULATOR 1 (प्रश्नोत्तर विशेष): पूरक घटना कैलकुलेटर -->
+        <div style="background: #fdf2f8; border: 4px solid #db2777; border-radius: 14px; padding: 20px; margin: 18px 0; box-shadow: 0 4px 12px rgba(219,39,119,0.15);">
+          <div style="font-size: 24pt; color: #9d174d; font-weight: 900; margin-bottom: 10px;">
+            🎮 लाइव सिमुलेटर (प्रश्न 5 व 7 विशेष): पूरक घटना कैलकुलेटर $P(E) + P(\bar{E}) = 1$
+          </div>
+          <p style="font-size: 20pt; color: #0f172a; margin-bottom: 12px; font-weight: 800;">
+            स्लाइडर को खिसकाकर $P(E)$ का मान बदलें (जैसे प्रश्न 5 में $0.05$ या प्रश्न 7 में $0.992$) और '$E$ नहीं' $P(\bar{E})$ लाइव देखें:
+          </p>
+          <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 2px solid #cbd5e1; margin-bottom: 12px;">
+            <label style="font-size: 22pt; font-weight: 900; color: #0f172a;">
+              घटना $P(E)$ का मान: <span id="peValText" style="color: #1d4ed8; font-size: 26pt; font-weight: 900;">0.05</span>
+            </label><br>
+            <input type="range" min="0" max="1" step="0.01" value="0.05" id="peSlider" oninput="updateComplementarySim(this.value)" style="width: 100%; max-width: 550px; height: 16px; margin-top: 10px; cursor: pointer;">
+          </div>
+          <div style="background: #ffffff; border: 3px solid #db2777; border-radius: 10px; padding: 14px 20px; font-size: 22pt; font-weight: 900; color: #0f172a; line-height: 1.8;">
+            • घटना $P(E) =$ <span id="resPE" style="color: #1d4ed8;">0.05</span><br>
+            • पूरक घटना $P(\bar{E}) = 1 - P(E) = 1 -$ <span id="resSubPE">0.05</span> = <strong id="resNotPE" style="color: #047857; font-size: 26pt;">0.95</strong><br>
+            • दोनों का कुल योग $= P(E) + P(\bar{E}) =$ <span id="resSum" style="color: #b91c1c;">1.00</span> (सदैव निश्चित)
+          </div>
+        </div>
+
+
+        
+
+        <div class="step-line"><span class="badge-orange">प्रश्न 6: एक थैले में केवल नींबू की महक वाली मीठी गोलियाँ हैं:</span><br>
+          (i) संतरे की महक वाली गोली निकालना:<br>
+          थैले में संतरे की कोई गोली नहीं है। यह एक <strong>असंभव घटना</strong> है $\implies P = \mathbf{0}$<br>
+          (ii) नींबू की महक वाली गोली निकालना:<br>
+          थैले में सभी गोलियाँ नींबू की महक वाली हैं। यह एक <strong>निश्चित घटना</strong> है $\implies P = \mathbf{1}$
+        </div>
+        <div class="step-line"><span class="badge-purple">प्रश्न 7: 3 विद्यार्थियों में से 2 के जन्मदिन एक ही दिन न होने की प्रायिकता $0.992$ है:</span><br>
+          जन्मदिन एक ही दिन होने की प्रायिकता $= 1 - 0.992 = \mathbf{0.008}$
+        </div>
+        <div class="step-line"><span class="badge-green">प्रश्न 8: थैले में 3 लाल और 5 काली गेंदें हैं (कुल गेंदें $= 3 + 5 = 8$):</span><br>
+          (i) गेंद लाल हो: लाल गेंदों की संख्या $= 3 \implies P = \frac{3}{8}$<br>
+          (ii) गेंद लाल नहीं हो: काली गेंदों की संख्या $= 5 \implies P = 1 - \frac{3}{8} = \frac{5}{8}$
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 5 $= 0.95$; &nbsp;&nbsp; प्रश्न 6: (i) $0$, (ii) $1$; &nbsp;&nbsp; प्रश्न 7 $= 0.008$; &nbsp;&nbsp; प्रश्न 8: (i) $\frac{3}{8}$, (ii) $\frac{5}{8}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 9 से 12</span> कंचे, पिग्गी बैंक, मछलीघर एवं संयोग का खेल:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 9: 5 लाल, 8 सफेद और 4 हरे कंचे (कुल कंचे $= 5 + 8 + 4 = 17$):</span><br>
+          (i) निकाला गया कंचा लाल है: लाल कंचे की प्रायिकता $P = \frac{5}{17}$<br>
+          (ii) निकाला गया कंचा सफेद है: सफेद कंचे की प्रायिकता $P = \frac{8}{17}$<br>
+          (iii) निकाला गया कंचा हरा नहीं है: लाल $+$ सफेद $= 5 + 8 = 13 \implies P = \frac{13}{17}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 10: पिग्गी बैंक (50 पैसे के 100, ₹ 1 के 50, ₹ 2 के 20, ₹ 5 के 10 सिक्के):</span><br>
+          कुल सिक्कों की संख्या $= 100 + 50 + 20 + 10 = 180$<br>
+          (i) सिक्का 50 पैसे का होगा: $P = \frac{100}{180} = \frac{5}{9}$<br>
+          (ii) सिक्का ₹ 5 का नहीं होगा: ₹ 5 को छोड़कर शेष सिक्के $= 180 - 10 = 170 \implies P = \frac{170}{180} = \frac{17}{18}$
+        </div>
+        <div class="step-line"><span class="badge-purple">प्रश्न 11: गोपी के जल-जीव कुंड में 5 नर मछली और 8 मादा मछली हैं (कुल $= 5 + 8 = 13$):</span><br>
+          नर मछली निकलने की प्रायिकता $P = \frac{5}{13}$
+        </div>
+        <div class="step-line"><span class="badge-green">प्रश्न 12: संयोग के खेल में एक पहिए पर 1 से 8 तक संख्याएँ अंकित हैं (कुल परिणाम $= 8$):</span><br>
+          (i) तीर 8 को इंगित करेगा: अनुकूल परिणाम $= 1 \implies P = \frac{1}{8}$<br>
+          (ii) एक विषम संख्या को करेगा: विषम संख्याएँ $\{1, 3, 5, 7\}$ (कुल 4) $\implies P = \frac{4}{8} = \frac{1}{2}$<br>
+          (iii) 2 से बड़ी संख्या को करेगा: संख्याएँ $\{3, 4, 5, 6, 7, 8\}$ (कुल 6) $\implies P = \frac{6}{8} = \frac{3}{4}$<br>
+          (iv) 9 से छोटी संख्या को करेगा: सभी संख्याएँ $\{1, 2, 3, 4, 5, 6, 7, 8\}$ (कुल 8) $\implies P = \frac{8}{8} = 1$
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 9: (i) $\frac{5}{17}$, (ii) $\frac{8}{17}$, (iii) $\frac{13}{17}$; &nbsp;&nbsp; प्रश्न 10: (i) $\frac{5}{9}$, (ii) $\frac{17}{18}$; &nbsp;&nbsp; प्रश्न 11: $\frac{5}{13}$; &nbsp;&nbsp; प्रश्न 12: (i) $\frac{1}{8}$, (ii) $\frac{1}{2}$, (iii) $\frac{3}{4}$, (iv) $1$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 13 व 14</span> एक पासा एवं ताश के 52 पत्तों का विस्तृत हल:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 13: एक पासे को एक बार फेंकने पर (कुल परिणाम $S = \{1, 2, 3, 4, 5, 6\}$, कुल $= 6$):</span><br>
+          (i) एक अभाज्य संख्या: $\{2, 3, 5\}$ (कुल 3 संख्याएँ) $\implies P = \frac{3}{6} = \frac{1}{2}$<br>
+          (ii) 2 और 6 के बीच स्थित संख्या: $\{3, 4, 5\}$ (कुल 3 संख्याएँ) $\implies P = \frac{3}{6} = \frac{1}{2}$<br>
+          (iii) एक विषम संख्या: $\{1, 3, 5\}$ (कुल 3 संख्याएँ) $\implies P = \frac{3}{6} = \frac{1}{2}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 14: 52 पत्तों की अच्छी तरह फेंटी गई गड्डी (कुल पत्ते $= 52$):</span><br>
+          (i) लाल रंग का बादशाह: पान का बादशाह $+$ ईंट का बादशाह $= 2 \implies P = \frac{2}{52} = \frac{1}{26}$<br>
+          (ii) एक फेस कार्ड (तस्वीर वाला पत्ता): कुल 12 (4 गुलाम $+ 4$ बेगम $+ 4$ बादशाह) $\implies P = \frac{12}{52} = \frac{3}{13}$<br>
+          (iii) लाल रंग का तस्वीर वाला पत्ता: 6 (3 पान के $+ 3$ ईंट के) $\implies P = \frac{6}{52} = \frac{3}{26}$<br>
+          (iv) पान का गुलाम: केवल 1 पत्ता $\implies P = \frac{1}{52}$<br>
+          (v) हुकुम का पत्ता: कुल 13 पत्ते $\implies P = \frac{13}{52} = \frac{1}{4}$<br>
+          (vi) एक ईंट की बेगम: केवल 1 पत्ता $\implies P = \frac{1}{52}$
+        </div>
+
+        <!-- INTERACTIVE SIMULATOR 2 (प्रश्नोत्तर विशेष): ताश के 52 पत्ते लाइव एक्सप्लोरर -->
+        <div style="background: #f8fafc; border: 4px solid #1e3a8a; border-radius: 16px; padding: 22px; margin: 22px 0; box-shadow: 0 6px 18px rgba(30,58,138,0.15);">
+          <div style="font-size: 24pt; color: #1e3a8a; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+            🃏 लाइव सिमुलेटर (प्रश्न 14 व 15 विशेष): ताश के 52 पत्तों का संपूर्ण एक्सप्लोरर
+          </div>
+          <p style="font-size: 20pt; color: #0f172a; margin-bottom: 14px; font-weight: 800;">
+            नीचे प्रश्न 14 के प्रत्येक भाग पर क्लिक करें ताकि अनुकूल पत्ते हाइलाइट हों और प्रायिकता $P(E) = \frac{n(E)}{52}$ तुरंत लाइव परिकलित हो:
+          </p>
+
+          <!-- Filter Chips -->
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
+            <button onclick="filterCards('all')" class="card-filter-btn" style="background:#334155; color:#ffffff !important; border:2px solid #1e293b; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">सभी 52 पत्ते (52)</button>
+            <button onclick="filterCards('king_red')" class="card-filter-btn" style="background:#b91c1c; color:#ffffff !important; border:2px solid #7f1d1d; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(i) लाल रंग का बादशाह (2)</button>
+            <button onclick="filterCards('face')" class="card-filter-btn" style="background:#7e22ce; color:#ffffff !important; border:2px solid #581c87; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(ii) फेस कार्ड (12)</button>
+            <button onclick="filterCards('red_face')" class="card-filter-btn" style="background:#991b1b; color:#ffffff !important; border:2px solid #7f1d1d; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(iii) लाल फेस कार्ड (6)</button>
+            <button onclick="filterCards('jack_heart')" class="card-filter-btn" style="background:#b91c1c; color:#ffffff !important; border:2px solid #7f1d1d; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(iv) पान का गुलाम (1)</button>
+            <button onclick="filterCards('spade')" class="card-filter-btn" style="background:#0f172a; color:#ffffff !important; border:2px solid #000000; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(v) हुकुम का पत्ता (13)</button>
+            <button onclick="filterCards('queen_diamond')" class="card-filter-btn" style="background:#b91c1c; color:#ffffff !important; border:2px solid #7f1d1d; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">(vi) ईंट की बेगम (1)</button>
+            <button onclick="filterCards('q15')" class="card-filter-btn" style="background:#c2410c; color:#ffffff !important; border:2px solid #9a3412; padding:8px 14px; border-radius:8px; font-size:16pt; font-weight:900; cursor:pointer;">प्रश्न 15: ईंट के 5 पत्ते (10, J, Q, K, A)</button>
+          </div>
+
+          <!-- Live Probability Output Banner -->
+          <div id="cardProbBanner" style="background:#eff6ff; border:3px solid #2563eb; border-radius:10px; padding:14px 20px; margin-bottom:15px; font-size:22pt; font-weight:900; color:#1e3a8a;">
+            चयनित घटना: सभी 52 पत्ते | अनुकूल पत्ते n(E) = 52 / कुल = 52 &implies; प्रायिकता P(E) = 52/52 = 1
+          </div>
+
+          <!-- Draw Random Card Action -->
+          <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:15px;">
+            <button onclick="drawRandomCard()" style="background:#2563eb; color:#ffffff !important; border:3px solid #1d4ed8; padding:10px 20px; border-radius:10px; font-size:18pt; font-weight:900; cursor:pointer;">
+              🎲 एक पत्ता यादृच्छया निकालें (Draw Card)
+            </button>
+            <div id="drawnCardDisplay" style="font-size:22pt; font-weight:900; color:#0f172a; background:#ffffff; padding:8px 16px; border-radius:8px; border:2px solid #94a3b8;">
+              क्लिक करके पत्ता निकालें...
+            </div>
+          </div>
+
+          <!-- Visual Mini-Deck Grid (52 mini cards) -->
+          <div id="deckGridContainer" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(72px, 1fr)); gap:6px; max-height:360px; overflow-y:auto; padding:12px; background:#e2e8f0; border-radius:10px; border:2px solid #94a3b8;">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="final-ans">
+          उत्तर: प्रश्न 13: सभी भागों का उत्तर $\frac{1}{2}$; &nbsp;&nbsp; प्रश्न 14: (i) $\frac{1}{26}$, (ii) $\frac{3}{13}$, (iii) $\frac{3}{26}$, (iv) $\frac{1}{52}$, (v) $\frac{1}{4}$, (vi) $\frac{1}{52}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 15 व 16</span> 5 विशिष्ट पत्ते एवं खराब व अच्छे पेन:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 15: ताश के 5 पत्ते (ईंट का दहला, गुलाम, बेगम, बादशाह और इक्का):</span><br>
+          यहाँ कुल पत्ते $= 5$<br>
+          (i) पत्ता एक बेगम है: बेगम की संख्या $= 1 \implies P = \frac{1}{5}$<br>
+          (ii) यदि बेगम निकल आती है और उसे अलग रख दिया जाता है, तो अब शेष पत्ते $= 5 - 1 = 4$ रह जाते हैं:<br>
+          (a) एक इक्का है: इक्के की संख्या $= 1 \implies P = \frac{1}{4}$<br>
+          (b) एक बेगम है: अब शेष 4 पत्तों में कोई बेगम नहीं है (अनुकूल $= 0$) $\implies P = \frac{0}{4} = \mathbf{0}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 16: 12 खराब पेन 132 अच्छे पेनों में मिल गए हैं:</span><br>
+          कुल पेनों की संख्या $= 12 + 132 = 144$<br>
+          निकाले गए पेन के अच्छा होने की प्रायिकता:<br>
+          $P = \frac{132}{144} = \frac{132 \div 12}{144 \div 12} = \mathbf{\frac{11}{12}}$
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 15: (i) $\frac{1}{5}$, (ii)(a) $\frac{1}{4}$, (ii)(b) $0$; &nbsp;&nbsp; प्रश्न 16: $\frac{11}{12}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 17 व 18</span> बल्बों का परीक्षण एवं 1 से 90 तक अंकित 90 डिस्क:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 17: 20 बल्बों के समूह में 4 बल्ब खराब हैं:</span><br>
+          (i) एक बल्ब यादृच्छया निकाला जाता है। बल्ब खराब होने की प्रायिकता:<br>
+          कुल बल्ब $= 20$, खराब बल्ब $= 4 \implies P = \frac{4}{20} = \frac{1}{5}$<br>
+          (ii) निकाला गया बल्ब खराब नहीं है (अर्थात् अच्छा है) और उसे दोबारा समूह में नहीं मिलाया जाता:<br>
+          अब शेष कुल बल्ब $= 20 - 1 = 19$<br>
+          शेष अच्छे बल्ब $= 16 - 1 = 15$<br>
+          निकाले गए बल्ब के खराब न होने की प्रायिकता $P = \frac{15}{19}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 18: एक पेटी में 90 डिस्क हैं, जिन पर 1 से 90 तक संख्याएँ अंकित हैं (कुल $= 90$):</span><br>
+          (i) दो अंकों की एक संख्या: 10 से 90 तक कुल संख्याएँ $= 90 - 9 = 81 \implies P = \frac{81}{90} = \frac{9}{10}$<br>
+          (ii) एक पूर्ण वर्ग संख्या: $\{1, 4, 9, 16, 25, 36, 49, 64, 81\}$ (कुल 9 संख्याएँ) $\implies P = \frac{9}{90} = \frac{1}{10}$<br>
+          (iii) 5 से विभाज्य एक संख्या: $\{5, 10, 15, 20, \dots, 90\}$ (कुल 18 संख्याएँ) $\implies P = \frac{18}{90} = \frac{1}{5}$
+        </div>
+
+        <!-- INTERACTIVE SIMULATOR 3 (प्रश्नोत्तर विशेष): 90 डिस्क संख्या फिल्टर -->
+        <div style="background: #f8fafc; border: 4px solid #7c3aed; border-radius: 16px; padding: 22px; margin: 22px 0; box-shadow: 0 6px 18px rgba(124,58,237,0.15);">
+          <div style="font-size: 24pt; color: #581c87; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+            🎯 लाइव सिमुलेटर (प्रश्न 18 विशेष): 1 से 90 डिस्क लाइव संख्या फिल्टर
+          </div>
+          <p style="font-size: 20pt; color: #0f172a; margin-bottom: 12px; font-weight: 800;">
+            प्रश्न 18 के किसी भी भाग पर क्लिक करके अनुकूल डिस्क देखें और प्रायिकता $P = \frac{n(E)}{90}$ लाइव परिकलित करें:
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+            <button onclick="filterDiscs('all')" class="disc-btn" style="background:#334155; color:#ffffff !important; border:2px solid #1e293b; padding:8px 14px; border-radius:6px; font-size:16pt; font-weight:900; cursor:pointer;">सभी 90 डिस्क (90)</button>
+            <button onclick="filterDiscs('two_digit')" class="disc-btn" style="background:#1d4ed8; color:#ffffff !important; border:2px solid #1e40af; padding:8px 14px; border-radius:6px; font-size:16pt; font-weight:900; cursor:pointer;">(i) दो अंकों की संख्या (81)</button>
+            <button onclick="filterDiscs('perfect_square')" class="disc-btn" style="background:#047857; color:#ffffff !important; border:2px solid #065f46; padding:8px 14px; border-radius:6px; font-size:16pt; font-weight:900; cursor:pointer;">(ii) पूर्ण वर्ग संख्या {1..81} (9)</button>
+            <button onclick="filterDiscs('div_5')" class="disc-btn" style="background:#c2410c; color:#ffffff !important; border:2px solid #9a3412; padding:8px 14px; border-radius:6px; font-size:16pt; font-weight:900; cursor:pointer;">(iii) 5 से विभाज्य {5..90} (18)</button>
+            <button onclick="drawRandomDisc()" style="background:#7e22ce; color:#ffffff !important; border:2px solid #581c87; padding:8px 16px; border-radius:6px; font-size:16pt; font-weight:900; cursor:pointer;">🎲 यादृच्छिक डिस्क निकालें</button>
+          </div>
+          <div id="discBanner" style="background:#faf5ff; border:3px solid #7c3aed; border-radius:10px; padding:12px 18px; margin-bottom:14px; font-size:22pt; font-weight:900; color:#581c87;">
+            डिस्क 1 से 90 | चयनित: सभी 90 &implies; प्रायिकता P = 90/90 = 1
+          </div>
+          <div id="discsContainer" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(46px, 1fr)); gap:6px; max-height:240px; overflow-y:auto; background:#e2e8f0; padding:12px; border-radius:10px; border:2px solid #94a3b8;">
+            <!-- Populated 1 to 90 -->
+          </div>
+        </div>
+
+
+        
+
+        <div class="final-ans">
+          उत्तर: प्रश्न 17: (i) $\frac{1}{5}$, (ii) $\frac{15}{19}$; &nbsp;&nbsp; प्रश्न 18: (i) $\frac{9}{10}$, (ii) $\frac{1}{10}$, (iii) $\frac{1}{5}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 19 व 20</span> अक्षरों वाला पासा एवं आयताकार क्षेत्र में वृत्त पर पासा गिरना:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 19: पासे के फलकों पर अंकित अक्षर $[A, B, C, D, E, A]$ (कुल फलक $= 6$):</span><br>
+          (i) अक्षर $A$ प्राप्त हो: $A$ दो फलकों पर अंकित है (अनुकूल $= 2$) $\implies P = \frac{2}{6} = \frac{1}{3}$<br>
+          (ii) अक्षर $D$ प्राप्त हो: $D$ केवल एक फलक पर अंकित है (अनुकूल $= 1$) $\implies P = \frac{1}{6}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 20: आयताकार क्षेत्र ($3\text{ m} \times 2\text{ m}$) में $1\text{ m}$ व्यास वाले वृत्त के अंदर पासा गिरना:</span><br>
+          संपूर्ण आयताकार क्षेत्र का क्षेत्रफल = लंबाई $\times$ चौड़ाई $= 3\text{ m} \times 2\text{ m} = 6\text{ m}^2$<br>
+          वृत्त का व्यास $d = 1\text{ m} \implies$ त्रिज्या $r = \frac{1}{2}\text{ m}$<br>
+          वृत्ताकार क्षेत्र का क्षेत्रफल $= \pi r^2 = \pi \left(\frac{1}{2}\right)^2 = \frac{\pi}{4}\text{ m}^2$<br>
+          पासे के वृत्त के अंदर गिरने की प्रायिकता:<br>
+          $P = \frac{\frac{\pi}{4}}{6} = \frac{\pi}{4 \times 6} = \mathbf{\frac{\pi}{24}}$
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 19: (i) $\frac{1}{3}$, (ii) $\frac{1}{6}$; &nbsp;&nbsp; प्रश्न 20: प्रायिकता $= \frac{\pi}{24}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 21 व 22</span> बॉलपेन का चयन एवं दो पासों के योग की संपूर्ण सारणी:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 21: 144 बॉलपेनों के समूह में 20 पेन खराब हैं:</span><br>
+          कुल पेन $= 144$, खराब पेन $= 20$, अच्छे पेन $= 144 - 20 = 124$<br>
+          (i) नूरी वह पेन खरीदेगी (यदि वह अच्छा हो): $P = \frac{124}{144} = \frac{31}{36}$<br>
+          (ii) नूरी वह पेन नहीं खरीदेगी (यदि वह खराब हो): $P = \frac{20}{144} = \frac{5}{36}$
+        </div>
+        <div class="step-line"><span class="badge-orange">प्रश्न 22 (i): दो पासों को एक साथ फेंकने पर दोनों पासों की संख्याओं के योग की सारणी:</span><br>
+          दो पासों को फेंकने पर कुल संभव परिणाम $= 6 \times 6 = 36$ होते हैं।<br>
+          
+          <div class="table-responsive-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>घटना: संख्याओं का योग</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>9</th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: 900; background: #eff6ff;">प्रायिकता $P$</td>
+                  <td>$\frac{1}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{2}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{3}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{4}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{5}{36}$</td>
+                  <td style="color: #b91c1c; font-weight: 900;">$\frac{6}{36}$</td>
+                  <td>$\frac{5}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{4}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{3}{36}$</td>
+                  <td style="color: #1d4ed8; font-weight: 900;">$\frac{2}{36}$</td>
+                  <td>$\frac{1}{36}$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        <!-- INTERACTIVE SIMULATOR 4 (प्रश्नोत्तर विशेष): दो पासों की 36 परिणामों की संपूर्ण मैट्रिक्स -->
+        <div style="background: #f8fafc; border: 4px solid #047857; border-radius: 16px; padding: 22px; margin: 22px 0; box-shadow: 0 6px 18px rgba(4,120,87,0.15);">
+          <div style="font-size: 24pt; color: #065f46; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+            🎲 लाइव सिमुलेटर (प्रश्न 22 व 24 विशेष): दो पासों की 36 परिणामों की संपूर्ण मैट्रिक्स
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;">
+            <button onclick="rollTwoDice()" style="background:#047857; color:#ffffff !important; border:3px solid #065f46; padding:10px 20px; border-radius:10px; font-size:18pt; font-weight:900; cursor:pointer;">
+              🎲 दो पासे रोल करें
+            </button>
+            <div id="diceRollResult" style="font-size:22pt; font-weight:900; color:#064e3b; background:#ecfdf5; border:2px solid #047857; padding:8px 16px; border-radius:8px;">
+              पासा 1: ? | पासा 2: ? | योग = ?
+            </div>
+          </div>
+
+          <p style="font-size: 20pt; color: #0f172a; margin-bottom: 10px; font-weight: 800;">
+            प्रश्न 22 की सारणी के किसी भी योग पर क्लिक करके 36 परिणामों में से अनुकूल परिणाम देखें:
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+            <button onclick="highlightSum(2)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 2 (1)</button>
+            <button onclick="highlightSum(3)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 3 (2)</button>
+            <button onclick="highlightSum(4)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 4 (3)</button>
+            <button onclick="highlightSum(5)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 5 (4)</button>
+            <button onclick="highlightSum(6)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 6 (5)</button>
+            <button onclick="highlightSum(7)" class="dice-btn" style="background:#dc2626; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 7 (6 - अधिकतम)</button>
+            <button onclick="highlightSum(8)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 8 (5)</button>
+            <button onclick="highlightSum(9)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 9 (4)</button>
+            <button onclick="highlightSum(10)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 10 (3)</button>
+            <button onclick="highlightSum(11)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 11 (2)</button>
+            <button onclick="highlightSum(12)" class="dice-btn" style="background:#1e293b; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">योग 12 (1)</button>
+            <button onclick="highlightHas5()" class="dice-btn" style="background:#7e22ce; color:#fff !important; padding:6px 12px; border-radius:6px; font-size:15pt; font-weight:900; cursor:pointer;">प्रश्न 24: कम से कम एक 5 (11)</button>
+          </div>
+
+          <div id="diceProbBanner" style="background:#ecfdf5; border:3px solid #047857; border-radius:10px; padding:12px 18px; margin-bottom:14px; font-size:22pt; font-weight:900; color:#064e3b;">
+            चयनित: सभी 36 परिणाम | प्रायिकता P = 36/36 = 1
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <div id="diceMatrixGrid" style="display:grid; grid-template-columns:repeat(6, 1fr); gap:6px; background:#e2e8f0; padding:12px; border-radius:10px; min-width:600px; border:2px solid #94a3b8;">
+              <!-- Populated by JavaScript 6x6 grid -->
+            </div>
+          </div>
+        </div>
+
+
+          <span class="badge-purple">प्रश्न 22 (ii): विद्यार्थी का तर्क (कि 11 परिणाम हैं अतः प्रत्येक की प्रायिकता 1/11 है):</span><br>
+          <strong>उत्तर: हम इस तर्क से सहमत नहीं हैं।</strong><br>
+          <strong>कारण:</strong> यहाँ 11 परिणाम (2 से 12 तक) समप्रायिक (Equally likely) नहीं हैं। उदाहरण के लिए, योग 7 आने के 6 अनुकूल परिणाम $\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\}$ हैं जिससे इसकी प्रायिकता $\frac{6}{36} = \frac{1}{6}$ है, जबकि योग 2 आने का केवल 1 परिणाम $\{(1,1)\}$ है जिसकी प्रायिकता $\frac{1}{36}$ है। अतः प्रत्येक की प्रायिकता $\frac{1}{11}$ नहीं हो सकती।
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 21: (i) $\frac{31}{36}$, (ii) $\frac{5}{36}$; &nbsp;&nbsp; प्रश्न 22 (ii): विद्यार्थी के तर्क से सहमत नहीं हैं (परिणाम समप्रायिक नहीं हैं)।
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 23 व 24</span> हनीफ का 3 सिक्कों का खेल एवं दो पासों पर संख्या 5:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">प्रश्न 23: एक सिक्के को 3 बार उछालना (कुल संभव परिणाम $= 2^3 = 8$):</span><br>
+          प्रतिदर्श समष्टि $S = \{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}$ ($n(S) = 8$)<br>
+          हनीफ तब जीतता है जब तीनों परिणाम समान हों: $\{HHH, TTT\}$ (कुल 2 अनुकूल परिणाम)।<br>
+          हनीफ के खेल हार जाने के अनुकूल परिणाम $= 8 - 2 = 6$<br>
+          हनीफ के खेल हार जाने की प्रायिकता $P = \frac{6}{8} = \mathbf{\frac{3}{4}}$
+        </div>
+
+        <!-- INTERACTIVE SIMULATOR 5 (प्रश्नोत्तर विशेष): 3 सिक्के - हनीफ का खेल -->
+        <div style="background: #f8fafc; border: 4px solid #c2410c; border-radius: 16px; padding: 22px; margin: 22px 0; box-shadow: 0 6px 18px rgba(194,65,12,0.15);">
+          <div style="font-size: 24pt; color: #9a3412; font-weight: 900; margin-bottom: 12px; border-bottom: 3px solid #cbd5e1; padding-bottom: 8px;">
+            🪙 लाइव सिमुलेटर (प्रश्न 23 विशेष): एक सिक्के को 3 बार उछालना — हनीफ का खेल
+          </div>
+          <p style="font-size: 20pt; color: #0f172a; margin-bottom: 12px; font-weight: 800;">
+            कुल 8 परिणाम $S = \{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\}$। हनीफ केवल $\{HHH, TTT\}$ पर जीतता है और शेष 6 पर हारता है:
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;">
+            <button onclick="toss3Coins()" style="background:#c2410c; color:#ffffff !important; border:3px solid #9a3412; padding:10px 20px; border-radius:10px; font-size:18pt; font-weight:900; cursor:pointer;">
+              🪙 3 सिक्के उछालें (Toss 3 Coins)
+            </button>
+            <div id="coinsResultDisplay" style="font-size:22pt; font-weight:900; color:#9a3412; background:#fffbeb; border:2px solid #d97706; padding:8px 16px; border-radius:8px;">
+              उछाल 1: ? | उछाल 2: ? | उछाल 3: ?
+            </div>
+            <div id="haneefStatus" style="font-size:22pt; font-weight:900; padding:8px 16px; border-radius:8px; background:#f1f5f9; color:#0f172a; border:2px solid #94a3b8;">
+              परिणाम की प्रतीक्षा...
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:8px; margin-top:12px;" id="coinsGrid">
+            <!-- 8 outcomes cards -->
+          </div>
+        </div>
+
+        <div class="step-line"><span class="badge-orange">प्रश्न 24: एक पासे को दो बार फेंकना (कुल संभव परिणाम $= 6 \times 6 = 36$):</span><br>
+          कम से कम एक बार 5 आने वाले कुल अनुकूल परिणाम $= 11$:<br>
+          $\{(1,5), (2,5), (3,5), (4,5), (5,5), (6,5), (5,1), (5,2), (5,3), (5,4), (5,6)\}$<br>
+          (i) 5 किसी भी बार नहीं आएगा: अनुकूल परिणाम $= 36 - 11 = 25 \implies P = \mathbf{\frac{25}{36}}$<br>
+          (ii) 5 कम से कम एक बार आएगा: अनुकूल परिणाम $= 11 \implies P = \mathbf{\frac{11}{36}}$
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 23: हारने की प्रायिकता $= \frac{3}{4}$; &nbsp;&nbsp; प्रश्न 24: (i) $\frac{25}{36}$, (ii) $\frac{11}{36}$
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="qa-card">
+      <div class="q-box">
+        <span class="q-tag">प्रश्न 25</span> सत्य एवं असत्य कथनों का सकारण विश्लेषण:
+      </div>
+      <div class="ans-box">
+        <div class="step-line"><span class="badge-blue">(i) यदि दो सिक्कों को एक साथ उछाला जाता है, तो इसके तीन संभावित परिणाम—दो चित, दो पट या प्रत्येक एक बार हैं। अतः इनमें से प्रत्येक परिणाम की प्रायिकता 1/3 है:</span><br>
+          <strong>उत्तर: यह कथन असत्य है।</strong><br>
+          <strong>कारण:</strong> जब दो सिक्कों को एक साथ उछाला जाता है, तो कुल 4 समप्रायिक परिणाम होते हैं:<br>
+          $S = \{HH, HT, TH, TT\}$ ($n(S) = 4$)<br>
+          • दो चित ($HH$) की प्रायिकता $= \frac{1}{4}$<br>
+          • दो पट ($TT$) की प्रायिकता $= \frac{1}{4}$<br>
+          • प्रत्येक एक बार ($HT$ या $TH$) आने के 2 अनुकूल परिणाम हैं $\implies$ प्रायिकता $= \frac{2}{4} = \frac{1}{2}$<br>
+          चूँकि तीनों परिणाम समप्रायिक नहीं हैं, अतः प्रत्येक की प्रायिकता $\frac{1}{3}$ नहीं हो सकती।
+        </div>
+        <div class="step-line"><span class="badge-green">(ii) यदि एक पासे को फेंका जाता है, तो इसके दो संभावित परिणाम—एक विषम संख्या या एक सम संख्या हैं। अतः एक विषम संख्या ज्ञात करने की प्रायिकता 1/2 है:</span><br>
+          <strong>उत्तर: यह कथन सत्य है।</strong><br>
+          <strong>कारण:</strong> एक पासे को फेंकने पर कुल 6 संभव परिणाम होते हैं: $\{1, 2, 3, 4, 5, 6\}$<br>
+          • विषम संख्याएँ: $\{1, 3, 5\}$ (कुल 3 अनुकूल परिणाम) $\implies P = \frac{3}{6} = \frac{1}{2}$<br>
+          • सम संख्याएँ: $\{2, 4, 6\}$ (कुल 3 अनुकूल परिणाम) $\implies P = \frac{3}{6} = \frac{1}{2}$<br>
+          यहाँ विषम और सम संख्या दोनों परिणाम समप्रायिक (Equally likely) हैं, इसलिए एक विषम संख्या ज्ञात करने की प्रायिकता वास्तव में $\frac{1}{2}$ है।
+        </div>
+        <div class="final-ans">
+          उत्तर: प्रश्न 25: भाग (i) असत्य (प्रायिकताएँ क्रमशः 1/4, 1/4, 1/2 हैं); &nbsp;&nbsp; भाग (ii) सत्य (प्रायिकता 1/2 है)।
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER NAV -->
+    <div class="nav-bar" style="margin-top: 50px;">
+      <a href="qa_master_math13.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 13)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math1.html" class="btn-nav">प्रथम अध्याय (Ch 1) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  
+
+
+  <!-- JAVASCRIPT LOGIC FOR DISTRIBUTED SIMULATORS (Zero dollar syntax) -->
+  <script>
+    // --- SIM 1: COMPLEMENTARY EVENT LOGIC ---
+    function updateComplementarySim(val) {
+      var p = parseFloat(val);
+      var peValText = document.getElementById('peValText');
+      var resPE = document.getElementById('resPE');
+      var resSubPE = document.getElementById('resSubPE');
+      var resNotPE = document.getElementById('resNotPE');
+      var resSum = document.getElementById('resSum');
+      if (peValText) peValText.innerText = p.toFixed(2);
+      if (resPE) resPE.innerText = p.toFixed(2);
+      if (resSubPE) resSubPE.innerText = p.toFixed(2);
+      if (resNotPE) resNotPE.innerText = (1 - p).toFixed(2);
+      if (resSum) resSum.innerText = (p + (1 - p)).toFixed(2);
+    }
+
+    // --- SIM 2: 52 CARDS LOGIC ---
+    var suits = [
+      { code: 'heart', name: 'पान', symbol: '♥', color: '#dc2626', isRed: true },
+      { code: 'diamond', name: 'ईंट', symbol: '♦', color: '#dc2626', isRed: true },
+      { code: 'spade', name: 'हुकुम', symbol: '♠', color: '#000000', isRed: false },
+      { code: 'club', name: 'चिड़ी', symbol: '♣', color: '#000000', isRed: false }
+    ];
+
+    var values = [
+      { code: 'A', name: 'इक्का', isFace: false },
+      { code: '2', name: 'दुक्की', isFace: false },
+      { code: '3', name: 'तिक्की', isFace: false },
+      { code: '4', name: 'चौका', isFace: false },
+      { code: '5', name: 'पंजी', isFace: false },
+      { code: '6', name: 'छक्की', isFace: false },
+      { code: '7', name: 'सत्ती', isFace: false },
+      { code: '8', name: 'अट्ठी', isFace: false },
+      { code: '9', name: 'नहला', isFace: false },
+      { code: '10', name: 'दहला', isFace: false },
+      { code: 'J', name: 'गुलाम', isFace: true },
+      { code: 'Q', name: 'बेगम', isFace: true },
+      { code: 'K', name: 'बादशाह', isFace: true }
+    ];
+
+    var deck = [];
+    for (var s = 0; s < suits.length; s++) {
+      for (var v = 0; v < values.length; v++) {
+        deck.push({
+          suit: suits[s].code,
+          suitName: suits[s].name,
+          symbol: suits[s].symbol,
+          color: suits[s].color,
+          isRed: suits[s].isRed,
+          valCode: values[v].code,
+          valName: values[v].name,
+          isFace: values[v].isFace
+        });
+      }
+    }
+
+    function initDeckView() {
+      var cont = document.getElementById('deckGridContainer');
+      if (!cont) return;
+      cont.innerHTML = '';
+      for (var idx = 0; idx < deck.length; idx++) {
+        var c = deck[idx];
+        var el = document.createElement('div');
+        el.id = 'card_' + idx;
+        el.className = 'mini-card';
+        el.style.cssText = 'background: #ffffff; border: 2px solid #cbd5e1; border-radius: 8px; padding: 6px 2px; text-align: center; font-size: 15pt; font-weight: 900; color: ' + c.color + '; transition: all 0.2s ease; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1);';
+        el.innerHTML = '<div style="font-weight:900;">' + c.valCode + '</div><div style="font-size:22pt; line-height:1;">' + c.symbol + '</div>';
+        el.title = c.suitName + ' का ' + c.valName + ' (' + c.valCode + ')';
+        cont.appendChild(el);
+      }
+    }
+
+    function filterCards(type) {
+      var favCount = 0;
+      var eventText = '';
+      var total = 52;
+
+      for (var idx = 0; idx < deck.length; idx++) {
+        var c = deck[idx];
+        var el = document.getElementById('card_' + idx);
+        if (!el) continue;
+        var match = false;
+        if (type === 'all') { match = true; eventText = 'सभी 52 पत्ते'; }
+        else if (type === 'red') { match = c.isRed; eventText = 'लाल रंग के पत्ते'; }
+        else if (type === 'black') { match = !c.isRed; eventText = 'काले रंग के पत्ते'; }
+        else if (type === 'heart') { match = (c.suit === 'heart'); eventText = 'पान (Hearts)'; }
+        else if (type === 'diamond') { match = (c.suit === 'diamond'); eventText = 'ईंट (Diamonds)'; }
+        else if (type === 'spade') { match = (c.suit === 'spade'); eventText = 'हुकुम (Spades)'; }
+        else if (type === 'club') { match = (c.suit === 'club'); eventText = 'चिड़ी (Clubs)'; }
+        else if (type === 'face') { match = c.isFace; eventText = 'फेस कार्ड (तस्वीर वाले)'; }
+        else if (type === 'red_face') { match = (c.isFace && c.isRed); eventText = 'लाल तस्वीर वाले पत्ते'; }
+        else if (type === 'king_red') { match = (c.valCode === 'K' && c.isRed); eventText = 'लाल रंग का बादशाह'; }
+        else if (type === 'jack_heart') { match = (c.valCode === 'J' && c.suit === 'heart'); eventText = 'पान का गुलाम'; }
+        else if (type === 'queen_diamond') { match = (c.valCode === 'Q' && c.suit === 'diamond'); eventText = 'ईंट की बेगम'; }
+        else if (type === 'ace') { match = (c.valCode === 'A'); eventText = 'इक्के (Aces)'; }
+        else if (type === 'q15') {
+          match = (c.suit === 'diamond' && ['10', 'J', 'Q', 'K', 'A'].indexOf(c.valCode) !== -1);
+          total = 5;
+          eventText = 'प्रश्न 15: ईंट के 5 पत्ते (10, J, Q, K, A)';
+        }
+
+        if (match) {
+          favCount++;
+          el.style.border = '3px solid #16a34a';
+          el.style.background = '#fef08a';
+          el.style.opacity = '1';
+          el.style.transform = 'scale(1.12)';
+          el.style.boxShadow = '0 6px 14px rgba(0,0,0,0.25)';
+        } else {
+          el.style.border = '1px solid #cbd5e1';
+          el.style.background = '#f8fafc';
+          el.style.opacity = '0.3';
+          el.style.transform = 'scale(1)';
+          el.style.boxShadow = 'none';
+        }
+      }
+
+      var gcd = function(a, b) { return b ? gcd(b, a % b) : a; };
+      var g = gcd(favCount, total);
+      var simp = (favCount / g) + '/' + (total / g);
+      var dec = (favCount / total).toFixed(4);
+
+      var banner = document.getElementById('cardProbBanner');
+      if (banner) {
+        banner.innerHTML = 'चयनित घटना: <span style="color:#1d4ed8; text-decoration:underline;">' + eventText + '</span> | अनुकूल पत्ते n(E) = <span style="color:#b91c1c; font-size:26pt;">' + favCount + '</span> / कुल = ' + total + ' &implies; प्रायिकता P(E) = ' + favCount + '/' + total + ' = <strong style="color:#047857; font-size:26pt;">' + simp + '</strong> (' + dec + ')';
+      }
+    }
+
+    function drawRandomCard() {
+      var randIdx = Math.floor(Math.random() * deck.length);
+      var c = deck[randIdx];
+      var disp = document.getElementById('drawnCardDisplay');
+      if (disp) {
+        disp.innerHTML = 'निकाला गया पत्ता: <span style="color:' + (c.isRed ? '#dc2626' : '#000000') + '; font-size:26pt; font-weight:900;">' + c.valCode + ' ' + c.symbol + '</span> (' + c.suitName + ' का ' + c.valName + ')';
+      }
+      filterCards('all');
+      var el = document.getElementById('card_' + randIdx);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.style.border = '4px solid #2563eb';
+        el.style.background = '#dbeafe';
+        el.style.transform = 'scale(1.3)';
+        el.style.boxShadow = '0 8px 20px rgba(37,99,235,0.4)';
+      }
+    }
+
+    // --- SIM 3: 90 DISCS LOGIC ---
+    function initDiscs() {
+      var cont = document.getElementById('discsContainer');
+      if (!cont) return;
+      cont.innerHTML = '';
+      for (var i = 1; i <= 90; i++) {
+        var d = document.createElement('div');
+        d.id = 'disc_' + i;
+        d.style.cssText = 'background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 4px 2px; text-align: center; font-size: 14pt; font-weight: 900; color: #000000; box-shadow: 0 1px 3px rgba(0,0,0,0.08);';
+        d.innerText = i;
+        cont.appendChild(d);
+      }
+    }
+
+    function filterDiscs(type) {
+      var count = 0;
+      var eventName = '';
+      var squares = [1, 4, 9, 16, 25, 36, 49, 64, 81];
+      for (var i = 1; i <= 90; i++) {
+        var el = document.getElementById('disc_' + i);
+        if (!el) continue;
+        var match = false;
+        if (type === 'all') { match = true; eventName = 'सभी 90 डिस्क'; }
+        else if (type === 'two_digit') { match = (i >= 10 && i <= 90); eventName = 'दो अंकों की संख्या (10 से 90)'; }
+        else if (type === 'perfect_square') { match = (squares.indexOf(i) !== -1); eventName = 'पूर्ण वर्ग संख्या'; }
+        else if (type === 'div_5') { match = (i % 5 === 0); eventName = '5 से विभाज्य संख्या'; }
+
+        if (match) {
+          count++;
+          el.style.background = '#2563eb';
+          el.style.color = '#ffffff';
+          el.style.border = '2px solid #1d4ed8';
+          el.style.transform = 'scale(1.15)';
+          el.style.boxShadow = '0 4px 10px rgba(37,99,235,0.4)';
+          el.style.opacity = '1';
+        } else {
+          el.style.background = '#f8fafc';
+          el.style.color = '#94a3b8';
+          el.style.border = '1px solid #e2e8f0';
+          el.style.opacity = '0.3';
+          el.style.transform = 'scale(1)';
+          el.style.boxShadow = 'none';
+        }
+      }
+      var gcd = function(a, b) { return b ? gcd(b, a % b) : a; };
+      var g = gcd(count, 90);
+      var banner = document.getElementById('discBanner');
+      if (banner) {
+        banner.innerHTML = 'चयनित: ' + eventName + ' | अनुकूल परिणाम = <span style="color:#b91c1c; font-size:24pt;">' + count + '</span> / 90 &implies; प्रायिकता P = ' + count + '/90 = <strong style="color:#047857; font-size:26pt;">' + (count/g) + '/' + (90/g) + '</strong>';
+      }
+    }
+
+    function drawRandomDisc() {
+      var rand = Math.floor(Math.random() * 90) + 1;
+      filterDiscs('all');
+      var el = document.getElementById('disc_' + rand);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.style.background = '#e11d48';
+        el.style.color = '#ffffff';
+        el.style.border = '3px solid #9f1239';
+        el.style.transform = 'scale(1.4)';
+        el.style.boxShadow = '0 6px 16px rgba(225,29,72,0.4)';
+      }
+      var is2d = (rand >= 10);
+      var isSq = ([1,4,9,16,25,36,49,64,81].indexOf(rand) !== -1);
+      var isD5 = (rand % 5 === 0);
+      var banner = document.getElementById('discBanner');
+      if (banner) {
+        banner.innerHTML = 'यादृच्छिक डिस्क: <strong style="color:#e11d48; font-size:26pt;">' + rand + '</strong> | 2-अंक: ' + (is2d ? 'हाँ' : 'नहीं') + ' | पूर्ण वर्ग: ' + (isSq ? 'हाँ' : 'नहीं') + ' | 5 से विभाज्य: ' + (isD5 ? 'हाँ' : 'नहीं');
+      }
+    }
+
+    // --- SIM 4: TWO DICE LOGIC ---
+    function initDiceMatrix() {
+      var cont = document.getElementById('diceMatrixGrid');
+      if (!cont) return;
+      cont.innerHTML = '';
+      for (var r = 1; r <= 6; r++) {
+        for (var c = 1; c <= 6; c++) {
+          var sum = r + c;
+          var cell = document.createElement('div');
+          cell.id = 'dice_' + r + '_' + c;
+          cell.style.cssText = 'background: #ffffff; border: 2px solid #cbd5e1; border-radius: 8px; padding: 8px 4px; text-align: center; font-size: 16pt; font-weight: 900; color: #000000; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.08);';
+          cell.innerHTML = '<div style="color:#000000; font-size:18pt;">(' + r + ',' + c + ')</div><div style="font-size:13pt; color:#475569; font-weight:800;">योग ' + sum + '</div>';
+          cont.appendChild(cell);
+        }
+      }
+    }
+
+    function highlightSum(targetSum) {
+      var count = 0;
+      for (var r = 1; r <= 6; r++) {
+        for (var c = 1; c <= 6; c++) {
+          var cell = document.getElementById('dice_' + r + '_' + c);
+          if (!cell) continue;
+          if (r + c === targetSum) {
+            count++;
+            cell.style.border = '3px solid #16a34a';
+            cell.style.background = '#fef08a';
+            cell.style.color = '#064e3b';
+            cell.style.transform = 'scale(1.08)';
+            cell.style.boxShadow = '0 6px 12px rgba(0,0,0,0.2)';
+            cell.style.opacity = '1';
+          } else {
+            cell.style.border = '1px solid #e2e8f0';
+            cell.style.background = '#f8fafc';
+            cell.style.color = '#94a3b8';
+            cell.style.opacity = '0.35';
+            cell.style.transform = 'scale(1)';
+            cell.style.boxShadow = 'none';
+          }
+        }
+      }
+      var gcd = function(a, b) { return b ? gcd(b, a % b) : a; };
+      var g = gcd(count, 36);
+      var simp = (count / g) + '/' + (36 / g);
+      var banner = document.getElementById('diceProbBanner');
+      if (banner) {
+        banner.innerHTML = 'चयनित: दोनों पासों का योग = <span style="color:#047857; font-size:24pt;">' + targetSum + '</span> | अनुकूल परिणाम = <span style="color:#b91c1c; font-size:24pt;">' + count + '</span> / कुल = 36 &implies; प्रायिकता P = ' + count + '/36 = <strong style="color:#047857; font-size:26pt;">' + simp + '</strong>';
+      }
+    }
+
+    function highlightHas5() {
+      var count = 0;
+      for (var r = 1; r <= 6; r++) {
+        for (var c = 1; c <= 6; c++) {
+          var cell = document.getElementById('dice_' + r + '_' + c);
+          if (!cell) continue;
+          if (r === 5 || c === 5) {
+            count++;
+            cell.style.border = '3px solid #7e22ce';
+            cell.style.background = '#f3e8ff';
+            cell.style.color = '#581c87';
+            cell.style.transform = 'scale(1.08)';
+            cell.style.boxShadow = '0 6px 12px rgba(126,34,206,0.2)';
+            cell.style.opacity = '1';
+          } else {
+            cell.style.border = '1px solid #e2e8f0';
+            cell.style.background = '#f8fafc';
+            cell.style.color = '#94a3b8';
+            cell.style.opacity = '0.35';
+            cell.style.transform = 'scale(1)';
+            cell.style.boxShadow = 'none';
+          }
+        }
+      }
+      var banner = document.getElementById('diceProbBanner');
+      if (banner) {
+        banner.innerHTML = 'चयनित: कम से कम एक बार 5 आएगा (प्रश्न 24) | अनुकूल परिणाम = <span style="color:#b91c1c; font-size:24pt;">' + count + '</span> / 36 &implies; प्रायिकता P = <strong style="color:#047857; font-size:26pt;">11/36</strong> (तथा 5 किसी भी बार नहीं आएगा = <strong style="color:#047857; font-size:26pt;">25/36</strong>)';
+      }
+    }
+
+    function rollTwoDice() {
+      var d1 = Math.floor(Math.random() * 6) + 1;
+      var d2 = Math.floor(Math.random() * 6) + 1;
+      var s = d1 + d2;
+      var res = document.getElementById('diceRollResult');
+      if (res) {
+        res.innerHTML = '🎲 पासा 1: <strong style="font-size:26pt; color:#1e3a8a;">' + d1 + '</strong> | पासा 2: <strong style="font-size:26pt; color:#1e3a8a;">' + d2 + '</strong> | योग = <strong style="font-size:26pt; color:#b91c1c;">' + s + '</strong>';
+      }
+      highlightSum(s);
+      var cell = document.getElementById('dice_' + d1 + '_' + d2);
+      if (cell) {
+        cell.style.border = '4px solid #dc2626';
+        cell.style.background = '#fee2e2';
+        cell.style.boxShadow = '0 8px 16px rgba(220,38,38,0.3)';
+      }
+    }
+
+    // --- SIM 5: 3 COINS LOGIC ---
+    var coinOutcomes = ['HHH', 'HHT', 'HTH', 'HTT', 'THH', 'THT', 'TTH', 'TTT'];
+    function initCoinsGrid() {
+      var cont = document.getElementById('coinsGrid');
+      if (!cont) return;
+      cont.innerHTML = '';
+      for (var i = 0; i < coinOutcomes.length; i++) {
+        var o = coinOutcomes[i];
+        var isWin = (o === 'HHH' || o === 'TTT');
+        var d = document.createElement('div');
+        d.id = 'coin_out_' + o;
+        d.style.cssText = 'background: ' + (isWin ? '#f0fdf4' : '#fff1f2') + '; border: 3px solid ' + (isWin ? '#16a34a' : '#f43f5e') + '; border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.08);';
+        d.innerHTML = '<div style="font-size: 24pt; font-weight: 900; color: ' + (isWin ? '#166534' : '#9f1239') + ';">' + o + '</div><div style="font-size: 15pt; color: ' + (isWin ? '#15803d' : '#be123c') + '; font-weight: 900;">' + (isWin ? 'हनीफ जीतेगा 🏆' : 'हनीफ हारेगा ❌') + '</div>';
+        cont.appendChild(d);
+      }
+    }
+
+    function toss3Coins() {
+      var pick = function(arr) { return arr[Math.floor(Math.random() * arr.length)]; };
+      var c1 = pick(['H', 'T']);
+      var c2 = pick(['H', 'T']);
+      var c3 = pick(['H', 'T']);
+      var res = c1 + c2 + c3;
+      var disp = document.getElementById('coinsResultDisplay');
+      if (disp) {
+        disp.innerHTML = 'उछाल: <strong>' + c1 + '</strong> - <strong>' + c2 + '</strong> - <strong>' + c3 + '</strong> (' + res + ')';
+      }
+      var isWin = (res === 'HHH' || res === 'TTT');
+      var st = document.getElementById('haneefStatus');
+      if (st) {
+        if (isWin) {
+          st.innerHTML = '🏆 तीनों परिणाम समान हैं! हनीफ <strong>जीत गया!</strong> (प्रायिकता 2/8 = 1/4)';
+          st.style.background = '#dcfce7';
+          st.style.color = '#166534';
+          st.style.borderColor = '#16a34a';
+        } else {
+          st.innerHTML = '❌ तीनों परिणाम समान नहीं हैं! हनीफ <strong>हार गया!</strong> (प्रायिकता 6/8 = 3/4)';
+          st.style.background = '#fee2e2';
+          st.style.color = '#991b1b';
+          st.style.borderColor = '#dc2626';
+        }
+      }
+      for (var i = 0; i < coinOutcomes.length; i++) {
+        var o = coinOutcomes[i];
+        var el = document.getElementById('coin_out_' + o);
+        if (el) {
+          if (o === res) {
+            el.style.border = '4px solid #1d4ed8';
+            el.style.transform = 'scale(1.15)';
+            el.style.background = '#fef08a';
+            el.style.boxShadow = '0 8px 18px rgba(0,0,0,0.25)';
+            el.style.opacity = '1';
+          } else {
+            el.style.border = '1px solid #cbd5e1';
+            el.style.transform = 'scale(1)';
+            el.style.background = '#f8fafc';
+            el.style.opacity = '0.35';
+            el.style.boxShadow = 'none';
+          }
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      initDeckView();
+      initDiceMatrix();
+      initCoinsGrid();
+      initDiscs();
+    });
+  </script>
+
+</body>
+</html>

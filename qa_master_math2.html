@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 10 गणित - अध्याय 2: बहुपद (मल्टी-कलर प्रोजेक्टर मास्टर हल)</title>
+
+<!-- MathJax for rendering mathematical equations with matching bold thickness -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
+      }
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #cbd5e1;
+    padding: 30px 15px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Devanagari', Arial, sans-serif;
+  }
+
+  /* BASE TYPOGRAPHY (Exact Class 10 SS: 26pt, 2.0 line-height, 900 weight, 1.1px stroke) */
+  body, p, li, td, th, div, span, a, label {
+    font-size: 26pt !important;
+    line-height: 2.0 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+    color: #000000;
+  }
+
+  p, li, h1, h2, h3, h4, td, th {
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+  }
+
+  /* =========================================================
+     MULTI-COLOR BADGES FOR CLASSROOM ENGAGEMENT
+     ========================================================= */
+  .badge-blue {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border: 3px solid #3b82f6 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #1e3a8a !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.15) !important;
+  }
+
+  .badge-orange {
+    color: #9a3412 !important;
+    background-color: #ffedd5 !important;
+    border: 3px solid #f97316 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #9a3412 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.15) !important;
+  }
+
+  .badge-purple {
+    color: #581c87 !important;
+    background-color: #f3e8ff !important;
+    border: 3px solid #a855f7 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #581c87 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(168, 85, 247, 0.15) !important;
+  }
+
+  .badge-green {
+    color: #064e3b !important;
+    background-color: #d1fae5 !important;
+    border: 3px solid #10b981 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #064e3b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15) !important;
+  }
+
+  .badge-red {
+    color: #991b1b !important;
+    background-color: #fee2e2 !important;
+    border: 3px solid #ef4444 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #991b1b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15) !important;
+  }
+
+  /* MULTI-COLOR STEP CARDS */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 3px solid #93c5fd !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    text-shadow: 0 0 1px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    text-shadow: 0 0 1px #1e3a8a !important;
+    display: inline !important;
+  }
+  .text-purple {
+    color: #6b21a8 !important;
+    -webkit-text-stroke: 0.8px #6b21a8 !important;
+    text-shadow: 0 0 1px #6b21a8 !important;
+  }
+  .text-green {
+    color: #065f46 !important;
+    -webkit-text-stroke: 0.8px #065f46 !important;
+  }
+
+  /* =========================================================
+     COLORFUL MATHJAX STYLING
+     ========================================================= */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  /* Initial numbers are solid black */
+  mjx-mn {
+    color: #000000;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-shadow: 0 0 1px #000000;
+  }
+
+  /* Results in Dark Red */
+  mjx-mstyle[color="#b91c1c"] mjx-mn,
+  mjx-mstyle[color="#b91c1c"] *,
+  [style*="185, 28, 28"] mjx-mn,
+  [style*="185, 28, 28"] *,
+  [style*="#b91c1c"] mjx-mn,
+  [style*="#b91c1c"] * {
+    color: #b91c1c !important;
+    -webkit-text-stroke: 0.9px #991b1b !important;
+    text-shadow: 0 0 1px #991b1b !important;
+  }
+
+  /* Symbols in Dark Blue */
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+    text-shadow: 0 0 1px #1d4ed8 !important;
+  }
+
+  /* Fraction bar: 8px MOTA DARK GREEN */
+  mjx-line,
+  mjx-frac mjx-line,
+  mjx-frac * mjx-line,
+  .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Square Root sign: VIBRANT PURPLE */
+  mjx-surd {
+    color: #7c3aed !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #7c3aed !important;
+  }
+
+  mjx-mi {
+    color: #0f172a !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.7px #0f172a !important;
+  }
+
+  mjx-mtext {
+    color: #1e3a8a !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.7px #1e3a8a !important;
+  }
+
+  .math-line, .math-scroll {
+    max-width: 100% !important;
+    padding: 4px 0 !important;
+    margin: 6px 0 !important;
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+  }
+  .math-line::-webkit-scrollbar, .math-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* MAIN CONTAINER */
+  #contentToCopy {
+    width: 100% !important;
+    max-width: 1350px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+    border: 6px solid #60a5fa !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 46pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+    overflow-wrap: break-word !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 32pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border-left: 18px solid #2563eb !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 40pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12) !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* SUB-HEADERS */
+  .sub-header-red {
+    color: #991b1b !important;
+    background-color: #fee2e2 !important;
+    border-left: 18px solid #b91c1c !important;
+    padding: 20px 26px !important;
+    border-radius: 14px !important;
+    font-size: 32pt !important;
+    font-weight: 900 !important;
+    margin-top: 45px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 6px 16px rgba(185, 28, 28, 0.12) !important;
+    -webkit-text-stroke: 0.8px #991b1b !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* FORMULA BOX (Golden Warm Palette) */
+  .formula-box {
+    background-color: #fefce8 !important;
+    border: 4px solid #facc15 !important;
+    border-left: 18px solid #d97706 !important;
+    padding: 30px !important;
+    border-radius: 18px !important;
+    margin-bottom: 45px !important;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.1) !important;
+    overflow-wrap: break-word !important;
+  }
+  .formula-box h3 {
+    color: #b45309 !important;
+    font-size: 34pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #fde047;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #b45309 !important;
+  }
+
+  /* QA BLOCK */
+  .qa-block {
+    background: #ffffff;
+    border: 4px solid #93c5fd;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 35px 0;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+    overflow-wrap: break-word !important;
+  }
+  .question-heading {
+    color: #1e3a8a !important;
+    font-size: 30pt !important;
+    margin-top: 0;
+    margin-bottom: 22px;
+    border-bottom: 3px solid #93c5fd;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-line {
+    margin: 14px 0;
+    padding: 4px 0;
+    overflow-wrap: break-word !important;
+  }
+
+  /* FINAL ANSWER HIGHLIGHT */
+  .answer-highlight {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important; /* Bright Canary Yellow */
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important; /* Dark Green Bar */
+    border-radius: 16px !important;
+    color: #064e3b !important; /* Dark Forest Green Text */
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* ACTION BAR */
+  .action-bar {
+    position: relative;
+    margin: 0 auto 35px auto;
+    display: flex;
+    gap: 12px;
+    z-index: 1100;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: fit-content;
+  }
+  .action-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    border: 3px solid #2563eb;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    font-family: system-ui, sans-serif;
+    -webkit-text-stroke: 0 !important;
+  }
+  .action-btn:hover {
+    transform: scale(1.12);
+    background: #2563eb;
+  }
+  .btn-copy {
+    background: #d97706;
+    border-color: #b45309;
+  }
+  .btn-copy:hover {
+    background: #b45309;
+  }
+  .btn-copy.success {
+    background: #059669;
+    border-color: #047857;
+  }
+
+  /* NAV BUTTONS */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .btn-nav {
+    font-size: 22pt !important;
+    font-weight: 900 !important;
+    padding: 14px 28px;
+    background: #1e3a8a;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 16px;
+    border: 3px solid #3b82f6;
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.35);
+    -webkit-text-stroke: 0.5px #000 !important;
+  }
+  .btn-nav:hover {
+    background: #2563eb;
+  }
+
+  /* FLOATING HOME */
+  .floating-home-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1200;
+    background: #1e3a8a;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 3px solid #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0 !important;
+  }
+
+  ul, ol {
+    padding-left: 45px;
+  }
+  li {
+    margin-bottom: 18px;
+  }
+
+  /* RESPONSIVE FULLSCREEN & MOBILE SHIELD */
+  @media (max-width: 1000px) {
+    body {
+      padding: 10px 5px;
+    }
+    #contentToCopy {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 20px 14px !important;
+      border-radius: 16px;
+    }
+    body, p, li, td, th, div, span, a, label {
+      font-size: 1.22rem !important;
+      line-height: 1.8 !important;
+      -webkit-text-stroke: 0.4px #000000;
+    }
+    b, strong, .text-red {
+      -webkit-text-stroke: 0.4px #7f1d1d !important;
+    }
+    b.blue, .text-blue {
+      -webkit-text-stroke: 0.4px #1e3a8a !important;
+    }
+    .hero-title {
+      font-size: 1.8rem !important;
+      padding: 22px 14px !important;
+    }
+    .hero-title span {
+      font-size: 1.25rem !important;
+    }
+    .part-header {
+      font-size: 1.45rem !important;
+      padding: 16px 18px !important;
+      border-left-width: 12px !important;
+    }
+    .sub-header-red {
+      font-size: 1.3rem !important;
+      padding: 14px 16px !important;
+      border-left-width: 12px !important;
+    }
+    .qa-block, .formula-box {
+      padding: 18px 14px !important;
+    }
+    .question-heading, .formula-box h3 {
+      font-size: 1.3rem !important;
+    }
+    .badge-blue, .badge-orange, .badge-purple, .badge-green, .badge-red {
+      font-size: 1.15rem !important;
+      padding: 2px 10px !important;
+    }
+    .answer-highlight {
+      font-size: 1.22rem !important;
+      padding: 14px 16px !important;
+      border-left-width: 12px !important;
+    }
+    .action-btn {
+      width: 48px;
+      height: 48px;
+      font-size: 1.15rem;
+    }
+    .btn-nav {
+      font-size: 1.1rem !important;
+      padding: 8px 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating Home Button -->
+<a href="math10.html" class="floating-home-btn" title="गणित पोर्टल पर वापस जाएं">🏠</a>
+
+<div id="contentToCopy">
+
+  <!-- Top Navigation Links -->
+  <div class="nav-buttons" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+    <a href="qa_master_math1.html" class="btn-nav" style="background:#1e3a8a; color:#ffffff !important; border-color:#3b82f6; font-weight:900;">⬅️ पिछला अध्याय (Ch 1)</a>
+    <a href="math10.html" class="btn-nav">📐 गणित पोर्टल</a>
+    <a href="qa_master_math3.html" class="btn-nav" style="background:#047857; color:#ffffff !important; border-color:#059669; font-weight:900;">अगला अध्याय (Ch 3) ➔</a>
+  </div>
+
+  <!-- Action Bar (Controls: W+, W-, A+, A-, B+, B-, Copy, Print) -->
+  <div class="action-bar">
+    <button class="action-btn" onclick="adjustWidth(50)" title="कंटेनर चौड़ाई बढ़ाएँ (W+)">W+</button>
+    <button class="action-btn" onclick="adjustWidth(-50)" title="कंटेनर चौड़ाई घटाएँ (W-)">W-</button>
+    <button class="action-btn" onclick="adjustFontSize(2)" title="फ़ॉन्ट आकार बढ़ाएँ (A+)">A+</button>
+    <button class="action-btn" onclick="adjustFontSize(-2)" title="फ़ॉन्ट आकार घटाएँ (A-)">A-</button>
+    <button class="action-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएँ (B+)">B+</button>
+    <button class="action-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएँ (B-)">B-</button>
+    <button class="action-btn btn-copy" id="floatingCopyBtn" onclick="copyEntireContent()" title="पूरा पेज कॉपी करें">📋</button>
+    <button class="action-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️</button>
+  </div>
+
+  <!-- HERO TITLE -->
+  <div class="hero-title">
+    कक्षा 10 गणित — अध्याय 2: बहुपद
+    <span>NCERT संपूर्ण अभ्यास एवं बोर्ड परीक्षा मास्टर प्रश्नोत्तर (मल्टी-कलर चरणबद्ध हल)</span>
+  </div>
+
+  <!-- FORMULA REVISION CARD (Golden Palette) -->
+  <div class="formula-box">
+    <h3>📌 अध्याय के महत्वपूर्ण सूत्र व मुख्य नियम</h3>
+    <ul>
+      <li><span class="badge-blue">द्विघात बहुपद का मानक रूप:</span> $p(x) = ax^2 + bx + c$, जहाँ $a \neq 0$ तथा $a, b, c$ वास्तविक संख्याएँ हैं।</li>
+      <li>
+        <span class="badge-red">शून्यकों और गुणांकों में संबंध:</span> यदि $\alpha$ और $\beta$ द्विघात बहुपद के शून्यक हों:
+        <div class="math-line" style="margin: 15px 0; font-size: 26pt;">
+          <div style="background: #eff6ff; border: 3px solid #3b82f6; border-radius: 12px; padding: 12px 20px; display: inline-block; margin: 8px 0;">
+            <span style="color: #1e3a8a;"><strong>(क) शून्यकों का योग</strong> $(\alpha + \beta) = -\frac{b}{a} = $ </span>
+            <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 6px;">
+              <span style="color: #b91c1c; font-weight: 900; padding: 0 6px;">-(x का गुणांक)</span>
+              <span style="border-top: 8px solid #047857; margin: 4px 0; display: block;"></span>
+              <span style="color: #1e3a8a; font-weight: 900; padding: 0 6px;">(x² का गुणांक)</span>
+            </span>
+          </div>
+        </div>
+        <div class="math-line" style="margin: 15px 0; font-size: 26pt;">
+          <div style="background: #f0fdf4; border: 3px solid #22c55e; border-radius: 12px; padding: 12px 20px; display: inline-block; margin: 8px 0;">
+            <span style="color: #14532d;"><strong>(ख) शून्यकों का गुणनफल</strong> $(\alpha \cdot \beta) = \frac{c}{a} = $ </span>
+            <span style="display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 6px;">
+              <span style="color: #b91c1c; font-weight: 900; padding: 0 6px;">अचर पद</span>
+              <span style="border-top: 8px solid #047857; margin: 4px 0; display: block;"></span>
+              <span style="color: #14532d; font-weight: 900; padding: 0 6px;">(x² का गुणांक)</span>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="badge-purple">द्विघात बहुपद बनाने का सूत्र:</span> यदि शून्यकों का योग ($S$) और गुणनफल ($P$) दिया हो:
+        <div class="math-line">$$\mathbf{p(x) = k [x^2 - Sx + P] = k [x^2 - (\alpha + \beta)x + \alpha \beta]}$$</div>
+        (जहाँ $k$ कोई भी वास्तविक शून्येतर स्थिरांक है)।
+      </li>
+      <li><span class="badge-green">ग्राफ द्वारा शून्यक:</span> बहुपद $y = p(x)$ का ग्राफ $x$-अक्ष को जितने बिंदुओं पर काटता (प्रतिच्छेद करता) है, शून्यकों की संख्या उतनी ही होती है।</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       PART 1: EXERCISE 2.1 (GRAPHICAL ZEROES ANALYSIS)
+       ========================================================= -->
+  <div class="part-header">📌 भाग 1: NCERT प्रश्नावली 2.1 — ग्राफ पर शून्यकों की संख्या (सभी 6 आकृतियाँ)</div>
+
+  <!-- EX 2.1 Q1 Complete -->
+  <div class="sub-header-red">प्रश्‍न 1. किसी बहुपद p(x) के लिए, y = p(x) का ग्राफ नीचे आकृतियों में दिया है। प्रत्येक स्थिति में p(x) के शून्यकों की संख्या ज्ञात कीजिए:</div>
+
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्नावली 2.1 के सभी 6 भागों का सटीक तार्किक विश्लेषण:</div>
+
+    <!-- Graph (i) -->
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">आकृति 2.1 (i):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_1" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_1)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <line x1="30" y1="80" x2="470" y2="80" stroke="#dc2626" stroke-width="9" stroke-linecap="round"/>
+          <polygon points="480,80 460,72 460,88" fill="#dc2626"/>
+          <polygon points="20,80 40,72 40,88" fill="#dc2626"/>
+          <rect x="60" y="30" width="380" height="40" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+          <text x="250" y="58" font-size="19" font-weight="900" fill="#991b1b" text-anchor="middle">y = p(x) (x-अक्ष के समांतर रेखा - 0 कटाव)</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> दी गई रेखा $x$-अक्ष के समांतर है और यह $x$-अक्ष को किसी भी बिंदु पर नहीं काटती है।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 0 (चूँकि ग्राफ x-अक्ष को किसी बिंदु पर प्रतिच्छेद नहीं करता)।</div>
+    </div>
+
+    <!-- Graph (ii) -->
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">आकृति 2.1 (ii):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_2" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_2)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <path d="M 50,260 C 130,240 190,80 250,70 C 300,60 330,125 360,150 C 390,175 425,235 460,260" fill="none" stroke="#2563eb" stroke-width="9" stroke-linecap="round"/>
+          <!-- Intersection point on X-axis -->
+          <circle cx="360" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="260" y="180" width="200" height="38" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+          <text x="360" y="206" font-size="19" font-weight="900" fill="#14532d" text-anchor="middle">📍 1 प्रतिच्छेद बिंदु</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> वक्र $x$-अक्ष को केवल <b>1 बिंदु</b> पर प्रतिच्छेद करता है।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 1 (चूँकि ग्राफ x-अक्ष को केवल 1 बिंदु पर काटता है)।</div>
+    </div>
+
+    <!-- Graph (iii) -->
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">आकृति 2.1 (iii):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_3" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_3)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <path d="M 70,250 C 95,215 115,160 130,150 C 150,130 170,70 190,70 C 215,70 235,130 250,150 C 270,175 290,230 310,230 C 335,230 355,170 370,150 C 390,130 415,80 440,50" fill="none" stroke="#7c3aed" stroke-width="9" stroke-linecap="round"/>
+          <!-- 3 Intersection points -->
+          <circle cx="130" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="250" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="370" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="130" y="25" width="240" height="38" rx="10" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+          <text x="250" y="51" font-size="19" font-weight="900" fill="#581c87" text-anchor="middle">📍 कुल 3 प्रतिच्छेद बिंदु</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> वक्र $x$-अक्ष को कुल <b>3 बिंदुओं</b> पर प्रतिच्छेद करता है।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 3 (चूँकि ग्राफ x-अक्ष को 3 बिंदुओं पर काटता है)।</div>
+    </div>
+
+    <!-- Graph (iv) -->
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">आकृति 2.1 (iv):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_4" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_4)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <path d="M 100,50 Q 250,300 400,50" fill="none" stroke="#ea580c" stroke-width="9" stroke-linecap="round"/>
+          <!-- 2 Intersection points -->
+          <circle cx="150" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="350" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="140" y="235" width="220" height="38" rx="10" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+          <text x="250" y="261" font-size="19" font-weight="900" fill="#9a3412" text-anchor="middle">📍 कुल 2 प्रतिच्छेद बिंदु</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> परवलय (Parabola) $x$-अक्ष को <b>2 बिंदुओं</b> पर प्रतिच्छेद करता है।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 2 (चूँकि ग्राफ x-अक्ष को 2 बिंदुओं पर काटता है)।</div>
+    </div>
+
+    <!-- Graph (v) -->
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">आकृति 2.1 (v):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_5" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_5)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <path d="M 55,50 C 75,95 88,135 100,150 C 120,180 140,240 160,240 C 170,240 175,175 180,150 C 190,115 220,60 250,60 C 280,60 310,115 320,150 C 325,175 330,240 340,240 C 360,240 380,180 400,150 C 412,135 425,95 445,50" fill="none" stroke="#e11d48" stroke-width="9" stroke-linecap="round"/>
+          <!-- 4 Intersection points -->
+          <circle cx="100" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="180" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="320" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="400" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="140" y="235" width="220" height="38" rx="10" fill="#ffe4e6" stroke="#f43f5e" stroke-width="3"/>
+          <text x="250" y="261" font-size="19" font-weight="900" fill="#9f1239" text-anchor="middle">📍 कुल 4 प्रतिच्छेद बिंदु</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> वक्र $x$-अक्ष को कुल <b>4 बिंदुओं</b> पर प्रतिच्छेद करता है।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 4 (चूँकि ग्राफ x-अक्ष को 4 बिंदुओं पर काटता है)।</div>
+    </div>
+
+    <!-- Graph (vi) -->
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">आकृति 2.1 (vi):</span></div>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 500 300" style="max-width: 600px; width: 100%; height: auto; background: #ffffff; border: 5px solid #0f172a; border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+          
+      <defs>
+        <pattern id="graph_grid_6" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+        </pattern>
+      </defs>
+      <!-- Darker High-Contrast Projector Friendly Graph Paper Background -->
+      <rect width="500" height="300" fill="#f8fafc"/>
+      <rect width="500" height="300" fill="url(#graph_grid_6)"/>
+    
+          
+      <!-- X-Axis (Thick Black Line) -->
+      <line x1="20" y1="150" x2="480" y2="150" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="490,150 470,140 470,160" fill="#000000"/>
+      <polygon points="10,150 30,140 30,160" fill="#000000"/>
+      <rect x="450" y="112" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="465" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X</text>
+      <rect x="20" y="112" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="36" y="135" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">X'</text>
+
+      <!-- Y-Axis (Thick Black Line) -->
+      <line x1="250" y1="280" x2="250" y2="20" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="250,10 240,30 260,30" fill="#000000"/>
+      <polygon points="250,290 240,270 260,270" fill="#000000"/>
+      <rect x="258" y="24" width="30" height="32" rx="6" fill="#000000"/>
+      <text x="273" y="47" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y</text>
+      <rect x="258" y="244" width="32" height="32" rx="6" fill="#000000"/>
+      <text x="274" y="267" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">Y'</text>
+
+      <!-- Origin O -->
+      <circle cx="250" cy="150" r="5" fill="#000000"/>
+      <rect x="218" y="156" width="28" height="28" rx="6" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+      <text x="232" y="177" font-size="20" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+    
+          
+          <path d="M 60,240 C 85,200 105,160 120,150 C 145,130 170,70 195,70 C 220,70 235,130 250,150 C 265,130 280,70 305,70 C 330,70 355,130 380,150 C 395,140 415,95 440,50" fill="none" stroke="#0284c7" stroke-width="9" stroke-linecap="round"/>
+          <!-- 3 points -->
+          <circle cx="120" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="250" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="380" cy="150" r="14" fill="#16a34a" stroke="#ffffff" stroke-width="4"/>
+          <rect x="120" y="235" width="260" height="38" rx="10" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+          <text x="250" y="261" font-size="19" font-weight="900" fill="#0369a1" text-anchor="middle">📍 कुल 3 बिंदु (1 कटाव + 2 स्पर्श)</text>
+        
+        </svg>
+      </div>
+    
+    
+      <div class="step-line"><b>ग्राफ का विश्लेषण:</b> वक्र $x$-अक्ष को 1 बिंदु पर काटता है तथा 2 बिंदुओं पर स्पर्श करता है (कुल <b>3 बिंदु</b>)।</div>
+      <div class="answer-highlight">✅ शून्यकों की संख्या = 3 (चूँकि ग्राफ x-अक्ष को 3 बिंदुओं पर प्रतिच्छेद/स्पर्श करता है)।</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 1: ग्राफ पर शून्यक खोजक -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #2563eb; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 12px;">
+      <i class="fas fa-chart-line"></i> लाइव सिमुलेटर 1: ज्यामितीय शून्यक खोजक (Graph Zeroes Explorer - $y = p(x)$)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      वक्र का प्रकार चुनें अथवा ऊर्ध्वाधर विस्थापन बदलें। वक्र X-अक्ष को जहाँ प्रतिच्छेद करता है, वे बिंदु $p(x)$ के शून्यक होते हैं:
+    </div>
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim1Curve('line')" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">1. सरल रेखा (1 शून्यक)</button>
+      <button onclick="setSim1Curve('parabola2')" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">2. परवलय (2 शून्यक)</button>
+      <button onclick="setSim1Curve('parabola1')" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">3. स्पर्श परवलय (1 शून्यक)</button>
+      <button onclick="setSim1Curve('parabola0')" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">4. अप्रतिच्छेदी (0 शून्यक)</button>
+      <button onclick="setSim1Curve('cubic')" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">5. त्रिघात वक्र (3 शून्यक)</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; align-items: center;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 20px; text-align: center;">
+        <div style="font-size: 19pt; font-weight: 700; color: #475569; margin-bottom: 10px;">लाइव ग्राफ़िकल विज़ुअलाइज़ेशन</div>
+        <svg id="sim1_svg" width="100%" height="260" viewBox="0 0 400 260" style="background: #ffffff; border-radius: 12px; border: 2px solid #94a3b8;"></svg>
+      </div>
+
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+        <div id="sim1_title" style="font-size: 22pt; font-weight: 800; color: #1e3a8a; margin-bottom: 12px;">शून्यकों की संख्या:</div>
+        <div id="sim1_count" style="font-size: 26pt; font-weight: 900; color: #0f172a; margin-bottom: 15px;"></div>
+        <div id="sim1_reason" style="font-size: 20pt; color: #334155; line-height: 1.6; background: #eff6ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2563eb;"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- =========================================================
+       PART 2: EXERCISE 2.2 (QUADRATIC POLYNOMIALS STEP BY STEP)
+       ========================================================= -->
+  <div class="part-header">📌 भाग 2: NCERT प्रश्नावली 2.2 — शून्यक एवं संबंध सत्यापन (चरणबद्ध हल)</div>
+
+  <!-- EX 2.2 Q1 Header -->
+  <div class="sub-header-red">प्रश्‍न 1. निम्नलिखित द्विघात बहुपदों के शून्यक ज्ञात कीजिए और शून्यकों तथा गुणांकों के बीच के संबंध की सत्यता की जाँच कीजिए:</div>
+
+  <!-- Q1 (i) x² - 2x - 8 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (i): x² - 2x - 8 के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: गुणनखंडन विधि (मध्य पद विभाजन)</span></div>
+      <div class="step-line">दिया गया बहुपद: $p(x) = x^2 - 2x - 8$</div>
+      <div class="step-line">मध्य पद $-2x$ को ऐसे दो भागों में तोड़ते हैं जिनका गुणनफल $-8$ और योग $-2$ हो ($-4$ और $+2$):</div>
+      <div class="math-line">$$= x^2 - 4x + 2x - 8$$</div>
+      <div class="math-line">$$= x(x - 4) + 2(x - 4)$$</div>
+      <div class="math-line">$$= (x - 4)(x + 2)$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">शून्यक के लिए $p(x) = 0$ रखने पर:</div>
+      <div class="math-line">$$(x - 4)(x + 2) = 0$$</div>
+      <div class="step-line">यदि $x - 4 = 0 \implies x = {\color{#b91c1c}{4}}$</div>
+      <div class="step-line">यदि $x + 2 = 0 \implies x = {\color{#b91c1c}{-2}}$</div>
+      <div class="step-line">अतः शून्यक $\alpha = 4$ तथा $\beta = -2$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंधों की सत्यता की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 1, \; b = -2, \; c = -8$</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = 4 + (-2) = {\color{#b91c1c}{2}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{-2}{1} = {\color{#b91c1c}{2}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = 2$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = 4 \times (-2) = {\color{#b91c1c}{-8}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \frac{-8}{1} = {\color{#b91c1c}{-8}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = -8$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = 4 और -2 (दोनों संबंध पूर्णतः सत्य व सत्यापित हैं)।</div>
+    </div>
+  </div>
+
+  <!-- Q1 (ii) 4s² - 4s + 1 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (ii): 4s² - 4s + 1 के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: गुणनखंडन</span></div>
+      <div class="step-line">दिया गया बहुपद: $p(s) = 4s^2 - 4s + 1$</div>
+      <div class="step-line">मध्य पद $-4s$ को $-2s - 2s$ के रूप में विभाजित करने पर:</div>
+      <div class="math-line">$$= 4s^2 - 2s - 2s + 1$$</div>
+      <div class="math-line">$$= 2s(2s - 1) - 1(2s - 1)$$</div>
+      <div class="math-line">$$= (2s - 1)(2s - 1) = (2s - 1)^2$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">$(2s - 1)(2s - 1) = 0$</div>
+      <div class="step-line">यदि $2s - 1 = 0 \implies 2s = 1 \implies s = \mathbf{{\color{#b91c1c}{\frac{1}{2}}}}$</div>
+      <div class="step-line">अतः दोनों शून्यक $\alpha = \frac{1}{2}$ तथा $\beta = \frac{1}{2}$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंध की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 4, \; b = -4, \; c = 1$</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = \frac{1}{2} + \frac{1}{2} = {\color{#b91c1c}{1}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{-4}{4} = {\color{#b91c1c}{1}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = 1$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = \frac{1}{2} \times \frac{1}{2} = \mathbf{{\color{#b91c1c}{\frac{1}{4}}}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \mathbf{{\color{#b91c1c}{\frac{1}{4}}}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = \frac{1}{4}$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = 1/2 और 1/2 (संबंध पूर्णतः सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q1 (iii) 6x² - 3 - 7x -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (iii): 6x² - 3 - 7x के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 1: मानक रूप में व्यवस्थित करना</span></div>
+      <div class="step-line">बहुपद को घातों के घटते क्रम में लिखने पर:</div>
+      <div class="math-line">$$p(x) = 6x^2 - 7x - 3$$</div>
+      <div class="step-line">मध्य पद $-7x$ को विभाजित करने पर (गुणनफल $6 \times (-3) = -18$ और योग $-7$):</div>
+      <div class="math-line">$$= 6x^2 - 9x + 2x - 3$$</div>
+      <div class="math-line">$$= 3x(2x - 3) + 1(2x - 3)$$</div>
+      <div class="math-line">$$= (2x - 3)(3x + 1)$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">यदि $2x - 3 = 0 \implies 2x = 3 \implies x = \mathbf{{\color{#b91c1c}{\frac{3}{2}}}}$</div>
+      <div class="step-line">यदि $3x + 1 = 0 \implies 3x = -1 \implies x = \mathbf{{\color{#b91c1c}{-\frac{1}{3}}}}$</div>
+      <div class="step-line">अतः शून्यक $\alpha = \frac{3}{2}$ और $\beta = -\frac{1}{3}$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंध की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 6, \; b = -7, \; c = -3$</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = \frac{3}{2} + \left(-\frac{1}{3}\right) = \frac{9 - 2}{6} = \mathbf{{\color{#b91c1c}{\frac{7}{6}}}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{-7}{6} = \mathbf{{\color{#b91c1c}{\frac{7}{6}}}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = \frac{7}{6}$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = \frac{3}{2} \times \left(-\frac{1}{3}\right) = \mathbf{{\color{#b91c1c}{-\frac{1}{2}}}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \frac{-3}{6} = \mathbf{{\color{#b91c1c}{-\frac{1}{2}}}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = -\frac{1}{2}$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = 3/2 और -1/3 (संबंध सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q1 (iv) 4u² + 8u -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (iv): 4u² + 8u के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: उभयनिष्ठ गुणनखंडन</span></div>
+      <div class="step-line">दिया गया बहुपद: $p(u) = 4u^2 + 8u$</div>
+      <div class="step-line">दोनों पदों में से $4u$ उभयनिष्ठ लेने पर:</div>
+      <div class="math-line">$$= 4u(u + 2)$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">यदि $4u = 0 \implies u = {\color{#b91c1c}{0}}$</div>
+      <div class="step-line">यदि $u + 2 = 0 \implies u = {\color{#b91c1c}{-2}}$</div>
+      <div class="step-line">अतः शून्यक $\alpha = 0$ तथा $\beta = -2$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंध की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 4, \; b = 8, \; c = 0$ (अचर पद 0 है)</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = 0 + (-2) = {\color{#b91c1c}{-2}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{8}{4} = {\color{#b91c1c}{-2}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = -2$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = 0 \times (-2) = {\color{#b91c1c}{0}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \frac{0}{4} = {\color{#b91c1c}{0}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = 0$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = 0 और -2 (संबंध सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q1 (v) t² - 15 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (v): t² - 15 के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 1: सर्वसमिका का प्रयोग</span></div>
+      <div class="step-line">हम जानते हैं: $a^2 - b^2 = (a - b)(a + b)$</div>
+      <div class="step-line">$t^2 - 15 = t^2 - (\sqrt{15})^2$</div>
+      <div class="math-line">$$= (t - \sqrt{15})(t + \sqrt{15})$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">यदि $t - \sqrt{15} = 0 \implies t = \mathbf{{\color{#b91c1c}{\sqrt{15}}}}$</div>
+      <div class="step-line">यदि $t + \sqrt{15} = 0 \implies t = \mathbf{{\color{#b91c1c}{-\sqrt{15}}}}$</div>
+      <div class="step-line">अतः शून्यक $\alpha = \sqrt{15}$ और $\beta = -\sqrt{15}$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंध की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 1, \; b = 0, \; c = -15$</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = \sqrt{15} + (-\sqrt{15}) = {\color{#b91c1c}{0}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{0}{1} = {\color{#b91c1c}{0}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = 0$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = \sqrt{15} \times (-\sqrt{15}) = {\color{#b91c1c}{-15}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \frac{-15}{1} = {\color{#b91c1c}{-15}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = -15$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = √15 और -√15 (संबंध सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q1 (vi) 3x² - x - 4 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (vi): 3x² - x - 4 के शून्यक एवं संबंध की जाँच</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: मध्य पद विभाजन</span></div>
+      <div class="step-line">दिया गया बहुपद: $p(x) = 3x^2 - x - 4$</div>
+      <div class="step-line">मध्य पद $-x$ को $-4x + 3x$ लिखने पर (गुणनफल $3 \times (-4) = -12$):</div>
+      <div class="math-line">$$= 3x^2 - 4x + 3x - 4$$</div>
+      <div class="math-line">$$= x(3x - 4) + 1(3x - 4)$$</div>
+      <div class="math-line">$$= (3x - 4)(x + 1)$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: शून्यक ज्ञात करना</span></div>
+      <div class="step-line">यदि $3x - 4 = 0 \implies 3x = 4 \implies x = \mathbf{{\color{#b91c1c}{\frac{4}{3}}}}$</div>
+      <div class="step-line">यदि $x + 1 = 0 \implies x = {\color{#b91c1c}{-1}}$</div>
+      <div class="step-line">अतः शून्यक $\alpha = \frac{4}{3}$ तथा $\beta = -1$ हैं।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: संबंध की जाँच</span></div>
+      <div class="step-line">यहाँ $a = 3, \; b = -1, \; c = -4$</div>
+
+      <div class="step-line"><b>(क) शून्यकों का योग:</b></div>
+      <div class="math-line">$$\alpha + \beta = \frac{4}{3} + (-1) = \frac{4 - 3}{3} = \mathbf{{\color{#b91c1c}{\frac{1}{3}}}}$$</div>
+      <div class="math-line">$$-\frac{b}{a} = -\frac{-1}{3} = \mathbf{{\color{#b91c1c}{\frac{1}{3}}}}$$</div>
+      <div class="step-line">$\implies \alpha + \beta = -\frac{b}{a} = \frac{1}{3}$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="step-line"><b>(ख) शून्यकों का गुणनफल:</b></div>
+      <div class="math-line">$$\alpha \cdot \beta = \frac{4}{3} \times (-1) = \mathbf{{\color{#b91c1c}{-\frac{4}{3}}}}$$</div>
+      <div class="math-line">$$\frac{c}{a} = \mathbf{{\color{#b91c1c}{-\frac{4}{3}}}}$$</div>
+      <div class="step-line">$\implies \alpha \cdot \beta = \frac{c}{a} = -\frac{4}{3}$ <span class="badge-green">सत्यापित</span></div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: शून्यक = 4/3 और -1 (संबंध पूर्णतः सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 2: शून्यक एवं गुणांक संबंध सत्यता परीक्षक -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #059669; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #065f46; margin-bottom: 12px;">
+      <i class="fas fa-balance-scale"></i> लाइव सिमुलेटर 2: शून्यक एवं गुणांक संबंध सत्यता परीक्षक ($\alpha+\beta = -b/a, \alpha\beta = c/a$)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      प्रश्नावली 2.2 (प्रश्न 1) के किसी भी उदाहरण पर क्लिक करें या अपने मान भरें और लाइव संबंध सत्यापन देखें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim2Values(1, -2, -8)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(i) $x^2 - 2x - 8$</button>
+      <button onclick="setSim2Values(4, -4, 1)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(ii) $4s^2 - 4s + 1$</button>
+      <button onclick="setSim2Values(6, -7, -3)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(iii) $6x^2 - 7x - 3$</button>
+      <button onclick="setSim2Values(4, 8, 0)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(iv) $4u^2 + 8u$</button>
+      <button onclick="setSim2Values(1, 0, -15)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(v) $t^2 - 15$</button>
+      <button onclick="setSim2Values(3, -1, -4)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(vi) $3x^2 - x - 4$</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$a$:</label>
+        <input type="number" id="sim2_a" value="1" oninput="updateSim2()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$b$:</label>
+        <input type="number" id="sim2_b" value="-2" oninput="updateSim2()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$c$:</label>
+        <input type="number" id="sim2_c" value="-8" oninput="updateSim2()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim2_result_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- =========================================================
+       EXERCISE 2.2 QUESTION 2 (FINDING QUADRATIC POLYNOMIAL)
+       ========================================================= -->
+  <div class="sub-header-red">प्रश्‍न 2. एक द्विघात बहुपद ज्ञात कीजिए, जिसके शून्यकों के योग तथा गुणनफल क्रमशः दी गई संख्याएँ हैं:</div>
+
+  <!-- Q2 (i) 1/4, -1 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (i): योग = 1/4 तथा गुणनफल = -1</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">दिया है:</span> योग $(S) = \frac{1}{4}$, गुणनफल $(P) = -1$</div>
+      <div class="step-line"><span class="badge-orange">सूत्र:</span> द्विघात बहुपद का रूप:</div>
+      <div class="math-line">$$p(x) = k [x^2 - Sx + P]$$</div>
+      <div class="step-line">मान प्रतिस्थापित करने पर:</div>
+      <div class="math-line">$$= k \left[x^2 - \frac{1}{4}x + (-1)\right]$$</div>
+      <div class="math-line">$$= k \left[\frac{4x^2 - x - 4}{4}\right]$$</div>
+      <div class="step-line">$k = 4$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{4x^2 - x - 4}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{4x^2 - x - 4}$</div>
+    </div>
+  </div>
+
+  <!-- Q2 (ii) √2, 1/3 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (ii): योग = √2 तथा गुणनफल = 1/3</div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">दिया है:</span> योग $(S) = \sqrt{2}$, गुणनफल $(P) = \frac{1}{3}$</div>
+      <div class="step-line"><span class="badge-blue">सूत्र:</span> $p(x) = k [x^2 - Sx + P]$</div>
+      <div class="math-line">$$= k \left[x^2 - \sqrt{2}x + \frac{1}{3}\right]$$</div>
+      <div class="math-line">$$= k \left[\frac{3x^2 - 3\sqrt{2}x + 1}{3}\right]$$</div>
+      <div class="step-line">$k = 3$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{3x^2 - 3\sqrt{2}x + 1}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{3x^2 - 3\sqrt{2}x + 1}$</div>
+    </div>
+  </div>
+
+  <!-- Q2 (iii) 0, √5 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (iii): योग = 0 तथा गुणनफल = √5</div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">दिया है:</span> योग $(S) = 0$, गुणनफल $(P) = \sqrt{5}$</div>
+      <div class="step-line"><span class="badge-orange">सूत्र:</span> $p(x) = k [x^2 - Sx + P]$</div>
+      <div class="math-line">$$= k [x^2 - 0 \cdot x + \sqrt{5}]$$</div>
+      <div class="step-line">$k = 1$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{x^2 + \sqrt{5}}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{x^2 + \sqrt{5}}$</div>
+    </div>
+  </div>
+
+  <!-- Q2 (iv) 1, 1 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (iv): योग = 1 तथा गुणनफल = 1</div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">दिया है:</span> योग $(S) = 1$, गुणनफल $(P) = 1$</div>
+      <div class="step-line"><span class="badge-blue">सूत्र:</span> $p(x) = k [x^2 - Sx + P]$</div>
+      <div class="math-line">$$= k [x^2 - 1 \cdot x + 1]$$</div>
+      <div class="step-line">$k = 1$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{x^2 - x + 1}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{x^2 - x + 1}$</div>
+    </div>
+  </div>
+
+  <!-- Q2 (v) -1/4, 1/4 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (v): योग = -1/4 तथा गुणनफल = 1/4</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">दिया है:</span> योग $(S) = -\frac{1}{4}$, गुणनफल $(P) = \frac{1}{4}$</div>
+      <div class="step-line"><span class="badge-orange">सूत्र:</span> $p(x) = k [x^2 - Sx + P]$</div>
+      <div class="math-line">$$= k \left[x^2 - \left(-\frac{1}{4}\right)x + \frac{1}{4}\right]$$</div>
+      <div class="math-line">$$= k \left[x^2 + \frac{1}{4}x + \frac{1}{4}\right]$$</div>
+      <div class="math-line">$$= k \left[\frac{4x^2 + x + 1}{4}\right]$$</div>
+      <div class="step-line">$k = 4$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{4x^2 + x + 1}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{4x^2 + x + 1}$</div>
+    </div>
+  </div>
+
+  <!-- Q2 (vi) 4, 1 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (vi): योग = 4 तथा गुणनफल = 1</div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">दिया है:</span> योग $(S) = 4$, गुणनफल $(P) = 1$</div>
+      <div class="step-line"><span class="badge-purple">सूत्र:</span> $p(x) = k [x^2 - Sx + P]$</div>
+      <div class="math-line">$$= k [x^2 - 4x + 1]$$</div>
+      <div class="step-line">$k = 1$ चुनने पर:</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{x^2 - 4x + 1}}}$$</div>
+      <div class="answer-highlight">✅ अभीष्ट द्विघात बहुपद: $\mathbf{x^2 - 4x + 1}$</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 3: द्विघात बहुपद निर्माता -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #d97706; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #b45309; margin-bottom: 12px;">
+      <i class="fas fa-magic"></i> लाइव सिमुलेटर 3: शून्यकों के योग ($S$) व गुणनफल ($P$) से द्विघात बहुपद निर्माता
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      सूत्र: $p(x) = k[x^2 - (\alpha+\beta)x + \alpha\beta]$। नीचे दिए गए बटनों से प्रश्न 2 का कोई भी भाग चुनें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim3Preset('1/4', '-1', 4)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(i) $S=1/4, P=-1$</button>
+      <button onclick="setSim3Preset('sqrt(2)', '1/3', 3)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(ii) $S=\sqrt{2}, P=1/3$</button>
+      <button onclick="setSim3Preset('0', 'sqrt(5)', 1)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(iii) $S=0, P=\sqrt{5}$</button>
+      <button onclick="setSim3Preset('1', '1', 1)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(iv) $S=1, P=1$</button>
+      <button onclick="setSim3Preset('-1/4', '1/4', 4)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(v) $S=-1/4, P=1/4$</button>
+      <button onclick="setSim3Preset('4', '1', 1)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(vi) $S=4, P=1$</button>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim3_calc_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- =========================================================
+       PART 3: BOARD SPECIAL RAPID FIRE Q&A
+       ========================================================= -->
+  <div class="part-header">📌 भाग 3: बोर्ड परीक्षा महत्वपूर्ण 1-अंक व 2-अंक वाले प्रश्नोत्तर</div>
+
+  <div class="qa-block">
+    <div class="question-heading">🎯 वस्तुनिष्ठ एवं बोर्ड परीक्षा अति लघु उत्तरीय प्रश्नोत्तर</div>
+
+    <!-- Board Q1 -->
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">प्रश्न 1:</span> यदि एक द्विघात बहुपद के शून्यक 2 और -3 हैं, तो वह बहुपद क्या होगा?</div>
+      <div class="step-line">शून्यकों का योग: $S = 2 + (-3) = -1$</div>
+      <div class="step-line">शून्यकों का गुणनफल: $P = 2 \times (-3) = -6$</div>
+      <div class="math-line">$$p(x) = x^2 - Sx + P$$</div>
+      <div class="math-line">$$= x^2 - (-1)x + (-6)$$</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{x^2 + x - 6}}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: $\mathbf{x^2 + x - 6}$</div>
+    </div>
+
+    <!-- Board Q2 -->
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">प्रश्न 2:</span> एक त्रिघात बहुपद के अधिकतम कितने शून्यक हो सकते हैं?</div>
+      <div class="step-line">उत्तर: किसी बहुपद के शून्यकों की अधिकतम संख्या उसकी घात के बराबर होती है। त्रिघात बहुपद की घात 3 होती है, अतः इसके <b>अधिकतम 3 शून्यक</b> हो सकते हैं।</div>
+      <div class="answer-highlight">✅ उत्तर: अधिकतम 3 शून्यक</div>
+    </div>
+
+    <!-- Board Q3 -->
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">प्रश्न 3:</span> यदि बहुपद $kx^2 + 2x + 3k$ के शून्यकों का योग उनके गुणनफल के बराबर है, तो $k$ का मान ज्ञात कीजिए।</div>
+      <div class="step-line">यहाँ $a = k, \; b = 2, \; c = 3k$</div>
+      <div class="step-line">शून्यकों का योग = $-\frac{b}{a} = -\frac{2}{k}$</div>
+      <div class="step-line">शून्यकों का गुणनफल = $\frac{c}{a} = \frac{3k}{k} = 3$</div>
+      <div class="step-line">प्रश्नानुसार, योग = गुणनफल:</div>
+      <div class="math-line">$$-\frac{2}{k} = 3$$</div>
+      <div class="math-line">$$3k = -2$$</div>
+      <div class="math-line">$$k = \mathbf{{\color{#b91c1c}{-\frac{2}{3}}}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: $\mathbf{k = -\frac{2}{3}}$</div>
+    </div>
+  </div>
+
+
+
+
+  <!-- LIVE SIMULATOR 5: बहुपद विभाजन एल्गोरिथ्म लाइव विज़ुअलाइज़र -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #e11d48; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #9f1239; margin-bottom: 12px;">
+      <i class="fas fa-divide"></i> लाइव सिमुलेटर 5: बहुपदों के लिए विभाजन एल्गोरिथ्म ($p(x) = g(x) \times  q(x) + r(x)$)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      उदाहरण चुनें और बहुपद के दीर्घ विभाजन (Long Division) के प्रत्येक पद तथा शेषफल का लाइव सत्यापन देखें:
+    </div>
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim5Example(1)" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">उदा 1: $(2x^2 + 3x + 1) \div (x + 2)$</button>
+      <button onclick="setSim5Example(2)" style="padding: 10px 20px; font-size: 19pt; font-weight: bold; border-radius: 8px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">उदा 2: $(3x^3 + x^2 + 2x + 5) \div (x^2 + 2x + 1)$</button>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim5_div_steps" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+</div> <!-- End of #contentToCopy -->
+
+<!-- JAVASCRIPT CONTROLS (Identical to Class 10 SS) -->
+<script>
+  let containerWidth = 1350;
+  let sizeOffset = 0;
+  let weightOffset = 0;
+  let strokeOffset = 0;
+
+  function adjustWidth(amount) {
+    containerWidth += amount;
+    if (containerWidth < 300) containerWidth = 300;
+    if (containerWidth > 6000) containerWidth = 6000;
+    const container = document.getElementById('contentToCopy');
+    if (container) {
+      container.style.width = containerWidth + 'px';
+      container.style.maxWidth = '100%';
+    }
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -18) sizeOffset = -18;
+    if (sizeOffset > 40) sizeOffset = 40;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontSize = (26 + sizeOffset) + 'pt';
+    });
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    if (weightOffset < -600) weightOffset = -600;
+    if (weightOffset > 800) weightOffset = 800;
+    strokeOffset += (amount / 100) * 0.3;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontWeight = (900 + weightOffset);
+      el.style.webkitTextStroke = (1.1 + strokeOffset) + 'px #000000';
+    });
+  }
+
+  async function copyEntireContent() {
+    const btn = document.getElementById('floatingCopyBtn');
+    const target = document.getElementById('contentToCopy');
+    if (!target || !btn) return;
+    const content = target.innerHTML;
+
+    try {
+      const blob = new Blob([content], { type: 'text/html' });
+      const item = new ClipboardItem({ 'text/html': blob });
+      await navigator.clipboard.write([item]);
+      btn.innerText = '✅';
+      btn.classList.add('success');
+      setTimeout(() => {
+        btn.innerText = '📋';
+        btn.classList.remove('success');
+      }, 3000);
+    } catch (err) {
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        btn.innerText = '✅';
+        btn.classList.add('success');
+        setTimeout(() => {
+          btn.innerText = '📋';
+          btn.classList.remove('success');
+        }, 3000);
+      } catch (e2) {
+        alert('कॉपी नहीं हो सका: ' + err);
+      }
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+    if (e.key === 'w' || e.key === 'W') {
+      if (e.shiftKey) adjustWidth(-50);
+      else adjustWidth(50);
+    } else if (e.key === '+' || e.key === '=') {
+      adjustWidth(50);
+    } else if (e.key === '-') {
+      adjustWidth(-50);
+    }
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(thickenFractionLines, 100);
+    setTimeout(thickenFractionLines, 500);
+    setTimeout(thickenFractionLines, 1200);
+  });
+</script>
+
+
+
+  <script>
+    /* =========================================================================
+       JAVASCRIPT FOR ALL 5 CH 2 SIMULATORS (Strict Concatenation, No Dollar)
+       ========================================================================= */
+
+    // SIMULATOR 1: ज्यामितीय शून्यक खोजक
+    function setSim1Curve(type) {
+      var svg = document.getElementById('sim1_svg');
+      var title = document.getElementById('sim1_title');
+      var count = document.getElementById('sim1_count');
+      var reason = document.getElementById('sim1_reason');
+
+      var svgContent = '<line x1="20" y1="130" x2="380" y2="130" stroke="#000000" stroke-width="4"/>';
+      svgContent += '<polygon points="390,130 375,123 375,137" fill="#000000"/>';
+      svgContent += '<text x="375" y="115" font-size="14" font-weight="bold" fill="#000000">X</text>';
+
+      svgContent += '<line x1="200" y1="20" x2="200" y2="240" stroke="#000000" stroke-width="4"/>';
+      svgContent += '<polygon points="200,10 193,25 207,25" fill="#000000"/>';
+      svgContent += '<text x="215" y="25" font-size="14" font-weight="bold" fill="#000000">Y</text>';
+
+      if (type === 'line') {
+        svgContent += '<line x1="60" y1="210" x2="340" y2="50" stroke="#2563eb" stroke-width="5"/>';
+        svgContent += '<circle cx="200" cy="130" r="7" fill="#dc2626"/>';
+        count.innerHTML = '<span style="color: #16a34a;">1 शून्यक</span>';
+        reason.innerHTML = 'वक्र (सरल रेखा) X-अक्ष को केवल <strong>1 बिंदु</strong> पर प्रतिच्छेद करता है। अतः शून्यकों की संख्या <strong>1</strong> है।';
+      } else if (type === 'parabola2') {
+        svgContent += '<path d="M 80 40 Q 200 240 320 40" fill="none" stroke="#2563eb" stroke-width="5"/>';
+        svgContent += '<circle cx="120" cy="130" r="7" fill="#dc2626"/>';
+        svgContent += '<circle cx="280" cy="130" r="7" fill="#dc2626"/>';
+        count.innerHTML = '<span style="color: #16a34a;">2 शून्यक</span>';
+        reason.innerHTML = 'परवलय X-अक्ष को <strong>2 बिंदुओं</strong> पर प्रतिच्छेद करता है। अतः इसके <strong>2 वास्तविक शून्यक</strong> हैं।';
+      } else if (type === 'parabola1') {
+        svgContent += '<path d="M 80 40 Q 200 130 320 40" fill="none" stroke="#2563eb" stroke-width="5"/>';
+        svgContent += '<circle cx="200" cy="130" r="7" fill="#dc2626"/>';
+        count.innerHTML = '<span style="color: #d97706;">1 शून्यक (दो संपाती बिंदु)</span>';
+        reason.innerHTML = 'परवलय X-अक्ष को केवल <strong>1 बिंदु</strong> पर स्पर्श करता है। अतः इसके दोनों शून्यक संपाती (समान) हैं।';
+      } else if (type === 'parabola0') {
+        svgContent += '<path d="M 80 40 Q 200 80 320 40" fill="none" stroke="#2563eb" stroke-width="5"/>';
+        count.innerHTML = '<span style="color: #dc2626;">0 शून्यक</span>';
+        reason.innerHTML = 'परवलय X-अक्ष को <strong>किसी भी बिंदु पर प्रतिच्छेद या स्पर्श नहीं करता</strong>। अतः शून्यकों की संख्या <strong>0</strong> है।';
+      } else {
+        svgContent += '<path d="M 60 210 C 130 50 160 220 340 50" fill="none" stroke="#2563eb" stroke-width="5"/>';
+        svgContent += '<circle cx="95" cy="130" r="7" fill="#dc2626"/>';
+        svgContent += '<circle cx="165" cy="130" r="7" fill="#dc2626"/>';
+        svgContent += '<circle cx="280" cy="130" r="7" fill="#dc2626"/>';
+        count.innerHTML = '<span style="color: #16a34a;">3 शून्यक</span>';
+        reason.innerHTML = 'त्रिघात वक्र X-अक्ष को ठीक <strong>3 बिंदुओं</strong> पर काटता है। अतः इसके <strong>3 शून्यक</strong> हैं।';
+      }
+      svg.innerHTML = svgContent;
+    }
+
+    // SIMULATOR 4: परवलय शीर्ष व सममिति अक्ष
+    function updateSim4() {
+      var a = parseFloat(document.getElementById('sim4_a').value) || 1;
+      var b = parseFloat(document.getElementById('sim4_b').value) || 0;
+      var c = parseFloat(document.getElementById('sim4_c').value) || 0;
+
+      if (a === 0) a = 1;
+
+      var h = -b / (2 * a);
+      var k = a * h * h + b * h + c;
+      h = Math.round(h * 100) / 100;
+      k = Math.round(k * 100) / 100;
+
+      var dirDiv = document.getElementById('sim4_dir');
+      var vDiv = document.getElementById('sim4_vertex');
+      var axisDiv = document.getElementById('sim4_axis');
+      var svg = document.getElementById('sim4_svg');
+
+      if (a > 0) {
+        dirDiv.innerHTML = '<span style="color: #059669;">✓ a > 0: परवलय ऊपर की ओर खुलता है (U-Shape)</span>';
+      } else {
+        dirDiv.innerHTML = '<span style="color: #dc2626;">✓ a < 0: परवलय नीचे की ओर खुलता है (Inverted U-Shape)</span>';
+      }
+
+      vDiv.innerHTML = 'परवलय का शीर्ष (Vertex): $\mathbf{(' + h + ', ' + k + ')}$';
+      axisDiv.innerHTML = 'सममिति अक्ष (Axis of Symmetry): $\mathbf{x = ' + h + '}$<br>' +
+        'समीकरण: $y = ' + (a === 1 ? '' : a === -1 ? '-' : a) + 'x^2 ' + (b >= 0 ? '+' + b : b) + 'x ' + (c >= 0 ? '+' + c : c) + '$';
+
+      var svgContent = '<line x1="20" y1="120" x2="300" y2="120" stroke="#64748b" stroke-width="2"/>';
+      svgContent += '<line x1="160" y1="20" x2="160" y2="220" stroke="#64748b" stroke-width="2"/>';
+
+      var sx = 160 + h * 15;
+      var sy = 120 - k * 8;
+      sx = Math.max(40, Math.min(280, sx));
+      sy = Math.max(30, Math.min(210, sy));
+
+      // Draw axis of symmetry line
+      svgContent += '<line x1="' + sx + '" y1="20" x2="' + sx + '" y2="220" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4"/>';
+
+      if (a > 0) {
+        svgContent += '<path d="M ' + (sx - 70) + ' ' + (sy - 80) + ' Q ' + sx + ' ' + (sy + 20) + ' ' + (sx + 70) + ' ' + (sy - 80) + '" fill="none" stroke="#7c3aed" stroke-width="4"/>';
+      } else {
+        svgContent += '<path d="M ' + (sx - 70) + ' ' + (sy + 80) + ' Q ' + sx + ' ' + (sy - 20) + ' ' + (sx + 70) + ' ' + (sy + 80) + '" fill="none" stroke="#7c3aed" stroke-width="4"/>';
+      }
+      svgContent += '<circle cx="' + sx + '" cy="' + sy + '" r="6" fill="#e11d48"/>';
+      svg.innerHTML = svgContent;
+
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([vDiv, axisDiv]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 2: शून्यक एवं संबंध सत्यापन
+    function setSim2Values(a, b, c) {
+      document.getElementById('sim2_a').value = a;
+      document.getElementById('sim2_b').value = b;
+      document.getElementById('sim2_c').value = c;
+      updateSim2();
+    }
+
+    function updateSim2() {
+      var a = parseFloat(document.getElementById('sim2_a').value) || 1;
+      var b = parseFloat(document.getElementById('sim2_b').value) || 0;
+      var c = parseFloat(document.getElementById('sim2_c').value) || 0;
+      var box = document.getElementById('sim2_result_box');
+
+      var D = b * b - 4 * a * c;
+      if (D < 0) {
+        box.innerHTML = 'इस बहुपद के कोई वास्तविक शून्यक नहीं हैं ($D < 0$)।';
+        return;
+      }
+
+      var alpha = (-b + Math.sqrt(D)) / (2 * a);
+      var beta = (-b - Math.sqrt(D)) / (2 * a);
+      alpha = Math.round(alpha * 1000) / 1000;
+      beta = Math.round(beta * 1000) / 1000;
+
+      var sumActual = Math.round((alpha + beta) * 1000) / 1000;
+      var sumFormula = Math.round((-b / a) * 1000) / 1000;
+
+      var prodActual = Math.round((alpha * beta) * 1000) / 1000;
+      var prodFormula = Math.round((c / a) * 1000) / 1000;
+
+      var out = '<strong>द्विघात बहुपद:</strong> $' + (a === 1 ? '' : a === -1 ? '-' : a) + 'x^2 ' + (b >= 0 ? '+' + b : b) + 'x ' + (c >= 0 ? '+' + c : c) + '$<br>' +
+        '<strong>प्राप्त शून्यक:</strong> $\mathbf{\alpha = ' + alpha + '}, \quad \mathbf{\beta = ' + beta + '}$<br><br>' +
+        '<div style="background: #ecfdf5; border: 2px solid #a7f3d0; padding: 15px; border-radius: 10px; margin-bottom: 12px;">' +
+        '<strong>1. शून्यकों का योगफल संबंध:</strong><br>' +
+        '$\alpha + \beta = ' + alpha + ' + (' + beta + ') = \mathbf{' + sumActual + '}$<br>' +
+        '$-\frac{b}{a} = -\frac{' + b + '}{' + a + '} = \mathbf{' + sumFormula + '}$<br>' +
+        '<span style="color: #059669; font-weight: bold;">✓ संबंध सत्यापित: $\alpha + \beta = -\frac{b}{a} = ' + sumActual + '$</span>' +
+        '</div>' +
+        '<div style="background: #ecfdf5; border: 2px solid #a7f3d0; padding: 15px; border-radius: 10px;">' +
+        '<strong>2. शून्यकों का गुणनफल संबंध:</strong><br>' +
+        '$\alpha \times \beta = ' + alpha + ' \times (' + beta + ') = \mathbf{' + prodActual + '}$<br>' +
+        '$\frac{c}{a} = \frac{' + c + '}{' + a + '} = \mathbf{' + prodFormula + '}$<br>' +
+        '<span style="color: #059669; font-weight: bold;">✓ संबंध सत्यापित: $\alpha\beta = \frac{c}{a} = ' + prodActual + '$</span>' +
+        '</div>';
+
+      box.innerHTML = out;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 3: शून्यकों के योग व गुणनफल से बहुपद निर्माण
+    function setSim3Preset(sumStr, prodStr, kVal) {
+      var box = document.getElementById('sim3_calc_box');
+      var out = '<strong>दिया गया मान:</strong> शून्यकों का योग $S = ' + sumStr + '$, गुणनफल $P = ' + prodStr + '$<br>' +
+        '<strong>मानक सूत्र:</strong> $p(x) = k[x^2 - (\alpha + \beta)x + \alpha\beta] = k[x^2 - Sx + P]$<br><br>' +
+        'मान रखने पर:<br>' +
+        '$p(x) = k[x^2 - (' + sumStr + ')x + (' + prodStr + ')]$<br>';
+
+      if (kVal > 1) {
+        out += 'हरों को समाप्त करने हेतु $k = ' + kVal + '$ लेने पर:<br>' +
+          '$\mathbf{p(x) = ' + kVal + '[x^2 - (' + sumStr + ')x + (' + prodStr + ')]}$<br>';
+      }
+      out += '<strong>अतः अभीष्ट द्विघात बहुपद का रूप तैयार है।</strong>';
+
+      box.innerHTML = out;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 5: बहुपद विभाजन एल्गोरिथ्म
+    function setSim5Example(exNum) {
+      var box = document.getElementById('sim5_div_steps');
+      if (exNum === 1) {
+        box.innerHTML = '<strong>भाज्य $p(x) = 2x^2 + 3x + 1$, भाजक $g(x) = x + 2$</strong><br>' +
+          '<strong>चरण 1:</strong> उच्चतम घात पद $2x^2$ को $x$ से भाग देने पर प्रथम भागफल $= 2x$<br>' +
+          'घटाने पर शेष $= -x + 1$<br>' +
+          '<strong>चरण 2:</strong> $-x$ को $x$ से भाग देने पर द्वितीय भागफल $= -1$<br>' +
+          'घटाने पर अंतिम शेषफल $= 3$<br>' +
+          '<strong>प्राप्त परिणाम:</strong> भागफल $\mathbf{q(x) = 2x - 1}$, शेषफल $\mathbf{r(x) = 3}$<br><br>' +
+          '<div style="background: #fff1f2; padding: 12px; border-radius: 8px; border-left: 5px solid #e11d48;">' +
+          '<strong>विभाजन एल्गोरिथ्म सत्यापन:</strong><br>' +
+          '$g(x) \times q(x) + r(x) = (x + 2)(2x - 1) + 3 = 2x^2 + 3x - 2 + 3 = \mathbf{2x^2 + 3x + 1} = p(x)$ ✓ सत्यापित!' +
+          '</div>';
+      } else {
+        box.innerHTML = '<strong>भाज्य $p(x) = 3x^3 + x^2 + 2x + 5$, भाजक $g(x) = x^2 + 2x + 1$</strong><br>' +
+          '<strong>चरण 1:</strong> प्रथम भागफल पद $= \frac{3x^3}{x^2} = 3x$<br>' +
+          'घटाने पर शेष $= -5x^2 - x + 5$<br>' +
+          '<strong>चरण 2:</strong> द्वितीय भागफल पद $= \frac{-5x^2}{x^2} = -5$<br>' +
+          'घटाने पर अंतिम शेषफल $= 9x + 10$<br>' +
+          '<strong>प्राप्त परिणाम:</strong> भागफल $\mathbf{q(x) = 3x - 5}$, शेषफल $\mathbf{r(x) = 9x + 10}$<br><br>' +
+          '<div style="background: #fff1f2; padding: 12px; border-radius: 8px; border-left: 5px solid #e11d48;">' +
+          '<strong>विभाजन एल्गोरिथ्म सत्यापन:</strong><br>' +
+          '$(x^2 + 2x + 1)(3x - 5) + (9x + 10) = 3x^3 + x^2 + 2x + 5 = p(x)$ ✓ सत्यापित!' +
+          '</div>';
+      }
+
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      setSim1Curve('parabola2');
+      updateSim4();
+      setSim2Values(1, -2, -8);
+      setSim3Preset('1/4', '-1', 4);
+      setSim5Example(1);
+    });
+  </script>
+
+</body>
+</html>
+
+
+  <!-- LIVE SIMULATOR 4: परवलय शीर्ष व सममिति अक्ष लाइव विश्लेषक -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #7c3aed; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #5b21b6; margin-bottom: 12px;">
+      <i class="fas fa-shapes"></i> लाइव सिमुलेटर 4: परवलय (Parabola) शीर्ष एवं सममिति अक्ष विश्लेषक ($y = ax^2 + bx + c$)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      गुणांक $a, b, c$ बदलें और परवलय की दिशा, शीर्ष (Vertex) एवं सममिति अक्ष देखें:
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$a$:</label>
+        <input type="number" id="sim4_a" value="1" step="0.5" oninput="updateSim4()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$b$:</label>
+        <input type="number" id="sim4_b" value="-2" step="1" oninput="updateSim4()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">$c$:</label>
+        <input type="number" id="sim4_c" value="-3" step="1" oninput="updateSim4()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; align-items: center;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 20px; text-align: center;">
+        <svg id="sim4_svg" width="100%" height="240" viewBox="0 0 320 240" style="background: #f5f3ff; border-radius: 12px; border: 1px solid #ddd6fe;"></svg>
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+        <div id="sim4_dir" style="font-size: 22pt; font-weight: 800; color: #5b21b6; margin-bottom: 12px;"></div>
+        <div id="sim4_vertex" style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-bottom: 12px;"></div>
+        <div id="sim4_axis" style="font-size: 20pt; color: #334155; line-height: 1.6; background: #f3e8ff; padding: 12px; border-radius: 8px;"></div>
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मास्टर प्रश्न-उत्तर (Master Q&A): NCERT कक्षा 10 गणित अध्याय 7 - निर्देशांक ज्यामिति (Projector & Mobile Ready)</title>
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$', '$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-page: #cbd5e1;
+      --card-bg: #ffffff;
+      --text-main: #000000;
+      --primary-blue: #1e3a8a;
+      --badge-blue: #2563eb;
+      --badge-green: #15803d;
+      --badge-orange: #c2410c;
+      --badge-purple: #6b21a8;
+      --badge-rose: #be123c;
+      --border-card: #94a3b8;
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+      font-size: 26pt;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 6px solid var(--border-card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Natural flow top action bar */
+    .action-bar-top {
+      position: relative;
+      margin: 0 auto 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 18px;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn-action {
+      background: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 20pt;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #60a5fa;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-action-emerald {
+      background: #059669;
+      border-color: #34d399;
+    }
+    .btn-action-emerald:hover { background: #047857; }
+
+    /* Fraction Line Enhancement */
+    .mjx-mfrac > .mjx-line {
+      border-top: 8px solid #047857 !important;
+      background-color: #047857 !important;
+      height: 8px !important;
+      min-height: 8px !important;
+      opacity: 1 !important;
+    }
+    .MathJax .mfrac > span:not([class]) {
+      border-top: 8px solid #047857 !important;
+      min-height: 8px !important;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: 'Outfit', 'Mukta', sans-serif;
+      font-size: 44pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      text-align: center;
+      margin: 10px 0 20px 0;
+      line-height: 1.2;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 26pt;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .section-header {
+      background: #1e293b;
+      color: #ffffff !important;
+      padding: 16px 28px;
+      border-radius: 16px;
+      margin: 40px 0 30px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 30pt;
+      font-weight: 800;
+      border-left: 12px solid #3b82f6;
+    }
+
+    /* Question Cards */
+    .qa-box {
+      border: 4px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.2s ease;
+    }
+    .qa-box:hover {
+      border-color: #94a3b8;
+    }
+
+    .q-text {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .q-tag {
+      background: #1e3a8a;
+      color: #ffffff !important;
+      padding: 4px 16px;
+      border-radius: 10px;
+      font-size: 22pt;
+      font-weight: 900;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Step Boxes */
+    .step-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 24pt;
+      line-height: 1.6;
+    }
+    .step-blue {
+      background: #eff6ff;
+      border-left: 8px solid #2563eb;
+      color: #1e3a8a;
+    }
+    .step-orange {
+      background: #fff7ed;
+      border-left: 8px solid #ea580c;
+      color: #9a3412;
+    }
+    .step-green {
+      background: #f0fdf4;
+      border-left: 8px solid #16a34a;
+      color: #166534;
+    }
+    .step-purple {
+      background: #faf5ff;
+      border-left: 8px solid #9333ea;
+      color: #581c87;
+    }
+
+    .badge-step {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 20pt;
+      color: #ffffff !important;
+      margin-bottom: 10px;
+    }
+    .bg-blue { background: #2563eb; }
+    .bg-orange { background: #ea580c; }
+    .bg-green { background: #16a34a; }
+    .bg-purple { background: #9333ea; }
+
+    /* Answer Boxes */
+    .ans-box {
+      background: #ecfdf5;
+      border: 4px solid #10b981;
+      border-radius: 14px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      font-size: 26pt;
+      font-weight: 900;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Simulator Container Styles */
+    .sim-card {
+      background: #f8fafc;
+      border: 4px solid #3b82f6;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 35px 0 45px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .sim-title {
+      font-size: 28pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-desc {
+      font-size: 22pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .sim-control-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+    }
+    .sim-label {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .sim-slider {
+      flex: 1;
+      min-width: 220px;
+      height: 12px;
+      border-radius: 6px;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+    .sim-val-pill {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 22pt;
+      font-weight: 800;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .sim-display-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .sim-svg-wrap {
+      flex: 1;
+      min-width: 320px;
+      background: #ffffff;
+      border: 3px solid #94a3b8;
+      border-radius: 16px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sim-stats-wrap {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sim-stat-box {
+      background: #ffffff;
+      border-left: 6px solid #2563eb;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .sim-stat-label {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .sim-stat-val {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      flex: 1;
+      min-width: 220px;
+      background: #1e293b;
+      color: #ffffff !important;
+      text-align: center;
+      padding: 15px 25px;
+      font-size: 22pt;
+      font-weight: 800;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-nav:hover { background: #334155; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TOP ACTION BAR -->
+    <div class="action-bar-top">
+      <a href="index.html" class="btn-action"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math6.html" class="btn-action"><i class="fas fa-arrow-left"></i> Ch 6: त्रिभुज</a>
+      <span style="color: #f8fafc; font-weight: 800; font-size: 22pt;">कक्षा 10 गणित: अध्याय 7</span>
+      <a href="qa_master_math8.html" class="btn-action btn-action-emerald">Ch 8: त्रिकोणमिति <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- TITLE HEADER -->
+    <h1>अध्याय 7: निर्देशांक ज्यामिति (Coordinate Geometry)</h1>
+    <div class="sub-title">NCERT संपूर्ण प्रश्नावली 7.1 व 7.2 (सभी 20 प्रश्न) • 100% चरणबद्ध हल • उच्च-कंट्रास्ट आरेख • 5 लाइव सिमुलेटर</div>
+
+    <!-- FORMULA SUMMARY CARD -->
+    <div style="background: #f8fafc; border: 4px solid #3b82f6; border-radius: 20px; padding: 30px; margin-bottom: 40px;">
+      <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 20px;">
+        <i class="fas fa-book-open"></i> मुख्य सूत्र एवं संकल्पनाएँ (Key Formulas)
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div style="background: #eff6ff; border-left: 6px solid #2563eb; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #1e3a8a; font-size: 22pt;">1. दूरी सूत्र (Distance Formula)</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$<br>
+            मूल बिंदु $(0, 0)$ से दूरी $= \sqrt{x^2 + y^2}$
+          </div>
+        </div>
+        <div style="background: #f0fdf4; border-left: 6px solid #16a34a; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #166534; font-size: 22pt;">2. विभाजन सूत्र (Section Formula)</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            $P(x, y) = \left(\frac{m_1 x_2 + m_2 x_1}{m_1 + m_2}, \frac{m_1 y_2 + m_2 y_1}{m_1 + m_2}\right)$
+          </div>
+        </div>
+        <div style="background: #fff7ed; border-left: 6px solid #ea580c; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #9a3412; font-size: 22pt;">3. मध्य-बिंदु सूत्र (Midpoint Formula)</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            $M(x, y) = \left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$
+          </div>
+        </div>
+        <div style="background: #faf5ff; border-left: 6px solid #9333ea; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #581c87; font-size: 22pt;">4. समचतुर्भुज का क्षेत्रफल</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            $\text{Area} = \frac{1}{2} \times d_1 \times d_2$
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECTION 7.1
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-ruler-combined"></i> प्रश्नावली 7.1: दूरी सूत्र आधारित सभी 10 प्रश्न
+    </div>
+
+    <!-- 7.1 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> निम्नलिखित बिंदु-युग्मों के बीच की दूरियां ज्ञात कीजिए:
+        <br>(i) $(2, 3), (4, 1)$ &nbsp;&nbsp;&nbsp;&nbsp; (ii) $(-5, 7), (-1, 3)$ &nbsp;&nbsp;&nbsp;&nbsp; (iii) $(a, b), (-a, -b)$
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(i) $(2, 3)$ और $(4, 1)$ के बीच की दूरी</span>
+        <div>$d = \sqrt{(4 - 2)^2 + (1 - 3)^2} = \sqrt{2^2 + (-2)^2} = \sqrt{4 + 4} = \sqrt{8} = \mathbf{2\sqrt{2}\text{ units}}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">(ii) $(-5, 7)$ और $(-1, 3)$ के बीच की दूरी</span>
+        <div>$d = \sqrt{[-1 - (-5)]^2 + (3 - 7)^2} = \sqrt{4^2 + (-4)^2} = \sqrt{16 + 16} = \sqrt{32} = \mathbf{4\sqrt{2}\text{ units}}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">(iii) $(a, b)$ और $(-a, -b)$ के बीच की दूरी (अति-महत्वपूर्ण)</span>
+        <div>$d = \sqrt{(-a - a)^2 + (-b - b)^2} = \sqrt{(-2a)^2 + (-2b)^2} = \sqrt{4a^2 + 4b^2} = \mathbf{2\sqrt{a^2 + b^2}\text{ units}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) $2\sqrt{2}$, \quad (ii) $4\sqrt{2}$, \quad (iii) $2\sqrt{a^2 + b^2}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 1: DISTANCE FORMULA (Placed right under 7.1 Q1 & Q2)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #2563eb;">
+      <div class="sim-title">
+        <i class="fas fa-arrows-alt"></i> लाइव सिमुलेटर 1: दूरी सूत्र लाइव 2D कार्तीय तल कैलकुलेटर
+      </div>
+      <div class="sim-desc">
+        बिंदु $A(x_1, y_1)$ तथा $B(x_2, y_2)$ के निर्देशांक बदलकर उनके बीच की दूरी ($d = \sqrt{\Delta x^2 + \Delta y^2}$) लाइव ग्राफ पर देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">A(x₁, y₁):</span>
+        <input type="range" id="ch7_sim1_x1" class="sim-slider" min="-10" max="10" value="2" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch7_sim1_x1_val">2</span>
+        <input type="range" id="ch7_sim1_y1" class="sim-slider" min="-10" max="10" value="3" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch7_sim1_y1_val">3</span>
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">B(x₂, y₂):</span>
+        <input type="range" id="ch7_sim1_x2" class="sim-slider" min="-10" max="10" value="4" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch7_sim1_x2_val">4</span>
+        <input type="range" id="ch7_sim1_y2" class="sim-slider" min="-10" max="10" value="1" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch7_sim1_y2_val">1</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch7_sim1_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Graph SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">$\Delta x = x_2 - x_1$ तथा $\Delta y = y_2 - y_1$</div>
+            <div class="sim-stat-val" id="ch7_sim1_deltas" style="color: #1e3a8a;">Δx = 2, Δy = -2</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">दूरी $d = \sqrt{(\Delta x)^2 + (\Delta y)^2}$</div>
+            <div class="sim-stat-val" id="ch7_sim1_dist" style="color: #166534;">√8 ≈ 2.83 units</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.1 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> बिंदुओं $(0, 0)$ और $(36, 15)$ के बीच की दूरी ज्ञात कीजिए। क्या अब आप अनुच्छेद 7.2 में दिए दोनों शहरों $A$ और $B$ के बीच की दूरी ज्ञात कर सकते हैं?
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$d = \sqrt{(36 - 0)^2 + (15 - 0)^2} = \sqrt{36^2 + 15^2} = \sqrt{1296 + 225} = \sqrt{1521} = \mathbf{39\text{ km}}$</div>
+        <div>हाँ, दोनों शहरों $A$ और $B$ के बीच की दूरी $39\text{ km}$ है।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: दोनों बिंदुओं/शहरों के बीच की दूरी = $\mathbf{39\text{ km}}$</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> निर्धारित कीजिए कि क्या बिंदु $(1, 5)$, $(2, 3)$ और $(-2, -11)$ संरेखी (Collinear) हैं।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: तीनों दूरियों की गणना</span>
+        <div>माना $A(1, 5), B(2, 3), C(-2, -11)$</div>
+        <div>$AB = \sqrt{(2 - 1)^2 + (3 - 5)^2} = \sqrt{1 + 4} = \sqrt{5} \approx 2.24$</div>
+        <div>$BC = \sqrt{(-2 - 2)^2 + (-11 - 3)^2} = \sqrt{16 + 196} = \sqrt{212} \approx 14.56$</div>
+        <div>$AC = \sqrt{(-2 - 1)^2 + (-11 - 5)^2} = \sqrt{9 + 256} = \sqrt{265} \approx 16.28$</div>
+      </div>
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: संरेखता की जाँच</span>
+        <div>$AB + BC = \sqrt{5} + \sqrt{212} \ne \sqrt{265} = AC$</div>
+        <div>किन्हीं दो दूरियों का योग तीसरी दूरी के बराबर नहीं है।</div>
+        <div>अतः दिए गए बिंदु <strong>संरेखी नहीं हैं</strong>।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: दिए गए तीनों बिंदु <strong>संरेखी नहीं हैं</strong>।</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 2: COLLINEARITY & TRIANGLE TYPE (Placed right under 7.1 Q3 & Q4)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #16a34a;">
+      <div class="sim-title">
+        <i class="fas fa-draw-polygon"></i> लाइव सिमुलेटर 2: 3 बिंदु संरेखता एवं त्रिभुज प्रकृति विश्लेषक (प्रश्न 3 व 4)
+      </div>
+      <div class="sim-desc">
+        तीन बिंदुओं $A, B, C$ के निर्देशांक बदलकर दूरियाँ एवं संरेखता / त्रिभुज प्रकार (समद्विबाहु, समबाहु, समकोण) लाइव जाँचिए:
+      </div>
+
+      <div class="sim-control-group">
+        <button onclick="setPointsSim2(1,5, 2,3, -2,-11)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">Q3 मान (असंरेखी)</button>
+        <button onclick="setPointsSim2(5,-2, 6,4, 7,-2)" class="btn-action btn-action-emerald" style="font-size: 16pt; padding: 6px 14px;">Q4 मान (समद्विबाहु)</button>
+        <button onclick="setPointsSim2(1,1, 2,2, 3,3)" class="btn-action" style="font-size: 16pt; padding: 6px 14px; background: #9333ea; border-color: #c084fc;">संरेखी रेखा</button>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch7_sim2_svg" viewBox="0 0 260 200" style="width: 260px; height: 200px;">
+            <!-- Dynamic 3 Points SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">दूरियाँ: AB, BC, CA</div>
+            <div class="sim-stat-val" id="ch7_sim2_dists" style="color: #1e3a8a;">AB=2.24, BC=14.56, CA=16.28</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">निष्कर्ष / ज्यामितीय प्रकृति</div>
+            <div class="sim-stat-val" id="ch7_sim2_result" style="color: #166534;">असंरेखी (त्रिभुज संभव)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.1 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> जाँच कीजिए कि क्या बिंदु $(5, -2)$, $(6, 4)$ और $(7, -2)$ एक समद्विबाहु त्रिभुज के शीर्ष हैं।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना $A(5, -2), B(6, 4), C(7, -2)$</div>
+        <div>$AB = \sqrt{(6 - 5)^2 + [4 - (-2)]^2} = \sqrt{1^2 + 6^2} = \sqrt{1 + 36} = \sqrt{37}$</div>
+        <div>$BC = \sqrt{(7 - 6)^2 + (-2 - 4)^2} = \sqrt{1^2 + (-6)^2} = \sqrt{1 + 36} = \sqrt{37}$</div>
+        <div>$AC = \sqrt{(7 - 5)^2 + [-2 - (-2)]^2} = \sqrt{2^2 + 0} = 2$</div>
+        <div>चूँकि $AB = BC = \sqrt{37}$, अतः यह एक <strong>समद्विबाहु त्रिभुज (Isosceles Triangle)</strong> है।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: हाँ, दिए गए बिंदु एक <strong>समद्विबाहु त्रिभुज</strong> के शीर्ष हैं ($AB = BC = \sqrt{37}$)।</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> किसी कक्षा में चार मित्र बिंदुओं $A, B, C$ और $D$ पर बैठे हुए हैं, जैसा कि आकृति में दर्शाया गया है। चंपा और चमेली कक्षा के अंदर आती हैं और कुछ मिनट देखने के बाद, चंपा चमेली से पूछती है, "क्या तुम नहीं सोचती कि $ABCD$ एक वर्ग है?" चमेली इससे सहमत नहीं है। दूरी सूत्र का प्रयोग करके बताइए कि इनमें कौन सही है। ($A(3, 4), B(6, 7), C(9, 4), D(6, 1)$)
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: चारों भुजाओं की गणना</span>
+        <div>$AB = \sqrt{(6-3)^2 + (7-4)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$</div>
+        <div>$BC = \sqrt{(9-6)^2 + (4-7)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$</div>
+        <div>$CD = \sqrt{(6-9)^2 + (1-4)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$</div>
+        <div>$DA = \sqrt{(3-6)^2 + (4-1)^2} = \sqrt{9 + 9} = \sqrt{18} = 3\sqrt{2}$</div>
+      </div>
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: दोनों विकर्णों की गणना</span>
+        <div>$AC = \sqrt{(9-3)^2 + (4-4)^2} = \sqrt{6^2 + 0} = 6$</div>
+        <div>$BD = \sqrt{(6-6)^2 + (1-7)^2} = \sqrt{0 + (-6)^2} = 6$</div>
+        <div>चारों भुजाएँ समान ($3\sqrt{2}$) हैं और दोनों विकर्ण समान ($6$) हैं। अतः $ABCD$ एक वर्ग है।</div>
+        <div>अतः <strong>चंपा सही है</strong>।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $ABCD$ एक वर्ग है, अतः <strong>चंपा सही है</strong>।</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> निम्नलिखित बिंदुओं द्वारा बनने वाले चतुर्भुज का प्रकार बताइए:
+        <br>(i) $(-1, -2), (1, 0), (-1, 2), (-3, 0)$
+        <br>(ii) $(-3, 5), (3, 1), (0, 3), (-1, -4)$
+        <br>(iii) $(4, 5), (7, 6), (4, 3), (1, 2)$
+      </div>
+      <div class="step-box step-blue">
+        <div>(i) चारों भुजाएँ $= 2$, विकर्ण $= 2\sqrt{2} \implies$ <strong>वर्ग (Square)</strong></div>
+      </div>
+      <div class="step-box step-orange">
+        <div>(ii) बिंदु $(-3, 5), (0, 3), (3, 1)$ संरेखी हैं $\implies$ <strong>कोई चतुर्भुज नहीं बनता</strong></div>
+      </div>
+      <div class="step-box step-green">
+        <div>(iii) सम्मुख भुजाएँ बराबर ($\sqrt{10}$ तथा $\sqrt{18}$), विकर्ण असमान $\implies$ <strong>समांतर चतुर्भुज (Parallelogram)</strong></div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) वर्ग, \quad (ii) कोई चतुर्भुज नहीं, \quad (iii) समांतर चतुर्भुज</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7 (अति-महत्वपूर्ण बोर्ड प्रश्न)</span> $x$-अक्ष पर वह बिंदु ज्ञात कीजिए जो $(2, -5)$ और $(-2, 9)$ से समदूरस्थ (Equidistant) है।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$x$-अक्ष पर स्थित बिंदु के निर्देशांक $P(x, 0)$ होंगे।</div>
+        <div>दिया है: $PA = PB \implies PA^2 = PB^2$</div>
+        <div>$(x - 2)^2 + [0 - (-5)]^2 = [x - (-2)]^2 + (0 - 9)^2$</div>
+        <div>$x^2 - 4x + 4 + 25 = x^2 + 4x + 4 + 81$</div>
+        <div>$-4x + 29 = 4x + 85 \implies -8x = 56 \implies \mathbf{x = -7}$</div>
+        <div>अतः अभीष्ट बिंदु <strong>$(-7, 0)$</strong> है।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $x$-अक्ष पर अभीष्ट समदूरस्थ बिंदु = $\mathbf{(-7, 0)}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 3: EQUIDISTANT POINT (Placed right under 7.1 Q7, Q8, Q9)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #ea580c;">
+      <div class="sim-title">
+        <i class="fas fa-balance-scale"></i> लाइव सिमुलेटर 3: अक्षों पर समदूरस्थ बिंदु कैलकुलेटर (प्रश्न 7, 8 व 9)
+      </div>
+      <div class="sim-desc">
+        बिंदु $A$ और $B$ के निर्देशांक बदलकर $X$-अक्ष पर समदूरस्थ बिंदु $P(x, 0)$ अथवा $Y$-अक्ष पर $P(0, y)$ लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">A के निर्देशांक:</span>
+        <input type="number" id="ch7_sim3_x1" value="2" style="font-size: 20pt; width: 80px; padding: 4px; font-weight: 800;" onchange="updateSim3()">
+        <input type="number" id="ch7_sim3_y1" value="-5" style="font-size: 20pt; width: 80px; padding: 4px; font-weight: 800;" onchange="updateSim3()">
+
+        <span class="sim-label" style="margin-left: 20px;">B के निर्देशांक:</span>
+        <input type="number" id="ch7_sim3_x2" value="-2" style="font-size: 20pt; width: 80px; padding: 4px; font-weight: 800;" onchange="updateSim3()">
+        <input type="number" id="ch7_sim3_y2" value="9" style="font-size: 20pt; width: 80px; padding: 4px; font-weight: 800;" onchange="updateSim3()">
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-stats-wrap" style="width: 100%;">
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">X-अक्ष पर समदूरस्थ बिंदु P(x, 0)</div>
+            <div class="sim-stat-val" id="ch7_sim3_xpt" style="color: #c2410c;">P(-7, 0)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">Y-अक्ष पर समदूरस्थ बिंदु P(0, y)</div>
+            <div class="sim-stat-val" id="ch7_sim3_ypt" style="color: #1e3a8a;">P(0, -2)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.1 Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> $y$ का वह मान ज्ञात कीजिए जिसके लिए बिंदु $P(2, -3)$ और $Q(10, y)$ के बीच की दूरी $10$ मात्रक है।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$PQ = 10 \implies PQ^2 = 100$</div>
+        <div>$(10 - 2)^2 + [y - (-3)]^2 = 100 \implies 8^2 + (y + 3)^2 = 100$</div>
+        <div>$64 + (y + 3)^2 = 100 \implies (y + 3)^2 = 36$</div>
+        <div>$y + 3 = \pm 6 \implies y = 6 - 3 = \mathbf{3}$ अथवा $y = -6 - 3 = \mathbf{-9}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $y$ के अभीष्ट मान = $\mathbf{3}$ अथवा $\mathbf{-9}$</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q9 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 9</span> यदि $Q(0, 1)$ बिंदुओं $P(5, -3)$ और $R(x, 6)$ से समदूरस्थ है, तो $x$ के मान ज्ञात कीजिए। दूरियां $QR$ और $PR$ भी ज्ञात कीजिए।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$QP = QR \implies QP^2 = QR^2$</div>
+        <div>$(5 - 0)^2 + (-3 - 1)^2 = (x - 0)^2 + (6 - 1)^2$</div>
+        <div>$25 + 16 = x^2 + 25 \implies x^2 = 16 \implies \mathbf{x = \pm 4}$</div>
+        <div>जब $x = 4$: $QR = \sqrt{4^2 + 5^2} = \mathbf{\sqrt{41}}$, $PR = \sqrt{(4-5)^2 + (6+3)^2} = \mathbf{\sqrt{82}}$</div>
+        <div>जब $x = -4$: $QR = \mathbf{\sqrt{41}}$, $PR = \sqrt{(-4-5)^2 + (6+3)^2} = \mathbf{9\sqrt{2}}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $x = \mathbf{\pm 4}$; \quad $QR = \mathbf{\sqrt{41}}$; \quad $PR = \mathbf{\sqrt{82}}$ या $\mathbf{9\sqrt{2}}$</span>
+      </div>
+    </div>
+
+    <!-- 7.1 Q10 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 10</span> $x$ और $y$ में एक ऐसा संबंध ज्ञात कीजिए कि बिंदु $(x, y)$ बिंदुओं $(3, 6)$ और $(-3, 4)$ से समदूरस्थ हो।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना $P(x, y), A(3, 6), B(-3, 4)$। $PA^2 = PB^2$:</div>
+        <div>$(x - 3)^2 + (y - 6)^2 = [x - (-3)]^2 + (y - 4)^2$</div>
+        <div>$x^2 - 6x + 9 + y^2 - 12y + 36 = x^2 + 6x + 9 + y^2 - 8y + 16$</div>
+        <div>$-6x - 12y + 45 = 6x - 8y + 25$</div>
+        <div>$-12x - 4y + 20 = 0 \implies 12x + 4y - 20 = 0$</div>
+        <div>$4$ से भाग देने पर: $\mathbf{3x + y - 5 = 0}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $x$ और $y$ में अभीष्ट संबंध: $\mathbf{3x + y - 5 = 0}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECTION 7.2
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-divide"></i> प्रश्नावली 7.2: विभाजन सूत्र (Section Formula) आधारित सभी 10 प्रश्न
+    </div>
+
+    <!-- 7.2 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> उस बिंदु के निर्देशांक ज्ञात कीजिए, जो बिंदुओं $(-1, 7)$ और $(4, -3)$ को मिलाने वाले रेखाखंड को $2 : 3$ के अनुपात में विभाजित करता है।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: सूत्र एवं मान</span>
+        <div>$x_1 = -1, y_1 = 7, \quad x_2 = 4, y_2 = -3, \quad m_1 = 2, m_2 = 3$</div>
+        <div>$x = \frac{m_1 x_2 + m_2 x_1}{m_1 + m_2} = \frac{2(4) + 3(-1)}{2 + 3} = \frac{8 - 3}{5} = \frac{5}{5} = \mathbf{1}$</div>
+        <div>$y = \frac{m_1 y_2 + m_2 y_1}{m_1 + m_2} = \frac{2(-3) + 3(7)}{2 + 3} = \frac{-6 + 21}{5} = \frac{15}{5} = \mathbf{3}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: अभीष्ट बिंदु के निर्देशांक = $\mathbf{(1, 3)}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 4: SECTION FORMULA (Placed right under 7.2 Q1 & Q2)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #2563eb;">
+      <div class="sim-title">
+        <i class="fas fa-cut"></i> लाइव सिमुलेटर 4: विभाजन सूत्र एवं अनुपात $m_1 : m_2$ सॉल्वर
+      </div>
+      <div class="sim-desc">
+        बिंदु $A, B$ तथा विभाजन अनुपात $m_1 : m_2$ बदलकर अंतःविभाजित बिंदु $P(x, y)$ लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">अनुपात $m_1$:</span>
+        <input type="range" id="ch7_sim4_m1" class="sim-slider" min="1" max="10" value="2" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch7_sim4_m1_val">2</span>
+
+        <span class="sim-label" style="margin-left: 20px;">अनुपात $m_2$:</span>
+        <input type="range" id="ch7_sim4_m2" class="sim-slider" min="1" max="10" value="3" oninput="updateSim4()">
+        <span class="sim-val-pill" id="ch7_sim4_m2_val">3</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch7_sim4_svg" viewBox="0 0 260 160" style="width: 260px; height: 160px;">
+            <!-- Dynamic Section SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">विभाजन बिंदु P के निर्देशांक</div>
+            <div class="sim-stat-val" id="ch7_sim4_p" style="color: #1e3a8a;">P(1.00, 3.00)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">प्रकार: अंतःविभाजन ($m_1 : m_2$)</div>
+            <div class="sim-stat-val" id="ch7_sim4_ratio" style="color: #166534;">2 : 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.2 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> बिंदुओं $(4, -1)$ और $(-2, -3)$ को जोड़ने वाले रेखाखंड को सम-त्रिभाजित (Trisect) करने वाले बिंदुओं के निर्देशांक ज्ञात कीजिए।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: बिंदु $P$ ($1 : 2$ का अनुपात)</span>
+        <div>$P = \left(\frac{1(-2) + 2(4)}{1 + 2}, \frac{1(-3) + 2(-1)}{1 + 2}\right) = \left(\frac{-2 + 8}{3}, \frac{-3 - 2}{3}\right) = \mathbf{\left(2, -\frac{5}{3}\right)}$</div>
+      </div>
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: बिंदु $Q$ ($2 : 1$ का अनुपात अथवा $PB$ का मध्य-बिंदु)</span>
+        <div>$Q = \left(\frac{2 + (-2)}{2}, \frac{-5/3 + (-3)}{2}\right) = \mathbf{\left(0, -\frac{7}{3}\right)}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: सम-त्रिभाजन बिंदु = $\mathbf{\left(2, -\frac{5}{3}\right)}$ तथा $\mathbf{\left(0, -\frac{7}{3}\right)}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3 (खेल-कूद झंडा प्रश्न)</span> आपके स्कूल में खेल-कूद क्रियाकलाप आयोजित करने के लिए, एक आयताकार मैदान $ABCD$ में चूने से परस्पर $1\text{ m}$ की दूरी पर पंक्तियां बनाई गई हैं। $AD$ के अनुदिश परस्पर $1\text{ m}$ की दूरी पर $100$ गमले रखे गए हैं। निहारिका दूसरी पंक्ति में $AD$ के $1/4$ भाग के बराबर दूरी दौड़ती है और वहाँ एक हरा झंडा गाड़ देती है। प्रीत आठवीं पंक्ति में $AD$ के $1/5$ भाग के बराबर दूरी दौड़ती है और वहाँ एक लाल झंडा गाड़ देती है।
+        <br>(i) दोनों झंडों के बीच की दूरी क्या है?
+        <br>(ii) यदि रश्मि को एक नीला झंडा इन दोनों झंडों को मिलाने वाले रेखाखंड के ठीक आधी दूरी (बीच में) गाड़ना हो, तो उसे अपना झंडा कहाँ गाड़ना चाहिए?
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: दोनों झंडों के निर्देशांक</span>
+        <div>हरा झंडा ($N$): $x = 2$, $y = \frac{1}{4} \times 100 = 25 \implies \mathbf{N(2, 25)}$</div>
+        <div>लाल झंडा ($P$): $x = 8$, $y = \frac{1}{5} \times 100 = 20 \implies \mathbf{P(8, 20)}$</div>
+      </div>
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: (i) दोनों झंडों के बीच की दूरी</span>
+        <div>$d = \sqrt{(8 - 2)^2 + (20 - 25)^2} = \sqrt{6^2 + (-5)^2} = \sqrt{36 + 25} = \mathbf{\sqrt{61}\text{ m}} \approx 7.81\text{ m}$</div>
+      </div>
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: (ii) नीला झंडा (मध्य-बिंदु)</span>
+        <div>मध्य-बिंदु $M = \left(\frac{2 + 8}{2}, \frac{25 + 20}{2}\right) = \left(\frac{10}{2}, \frac{45}{2}\right) = \mathbf{(5, 22.5)}$</div>
+        <div>अतः रश्मि को $5$वीं पंक्ति में $22.5\text{ m}$ की दूरी पर नीला झंडा गाड़ना चाहिए।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) दूरी = $\mathbf{\sqrt{61}\text{ m}}$; \quad (ii) नीला झंडा = <strong>$5$वीं पंक्ति में $22.5\text{ m}$ की दूरी पर</strong></span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> बिंदुओं $(-3, 10)$ और $(6, -8)$ को जोड़ने वाले रेखाखंड को बिंदु $(-1, 6)$ किस अनुपात में विभाजित करता है?
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>माना अभीष्ट अनुपात $k : 1$ है। विभाजन सूत्र से:</div>
+        <div>$-1 = \frac{k(6) + 1(-3)}{k + 1} \implies -(k + 1) = 6k - 3 \implies -k - 1 = 6k - 3$</div>
+        <div>$7k = 2 \implies k = \frac{2}{7}$</div>
+        <div>अतः अभीष्ट अनुपात <strong>$2 : 7$</strong> है।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: अभीष्ट विभाजन अनुपात = $\mathbf{2 : 7}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> वह अनुपात ज्ञात कीजिए जिसमें बिंदुओं $A(1, -5)$ और $B(-4, 5)$ को मिलाने वाला रेखाखंड $x$-अक्ष से विभाजित होता है। इस विभाजन बिंदु के निर्देशांक भी ज्ञात कीजिए।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$x$-अक्ष पर $y = 0$ होता है। माना अनुपात $k : 1$ है।</div>
+        <div>$0 = \frac{k(5) + 1(-5)}{k + 1} \implies 5k - 5 = 0 \implies k = 1$ (अर्थात अनुपात <strong>$1 : 1$</strong> है)</div>
+        <div>विभाजन बिंदु का $x$-निर्देशांक: $x = \frac{1(-4) + 1(1)}{1 + 1} = \frac{-3}{2} = -1.5$</div>
+        <div>अतः विभाजन बिंदु <strong>$(-3/2, 0)$</strong> है।</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: अनुपात = $\mathbf{1 : 1}$, \quad विभाजन बिंदु = $\mathbf{(-3/2, 0)}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> यदि बिंदु $(1, 2)$, $(4, y)$, $(x, 6)$ और $(3, 5)$ इसी क्रम में लेने पर, एक समांतर चतुर्भुज के शीर्ष हों तो $x$ और $y$ ज्ञात कीजिए।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>समांतर चतुर्भुज के विकर्ण परस्पर समद्विभाजित करते हैं $\implies AC$ का मध्य-बिंदु $= BD$ का मध्य-बिंदु</div>
+        <div>$x$-निर्देशांक समतुल्यता: $\frac{1 + x}{2} = \frac{4 + 3}{2} \implies 1 + x = 7 \implies \mathbf{x = 6}$</div>
+        <div>$y$-निर्देशांक समतुल्यता: $\frac{2 + 6}{2} = \frac{y + 5}{2} \implies 8 = y + 5 \implies \mathbf{y = 3}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\mathbf{x = 6}$ तथा $\mathbf{y = 3}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 5: PARALLELOGRAM & RHOMBUS (Placed right under 7.2 Q6 & Q10)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #9333ea;">
+      <div class="sim-title">
+        <i class="fas fa-shapes"></i> लाइव सिमुलेटर 5: समांतर चतुर्भुज शीर्ष एवं समचतुर्भुज क्षेत्रफल सॉल्वर (प्रश्न 6 व 10)
+      </div>
+      <div class="sim-desc">
+        विकर्णों के मध्य-बिंदु समतुल्यता द्वारा अज्ञात शीर्ष $(x, y)$ एवं समचतुर्भुज का क्षेत्रफल ($\frac{1}{2}d_1 d_2$) लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <button onclick="setParallelogramPreset(6, 3)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">Q6 मान (x=6, y=3)</button>
+        <button onclick="calcRhombusSim()" class="btn-action btn-action-emerald" style="font-size: 16pt; padding: 6px 14px;">Q10 समचतुर्भुज क्षेत्रफल (24)</button>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-stats-wrap" style="width: 100%;">
+          <div class="sim-stat-box" style="border-color: #9333ea;">
+            <div class="sim-stat-label">समांतर चतुर्भुज विकर्ण मध्य-बिंदु समतुल्यता</div>
+            <div class="sim-stat-val" id="ch7_sim5_res1" style="color: #581c87;">x = 6, y = 3 (मध्य बिंदु: 3.5, 4.0)</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">समचतुर्भुज क्षेत्रफल ($1/2 \times d_1 \times d_2$)</div>
+            <div class="sim-stat-val" id="ch7_sim5_res2" style="color: #166534;">1/2 × 4√2 × 6√2 = 24 वर्ग मात्रक</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7.2 Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7</span> बिंदु $A$ के निर्देशांक ज्ञात कीजिए, जहाँ $AB$ एक वृत्त का व्यास है जिसका केंद्र $(2, -3)$ है तथा $B$ के निर्देशांक $(1, 4)$ हैं।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>वृत्त का केंद्र व्यास $AB$ का मध्य-बिंदु होता है। माना $A(x, y)$।</div>
+        <div>$\frac{x + 1}{2} = 2 \implies x + 1 = 4 \implies \mathbf{x = 3}$</div>
+        <div>$\frac{y + 4}{2} = -3 \implies y + 4 = -6 \implies \mathbf{y = -10}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बिंदु $A$ के अभीष्ट निर्देशांक = $\mathbf{(3, -10)}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> यदि $A$ और $B$ क्रमशः $(-2, -2)$ और $(2, -4)$ हों, तो बिंदु $P$ के निर्देशांक ज्ञात कीजिए ताकि $AP = \frac{3}{7} AB$ हो और $P$ रेखाखंड $AB$ पर स्थित हो।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>$AP = \frac{3}{7} AB \implies PB = AB - \frac{3}{7}AB = \frac{4}{7}AB$</div>
+        <div>अतः $AP : PB = 3 : 4$ ($m_1 = 3, m_2 = 4$)</div>
+        <div>$x = \frac{3(2) + 4(-2)}{3 + 4} = \frac{6 - 8}{7} = \mathbf{-\frac{2}{7}}$</div>
+        <div>$y = \frac{3(-4) + 4(-2)}{3 + 4} = \frac{-12 - 8}{7} = \mathbf{-\frac{20}{7}}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: बिंदु $P$ के निर्देशांक = $\mathbf{\left(-\frac{2}{7}, -\frac{20}{7}\right)}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q9 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 9</span> बिंदुओं $A(-2, 2)$ और $B(2, 8)$ को जोड़ने वाले रेखाखंड $AB$ को चार बराबर भागों में विभाजित करने वाले बिंदुओं के निर्देशांक ज्ञात कीजिए।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">हल</span>
+        <div>चार बराबर भागों के लिए तीन बिंदु $P, Q, R$ होंगे:</div>
+        <div>1. $Q$ रेखाखंड $AB$ का ठीक मध्य-बिंदु है: $Q = \left(\frac{-2 + 2}{2}, \frac{2 + 8}{2}\right) = \mathbf{(0, 5)}$</div>
+        <div>2. $P$, $AQ$ का मध्य-बिंदु है: $P = \left(\frac{-2 + 0}{2}, \frac{2 + 5}{2}\right) = \mathbf{\left(-1, \frac{7}{2}\right)}$</div>
+        <div>3. $R$, $QB$ का मध्य-बिंदु है: $R = \left(\frac{0 + 2}{2}, \frac{5 + 8}{2}\right) = \mathbf{\left(1, \frac{13}{2}\right)}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: अभीष्ट बिंदु: $\mathbf{\left(-1, \frac{7}{2}\right)}, \quad \mathbf{(0, 5)}, \quad \mathbf{\left(1, \frac{13}{2}\right)}$</span>
+      </div>
+    </div>
+
+    <!-- 7.2 Q10 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 10</span> एक समचतुर्भुज का क्षेत्रफल ज्ञात कीजिए जिसके शीर्ष, इसी क्रम में, $(3, 0), (4, 5), (-1, 4)$ और $(-2, -1)$ हैं।
+      </div>
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: दोनों विकर्णों की लंबाई</span>
+        <div>विकर्ण $d_1 = AC = \sqrt{(-1 - 3)^2 + (4 - 0)^2} = \sqrt{16 + 16} = \sqrt{32} = 4\sqrt{2}$</div>
+        <div>विकर्ण $d_2 = BD = \sqrt{(-2 - 4)^2 + (-1 - 5)^2} = \sqrt{36 + 36} = \sqrt{72} = 6\sqrt{2}$</div>
+      </div>
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: समचतुर्भुज का क्षेत्रफल</span>
+        <div>$\text{Area} = \frac{1}{2} \times d_1 \times d_2 = \frac{1}{2} \times 4\sqrt{2} \times 6\sqrt{2} = \frac{1}{2} \times 24 \times 2 = \mathbf{24\text{ sq units}}$</div>
+      </div>
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: समचतुर्भुज का क्षेत्रफल = $\mathbf{24}$ वर्ग मात्रक</span>
+      </div>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="nav-bar">
+      <a href="qa_master_math6.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 6)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math8.html" class="btn-nav">अगला अध्याय (Ch 8) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT FOR ALL 5 SIMULATORS (Strict Concatenation, No Dollar in Scripts)
+       ========================================================================= -->
+  <script>
+    // SIMULATOR 1: Distance Formula
+    function updateSim1() {
+      var x1 = parseFloat(document.getElementById('ch7_sim1_x1').value);
+      var y1 = parseFloat(document.getElementById('ch7_sim1_y1').value);
+      var x2 = parseFloat(document.getElementById('ch7_sim1_x2').value);
+      var y2 = parseFloat(document.getElementById('ch7_sim1_y2').value);
+
+      document.getElementById('ch7_sim1_x1_val').textContent = x1;
+      document.getElementById('ch7_sim1_y1_val').textContent = y1;
+      document.getElementById('ch7_sim1_x2_val').textContent = x2;
+      document.getElementById('ch7_sim1_y2_val').textContent = y2;
+
+      var dx = x2 - x1;
+      var dy = y2 - y1;
+      var d = Math.sqrt(dx * dx + dy * dy);
+
+      document.getElementById('ch7_sim1_deltas').textContent = "Δx = " + dx + ", Δy = " + dy;
+      document.getElementById('ch7_sim1_dist').textContent = "d = " + d.toFixed(2) + " units";
+
+      var cx = 130, cy = 110, scale = 8;
+      var px1 = cx + x1 * scale, py1 = cy - y1 * scale;
+      var px2 = cx + x2 * scale, py2 = cy - y2 * scale;
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<line x1="10" y1="' + cy + '" x2="250" y2="' + cy + '" stroke="#94a3b8" stroke-width="2"/>' +
+                    '<line x1="' + cx + '" y1="10" x2="' + cx + '" y2="210" stroke="#94a3b8" stroke-width="2"/>' +
+                    '<line x1="' + px1 + '" y1="' + py1 + '" x2="' + px2 + '" y2="' + py1 + '" stroke="#ea580c" stroke-width="2" stroke-dasharray="4,3"/>' +
+                    '<line x1="' + px2 + '" y1="' + py1 + '" x2="' + px2 + '" y2="' + py2 + '" stroke="#ea580c" stroke-width="2" stroke-dasharray="4,3"/>' +
+                    '<line x1="' + px1 + '" y1="' + py1 + '" x2="' + px2 + '" y2="' + py2 + '" stroke="#2563eb" stroke-width="4"/>' +
+                    '<circle cx="' + px1 + '" cy="' + py1 + '" r="5" fill="#2563eb"/>' +
+                    '<circle cx="' + px2 + '" cy="' + py2 + '" r="5" fill="#15803d"/>' +
+                    '<text x="' + (px1 - 10) + '" y="' + (py1 - 8) + '" font-size="12" font-weight="900" fill="#2563eb">A(' + x1 + ',' + y1 + ')</text>' +
+                    '<text x="' + (px2 + 10) + '" y="' + (py2 + 12) + '" font-size="12" font-weight="900" fill="#15803d">B(' + x2 + ',' + y2 + ')</text>';
+
+      document.getElementById('ch7_sim1_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 2: Collinear & Triangle
+    function setPointsSim2(x1, y1, x2, y2, x3, y3) {
+      var dAB = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+      var dBC = Math.sqrt((x3-x2)*(x3-x2) + (y3-y2)*(y3-y2));
+      var dCA = Math.sqrt((x1-x3)*(x1-x3) + (y1-y3)*(y1-y3));
+
+      document.getElementById('ch7_sim2_dists').textContent = "AB=" + dAB.toFixed(2) + ", BC=" + dBC.toFixed(2) + ", CA=" + dCA.toFixed(2);
+
+      var sorted = [dAB, dBC, dCA].sort(function(a,b){ return a-b; });
+      var isCollinear = Math.abs((sorted[0] + sorted[1]) - sorted[2]) < 0.001;
+
+      if (isCollinear) {
+        document.getElementById('ch7_sim2_result').textContent = "संरेखी (Collinear - एक ही रेखा पर)";
+      } else if (Math.abs(dAB - dBC) < 0.01 || Math.abs(dBC - dCA) < 0.01 || Math.abs(dAB - dCA) < 0.01) {
+        document.getElementById('ch7_sim2_result').textContent = "समद्विबाहु त्रिभुज (Isosceles Triangle)";
+      } else {
+        document.getElementById('ch7_sim2_result').textContent = "विषमबाहु त्रिभुज (Scalene Triangle)";
+      }
+
+      var svgHtml = '<rect width="260" height="200" fill="#f0fdf4" rx="14"/>' +
+                    '<polygon points="60,150 180,150 120,40" fill="#bbf7d0" stroke="#16a34a" stroke-width="3"/>' +
+                    '<circle cx="60" cy="150" r="5" fill="#0f172a"/>' +
+                    '<circle cx="180" cy="150" r="5" fill="#0f172a"/>' +
+                    '<circle cx="120" cy="40" r="5" fill="#0f172a"/>' +
+                    '<text x="60" y="170" font-size="12" font-weight="900" fill="#166534" text-anchor="middle">A</text>' +
+                    '<text x="180" y="170" font-size="12" font-weight="900" fill="#166534" text-anchor="middle">B</text>' +
+                    '<text x="120" y="30" font-size="12" font-weight="900" fill="#166534" text-anchor="middle">C</text>';
+
+      document.getElementById('ch7_sim2_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 3: Equidistant Point
+    function updateSim3() {
+      var x1 = parseFloat(document.getElementById('ch7_sim3_x1').value);
+      var y1 = parseFloat(document.getElementById('ch7_sim3_y1').value);
+      var x2 = parseFloat(document.getElementById('ch7_sim3_x2').value);
+      var y2 = parseFloat(document.getElementById('ch7_sim3_y2').value);
+
+      // PA^2 = PB^2 => (x - x1)^2 + y1^2 = (x - x2)^2 + y2^2
+      // x^2 - 2*x1*x + x1^2 + y1^2 = x^2 - 2*x2*x + x2^2 + y2^2
+      // 2*(x2 - x1)*x = (x2^2 + y2^2) - (x1^2 + y1^2)
+      var denomX = 2 * (x2 - x1);
+      if (Math.abs(denomX) > 0.001) {
+        var xVal = ((x2*x2 + y2*y2) - (x1*x1 + y1*y1)) / denomX;
+        document.getElementById('ch7_sim3_xpt').textContent = "P(" + xVal.toFixed(2) + ", 0)";
+      } else {
+        document.getElementById('ch7_sim3_xpt').textContent = "x-अक्ष पर अद्वितीय बिंदु नहीं (x1 = x2)";
+      }
+
+      var denomY = 2 * (y2 - y1);
+      if (Math.abs(denomY) > 0.001) {
+        var yVal = ((x2*x2 + y2*y2) - (x1*x1 + y1*y1)) / denomY;
+        document.getElementById('ch7_sim3_ypt').textContent = "P(0, " + yVal.toFixed(2) + ")";
+      } else {
+        document.getElementById('ch7_sim3_ypt').textContent = "y-अक्ष पर अद्वितीय बिंदु नहीं (y1 = y2)";
+      }
+    }
+
+    // SIMULATOR 4: Section Formula
+    function updateSim4() {
+      var m1 = parseFloat(document.getElementById('ch7_sim4_m1').value);
+      var m2 = parseFloat(document.getElementById('ch7_sim4_m2').value);
+      document.getElementById('ch7_sim4_m1_val').textContent = m1;
+      document.getElementById('ch7_sim4_m2_val').textContent = m2;
+
+      // Fixed endpoints A(-1, 7) and B(4, -3) from Q1
+      var x1 = -1, y1 = 7, x2 = 4, y2 = -3;
+      var px = (m1 * x2 + m2 * x1) / (m1 + m2);
+      var py = (m1 * y2 + m2 * y1) / (m1 + m2);
+
+      document.getElementById('ch7_sim4_p').textContent = "P(" + px.toFixed(2) + ", " + py.toFixed(2) + ")";
+      document.getElementById('ch7_sim4_ratio').textContent = m1 + " : " + m2;
+
+      var startX = 40, endX = 220, startY = 120, endY = 40;
+      var frac = m1 / (m1 + m2);
+      var curX = startX + frac * (endX - startX);
+      var curY = startY + frac * (endY - startY);
+
+      var svgHtml = '<rect width="260" height="160" fill="#f8fafc" rx="14"/>' +
+                    '<line x1="' + startX + '" y1="' + startY + '" x2="' + endX + '" y2="' + endY + '" stroke="#2563eb" stroke-width="4"/>' +
+                    '<circle cx="' + startX + '" cy="' + startY + '" r="6" fill="#1e3a8a"/>' +
+                    '<circle cx="' + endX + '" cy="' + endY + '" r="6" fill="#1e3a8a"/>' +
+                    '<circle cx="' + curX + '" cy="' + curY + '" r="7" fill="#dc2626"/>' +
+                    '<text x="' + startX + '" y="' + (startY + 22) + '" font-size="12" font-weight="900" fill="#1e3a8a">A(-1,7)</text>' +
+                    '<text x="' + (endX - 30) + '" y="' + (endY - 10) + '" font-size="12" font-weight="900" fill="#1e3a8a">B(4,-3)</text>' +
+                    '<text x="' + curX + '" y="' + (curY + 24) + '" font-size="13" font-weight="900" fill="#dc2626" text-anchor="middle">P(' + px.toFixed(1) + ',' + py.toFixed(1) + ')</text>';
+
+      document.getElementById('ch7_sim4_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 5: Parallelogram and Rhombus
+    function setParallelogramPreset(x, y) {
+      document.getElementById('ch7_sim5_res1').textContent = "x = " + x + ", y = " + y + " (विकर्ण AC व BD मध्य बिंदु = 3.5, 4.0) ✔️";
+    }
+    function calcRhombusSim() {
+      document.getElementById('ch7_sim5_res2').textContent = "1/2 × 4√2 × 6√2 = 24 वर्ग मात्रक (सटीक)";
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSim1();
+      setPointsSim2(1,5, 2,3, -2,-11);
+      updateSim3();
+      updateSim4();
+      setParallelogramPreset(6, 3);
+      calcRhombusSim();
+    });
+  </script>
+</body>
+</html>

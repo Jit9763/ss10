@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 10 गणित - अध्याय 1: वास्तविक संख्याएँ (मल्टी-कलर प्रोजेक्टर मास्टर हल)</title>
+
+<!-- MathJax for rendering mathematical equations with matching bold thickness -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
+      }
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #cbd5e1;
+    padding: 30px 15px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Devanagari', Arial, sans-serif;
+  }
+
+  /* BASE TYPOGRAPHY (Exact Class 10 SS: 26pt, 2.0 line-height, 900 weight, 1.1px stroke) */
+  body, p, li, td, th, div, span, a, label {
+    font-size: 26pt !important;
+    line-height: 2.0 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+    color: #000000;
+  }
+
+  p, li, h1, h2, h3, h4, td, th {
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1.1px #000000;
+    text-shadow: 0 0 1px #000;
+  }
+
+  /* =========================================================
+     MULTI-COLOR BADGES FOR CLASSROOM ENGAGEMENT
+     ========================================================= */
+  .badge-blue {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border: 3px solid #3b82f6 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #1e3a8a !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.15) !important;
+  }
+
+  .badge-orange {
+    color: #9a3412 !important;
+    background-color: #ffedd5 !important;
+    border: 3px solid #f97316 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #9a3412 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.15) !important;
+  }
+
+  .badge-purple {
+    color: #581c87 !important;
+    background-color: #f3e8ff !important;
+    border: 3px solid #a855f7 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #581c87 !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(168, 85, 247, 0.15) !important;
+  }
+
+  .badge-green {
+    color: #064e3b !important;
+    background-color: #d1fae5 !important;
+    border: 3px solid #10b981 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #064e3b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15) !important;
+  }
+
+  .badge-red {
+    color: #991b1b !important;
+    background-color: #fee2e2 !important;
+    border: 3px solid #ef4444 !important;
+    padding: 3px 14px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.6px #991b1b !important;
+    margin-right: 8px !important;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15) !important;
+  }
+
+  /* MULTI-COLOR STEP CARDS */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 3px solid #93c5fd !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    text-shadow: 0 0 1px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    text-shadow: 0 0 1px #1e3a8a !important;
+    display: inline !important;
+  }
+  .text-purple {
+    color: #6b21a8 !important;
+    -webkit-text-stroke: 0.8px #6b21a8 !important;
+    text-shadow: 0 0 1px #6b21a8 !important;
+  }
+  .text-green {
+    color: #065f46 !important;
+    -webkit-text-stroke: 0.8px #065f46 !important;
+  }
+
+  /* =========================================================
+     COLORFUL MATHJAX STYLING
+     ========================================================= */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  /* Initial numbers are solid black */
+  mjx-mn {
+    color: #000000;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-shadow: 0 0 1px #000000;
+  }
+
+  /* Results and specific red numbers */
+  mjx-mstyle[color="#b91c1c"] mjx-mn,
+  mjx-mstyle[color="#b91c1c"] *,
+  [style*="185, 28, 28"] mjx-mn,
+  [style*="185, 28, 28"] *,
+  [style*="#b91c1c"] mjx-mn,
+  [style*="#b91c1c"] * {
+    color: #b91c1c !important;
+    -webkit-text-stroke: 0.9px #991b1b !important;
+    text-shadow: 0 0 1px #991b1b !important;
+  }
+
+  /* Symbols in Dark Blue */
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+    text-shadow: 0 0 1px #1d4ed8 !important;
+  }
+
+  /* Fraction bar: MOTA DARK GREEN */
+  mjx-line,
+  mjx-frac mjx-line,
+  mjx-frac * mjx-line,
+  .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Square Root sign: VIBRANT PURPLE */
+  mjx-surd {
+    color: #7c3aed !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #7c3aed !important;
+  }
+
+  mjx-mi {
+    color: #0f172a !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.7px #0f172a !important;
+  }
+
+  mjx-mtext {
+    color: #1e3a8a !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.7px #1e3a8a !important;
+  }
+
+  .math-line, .math-scroll {
+    max-width: 100% !important;
+    padding: 4px 0 !important;
+    margin: 6px 0 !important;
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+  }
+  .math-line::-webkit-scrollbar, .math-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* MAIN CONTAINER */
+  #contentToCopy {
+    width: 100% !important;
+    max-width: 1350px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+    border: 6px solid #60a5fa !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 46pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+    overflow-wrap: break-word !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 32pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #1e3a8a !important;
+    background-color: #dbeafe !important;
+    border-left: 18px solid #2563eb !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 40pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12) !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* SUB-HEADERS */
+  .sub-header-red {
+    color: #991b1b !important;
+    background-color: #fee2e2 !important;
+    border-left: 18px solid #b91c1c !important;
+    padding: 20px 26px !important;
+    border-radius: 14px !important;
+    font-size: 32pt !important;
+    font-weight: 900 !important;
+    margin-top: 45px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 6px 16px rgba(185, 28, 28, 0.12) !important;
+    -webkit-text-stroke: 0.8px #991b1b !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* FORMULA BOX (Golden Warm Palette) */
+  .formula-box {
+    background-color: #fefce8 !important;
+    border: 4px solid #facc15 !important;
+    border-left: 18px solid #d97706 !important;
+    padding: 30px !important;
+    border-radius: 18px !important;
+    margin-bottom: 45px !important;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.1) !important;
+    overflow-wrap: break-word !important;
+  }
+  .formula-box h3 {
+    color: #b45309 !important;
+    font-size: 34pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #fde047;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #b45309 !important;
+  }
+
+  /* QA BLOCK */
+  .qa-block {
+    background: #ffffff;
+    border: 4px solid #93c5fd;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 35px 0;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+    overflow-wrap: break-word !important;
+  }
+  .question-heading {
+    color: #1e3a8a !important;
+    font-size: 30pt !important;
+    margin-top: 0;
+    margin-bottom: 22px;
+    border-bottom: 3px solid #93c5fd;
+    padding-bottom: 12px;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .step-line {
+    margin: 14px 0;
+    padding: 4px 0;
+    overflow-wrap: break-word !important;
+  }
+
+  /* FINAL ANSWER HIGHLIGHT */
+  .answer-highlight {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important; /* Bright Canary Yellow */
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important; /* Dark Green Bar */
+    border-radius: 16px !important;
+    color: #064e3b !important; /* Dark Forest Green Text */
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* ACTION BAR */
+  .action-bar {
+    position: relative;
+    margin: 0 auto 35px auto;
+    display: flex;
+    gap: 12px;
+    z-index: 1100;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: fit-content;
+  }
+  .action-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    border: 3px solid #2563eb;
+    background: #1e3a8a;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    font-family: system-ui, sans-serif;
+    -webkit-text-stroke: 0 !important;
+  }
+  .action-btn:hover {
+    transform: scale(1.12);
+    background: #2563eb;
+  }
+  .btn-copy {
+    background: #d97706;
+    border-color: #b45309;
+  }
+  .btn-copy:hover {
+    background: #b45309;
+  }
+  .btn-copy.success {
+    background: #059669;
+    border-color: #047857;
+  }
+
+  /* NAV BUTTONS */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .btn-nav {
+    font-size: 22pt !important;
+    font-weight: 900 !important;
+    padding: 14px 28px;
+    background: #1e3a8a;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 16px;
+    border: 3px solid #3b82f6;
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.35);
+    -webkit-text-stroke: 0.5px #000 !important;
+  }
+  .btn-nav:hover {
+    background: #2563eb;
+  }
+
+  /* FLOATING HOME */
+  .floating-home-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 1200;
+    background: #1e3a8a;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 3px solid #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0 !important;
+  }
+
+  ul, ol {
+    padding-left: 45px;
+  }
+  li {
+    margin-bottom: 18px;
+  }
+
+  /* RESPONSIVE FULLSCREEN & MOBILE SHIELD */
+  @media (max-width: 1000px) {
+    body {
+      padding: 10px 5px;
+    }
+    #contentToCopy {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 20px 14px !important;
+      border-radius: 16px;
+    }
+    body, p, li, td, th, div, span, a, label {
+      font-size: 1.22rem !important;
+      line-height: 1.8 !important;
+      -webkit-text-stroke: 0.4px #000000;
+    }
+    b, strong, .text-red {
+      -webkit-text-stroke: 0.4px #7f1d1d !important;
+    }
+    b.blue, .text-blue {
+      -webkit-text-stroke: 0.4px #1e3a8a !important;
+    }
+    .hero-title {
+      font-size: 1.8rem !important;
+      padding: 22px 14px !important;
+    }
+    .hero-title span {
+      font-size: 1.25rem !important;
+    }
+    .part-header {
+      font-size: 1.45rem !important;
+      padding: 16px 18px !important;
+      border-left-width: 12px !important;
+    }
+    .sub-header-red {
+      font-size: 1.3rem !important;
+      padding: 14px 16px !important;
+      border-left-width: 12px !important;
+    }
+    .qa-block, .formula-box {
+      padding: 18px 14px !important;
+    }
+    .question-heading, .formula-box h3 {
+      font-size: 1.3rem !important;
+    }
+    .badge-blue, .badge-orange, .badge-purple, .badge-green, .badge-red {
+      font-size: 1.15rem !important;
+      padding: 2px 10px !important;
+    }
+    .answer-highlight {
+      font-size: 1.22rem !important;
+      padding: 14px 16px !important;
+      border-left-width: 12px !important;
+    }
+    .action-btn {
+      width: 48px;
+      height: 48px;
+      font-size: 1.15rem;
+    }
+    .btn-nav {
+      font-size: 1.1rem !important;
+      padding: 8px 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating Home Button -->
+<a href="math10.html" class="floating-home-btn" title="गणित पोर्टल पर वापस जाएं">🏠</a>
+
+<div id="contentToCopy">
+
+  <!-- Top Navigation Links -->
+  <div class="nav-buttons" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+    <a href="math10.html" class="btn-nav">📐 कक्षा 10 गणित पोर्टल</a>
+    <a href="qa_master_math2.html" class="btn-nav" style="background:#047857; color:#ffffff !important; border-color:#059669; font-weight:900;">अगला अध्याय (Ch 2: बहुपद) ➔</a>
+  </div>
+
+  <!-- Action Bar (Controls: W+, W-, A+, A-, B+, B-, Copy, Print) -->
+  <div class="action-bar">
+    <button class="action-btn" onclick="adjustWidth(50)" title="कंटेनर चौड़ाई बढ़ाएँ (W+)">W+</button>
+    <button class="action-btn" onclick="adjustWidth(-50)" title="कंटेनर चौड़ाई घटाएँ (W-)">W-</button>
+    <button class="action-btn" onclick="adjustFontSize(2)" title="फ़ॉन्ट आकार बढ़ाएँ (A+)">A+</button>
+    <button class="action-btn" onclick="adjustFontSize(-2)" title="फ़ॉन्ट आकार घटाएँ (A-)">A-</button>
+    <button class="action-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएँ (B+)">B+</button>
+    <button class="action-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएँ (B-)">B-</button>
+    <button class="action-btn btn-copy" id="floatingCopyBtn" onclick="copyEntireContent()" title="पूरा पेज कॉपी करें">📋</button>
+    <button class="action-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️</button>
+  </div>
+
+  <!-- HERO TITLE -->
+  <div class="hero-title">
+    कक्षा 10 गणित — अध्याय 1: वास्तविक संख्याएँ
+    <span>NCERT संपूर्ण अभ्यास एवं बोर्ड परीक्षा मास्टर प्रश्नोत्तर (मल्टी-कलर चरणबद्ध हल)</span>
+  </div>
+
+  <!-- FORMULA REVISION CARD (Golden Palette) -->
+  <div class="formula-box">
+    <h3>📌 अध्याय के महत्वपूर्ण सूत्र व मुख्य नियम</h3>
+    <ul>
+      <li><span class="badge-red">अंकगणित की आधारभूत प्रमेय:</span> प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के एक गुणनफल के रूप में व्यक्त किया जा सकता है तथा यह गुणनखंडन अद्वितीय होता है।</li>
+      <li>
+        <span class="badge-blue">महत्वपूर्ण सार्वभौमिक सूत्र:</span> दो धनात्मक पूर्णांकों <b class="blue">$a$</b> और <b class="blue">$b$</b> के लिए:
+        <div class="math-scroll">$$\mathbf{\text{HCF}(a, b) \times \text{LCM}(a, b) = a \times b}$$</div>
+        <p><span class="badge-orange">याद रखें:</span> <b>दोनों संख्याओं का गुणनफल</b> = <b class="blue">$\text{HCF} \times \text{LCM}$</b></p>
+      </li>
+      <li><span class="badge-purple">प्रमेय 1.2:</span> मान लीजिए $p$ एक अभाज्य संख्या है। यदि $p, a^2$ को विभाजित करती है, तो <b>$p, a$ को भी अवश्य विभाजित करेगी</b> (जहाँ $a$ एक धनात्मक पूर्णांक है)।</li>
+      <li><span class="badge-green">अपरिमेय संख्या:</span> वह वास्तविक संख्या जिसे $\frac{p}{q}$ ($q \neq 0$) के रूप में नहीं लिखा जा सकता, जैसे <b>$\sqrt{2}$</b>, <b>$\sqrt{3}$</b>, <b>$\sqrt{5}$</b> आदि।</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       PART 1: EXERCISE 1.1 (STEP BY STEP SOLUTIONS)
+       ========================================================= -->
+  <div class="part-header">📌 भाग 1: NCERT प्रश्नावली 1.1 — संपूर्ण चरणबद्ध हल (प्रश्न 1 से 7)</div>
+
+  <!-- EX 1.1 Q1 -->
+  <div class="sub-header-red">प्रश्‍न 1. निम्नलिखित संख्याओं को अभाज्य गुणनखंडों के गुणनफल के रूप में व्यक्त कीजिए:</div>
+  
+  <!-- Q1 (i) 140 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (i): 140 के अभाज्य गुणनखंड कीजिए</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1:</span> 140 एक सम संख्या है, इसे सबसे छोटी अभाज्य संख्या <b>2</b> से भाग देते हैं:</div>
+      <div class="math-line">$$140 \div 2 = {\color{#b91c1c}{70}}$$</div>
+    </div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2:</span> 70 को पुनः <b>2</b> से भाग देते हैं:</div>
+      <div class="math-line">$$70 \div 2 = {\color{#b91c1c}{35}}$$</div>
+    </div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3:</span> 35 के इकाई स्थान पर 5 है, इसे अगली अभाज्य संख्या <b>5</b> से भाग देते हैं:</div>
+      <div class="math-line">$$35 \div 5 = {\color{#b91c1c}{7}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 4:</span> 7 स्वयं एक अभाज्य संख्या है:</div>
+      <div class="math-line">$$7 \div 7 = {\color{#b91c1c}{1}}$$</div>
+      <div class="step-line"><span class="badge-blue">गुणनखंड रूप:</span> $$140 = {\color{#b91c1c}{2 \times 2 \times 5 \times 7}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{140 = {\color{#b91c1c}{2^2 \times 5 \times 7}}}$</div>
+    </div>
+  </div>
+
+  <!-- Q1 (ii) 156 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (ii): 156 के अभाज्य गुणनखंड कीजिए</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1:</span> 156 को सबसे छोटी अभाज्य संख्या <b>2</b> से भाग देते हैं:</div>
+      <div class="math-line">$$156 \div 2 = {\color{#b91c1c}{78}}$$</div>
+    </div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2:</span> 78 को पुनः <b>2</b> से भाग देते हैं:</div>
+      <div class="math-line">$$78 \div 2 = {\color{#b91c1c}{39}}$$</div>
+    </div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3:</span> 39 के अंकों का योग ($3+9=12$) 3 से भाज्य है, अतः <b>3</b> से भाग देते हैं:</div>
+      <div class="math-line">$$39 \div 3 = {\color{#b91c1c}{13}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 4:</span> 13 एक अभाज्य संख्या है, अतः $13 \div 13 = {\color{#b91c1c}{1}}$</div>
+      <div class="step-line"><span class="badge-blue">गुणनखंड रूप:</span> $$156 = {\color{#b91c1c}{2 \times 2 \times 3 \times 13}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{156 = {\color{#b91c1c}{2^2 \times 3 \times 13}}}$</div>
+    </div>
+  </div>
+
+  <!-- Q1 (iii) 3825 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (iii): 3825 के अभाज्य गुणनखंड कीजिए</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1:</span> अंकों का योग $3+8+2+5 = 18$ है (3 से विभाज्य), अतः <b>3</b> से भाग देते हैं:</div>
+      <div class="math-line">$$3825 \div 3 = {\color{#b91c1c}{1275}}$$</div>
+    </div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2:</span> 1275 के अंकों का योग $1+2+7+5 = 15$ है, पुनः <b>3</b> से भाग देते हैं:</div>
+      <div class="math-line">$$1275 \div 3 = {\color{#b91c1c}{425}}$$</div>
+    </div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3:</span> 425 के इकाई अंक 5 है, इसे <b>5</b> से भाग देते हैं:</div>
+      <div class="math-line">$$425 \div 5 = {\color{#b91c1c}{85}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 4:</span> 85 को 5 से भाग देने पर:</div>
+      <div class="math-line">$$85 \div 5 = {\color{#b91c1c}{17}}$$</div>
+      <div class="step-line">17 एक अभाज्य संख्या है: $17 \div 17 = {\color{#b91c1c}{1}}$</div>
+      <div class="step-line"><span class="badge-blue">गुणनखंड रूप:</span> $$3825 = {\color{#b91c1c}{3 \times 3 \times 5 \times 5 \times 17}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{3825 = {\color{#b91c1c}{3^2 \times 5^2 \times 17}}}$</div>
+    </div>
+  </div>
+
+  <!-- Q1 (iv) 5005 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (iv): 5005 के अभाज्य गुणनखंड कीजिए</div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1:</span> इकाई अंक 5 है, अतः <b>5</b> से भाग देते हैं:</div>
+      <div class="math-line">$$5005 \div 5 = {\color{#b91c1c}{1001}}$$</div>
+    </div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2:</span> 1001 को अगली अभाज्य संख्या <b>7</b> से भाग देते हैं:</div>
+      <div class="math-line">$$1001 \div 7 = {\color{#b91c1c}{143}}$$</div>
+    </div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3:</span> 143 को अगली अभाज्य संख्या <b>11</b> से भाग देते हैं:</div>
+      <div class="math-line">$$143 \div 11 = {\color{#b91c1c}{13}}$$</div>
+      <div class="step-line">13 एक अभाज्य संख्या है: $13 \div 13 = {\color{#b91c1c}{1}}$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">गुणनखंड रूप:</span> $$5005 = {\color{#b91c1c}{5 \times 7 \times 11 \times 13}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{5005 = {\color{#b91c1c}{5 \times 7 \times 11 \times 13}}}$</div>
+    </div>
+  </div>
+
+  <!-- Q1 (v) 7429 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 1 (v): 7429 के अभाज्य गुणनखंड कीजिए</div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 1:</span> 7429 पहली बार अभाज्य संख्या <b>17</b> से विभाजित होता है:</div>
+      <div class="math-line">$$7429 \div 17 = {\color{#b91c1c}{437}}$$</div>
+    </div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2:</span> 437 को अगली अभाज्य संख्या <b>19</b> से भाग देते हैं:</div>
+      <div class="math-line">$$437 \div 19 = {\color{#b91c1c}{23}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3:</span> 23 एक अभाज्य संख्या है: $23 \div 23 = {\color{#b91c1c}{1}}$</div>
+      <div class="step-line"><span class="badge-orange">गुणनखंड रूप:</span> $$7429 = {\color{#b91c1c}{17 \times 19 \times 23}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{7429 = {\color{#b91c1c}{17 \times 19 \times 23}}}$</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 1: अभाज्य गुणनखंडन ट्री विज़ुअलाइज़र -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #2563eb; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 12px;">
+      <i class="fas fa-sitemap"></i> लाइव सिमुलेटर 1: अभाज्य गुणनखंडन ट्री (Factor Tree) एवं घातांक विश्लेषक
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      कोई भी संख्या दर्ज करें या पाठ्यपुस्तक के उदाहरण चुनें। लाइव गुणनखंडन ट्री व अभाज्य घातांक गुणनफल देखें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim1Val(140)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">(i) 140</button>
+      <button onclick="setSim1Val(156)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">(ii) 156</button>
+      <button onclick="setSim1Val(3825)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">(iii) 3825</button>
+      <button onclick="setSim1Val(5005)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">(iv) 5005</button>
+      <button onclick="setSim1Val(7429)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #2563eb; background: #eff6ff; color: #1e3a8a; cursor: pointer;">(v) 7429</button>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+      <label style="font-size: 22pt; font-weight: 700; color: #0f172a;">संख्या प्रविष्ट करें:</label>
+      <input type="number" id="sim1_input" value="140" oninput="updateSim1()" style="font-size: 22pt; font-weight: bold; padding: 8px 16px; border-radius: 8px; border: 2px solid #94a3b8; width: 180px; text-align: center;">
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; align-items: center;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 20px; text-align: center;">
+        <div style="font-size: 19pt; font-weight: 700; color: #475569; margin-bottom: 10px;">गुणनखंडन ट्री (Factor Tree)</div>
+        <div id="sim1_tree_box" style="display: flex; flex-direction: column; align-items: center; gap: 10px; max-height: 280px; overflow-y: auto; padding: 10px;"></div>
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+        <div style="font-size: 22pt; font-weight: 800; color: #1e3a8a; margin-bottom: 12px;">अभाज्य गुणनखंडन रूप:</div>
+        <div id="sim1_factors_out" style="font-size: 24pt; font-weight: 900; color: #0f172a; margin-bottom: 15px;"></div>
+        <div id="sim1_desc" style="font-size: 20pt; color: #334155; line-height: 1.6; background: #eff6ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2563eb;"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- EX 1.1 Q2 -->
+  <div class="sub-header-red">प्रश्‍न 2. पूर्णांकों के निम्नलिखित युग्मों के HCF और LCM ज्ञात कीजिए तथा जाँच कीजिए कि दो संख्याओं का गुणनफल = HCF × LCM है:</div>
+
+  <!-- Q2 (i) 26 और 91 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (i): 26 और 91 का HCF, LCM एवं संबंध की जाँच</div>
+    
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$26 = {\color{#b91c1c}{2 \times 13}}$$</div>
+      <div class="math-line">$$91 = {\color{#b91c1c}{7 \times 13}}$$</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: HCF ज्ञात करना</span></div>
+      <div class="step-line">उभयनिष्ठ अभाज्य गुणनखंड की सबसे छोटी घात $= 13^1$</div>
+      <div class="math-line">$$\mathbf{\text{HCF}(26, 91) = {\color{#b91c1c}{13}}}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: LCM ज्ञात करना</span></div>
+      <div class="step-line">सभी अभाज्य गुणनखंडों की सबसे बड़ी घातों का गुणनफल $= 2^1 \times 7^1 \times 13^1$</div>
+      <div class="math-line">$$\mathbf{\text{LCM}(26, 91) = 2 \times 7 \times 13 = {\color{#b91c1c}{182}}}$$</div>
+    </div>
+
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">चरण 4: संबंध की सत्यता की जाँच</span></div>
+      <div class="step-line">(क) दोनों संख्याओं का गुणनफल:</div>
+      <div class="math-line">गुणनफल $= 26 \times 91 = \mathbf{{\color{#b91c1c}{2366}}}$</div>
+      <div class="step-line">(ख) $\text{HCF} \times \text{LCM}$ का गुणनफल:</div>
+      <div class="math-line">$$\text{HCF} \times \text{LCM} = 13 \times 182 = \mathbf{{\color{#b91c1c}{2366}}}$$</div>
+
+      <div class="answer-highlight">✅ जाँच परिणाम: दोनों संख्याओं का गुणनफल = $\text{HCF} \times \text{LCM} = {\color{#b91c1c}{2366}}$ (पूर्णतः सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q2 (ii) 510 और 92 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (ii): 510 और 92 का HCF, LCM एवं संबंध की जाँच</div>
+    
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$510 = {\color{#b91c1c}{2 \times 3 \times 5 \times 17}}$$</div>
+      <div class="math-line">$$92 = {\color{#b91c1c}{2^2 \times 23}}$$</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: HCF ज्ञात करना</span></div>
+      <div class="step-line">उभयनिष्ठ अभाज्य गुणनखंड 2 की सबसे छोटी घात $= 2^1$</div>
+      <div class="math-line">$$\mathbf{\text{HCF}(510, 92) = {\color{#b91c1c}{2}}}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: LCM ज्ञात करना</span></div>
+      <div class="step-line">सभी गुणनखंडों की अधिकतम घातों का गुणनफल $= 2^2 \times 3 \times 5 \times 17 \times 23$</div>
+      <div class="math-line">$$\mathbf{\text{LCM} = 4 \times 3 \times 5 \times 17 \times 23 = {\color{#b91c1c}{23460}}}$$</div>
+    </div>
+
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">चरण 4: संबंध की जाँच</span></div>
+      <div class="step-line">(क) दोनों संख्याओं का गुणनफल:</div>
+      <div class="math-line">$$510 \times 92 = \mathbf{{\color{#b91c1c}{46920}}}$$</div>
+      <div class="step-line">(ख) $\text{HCF} \times \text{LCM}$:</div>
+      <div class="math-line">$$2 \times 23460 = \mathbf{{\color{#b91c1c}{46920}}}$$</div>
+
+      <div class="answer-highlight">✅ जाँच परिणाम: दोनों संख्याओं का गुणनफल = $\text{HCF} \times \text{LCM} = {\color{#b91c1c}{46920}}$ (सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+  <!-- Q2 (iii) 336 और 54 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 2 (iii): 336 और 54 का HCF, LCM एवं संबंध की जाँच</div>
+    
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$336 = {\color{#b91c1c}{2^4 \times 3^1 \times 7^1}}$$</div>
+      <div class="math-line">$$54 = {\color{#b91c1c}{2^1 \times 3^3}}$$</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: HCF ज्ञात करना</span></div>
+      <div class="step-line">उभयनिष्ठ गुणनखंडों की न्यूनतम घातों का गुणनफल $= 2^1 \times 3^1$</div>
+      <div class="math-line">$$\mathbf{\text{HCF}(336, 54) = {\color{#b91c1c}{6}}}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: LCM ज्ञात करना</span></div>
+      <div class="step-line">सभी गुणनखंडों की अधिकतम घातों का गुणनफल $= 2^4 \times 3^3 \times 7^1 = 16 \times 27 \times 7$</div>
+      <div class="math-line">$$\mathbf{\text{LCM} = {\color{#b91c1c}{3024}}}$$</div>
+    </div>
+
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">चरण 4: संबंध की जाँच</span></div>
+      <div class="step-line">(क) दोनों संख्याओं का गुणनफल:</div>
+      <div class="math-line">$$336 \times 54 = \mathbf{{\color{#b91c1c}{18144}}}$$</div>
+      <div class="step-line">(ख) $\text{HCF} \times \text{LCM}$:</div>
+      <div class="math-line">$$6 \times 3024 = \mathbf{{\color{#b91c1c}{18144}}}$$</div>
+
+      <div class="answer-highlight">✅ जाँच परिणाम: दोनों संख्याओं का गुणनफल = $\text{HCF} \times \text{LCM} = {\color{#b91c1c}{18144}}$ (सत्यापित हुआ)।</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 2: HCF x LCM = a x b संबंध सत्यापक -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #059669; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #065f46; margin-bottom: 12px;">
+      <i class="fas fa-check-double"></i> लाइव सिमुलेटर 2: संबंध सत्यापन: $\text{HCF}(a, b) \times \text{LCM}(a, b) = a \times b$
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      प्रश्नावली 1.1 के प्रश्न 2 के उदाहरण चुनें या दो संख्याएँ भरें और लाइव संबंध सत्यापन देखें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim2Values(26, 91)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(i) 26 और 91</button>
+      <button onclick="setSim2Values(510, 92)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(ii) 510 और 92</button>
+      <button onclick="setSim2Values(336, 54)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #059669; background: #ecfdf5; color: #065f46; cursor: pointer;">(iii) 336 और 54</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">संख्या $a$:</label>
+        <input type="number" id="sim2_a" value="26" oninput="updateSim2()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">संख्या $b$:</label>
+        <input type="number" id="sim2_b" value="91" oninput="updateSim2()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim2_steps_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- EX 1.1 Q3 -->
+  <div class="sub-header-red">प्रश्‍न 3. अभाज्य गुणनखंडन विधि द्वारा निम्नलिखित पूर्णांकों के HCF और LCM ज्ञात कीजिए:</div>
+
+  <!-- Q3 (i) 12, 15, 21 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (i): 12, 15 और 21 का HCF और LCM</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$12 = {\color{#b91c1c}{2^2 \times 3}}, \quad 15 = {\color{#b91c1c}{3 \times 5}}, \quad 21 = {\color{#b91c1c}{3 \times 7}}$$</div>
+    </div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 2: HCF (उभयनिष्ठ अभाज्य गुणनखंड)</span></div>
+      <div class="step-line">तीनों संख्याओं में केवल <b>3</b> उभयनिष्ठ है:</div>
+      <div class="math-line">$$\mathbf{\text{HCF} = {\color{#b91c1c}{3}}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: LCM (अधिकतम घातों का गुणनफल)</span></div>
+      <div class="math-line">$$\text{LCM} = 2^2 \times 3 \times 5 \times 7 = {\color{#b91c1c}{420}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\text{HCF} = {\color{#b91c1c}{3}}$ तथा $\text{LCM} = {\color{#b91c1c}{420}}$</div>
+    </div>
+  </div>
+
+  <!-- Q3 (ii) 17, 23, 29 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (ii): 17, 23 और 29 का HCF और LCM</div>
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: प्रकृति का अवलोकन</span></div>
+      <div class="step-line">17, 23 और 29 तीनों ही <b class="blue">अभाज्य संख्याएँ</b> हैं:</div>
+      <div class="math-line">$$17 = 1 \times 17, \quad 23 = 1 \times 23, \quad 29 = 1 \times 29$$</div>
+    </div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: HCF</span></div>
+      <div class="step-line">अभाज्य संख्याओं का सार्व गुणनखंड सदैव <b>1</b> होता है:</div>
+      <div class="math-line">$$\mathbf{\text{HCF} = {\color{#b91c1c}{1}}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: LCM</span></div>
+      <div class="math-line">$$\text{LCM} = 17 \times 23 \times 29 = \mathbf{{\color{#b91c1c}{11339}}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\text{HCF} = {\color{#b91c1c}{1}}$ तथा $\text{LCM} = {\color{#b91c1c}{11339}}$</div>
+    </div>
+  </div>
+
+  <!-- Q3 (iii) 8, 9, 25 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (iii): 8, 9 और 25 का HCF और LCM</div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 1: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$8 = 2^3, \quad 9 = 3^2, \quad 25 = 5^2$$</div>
+    </div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: HCF</span></div>
+      <div class="step-line">तीनों में कोई भी अभाज्य गुणनखंड उभयनिष्ठ नहीं है:</div>
+      <div class="math-line">$$\mathbf{\text{HCF} = {\color{#b91c1c}{1}}}$$</div>
+    </div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: LCM</span></div>
+      <div class="math-line">$$\text{LCM} = 2^3 \times 3^2 \times 5^2 = 8 \times 9 \times 25 = \mathbf{{\color{#b91c1c}{1800}}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\text{HCF} = {\color{#b91c1c}{1}}$ तथा $\text{LCM} = {\color{#b91c1c}{1800}}$</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 3: तीन संख्याओं का HCF एवं LCM -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #d97706; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #b45309; margin-bottom: 12px;">
+      <i class="fas fa-cubes"></i> लाइव सिमुलेटर 3: तीन संख्याओं का HCF एवं LCM (अभाज्य गुणनखंडन विधि)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      प्रश्नावली 1.1 के प्रश्न 3 के उदाहरण चुनें या अपने मान भरें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim3Values(12, 15, 21)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(i) 12, 15, 21</button>
+      <button onclick="setSim3Values(17, 23, 29)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(ii) 17, 23, 29</button>
+      <button onclick="setSim3Values(8, 9, 25)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #d97706; background: #fffbeb; color: #b45309; cursor: pointer;">(iii) 8, 9, 25</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 10px;">
+        <label style="font-size: 18pt; font-weight: bold; color: #0f172a;">$a$:</label>
+        <input type="number" id="sim3_a" value="12" oninput="updateSim3()" style="width: 100%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 10px;">
+        <label style="font-size: 18pt; font-weight: bold; color: #0f172a;">$b$:</label>
+        <input type="number" id="sim3_b" value="15" oninput="updateSim3()" style="width: 100%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 10px;">
+        <label style="font-size: 18pt; font-weight: bold; color: #0f172a;">$c$:</label>
+        <input type="number" id="sim3_c" value="21" oninput="updateSim3()" style="width: 100%; font-size: 20pt; padding: 6px; border: 2px solid #94a3b8; border-radius: 8px; text-align: center;">
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim3_output_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- EX 1.1 Q4 -->
+  <div class="sub-header-red">प्रश्‍न 4. HCF(306, 657) = 9 दिया है। LCM(306, 657) ज्ञात कीजिए।</div>
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 4 का संपूर्ण चरणबद्ध हल:</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: दिया गया डेटा</span></div>
+      <div class="step-line">प्रथम संख्या ($a$) = <b>306</b></div>
+      <div class="step-line">द्वितीय संख्या ($b$) = <b class="blue">657</b></div>
+      <div class="step-line">महत्तम समापवर्तक ($\text{HCF}$) = <b>9</b></div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: सार्वभौमिक सूत्र का प्रयोग</span></div>
+      <div class="math-line">$$\mathbf{\text{HCF} \times \text{LCM} = a \times b}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: मान प्रतिस्थापित करने पर</span></div>
+      <div class="math-line">$$9 \times \text{LCM}(306, 657) = 306 \times 657$$</div>
+      <div class="math-line">$$\text{LCM}(306, 657) = \frac{306 \times 657}{9}$$</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 4: गणना व सरलीकरण</span></div>
+      <div class="step-line">306 को 9 से भाग (विभाजित) करने पर:</div>
+      <div class="math-line">$$\frac{306}{9} = \mathbf{{\color{#b91c1c}{34}}}$$</div>
+      <div class="step-line">अब 34 को 657 से गुणा करने पर:</div>
+      <div class="math-line">$$\text{LCM} = 34 \times 657 = \mathbf{{\color{#b91c1c}{22338}}}$$</div>
+
+      <div class="answer-highlight">✅ अंतिम उत्तर: $\mathbf{\text{LCM}(306, 657) = {\color{#b91c1c}{22338}}}$</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 5: यूक्लिड विभाजन प्रमेयिका HCF सॉल्वर -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #7c3aed; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #5b21b6; margin-bottom: 12px;">
+      <i class="fas fa-calculator"></i> लाइव सिमुलेटर 5: यूक्लिड विभाजन एल्गोरिथ्म ($a = bq + r$) HCF सॉल्वर
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      किन्हीं दो धनात्मक पूर्णांकों हेतु चरणबद्ध यूक्लिड भाग विधि से HCF की गणना देखें:
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim5Values(225, 135)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">उदा 1: 135 व 225</button>
+      <button onclick="setSim5Values(38220, 196)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">उदा 2: 196 व 38220</button>
+      <button onclick="setSim5Values(867, 255)" style="padding: 10px 18px; font-size: 18pt; font-weight: bold; border-radius: 8px; border: 2px solid #7c3aed; background: #f3e8ff; color: #5b21b6; cursor: pointer;">उदा 3: 867 व 255</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">बड़ी संख्या $a$:</label>
+        <input type="number" id="sim5_a" value="225" oninput="updateSim5()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+      <div style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; padding: 12px;">
+        <label style="font-size: 19pt; font-weight: 700; color: #0f172a;">छोटी संख्या $b$:</label>
+        <input type="number" id="sim5_b" value="135" oninput="updateSim5()" style="width: 100%; font-size: 22pt; font-weight: bold; padding: 6px; border-radius: 8px; border: 2px solid #94a3b8; text-align: center;">
+      </div>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim5_euclid_steps" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- EX 1.1 Q5 -->
+  <div class="sub-header-red">प्रश्‍न 5. जाँच कीजिए कि क्या किसी प्राकृतिक संख्या n के लिए, संख्या 6ⁿ अंक 0 पर समाप्त हो सकती है?</div>
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 5 का गणितीय व तार्किक प्रमाण:</div>
+    
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: मूलभूत गणितीय नियम</span></div>
+      <div class="step-line">यदि कोई प्राकृतिक संख्या अंक <b>0 पर समाप्त</b> होती है, तो वह अनिवार्य रूप से <b>10 से पूर्णतः विभाज्य</b> होगी।</div>
+      <div class="step-line">चूँकि $10 = 2 \times 5$, अतः उसके अभाज्य गुणनखंडन में <b>2 और 5 दोनों</b> आने चाहिए।</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: संख्या $6^n$ का गुणनखंडन</span></div>
+      <div class="math-line">$$\mathbf{6^n = (2 \times 3)^n = 2^n \times 3^n}$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: गुणनखंडन का विश्लेषण</span></div>
+      <div class="step-line">यहाँ $6^n$ के अभाज्य गुणनखंडन में केवल <b>2 और 3</b> आते हैं, अभाज्य गुणनखंड <b>5 उपस्थित नहीं है</b>।</div>
+    </div>
+
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">चरण 4: अंकगणित की आधारभूत प्रमेय</span></div>
+      <div class="step-line">अंकगणित की आधारभूत प्रमेय की अद्वितीयता के अनुसार, $6^n$ के गुणनखंडन में 2 और 3 के अतिरिक्त कोई अन्य अभाज्य गुणनखंड संभव नहीं है।</div>
+      <div class="answer-highlight">✅ अंतिम निष्कर्ष: अतः किसी भी प्राकृतिक संख्या $n$ के लिए संख्या $6^n$ कभी भी अंक 0 पर समाप्त नहीं हो सकती। (प्रमाणित)</div>
+    </div>
+  </div>
+
+  <!-- EX 1.1 Q6 -->
+  <div class="sub-header-red">प्रश्‍न 6. व्याख्या कीजिए कि 7 × 11 × 13 + 13 और 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 भाज्य संख्याएँ क्यों हैं?</div>
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 6 का चरणबद्ध हल:</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">भाज्य संख्या की परिभाषा:</span> वह संख्या जिसके 1 और स्वयं के अतिरिक्त अन्य अभाज्य गुणनखंड भी होते हैं।</div>
+      <div class="step-line"><span class="badge-orange">(क) प्रथम व्यंजक का चरणबद्ध हल:</span></div>
+      
+      <div class="step-line"><b>दिया गया व्यंजक:</b></div>
+      <div class="math-line">$$= 7 \times 11 \times 13 + 13$$</div>
+
+      <div class="step-line"><b>दोनों पदों में से 13 उभयनिष्ठ (Common) लेने पर:</b></div>
+      <div class="math-line">$$= 13 \times (7 \times 11 + 1)$$</div>
+
+      <div class="step-line"><b>कोष्ठक को सरल करने पर:</b></div>
+      <div class="math-line">$$= 13 \times (77 + 1)$$</div>
+      <div class="math-line">$$= 13 \times 78$$</div>
+
+      <div class="step-line"><b>78 के अभाज्य गुणनखंड ($78 = 2 \times 3 \times 13$) करने पर:</b></div>
+      <div class="math-line">$$= 13 \times (2 \times 3 \times 13)$$</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{2 \times 3 \times 13^2}}}$$</div>
+
+      <div class="step-line">चूँकि इस संख्या के 1 और स्वयं के अतिरिक्त अन्य अभाज्य गुणनखंड <b>2, 3 और 13</b> विद्यमान हैं, अतः यह एक <b class="blue">भाज्य संख्या</b> है।</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">(ख) द्वितीय व्यंजक का चरणबद्ध हल:</span></div>
+      
+      <div class="step-line"><b>दिया गया व्यंजक:</b></div>
+      <div class="math-line">$$= 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 + 5$$</div>
+
+      <div class="step-line"><b>दोनों पदों में से 5 उभयनिष्ठ लेने पर:</b></div>
+      <div class="math-line">$$= 5 \times (7 \times 6 \times 4 \times 3 \times 2 \times 1 + 1)$$</div>
+
+      <div class="step-line"><b>कोष्ठक के गुणनफल को जोड़ने पर:</b></div>
+      <div class="math-line">$$= 5 \times (1008 + 1)$$</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{5 \times 1009}}}$$</div>
+
+      <div class="step-line">चूँकि 1009 एक अभाज्य संख्या है और इस संख्या के 1 और स्वयं के अतिरिक्त अन्य गुणनखंड <b>5 और 1009</b> हैं, अतः यह भी एक <b class="blue">भाज्य संख्या</b> है।</div>
+      <div class="answer-highlight">✅ अंतिम निष्कर्ष: दोनों ही दी गई संख्याएँ भाज्य संख्याएँ हैं।</div>
+    </div>
+  </div>
+
+  <!-- EX 1.1 Q7 -->
+  <div class="sub-header-red">प्रश्‍न 7. खेल के मैदान के वृत्ताकार पथ पर सोनिया (18 मिनट) और रवि (12 मिनट) का पुनः मिलना</div>
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 7 का चरणबद्ध हल:</div>
+    
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 1: समस्या की पहचान</span></div>
+      <div class="step-line">सोनिया द्वारा एक चक्कर लगाने में समय = <b>18 मिनट</b></div>
+      <div class="step-line">रवि द्वारा एक चक्कर लगाने में समय = <b class="blue">12 मिनट</b></div>
+      <div class="step-line">वे दोनों पुनः प्रारंभिक स्थान पर 18 और 12 के <b>LCM (लघुत्तम समापवर्त्य)</b> समय बाद मिलेंगे।</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 2: अभाज्य गुणनखंडन</span></div>
+      <div class="math-line">$$18 = 2^1 \times 3^2$$</div>
+      <div class="math-line">$$12 = 2^2 \times 3^1$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: LCM की चरणबद्ध गणना</span></div>
+      <div class="math-line">$$\text{LCM}(18, 12) = 2^2 \times 3^2$$</div>
+      <div class="math-line">$$= 4 \times 9$$</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{36}}}$$</div>
+      <div class="answer-highlight">✅ अंतिम उत्तर: वे दोनों 36 मिनट के बाद पुनः प्रारंभिक स्थान पर मिलेंगे।</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       PART 2: EXERCISE 1.2 (PROOFS STEP BY STEP)
+       ========================================================= -->
+  <div class="part-header">📌 भाग 2: NCERT प्रश्नावली 1.2 — अपरिमेय संख्या उपपत्तियाँ (बोर्ड परीक्षा स्पेशल)</div>
+
+  <!-- EX 1.2 Q1 -->
+  <div class="sub-header-red">प्रश्‍न 1. सिद्ध कीजिए कि √5 एक अपरिमेय संख्या है। (बोर्ड परीक्षा 3/4 अंक ★★★)</div>
+  <div class="qa-block">
+    <div class="question-heading">⭐ उपपत्ति (विरोधाभास विधि - Proof by Contradiction):</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: विपरीत कल्पना</span></div>
+      <div class="step-line">माना इसके विपरीत कि <b>$\sqrt{5}$ एक परिमेय संख्या है</b>।</div>
+      <div class="step-line">अतः हम दो ऐसे <b>सह-अभाज्य पूर्णांक $a$ और $b$</b> ($b \neq 0, \text{HCF}(a, b) = 1$) ज्ञात कर सकते हैं:</div>
+      <div class="math-line">$$\sqrt{5} = \frac{a}{b}$$</div>
+      <div class="math-line">$$a = \sqrt{5}b$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: दोनों पक्षों का वर्ग करने पर</span></div>
+      <div class="math-line">$$a^2 = (\sqrt{5}b)^2$$</div>
+      <div class="math-line">$$\mathbf{a^2 = {\color{#b91c1c}{5b^2}}}$$ &nbsp;&nbsp; <span class="badge-blue">समीकरण (1)</span></div>
+    </div>
+
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 3: प्रमेय 1.2 का प्रयोग</span></div>
+      <div class="step-line">समीकरण (1) से स्पष्ट है कि $5, a^2$ को विभाजित करता है।</div>
+      <div class="step-line">अतः प्रमेय 1.2 के अनुसार, <b>$5, a$ को भी अवश्य विभाजित करेगा</b>।</div>
+    </div>
+
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 4: a = 5c प्रतिस्थापित करना</span></div>
+      <div class="step-line">हम <b>$a = 5c$</b> मान सकते हैं (जहाँ $c$ कोई पूर्णांक है)। समीकरण (1) में रखने पर:</div>
+      <div class="math-line">$$(5c)^2 = 5b^2$$</div>
+      <div class="math-line">$$25c^2 = 5b^2$$</div>
+      <div class="step-line">दोनों पक्षों को 5 से विभाजित करने पर:</div>
+      <div class="math-line">$$\mathbf{b^2 = {\color{#b91c1c}{5c^2}}}$$ &nbsp;&nbsp; <span class="badge-purple">समीकरण (2)</span></div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 5: b के लिए विश्लेषण</span></div>
+      <div class="step-line">समीकरण (2) से $5, b^2$ को विभाजित करता है:</div>
+      <div class="step-line">अतः <b>$5, b$ को भी अवश्य विभाजित करेगा</b>।</div>
+    </div>
+
+    <div class="step-box-red">
+      <div class="step-line"><span class="badge-red">चरण 6: विरोधाभास व निष्कर्ष</span></div>
+      <div class="step-line">$a$ और $b$ दोनों का कम से कम एक उभयनिष्ठ गुणनखंड <b>5</b> है।</div>
+      <div class="step-line">परंतु यह इस तथ्य का <b>विरोधाभास</b> है कि $a$ और $b$ सह-अभाज्य हैं।</div>
+      <div class="step-line">यह विरोधाभास हमारी गलत कल्पना के कारण उत्पन्न हुआ है।</div>
+      <div class="answer-highlight">✅ अंतिम निष्कर्ष: अतः सिद्ध होता है कि $\sqrt{5}$ एक अपरिमेय संख्या है। (इति सिद्धम्)</div>
+    </div>
+  </div>
+
+  <!-- EX 1.2 Q2 -->
+  <div class="sub-header-red">प्रश्‍न 2. सिद्ध कीजिए कि 3 + 2√5 एक अपरिमेय संख्या है।</div>
+  <div class="qa-block">
+    <div class="question-heading">⭐ उपपत्ति:</div>
+    
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1: विपरीत कल्पना</span></div>
+      <div class="step-line">माना $3 + 2\sqrt{5} = \frac{a}{b}$ एक परिमेय संख्या है ($a, b$ सह-अभाज्य पूर्णांक, $b \neq 0$)।</div>
+    </div>
+
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">चरण 2: पक्षांतरण द्वारा हल</span></div>
+      <div class="math-line">$$2\sqrt{5} = \frac{a}{b} - 3$$</div>
+      <div class="math-line">$$2\sqrt{5} = \frac{a - 3b}{b}$$</div>
+      <div class="math-line">$$\mathbf{\sqrt{5} = \frac{a - 3b}{2b}}$$</div>
+    </div>
+
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 3: विश्लेषण व निष्कर्ष</span></div>
+      <div class="step-line">चूँकि $a$ और $b$ पूर्णांक हैं, अतः $\frac{a - 3b}{2b}$ परिमेय है। जिससे $\sqrt{5}$ भी परिमेय होनी चाहिए।</div>
+      <div class="step-line">परंतु यह इस तथ्य का <b>विरोधाभास</b> है कि $\sqrt{5}$ अपरिमेय है।</div>
+      <div class="answer-highlight">✅ अंतिम निष्कर्ष: अतः सिद्ध होता है कि $3 + 2\sqrt{5}$ एक अपरिमेय संख्या है। (इति सिद्धम्)</div>
+    </div>
+  </div>
+
+
+  <!-- LIVE SIMULATOR 4: अपरिमेयता का विरोधाभास प्रमाण -->
+  <div class="sim-card" style="background: #f8fafc; border: 4px solid #e11d48; border-radius: 20px; padding: 30px; margin: 35px 0 45px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);">
+    <div style="font-size: 28pt; font-weight: 900; color: #9f1239; margin-bottom: 12px;">
+      <i class="fas fa-file-contract"></i> लाइव सिमुलेटर 4: अपरिमेयता का विरोधाभास प्रमाण (Contradiction Proof Generator)
+    </div>
+    <div style="font-size: 20pt; color: #334155; margin-bottom: 25px; line-height: 1.5;">
+      अपरिमेय संख्या चुनें और बोर्ड परीक्षा के अनुसार संपूर्ण चरणबद्ध विरोधाभास प्रमाण देखें:
+    </div>
+
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+      <button onclick="setSim4Type('sqrt5')" style="padding: 12px 22px; font-size: 20pt; font-weight: bold; border-radius: 10px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">1. $\sqrt{5}$ (Ex 1.2 Q1)</button>
+      <button onclick="setSim4Type('3plus2sqrt5')" style="padding: 12px 22px; font-size: 20pt; font-weight: bold; border-radius: 10px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">2. $3 + 2\sqrt{5}$ (Ex 1.2 Q2)</button>
+      <button onclick="setSim4Type('sqrt2')" style="padding: 12px 22px; font-size: 20pt; font-weight: bold; border-radius: 10px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">3. $\sqrt{2}$</button>
+      <button onclick="setSim4Type('sqrt3')" style="padding: 12px 22px; font-size: 20pt; font-weight: bold; border-radius: 10px; border: 2px solid #e11d48; background: #fff1f2; color: #9f1239; cursor: pointer;">4. $\sqrt{3}$</button>
+    </div>
+
+    <div style="background: #ffffff; border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px;">
+      <div id="sim4_proof_box" style="font-size: 22pt; line-height: 1.8; color: #0f172a;"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- EX 1.2 Q3 -->
+  <div class="sub-header-red">प्रश्‍न 3. सिद्ध कीजिए कि निम्नलिखित संख्याएँ अपरिमेय हैं: (i) 1/√2 &nbsp;&nbsp; (ii) 7√5 &nbsp;&nbsp; (iii) 6 + √2</div>
+
+  <!-- Q3 (i) 1/√2 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (i): सिद्ध कीजिए कि 1/√2 एक अपरिमेय संख्या है</div>
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">चरण 1:</span> माना $\frac{1}{\sqrt{2}} = \frac{a}{b}$ परिमेय संख्या है ($a, b$ सह-अभाज्य, $b \neq 0$)।</div>
+      <div class="step-line"><span class="badge-orange">चरण 2: व्युत्क्रम करने पर</span></div>
+      <div class="math-line">$$\mathbf{\sqrt{2} = \frac{b}{a}}$$</div>
+      <div class="step-line">दायाँ पक्ष परिमेय है, जिससे $\sqrt{2}$ भी परिमेय होनी चाहिए, जो कि विरोधाभास है।</div>
+      <div class="answer-highlight">✅ अतः सिद्ध हुआ कि $\mathbf{\frac{1}{\sqrt{2}}}$ एक अपरिमेय संख्या है।</div>
+    </div>
+  </div>
+
+  <!-- Q3 (ii) 7√5 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (ii): सिद्ध कीजिए कि 7√5 एक अपरिमेय संख्या है</div>
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">चरण 1:</span> माना $7\sqrt{5} = \frac{a}{b}$ परिमेय है ($b \neq 0$)।</div>
+      <div class="step-line"><span class="badge-blue">चरण 2: पक्षांतरण</span></div>
+      <div class="math-line">$$\mathbf{\sqrt{5} = \frac{a}{7b}}$$</div>
+      <div class="step-line">दायाँ पक्ष $\frac{a}{7b}$ परिमेय है परंतु $\sqrt{5}$ अपरिमेय है, जो कि विरोधाभास है।</div>
+      <div class="answer-highlight">✅ अतः सिद्ध हुआ कि $\mathbf{7\sqrt{5}}$ एक अपरिमेय संख्या है।</div>
+    </div>
+  </div>
+
+  <!-- Q3 (iii) 6 + √2 -->
+  <div class="qa-block">
+    <div class="question-heading">📝 प्रश्न 3 (iii): सिद्ध कीजिए कि 6 + √2 एक अपरिमेय संख्या है</div>
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">चरण 1:</span> माना $6 + \sqrt{2} = \frac{a}{b}$ परिमेय संख्या है।</div>
+      <div class="step-line"><span class="badge-orange">चरण 2: पक्षांतरण</span></div>
+      <div class="math-line">$$\sqrt{2} = \frac{a}{b} - 6$$</div>
+      <div class="math-line">$$\mathbf{\sqrt{2} = \frac{a - 6b}{b}}$$</div>
+      <div class="step-line">दायाँ पक्ष परिमेय है, जिससे $\sqrt{2}$ भी परिमेय होनी चाहिए, जो कि असत्य व विरोधाभास है।</div>
+      <div class="answer-highlight">✅ अतः सिद्ध हुआ कि $\mathbf{6 + \sqrt{2}}$ एक अपरिमेय संख्या है।</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       PART 3: BOARD SPECIAL RAPID FIRE Q&A
+       ========================================================= -->
+  <div class="part-header">📌 भाग 3: बोर्ड परीक्षा महत्वपूर्ण 1-अंक व 2-अंक वाले प्रश्नोत्तर</div>
+
+  <div class="qa-block">
+    <div class="question-heading">🎯 वस्तुनिष्ठ एवं बोर्ड परीक्षा अति लघु उत्तरीय प्रश्नोत्तर</div>
+
+    <!-- Board Q1 -->
+    <div class="step-box-blue">
+      <div class="step-line"><span class="badge-blue">प्रश्न 1:</span> यदि दो संख्याओं का $\text{HCF} = 15$ तथा गुणनफल 1500 है, तो $\text{LCM}$ क्या होगा?</div>
+      <div class="step-line"><span class="badge-orange">सूत्र:</span> $\text{HCF} \times \text{LCM} =$ दोनों संख्याओं का गुणनफल</div>
+      <div class="math-line">$$15 \times \text{LCM} = 1500$$</div>
+      <div class="math-line">$$\text{LCM} = \frac{1500}{15}$$</div>
+      <div class="math-line">$$= \mathbf{{\color{#b91c1c}{100}}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: $\text{LCM} = {\color{#b91c1c}{100}}$</div>
+    </div>
+
+    <!-- Board Q2 -->
+    <div class="step-box-orange">
+      <div class="step-line"><span class="badge-orange">प्रश्न 2:</span> सबसे छोटी अभाज्य संख्या और सबसे छोटी भाज्य संख्या का HCF कितना होता है?</div>
+      <div class="step-line">सबसे छोटी अभाज्य संख्या = <b>2</b>, &nbsp; सबसे छोटी भाज्य संख्या = <b>4</b> ($4 = 2^2$)</div>
+      <div class="math-line">$$\mathbf{\text{HCF}(2, 4) = {\color{#b91c1c}{2}}}$$</div>
+      <div class="answer-highlight">✅ उत्तर: HCF = ${\color{#b91c1c}{2}}$</div>
+    </div>
+
+    <!-- Board Q3 -->
+    <div class="step-box-purple">
+      <div class="step-line"><span class="badge-purple">प्रश्न 3:</span> एक परिमेय संख्या और एक अपरिमेय संख्या का योग या अंतर सदैव क्या होता है?</div>
+      <div class="step-line">उत्तर: एक परिमेय और एक अपरिमेय संख्या का योग, अंतर अथवा अशून्य गुणनफल <b>सदैव एक अपरिमेय संख्या</b> होता है।</div>
+      <div class="answer-highlight">✅ उत्तर: सदैव अपरिमेय संख्या</div>
+    </div>
+
+    <!-- Board Q4 -->
+    <div class="step-box-green">
+      <div class="step-line"><span class="badge-green">प्रश्न 4:</span> संख्या $p/q$ जहाँ $q = 2^n \times 5^m$ रूप का हो, उसका दशमलव प्रसार कैसा होता है?</div>
+      <div class="step-line">उत्तर: यदि हर के अभाज्य गुणनखंड $2^n \times 5^m$ रूप के हों, तो उसका दशमलव प्रसार <b>सांत (Terminating)</b> होता है।</div>
+      <div class="answer-highlight">✅ उत्तर: सांत (Terminating)</div>
+    </div>
+  </div>
+
+</div> <!-- End of #contentToCopy -->
+
+<!-- JAVASCRIPT CONTROLS (Identical to Class 10 SS) -->
+<script>
+  let containerWidth = 1350;
+  let sizeOffset = 0;
+  let weightOffset = 0;
+  let strokeOffset = 0;
+
+  function adjustWidth(amount) {
+    containerWidth += amount;
+    if (containerWidth < 300) containerWidth = 300;
+    if (containerWidth > 6000) containerWidth = 6000;
+    const container = document.getElementById('contentToCopy');
+    if (container) {
+      container.style.width = containerWidth + 'px';
+      container.style.maxWidth = '100%';
+    }
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -18) sizeOffset = -18;
+    if (sizeOffset > 40) sizeOffset = 40;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy td, #contentToCopy th, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontSize = (26 + sizeOffset) + 'pt';
+    });
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    if (weightOffset < -600) weightOffset = -600;
+    if (weightOffset > 800) weightOffset = 800;
+    strokeOffset += (amount / 100) * 0.3;
+    const elements = document.querySelectorAll('#contentToCopy, #contentToCopy p, #contentToCopy li, #contentToCopy div, #contentToCopy span');
+    elements.forEach(el => {
+      el.style.fontWeight = (900 + weightOffset);
+      el.style.webkitTextStroke = (1.1 + strokeOffset) + 'px #000000';
+    });
+  }
+
+  async function copyEntireContent() {
+    const btn = document.getElementById('floatingCopyBtn');
+    const target = document.getElementById('contentToCopy');
+    if (!target || !btn) return;
+    const content = target.innerHTML;
+
+    try {
+      const blob = new Blob([content], { type: 'text/html' });
+      const item = new ClipboardItem({ 'text/html': blob });
+      await navigator.clipboard.write([item]);
+      btn.innerText = '✅';
+      btn.classList.add('success');
+      setTimeout(() => {
+        btn.innerText = '📋';
+        btn.classList.remove('success');
+      }, 3000);
+    } catch (err) {
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        btn.innerText = '✅';
+        btn.classList.add('success');
+        setTimeout(() => {
+          btn.innerText = '📋';
+          btn.classList.remove('success');
+        }, 3000);
+      } catch (e2) {
+        alert('कॉपी नहीं हो सका: ' + err);
+      }
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+    if (e.key === 'w' || e.key === 'W') {
+      if (e.shiftKey) adjustWidth(-50);
+      else adjustWidth(50);
+    } else if (e.key === '+' || e.key === '=') {
+      adjustWidth(50);
+    } else if (e.key === '-') {
+      adjustWidth(-50);
+    }
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(thickenFractionLines, 100);
+    setTimeout(thickenFractionLines, 500);
+    setTimeout(thickenFractionLines, 1200);
+  });
+</script>
+
+
+
+  <script>
+    /* =========================================================================
+       JAVASCRIPT FOR ALL 5 CH 1 SIMULATORS (Strict Concatenation, No Dollar)
+       ========================================================================= */
+
+    // SIMULATOR 1: अभाज्य गुणनखंडन ट्री
+    function setSim1Val(val) {
+      document.getElementById('sim1_input').value = val;
+      updateSim1();
+    }
+
+    function getPrimeFactors(n) {
+      var factors = [];
+      var d = 2;
+      while (d * d <= n) {
+        while (n % d === 0) {
+          factors.push(d);
+          n = Math.floor(n / d);
+        }
+        d++;
+      }
+      if (n > 1) factors.push(n);
+      return factors;
+    }
+
+    function updateSim1() {
+      var n = parseInt(document.getElementById('sim1_input').value) || 2;
+      if (n < 2) n = 2;
+
+      var factors = getPrimeFactors(n);
+      var counts = {};
+      for (var i = 0; i < factors.length; i++) {
+        counts[factors[i]] = (counts[factors[i]] || 0) + 1;
+      }
+
+      var expStr = '';
+      var keys = Object.keys(counts);
+      for (var k = 0; k < keys.length; k++) {
+        var p = keys[k];
+        var c = counts[p];
+        if (expStr) expStr += ' \times ';
+        expStr += (c > 1) ? p + '^' + c : p;
+      }
+
+      var outBox = document.getElementById('sim1_factors_out');
+      var descBox = document.getElementById('sim1_desc');
+      outBox.innerHTML = '$' + n + ' = ' + expStr + '$';
+      descBox.innerHTML = 'संख्या <strong>' + n + '</strong> के अभाज्य गुणनखंड हैं: ' + factors.join(', ') + '<br>' +
+        'अंकगणित की आधारभूत प्रमेय (Fundamental Theorem of Arithmetic) के अनुसार, प्रत्येक भाज्य संख्या को अभाज्य संख्याओं के गुणनफल के रूप में अद्वितीय रूप से व्यक्त किया जा सकता है।';
+
+      // Draw Factor Tree Nodes
+      var treeBox = document.getElementById('sim1_tree_box');
+      var treeHtml = '<div style="background: #1e3a8a; color: #ffffff; font-size: 22pt; font-weight: bold; padding: 8px 20px; border-radius: 12px;">' + n + '</div>';
+      var temp = n;
+      for (var f = 0; f < factors.length - 1; f++) {
+        var pf = factors[f];
+        temp = Math.floor(temp / pf);
+        treeHtml += '<div style="color: #64748b; font-size: 20pt;">↓</div>';
+        treeHtml += '<div style="display: flex; gap: 25px; align-items: center;">' +
+          '<div style="background: #fee2e2; border: 2px solid #ef4444; color: #b91c1c; font-size: 20pt; font-weight: bold; padding: 6px 14px; border-radius: 50%;">' + pf + '</div>' +
+          '<div style="background: #e0f2fe; border: 2px solid #0284c7; color: #0369a1; font-size: 20pt; font-weight: bold; padding: 6px 16px; border-radius: 10px;">' + temp + '</div>' +
+          '</div>';
+      }
+      treeBox.innerHTML = treeHtml;
+
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([outBox]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 2: HCF x LCM = a x b
+    function setSim2Values(a, b) {
+      document.getElementById('sim2_a').value = a;
+      document.getElementById('sim2_b').value = b;
+      updateSim2();
+    }
+
+    function gcd(x, y) {
+      while (y !== 0) {
+        var t = y;
+        y = x % y;
+        x = t;
+      }
+      return x;
+    }
+
+    function updateSim2() {
+      var a = parseInt(document.getElementById('sim2_a').value) || 1;
+      var b = parseInt(document.getElementById('sim2_b').value) || 1;
+      var box = document.getElementById('sim2_steps_box');
+
+      var h = gcd(a, b);
+      var l = Math.floor((a * b) / h);
+      var prodNumbers = a * b;
+      var prodHcfLcm = h * l;
+
+      var out = '<strong>संख्याएँ:</strong> $a = ' + a + ', \quad b = ' + b + '$<br>' +
+        '<strong>1. महत्तम समापवर्तक (HCF):</strong> $\text{HCF}(' + a + ', ' + b + ') = \mathbf{' + h + '}$<br>' +
+        '<strong>2. लघुत्तम समापवर्त्य (LCM):</strong> $\text{LCM}(' + a + ', ' + b + ') = \mathbf{' + l + '}$<br><br>' +
+        '<div style="background: #ecfdf5; border: 2px solid #a7f3d0; padding: 15px; border-radius: 10px; margin-bottom: 15px;">' +
+        '<strong>सत्यापन:</strong><br>' +
+        '$\text{HCF} \times \text{LCM} = ' + h + ' \times ' + l + ' = \mathbf{' + prodHcfLcm + '}$<br>' +
+        'दोनों संख्याओं का गुणनफल $= ' + a + ' \times ' + b + ' = \mathbf{' + prodNumbers + '}$<br>' +
+        '<span style="color: #059669; font-weight: bold; font-size: 22pt;">✓ संबंध सत्यापित: $\text{HCF} \times \text{LCM} = a \times b = ' + prodNumbers + '$</span>' +
+        '</div>';
+
+      box.innerHTML = out;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 3: तीन संख्याओं का HCF व LCM
+    function setSim3Values(a, b, c) {
+      document.getElementById('sim3_a').value = a;
+      document.getElementById('sim3_b').value = b;
+      document.getElementById('sim3_c').value = c;
+      updateSim3();
+    }
+
+    function updateSim3() {
+      var a = parseInt(document.getElementById('sim3_a').value) || 1;
+      var b = parseInt(document.getElementById('sim3_b').value) || 1;
+      var c = parseInt(document.getElementById('sim3_c').value) || 1;
+      var box = document.getElementById('sim3_output_box');
+
+      var h = gcd(gcd(a, b), c);
+      var lAB = Math.floor((a * b) / gcd(a, b));
+      var l = Math.floor((lAB * c) / gcd(lAB, c));
+
+      var fa = getPrimeFactors(a).join(' \times ');
+      var fb = getPrimeFactors(b).join(' \times ');
+      var fc = getPrimeFactors(c).join(' \times ');
+
+      var out = '<strong>अभाज्य गुणनखंड:</strong><br>' +
+        '$' + a + ' = ' + (fa || a) + '$<br>' +
+        '$' + b + ' = ' + (fb || b) + '$<br>' +
+        '$' + c + ' = ' + (fc || c) + '$<br><br>' +
+        '<strong>महत्तम समापवर्तक:</strong> $\text{HCF}(' + a + ', ' + b + ', ' + c + ') = \mathbf{' + h + '}$ (उभयनिष्ठ अभाज्य गुणनखंडों की सबसे छोटी घात)<br>' +
+        '<strong>लघुत्तम समापवर्त्य:</strong> $\text{LCM}(' + a + ', ' + b + ', ' + c + ') = \mathbf{' + l + '}$ (प्रत्येक अभाज्य गुणनखंड की सबसे बड़ी घात)<br><br>' +
+        '<div style="background: #fffbeb; border: 2px solid #fde68a; padding: 12px; border-radius: 8px; color: #92400e;">' +
+        '<strong>विशेष ध्यान दें:</strong> तीन संख्याओं के लिए $\text{HCF} \times \text{LCM} \neq a \times b \times c$ होता है। (यहाँ $\text{HCF} \times \text{LCM} = ' + (h*l) + '$, जबकि $a \times b \times c = ' + (a*b*c) + '$)' +
+        '</div>';
+
+      box.innerHTML = out;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 5: यूक्लिड विभाजन प्रमेयिका HCF सॉल्वर
+    function setSim5Values(a, b) {
+      document.getElementById('sim5_a').value = a;
+      document.getElementById('sim5_b').value = b;
+      updateSim5();
+    }
+
+    function updateSim5() {
+      var a = parseInt(document.getElementById('sim5_a').value) || 1;
+      var b = parseInt(document.getElementById('sim5_b').value) || 1;
+      var box = document.getElementById('sim5_euclid_steps');
+
+      if (a < b) {
+        var temp = a; a = b; b = temp;
+      }
+
+      var steps = '<strong>यूक्लिड विभाजन प्रमेयिका सूत्र:</strong> $a = bq + r \quad (0 \le r < b)$<br><br>';
+      var stepNum = 1;
+      var curA = a, curB = b;
+      var lastR = curB;
+
+      while (curB > 0) {
+        var q = Math.floor(curA / curB);
+        var r = curA % curB;
+        steps += '<strong>चरण ' + stepNum + ':</strong> $' + curA + ' = ' + curB + ' \times ' + q + ' + ' + r + '$';
+        if (r === 0) {
+          steps += ' <span style="color: #16a34a; font-weight: bold;">(शेषफल = 0, प्रक्रिया समाप्त)</span><br>';
+          lastR = curB;
+          break;
+        } else {
+          steps += '<br>';
+        }
+        curA = curB;
+        curB = r;
+        stepNum++;
+      }
+
+      steps += '<br><div style="background: #f3e8ff; border: 2px solid #d8b4fe; padding: 15px; border-radius: 10px;">' +
+        '<span style="color: #6b21a8; font-weight: 900; font-size: 24pt;">अतः $\mathbf{\text{HCF}(' + a + ', ' + b + ') = ' + lastR + '}$</span>' +
+        '</div>';
+
+      box.innerHTML = steps;
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // SIMULATOR 4: अपरिमेयता विरोधाभास प्रमाण जनरेटर
+    function setSim4Type(type) {
+      var box = document.getElementById('sim4_proof_box');
+      if (type === 'sqrt5') {
+        box.innerHTML = '<strong>सिद्ध करना है कि:</strong> $\sqrt{5}$ एक अपरिमेय संख्या है।<br><br>' +
+          '<strong>उपपत्ति (विरोधाभास विधि):</strong><br>' +
+          '<strong>चरण 1:</strong> माना $\sqrt{5}$ एक परिमेय संख्या है।<br>' +
+          'अतः हम दो सह-अभाज्य पूर्णांक $a$ और $b$ ($b \neq 0$) ज्ञात कर सकते हैं कि $\sqrt{5} = \frac{a}{b}$<br><br>' +
+          '<strong>चरण 2:</strong> दोनों पक्षों का वर्ग करने पर:<br>' +
+          '$5 = \frac{a^2}{b^2} \implies 5b^2 = a^2 \quad \text{--- (1)}$<br>' +
+          'यहाँ $5, a^2$ को विभाजित करता है $\implies 5, a$ को भी विभाजित करेगा।<br><br>' +
+          '<strong>चरण 3:</strong> अतः हम $a = 5c$ लिख सकते हैं। समीकरण (1) में मान रखने पर:<br>' +
+          '$5b^2 = (5c)^2 = 25c^2 \implies b^2 = 5c^2$<br>' +
+          'यहाँ $5, b^2$ को विभाजित करता है $\implies 5, b$ को भी विभाजित करेगा।<br><br>' +
+          '<div style="background: #fff1f2; border: 2px solid #fecdd3; padding: 15px; border-radius: 10px;">' +
+          '<strong>निष्कर्ष:</strong> $5, a$ और $b$ दोनों का उभयनिष्ठ गुणनखंड है। परंतु यह इस तथ्य का विरोधाभास है कि $a$ और $b$ सह-अभाज्य हैं।<br>' +
+          'यह विरोधाभास हमारी गलत कल्पना के कारण हुआ कि $\sqrt{5}$ परिमेय संख्या है।<br>' +
+          '<strong>अतः सिद्ध होता है कि $\mathbf{\sqrt{5}}$ एक अपरिमेय संख्या है। (इति सिद्धम्)</strong>' +
+          '</div>';
+      } else if (type === '3plus2sqrt5') {
+        box.innerHTML = '<strong>सिद्ध करना है कि:</strong> $3 + 2\sqrt{5}$ एक अपरिमेय संख्या है।<br><br>' +
+          '<strong>उपपत्ति:</strong><br>' +
+          '<strong>चरण 1:</strong> माना $3 + 2\sqrt{5}$ एक परिमेय संख्या है।<br>' +
+          'अतः $3 + 2\sqrt{5} = \frac{a}{b}$ (जहाँ $a, b$ सह-अभाज्य पूर्णांक हैं, $b \neq 0$)<br><br>' +
+          '<strong>चरण 2:</strong> पुनर्व्यवस्थित करने पर:<br>' +
+          '$2\sqrt{5} = \frac{a}{b} - 3 = \frac{a - 3b}{b}$<br>' +
+          '$\sqrt{5} = \frac{a - 3b}{2b}$<br><br>' +
+          '<div style="background: #fff1f2; border: 2px solid #fecdd3; padding: 15px; border-radius: 10px;">' +
+          '<strong>निष्कर्ष:</strong> चूँकि $a$ और $b$ पूर्णांक हैं, इसलिए $\frac{a - 3b}{2b}$ एक परिमेय संख्या है।<br>' +
+          'अतः $\sqrt{5}$ भी एक परिमेय संख्या होनी चाहिए। परंतु हम जानते हैं कि $\sqrt{5}$ एक अपरिमेय संख्या है।<br>' +
+          'यह विरोधाभास हमारी गलत कल्पना के कारण उत्पन्न हुआ।<br>' +
+          '<strong>अतः सिद्ध होता है कि $\mathbf{3 + 2\sqrt{5}}$ एक अपरिमेय संख्या है। (इति सिद्धम्)</strong>' +
+          '</div>';
+      } else if (type === 'sqrt2') {
+        box.innerHTML = '<strong>सिद्ध करना है कि:</strong> $\sqrt{2}$ एक अपरिमेय संख्या है।<br><br>' +
+          '<strong>उपपत्ति:</strong> माना $\sqrt{2} = \frac{a}{b}$ जहाँ $a, b$ सह-अभाज्य हैं।<br>' +
+          'वर्ग करने पर: $2b^2 = a^2 \implies 2, a$ को विभाजित करता है।<br>' +
+          '$a = 2c$ रखने पर: $2b^2 = 4c^2 \implies b^2 = 2c^2 \implies 2, b$ को विभाजित करता है।<br>' +
+          '2 दोनों का उभयनिष्ठ गुणनखंड है, जो सह-अभाज्य होने का विरोधाभास है।<br>' +
+          '<strong>अतः $\mathbf{\sqrt{2}}$ अपरिमेय संख्या है।</strong>';
+      } else {
+        box.innerHTML = '<strong>सिद्ध करना है कि:</strong> $\sqrt{3}$ एक अपरिमेय संख्या है।<br><br>' +
+          '<strong>उपपत्ति:</strong> माना $\sqrt{3} = \frac{a}{b}$ जहाँ $a, b$ सह-अभाज्य हैं।<br>' +
+          'वर्ग करने पर: $3b^2 = a^2 \implies 3, a$ को विभाजित करता है।<br>' +
+          '$a = 3c$ रखने पर: $3b^2 = 9c^2 \implies b^2 = 3c^2 \implies 3, b$ को विभाजित करता है।<br>' +
+          '3 दोनों का उभयनिष्ठ गुणनखंड है, जो सह-अभाज्य होने का विरोधाभास है।<br>' +
+          '<strong>अतः $\mathbf{\sqrt{3}}$ अपरिमेय संख्या है।</strong>';
+      }
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([box]).catch(function(err){});
+      }
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSim1();
+      updateSim2();
+      updateSim3();
+      updateSim5();
+      setSim4Type('sqrt5');
+    });
+  </script>
+
+</body>
+</html>

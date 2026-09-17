@@ -492,20 +492,20 @@ footer {
   }
 }
 
-/* Senior Secondary Portals Grid Styles */
+/* Study & Senior Secondary Portals Grid Styles */
 .senior-portals-wrapper {
-  margin-top: 30px;
+  margin-top: 35px;
   width: 100%;
 }
 
 .senior-portal-header {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .senior-portal-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -519,7 +519,43 @@ footer {
   justify-content: space-between;
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.class-portal-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Class 10 Math Portal Card */
+.c10-math-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 58, 138, 0.95));
+  border-color: #38bdf8;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+}
+
+.c10-math-card:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.55);
+}
+
+.c10-math-card .card-class-tag {
+  background: rgba(56, 189, 248, 0.25);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.c10-math-btn {
+  background: linear-gradient(135deg, #0284c7, #2563eb) !important;
+  border-color: #7dd3fc !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.5) !important;
+}
+
+.c10-math-btn:hover {
+  background: linear-gradient(135deg, #38bdf8, #0284c7) !important;
+  box-shadow: 0 12px 28px rgba(56, 189, 248, 0.6) !important;
 }
 
 .c11-card {
@@ -556,6 +592,114 @@ footer {
 
 .c11-btn:hover {
   background: linear-gradient(135deg, #34d399, #10b981) !important;
+}
+
+/* Math Tab Button in Subject Tabs */
+.math-tab-btn {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border-color: #38bdf8 !important;
+  color: #7dd3fc !important;
+}
+
+.math-tab-btn:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Math Unit Badges */
+.badge-number { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid #3b82f6; }
+.badge-algebra { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid #a855f7; }
+.badge-coord { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid #ec4899; }
+.badge-geometry { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #22c55e; }
+.badge-trig { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+.badge-mensuration { background: rgba(20, 184, 166, 0.2); color: #2dd4bf; border: 1px solid #14b8a6; }
+.badge-stats { background: rgba(244, 63, 94, 0.2); color: #fb7185; border: 1px solid #f43f5e; }
+
+.chapter-subtitle-en {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: -6px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.math-topics-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.math-topic-pill {
+  font-size: 0.76rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #e2e8f0;
+}
+
+.btn-formula {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: #ffffff;
+  border: 1px solid #c4b5fd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.btn-formula:hover {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-math-solutions {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: #ffffff;
+  border: 1px solid #6ee7b7;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.btn-math-solutions:hover {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-back-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateX(-3px);
 }
 
 @media (max-width: 850px) {

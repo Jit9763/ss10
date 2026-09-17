@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मास्टर प्रश्न-उत्तर (Master Q&A): NCERT कक्षा 10 गणित अध्याय 8 - त्रिकोणमिति का परिचय (Projector & Mobile Ready)</title>
+  
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$', '$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-page: #cbd5e1;
+      --card-bg: #ffffff;
+      --text-main: #000000;
+      --primary-blue: #1e3a8a;
+      --badge-blue: #2563eb;
+      --badge-green: #15803d;
+      --badge-orange: #c2410c;
+      --badge-purple: #6b21a8;
+      --badge-rose: #be123c;
+      --border-card: #94a3b8;
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Mukta', 'Tiro Devanagari Hindi', sans-serif;
+      font-size: 26pt;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 6px solid var(--border-card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Natural flow top action bar */
+    .action-bar-top {
+      position: relative;
+      margin: 0 auto 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      background: #1e293b;
+      padding: 15px 25px;
+      border-radius: 18px;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn-action {
+      background: #2563eb;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 20pt;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid #60a5fa;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-action-emerald {
+      background: #059669;
+      border-color: #34d399;
+    }
+    .btn-action-emerald:hover { background: #047857; }
+
+    /* Fraction Line Enhancement */
+    .mjx-mfrac > .mjx-line {
+      border-top: 8px solid #047857 !important;
+      background-color: #047857 !important;
+      height: 8px !important;
+      min-height: 8px !important;
+      opacity: 1 !important;
+    }
+    .MathJax .mfrac > span:not([class]) {
+      border-top: 8px solid #047857 !important;
+      min-height: 8px !important;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: 'Outfit', 'Mukta', sans-serif;
+      font-size: 44pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      text-align: center;
+      margin: 10px 0 20px 0;
+      line-height: 1.2;
+    }
+    .sub-title {
+      text-align: center;
+      font-size: 26pt;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .section-header {
+      background: #1e293b;
+      color: #ffffff !important;
+      padding: 16px 28px;
+      border-radius: 16px;
+      margin: 40px 0 30px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 30pt;
+      font-weight: 800;
+      border-left: 12px solid #3b82f6;
+    }
+
+    /* Question Cards */
+    .qa-box {
+      border: 4px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.2s ease;
+    }
+    .qa-box:hover {
+      border-color: #94a3b8;
+    }
+
+    .q-text {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    .q-tag {
+      background: #1e3a8a;
+      color: #ffffff !important;
+      padding: 4px 16px;
+      border-radius: 10px;
+      font-size: 22pt;
+      font-weight: 900;
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Step Boxes */
+    .step-box {
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 24pt;
+      line-height: 1.6;
+    }
+    .step-blue {
+      background: #eff6ff;
+      border-left: 8px solid #2563eb;
+      color: #1e3a8a;
+    }
+    .step-orange {
+      background: #fff7ed;
+      border-left: 8px solid #ea580c;
+      color: #9a3412;
+    }
+    .step-green {
+      background: #f0fdf4;
+      border-left: 8px solid #16a34a;
+      color: #166534;
+    }
+    .step-purple {
+      background: #faf5ff;
+      border-left: 8px solid #9333ea;
+      color: #581c87;
+    }
+
+    .badge-step {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 20pt;
+      color: #ffffff !important;
+      margin-bottom: 10px;
+    }
+    .bg-blue { background: #2563eb; }
+    .bg-orange { background: #ea580c; }
+    .bg-green { background: #16a34a; }
+    .bg-purple { background: #9333ea; }
+
+    /* Answer Boxes */
+    .ans-box {
+      background: #ecfdf5;
+      border: 4px solid #10b981;
+      border-radius: 14px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      font-size: 26pt;
+      font-weight: 900;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Simulator Container Styles */
+    .sim-card {
+      background: #f8fafc;
+      border: 4px solid #3b82f6;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 35px 0 45px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .sim-title {
+      font-size: 28pt;
+      font-weight: 900;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-desc {
+      font-size: 22pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .sim-control-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      border: 2px solid #cbd5e1;
+    }
+    .sim-label {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .sim-slider {
+      flex: 1;
+      min-width: 220px;
+      height: 12px;
+      border-radius: 6px;
+      accent-color: #2563eb;
+      cursor: pointer;
+    }
+    .sim-val-pill {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 22pt;
+      font-weight: 800;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .sim-display-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .sim-svg-wrap {
+      flex: 1;
+      min-width: 320px;
+      background: #ffffff;
+      border: 3px solid #94a3b8;
+      border-radius: 16px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sim-stats-wrap {
+      flex: 1;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sim-stat-box {
+      background: #ffffff;
+      border-left: 6px solid #2563eb;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .sim-stat-label {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .sim-stat-val {
+      font-size: 24pt;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+    .btn-nav {
+      flex: 1;
+      min-width: 220px;
+      background: #1e293b;
+      color: #ffffff !important;
+      text-align: center;
+      padding: 15px 25px;
+      font-size: 22pt;
+      font-weight: 800;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-nav:hover { background: #334155; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- TOP ACTION BAR -->
+    <div class="action-bar-top">
+      <a href="index.html" class="btn-action"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math7.html" class="btn-action"><i class="fas fa-arrow-left"></i> Ch 7: निर्देशांक ज्यामिति</a>
+      <span style="color: #f8fafc; font-weight: 800; font-size: 22pt;">कक्षा 10 गणित: अध्याय 8</span>
+      <a href="qa_master_math9.html" class="btn-action btn-action-emerald">Ch 9: त्रिकोणमिति के अनुप्रयोग <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- TITLE HEADER -->
+    <h1>अध्याय 8: त्रिकोणमिति का परिचय</h1>
+    <div class="sub-title">NCERT संपूर्ण अभ्यास 8.1, 8.2 व 8.3 • 100% चरणबद्ध हल • उच्च-कंट्रास्ट आरेख • 5 लाइव सिमुलेटर</div>
+
+    <!-- FORMULA SUMMARY CARD -->
+    <div style="background: #f8fafc; border: 4px solid #3b82f6; border-radius: 20px; padding: 30px; margin-bottom: 40px;">
+      <div style="font-size: 28pt; font-weight: 900; color: #1e3a8a; margin-bottom: 20px;">
+        <i class="fas fa-book-open"></i> त्रिकोणमिति के मूलभूत सूत्र एवं संकल्पनाएँ (Core Concepts)
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div style="background: #eff6ff; border-left: 6px solid #2563eb; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #1e3a8a; font-size: 22pt;">1. अनुपात (समकोण त्रिभुज)</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            $\sin\theta = \frac{\text{Perpendicular}}{\text{Hypotenuse}}$, $\cos\theta = \frac{\text{Base}}{\text{Hypotenuse}}$<br>
+            $\tan\theta = \frac{\text{Perpendicular}}{\text{Base}}$, $\cot\theta = \frac{\text{Base}}{\text{Perpendicular}}$<br>
+            $\sec\theta = \frac{\text{Hypotenuse}}{\text{Base}}$, $\csc\theta = \frac{\text{Hypotenuse}}{\text{Perpendicular}}$
+          </div>
+        </div>
+        <div style="background: #f0fdf4; border-left: 6px solid #16a34a; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #166534; font-size: 22pt;">2. तीन मौलिक सर्वसमिकाएँ</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            1. $\sin^2\theta + \cos^2\theta = 1$<br>
+            2. $1 + \tan^2\theta = \sec^2\theta$<br>
+            3. $1 + \cot^2\theta = \csc^2\theta$
+          </div>
+        </div>
+        <div style="background: #fff7ed; border-left: 6px solid #ea580c; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #9a3412; font-size: 22pt;">3. विशिष्ट कोणों के मान</div>
+          <div style="font-size: 20pt; font-weight: 700; color: #0f172a; margin-top: 5px;">
+            $\sin 0^\circ = 0$, $\sin 30^\circ = \frac{1}{2}$, $\sin 45^\circ = \frac{1}{\sqrt{2}}$<br>
+            $\sin 60^\circ = \frac{\sqrt{3}}{2}$, $\sin 90^\circ = 1$<br>
+            $\tan 30^\circ = \frac{1}{\sqrt{3}}$, $\tan 45^\circ = 1$, $\tan 60^\circ = \sqrt{3}$
+          </div>
+        </div>
+        <div style="background: #faf5ff; border-left: 6px solid #9333ea; padding: 15px 20px; border-radius: 12px;">
+          <div style="font-weight: 800; color: #581c87; font-size: 22pt;">4. पाइथागोरस प्रमेय</div>
+          <div style="font-size: 22pt; font-weight: 900; color: #0f172a; margin-top: 5px;">
+            $\text{Hypotenuse}^2 = \text{Perpendicular}^2 + \text{Base}^2$<br>
+            $k^2 = p^2 + b^2$
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECTION 8.1
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-play-circle"></i> प्रश्नावली 8.1: त्रिकोणमितीय अनुपात (संपूर्ण 11 प्रश्न)
+    </div>
+
+    <!-- Ex 8.1 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> $\triangle ABC$ में, जिसका कोण $B$ समकोण है, $AB = 24\text{ cm}$ और $BC = 7\text{ cm}$ है। निम्नलिखित का मान ज्ञात कीजिए:
+        <br>(i) $\sin A, \cos A$ &nbsp;&nbsp;&nbsp;&nbsp; (ii) $\sin C, \cos C$
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+        <div style="flex: 1; min-width: 320px;">
+          <div class="step-box step-blue">
+            <span class="badge-step bg-blue">चरण 1: पाइथागोरस प्रमेय से कर्ण $AC$</span>
+            <div>$AC = \sqrt{AB^2 + BC^2} = \sqrt{24^2 + 7^2} = \sqrt{576 + 49} = \sqrt{625} = 25\text{ cm}$</div>
+          </div>
+          <div class="step-box step-orange">
+            <span class="badge-step bg-orange">चरण 2: (i) कोण $A$ के सापेक्ष अनुपात</span>
+            <div>कोण $A$ के लिए: सम्मुख भुजा (लंब) $= BC = 7$, संलग्न भुजा (आधार) $= AB = 24$, कर्ण $= 25$</div>
+            <div>$\sin A = \frac{BC}{AC} = \mathbf{\frac{7}{25}}$, \quad $\cos A = \frac{AB}{AC} = \mathbf{\frac{24}{25}}$</div>
+          </div>
+          <div class="step-box step-green">
+            <span class="badge-step bg-green">चरण 3: (ii) कोण $C$ के सापेक्ष अनुपात</span>
+            <div>कोण $C$ के लिए: सम्मुख भुजा (लंब) $= AB = 24$, संलग्न भुजा (आधार) $= BC = 7$, कर्ण $= 25$</div>
+            <div>$\sin C = \frac{AB}{AC} = \mathbf{\frac{24}{25}}$, \quad $\cos C = \frac{BC}{AC} = \mathbf{\frac{7}{25}}$</div>
+          </div>
+        </div>
+        <div style="width: 320px; text-align: center;">
+          <svg viewBox="0 0 240 220" style="width: 100%; height: auto; background: #ffffff; border: 3px solid #1e3a8a; border-radius: 16px;">
+            <polygon points="50,170 200,170 50,40" fill="#eff6ff" stroke="#1e3a8a" stroke-width="4"/>
+            <!-- Right angle at B -->
+            <rect x="50" y="150" width="20" height="20" fill="none" stroke="#dc2626" stroke-width="2"/>
+            <circle cx="50" cy="40" r="5" fill="#0f172a"/>
+            <circle cx="50" cy="170" r="5" fill="#0f172a"/>
+            <circle cx="200" cy="170" r="5" fill="#0f172a"/>
+            <text x="35" y="38" font-size="16" font-weight="900" fill="#0f172a">A</text>
+            <text x="35" y="190" font-size="16" font-weight="900" fill="#0f172a">B</text>
+            <text x="210" y="175" font-size="16" font-weight="900" fill="#0f172a">C</text>
+            <text x="20" y="110" font-size="14" font-weight="900" fill="#1e3a8a">AB=24</text>
+            <text x="125" y="195" font-size="14" font-weight="900" fill="#1e3a8a">BC=7</text>
+            <text x="135" y="95" font-size="15" font-weight="900" fill="#dc2626">AC=25</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) $\sin A = \frac{7}{25}, \cos A = \frac{24}{25}$; \quad (ii) $\sin C = \frac{24}{25}, \cos C = \frac{7}{25}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 1: TRIG RATIO EXPLORER (Placed right under Ex 8.1 Q1)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #2563eb;">
+      <div class="sim-title">
+        <i class="fas fa-drafting-compass"></i> लाइव सिमुलेटर 1: समकोण त्रिभुज एवं सभी 6 त्रिकोणमितीय अनुपात विश्लेषक
+      </div>
+      <div class="sim-desc">
+        लंब ($p$) एवं आधार ($b$) बदलकर कर्ण ($k$) तथा सभी 6 त्रिकोणमितीय अनुपातों ($\sin, \cos, \tan, \csc, \sec, \cot$) के लाइव मान देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">लंब / सम्मुख भुजा ($p$):</span>
+        <input type="range" id="ch8_sim1_p" class="sim-slider" min="1" max="30" value="7" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch8_sim1_p_val">7</span>
+
+        <span class="sim-label" style="margin-left: 20px;">आधार / संलग्न भुजा ($b$):</span>
+        <input type="range" id="ch8_sim1_b" class="sim-slider" min="1" max="30" value="24" oninput="updateSim1()">
+        <span class="sim-val-pill" id="ch8_sim1_b_val">24</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch8_sim1_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Right Triangle SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">कर्ण ($k = \sqrt{p^2 + b^2}$)</div>
+            <div class="sim-stat-val" id="ch8_sim1_hyp" style="color: #1e3a8a;">25.00</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">$\sin\theta = p/k, \quad \cos\theta = b/k$</div>
+            <div class="sim-stat-val" id="ch8_sim1_sincos" style="color: #166534;">sin = 0.280, cos = 0.960</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">$\tan\theta = p/b, \quad \cot\theta = b/p$</div>
+            <div class="sim-stat-val" id="ch8_sim1_tancot" style="color: #c2410c;">tan = 0.292, cot = 3.429</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #9333ea;">
+            <div class="sim-stat-label">$\sec\theta = k/b, \quad \csc\theta = k/p$</div>
+            <div class="sim-stat-val" id="ch8_sim1_seccsc" style="color: #581c87;">sec = 1.042, csc = 3.571</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> दी गई आकृति में $\tan P - \cot R$ का मान ज्ञात कीजिए, जहाँ $PQ = 12\text{ cm}, PR = 13\text{ cm}$ और $\angle Q = 90^\circ$ है।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: पाइथागोरस से $QR$ की गणना</span>
+        <div>$QR = \sqrt{PR^2 - PQ^2} = \sqrt{13^2 - 12^2} = \sqrt{169 - 144} = \sqrt{25} = 5\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: $\tan P$ और $\cot R$ का मान</span>
+        <div>$\angle P$ के लिए: सम्मुख भुजा $= QR = 5$, संलग्न भुजा $= PQ = 12 \implies \tan P = \frac{5}{12}$</div>
+        <div>$\angle R$ के लिए: संलग्न भुजा $= QR = 5$, सम्मुख भुजा $= PQ = 12 \implies \cot R = \frac{5}{12}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 3: अभीष्ट अंतर</span>
+        <div>$\tan P - \cot R = \frac{5}{12} - \frac{5}{12} = \mathbf{0}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\tan P - \cot R = \mathbf{0}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> यदि $\sin A = \frac{3}{4}$, तो $\cos A$ और $\tan A$ का मान परिकलित कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: त्रिभुज की भुजाएँ</span>
+        <div>$\sin A = \frac{\text{Perpendicular}}{\text{Hypotenuse}} = \frac{3}{4} \implies \text{Perpendicular} = 3k, \text{Hypotenuse} = 4k$</div>
+        <div>आधार $= \sqrt{\text{Hypotenuse}^2 - \text{Perpendicular}^2} = \sqrt{(4k)^2 - (3k)^2} = \sqrt{16k^2 - 9k^2} = \sqrt{7}k$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: $\cos A$ और $\tan A$ निकालना</span>
+        <div>$\cos A = \frac{\text{Base}}{\text{Hypotenuse}} = \mathbf{\frac{\sqrt{7}}{4}}$</div>
+        <div>$\tan A = \frac{\text{Perpendicular}}{\text{Base}} = \mathbf{\frac{3}{\sqrt{7}}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\cos A = \mathbf{\frac{\sqrt{7}}{4}}$, \quad $\tan A = \mathbf{\frac{3}{\sqrt{7}}}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> यदि $15\cot A = 8$ हो, तो $\sin A$ और $\sec A$ का मान ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: अनुपात और भुजाएँ</span>
+        <div>$15\cot A = 8 \implies \cot A = \frac{8}{15} = \frac{\text{Base}}{\text{Perpendicular}}$</div>
+        <div>माना आधार $= 8k$, लंब $= 15k$</div>
+        <div>कर्ण $= \sqrt{(8k)^2 + (15k)^2} = \sqrt{64k^2 + 225k^2} = \sqrt{289k^2} = 17k$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: $\sin A$ और $\sec A$ की गणना</span>
+        <div>$\sin A = \frac{\text{Perpendicular}}{\text{Hypotenuse}} = \mathbf{\frac{15}{17}}$</div>
+        <div>$\sec A = \frac{\text{Hypotenuse}}{\text{Base}} = \mathbf{\frac{17}{8}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\sin A = \mathbf{\frac{15}{17}}$, \quad $\sec A = \mathbf{\frac{17}{8}}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q5 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 5</span> यदि $\sec\theta = \frac{13}{12}$ हो, तो अन्य सभी त्रिकोणमितीय अनुपात परिकलित कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: तीनों भुजाएँ</span>
+        <div>$\sec\theta = \frac{\text{Hypotenuse}}{\text{Base}} = \frac{13}{12} \implies \text{Hypotenuse} = 13k, \text{Base} = 12k$</div>
+        <div>लंब $= \sqrt{13^2 - 12^2} = \sqrt{169 - 144} = \sqrt{25} = 5k$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">चरण 2: सभी 5 अन्य अनुपात</span>
+        <div>$\sin\theta = \frac{5}{13}, \quad \cos\theta = \frac{12}{13}, \quad \tan\theta = \frac{5}{12}$</div>
+        <div>$\csc\theta = \frac{13}{5}, \quad \cot\theta = \frac{12}{5}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\sin\theta = \frac{5}{13}, \cos\theta = \frac{12}{13}, \tan\theta = \frac{5}{12}, \csc\theta = \frac{13}{5}, \cot\theta = \frac{12}{5}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q6 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 6</span> यदि $\angle A$ और $\angle B$ न्यून कोण हों जहाँ $\cos A = \cos B$, तो दिखाइए कि $\angle A = \angle B$।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">प्रमाण</span>
+        <div>माना समकोण $\triangle ABC$ में कोण $C = 90^\circ$ है।</div>
+        <div>तब कोण $A$ के लिए: $\cos A = \frac{AC}{AB}$</div>
+        <div>और कोण $B$ के लिए: $\cos B = \frac{BC}{AB}$</div>
+        <div style="margin-top: 10px;">दिया है: $\cos A = \cos B \implies \frac{AC}{AB} = \frac{BC}{AB} \implies AC = BC$</div>
+        <div>चूँकि सम्मुख भुजाएँ समान हैं, अतः उनके सम्मुख कोण भी समान होंगे:</div>
+        <div>$AC = BC \implies \mathbf{\angle B = \angle A}$ अर्थात $\mathbf{\angle A = \angle B}$। (इति सिद्धम्)</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: सिद्ध हुआ कि $\mathbf{\angle A = \angle B}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q7 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 7</span> यदि $\cot\theta = \frac{7}{8}$, तो (i) $\frac{(1+\sin\theta)(1-\sin\theta)}{(1+\cos\theta)(1-\cos\theta)}$ \quad (ii) $\cot^2\theta$ का मान निकालिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: सर्वसमिका से सरलीकरण</span>
+        <div>अंश: $(1+\sin\theta)(1-\sin\theta) = 1 - \sin^2\theta = \cos^2\theta$</div>
+        <div>हर: $(1+\cos\theta)(1-\cos\theta) = 1 - \cos^2\theta = \sin^2\theta$</div>
+        <div>अतः $\frac{(1+\sin\theta)(1-\sin\theta)}{(1+\cos\theta)(1-\cos\theta)} = \frac{\cos^2\theta}{\sin^2\theta} = \cot^2\theta$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: मान रखना</span>
+        <div>दिया है $\cot\theta = \frac{7}{8}$</div>
+        <div>(i) मान $= \cot^2\theta = \left(\frac{7}{8}\right)^2 = \mathbf{\frac{49}{64}}$</div>
+        <div>(ii) $\cot^2\theta = \mathbf{\frac{49}{64}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) मान = $\mathbf{\frac{49}{64}}$; \quad (ii) मान = $\mathbf{\frac{49}{64}}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q8 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 8</span> यदि $3\cot A = 4$, तो जाँच कीजिए कि $\frac{1-\tan^2 A}{1+\tan^2 A} = \cos^2 A - \sin^2 A$ है या नहीं।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: अनुपातों का मान</span>
+        <div>$3\cot A = 4 \implies \cot A = \frac{4}{3} \implies \tan A = \frac{3}{4}$</div>
+        <div>लंब $= 3$, आधार $= 4 \implies$ कर्ण $= \sqrt{3^2 + 4^2} = 5$</div>
+        <div>$\cos A = \frac{4}{5}, \quad \sin A = \frac{3}{5}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: LHS और RHS की तुलना</span>
+        <div>$\text{LHS} = \frac{1 - (3/4)^2}{1 + (3/4)^2} = \frac{1 - 9/16}{1 + 9/16} = \frac{7/16}{25/16} = \mathbf{\frac{7}{25}}$</div>
+        <div>$\text{RHS} = \cos^2 A - \sin^2 A = \left(\frac{4}{5}\right)^2 - \left(\frac{3}{5}\right)^2 = \frac{16}{25} - \frac{9}{25} = \mathbf{\frac{7}{25}}$</div>
+        <div>$\text{LHS} = \text{RHS} = \frac{7}{25}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: हाँ, दोनों पक्ष बराबर हैं ($\mathbf{\text{LHS} = \text{RHS} = \frac{7}{25}}$)।</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q9 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 9</span> त्रिभुज $ABC$ में, जिसका कोण $B$ समकोण है, यदि $\tan A = \frac{1}{\sqrt{3}}$, तो निम्नलिखित के मान ज्ञात कीजिए:
+        <br>(i) $\sin A \cos C + \cos A \sin C$ &nbsp;&nbsp;&nbsp;&nbsp; (ii) $\cos A \cos C - \sin A \sin C$
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: भुजाएँ ज्ञात करना</span>
+        <div>$\tan A = \frac{1}{\sqrt{3}} \implies BC = 1, AB = \sqrt{3}$</div>
+        <div>कर्ण $AC = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{1 + 3} = 2$</div>
+        <div>अतः कोण $A$: $\sin A = \frac{1}{2}, \cos A = \frac{\sqrt{3}}{2}$</div>
+        <div>कोण $C$: $\sin C = \frac{\sqrt{3}}{2}, \cos C = \frac{1}{2}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: गणनाएँ</span>
+        <div>(i) $\sin A \cos C + \cos A \sin C = \left(\frac{1}{2} \times \frac{1}{2}\right) + \left(\frac{\sqrt{3}}{2} \times \frac{\sqrt{3}}{2}\right) = \frac{1}{4} + \frac{3}{4} = \mathbf{1}$</div>
+        <div>(ii) $\cos A \cos C - \sin A \sin C = \left(\frac{\sqrt{3}}{2} \times \frac{1}{2}\right) - \left(\frac{1}{2} \times \frac{\sqrt{3}}{2}\right) = \frac{\sqrt{3}}{4} - \frac{\sqrt{3}}{4} = \mathbf{0}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) मान = $\mathbf{1}$; \quad (ii) मान = $\mathbf{0}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q10 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 10</span> $\triangle PQR$ में, जिसका कोण $Q$ समकोण है, $PR + QR = 25\text{ cm}$ और $PQ = 5\text{ cm}$ है। $\sin P, \cos P$ और $\tan P$ के मान ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: पाइथागोरस से $PR$ और $QR$ ज्ञात करना</span>
+        <div>माना $QR = x\text{ cm} \implies PR = 25 - x$</div>
+        <div>पाइथागोरस प्रमेय से: $PR^2 = PQ^2 + QR^2$</div>
+        <div>$(25 - x)^2 = 5^2 + x^2 \implies 625 - 50x + x^2 = 25 + x^2$</div>
+        <div>$625 - 25 = 50x \implies 50x = 600 \implies x = 12\text{ cm}$</div>
+        <div>अतः $QR = 12\text{ cm}$ तथा कर्ण $PR = 25 - 12 = 13\text{ cm}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: अनुपातों का मान</span>
+        <div>$\sin P = \frac{QR}{PR} = \mathbf{\frac{12}{13}}$</div>
+        <div>$\cos P = \frac{PQ}{PR} = \mathbf{\frac{5}{13}}$</div>
+        <div>$\tan P = \frac{QR}{PQ} = \mathbf{\frac{12}{5}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\sin P = \mathbf{\frac{12}{13}}, \quad \cos P = \mathbf{\frac{5}{13}}, \quad \tan P = \mathbf{\frac{12}{5}}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 2: UNKNOWN SIDE SOLVER (Placed right under Ex 8.1 Q10)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #ea580c;">
+      <div class="sim-title">
+        <i class="fas fa-calculator"></i> लाइव सिमुलेटर 2: अज्ञात भुजा व $PR+QR=S$ संबंध सॉल्वर
+      </div>
+      <div class="sim-desc">
+        $PQ$ भुजा तथा $PR + QR$ का योग बदलकर लाइव कर्ण ($PR$), लंब ($QR$) एवं सभी अनुपात ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">आधार $PQ$:</span>
+        <input type="range" id="ch8_sim2_pq" class="sim-slider" min="3" max="15" value="5" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch8_sim2_pq_val">5 cm</span>
+
+        <span class="sim-label" style="margin-left: 20px;">योग ($PR + QR$):</span>
+        <input type="range" id="ch8_sim2_sum" class="sim-slider" min="15" max="45" value="25" oninput="updateSim2()">
+        <span class="sim-val-pill" id="ch8_sim2_sum_val">25 cm</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch8_sim2_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Solver SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">लंब $QR = \frac{S^2 - PQ^2}{2S}$</div>
+            <div class="sim-stat-val" id="ch8_sim2_qr" style="color: #c2410c;">12.00 cm</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">कर्ण $PR = S - QR$</div>
+            <div class="sim-stat-val" id="ch8_sim2_pr" style="color: #1e3a8a;">13.00 cm</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">$\sin P, \cos P, \tan P$</div>
+            <div class="sim-stat-val" id="ch8_sim2_ratios" style="color: #166534;">12/13, 5/13, 12/5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ex 8.1 Q11 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 11</span> बताइए कि निम्नलिखित कथन सत्य हैं या असत्य। कारण सहित अपने उत्तर की पुष्टि कीजिए:
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(i) $\tan A$ का मान सदैव $1$ से कम होता है।</strong><br>
+        ❌ <strong>असत्य:</strong> समकोण त्रिभुज में लंब आधार से बड़ा भी हो सकता है, जैसे $\tan 60^\circ = \sqrt{3} \approx 1.732 > 1$।</div>
+      </div>
+
+      <div class="step-box step-green">
+        <div><strong>(ii) कोण $A$ के किसी मान के लिए $\sec A = \frac{12}{5}$।</strong><br>
+        ✔️ <strong>सत्य:</strong> $\sec A = \frac{\text{Hypotenuse}}{\text{Base}}$ होता है। चूँकि कर्ण ($12$) आधार ($5$) से बड़ा है, अतः यह संभव है ($\sec A \ge 1$ सदैव)।</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <div><strong>(iii) $\cos A$, कोण $A$ के $\text{cosecant}$ के लिए प्रयुक्त एक संक्षिप्त रूप है।</strong><br>
+        ❌ <strong>असत्य:</strong> $\cos A$, कोण $A$ के $\text{cosine}$ का संक्षिप्त रूप है। $\text{cosecant}$ का संक्षिप्त रूप $\csc A$ होता है।</div>
+      </div>
+
+      <div class="step-box step-purple">
+        <div><strong>(iv) $\cot A$, $\cot$ और $A$ का गुणनफल होता है।</strong><br>
+        ❌ <strong>असत्य:</strong> $\cot A$ कोण $A$ का कोटैंजेंट है, यह गुणनफल नहीं बल्कि एक संक्रिया/अनुपात है। बिना कोण के $\cot$ अर्थहीन है।</div>
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(v) किसी भी कोण $\theta$ के लिए $\sin\theta = \frac{4}{3}$।</strong><br>
+        ❌ <strong>असत्य:</strong> $\sin\theta = \frac{\text{Perpendicular}}{\text{Hypotenuse}}$ होता है और किसी समकोण त्रिभुज में लंब कभी कर्ण से बड़ा नहीं हो सकता। अतः $\sin\theta \le 1$ सदैव। यहाँ $\frac{4}{3} > 1$ असंभव है।</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) असत्य, (ii) सत्य, (iii) असत्य, (iv) असत्य, (v) असत्य</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECTION 8.2
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-table"></i> प्रश्नावली 8.2: विशिष्ट कोणों के त्रिकोणमितीय मान (संपूर्ण 4 प्रश्न)
+    </div>
+
+    <!-- Ex 8.2 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> निम्नलिखित के मान निकालिए:
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(i) $\sin 60^\circ \cos 30^\circ + \sin 30^\circ \cos 60^\circ$</span>
+        <div>$= \left(\frac{\sqrt{3}}{2}\right)\left(\frac{\sqrt{3}}{2}\right) + \left(\frac{1}{2}\right)\left(\frac{1}{2}\right) = \frac{3}{4} + \frac{1}{4} = \frac{4}{4} = \mathbf{1}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">(ii) $2\tan^2 45^\circ + \cos^2 30^\circ - \sin^2 60^\circ$</span>
+        <div>$= 2(1)^2 + \left(\frac{\sqrt{3}}{2}\right)^2 - \left(\frac{\sqrt{3}}{2}\right)^2 = 2(1) + 0 = \mathbf{2}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">(iii) $\frac{\cos 45^\circ}{\sec 30^\circ + \csc 30^\circ}$</span>
+        <div>$= \frac{\frac{1}{\sqrt{2}}}{\frac{2}{\sqrt{3}} + 2} = \frac{\frac{1}{\sqrt{2}}}{\frac{2 + 2\sqrt{3}}{\sqrt{3}}} = \frac{\sqrt{3}}{2\sqrt{2}(\sqrt{3} + 1)} = \mathbf{\frac{3\sqrt{2} - \sqrt{6}}{8}}$</div>
+      </div>
+
+      <div class="step-box step-purple">
+        <span class="badge-step bg-purple">(iv) $\frac{\sin 30^\circ + \tan 45^\circ - \csc 60^\circ}{\sec 30^\circ + \cos 60^\circ + \cot 45^\circ}$</span>
+        <div>$= \frac{\frac{1}{2} + 1 - \frac{2}{\sqrt{3}}}{\frac{2}{\sqrt{3}} + \frac{1}{2} + 1} = \frac{\frac{3}{2} - \frac{2}{\sqrt{3}}}{\frac{3}{2} + \frac{2}{\sqrt{3}}} = \frac{3\sqrt{3} - 4}{3\sqrt{3} + 4} = \mathbf{\frac{43 - 24\sqrt{3}}{11}}$</div>
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(v) $\frac{5\cos^2 60^\circ + 4\sec^2 30^\circ - \tan^2 45^\circ}{\sin^2 30^\circ + \cos^2 30^\circ}$</span>
+        <div>हर में $\sin^2 30^\circ + \cos^2 30^\circ = 1$</div>
+        <div>अंश $= 5\left(\frac{1}{2}\right)^2 + 4\left(\frac{2}{\sqrt{3}}\right)^2 - (1)^2 = 5\left(\frac{1}{4}\right) + 4\left(\frac{4}{3}\right) - 1 = \frac{5}{4} + \frac{16}{3} - 1$</div>
+        <div>$= \frac{15 + 64 - 12}{12} = \mathbf{\frac{67}{12}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) $1$, \quad (ii) $2$, \quad (iii) $\frac{3\sqrt{2}-\sqrt{6}}{8}$, \quad (iv) $\frac{43-24\sqrt{3}}{11}$, \quad (v) $\frac{67}{12}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 3: TRIG VALUES EXPLORER (Placed right under Ex 8.2 Q1)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #16a34a;">
+      <div class="sim-title">
+        <i class="fas fa-table"></i> लाइव सिमुलेटर 3: विशिष्ट कोणों ($0^\circ, 30^\circ, 45^\circ, 60^\circ, 90^\circ$) का लाइव सारणी एक्सप्लोरर
+      </div>
+      <div class="sim-desc">
+        किसी भी मानक कोण पर क्लिक कीजिए और सभी 6 अनुपातों के सटीक करणी (Surd) एवं दशमलव मान लाइव देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <button onclick="setAnglePreset(0)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">0°</button>
+        <button onclick="setAnglePreset(30)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">30°</button>
+        <button onclick="setAnglePreset(45)" class="btn-action btn-action-emerald" style="font-size: 16pt; padding: 6px 14px;">45°</button>
+        <button onclick="setAnglePreset(60)" class="btn-action" style="font-size: 16pt; padding: 6px 14px;">60°</button>
+        <button onclick="setAnglePreset(90)" class="btn-action" style="font-size: 16pt; padding: 6px 14px; background: #9333ea; border-color: #c084fc;">90°</button>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch8_sim3_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Angle Dial SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">$\sin\theta$ और $\cos\theta$ के मान</div>
+            <div class="sim-stat-val" id="ch8_sim3_sincos" style="color: #1e3a8a;">sin 45° = 1/√2, cos 45° = 1/√2</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">$\tan\theta$ और $\cot\theta$ के मान</div>
+            <div class="sim-stat-val" id="ch8_sim3_tancot" style="color: #166534;">tan 45° = 1, cot 45° = 1</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">$\sec\theta$ और $\csc\theta$ के मान</div>
+            <div class="sim-stat-val" id="ch8_sim3_seccsc" style="color: #c2410c;">sec 45° = √2, csc 45° = √2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ex 8.2 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> सही विकल्प चुनिए और अपने विकल्प का औचित्य दीजिए:
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(i) $\frac{2\tan 30^\circ}{1 + \tan^2 30^\circ} =$</strong><br>
+        $= \frac{2(1/\sqrt{3})}{1 + 1/3} = \frac{2/\sqrt{3}}{4/3} = \frac{2}{\sqrt{3}} \times \frac{3}{4} = \frac{\sqrt{3}}{2} = \mathbf{\sin 60^\circ}$<br>
+        🎯 <strong>सही विकल्प: (A) $\sin 60^\circ$</strong></div>
+      </div>
+
+      <div class="step-box step-green">
+        <div><strong>(ii) $\frac{1 - \tan^2 45^\circ}{1 + \tan^2 45^\circ} =$</strong><br>
+        $= \frac{1 - (1)^2}{1 + (1)^2} = \frac{0}{2} = \mathbf{0}$<br>
+        🎯 <strong>सही विकल्प: (D) $0$</strong></div>
+      </div>
+
+      <div class="step-box step-orange">
+        <div><strong>(iii) $\sin 2A = 2\sin A$ तब सत्य होता है, जबकि $A$ बराबर है:</strong><br>
+        यदि $A = 0^\circ \implies \sin(2 \times 0^\circ) = \sin 0^\circ = 0$ तथा $2\sin 0^\circ = 0$<br>
+        🎯 <strong>सही विकल्प: (A) $0^\circ$</strong></div>
+      </div>
+
+      <div class="step-box step-purple">
+        <div><strong>(iv) $\frac{2\tan 30^\circ}{1 - \tan^2 30^\circ} =$</strong><br>
+        $= \frac{2(1/\sqrt{3})}{1 - 1/3} = \frac{2/\sqrt{3}}{2/3} = \sqrt{3} = \mathbf{\tan 60^\circ}$<br>
+        🎯 <strong>सही विकल्प: (C) $\tan 60^\circ$</strong></div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) (A) $\sin 60^\circ$, \quad (ii) (D) $0$, \quad (iii) (A) $0^\circ$, \quad (iv) (C) $\tan 60^\circ$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.2 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> यदि $\tan(A + B) = \sqrt{3}$ और $\tan(A - B) = \frac{1}{\sqrt{3}}$ है; $0^\circ < A + B \le 90^\circ; A > B$ तो $A$ और $B$ का मान ज्ञात कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">चरण 1: समीकरण बनाना</span>
+        <div>$\tan(A + B) = \sqrt{3} = \tan 60^\circ \implies A + B = 60^\circ \quad \text{--- (1)}$</div>
+        <div>$\tan(A - B) = \frac{1}{\sqrt{3}} = \tan 30^\circ \implies A - B = 30^\circ \quad \text{--- (2)}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">चरण 2: समीकरणों को हल करना</span>
+        <div>समीकरण (1) और (2) को जोड़ने पर:</div>
+        <div>$(A + B) + (A - B) = 60^\circ + 30^\circ \implies 2A = 90^\circ \implies \mathbf{A = 45^\circ}$</div>
+        <div>समीकरण (1) में $A$ का मान रखने पर:</div>
+        <div>$45^\circ + B = 60^\circ \implies \mathbf{B = 15^\circ}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\mathbf{A = 45^\circ}$ तथा $\mathbf{B = 15^\circ}$</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 4: COMPOUND EQUATION SOLVER (Placed right under Ex 8.2 Q3)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #be123c;">
+      <div class="sim-title">
+        <i class="fas fa-wave-square"></i> लाइव सिमुलेटर 4: $\tan(A+B)$ व $\tan(A-B)$ युगपत समीकरण सॉल्वर
+      </div>
+      <div class="sim-desc">
+        योग कोण $(A+B)$ और अंतर कोण $(A-B)$ बदलकर $A$ और $B$ के मान लाइव ज्ञात कीजिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">$(A+B)$ का कोण:</span>
+        <select id="ch8_sim4_sum" onchange="updateSim4()" style="font-size: 20pt; font-weight: 800; padding: 6px 14px; border-radius: 10px; border: 2px solid #be123c;">
+          <option value="60" selected>60° (tan = √3)</option>
+          <option value="45">45° (tan = 1)</option>
+          <option value="90">90° (tan = अपरिभाषित)</option>
+        </select>
+
+        <span class="sim-label" style="margin-left: 20px;">$(A-B)$ का कोण:</span>
+        <select id="ch8_sim4_diff" onchange="updateSim4()" style="font-size: 20pt; font-weight: 800; padding: 6px 14px; border-radius: 10px; border: 2px solid #be123c;">
+          <option value="30" selected>30° (tan = 1/√3)</option>
+          <option value="15">15°</option>
+          <option value="0">0° (tan = 0)</option>
+        </select>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch8_sim4_svg" viewBox="0 0 260 200" style="width: 260px; height: 200px;">
+            <!-- Dynamic Compound Angle SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #be123c;">
+            <div class="sim-stat-label">कोण $A = \frac{(A+B) + (A-B)}{2}$</div>
+            <div class="sim-stat-val" id="ch8_sim4_A" style="color: #9f1239;">A = 45°</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">कोण $B = \frac{(A+B) - (A-B)}{2}$</div>
+            <div class="sim-stat-val" id="ch8_sim4_B" style="color: #166534;">B = 15°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ex 8.2 Q4 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> बताइए कि निम्नलिखित में कौन-कौन सत्य हैं या असत्य हैं। कारण सहित अपने उत्तर की पुष्टि कीजिए:
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(i) $\sin(A + B) = \sin A + \sin B$</strong><br>
+        ❌ <strong>असत्य:</strong> माना $A = 30^\circ, B = 60^\circ$। तब $\sin(30^\circ + 60^\circ) = \sin 90^\circ = 1$।<br>
+        किंतु $\sin 30^\circ + \sin 60^\circ = \frac{1}{2} + \frac{\sqrt{3}}{2} = \frac{1+\sqrt{3}}{2} \ne 1$।</div>
+      </div>
+
+      <div class="step-box step-green">
+        <div><strong>(ii) $\theta$ में वृद्धि होने के साथ $\sin\theta$ के मान में भी वृद्धि होती है।</strong><br>
+        ✔️ <strong>सत्य:</strong> $0^\circ \le \theta \le 90^\circ$ के लिए, मान $0 \rightarrow \frac{1}{2} \rightarrow \frac{1}{\sqrt{2}} \rightarrow \frac{\sqrt{3}}{2} \rightarrow 1$ बढ़ता है।</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <div><strong>(iii) $\theta$ में वृद्धि होने के साथ $\cos\theta$ के मान में भी वृद्धि होती है।</strong><br>
+        ❌ <strong>असत्य:</strong> $0^\circ \le \theta \le 90^\circ$ के लिए, $\cos\theta$ का मान $1$ से घटकर $0$ हो जाता है (घटता है, बढ़ता नहीं)।</div>
+      </div>
+
+      <div class="step-box step-purple">
+        <div><strong>(iv) $\theta$ के सभी मानों पर $\sin\theta = \cos\theta$।</strong><br>
+        ❌ <strong>असत्य:</strong> यह केवल $\theta = 45^\circ$ पर सत्य है ($\sin 45^\circ = \cos 45^\circ = 1/\sqrt{2}$)। जैसे $\theta = 30^\circ$ पर $\sin 30^\circ = 1/2 \ne \sqrt{3}/2 = \cos 30^\circ$।</div>
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(v) $A = 0^\circ$ पर $\cot A$ परिभाषित नहीं है।</strong><br>
+        ✔️ <strong>सत्य:</strong> $\cot 0^\circ = \frac{\cos 0^\circ}{\sin 0^\circ} = \frac{1}{0} \implies$ अपरिभाषित (Not Defined)।</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) असत्य, (ii) सत्य, (iii) असत्य, (iv) असत्य, (v) सत्य</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECTION 8.3: IDENTITIES
+         ========================================================================= -->
+    <div class="section-header">
+      <i class="fas fa-certificate"></i> प्रश्नावली 8.3: त्रिकोणमितीय सर्वसमिकाएँ (संपूर्ण 4 प्रश्न एवं सभी 10 सिद्ध करने वाले भाग)
+    </div>
+
+    <!-- Ex 8.3 Q1 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 1</span> त्रिकोणमितीय अनुपातों $\sin A, \sec A$ और $\tan A$ को $\cot A$ के पदों में व्यक्त कीजिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <div>1. $\csc^2 A = 1 + \cot^2 A \implies \csc A = \sqrt{1 + \cot^2 A} \implies \mathbf{\sin A = \frac{1}{\sqrt{1 + \cot^2 A}}}$</div>
+      </div>
+
+      <div class="step-box step-green">
+        <div>2. $\sec^2 A = 1 + \tan^2 A = 1 + \frac{1}{\cot^2 A} = \frac{\cot^2 A + 1}{\cot^2 A} \implies \mathbf{\sec A = \frac{\sqrt{1 + \cot^2 A}}{\cot A}}$</div>
+      </div>
+
+      <div class="step-box step-orange">
+        <div>3. $\mathbf{\tan A = \frac{1}{\cot A}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: $\sin A = \frac{1}{\sqrt{1+\cot^2 A}}, \quad \sec A = \frac{\sqrt{1+\cot^2 A}}{\cot A}, \quad \tan A = \frac{1}{\cot A}$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.3 Q2 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 2</span> $\angle A$ के अन्य सभी त्रिकोणमितीय अनुपातों को $\sec A$ के पदों में लिखिए।
+      </div>
+
+      <div class="step-box step-blue">
+        <div>1. $\mathbf{\cos A = \frac{1}{\sec A}}$</div>
+        <div>2. $\sin^2 A = 1 - \cos^2 A = 1 - \frac{1}{\sec^2 A} = \frac{\sec^2 A - 1}{\sec^2 A} \implies \mathbf{\sin A = \frac{\sqrt{\sec^2 A - 1}}{\sec A}}$</div>
+        <div>3. $1 + \tan^2 A = \sec^2 A \implies \mathbf{\tan A = \sqrt{\sec^2 A - 1}}$</div>
+        <div>4. $\mathbf{\cot A = \frac{1}{\tan A} = \frac{1}{\sqrt{\sec^2 A - 1}}}$</div>
+        <div>5. $\mathbf{\csc A = \frac{1}{\sin A} = \frac{\sec A}{\sqrt{\sec^2 A - 1}}}$</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: सभी 5 अनुपात $\sec A$ के पदों में रूपांतरित किए गए।</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.3 Q3 -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 3</span> सही विकल्प चुनिए और अपने विकल्प की पुष्टि कीजिए:
+      </div>
+
+      <div class="step-box step-blue">
+        <div><strong>(i) $9\sec^2 A - 9\tan^2 A =$</strong><br>
+        $= 9(\sec^2 A - \tan^2 A) = 9(1) = \mathbf{9}$<br>
+        🎯 <strong>सही विकल्प: (B) $9$</strong></div>
+      </div>
+
+      <div class="step-box step-green">
+        <div><strong>(ii) $(1 + \tan\theta + \sec\theta)(1 + \cot\theta - \csc\theta) =$</strong><br>
+        $= \left(1 + \frac{\sin\theta}{\cos\theta} + \frac{1}{\cos\theta}\right)\left(1 + \frac{\cos\theta}{\sin\theta} - \frac{1}{\sin\theta}\right)$<br>
+        $= \frac{(\cos\theta + \sin\theta + 1)(\sin\theta + \cos\theta - 1)}{\cos\theta\sin\theta} = \frac{(\sin\theta + \cos\theta)^2 - 1^2}{\sin\theta\cos\theta} = \frac{1 + 2\sin\theta\cos\theta - 1}{\sin\theta\cos\theta} = \mathbf{2}$<br>
+        🎯 <strong>सही विकल्प: (C) $2$</strong></div>
+      </div>
+
+      <div class="step-box step-orange">
+        <div><strong>(iii) $(\sec A + \tan A)(1 - \sin A) =$</strong><br>
+        $= \left(\frac{1}{\cos A} + \frac{\sin A}{\cos A}\right)(1 - \sin A) = \frac{(1 + \sin A)(1 - \sin A)}{\cos A} = \frac{1 - \sin^2 A}{\cos A} = \frac{\cos^2 A}{\cos A} = \mathbf{\cos A}$<br>
+        🎯 <strong>सही विकल्प: (D) $\cos A$</strong></div>
+      </div>
+
+      <div class="step-box step-purple">
+        <div><strong>(iv) $\frac{1 + \tan^2 A}{1 + \cot^2 A} =$</strong><br>
+        $= \frac{\sec^2 A}{\csc^2 A} = \frac{1/\cos^2 A}{1/\sin^2 A} = \frac{\sin^2 A}{\cos^2 A} = \mathbf{\tan^2 A}$<br>
+        🎯 <strong>सही विकल्प: (D) $\tan^2 A$</strong></div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: (i) (B) $9$, \quad (ii) (C) $2$, \quad (iii) (D) $\cos A$, \quad (iv) (D) $\tan^2 A$</span>
+      </div>
+    </div>
+
+    <!-- Ex 8.3 Q4 (10 Parts) -->
+    <div class="qa-box">
+      <div class="q-text">
+        <span class="q-tag">प्रश्न 4</span> निम्नलिखित सर्वसमिकाएँ सिद्ध कीजिए, जहाँ वे कोण जिनके लिए व्यंजक परिभाषित है, न्यून कोण हैं:
+      </div>
+
+      <!-- (i) -->
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(i) सिद्ध कीजिए: $(\csc\theta - \cot\theta)^2 = \frac{1 - \cos\theta}{1 + \cos\theta}$</span>
+        <div>$\text{LHS} = \left(\frac{1}{\sin\theta} - \frac{\cos\theta}{\sin\theta}\right)^2 = \frac{(1 - \cos\theta)^2}{\sin^2\theta} = \frac{(1 - \cos\theta)^2}{1 - \cos^2\theta}$</div>
+        <div>$= \frac{(1 - \cos\theta)(1 - \cos\theta)}{(1 - \cos\theta)(1 + \cos\theta)} = \mathbf{\frac{1 - \cos\theta}{1 + \cos\theta}} = \text{RHS}$। (इति सिद्धम्)</div>
+      </div>
+
+      <!-- (ii) -->
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">(ii) सिद्ध कीजिए: $\frac{\cos A}{1 + \sin A} + \frac{1 + \sin A}{\cos A} = 2\sec A$</span>
+        <div>$\text{LHS} = \frac{\cos^2 A + (1 + \sin A)^2}{(1 + \sin A)\cos A} = \frac{\cos^2 A + 1 + 2\sin A + \sin^2 A}{(1 + \sin A)\cos A}$</div>
+        <div>$= \frac{(\sin^2 A + \cos^2 A) + 1 + 2\sin A}{(1 + \sin A)\cos A} = \frac{1 + 1 + 2\sin A}{(1 + \sin A)\cos A} = \frac{2(1 + \sin A)}{(1 + \sin A)\cos A} = \frac{2}{\cos A} = \mathbf{2\sec A} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (iii) -->
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">(iii) सिद्ध कीजिए: $\frac{\tan\theta}{1 - \cot\theta} + \frac{\cot\theta}{1 - \tan\theta} = 1 + \sec\theta\csc\theta$</span>
+        <div>$\sin\theta$ व $\cos\theta$ में बदलने पर:</div>
+        <div>$= \frac{\sin^2\theta}{\cos\theta(\sin\theta - \cos\theta)} - \frac{\cos^2\theta}{\sin\theta(\sin\theta - \cos\theta)} = \frac{\sin^3\theta - \cos^3\theta}{\sin\theta\cos\theta(\sin\theta - \cos\theta)}$</div>
+        <div>$= \frac{(\sin\theta - \cos\theta)(\sin^2\theta + \cos^2\theta + \sin\theta\cos\theta)}{\sin\theta\cos\theta(\sin\theta - \cos\theta)} = \frac{1 + \sin\theta\cos\theta}{\sin\theta\cos\theta} = \mathbf{1 + \sec\theta\csc\theta} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (iv) -->
+      <div class="step-box step-purple">
+        <span class="badge-step bg-purple">(iv) सिद्ध कीजिए: $\frac{1 + \sec A}{\sec A} = \frac{\sin^2 A}{1 - \cos A}$</span>
+        <div>$\text{LHS} = \frac{1 + 1/\cos A}{1/\cos A} = \frac{\cos A + 1}{1} = 1 + \cos A$</div>
+        <div>$\text{RHS} = \frac{\sin^2 A}{1 - \cos A} = \frac{1 - \cos^2 A}{1 - \cos A} = \frac{(1 - \cos A)(1 + \cos A)}{1 - \cos A} = 1 + \cos A$</div>
+        <div>$\text{LHS} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (v) -->
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(v) सिद्ध कीजिए: $\frac{\cos A - \sin A + 1}{\cos A + \sin A - 1} = \csc A + \cot A$ (सर्वसमिका $\csc^2 A = 1+\cot^2 A$ प्रयोग से)</span>
+        <div>अंश व हर को $\sin A$ से भाग देने पर:</div>
+        <div>$= \frac{\cot A - 1 + \csc A}{\cot A + 1 - \csc A} = \frac{(\cot A + \csc A) - (\csc^2 A - \cot^2 A)}{\cot A - \csc A + 1}$</div>
+        <div>$= \frac{(\cot A + \csc A)[1 - (\csc A - \cot A)]}{\cot A - \csc A + 1} = \mathbf{\csc A + \cot A} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (vi) -->
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">(vi) सिद्ध कीजिए: $\sqrt{\frac{1 + \sin A}{1 - \sin A}} = \sec A + \tan A$</span>
+        <div>अंश व हर में $(1 + \sin A)$ से गुणा करने पर:</div>
+        <div>$\text{LHS} = \sqrt{\frac{(1 + \sin A)^2}{(1 - \sin A)(1 + \sin A)}} = \sqrt{\frac{(1 + \sin A)^2}{1 - \sin^2 A}} = \sqrt{\frac{(1 + \sin A)^2}{\cos^2 A}} = \frac{1 + \sin A}{\cos A} = \frac{1}{\cos A} + \frac{\sin A}{\cos A} = \mathbf{\sec A + \tan A} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (vii) -->
+      <div class="step-box step-orange">
+        <span class="badge-step bg-orange">(vii) सिद्ध कीजिए: $\frac{\sin\theta - 2\sin^3\theta}{2\cos^3\theta - \cos\theta} = \tan\theta$</span>
+        <div>$\text{LHS} = \frac{\sin\theta(1 - 2\sin^2\theta)}{\cos\theta(2\cos^2\theta - 1)} = \tan\theta \times \frac{1 - 2(1 - \cos^2\theta)}{2\cos^2\theta - 1} = \tan\theta \times \frac{2\cos^2\theta - 1}{2\cos^2\theta - 1} = \mathbf{\tan\theta} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (viii) -->
+      <div class="step-box step-purple">
+        <span class="badge-step bg-purple">(viii) सिद्ध कीजिए: $(\sin A + \csc A)^2 + (\cos A + \sec A)^2 = 7 + \tan^2 A + \cot^2 A$</span>
+        <div>$\text{LHS} = (\sin^2 A + \csc^2 A + 2\sin A\csc A) + (\cos^2 A + \sec^2 A + 2\cos A\sec A)$</div>
+        <div>$= (\sin^2 A + \cos^2 A) + 2(1) + 2(1) + \csc^2 A + \sec^2 A$</div>
+        <div>$= 1 + 4 + (1 + \cot^2 A) + (1 + \tan^2 A) = \mathbf{7 + \tan^2 A + \cot^2 A} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (ix) -->
+      <div class="step-box step-blue">
+        <span class="badge-step bg-blue">(ix) सिद्ध कीजिए: $(\csc A - \sin A)(\sec A - \cos A) = \frac{1}{\tan A + \cot A}$</span>
+        <div>$\text{LHS} = \left(\frac{1}{\sin A} - \sin A\right)\left(\frac{1}{\cos A} - \cos A\right) = \frac{1 - \sin^2 A}{\sin A} \times \frac{1 - \cos^2 A}{\cos A} = \frac{\cos^2 A \times \sin^2 A}{\sin A\cos A} = \sin A\cos A$</div>
+        <div>$\text{RHS} = \frac{1}{\frac{\sin A}{\cos A} + \frac{\cos A}{\sin A}} = \frac{1}{\frac{\sin^2 A + \cos^2 A}{\sin A\cos A}} = \frac{\sin A\cos A}{1} = \sin A\cos A$</div>
+        <div>$\text{LHS} = \text{RHS}$।</div>
+      </div>
+
+      <!-- (x) -->
+      <div class="step-box step-green">
+        <span class="badge-step bg-green">(x) सिद्ध कीजिए: $\left(\frac{1 + \tan^2 A}{1 + \cot^2 A}\right) = \left(\frac{1 - \tan A}{1 - \cot A}\right)^2 = \tan^2 A$</span>
+        <div>प्रथम पद: $\frac{1 + \tan^2 A}{1 + \cot^2 A} = \frac{\sec^2 A}{\csc^2 A} = \frac{\sin^2 A}{\cos^2 A} = \mathbf{\tan^2 A}$</div>
+        <div>द्वितीय पद: $\left(\frac{1 - \tan A}{1 - \frac{1}{\tan A}}\right)^2 = \left(\frac{1 - \tan A}{\frac{\tan A - 1}{\tan A}}\right)^2 = (-\tan A)^2 = \mathbf{\tan^2 A}$</div>
+        <div>सभी पद परस्पर समान हैं! (इति सिद्धम्)</div>
+      </div>
+
+      <div class="ans-box">
+        <i class="fas fa-check-circle"></i>
+        <span>उत्तर: प्रश्न 4 के सभी 10 भाग पूर्णतः सिद्ध किए गए।</span>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SIMULATOR 5: IDENTITIES VERIFIER (Placed right under Ex 8.3 Q4)
+         ========================================================================= -->
+    <div class="sim-card" style="border-color: #7c3aed;">
+      <div class="sim-title">
+        <i class="fas fa-check-double"></i> लाइव सिमुलेटर 5: तीनों मौलिक सर्वसमिकाओं का लाइव कोण सत्यापन
+      </div>
+      <div class="sim-desc">
+        कोण ($\theta$) को $1^\circ$ से $89^\circ$ तक बदलकर तीनों मौलिक सर्वसमिकाओं के LHS और RHS का लाइव सत्यापन देखिए:
+      </div>
+
+      <div class="sim-control-group">
+        <span class="sim-label">कोण ($\theta$):</span>
+        <input type="range" id="ch8_sim5_th" class="sim-slider" min="1" max="89" value="35" oninput="updateSim5()">
+        <span class="sim-val-pill" id="ch8_sim5_th_val">35°</span>
+      </div>
+
+      <div class="sim-display-flex">
+        <div class="sim-svg-wrap">
+          <svg id="ch8_sim5_svg" viewBox="0 0 260 220" style="width: 260px; height: 220px;">
+            <!-- Dynamic Identities Comparison Chart SVG -->
+          </svg>
+        </div>
+        <div class="sim-stats-wrap">
+          <div class="sim-stat-box" style="border-color: #2563eb;">
+            <div class="sim-stat-label">1. $\sin^2\theta + \cos^2\theta = 1$</div>
+            <div class="sim-stat-val" id="ch8_sim5_id1" style="color: #1e3a8a;">0.329 + 0.671 = 1.000 ✔️</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #16a34a;">
+            <div class="sim-stat-label">2. $1 + \tan^2\theta = \sec^2\theta$</div>
+            <div class="sim-stat-val" id="ch8_sim5_id2" style="color: #166534;">1 + 0.490 = 1.490 ✔️</div>
+          </div>
+          <div class="sim-stat-box" style="border-color: #ea580c;">
+            <div class="sim-stat-label">3. $1 + \cot^2\theta = \csc^2\theta$</div>
+            <div class="sim-stat-val" id="ch8_sim5_id3" style="color: #c2410c;">1 + 2.040 = 3.040 ✔️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="nav-bar">
+      <a href="qa_master_math7.html" class="btn-nav"><i class="fas fa-arrow-left"></i> पिछला अध्याय (Ch 7)</a>
+      <a href="index.html" class="btn-nav"><i class="fas fa-home"></i> मुख्य पोर्टल</a>
+      <a href="qa_master_math9.html" class="btn-nav">अगला अध्याय (Ch 9) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       JAVASCRIPT FOR ALL 5 SIMULATORS (Strict Concatenation, No Dollar in Scripts)
+       ========================================================================= -->
+  <script>
+    // SIMULATOR 1: Right Triangle Ratios
+    function updateSim1() {
+      var p = parseFloat(document.getElementById('ch8_sim1_p').value);
+      var b = parseFloat(document.getElementById('ch8_sim1_b').value);
+      document.getElementById('ch8_sim1_p_val').textContent = p;
+      document.getElementById('ch8_sim1_b_val').textContent = b;
+
+      var k = Math.sqrt(p * p + b * b);
+      var sVal = p / k;
+      var cVal = b / k;
+      var tVal = p / b;
+      var cotVal = b / p;
+      var secVal = k / b;
+      var cscVal = k / p;
+
+      document.getElementById('ch8_sim1_hyp').textContent = k.toFixed(2);
+      document.getElementById('ch8_sim1_sincos').textContent = "sin = " + sVal.toFixed(3) + ", cos = " + cVal.toFixed(3);
+      document.getElementById('ch8_sim1_tancot').textContent = "tan = " + tVal.toFixed(3) + ", cot = " + cotVal.toFixed(3);
+      document.getElementById('ch8_sim1_seccsc').textContent = "sec = " + secVal.toFixed(3) + ", csc = " + cscVal.toFixed(3);
+
+      // Render Dynamic Triangle SVG
+      var startX = 40, startY = 170;
+      var maxW = 180, maxH = 130;
+      var scale = Math.min(maxW / Math.max(b, 1), maxH / Math.max(p, 1));
+      var drawB = Math.max(b * scale, 40);
+      var drawP = Math.max(p * scale, 30);
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + startX + ',' + startY + ' ' + (startX + drawB) + ',' + startY + ' ' + startX + ',' + (startY - drawP) + '" fill="#eff6ff" stroke="#1e3a8a" stroke-width="4"/>' +
+                    '<rect x="' + startX + '" y="' + (startY - 18) + '" width="18" height="18" fill="none" stroke="#dc2626" stroke-width="2"/>' +
+                    '<circle cx="' + (startX + drawB) + '" cy="' + startY + '" r="5" fill="#15803d"/>' +
+                    '<text x="' + (startX - 15) + '" y="' + (startY - drawP / 2) + '" font-size="14" font-weight="900" fill="#1e3a8a">p=' + p + '</text>' +
+                    '<text x="' + (startX + drawB / 2) + '" y="' + (startY + 24) + '" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">b=' + b + '</text>' +
+                    '<text x="' + (startX + drawB / 2 + 10) + '" y="' + (startY - drawP / 2 - 5) + '" font-size="14" font-weight="900" fill="#dc2626">k=' + k.toFixed(1) + '</text>';
+
+      document.getElementById('ch8_sim1_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 2: Unknown Side PR+QR=S
+    function updateSim2() {
+      var pq = parseFloat(document.getElementById('ch8_sim2_pq').value);
+      var s = parseFloat(document.getElementById('ch8_sim2_sum').value);
+      if (s <= pq) {
+        s = pq + 5;
+        document.getElementById('ch8_sim2_sum').value = s;
+      }
+      document.getElementById('ch8_sim2_pq_val').textContent = pq + " cm";
+      document.getElementById('ch8_sim2_sum_val').textContent = s + " cm";
+
+      // (s - qr)^2 = pq^2 + qr^2 => s^2 - 2*s*qr = pq^2 => qr = (s^2 - pq^2) / (2*s)
+      var qr = (s * s - pq * pq) / (2.0 * s);
+      var pr = s - qr;
+
+      var sinP = qr / pr;
+      var cosP = pq / pr;
+      var tanP = qr / pq;
+
+      document.getElementById('ch8_sim2_qr').textContent = qr.toFixed(2) + " cm";
+      document.getElementById('ch8_sim2_pr').textContent = pr.toFixed(2) + " cm";
+      document.getElementById('ch8_sim2_ratios').textContent = "sin = " + sinP.toFixed(3) + ", cos = " + cosP.toFixed(3) + ", tan = " + tanP.toFixed(3);
+
+      var startX = 50, startY = 170;
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<polygon points="' + startX + ',' + startY + ' ' + (startX + 140) + ',' + startY + ' ' + (startX + 140) + ',' + (startY - 110) + '" fill="#fff7ed" stroke="#ea580c" stroke-width="4"/>' +
+                    '<rect x="' + (startX + 122) + '" y="' + (startY - 18) + '" width="18" height="18" fill="none" stroke="#dc2626" stroke-width="2"/>' +
+                    '<text x="' + (startX + 60) + '" y="' + (startY + 24) + '" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">PQ = ' + pq + '</text>' +
+                    '<text x="' + (startX + 155) + '" y="' + (startY - 50) + '" font-size="14" font-weight="900" fill="#ea580c">QR = ' + qr.toFixed(1) + '</text>' +
+                    '<text x="' + (startX + 50) + '" y="' + (startY - 65) + '" font-size="14" font-weight="900" fill="#dc2626">PR = ' + pr.toFixed(1) + '</text>';
+
+      document.getElementById('ch8_sim2_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 3: Standard Angles Table Explorer
+    var currentAngle = 45;
+    function setAnglePreset(deg) {
+      currentAngle = deg;
+      updateSim3();
+    }
+    function updateSim3() {
+      var th = currentAngle;
+      var rad = (th * Math.PI) / 180.0;
+      var sinText = "", cosText = "", tanText = "", cotText = "", secText = "", cscText = "";
+
+      if (th === 0) {
+        sinText = "0"; cosText = "1"; tanText = "0"; cotText = "अपरिभाषित"; secText = "1"; cscText = "अपरिभाषित";
+      } else if (th === 30) {
+        sinText = "1/2 (0.5)"; cosText = "√3/2 (0.866)"; tanText = "1/√3 (0.577)"; cotText = "√3 (1.732)"; secText = "2/√3 (1.155)"; cscText = "2";
+      } else if (th === 45) {
+        sinText = "1/√2 (0.707)"; cosText = "1/√2 (0.707)"; tanText = "1"; cotText = "1"; secText = "√2 (1.414)"; cscText = "√2 (1.414)";
+      } else if (th === 60) {
+        sinText = "√3/2 (0.866)"; cosText = "1/2 (0.5)"; tanText = "√3 (1.732)"; cotText = "1/√3 (0.577)"; secText = "2"; cscText = "2/√3 (1.155)";
+      } else if (th === 90) {
+        sinText = "1"; cosText = "0"; tanText = "अपरिभाषित"; cotText = "0"; secText = "अपरिभाषित"; cscText = "1";
+      }
+
+      document.getElementById('ch8_sim3_sincos').textContent = "sin " + th + "° = " + sinText + " • cos " + th + "° = " + cosText;
+      document.getElementById('ch8_sim3_tancot').textContent = "tan " + th + "° = " + tanText + " • cot " + th + "° = " + cotText;
+      document.getElementById('ch8_sim3_seccsc').textContent = "sec " + th + "° = " + secText + " • csc " + th + "° = " + cscText;
+
+      // Render Angle Protractor Arc SVG
+      var cx = 130, cy = 170, R = 110;
+      var xEnd = cx + R * Math.cos(rad);
+      var yEnd = cy - R * Math.sin(rad);
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<path d="M ' + (cx - R) + ' ' + cy + ' A ' + R + ' ' + R + ' 0 0 1 ' + (cx + R) + ' ' + cy + ' Z" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>' +
+                    '<line x1="' + cx + '" y1="' + cy + '" x2="' + (cx + R) + '" y2="' + cy + '" stroke="#0f172a" stroke-width="4"/>' +
+                    '<line x1="' + cx + '" y1="' + cy + '" x2="' + xEnd + '" y2="' + yEnd + '" stroke="#2563eb" stroke-width="5"/>' +
+                    '<circle cx="' + cx + '" cy="' + cy + '" r="6" fill="#0f172a"/>' +
+                    '<text x="' + cx + '" y="' + (cy - 30) + '" font-size="20" font-weight="900" fill="#1e3a8a" text-anchor="middle">' + th + '°</text>';
+
+      document.getElementById('ch8_sim3_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 4: Compound Angle Solver
+    function updateSim4() {
+      var s = parseFloat(document.getElementById('ch8_sim4_sum').value);
+      var d = parseFloat(document.getElementById('ch8_sim4_diff').value);
+
+      var A = (s + d) / 2.0;
+      var B = (s - d) / 2.0;
+
+      document.getElementById('ch8_sim4_A').textContent = "A = " + A + "°";
+      document.getElementById('ch8_sim4_B').textContent = "B = " + B + "°";
+
+      var svgHtml = '<rect width="260" height="200" fill="#fff1f2" rx="14"/>' +
+                    '<circle cx="80" cy="100" r="50" fill="#f43f5e" opacity="0.8"/>' +
+                    '<circle cx="180" cy="100" r="35" fill="#fb7185" opacity="0.8"/>' +
+                    '<text x="80" y="105" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">A = ' + A + '°</text>' +
+                    '<text x="180" y="105" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">B = ' + B + '°</text>' +
+                    '<text x="130" y="175" font-size="14" font-weight="900" fill="#9f1239" text-anchor="middle">A + B = ' + s + '°, A - B = ' + d + '°</text>';
+
+      document.getElementById('ch8_sim4_svg').innerHTML = svgHtml;
+    }
+
+    // SIMULATOR 5: Trigonometric Identities Verifier
+    function updateSim5() {
+      var th = parseFloat(document.getElementById('ch8_sim5_th').value);
+      document.getElementById('ch8_sim5_th_val').textContent = th + "°";
+
+      var rad = (th * Math.PI) / 180.0;
+      var s = Math.sin(rad);
+      var c = Math.cos(rad);
+      var t = Math.tan(rad);
+      var sec = 1.0 / c;
+      var cot = 1.0 / t;
+      var csc = 1.0 / s;
+
+      var s2 = s * s;
+      var c2 = c * c;
+      var id1 = s2 + c2;
+
+      var t2 = t * t;
+      var sec2 = sec * sec;
+      var id2L = 1 + t2;
+
+      var cot2 = cot * cot;
+      var csc2 = csc * csc;
+      var id3L = 1 + cot2;
+
+      document.getElementById('ch8_sim5_id1').textContent = s2.toFixed(3) + " + " + c2.toFixed(3) + " = " + id1.toFixed(3) + " ✔️";
+      document.getElementById('ch8_sim5_id2').textContent = "1 + " + t2.toFixed(3) + " = " + id2L.toFixed(3) + " (sec² = " + sec2.toFixed(3) + ") ✔️";
+      document.getElementById('ch8_sim5_id3').textContent = "1 + " + cot2.toFixed(3) + " = " + id3L.toFixed(3) + " (csc² = " + csc2.toFixed(3) + ") ✔️";
+
+      // Render Bar Chart SVG of sin^2 and cos^2
+      var barW = 180;
+      var sinW = s2 * barW;
+      var cosW = c2 * barW;
+
+      var svgHtml = '<rect width="260" height="220" fill="#f8fafc" rx="14"/>' +
+                    '<text x="130" y="35" font-size="15" font-weight="900" fill="#1e3a8a" text-anchor="middle">sin²' + th + '° + cos²' + th + '° = 1.000</text>' +
+                    '<!-- sin^2 bar -->' +
+                    '<rect x="40" y="60" width="' + sinW + '" height="30" fill="#2563eb" rx="6"/>' +
+                    '<!-- cos^2 bar -->' +
+                    '<rect x="' + (40 + sinW) + '" y="' + 60 + '" width="' + cosW + '" height="30" fill="#ea580c" rx="6"/>' +
+                    '<text x="40" y="120" font-size="14" font-weight="900" fill="#2563eb">नीला: sin²θ = ' + s2.toFixed(2) + '</text>' +
+                    '<text x="40" y="150" font-size="14" font-weight="900" fill="#ea580c">नारंगी: cos²θ = ' + c2.toFixed(2) + '</text>' +
+                    '<text x="40" y="190" font-size="16" font-weight="900" fill="#15803d">कुल योग = 1.000 (सर्वदा सत्य!)</text>';
+
+      document.getElementById('ch8_sim5_svg').innerHTML = svgHtml;
+    }
+
+    // Initialize all simulators on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSim1();
+      updateSim2();
+      updateSim3();
+      updateSim4();
+      updateSim5();
+    });
+  </script>
+</body>
+</html>
