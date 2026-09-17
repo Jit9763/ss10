@@ -588,13 +588,24 @@
       box-sizing: border-box !important;
     }
 
-    /* PREVENT ANY OVERFLOW */
-    mjx-container {
+    /* PREVENT ANY OVERFLOW & FIX INLINE PARENTHESES */
+    mjx-container[display="true"] {
+      display: block !important;
       overflow-x: auto !important;
       overflow-y: hidden !important;
       max-width: 100% !important;
-      display: block !important;
+      margin: 15px 0 !important;
       padding: 6px 0 !important;
+      text-align: center !important;
+    }
+
+    mjx-container:not([display="true"]) {
+      display: inline-block !important;
+      vertical-align: middle !important;
+      margin: 0 2px !important;
+      padding: 0 !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
     }
     
     .inline-simulator-card {
@@ -674,7 +685,7 @@
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 1: क्या शून्य एक परिमेय संख्या है? क्या इसे आप $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ $p$ और $q$ पूर्णांक हैं और $q \neq 0$ है?</h3>
     <div class="step-box-green">
-      <p><b>उत्तर:</b> <strong>हाँ, शून्य ($0$) एक परिमेय संख्या है।</strong></p>
+      <p><b>उत्तर:</b> <strong>हाँ, शून्य <span style="white-space: nowrap;">($0$)</span> एक परिमेय संख्या है।</strong></p>
       <p><b>स्पष्टीकरण:</b></p>
       <p>शून्य को हम $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ अंश $p = 0$ है तथा हर $q$ कोई भी शून्येतर पूर्णांक (जैसे $1, 2, 3, -1, -5$) हो सकता है।</p>
       <div class="math-scroll">$$\begin{aligned}
@@ -692,7 +703,7 @@
 
   <!-- Ex 1.1 Q2 -->
   <div class="qa-block">
-    <h3 class="question-heading">प्रश्न 2: $3$ और $4$ के बीच में छह ($6$) परिमेय संख्याएँ ज्ञात कीजिए।</h3>
+    <h3 class="question-heading">प्रश्न 2: $3$ और $4$ के बीच में छह <span style="white-space: nowrap;">($6$)</span> परिमेय संख्याएँ ज्ञात कीजिए।</h3>
     <div class="step-box-blue">
       <p><b>चरण 1:</b> हमें $6$ परिमेय संख्याएँ ज्ञात करनी हैं, अतः हम $n + 1 = 6 + 1 = 7$ लेते हैं।</p>
       <p><b>चरण 2:</b> संख्याओं $3$ और $4$ को हर $7$ वाली तुल्य भिन्नों में बदलते हैं:</p>
@@ -714,7 +725,7 @@
 
   <!-- Ex 1.1 Q3 -->
   <div class="qa-block">
-    <h3 class="question-heading">प्रश्न 3: $\frac{3}{5}$ और $\frac{4}{5}$ के बीच पाँच ($5$) परिमेय संख्याएँ ज्ञात कीजिए।</h3>
+    <h3 class="question-heading">प्रश्न 3: $\frac{3}{5}$ और $\frac{4}{5}$ के बीच पाँच <span style="white-space: nowrap;">($5$)</span> परिमेय संख्याएँ ज्ञात कीजिए।</h3>
     <div class="step-box-purple">
       <p><b>चरण 1:</b> हमें $5$ संख्याएँ निकालनी हैं, अतः $n + 1 = 5 + 1 = 6$ से अंश तथा हर में गुणा करेंगे।</p>
       <p><b>चरण 2:</b> दोनों भिन्नों को तुल्य रूप में बदलते हैं:</p>
@@ -766,7 +777,7 @@
     <div class="step-box-blue">
       <p><b>(i) प्रत्येक प्राकृतिक संख्या एक पूर्ण संख्या होती है।</b></p>
       <p><strong>उत्तर: सत्य</strong></p>
-      <p><b>कारण:</b> पूर्ण संख्याओं के संग्रह ($W = \{0, 1, 2, 3, \dots\}$) में सभी प्राकृतिक संख्याएँ ($N = \{1, 2, 3, \dots\}$) समाहित होती हैं।</p>
+      <p><b>कारण:</b> पूर्ण संख्याओं के संग्रह <span style="white-space: nowrap;">($W = \{0, 1, 2, 3, \dots\}$)</span> में सभी प्राकृतिक संख्याएँ <span style="white-space: nowrap;">($N = \{1, 2, 3, \dots\}$)</span> समाहित होती हैं।</p>
     </div>
 
     <div class="step-box-orange">
@@ -1374,7 +1385,7 @@
         <li>रेखाखंड $AC$ का लम्ब-समद्विभाजक खींचकर उसका मध्य बिंदु $O$ ज्ञात कीजिए ($OA = OC = \frac{10.3}{2} = 5.15$ सेमी)।</li>
         <li>$O$ को केंद्र मानकर $OA$ त्रिज्या का एक अर्धवृत्त खींचिए।</li>
         <li>बिंदु $B$ पर रेखा $AC$ पर लम्ब खींचिए जो अर्धवृत्त को बिंदु $D$ पर काटता है। ज्यामिति से <b>$BD = \sqrt{9.3}$</b> होगा।</li>
-        <li>अब $B$ को मूलबिंदु ($0$) मानकर तथा $BD$ त्रिज्या लेकर एक चाप लगाएँ जो संख्या रेखा को बिंदु $E$ पर काटता है। बिंदु $E$, $\sqrt{9.3}$ को निरूपित करता है।</li>
+        <li>अब $B$ को मूलबिंदु <span style="white-space: nowrap;">($0$)</span> मानकर तथा $BD$ त्रिज्या लेकर एक चाप लगाएँ जो संख्या रेखा को बिंदु $E$ पर काटता है। बिंदु $E$, $\sqrt{9.3}$ को निरूपित करता है।</li>
       </ol>
     </div>
     <div class="answer-highlight">
@@ -1948,24 +1959,30 @@ $$\begin{aligned} \quad
 
     var displayDecimal = intPart + '.' + nonRepStr + '<span style="text-decoration:overline; font-weight:900;">' + repStr + '</span>';
 
-    var html = '<p><strong>संख्या:</strong> $' + displayDecimal + '$</p>' +
+    var html = '<div class="step-line">' +
+      '<p><strong>संख्या:</strong> $' + displayDecimal + '$</p>' +
       '<p>माना $x = ' + displayDecimal + '$</p>' +
-      '<p>$x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 1)</b></p>';
+      '<p>$x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 1)</b></p>' +
+      '</div>';
 
     if (m > 0) {
-      html += '<p>दोनों पक्षों में $10^' + m + '$ से गुणा करने पर:</p>' +
-        '<p>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 2)</b></p>';
+      html += '<div class="step-line">' +
+        '<p>दोनों पक्षों में $10^' + m + '$ से गुणा करने पर:</p>' +
+        '<p>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 2)</b></p>' +
+        '</div>';
     }
 
-    html += '<p>समीकरण को $10^{' + (m + k) + '}$ से गुणा करने पर:</p>' +
+    html += '<div class="step-line">' +
+      '<p>समीकरण को $10^{' + (m + k) + '}$ से गुणा करने पर:</p>' +
       '<p>$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण ' + (m > 0 ? '3' : '2') + ')</b></p>' +
-      '<p>समीकरणों को घटाने पर (Vertical One by One Steps):</p>' +
-      '$$\\begin{aligned}' +
-      (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x &= ' + fullVal + ' - ' + nonRepVal + ' \\' +
-      '&= ' + numerator + ' \\' +
-      'x &= \\frac{' + numerator + '}{' + denominator + '} \\' +
-      '&= \\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}' +
-      '\\end{aligned}$$';
+      '</div>' +
+      '<div class="step-line">' +
+      '<p><strong>समीकरणों को घटाने पर (One by One Steps - एक के नीचे एक):</strong></p>' +
+      '<div style="margin:8px 0;">$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + fullVal + ' - ' + nonRepVal + '$$</div>' +
+      '<div style="margin:8px 0;">$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + numerator + '$$</div>' +
+      '<div style="margin:8px 0;">$$x = \\frac{' + numerator + '}{' + denominator + '}$$</div>' +
+      '<div style="margin:8px 0;">$$= \\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}$$</div>' +
+      '</div>';
 
     html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
       '<p style="margin:0; color:#064e3b; font-weight:900;">✅ $\\frac{p}{q}$ रूप: $\\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}$</p></div>';
@@ -1986,28 +2003,32 @@ $$\begin{aligned} \quad
     var oppSign = (sign === '-' ? '+' : '-');
     var denDiff = (sign === '-' ? (a - b) : (a - b));
 
-    var html = '<p><strong>मूल व्यंजक:</strong></p>$$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$' +
+    var html = '<div class="step-line">' +
+      '<p><strong>मूल व्यंजक:</strong></p>' +
+      '<div style="margin: 8px 0;">$$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$</div>' +
+      '</div>' +
+      '<div class="step-line">' +
       '<p><strong>चरण 1:</strong> हर का संयुग्मी (Conjugate): $\\mathbf{\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '}}$</p>' +
-      '<p><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर (Vertical Steps):</p>' +
-      '$$\\begin{aligned}' +
-      '&= \\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})} \\' +
-      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2} \\' +
-      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + a + ' - ' + b + '} \\' +
-      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}' +
-      '\\end{aligned}$$' +
+      '</div>' +
+      '<div class="step-line">' +
+      '<p><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर (Vertical Steps - एक के नीचे एक):</p>' +
+      '<div style="margin: 10px 0;">$$= \\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>' +
+      '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2}$$</div>' +
+      '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + a + ' - ' + b + '}$$</div>' +
+      '<div style="margin: 10px 0;">$$= \\mathbf{\\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}}$$</div>' +
+      '</div>' +
       '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
-      '<p style="margin:0 0 10px 0; color:#064e3b; font-weight:900;">✅ सरल रूप (Final Answer):</p>' +
-      '$$\\begin{aligned}';
+      '<p style="margin:0 0 10px 0; color:#064e3b; font-weight:900;">✅ सरल रूप (Final Answer):</p>';
     
     if (a - b === 1) {
-      html += '&= ' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})';
+      html += '<div style="margin:8px 0;">$$\\mathbf{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>';
     } else {
-      html += '&= \\frac{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}';
+      html += '<div style="margin:8px 0;">$$\\mathbf{\\frac{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}}$$</div>';
     }
-    html += '\\end{aligned}$$</div>';
+    html += '</div>';
     out.innerHTML = html;
     if (window.MathJax && window.MathJax.typesetPromise) {
-      MathJax.typesetPromise([out]);
+      MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
@@ -2022,39 +2043,47 @@ $$\begin{aligned} \quad
     if (op === 'mult') {
       var resExp = m + n;
       var resVal = Math.pow(a, resExp);
-      html = '<p><strong>नियम:</strong> $a^m \cdot a^n = a^{m+n}$</p>' +
-        '$$\\begin{aligned}' +
-        a + '^{' + m + '} \cdot ' + a + '^{' + n + '} &= ' + a + '^{' + m + ' + ' + n + '} \\' +
-        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
-        '&= \\mathbf{' + resVal + '}' +
-        '\\end{aligned}$$';
+      html = '<div class="step-line">' +
+        '<p><strong>नियम:</strong> $a^m \cdot a^n = a^{m+n}$</p>' +
+        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + a + '^{' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' + ' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
+        '</div>';
     } else if (op === 'div') {
       var resExp = m - n;
       var resVal = Math.pow(a, resExp);
-      html = '<p><strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$</p>' +
-        '$$\\begin{aligned}' +
-        '\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}} &= ' + a + '^{' + m + ' - ' + n + '} \\' +
-        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
-        '&= \\mathbf{' + resVal + '}' +
-        '\\end{aligned}$$';
+      html = '<div class="step-line">' +
+        '<p><strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$</p>' +
+        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<div style="margin:8px 0;">$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}}$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' - ' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
+        '</div>';
     } else if (op === 'pow') {
       var resExp = m * n;
       var resVal = Math.pow(a, resExp);
-      html = '<p><strong>नियम:</strong> $(a^m)^n = a^{m \times n}$</p>' +
-        '$$\\begin{aligned}' +
-        '(' + a + '^{' + m + '})^{' + n + '} &= ' + a + '^{' + m + ' \times ' + n + '} \\' +
-        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
-        '&= \\mathbf{' + resVal + '}' +
-        '\\end{aligned}$$';
+      html = '<div class="step-line">' +
+        '<p><strong>नियम:</strong> $(a^m)^n = a^{m \times n}$</p>' +
+        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<div style="margin:8px 0;">$$(' + a + '^{' + m + '})^{' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \times ' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
+        '</div>';
     } else if (op === 'dist') {
       var b = 3;
       var resVal = Math.pow(a * b, m);
-      html = '<p><strong>नियम:</strong> $a^m \cdot b^m = (ab)^m$ (यहाँ $b=3$ लिया गया है)</p>' +
-        '$$\\begin{aligned}' +
-        a + '^{' + m + '} \cdot ' + b + '^{' + m + '} &= (' + a + ' \times ' + b + ')^{' + m + '} \\' +
-        '&= \\mathbf{(' + (a * b) + ')^{' + m + '}} \\' +
-        '&= \\mathbf{' + resVal + '}' +
-        '\\end{aligned}$$';
+      html = '<div class="step-line">' +
+        '<p><strong>नियम:</strong> $a^m \cdot b^m = (ab)^m$ (यहाँ $b=3$ लिया गया है)</p>' +
+        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + b + '^{' + m + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= (' + a + ' \times ' + b + ')^{' + m + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{(' + (a * b) + ')^{' + m + '}}$$</div>' +
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
+        '</div>';
     }
 
     html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
