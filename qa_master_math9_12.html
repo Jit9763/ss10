@@ -26,274 +26,446 @@ window.MathJax = {
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 <style>
-  :root {
-    --primary-color: #0d9488;
-    --primary-dark: #115e59;
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-color: #0f172a;
-    --border-color: #e2e8f0;
+
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
   }
 
-  * {
-    box-sizing: border-box;
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   body {
-    font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
+    font-family: 'Noto Sans Devanagari', 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+    font-size: 26pt;
+    font-weight: 900 !important;
+    line-height: 1.8;
+    color: #000000 !important;
+    background-color: #f1f5f9;
     padding: 20px 10px;
-    line-height: 1.6;
-    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 0.9px #000000 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5) !important;
   }
 
-  .container {
-    max-width: 1050px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--border-color);
-    overflow-x: hidden !important;
-  }
-
+  /* TOP ACTION BAR */
   .action-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;
+    border-bottom: 4px solid #3b82f6;
+    padding: 12px 16px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 25px;
-    padding: 12px;
-    background: #f1f5f9;
-    border-radius: 12px;
     justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+    border-radius: 14px;
   }
 
   .action-btn {
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
     padding: 8px 16px;
     border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    background: #ffffff;
-    color: #334155;
-    font-weight: 600;
+    border: none;
     cursor: pointer;
-    font-size: 0.95rem;
+    background: #1e293b;
+    color: #ffffff !important;
+    border: 2px solid #475569;
     transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
   }
 
   .action-btn:hover {
-    background: #0d9488;
-    color: #ffffff;
-    border-color: #0d9488;
+    background: #3b82f6;
+    border-color: #60a5fa;
+    transform: translateY(-2px);
   }
 
+  .action-btn-home {
+    background: #059669;
+    border-color: #10b981;
+  }
+  .action-btn-home:hover {
+    background: #047857;
+  }
+
+  .action-btn-copy {
+    background: #7c3aed;
+    border-color: #a78bfa;
+  }
+  .action-btn-copy:hover {
+    background: #6d28d9;
+  }
+
+  /* TOP HEADER & BADGES */
   .top-header {
     text-align: center;
-    border-bottom: 3px solid #0d9488;
-    padding-bottom: 20px;
+    background: #ffffff;
+    border: 3px solid #cbd5e1;
+    border-radius: 20px;
+    padding: 25px 20px;
     margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   }
 
-  .badge-class {
+  .class-badge {
     display: inline-block;
-    padding: 4px 12px;
-    background: #ccfbf1;
-    color: #0f766e;
-    border-radius: 9999px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+    background: #2563eb;
+    color: #ffffff !important;
+    font-size: 20pt;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    border: 2px solid #1d4ed8;
+    -webkit-text-stroke: 0px !important;
   }
 
-  h1 {
-    color: #0f766e;
-    font-size: 2.1rem;
-    margin: 10px 0;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  .subtitle {
-    color: #475569;
-    font-size: 1.05rem;
-  }
-
-  .formula-box {
-    background: linear-gradient(135deg, #f0fdfa, #ccfbf1);
-    border: 2px solid #5eead4;
-    border-radius: 16px;
-    padding: 22px;
+  /* NAVIGATION BAR */
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 30px;
-  }
-
-  .formula-box h3 {
-    margin-top: 0;
-    color: #115e59;
-    font-size: 1.3rem;
-  }
-
-  .formula-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-  }
-
-  .formula-item {
-    background: #ffffff;
-    padding: 14px;
-    border-radius: 10px;
-    border-left: 5px solid #0d9488;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  }
-
-  .section-title {
-    background: #0f766e;
-    color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    margin: 35px 0 20px 0;
-    text-align: center;
-  }
-
-  .qa-block {
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
+    position: sticky;
+    top: 75px;
+    z-index: 999;
+    background: rgba(241, 245, 249, 0.95);
+    padding: 10px;
     border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    overflow-x: hidden !important;
-    word-wrap: break-word !important;
+    backdrop-filter: blur(8px);
   }
 
-  .question-heading {
-    color: #115e59;
-    font-size: 1.25rem;
-    margin-top: 0;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 10px;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+  .btn-nav {
+    background: #ffffff;
+    color: #0f172a !important;
+    border: 3px solid #0284c7;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    -webkit-text-stroke: 0.5px #0f172a !important;
   }
 
-  .step-box-green {
-    background: #f0fdf4;
-    border-left: 5px solid #22c55e;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
+  .btn-nav:hover {
+    background: #0284c7;
+    color: #ffffff !important;
+    -webkit-text-stroke: 0.5px #ffffff !important;
+    transform: translateY(-2px);
   }
 
+  /* STEP BOX STYLES */
   .step-box-blue {
-    background: #eff6ff;
-    border-left: 5px solid #3b82f6;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
+    background: #eff6ff !important;
+    border: 3px solid #bfdbfe !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
   }
 
   .step-box-purple {
-    background: #faf5ff;
-    border-left: 5px solid #a855f7;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    display: inline !important;
+  }
+
+  /* COLORFUL MATHJAX STYLING */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  mjx-container[display="true"] {
+    display: block !important;
+    margin: 14px 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  mjx-container:not([display="true"]) {
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  mjx-mn {
+    color: #000000 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000 !important;
+  }
+
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+  }
+
+  mjx-line, mjx-frac mjx-line, .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+  }
+
+  /* MAIN WRAPPER */
+  #contentToCopy {
+    width: 1350px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+  }
+
+  .container {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+    border: 6px solid #60a5fa !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 44pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 30pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #1e3a8a !important;
+    background-color: #eff6ff !important;
+    border-left: 18px solid #2563eb !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 38pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12) !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+  }
+
+  /* QA CARD */
+  .qa-card, .qa-block {
+    background: #ffffff !important;
+    border: 4px solid #cbd5e1 !important;
+    border-radius: 20px !important;
+    padding: 35px 40px !important;
+    margin: 35px 0 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .question-heading {
+    font-size: 32pt !important;
+    color: #1e3a8a !important;
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+    border-bottom: 3px solid #bfdbfe !important;
+    padding-bottom: 12px !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
   }
 
   .answer-highlight {
-    background: #fefce8;
-    border: 2px solid #eab308;
-    border-left: 10px solid #ca8a04;
-    padding: 14px 18px;
-    border-radius: 10px;
-    font-weight: 700;
-    color: #713f12;
-    margin-top: 15px;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important;
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important;
+    border-radius: 16px !important;
+    color: #064e3b !important;
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+  }
+
+  /* INLINE SIMULATOR CARD */
+  .inline-simulator-card {
+    background: #ffffff !important;
+    border: 4px solid #0284c7 !important;
+    border-left: 20px solid #0369a1 !important;
+    border-radius: 20px !important;
+    padding: 32px 36px !important;
+    margin: 40px 0 !important;
+    box-shadow: 0 14px 32px rgba(2, 132, 199, 0.18) !important;
+  }
+  .sim-title {
+    color: #0369a1 !important;
+    font-size: 32pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    -webkit-text-stroke: 0.8px #0369a1 !important;
+  }
+  .sim-controls-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    align-items: end !important;
+    margin-bottom: 25px !important;
+    background: #f0f9ff !important;
+    padding: 24px 28px !important;
+    border-radius: 16px !important;
+    border: 3px solid #bae6fd !important;
+  }
+  .sim-full-row {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+  .sim-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .sim-group label {
+    font-size: 22pt !important;
+    font-weight: 900 !important;
+    color: #1e3a8a !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  .sim-group input, .sim-group select, .sim-controls-grid input, .sim-controls-grid select {
+    font-size: 22pt !important;
+    padding: 12px 18px !important;
+    border: 3px solid #0284c7 !important;
+    border-radius: 12px !important;
+    font-weight: 900 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sim-btn-calc {
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    padding: 14px 28px !important;
+    background: #0284c7 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35) !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
+  }
+  .sim-btn-calc:hover {
+    background: #0369a1 !important;
+    transform: translateY(-2px) !important;
+  }
+  .sim-output-box {
+    background: #f8fafc !important;
+    border: 3px solid #cbd5e1 !important;
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
+    font-size: 24pt !important;
+    line-height: 1.9 !important;
   }
 
   .math-scroll {
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
-    max-width: 100% !important;
-    margin: 12px 0;
+      overflow-x: hidden !important;
+      overflow-y: hidden !important;
+      max-width: 100%;
+      margin: 10px 0;
+      padding: 4px 0;
+    }
+
+  @media (max-width: 1000px) {
+    body { padding: 10px 5px; }
+    #contentToCopy { width: 100% !important; padding: 20px 10px !important; }
+    .hero-title { font-size: 2rem !important; }
+    .part-header { font-size: 1.6rem !important; }
+    .question-heading { font-size: 1.4rem !important; }
+    .sim-input, .sim-group input, .sim-group select { font-size: 1.2rem !important; }
   }
 
-  /* Table styles */
-  .stat-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-    font-size: 1rem;
-    table-layout: auto;
-  }
 
-  .stat-table th, .stat-table td {
-    border: 1px solid #cbd5e1;
-    padding: 8px 12px;
-    text-align: center;
-  }
-
-  .stat-table th {
-    background: #0f766e;
-    color: #ffffff;
-    font-weight: 600;
-  }
-
-  .stat-table tr:nth-child(even) {
-    background: #f8fafc;
-  }
-
-  /* Interactive Simulator Styles */
-  .sim-container {
-    background: #ffffff;
-    border: 2px solid #0d9488;
-    border-radius: 16px;
-    padding: 22px;
-    margin: 30px 0;
-    box-shadow: 0 8px 25px rgba(13, 148, 136, 0.1);
-  }
-
-  .sim-title {
-    color: #0f766e;
-    font-size: 1.3rem;
-    margin-top: 0;
-    border-bottom: 2px solid #ccfbf1;
-    padding-bottom: 8px;
-  }
-
-  .sim-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
-    align-items: center;
-  }
-
-  .sim-controls label {
-    font-weight: 600;
-    color: #334155;
-    font-size: 0.95rem;
-  }
-
-  .sim-controls input[type="range"] {
-    flex: 1;
-    min-width: 140px;
-  }
-
-  .sim-controls input[type="text"], .sim-controls input[type="number"], .sim-controls select {
-    padding: 6px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    font-size: 0.95rem;
-  }
-
-  .sim-canvas-box {
+/* Simulator & Chapter Specific Styles */
+.sim-canvas-box {
     background: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
@@ -302,38 +474,28 @@ window.MathJax = {
     margin-top: 15px;
     overflow-x: hidden !important;
   }
-
-  .sim-output {
-    background: #f0fdfa;
-    border-left: 4px solid #0d9488;
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #115e59;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 2px solid #e2e8f0;
-    color: #64748b;
-    font-size: 0.95rem;
-  }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="contentToCopy">
+  <!-- Top Action Bar (Sticky 9 Projector Buttons) -->
+  <div class="action-bar">
+    <button class="action-btn" onclick="adjustWidth(100)">↔️ W+</button>
+    <button class="action-btn" onclick="adjustWidth(-100)">↔️ W-</button>
+    <button class="action-btn" onclick="adjustFontSize(2)">🔍 A+</button>
+    <button class="action-btn" onclick="adjustFontSize(-2)">🔍 A-</button>
+    <button class="action-btn" onclick="adjustFontWeight(100)">✒️ B+</button>
+    <button class="action-btn" onclick="adjustFontWeight(-100)">✒️ B-</button>
+    <button class="action-btn action-btn-copy" onclick="copyEntireContent()">📋 कॉपी</button>
+    <button class="action-btn" onclick="window.print()">🖨️ प्रिंट</button>
+    <a href="math9.html" class="action-btn action-btn-home">🏠 मुख्य पोर्टल</a>
+  </div>
+
 
   <!-- TOP ACTION BAR -->
-  <div class="action-bar">
-    <button class="action-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️ शीर्ष पर जाएँ</button>
-    <button class="action-btn" onclick="document.getElementById('simulators').scrollIntoView({behavior: 'smooth'})">🎮 5 लाइव सिमुलेटर</button>
-    <button class="action-btn" onclick="document.getElementById('ex12_1').scrollIntoView({behavior: 'smooth'})">📝 प्रश्नावली 12.1 हल</button>
-    <button class="action-btn" onclick="window.print()">🖨️ प्रिंट / PDF</button>
-  </div>
+  
 
   <!-- HEADER -->
   <div class="top-header">
@@ -727,6 +889,75 @@ window.MathJax = {
 
 <!-- JAVASCRIPT FOR SIMULATORS -->
 <script>
+
+  // Projector Controller (Chapter 2 Master Standard)
+  var currentWidth = 1350;
+  var sizeOffset = 0;
+  var weightOffset = 0;
+  var strokeOffset = 0;
+
+  function getContainer() {
+    return document.getElementById('contentToCopy') || document.querySelector('.container');
+  }
+
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 600) currentWidth = 600;
+    if (currentWidth > 3500) currentWidth = 3500;
+    var c = getContainer();
+    if (c) {
+      c.style.setProperty('width', currentWidth + 'px', 'important');
+      c.style.setProperty('max-width', currentWidth + 'px', 'important');
+    }
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -16) sizeOffset = -16;
+    if (sizeOffset > 30) sizeOffset = 30;
+    applyTypography();
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    if (weightOffset < -300) weightOffset = -300;
+    if (weightOffset > 200) weightOffset = 200;
+    applyTypography();
+  }
+
+  function applyTypography() {
+    var basePt = 26 + sizeOffset;
+    var currentWeight = Math.min(900, Math.max(400, 900 + weightOffset));
+    var currentStroke = Math.max(0.4, 0.9 + (weightOffset / 400));
+
+    var el = document.getElementById('dyn-typography');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-typography';
+      document.head.appendChild(el);
+    }
+    el.innerHTML =
+      'body, .container, p, div, span, li, td, th { font-size: ' + basePt + 'pt !important; }' +
+      '.question-heading { font-size: ' + (basePt + 4) + 'pt !important; }' +
+      '.answer-highlight { font-size: ' + (basePt + 2) + 'pt !important; }' +
+      'body, .container, p, div, span, li, h1, h2, h3, h4, .question-heading, .answer-highlight, ' +
+      'strong, b, mjx-container, mjx-math, mjx-c, .MathJax { ' +
+      'font-weight: ' + currentWeight + ' !important; ' +
+      '-webkit-text-stroke: ' + currentStroke + 'px currentColor !important; }';
+  }
+
+  function copyEntireContent() {
+    var container = getContainer();
+    if (!container) return;
+    var text = container.innerText || container.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      alert('📋 संपूर्ण अध्याय सफलतापूर्वक कॉपी हो गया है!');
+    }).catch(function() {
+      alert('कॉपी विफल रही, कृपया स्वयं टेक्स्ट का चयन करें।');
+    });
+  }
+
+
 // Simulator 1: Bar Graph
 function updateSim1() {
   const a = parseFloat(document.getElementById('sim1_a').value) || 0;
@@ -745,8 +976,19 @@ function updateSim1() {
 
   const maxVal = Math.max(80, a, b, c, d, e);
   const svg = document.getElementById('sim1_svg');
-  let html = '<line x1="40" y1="180" x2="480" y2="180" stroke="#94a3b8" stroke-width="2"/>';
-  html += '<line x1="40" y1="20" x2="40" y2="180" stroke="#94a3b8" stroke-width="2"/>';
+  let html = '';
+  // Horizontal Grid Lines & Y-axis Numbers (0, 20, 40, 60, 80, 100)
+  for (let yv = 0; yv <= 100; yv += 20) {
+    const yPos = 180 - (yv / 100) * 150;
+    html += `<line x1="45" y1="${yPos}" x2="480" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
+    html += `<text x="38" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
+    html += `<line x1="40" y1="${yPos}" x2="45" y2="${yPos}" stroke="#000000" stroke-width="2.5"/>`;
+  }
+  // Solid Dark Axes
+  html += '<line x1="45" y1="180" x2="480" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<line x1="45" y1="20" x2="45" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<text x="485" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
+  html += '<text x="45" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
 
   data.forEach((item, i) => {
     const x = 70 + i * 80;
@@ -778,8 +1020,19 @@ function updateSim2() {
   const maxF = Math.max(100, ...heights);
   const svg = document.getElementById('sim2_svg');
 
-  let html = '<line x1="50" y1="180" x2="470" y2="180" stroke="#94a3b8" stroke-width="2"/>';
-  html += '<line x1="50" y1="20" x2="50" y2="180" stroke="#94a3b8" stroke-width="2"/>';
+  let html = '';
+  // Horizontal Grid Lines & Y-axis Numbers (0, 25, 50, 75, 100)
+  for (let yv = 0; yv <= 100; yv += 25) {
+    const yPos = 180 - (yv / 100) * 150;
+    html += `<line x1="50" y1="${yPos}" x2="470" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
+    html += `<text x="44" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
+    html += `<line x1="45" y1="${yPos}" x2="50" y2="${yPos}" stroke="#000000" stroke-width="2.5"/>`;
+  }
+  // Solid Dark Axes
+  html += '<line x1="50" y1="180" x2="470" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<line x1="50" y1="20" x2="50" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<text x="475" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
+  html += '<text x="50" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
 
   const labels = ['300-400', '400-500', '500-600', '600-700'];
   heights.forEach((h, i) => {
@@ -825,7 +1078,26 @@ function updateSim3() {
   const polyB = ptsB.map(p => `${p.x},${p.y}`).join(' ');
 
   const svg = document.getElementById('sim3_svg');
-  let html = '<line x1="40" y1="180" x2="450" y2="180" stroke="#94a3b8" stroke-width="2"/>';
+  let html = '';
+  // Y-axis grid & numbers (0, 5, 10, 15, 20)
+  for (let yv = 0; yv <= 20; yv += 5) {
+    const yPos = 180 - yv * 7.5;
+    html += `<line x1="45" y1="${yPos}" x2="450" y2="${yPos}" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3"/>`;
+    html += `<text x="40" y="${yPos + 4}" font-size="13" font-weight="900" fill="#000000" text-anchor="end">${yv}</text>`;
+  }
+  // X-axis numbers (Class marks: -5, 5, 15, 25, 35, 45, 55)
+  const xLabels = [-5, 5, 15, 25, 35, 45, 55];
+  const xPositions = [50, 120, 190, 260, 330, 400, 430];
+  xLabels.forEach((lbl, idx) => {
+    const xp = xPositions[idx];
+    html += `<line x1="${xp}" y1="180" x2="${xp}" y2="185" stroke="#000000" stroke-width="2.5"/>`;
+    html += `<text x="${xp}" y="198" font-size="12" font-weight="900" fill="#000000" text-anchor="middle">${lbl}</text>`;
+  });
+  // Solid Dark Axes
+  html += '<line x1="45" y1="180" x2="450" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<line x1="45" y1="20" x2="45" y2="180" stroke="#000000" stroke-width="4"/>';
+  html += '<text x="455" y="185" font-size="14" font-weight="900" fill="#000000">X</text>';
+  html += '<text x="45" y="14" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Y</text>';
   html += `<polyline points="${polyA}" fill="none" stroke="#2563eb" stroke-width="3"/>`;
   html += `<polyline points="${polyB}" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="6,4"/>`;
 
