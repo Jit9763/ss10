@@ -1,0 +1,1058 @@
+# -*- coding: utf-8 -*-
+"""
+Generator for Chapter 8: चतुर्भुज (Quadrilaterals)
+NCERT Class 9 Mathematics (Rationalised 2024-25 Syllabus)
+100% NCERT coverage: All theorems, Mid-point Theorem, and Ex 8.1 (Q1 to Q7).
+Strictly vertical steps ("एक के नीचे एक"), zero horizontal chaining, zero Hindi in MathJax,
+5 interactive live simulators, high-contrast & projector controls.
+"""
+
+html_content = r"""<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 8: चतुर्भुज (संपूर्ण प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+<meta name="description" content="NCERT कक्षा 9 गणित अध्याय 8 चतुर्भुज: समांतर चतुर्भुज के गुण, मध्य-बिंदु प्रमेय, प्रश्नावली 8.1 के सभी 7 प्रश्नों के 100% एक-के-नीचे-एक हल व 5 लाइव सिमुलेटर।">
+
+<!-- Google Fonts: Inter & Tiro Devanagari Hindi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #ffffff;
+    --primary-blue: #1e40af;
+    --accent-indigo: #4338ca;
+    --border-color: #cbd5e1;
+    --font-scale: 1.0;
+    --width-scale: 100%;
+  }
+
+  body.high-contrast {
+    --bg-page: #000000 !important;
+    --text-primary: #ffffff !important;
+    --card-bg: #121212 !important;
+    --border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .qa-block,
+  body.high-contrast .concept-box,
+  body.high-contrast .inline-simulator-card,
+  body.high-contrast .step-box-blue,
+  body.high-contrast .step-box-orange,
+  body.high-contrast .step-box-green,
+  body.high-contrast .step-box-purple,
+  body.high-contrast .step-box-red {
+    background: #18181b !important;
+    color: #ffffff !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .question-heading {
+    color: #38bdf8 !important;
+  }
+
+  body.high-contrast .step-txt {
+    color: #f1f5f9 !important;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Tiro Devanagari Hindi', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-rendering: optimizeLegibility;
+  }
+
+  body.high-contrast {
+    -webkit-text-stroke: 0.9px #ffffff;
+  }
+
+  /* Fixed Projector Control Toolbar */
+  .toolbar-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #0f172a;
+    color: white;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #38bdf8;
+  }
+
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .tool-btn {
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    color: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tool-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+  }
+
+  .main-wrapper {
+    max-width: 1400px;
+    width: var(--width-scale);
+    margin: 0 auto;
+    padding: 24px 20px 80px 20px;
+    font-size: calc(18px * var(--font-scale));
+    transition: all 0.2s ease;
+  }
+
+  /* Navigation Shortcuts */
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    color: #1e40af;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .btn-nav:hover {
+    background: #1e40af;
+    color: #ffffff;
+    border-color: #1e40af;
+  }
+
+  /* Hero Header */
+  .hero-title {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.4);
+    margin-bottom: 30px;
+    font-size: calc(26px * var(--font-scale));
+    font-weight: 900;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: #bae6fd;
+    margin-top: 8px;
+  }
+
+  /* Section Part Headers */
+  .part-header {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin: 40px 0 20px 0;
+    font-size: calc(22px * var(--font-scale));
+    font-weight: 900;
+    border-left: 8px solid #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Concept Theory Card */
+  .concept-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  }
+
+  .concept-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* QA Block Card */
+  .qa-block {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 2.5px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .question-heading {
+    font-size: calc(19px * var(--font-scale));
+    font-weight: 900;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  /* Step Boxes */
+  .step-box-blue {
+    background: #f8fafc;
+    border-left: 8px solid #2563eb;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-orange {
+    background: #fffaf5;
+    border-left: 8px solid #f97316;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-green {
+    background: #f0fdf4;
+    border-left: 8px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-purple {
+    background: #faf5ff;
+    border-left: 8px solid #9333ea;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-red {
+    background: #fff1f2;
+    border-left: 8px solid #e11d48;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-txt {
+    font-size: 1em;
+    color: #1e293b;
+    margin: 8px 0;
+    line-height: 1.8;
+  }
+
+  /* Final Answer Highlight */
+  .answer-highlight {
+    background: #fef08a;
+    color: #854d0e;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 900;
+    border-left: 6px solid #eab308;
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .math-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin: 6px 0;
+  }
+
+  /* Inline Simulator Cards */
+  .inline-simulator-card {
+    background: #ffffff;
+    border: 3px solid #2563eb;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+  }
+
+  .sim-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sim-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    margin-bottom: 20px;
+  }
+
+  .sim-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sim-group label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #334155;
+  }
+
+  .sim-group input, .sim-group select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc:hover {
+    background: #1d4ed8;
+  }
+
+  .sim-output-box {
+    background: #f8fafc;
+    border: 2px dashed #94a3b8;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 80px;
+  }
+
+  .sim-canvas {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  @media print {
+    .toolbar-fixed, .nav-pills, .inline-simulator-card {
+      display: none !important;
+    }
+    .main-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Projector Toolbar -->
+<div class="toolbar-fixed">
+  <div class="toolbar-group">
+    <span style="font-size:16px; font-weight:900; color:#38bdf8;">📽️ प्रोजेक्टर कंट्रोल:</span>
+    <button class="tool-btn" onclick="adjustFont(0.1)" title="फॉन्ट आकार बढ़ाएं">A+</button>
+    <button class="tool-btn" onclick="adjustFont(-0.1)" title="फॉन्ट आकार घटाएं">A-</button>
+    <button class="tool-btn" onclick="resetFont()" title="सामान्य आकार">A₀</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="adjustWidth(5)" title="चौड़ाई बढ़ाएं">W+</button>
+    <button class="tool-btn" onclick="adjustWidth(-5)" title="चौड़ाई घटाएं">W-</button>
+    <button class="tool-btn" onclick="resetWidth()" title="सामान्य चौड़ाई">W₀</button>
+    <button class="tool-btn" onclick="toggleContrast()" title="कंट्रास्ट बदलें">🌓 कंट्रास्ट</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️ प्रिंट</button>
+    <button class="tool-btn" onclick="window.location.reload()" title="रीलोड करें">🔄 रीसेट</button>
+    <a href="index.html" class="tool-btn" style="text-decoration:none; display:inline-block;">🏠 होम</a>
+  </div>
+</div>
+
+<div class="main-wrapper" id="mainContent">
+
+  <!-- Quick Navigation Pills -->
+  <div class="nav-pills">
+    <a href="#concepts" class="btn-nav">📌 मुख्य गुण व प्रमेय</a>
+    <a href="#ex81" class="btn-nav">प्रश्नावली 8.1 (Q1 - Q7)</a>
+    <a href="#simulators" class="btn-nav" style="background:#eff6ff; border-color:#2563eb; color:#1d4ed8;">⚡ 5 सिमुलेटर</a>
+  </div>
+
+  <!-- Hero Title Banner -->
+  <div class="hero-title">
+    NCERT कक्षा 9 गणित • अध्याय 8
+    <span>चतुर्भुज (Quadrilaterals) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+  </div>
+
+  <!-- =========================================================
+       SECTION 1: CORE CONCEPTS & THEOREMS
+       ========================================================= -->
+  <div id="concepts" class="concept-box">
+    <div class="concept-title">📌 चतुर्भुज के मुख्य प्रमेय व मध्य-बिंदु प्रमेय (Core Theorems)</div>
+    
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>1. कोण योग गुण (Angle Sum Property):</strong></p>
+      <p class="step-txt">किसी चतुर्भुज के चारों अंतःकोणों का योग सदैव $360^\circ$ होता है:</p>
+      <div class="math-scroll">$$\angle A + \angle B + \angle C + \angle D = 360^\circ$$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>2. समांतर चतुर्भुज के मुख्य गुण:</strong></p>
+      <p class="step-txt">• सम्मुख भुजाएँ बराबर व समांतर होती हैं ($AB = CD$ तथा $AB \parallel CD$)।</p>
+      <p class="step-txt">• सम्मुख कोण बराबर होते हैं ($\angle A = \angle C$ तथा $\angle B = \angle D$)।</p>
+      <p class="step-txt">• विकर्ण परस्पर एक-दूसरे को समद्विभाजित करते हैं।</p>
+      <p class="step-txt">• एक विकर्ण इसे दो सर्वांगसम त्रिभुजों में विभाजित करता है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>3. मध्य-बिंदु प्रमेय (Theorem 8.8 - Mid-Point Theorem):</strong></p>
+      <p class="step-txt">किसी त्रिभुज की किन्हीं दो भुजाओं के मध्य-बिंदुओं को मिलाने वाला रेखाखंड तीसरी भुजा के समांतर होता है और उसकी लम्बाई का आधा होता है:</p>
+      <div class="math-scroll">$$MN \parallel BC \qquad \text{and} \qquad MN = \frac{1}{2}BC$$</div>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>4. मध्य-बिंदु प्रमेय का विलोम (Converse of Mid-point Theorem):</strong></p>
+      <p class="step-txt">किसी त्रिभुज की एक भुजा के मध्य-बिंदु से दूसरी भुजा के समांतर खींची गई रेखा तीसरी भुजा को समद्विभाजित करती है।</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 8.1
+       ========================================================= -->
+  <div id="ex81" class="part-header">
+    📖 प्रश्नावली 8.1 (Exercise 8.1) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 8.1 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: $ABCD$ एक चतुर्भुज है जिसमें $P, Q, R$ और $S$ क्रमशः भुजाओं $AB, BC, CD$ और $DA$ के मध्य-बिंदु हैं। $AC$ उसका एक विकर्ण है। दर्शाइए कि: (i) $SR \parallel AC$ और $SR = \frac{1}{2}AC$, (ii) $PQ = SR$, (iii) $PQRS$ एक समांतर चतुर्भुज है।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>(i) $SR \parallel AC$ और $SR = \frac{1}{2}AC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta DAC$ में, बिंदु $S$ भुजा $DA$ का मध्य-बिंदु है तथा बिंदु $R$ भुजा $CD$ का मध्य-बिंदु है।</p>
+      <p class="step-txt">अतः मध्य-बिंदु प्रमेय (Theorem 8.8) के अनुसार:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      SR &\parallel AC \\
+      SR &= \frac{1}{2}AC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $PQ = SR$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta BAC$ में, बिंदु $P$ भुजा $AB$ का तथा बिंदु $Q$ भुजा $BC$ का मध्य-बिंदु है।</p>
+      <p class="step-txt">अतः मध्य-बिंदु प्रमेय से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &\parallel AC \\
+      PQ &= \frac{1}{2}AC
+      \end{aligned}$$</div>
+      <p class="step-txt">चूँकि $SR = \frac{1}{2}AC$ और $PQ = \frac{1}{2}AC$, अतः दोनों परस्पर बराबर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &= SR
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(iii) $PQRS$ एक समांतर चतुर्भुज है:</strong></p>
+      <p class="step-txt">चूँकि $PQ \parallel AC$ और $SR \parallel AC$ है, अतः:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &\parallel SR
+      \end{aligned}$$</div>
+      <p class="step-txt">तथा भाग (ii) से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &= SR
+      \end{aligned}$$</div>
+      <p class="step-txt">प्रमेय के अनुसार: <i>"यदि किसी चतुर्भुज की सम्मुख भुजाओं का एक युग्म बराबर और समांतर हो, तो वह एक समांतर चतुर्भुज होता है।"</i></p>
+      <p class="step-txt">अतः $PQRS$ एक समांतर चतुर्भुज है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $SR \parallel AC, SR = \frac{1}{2}AC$, &emsp; (ii) $PQ = SR$, &emsp; (iii) $PQRS$ एक समांतर चतुर्भुज है।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: $ABCD$ एक समचतुर्भुज (Rhombus) है और $P, Q, R, S$ क्रमशः भुजाओं $AB, BC, CD, DA$ के मध्य-बिंदु हैं। दर्शाइए कि चतुर्भुज $PQRS$ एक आयत (Rectangle) है।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $PQRS$ को समांतर चतुर्भुज सिद्ध करना:</strong></p>
+      <p class="step-txt">विकर्ण $AC$ खींचने पर, प्रश्न 1 की भाँति $\Delta DAC$ और $\Delta BAC$ में मध्य-बिंदु प्रमेय से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      SR &\parallel AC \qquad \text{and} \qquad SR = \frac{1}{2}AC \\
+      PQ &\parallel AC \qquad \text{and} \qquad PQ = \frac{1}{2}AC \\
+      \implies PQ &\parallel SR \qquad \text{and} \qquad PQ = SR
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः $PQRS$ एक समांतर चतुर्भुज है।</p>
+
+      <p class="step-txt"><strong>चरण 2: एक कोण को $90^\circ$ सिद्ध करना:</strong></p>
+      <p class="step-txt">हम जानते हैं कि समचतुर्भुज के विकर्ण परस्पर लम्ब होते हैं ($AC \perp BD$)।</p>
+      <p class="step-txt">माना विकर्ण $AC$ और $BD$ बिंदु $O$ पर प्रतिच्छेद करते हैं, अतः $\angle COD = 90^\circ$।</p>
+      <p class="step-txt">चूँकि $SP \parallel BD$ और $PQ \parallel AC$ है, अतः छोटे चतुर्भुज में सम्मुख भुजाएँ समांतर होने से सम्मुख कोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle SPQ &= \angle COD \\
+      \angle SPQ &= 90^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">एक ऐसा समांतर चतुर्भुज जिसका एक कोण $90^\circ$ हो, <b>आयत (Rectangle)</b> कहलाता है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: चतुर्भुज $PQRS$ एक आयत है।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: $ABCD$ एक आयत है जिसमें $P, Q, R, S$ क्रमशः भुजाओं $AB, BC, CD, DA$ के मध्य-बिंदु हैं। दर्शाइए कि चतुर्भुज $PQRS$ एक समचतुर्भुज (Rhombus) है।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $PQRS$ एक समांतर चतुर्भुज है:</strong></p>
+      <p class="step-txt">विकर्ण $AC$ और $BD$ खींचिए।</p>
+      <p class="step-txt">$\Delta ABC$ और $\Delta ADC$ में मध्य-बिंदु प्रमेय से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &= \frac{1}{2}AC \\
+      SR &= \frac{1}{2}AC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: विकर्ण $BD$ से अन्य दो भुजाएँ:</strong></p>
+      <p class="step-txt">$\Delta ABD$ और $\Delta BCD$ में मध्य-बिंदु प्रमेय से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      SP &= \frac{1}{2}BD \\
+      QR &= \frac{1}{2}BD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: आयत के विकर्णों की समानता:</strong></p>
+      <p class="step-txt">हम जानते हैं कि आयत के विकर्ण परस्पर बराबर होते हैं ($AC = BD$):</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \frac{1}{2}AC &= \frac{1}{2}BD
+      \end{aligned}$$</div>
+      <p class="step-txt">समीकरणों से चारों भुजाओं की तुलना करने पर:</p>
+      <p class="step-txt">अतः चारों भुजाएँ बराबर हैं: <b>$PQ = QR = RS = SP$</b></p>
+      <p class="step-txt">एक ऐसा समांतर चतुर्भुज जिसकी चारों भुजाएँ समान हों, <b>समचतुर्भुज (Rhombus)</b> कहलाता है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: चतुर्भुज $PQRS$ एक समचतुर्भुज है।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: $ABCD$ एक समलम्ब (Trapezium) है जिसमें $AB \parallel DC$ है। साथ ही $BD$ एक विकर्ण है और $E$, भुजा $AD$ का मध्य-बिंदु है। $E$ से होकर $AB$ के समांतर एक रेखा खींची गई है जो $BC$ को $F$ पर प्रतिच्छेद करती है। दर्शाइए कि $F$, भुजा $BC$ का मध्य-बिंदु है।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">माना रेखा $EF$, विकर्ण $BD$ को बिंदु $G$ पर काटती है।</p>
+
+      <p class="step-txt"><strong>चरण 1: $\Delta DAB$ में विचार करने पर:</strong></p>
+      <p class="step-txt">• $E$, भुजा $AD$ का मध्य-बिंदु है।</p>
+      <p class="step-txt">• $EG \parallel AB$ [चूँकि रेखा $EF \parallel AB$ दी गई है]।</p>
+      <p class="step-txt">मध्य-बिंदु प्रमेय के विलोम (Theorem 8.9) के अनुसार, किसी त्रिभुज की एक भुजा के मध्य-बिंदु से खींची गई समांतर रेखा तीसरी भुजा को समद्विभाजित करती है:</p>
+      <p class="step-txt" style="font-weight:900; color:#1e40af;">अतः बिंदु G, विकर्ण BD का मध्य-बिंदु है।</p>
+
+      <p class="step-txt"><strong>चरण 2: $\Delta BDC$ में विचार करने पर:</strong></p>
+      <p class="step-txt">• बिंदु $G$, विकर्ण $BD$ का मध्य-बिंदु है।</p>
+      <p class="step-txt">• $GF \parallel DC$ [चूँकि $AB \parallel DC$ और $EF \parallel AB \implies EF \parallel DC$]।</p>
+      <p class="step-txt">पुनः मध्य-बिंदु प्रमेय के विलोम से:</p>
+      <p class="step-txt" style="font-weight:900; color:#1e40af;">अतः बिंदु F, भुजा BC का मध्य-बिंदु है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: बिंदु $F$, भुजा $BC$ का मध्य-बिंदु है।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: एक समांतर चतुर्भुज $ABCD$ में, $E$ और $F$ क्रमशः भुजाओं $AB$ और $CD$ के मध्य-बिंदु हैं। दर्शाइए कि रेखाखंड $AF$ और $EC$, विकर्ण $BD$ को समत्रिभाजित (Trisect) करते हैं।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>चरण 1: $AECF$ एक समांतर चतुर्भुज है:</strong></p>
+      <p class="step-txt">चूँकि $ABCD$ एक समांतर चतुर्भुज है, अतः सम्मुख भुजाएँ बराबर व समांतर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &= CD \qquad \text{and} \qquad AB \parallel CD
+      \end{aligned}$$</div>
+      <p class="step-txt">दोनों भुजाओं के आधे लेने पर ($E$ और $F$ मध्य-बिंदु हैं):</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \frac{1}{2}AB &= \frac{1}{2}CD \\
+      AE &= CF \qquad \text{and} \qquad AE \parallel CF
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः चतुर्भुज $AECF$ एक समांतर चतुर्भुज है $\implies AF \parallel EC$।</p>
+
+      <p class="step-txt"><strong>चरण 2: $\Delta DQC$ में मध्य-बिंदु प्रमेय के विलोम से:</strong></p>
+      <p class="step-txt">माना $AF$ और $EC$, विकर्ण $BD$ को क्रमशः $P$ और $Q$ पर प्रतिच्छेद करते हैं।</p>
+      <p class="step-txt">$\Delta DQC$ में, बिंदु $F$, $CD$ का मध्य-बिंदु है तथा $FP \parallel CQ$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      DP &= PQ \qquad \text{...(1)}
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: $\Delta APB$ में मध्य-बिंदु प्रमेय के विलोम से:</strong></p>
+      <p class="step-txt">$\Delta APB$ में, $E$, $AB$ का मध्य-बिंदु है तथा $EQ \parallel AP$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      PQ &= QB \qquad \text{...(2)}
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: निष्कर्ष:</strong></p>
+      <p class="step-txt">समीकरण 1 और समीकरण 2 से:</p>
+      <p class="step-txt">अतः तीनों भाग बराबर हैं: <b>$DP = PQ = QB$</b></p>
+      <p class="step-txt">अतः रेखाखंड $AF$ और $EC$, विकर्ण $BD$ को तीन बराबर भागों में विभाजित (समत्रिभाजित) करते हैं।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: रेखाखंड $AF$ और $EC$, विकर्ण $BD$ को समत्रिभाजित करते हैं ($DP = PQ = QB$)।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: दर्शाइए कि किसी चतुर्भुज की सम्मुख भुजाओं के मध्य-बिंदुओं को मिलाने वाले रेखाखंड परस्पर समद्विभाजित करते हैं।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt">माना $ABCD$ कोई एक चतुर्भुज है और $P, Q, R, S$ क्रमशः भुजाओं $AB, BC, CD, DA$ के मध्य-बिंदु हैं।</p>
+      <p class="step-txt">हमें सिद्ध करना है कि $PR$ और $QS$ परस्पर समद्विभाजित करते हैं।</p>
+
+      <p class="step-txt"><strong>चरण 1: मध्य-बिंदुओं को क्रम से मिलाना:</strong></p>
+      <p class="step-txt">प्रश्न 1 के अनुसार, किसी चतुर्भुज की क्रमागत भुजाओं के मध्य-बिंदुओं को मिलाने से बना चतुर्भुज $PQRS$ एक <b>समांतर चतुर्भुज (Parallelogram)</b> होता है:</p>
+      <p class="step-txt">अतः <b>PQRS एक समांतर चतुर्भुज है।</b></p>
+
+      <p class="step-txt"><strong>चरण 2: विकर्णों का समद्विभाजन गुण:</strong></p>
+      <p class="step-txt">चतुर्भुज $PQRS$ में रेखाखंड $PR$ और $QS$ इसके दो विकर्ण हैं।</p>
+      <p class="step-txt">प्रमेय 8.6 के अनुसार: <i>"समांतर चतुर्भुज के विकर्ण परस्पर एक-दूसरे को समद्विभाजित करते हैं।"</i></p>
+      <p class="step-txt">अतः <b>PR और QS परस्पर समद्विभाजित करते हैं।</b></p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: किसी चतुर्भुज की सम्मुख भुजाओं के मध्य-बिंदुओं को मिलाने वाले रेखाखंड परस्पर समद्विभाजित करते हैं।
+    </div>
+  </div>
+
+  <!-- Ex 8.1 Q7 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 7: $ABC$ एक त्रिभुज है जिसका कोण $C$ समकोण है। कर्ण $AB$ के मध्य-बिंदु $M$ से होकर $BC$ के समांतर खींची गई रेखा $AC$ को $D$ पर प्रतिच्छेद करती है। दर्शाइए कि: (i) $D$, भुजा $AC$ का मध्य-बिंदु है, (ii) $MD \perp AC$, (iii) $CM = MA = \frac{1}{2}AB$।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>(i) $D$, भुजा $AC$ का मध्य-बिंदु है:</strong></p>
+      <p class="step-txt">$\Delta ABC$ में, बिंदु $M$ कर्ण $AB$ का मध्य-बिंदु है और रेखा $MD \parallel BC$ है।</p>
+      <p class="step-txt">मध्य-बिंदु प्रमेय के विलोम (Theorem 8.9) के अनुसार:</p>
+      <p class="step-txt" style="font-weight:900; color:#1e40af;">अतः बिंदु D, भुजा AC का मध्य-बिंदु है।</p>
+
+      <p class="step-txt"><strong>(ii) $MD \perp AC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">चूँकि $MD \parallel BC$ है और $AC$ एक तिर्यक रेखा है, अतः संगत कोण बराबर होंगे:</p>
+      <p class="step-txt">[चूँकि $\angle C = 90^\circ$ है]</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ADM &= \angle ACB \\
+      \angle ADM &= 90^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः $MD \perp AC$ है।</p>
+
+      <p class="step-txt"><strong>(iii) $CM = MA = \frac{1}{2}AB$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta ADM$ और $\Delta CDM$ में तुलना करने पर:</p>
+      <p class="step-txt">• $AD = CD$ &emsp; [$D$, $AC$ का मध्य-बिंदु है]</p>
+      <p class="step-txt">• $\angle ADM = \angle CDM = 90^\circ$ &emsp; [$MD \perp AC$]</p>
+      <p class="step-txt">• $MD = MD$ &emsp; [उभयनिष्ठ भुजा]</p>
+      <p class="step-txt">अतः SAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ADM &\cong \Delta CDM
+      \end{aligned}$$</div>
+      <p class="step-txt">CPCT नियम से संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      MA &= CM
+      \end{aligned}$$</div>
+      <p class="step-txt">चूँकि $M$, $AB$ का मध्य-बिंदु है, अतः $MA = \frac{1}{2}AB$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      CM &= MA \\
+      &= \frac{1}{2}AB
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: तीनों भाग पूर्णतः प्रमाणित हुए ($CM = MA = \frac{1}{2}AB$)।
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SIMULATOR SECTION (5 LIVE SIMULATORS)
+       ========================================================= -->
+  <div id="simulators" class="part-header">
+    ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Quadrilateral Simulators)
+  </div>
+
+  <!-- SIMULATOR 1 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: चतुर्भुज कोण योग गुण गणक (Angle Sum: 360° Solver)</h3>
+    <p class="step-txt">चतुर्भुज के किन्हीं तीन कोणों की माप दर्ज करें, सिमुलेटर चौथे अज्ञात कोण की गणना चरणबद्ध दिखाएगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कोण ∠A (डिग्री):</label>
+        <input type="number" id="sim1_a" value="80" min="1" max="180" oninput="runSim1()">
+      </div>
+      <div class="sim-group">
+        <label>कोण ∠B (डिग्री):</label>
+        <input type="number" id="sim1_b" value="95" min="1" max="180" oninput="runSim1()">
+      </div>
+      <div class="sim-group">
+        <label>कोण ∠C (डिग्री):</label>
+        <input type="number" id="sim1_c" value="110" min="1" max="180" oninput="runSim1()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim1()">
+          ⚡ चौथा कोण ∠D निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim1_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 2 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: समांतर चतुर्भुज कोण व भुजा संबंध गणक (Parallelogram Solver)</h3>
+    <p class="step-txt">समांतर चतुर्भुज का कोई एक कोण दर्ज करें, सिमुलेटर सम्मुख व आसन्न कोणों की गणना करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कोण ∠A की माप (डिग्री):</label>
+        <input type="number" id="sim2_ang" value="70" min="1" max="179" oninput="runSim2()">
+      </div>
+      <div class="sim-group">
+        <label>भुजा AB की लम्बाई (cm):</label>
+        <input type="number" id="sim2_ab" value="10" min="1" oninput="runSim2()">
+      </div>
+      <div class="sim-group">
+        <label>भुजा BC की लम्बाई (cm):</label>
+        <input type="number" id="sim2_bc" value="6" min="1" oninput="runSim2()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim2()">
+          ⚡ सभी कोण व भुजाएँ देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim2_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 3 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: मध्य-बिंदु प्रमेय गणक (Mid-point Theorem: MN = 1/2 BC)</h3>
+    <p class="step-txt">त्रिभुज के आधार $BC$ की लम्बाई दर्ज करें। सिमुलेटर मध्य-बिंदुओं को मिलाने वाले रेखाखंड $MN$ की लम्बाई व समांतरता सत्यापित करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>आधार BC की लम्बाई (cm):</label>
+        <input type="number" id="sim3_bc" value="16" min="2" max="100" oninput="runSim3()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim3()">
+          ⚡ MN की गणना करें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim3_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 4 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: समलम्ब मध्य-बिंदु प्रदर्शक (Trapezium Mid-point Explorer)</h3>
+    <p class="step-txt">समलम्ब $ABCD$ की समांतर भुजाएँ $AB$ और $CD$ दर्ज करें। मध्य-बिंदु रेखा $EF$ की लम्बाई देखें:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>समांतर भुजा AB (cm):</label>
+        <input type="number" id="sim4_ab" value="12" min="1" oninput="runSim4()">
+      </div>
+      <div class="sim-group">
+        <label>समांतर भुजा CD (cm):</label>
+        <input type="number" id="sim4_cd" value="8" min="1" oninput="runSim4()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim4()">
+          ⚡ मध्य रेखा EF निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim4_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 5 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: समकोण त्रिभुज कर्ण मध्य-बिंदु संबंध ($CM = \frac{1}{2}AB$)</h3>
+    <p class="step-txt">समकोण त्रिभुज की लम्ब भुजाएँ $AC$ और $BC$ दर्ज करें। सिमुलेटर कर्ण $AB$ व $CM = \frac{1}{2}AB$ की गणना करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>भुजा AC (cm):</label>
+        <input type="number" id="sim5_ac" value="6" min="1" oninput="runSim5()">
+      </div>
+      <div class="sim-group">
+        <label>भुजा BC (cm):</label>
+        <input type="number" id="sim5_bc" value="8" min="1" oninput="runSim5()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim5()">
+          ⚡ कर्ण AB व CM निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim5_output" class="sim-output-box"></div>
+  </div>
+
+</div><!-- End main-wrapper -->
+
+<!-- Scripts -->
+<script>
+  var currentScale = 1.0;
+  var currentWidth = 100;
+
+  function adjustFont(delta) {
+    currentScale = Math.max(0.7, Math.min(2.0, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function resetFont() {
+    currentScale = 1.0;
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function adjustWidth(delta) {
+    currentWidth = Math.max(60, Math.min(100, currentWidth + delta));
+    document.documentElement.style.setProperty('--width-scale', currentWidth + '%');
+  }
+
+  function resetWidth() {
+    currentWidth = 100;
+    document.documentElement.style.setProperty('--width-scale', '100%');
+  }
+
+  function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  // SIMULATOR 1: Angle sum
+  function runSim1() {
+    var a = parseFloat(document.getElementById('sim1_a').value) || 80;
+    var b = parseFloat(document.getElementById('sim1_b').value) || 95;
+    var c = parseFloat(document.getElementById('sim1_c').value) || 110;
+    var sum = a + b + c;
+    var d = 360 - sum;
+    var out = document.getElementById('sim1_output');
+
+    if (d <= 0) {
+      out.innerHTML = '<div style="color:#e11d48; font-weight:900;">तीनों कोणों का योग 360° से कम होना चाहिए! (वर्तमान योग = ' + sum + '°)</div>';
+      return;
+    }
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>चतुर्भुज का कोण योग गुण:</strong> $\\angle A + \\angle B + \\angle C + \\angle D = 360^\\circ$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\angle D &= 360^\\circ - (' + a + '^\\circ + ' + b + '^\\circ + ' + c + '^\\circ) \\\\' +
+      '&= 360^\\circ - ' + sum + '^\\circ \\\\' +
+      '&= ' + d + '^\\circ' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ चौथा कोण: $\\angle D = ' + d + '^\\circ$ &emsp; [चारों कोणों का योग: ' + a + '° + ' + b + '° + ' + c + '° + ' + d + '° = 360°]</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 2: Parallelogram
+  function runSim2() {
+    var a = parseFloat(document.getElementById('sim2_ang').value) || 70;
+    var ab = parseFloat(document.getElementById('sim2_ab').value) || 10;
+    var bc = parseFloat(document.getElementById('sim2_bc').value) || 6;
+    var oppAng = a;
+    var adjAng = 180 - a;
+    var out = document.getElementById('sim2_output');
+
+    var html = '<div class="step-box-orange">' +
+      '<p class="step-txt"><strong>समांतर चतुर्भुज के गुण:</strong></p>' +
+      '<p class="step-txt">• <b>सम्मुख कोण बराबर:</b> $\\angle A = \\angle C = ' + oppAng + '^\\circ$</p>' +
+      '<p class="step-txt">• <b>आसन्न कोण संपूरक:</b> $\\angle B = \\angle D = 180^\\circ - ' + a + '^\\circ = ' + adjAng + '^\\circ$</p>' +
+      '<p class="step-txt">• <b>सम्मुख भुजाएँ बराबर:</b> $CD = AB = ' + ab + '$ cm &emsp; तथा &emsp; $AD = BC = ' + bc + '$ cm</p>' +
+      '<div class="answer-highlight">✅ परिमाप $= 2(AB + BC) = 2(' + ab + ' + ' + bc + ') = ' + (2 * (ab + bc)) + '$ cm</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 3: Mid-point theorem
+  function runSim3() {
+    var bc = parseFloat(document.getElementById('sim3_bc').value) || 16;
+    var mn = (bc / 2);
+    var out = document.getElementById('sim3_output');
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt"><strong>मध्य-बिंदु प्रमेय (Theorem 8.8):</strong> $MN = \\frac{1}{2}BC$ तथा $MN \\parallel BC$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'MN &= \\frac{1}{2} \\times ' + bc + ' \\\\' +
+      '&= ' + mn + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ मध्य रेखा MN = ' + mn + ' cm &emsp; [यह आधार BC के ठीक समांतर व आधी है]</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 4: Trapezium mid-line
+  function runSim4() {
+    var ab = parseFloat(document.getElementById('sim4_ab').value) || 12;
+    var cd = parseFloat(document.getElementById('sim4_cd').value) || 8;
+    var ef = ((ab + cd) / 2);
+    var out = document.getElementById('sim4_output');
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt"><strong>समलम्ब की मध्य-रेखा का सूत्र:</strong> $EF = \\frac{AB + CD}{2}$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'EF &= \\frac{' + ab + ' + ' + cd + '}{2} \\\\' +
+      '&= \\frac{' + (ab + cd) + '}{2} \\\\' +
+      '&= ' + ef + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ मध्य-रेखा EF = ' + ef + ' cm &emsp; [यह दोनों समांतर भुजाओं के समांतर है]</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 5: Right triangle hypotenuse midpoint
+  function runSim5() {
+    var ac = parseFloat(document.getElementById('sim5_ac').value) || 6;
+    var bc = parseFloat(document.getElementById('sim5_bc').value) || 8;
+    var ab = Math.sqrt((ac * ac) + (bc * bc)).toFixed(2);
+    var cm = (ab / 2).toFixed(2);
+    var out = document.getElementById('sim5_output');
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>पाइथागोरस प्रमेय से कर्ण AB:</strong></p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'AB &= \\sqrt{' + ac + '^2 + ' + bc + '^2} \\\\' +
+      '&= \\sqrt{' + (ac * ac) + ' + ' + (bc * bc) + '} \\\\' +
+      '&= \\sqrt{' + ((ac * ac) + (bc * bc)) + '} \\\\' +
+      '&= ' + ab + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<p class="step-txt"><strong>प्रमेय 8.1 Q7 (iii) से:</strong> $CM = MA = \\frac{1}{2}AB$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'CM &= \\frac{' + ab + '}{2} \\\\' +
+      '&= ' + cm + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ कर्ण AB = ' + ab + ' cm &emsp; | &emsp; मध्यिका CM = ' + cm + ' cm</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    runSim1();
+    runSim2();
+    runSim3();
+    runSim4();
+    runSim5();
+  });
+</script>
+
+</body>
+</html>
+"""
+
+with open('qa_master_math9_8.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("qa_master_math9_8.html generated successfully!")
