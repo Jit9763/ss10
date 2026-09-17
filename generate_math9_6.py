@@ -1,0 +1,1345 @@
+# -*- coding: utf-8 -*-
+"""
+Generator for Chapter 6: रेखाएँ और कोण (Lines and Angles)
+NCERT Class 9 Mathematics (Rationalised 2024-25 Syllabus)
+100% NCERT coverage, strictly vertical steps ("एक के नीचे एक"), zero horizontal chaining,
+zero Hindi inside MathJax, non-overlapping SVG diagrams, 5 interactive live simulators, projector controls.
+"""
+
+html_content = r"""<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 6: रेखाएँ और कोण (संपूर्ण प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+<meta name="description" content="NCERT कक्षा 9 गणित अध्याय 6 रेखाएँ और कोण: सभी परिभाषाएँ, प्रमेय 6.1 से 6.6, प्रश्नावली 6.1 व 6.2 के संपूर्ण 100% हल व 5 लाइव सिमुलेटर।">
+
+<!-- Google Fonts: Inter & Tiro Devanagari Hindi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #ffffff;
+    --primary-blue: #1e40af;
+    --accent-indigo: #4338ca;
+    --border-color: #cbd5e1;
+    --font-scale: 1.0;
+    --width-scale: 100%;
+  }
+
+  body.high-contrast {
+    --bg-page: #000000 !important;
+    --text-primary: #ffffff !important;
+    --card-bg: #121212 !important;
+    --border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .qa-block,
+  body.high-contrast .concept-box,
+  body.high-contrast .inline-simulator-card,
+  body.high-contrast .step-box-blue,
+  body.high-contrast .step-box-orange,
+  body.high-contrast .step-box-green,
+  body.high-contrast .step-box-purple,
+  body.high-contrast .step-box-red {
+    background: #18181b !important;
+    color: #ffffff !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .question-heading {
+    color: #38bdf8 !important;
+  }
+
+  body.high-contrast .step-txt {
+    color: #f1f5f9 !important;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Tiro Devanagari Hindi', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-rendering: optimizeLegibility;
+  }
+
+  body.high-contrast {
+    -webkit-text-stroke: 0.9px #ffffff;
+  }
+
+  /* Fixed Projector Control Toolbar */
+  .toolbar-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #0f172a;
+    color: white;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #38bdf8;
+  }
+
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .tool-btn {
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    color: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tool-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+  }
+
+  .main-wrapper {
+    max-width: 1400px;
+    width: var(--width-scale);
+    margin: 0 auto;
+    padding: 24px 20px 80px 20px;
+    font-size: calc(18px * var(--font-scale));
+    transition: all 0.2s ease;
+  }
+
+  /* Navigation Shortcuts */
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    color: #1e40af;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .btn-nav:hover {
+    background: #1e40af;
+    color: #ffffff;
+    border-color: #1e40af;
+  }
+
+  /* Hero Header */
+  .hero-title {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.4);
+    margin-bottom: 30px;
+    font-size: calc(26px * var(--font-scale));
+    font-weight: 900;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: #bae6fd;
+    margin-top: 8px;
+  }
+
+  /* Section Part Headers */
+  .part-header {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin: 40px 0 20px 0;
+    font-size: calc(22px * var(--font-scale));
+    font-weight: 900;
+    border-left: 8px solid #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Concept Theory Card */
+  .concept-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  }
+
+  .concept-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* QA Block Card */
+  .qa-block {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 2.5px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .question-heading {
+    font-size: calc(19px * var(--font-scale));
+    font-weight: 900;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  /* Step Boxes */
+  .step-box-blue {
+    background: #f8fafc;
+    border-left: 8px solid #2563eb;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-orange {
+    background: #fffaf5;
+    border-left: 8px solid #f97316;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-green {
+    background: #f0fdf4;
+    border-left: 8px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-purple {
+    background: #faf5ff;
+    border-left: 8px solid #9333ea;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-red {
+    background: #fff1f2;
+    border-left: 8px solid #e11d48;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-txt {
+    font-size: 1em;
+    color: #1e293b;
+    margin: 8px 0;
+    line-height: 1.8;
+  }
+
+  /* Final Answer Highlight */
+  .answer-highlight {
+    background: #fef08a;
+    color: #854d0e;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 900;
+    border-left: 6px solid #eab308;
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .math-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin: 6px 0;
+  }
+
+  /* Inline Simulator Cards */
+  .inline-simulator-card {
+    background: #ffffff;
+    border: 3px solid #2563eb;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+  }
+
+  .sim-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sim-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    margin-bottom: 20px;
+  }
+
+  .sim-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sim-group label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #334155;
+  }
+
+  .sim-group input, .sim-group select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc:hover {
+    background: #1d4ed8;
+  }
+
+  .sim-output-box {
+    background: #f8fafc;
+    border: 2px dashed #94a3b8;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 80px;
+  }
+
+  .sim-canvas {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  @media print {
+    .toolbar-fixed, .nav-pills, .inline-simulator-card {
+      display: none !important;
+    }
+    .main-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Projector Toolbar -->
+<div class="toolbar-fixed">
+  <div class="toolbar-group">
+    <span style="font-size:16px; font-weight:900; color:#38bdf8;">📽️ प्रोजेक्टर कंट्रोल:</span>
+    <button class="tool-btn" onclick="adjustFont(0.1)" title="फॉन्ट आकार बढ़ाएं">A+</button>
+    <button class="tool-btn" onclick="adjustFont(-0.1)" title="फॉन्ट आकार घटाएं">A-</button>
+    <button class="tool-btn" onclick="resetFont()" title="सामान्य आकार">A₀</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="adjustWidth(5)" title="चौड़ाई बढ़ाएं">W+</button>
+    <button class="tool-btn" onclick="adjustWidth(-5)" title="चौड़ाई घटाएं">W-</button>
+    <button class="tool-btn" onclick="resetWidth()" title="सामान्य चौड़ाई">W₀</button>
+    <button class="tool-btn" onclick="toggleContrast()" title="कंट्रास्ट बदलें">🌓 कंट्रास्ट</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️ प्रिंट</button>
+    <button class="tool-btn" onclick="window.location.reload()" title="रीलोड करें">🔄 रीसेट</button>
+    <a href="index.html" class="tool-btn" style="text-decoration:none; display:inline-block;">🏠 होम</a>
+  </div>
+</div>
+
+<div class="main-wrapper" id="mainContent">
+
+  <!-- Quick Navigation Pills -->
+  <div class="nav-pills">
+    <a href="#concepts" class="btn-nav">📌 मुख्य अवधारणाएँ व प्रमेय</a>
+    <a href="#ex61" class="btn-nav">प्रश्नावली 6.1 (Q1 - Q6)</a>
+    <a href="#ex62" class="btn-nav">प्रश्नावली 6.2 (Q1 - Q6)</a>
+    <a href="#simulators" class="btn-nav" style="background:#eff6ff; border-color:#2563eb; color:#1d4ed8;">⚡ 5 सिमुलेटर</a>
+  </div>
+
+  <!-- Hero Title Banner -->
+  <div class="hero-title">
+    NCERT कक्षा 9 गणित • अध्याय 6
+    <span>रेखाएँ और कोण (Lines and Angles) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+  </div>
+
+  <!-- =========================================================
+       SECTION 1: CORE CONCEPTS & THEOREMS
+       ========================================================= -->
+  <div id="concepts" class="concept-box">
+    <div class="concept-title">📌 अध्याय के मुख्य सूत्र, अभिगृहीत एवं प्रमेय (Core Concepts)</div>
+    
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>1. रैखिक युग्म अभिगृहीत (Linear Pair Axiom):</strong></p>
+      <p class="step-txt">यदि एक किरण एक रेखा पर खड़ी हो, तो इस प्रकार बने दोनों आसन्न कोणों का योग $180^\circ$ होता है।</p>
+      <div class="math-scroll">$$\angle 1 + \angle 2 = 180^\circ$$</div>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>2. शीर्षाभिमुख कोण प्रमेय (Theorem 6.1 - Vertically Opposite Angles):</strong></p>
+      <p class="step-txt">यदि दो रेखाएँ परस्पर प्रतिच्छेद करती हैं, तो शीर्षाभिमुख कोण बराबर होते हैं।</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle AOC &= \angle BOD \\
+      \angle AOD &= \angle BOC
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>3. समांतर रेखाएँ और तिर्यक रेखा (Parallel Lines & Transversal):</strong></p>
+      <p class="step-txt">• <b>संगत कोण (Corresponding Angles):</b> परस्पर बराबर होते हैं।</p>
+      <p class="step-txt">• <b>एकांतर अंतःकोण (Alternate Interior Angles):</b> परस्पर बराबर होते हैं।</p>
+      <p class="step-txt">• <b>तिर्यक रेखा के एक ही ओर के अंतःकोण (Co-interior Angles):</b> संपूरक होते हैं (योग $= 180^\circ$)।</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>4. प्रतिवर्ती कोण (Reflex Angle):</strong></p>
+      <p class="step-txt">जिस कोण की माप $180^\circ$ से अधिक तथा $360^\circ$ से कम हो, उसे प्रतिवर्ती कोण कहते हैं:</p>
+      <div class="math-scroll">$$\text{Reflex } \angle A = 360^\circ - \angle A$$</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 6.1
+       ========================================================= -->
+  <div id="ex61" class="part-header">
+    📖 प्रश्नावली 6.1 (Exercise 6.1) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 6.1 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: आकृति में, रेखाएँ $AB$ और $CD$ बिंदु $O$ पर प्रतिच्छेद करती हैं। यदि $\angle AOC + \angle BOE = 70^\circ$ है और $\angle BOD = 40^\circ$ है, तो $\angle BOE$ और प्रतिवर्ती $\angle COE$ ज्ञात कीजिए।</h3>
+
+    <!-- SVG Diagram for Ex 6.1 Q1 -->
+    <div style="text-align:center; margin:16px 0;">
+      <svg width="480" height="240" viewBox="0 0 480 240" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+        <!-- Line AB -->
+        <line x1="50" y1="140" x2="430" y2="140" stroke="#1e40af" stroke-width="4"/>
+        <!-- Line CD -->
+        <line x1="120" y1="210" x2="360" y2="70" stroke="#16a34a" stroke-width="4"/>
+        <!-- Ray OE -->
+        <line x1="240" y1="140" x2="380" y2="30" stroke="#dc2626" stroke-width="4"/>
+        <!-- Center O -->
+        <circle cx="240" cy="140" r="6" fill="#0f172a"/>
+        <!-- Labels -->
+        <text x="35" y="145" fill="#1e40af" font-size="16" font-weight="900">A</text>
+        <text x="440" y="145" fill="#1e40af" font-size="16" font-weight="900">B</text>
+        <text x="100" y="225" fill="#16a34a" font-size="16" font-weight="900">C</text>
+        <text x="365" y="65" fill="#16a34a" font-size="16" font-weight="900">D</text>
+        <text x="385" y="30" fill="#dc2626" font-size="16" font-weight="900">E</text>
+        <text x="240" y="165" fill="#0f172a" font-size="16" font-weight="900">O</text>
+        <text x="180" y="125" fill="#ea580c" font-size="14" font-weight="bold">40°</text>
+        <text x="330" y="125" fill="#ea580c" font-size="14" font-weight="bold">40°</text>
+      </svg>
+    </div>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: शीर्षाभिमुख कोण से $\angle AOC$ का मान:</strong></p>
+      <p class="step-txt">रेखाएँ $AB$ और $CD$ बिंदु $O$ पर प्रतिच्छेद करती हैं। अतः शीर्षाभिमुख कोण बराबर होते हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle AOC &= \angle BOD \\
+      &= 40^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\angle BOE$ का मान ज्ञात करना:</strong></p>
+      <p class="step-txt">दिया गया है: $\angle AOC + \angle BOE = 70^\circ$</p>
+      <div class="math-scroll">$$\begin{aligned}
+      40^\circ + \angle BOE &= 70^\circ \\
+      \angle BOE &= 70^\circ - 40^\circ \\
+      \angle BOE &= 30^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: रेखा $AB$ पर स्थित कोणों का योग:</strong></p>
+      <p class="step-txt">$AOB$ एक सरल रेखा है, अतः इस पर बने कोणों का योग $180^\circ$ होगा:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle AOC + \angle COE + \angle BOE &= 180^\circ \\
+      (\angle AOC + \angle BOE) + \angle COE &= 180^\circ \\
+      70^\circ + \angle COE &= 180^\circ \\
+      \angle COE &= 180^\circ - 70^\circ \\
+      \angle COE &= 110^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: प्रतिवर्ती $\angle COE$ (Reflex $\angle COE$):</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \text{Reflex } \angle COE &= 360^\circ - \angle COE \\
+      &= 360^\circ - 110^\circ \\
+      &= 250^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $\angle BOE = 30^\circ$ &emsp; तथा &emsp; प्रतिवर्ती $\angle COE = 250^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.1 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: आकृति में, रेखाएँ $XY$ और $MN$ बिंदु $O$ पर प्रतिच्छेद करती हैं। यदि $\angle POY = 90^\circ$ और $a : b = 2 : 3$ है, तो $c$ ज्ञात कीजिए।</h3>
+
+    <!-- SVG Diagram for Ex 6.1 Q2 -->
+    <div style="text-align:center; margin:16px 0;">
+      <svg width="480" height="250" viewBox="0 0 480 250" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+        <line x1="40" y1="150" x2="440" y2="150" stroke="#1e40af" stroke-width="4"/>
+        <line x1="240" y1="150" x2="240" y2="30" stroke="#dc2626" stroke-width="4"/>
+        <line x1="120" y1="60" x2="360" y2="240" stroke="#16a34a" stroke-width="4"/>
+        <circle cx="240" cy="150" r="6" fill="#0f172a"/>
+        <rect x="240" y="130" width="20" height="20" fill="none" stroke="#dc2626" stroke-width="2"/>
+        <text x="25" y="155" fill="#1e40af" font-size="16" font-weight="900">X</text>
+        <text x="450" y="155" fill="#1e40af" font-size="16" font-weight="900">Y</text>
+        <text x="235" y="25" fill="#dc2626" font-size="16" font-weight="900">P</text>
+        <text x="105" y="55" fill="#16a34a" font-size="16" font-weight="900">M</text>
+        <text x="370" y="245" fill="#16a34a" font-size="16" font-weight="900">N</text>
+        <text x="235" y="175" fill="#0f172a" font-size="16" font-weight="900">O</text>
+        <text x="195" y="110" fill="#ea580c" font-size="16" font-weight="bold">a</text>
+        <text x="145" y="140" fill="#ea580c" font-size="16" font-weight="bold">b</text>
+        <text x="200" y="205" fill="#ea580c" font-size="16" font-weight="bold">c</text>
+      </svg>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: रेखा $XY$ पर रैखिक युग्म से:</strong></p>
+      <p class="step-txt">$XOY$ एक सरल रेखा है तथा किरण $OP$ इस पर खड़ी है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle POX + \angle POY &= 180^\circ \\
+      \angle POX + 90^\circ &= 180^\circ \\
+      \angle POX &= 180^\circ - 90^\circ \\
+      \angle POX &= 90^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $a$ और $b$ के मान ज्ञात करना:</strong></p>
+      <p class="step-txt">चूँकि $\angle POX = a + b = 90^\circ$ तथा अनुपात $a : b = 2 : 3$ है।</p>
+      <p class="step-txt">माना अनुपात स्थिरांक $x$ है, तो $a = 2x$ तथा $b = 3x$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      2x + 3x &= 90^\circ \\
+      5x &= 90^\circ \\
+      x &= \frac{90^\circ}{5} \\
+      x &= 18^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः $b$ का मान:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      b &= 3 \times 18^\circ \\
+      &= 54^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: रेखा $MN$ पर $c$ का मान ज्ञात करना:</strong></p>
+      <p class="step-txt">$MN$ एक सरल रेखा है तथा किरण $OX$ इस पर खड़ी है। अतः रैखिक युग्म से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      b + c &= 180^\circ \\
+      54^\circ + c &= 180^\circ \\
+      c &= 180^\circ - 54^\circ \\
+      c &= 126^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $c = 126^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.1 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: आकृति में, यदि $\angle PQR = \angle PRQ$ है, तो सिद्ध कीजिए कि $\angle PQS = \angle PRT$ है।</h3>
+
+    <!-- SVG Diagram for Ex 6.1 Q3 -->
+    <div style="text-align:center; margin:16px 0;">
+      <svg width="480" height="220" viewBox="0 0 480 220" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+        <line x1="40" y1="170" x2="440" y2="170" stroke="#0f172a" stroke-width="4"/>
+        <line x1="140" y1="170" x2="240" y2="50" stroke="#2563eb" stroke-width="4"/>
+        <line x1="340" y1="170" x2="240" y2="50" stroke="#2563eb" stroke-width="4"/>
+        <text x="30" y="195" fill="#0f172a" font-size="16" font-weight="900">S</text>
+        <text x="135" y="195" fill="#0f172a" font-size="16" font-weight="900">Q</text>
+        <text x="335" y="195" fill="#0f172a" font-size="16" font-weight="900">R</text>
+        <text x="445" y="195" fill="#0f172a" font-size="16" font-weight="900">T</text>
+        <text x="235" y="40" fill="#2563eb" font-size="16" font-weight="900">P</text>
+      </svg>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: बिंदु $Q$ पर रैखिक युग्म से:</strong></p>
+      <p class="step-txt">रेखा $ST$ पर किरण $QP$ खड़ी है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PQS + \angle PQR &= 180^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">पक्षांतरण करने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PQS &= 180^\circ - \angle PQR
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: बिंदु $R$ पर रैखिक युग्म से:</strong></p>
+      <p class="step-txt">रेखा $ST$ पर किरण $RP$ खड़ी है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PRT + \angle PRQ &= 180^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">पक्षांतरण करने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PRT &= 180^\circ - \angle PRQ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: दिए गए प्रतिबंध का प्रयोग:</strong></p>
+      <p class="step-txt">दिया गया है कि $\angle PQR = \angle PRQ$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PRT &= 180^\circ - \angle PQR
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: निष्कर्ष:</strong></p>
+      <p class="step-txt">समीकरणों की तुलना करने पर दोनों के दाएँ पक्ष ($180^\circ - \angle PQR$) समान हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PQS &= \angle PRT
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम् (Hence Proved): $\angle PQS = \angle PRT$
+    </div>
+  </div>
+
+  <!-- Ex 6.1 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: आकृति में, यदि $x + y = w + z$ है, तो सिद्ध कीजिए कि $AOB$ एक रेखा है।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: बिंदु $O$ के चारों ओर के संपूर्ण कोणों का योग:</strong></p>
+      <p class="step-txt">हम जानते हैं कि एक बिंदु के चारों ओर बनने वाले सभी कोणों का योग $360^\circ$ (एक संपूर्ण कोण) होता है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      (x + y) + (w + z) &= 360^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: दिया गया प्रतिबंध $x + y = w + z$ रखने पर:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      (x + y) + (x + y) &= 360^\circ \\
+      2(x + y) &= 360^\circ \\
+      x + y &= \frac{360^\circ}{2} \\
+      x + y &= 180^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: रैखिक युग्म अभिगृहीत के विलोम से:</strong></p>
+      <p class="step-txt">चूँकि दो आसन्न कोणों $x$ ($\angle BOC$) और $y$ ($\angle AOC$) का योग $180^\circ$ है, अतः इनकी अउभयनिष्ठ भुजाएँ $OA$ और $OB$ एक सरल रेखा बनाती हैं।</p>
+      <p class="step-txt" style="font-size:20pt; font-weight:900; color:#1e40af;">अतः <b>AOB एक सरल रेखा है।</b></p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $AOB$ एक सरल रेखा है।
+    </div>
+  </div>
+
+  <!-- Ex 6.1 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: आकृति में, $POQ$ एक रेखा है। किरण $OR$ रेखा $PQ$ पर लम्ब है। किरणों $OP$ और $OR$ के बीच में $OS$ एक अन्य किरण है। सिद्ध कीजिए: $\angle ROS = \frac{1}{2}(\angle QOS - \angle POS)$</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: दिया है $OR \perp PQ$:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ROQ &= 90^\circ \\
+      \angle ROP &= 90^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\angle ROS$ को बाईं ओर के पदों में लिखना:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ROP &= \angle POS + \angle ROS \\
+      90^\circ &= \angle POS + \angle ROS \\
+      \angle ROS &= 90^\circ - \angle POS
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: $\angle ROS$ को दाईं ओर के पदों में लिखना:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle QOS &= \angle ROQ + \angle ROS \\
+      \angle QOS &= 90^\circ + \angle ROS \\
+      \angle ROS &= \angle QOS - 90^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: दोनों समीकरणों को परस्पर जोड़ने पर:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ROS + \angle ROS &= (90^\circ - \angle POS) + (\angle QOS - 90^\circ) \\
+      2\angle ROS &= \angle QOS - \angle POS \\
+      \angle ROS &= \frac{1}{2}(\angle QOS - \angle POS)
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $\angle ROS = \frac{1}{2}(\angle QOS - \angle POS)$
+    </div>
+  </div>
+
+  <!-- Ex 6.1 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: यह दिया गया है कि $\angle XYZ = 64^\circ$ है और $XY$ को बिंदु $P$ तक बढ़ाया गया है। दी हुई सूचना से एक आकृति खींचिए। यदि किरण $YQ$, $\angle ZYP$ को समद्विभाजित करती है, तो $\angle XYQ$ और प्रतिवर्ती $\angle QYP$ के मान ज्ञात कीजिए।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: रेखा $XYP$ पर $\angle ZYP$ का मान:</strong></p>
+      <p class="step-txt">$XYP$ एक सरल रेखा है, अतः रैखिक युग्म से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle XYZ + \angle ZYP &= 180^\circ \\
+      64^\circ + \angle ZYP &= 180^\circ \\
+      \angle ZYP &= 180^\circ - 64^\circ \\
+      \angle ZYP &= 116^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: किरण $YQ$ द्वारा कोण समद्विभाजन:</strong></p>
+      <p class="step-txt">किरण $YQ$, $\angle ZYP$ को दो बराबर भागों में बाँटती है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ZYQ &= \angle QYP \\
+      &= \frac{116^\circ}{2} \\
+      &= 58^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: $\angle XYQ$ का मान ज्ञात करना:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle XYQ &= \angle XYZ + \angle ZYQ \\
+      &= 64^\circ + 58^\circ \\
+      &= 122^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: प्रतिवर्ती $\angle QYP$ (Reflex $\angle QYP$):</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \text{Reflex } \angle QYP &= 360^\circ - \angle QYP \\
+      &= 360^\circ - 58^\circ \\
+      &= 302^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $\angle XYQ = 122^\circ$ &emsp; तथा &emsp; प्रतिवर्ती $\angle QYP = 302^\circ$
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 6.2
+       ========================================================= -->
+  <div id="ex62" class="part-header">
+    📖 प्रश्नावली 6.2 (Exercise 6.2) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 6.2 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: आकृति में, $x$ और $y$ के मान ज्ञात कीजिए और फिर दर्शाइए कि $AB \parallel CD$ है।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $x$ का मान (रैखिक युग्म से):</strong></p>
+      <p class="step-txt">तिर्यक रेखा पर बने कोण $50^\circ$ और $x$ एक रैखिक युग्म बनाते हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      50^\circ + x &= 180^\circ \\
+      x &= 180^\circ - 50^\circ \\
+      x &= 130^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $y$ का मान (शीर्षाभिमुख कोण से):</strong></p>
+      <p class="step-txt">दो रेखाओं के प्रतिच्छेदन से बने शीर्षाभिमुख कोण बराबर होते हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      y &= 130^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: एकांतर अंतःकोण की कसौटी से $AB \parallel CD$:</strong></p>
+      <p class="step-txt">यहाँ $x$ और $y$ एकांतर अंतःकोण (Alternate Interior Angles) का युग्म बनाते हैं, और:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      x &= 130^\circ \\
+      y &= 130^\circ \\
+      \implies x &= y
+      \end{aligned}$$</div>
+      <p class="step-txt">प्रमेय 6.3 के अनुसार: <i>"यदि एक तिर्यक रेखा दो रेखाओं को इस प्रकार काटे कि एकांतर अंतःकोण बराबर हों, तो दोनों रेखाएँ परस्पर समांतर होती हैं।"</i></p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &\parallel CD
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $x = 130^\circ$, $y = 130^\circ$ &emsp; ➔ &emsp; $AB \parallel CD$ सिद्ध हुआ।
+    </div>
+  </div>
+
+  <!-- Ex 6.2 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: आकृति में, यदि $AB \parallel CD$, $CD \parallel EF$ और $y : z = 3 : 7$ है, तो $x$ का मान ज्ञात कीजिए।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $AB$ और $EF$ के बीच संबंध:</strong></p>
+      <p class="step-txt">प्रमेय 6.6 के अनुसार, एक ही रेखा के समांतर रेखाएँ परस्पर समांतर होती हैं:</p>
+      <p class="step-txt">चूँकि $AB \parallel CD$ तथा $CD \parallel EF$ है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &\parallel EF
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $x$ और $z$ में संबंध (एकांतर अंतःकोण):</strong></p>
+      <p class="step-txt">चूँकि $AB \parallel EF$, अतः एकांतर अंतःकोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      x &= z
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: $x$ और $y$ में संबंध (तिर्यक रेखा के एक ही ओर के अंतःकोण):</strong></p>
+      <p class="step-txt">चूँकि $AB \parallel CD$, अतः अंतःकोणों का योग $180^\circ$ होगा:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      x + y &= 180^\circ \\
+      z + y &= 180^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: अनुपात $y : z = 3 : 7$ से $z$ का मान निकालना:</strong></p>
+      <p class="step-txt">माना अनुपात स्थिरांक $k$ है, तो $y = 3k$ तथा $z = 7k$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      3k + 7k &= 180^\circ \\
+      10k &= 180^\circ \\
+      k &= 18^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः $z$ का मान:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      z &= 7 \times 18^\circ \\
+      &= 126^\circ
+      \end{aligned}$$</div>
+      <p class="step-txt">चूँकि $x = z$, अतः:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      x &= 126^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $x = 126^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.2 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: आकृति में, यदि $AB \parallel CD$, $EF \perp CD$ और $\angle GED = 126^\circ$ है, तो $\angle AGE, \angle GEF$ और $\angle FGE$ ज्ञात कीजिए।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $\angle AGE$ का मान (एकांतर अंतःकोण):</strong></p>
+      <p class="step-txt">चूँकि $AB \parallel CD$ और $GE$ एक तिर्यक रेखा है, अतः एकांतर अंतःकोण बराबर होते हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle AGE &= \angle GED \\
+      &= 126^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\angle GEF$ का मान:</strong></p>
+      <p class="step-txt">दिया है $EF \perp CD$, अतः $\angle FED = 90^\circ$:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle GED &= \angle GEF + \angle FED \\
+      126^\circ &= \angle GEF + 90^\circ \\
+      \angle GEF &= 126^\circ - 90^\circ \\
+      \angle GEF &= 36^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: $\angle FGE$ का मान (रैखिक युग्म से):</strong></p>
+      <p class="step-txt">रेखा $AB$ पर किरण $GE$ खड़ी है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle AGE + \angle FGE &= 180^\circ \\
+      126^\circ + \angle FGE &= 180^\circ \\
+      \angle FGE &= 180^\circ - 126^\circ \\
+      \angle FGE &= 54^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $\angle AGE = 126^\circ$, &emsp; $\angle GEF = 36^\circ$, &emsp; $\angle FGE = 54^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.2 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: आकृति में, यदि $PQ \parallel ST$, $\angle PQR = 110^\circ$ और $\angle RST = 130^\circ$ है, तो $\angle QRS$ ज्ञात कीजिए। [संकेत: बिंदु $R$ से होकर $ST$ के समांतर एक रेखा खींचिए।]</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>रचना:</strong> बिंदु $R$ से होकर रेखा $XY$ खींचिए जो $ST$ के समांतर हो ($XY \parallel ST$)।</p>
+      <p class="step-txt">चूँकि $PQ \parallel ST$ और $XY \parallel ST$, अतः $PQ \parallel XY$ होगा।</p>
+
+      <p class="step-txt"><strong>चरण 1: $PQ \parallel XR$ के अंतःकोणों का योग:</strong></p>
+      <p class="step-txt">तिर्यक रेखा $QR$ के एक ही ओर के अंतःकोणों का योग $180^\circ$ होता है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle PQR + \angle QRX &= 180^\circ \\
+      110^\circ + \angle QRX &= 180^\circ \\
+      \angle QRX &= 180^\circ - 110^\circ \\
+      \angle QRX &= 70^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $ST \parallel RY$ के अंतःकोणों का योग:</strong></p>
+      <p class="step-txt">तिर्यक रेखा $SR$ के एक ही ओर के अंतःकोणों का योग $180^\circ$ होता है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle RST + \angle SRY &= 180^\circ \\
+      130^\circ + \angle SRY &= 180^\circ \\
+      \angle SRY &= 180^\circ - 130^\circ \\
+      \angle SRY &= 50^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: रेखा $XY$ पर $\angle QRS$ का मान:</strong></p>
+      <p class="step-txt">$XRY$ एक सरल रेखा है, अतः इस पर बने तीनों कोणों का योग $180^\circ$ होगा:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle QRX + \angle QRS + \angle SRY &= 180^\circ \\
+      70^\circ + \angle QRS + 50^\circ &= 180^\circ \\
+      120^\circ + \angle QRS &= 180^\circ \\
+      \angle QRS &= 180^\circ - 120^\circ \\
+      \angle QRS &= 60^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $\angle QRS = 60^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.2 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: आकृति में, यदि $AB \parallel CD$, $\angle APQ = 50^\circ$ और $\angle PRD = 127^\circ$ है, तो $x$ और $y$ ज्ञात कीजिए।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $x$ का मान (एकांतर अंतःकोण):</strong></p>
+      <p class="step-txt">चूँकि $AB \parallel CD$ और $PQ$ एक तिर्यक रेखा है, अतः एकांतर अंतःकोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      x &= \angle APQ \\
+      x &= 50^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $y$ का मान (एकांतर अंतःकोण):</strong></p>
+      <p class="step-txt">अब $PR$ को तिर्यक रेखा मानने पर, $\angle APR$ और $\angle PRD$ एकांतर अंतःकोण हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle APR &= \angle PRD \\
+      \angle APQ + y &= 127^\circ \\
+      50^\circ + y &= 127^\circ \\
+      y &= 127^\circ - 50^\circ \\
+      y &= 77^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $x = 50^\circ$ &emsp; तथा &emsp; $y = 77^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 6.2 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: आकृति में, $PQ$ और $RS$ दो दर्पण हैं जो एक दूसरे के समांतर रखे गए हैं। एक आपतन किरण (Incident ray) $AB$, दर्पण $PQ$ से $B$ पर टकराती है और परावर्तित किरण (Reflected ray) पथ $BC$ पर चलकर दर्पण $RS$ से $C$ पर टकराती है तथा पुनः $CD$ के अनुदिश परावर्तित हो जाती है। सिद्ध कीजिए कि $AB \parallel CD$ है।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>रचना:</strong></p>
+      <p class="step-txt">दर्पण $PQ$ के बिंदु $B$ पर लम्ब (अभिलम्ब) $BL$ खींचिए ($BL \perp PQ$)।</p>
+      <p class="step-txt">तथा दर्पण $RS$ के बिंदु $C$ पर लम्ब (अभिलम्ब) $CM$ खींचिए ($CM \perp RS$)।</p>
+
+      <p class="step-txt"><strong>चरण 1: अभिलम्बों का समांतर होना:</strong></p>
+      <p class="step-txt">चूँकि दर्पण $PQ \parallel RS$ हैं और $BL \perp PQ$, $CM \perp RS$ हैं, अतः दोनों अभिलम्ब परस्पर समांतर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BL \parallel CM
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: प्रकाश के परावर्तन का नियम (Law of Reflection):</strong></p>
+      <p class="step-txt">आपतन कोण $=$ परावर्तन कोण ($\angle i = \angle r$):</p>
+      <p class="step-txt">• दर्पण $PQ$ पर: $\angle 1 = \angle 2$</p>
+      <p class="step-txt">• दर्पण $RS$ पर: $\angle 3 = \angle 4$</p>
+
+      <p class="step-txt"><strong>चरण 3: एकांतर अंतःकोण से $\angle 2 = \angle 3$:</strong></p>
+      <p class="step-txt">चूँकि $BL \parallel CM$ और $BC$ तिर्यक रेखा है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle 2 &= \angle 3
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4: दोनों पक्षों को 2 से गुणा करने पर:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      2\angle 2 &= 2\angle 3 \\
+      \angle 2 + \angle 2 &= \angle 3 + \angle 3 \\
+      \angle 1 + \angle 2 &= \angle 3 + \angle 4 \\
+      \angle ABC &= \angle BCD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 5: एकांतर कोण कसौटी से:</strong></p>
+      <p class="step-txt">परन्तु $\angle ABC$ और $\angle BCD$ रेखाओं $AB$ और $CD$ के लिए एकांतर अंतःकोण हैं और वे बराबर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &\parallel CD
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम् (Hence Proved): $AB \parallel CD$
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SIMULATOR SECTION (5 LIVE SIMULATORS)
+       ========================================================= -->
+  <div id="simulators" class="part-header">
+    ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Angle & Line Simulators)
+  </div>
+
+  <!-- SIMULATOR 1 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: रैखिक युग्म कोण गणक (Linear Pair Angle Calculator)</h3>
+    <p class="step-txt">एक कोण दर्ज करें, सिमुलेटर तुरंत उसका रैखिक युग्म संपूरक कोण ($180^\circ - \theta$) और आरेख दिखाएगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>पहला कोण θ (डिग्री):</label>
+        <input type="number" id="sim1_ang" value="65" min="1" max="179" oninput="runSim1()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim1()">
+          ⚡ रैखिक युग्म निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim1_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 2 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: शीर्षाभिमुख कोण प्रदर्शक (Vertically Opposite Angles)</h3>
+    <p class="step-txt">दो प्रतिच्छेदी रेखाओं के बीच एक कोण दर्ज करें, सिमुलेटर चारों कोणों की गणना करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कोण 1 की माप (डिग्री):</label>
+        <input type="number" id="sim2_ang" value="45" min="1" max="179" oninput="runSim2()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim2()">
+          ⚡ चारों कोण निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim2_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 3 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: समांतर रेखा व तिर्यक रेखा 8-कोण गणक (Transversal 8 Angles)</h3>
+    <p class="step-txt">तिर्यक रेखा का एक कोण भरें, सिमुलेटर सभी 8 संगत, एकांतर और अंतःकोणों की लाइव गणना करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कोण 1 की माप (डिग्री):</label>
+        <input type="number" id="sim3_ang" value="70" min="1" max="179" oninput="runSim3()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim3()">
+          ⚡ सभी 8 कोण देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <canvas id="sim3_canvas" class="sim-canvas" width="600" height="260"></canvas>
+    <div id="sim3_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 4 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: प्रतिवर्ती कोण गणक (Reflex Angle Calculator: 360° - θ)</h3>
+    <p class="step-txt">किसी भी कोण की माप दर्ज करें और उसका प्रतिवर्ती कोण ($360^\circ - \theta$) तुरंत ज्ञात करें:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>मूल कोण θ (डिग्री):</label>
+        <input type="number" id="sim4_ang" value="110" min="1" max="359" oninput="runSim4()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim4()">
+          ⚡ प्रतिवर्ती कोण निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim4_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 5 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: प्रकाश परावर्तन कोण परीक्षक (Law of Reflection Angle Simulator)</h3>
+    <p class="step-txt">दर्पण पर आपतन कोण ($i$) दर्ज करें, सिमुलेटर परावर्तन कोण ($r$) तथा रेखाओं के समांतर होने की जाँच करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>आपतन कोण i (डिग्री):</label>
+        <input type="number" id="sim5_inc" value="35" min="5" max="85" oninput="runSim5()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim5()">
+          ⚡ परावर्तन परिणाम देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim5_output" class="sim-output-box"></div>
+  </div>
+
+</div><!-- End main-wrapper -->
+
+<!-- Scripts -->
+<script>
+  var currentScale = 1.0;
+  var currentWidth = 100;
+
+  function adjustFont(delta) {
+    currentScale = Math.max(0.7, Math.min(2.0, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function resetFont() {
+    currentScale = 1.0;
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function adjustWidth(delta) {
+    currentWidth = Math.max(60, Math.min(100, currentWidth + delta));
+    document.documentElement.style.setProperty('--width-scale', currentWidth + '%');
+  }
+
+  function resetWidth() {
+    currentWidth = 100;
+    document.documentElement.style.setProperty('--width-scale', '100%');
+  }
+
+  function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  // SIMULATOR 1: Linear Pair
+  function runSim1() {
+    var a = parseFloat(document.getElementById('sim1_ang').value) || 65;
+    var b = 180 - a;
+    var out = document.getElementById('sim1_output');
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>रैखिक युग्म का सूत्र:</strong> $\\angle 1 + \\angle 2 = 180^\\circ$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\angle 2 &= 180^\\circ - ' + a + '^\\circ \\\\' +
+      '&= ' + b + '^\\circ' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ दूसरा कोण = ' + b + '° &emsp; [दोनों कोणों का योग: ' + a + '° + ' + b + '° = 180°]</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 2: Vertically Opposite
+  function runSim2() {
+    var a = parseFloat(document.getElementById('sim2_ang').value) || 45;
+    var b = 180 - a;
+    var out = document.getElementById('sim2_output');
+
+    var html = '<div class="step-box-orange">' +
+      '<p class="step-txt"><strong>शीर्षाभिमुख कोण बराबर होते हैं:</strong></p>' +
+      '<p class="step-txt">• कोण 1 = ' + a + '° &emsp; ➔ &emsp; <b>शीर्षाभिमुख कोण 3 = ' + a + '°</b></p>' +
+      '<p class="step-txt">• आसन्न कोण 2 (रैखिक युग्म से) = $180^\\circ - ' + a + '^\\circ = ' + b + '^\\circ$ &emsp; ➔ &emsp; <b>शीर्षाभिमुख कोण 4 = ' + b + '°</b></p>' +
+      '<div class="answer-highlight">✅ चारों कोण: ' + a + '°, &emsp; ' + b + '°, &emsp; ' + a + '°, &emsp; ' + b + '°</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 3: Transversal 8 angles
+  function runSim3() {
+    var a = parseFloat(document.getElementById('sim3_ang').value) || 70;
+    var b = 180 - a;
+    var out = document.getElementById('sim3_output');
+
+    var canvas = document.getElementById('sim3_canvas');
+    if (canvas) {
+      var ctx = canvas.getContext('2d');
+      var W = canvas.width, H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      // Line 1
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(40, 80); ctx.lineTo(W - 40, 80); ctx.stroke();
+      // Line 2
+      ctx.beginPath(); ctx.moveTo(40, 180); ctx.lineTo(W - 40, 180); ctx.stroke();
+
+      // Transversal
+      ctx.strokeStyle = '#dc2626'; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(180, 20); ctx.lineTo(400, 240); ctx.stroke();
+
+      ctx.fillStyle = '#0f172a'; ctx.font = 'bold 14px system-ui';
+      ctx.fillText('Line l', W - 35, 85);
+      ctx.fillText('Line m', W - 35, 185);
+      ctx.fillText('Transversal t', 140, 30);
+    }
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt"><strong>8 कोणों का विभाजन:</strong></p>' +
+      '<p class="step-txt">• <b>संगत कोण (Corresponding):</b> (' + a + '°, ' + a + '°) तथा (' + b + '°, ' + b + '°)</p>' +
+      '<p class="step-txt">• <b>एकांतर अंतःकोण (Alternate Interior):</b> ' + a + '° और ' + a + '° &emsp; | &emsp; ' + b + '° और ' + b + '°</p>' +
+      '<p class="step-txt">• <b>तिर्यक रेखा के एक ही ओर के अंतःकोण:</b> ' + a + '° + ' + b + '° = 180° (संपूरक)</p>' +
+      '<div class="answer-highlight">✅ कोण समूह 1 (न्यूनकोण): ' + a + '° (4 कोण) &emsp; | &emsp; कोण समूह 2 (अधिककोण): ' + b + '° (4 कोण)</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 4: Reflex Angle
+  function runSim4() {
+    var a = parseFloat(document.getElementById('sim4_ang').value) || 110;
+    var r = 360 - a;
+    var out = document.getElementById('sim4_output');
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt"><strong>प्रतिवर्ती कोण का सूत्र:</strong> $\\text{Reflex } \\theta = 360^\\circ - \\theta$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\text{Reflex } ' + a + '^\\circ &= 360^\\circ - ' + a + '^\\circ \\\\' +
+      '&= ' + r + '^\\circ' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ प्रतिवर्ती कोण = ' + r + '°</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 5: Law of reflection
+  function runSim5() {
+    var inc = parseFloat(document.getElementById('sim5_inc').value) || 35;
+    var ref = inc;
+    var totalDev = 2 * inc;
+    var out = document.getElementById('sim5_output');
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>प्रकाश का परावर्तन नियम:</strong></p>' +
+      '<p class="step-txt">आपतन कोण ($i$) = ' + inc + '° &emsp; ➔ &emsp; परावर्तन कोण ($r$) = ' + ref + '°</p>' +
+      '<p class="step-txt">दर्पण पर कुल मोड़ कोण $= 2 \\times ' + inc + '^\\circ = ' + totalDev + '^\\circ$</p>' +
+      '<p class="step-txt">चूँकि दोनों दर्पण परस्पर समांतर हैं, अतः एकांतर अंतःकोण बराबर होते हैं और निर्गत किरण आपतित किरण के पूर्णतः <b>समांतर ($AB \\parallel CD$)</b> रहती है।</p>' +
+      '<div class="answer-highlight">✅ सत्यापन: दोनों किरणें परस्पर समांतर ($AB \\parallel CD$) हैं।</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    runSim1();
+    runSim2();
+    runSim3();
+    runSim4();
+    runSim5();
+  });
+</script>
+
+</body>
+</html>
+"""
+
+with open('qa_master_math9_6.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("qa_master_math9_6.html generated successfully!")
