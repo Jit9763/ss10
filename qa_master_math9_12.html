@@ -519,12 +519,12 @@ window.MathJax = {
       <div class="formula-item">
         <b>3. बारंबारता बहुभुज (Frequency Polygon):</b>
         <p>आयतचित्र के आयतों की ऊपरी भुजाओं के मध्य-बिंदुओं (वर्ग चिह्नों) को रेखाखंडों द्वारा जोड़कर बनाया जाता है।</p>
-        <div class="math-scroll">$$\text{Class Mark} = \frac{\text{Upper Limit} + \text{Lower Limit}}{2}$$</div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.15em; font-weight:bold; margin:10px 0; color:#1e3a8a;"><span>वर्ग चिह्न</span> = <div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;"><span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">उच्च सीमा + निम्न सीमा</span><span>2</span></div></div>
       </div>
       <div class="formula-item">
         <b>4. असमान चौड़ाई वाले आयत की लंबाई:</b>
         <p>जब वर्ग अंतरालों की चौड़ाई भिन्न हो:</p>
-        <div class="math-scroll">$$\text{Length of Rectangle} = \frac{\text{Frequency}}{\text{Width}} \cdot \text{Min Width}$$</div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.15em; font-weight:bold; margin:10px 0; color:#1e3a8a;"><span>आयत की लंबाई</span> = <div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;"><span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">बारंबारता</span><span>वर्ग चौड़ाई</span></div><span>&times; न्यूनतम वर्ग चौड़ाई</span></div>
       </div>
     </div>
   </div>
@@ -700,7 +700,7 @@ window.MathJax = {
 
     <div class="step-box-purple">
       <p><b>हल:</b></p>
-      <p><b>वर्ग चिह्न सूत्र:</b> $\text{Class Mark} = \frac{\text{Upper Limit} + \text{Lower Limit}}{2}$</p>
+      <p><b>वर्ग चिह्न सूत्र:</b> <b>वर्ग चिह्न</b> = (उच्च सीमा + निम्न सीमा) / 2</p>
       <p>बहुभुज को बंद करने के लिए पूर्व अंतराल $(-10 - 0)$ का वर्ग चिह्न $-5$ (बारंबारता $0$) तथा आगामी अंतराल $(50 - 60)$ का वर्ग चिह्न $55$ (बारंबारता $0$) लेते हैं।</p>
       <p><b>सेक्शन A के बिंदु:</b> $(-5, 0), (5, 3), (15, 9), (25, 17), (35, 12), (45, 9), (55, 0)$</p>
       <p><b>सेक्शन B के बिंदु:</b> $(-5, 0), (5, 5), (15, 19), (25, 15), (35, 10), (45, 1), (55, 0)$</p>
@@ -745,22 +745,20 @@ window.MathJax = {
     <h3 class="question-heading">प्रश्न 8: एक पार्क में खेल रहे विभिन्न आयु वर्गों के बच्चों की संख्या का एक यादृच्छिक सर्वेक्षण (Random survey) करने पर निम्नलिखित आँकड़े प्राप्त हुए:</h3>
     <table class="stat-table">
       <tr><th>आयु (वर्षों में)</th><th>बच्चों की संख्या ($f_i$)</th><th>वर्ग चौड़ाई ($w_i$)</th><th>आयत की लंबाई (समायोजित बारंबारता)</th></tr>
-      <tr><td>1 - 2</td><td>5</td><td>1</td><td>$\frac{5}{1} \cdot 1 = 5$</td></tr>
-      <tr><td>2 - 3</td><td>3</td><td>1</td><td>$\frac{3}{1} \cdot 1 = 3$</td></tr>
-      <tr><td>3 - 5</td><td>6</td><td>2</td><td>$\frac{6}{2} \cdot 1 = 3$</td></tr>
-      <tr><td>5 - 7</td><td>12</td><td>2</td><td>$\frac{12}{2} \cdot 1 = 6$</td></tr>
-      <tr><td>7 - 10</td><td>9</td><td>3</td><td>$\frac{9}{3} \cdot 1 = 3$</td></tr>
-      <tr><td>10 - 15</td><td>10</td><td>5</td><td>$\frac{10}{5} \cdot 1 = 2$</td></tr>
-      <tr><td>15 - 17</td><td>4</td><td>2</td><td>$\frac{4}{2} \cdot 1 = 2$</td></tr>
+      <tr><td>1 - 2</td><td>5</td><td>1</td><td>$\frac{5}{1} \times 1 = 5$</td></tr>
+      <tr><td>2 - 3</td><td>3</td><td>1</td><td>$\frac{3}{1} \times 1 = 3$</td></tr>
+      <tr><td>3 - 5</td><td>6</td><td>2</td><td>$\frac{6}{2} \times 1 = 3$</td></tr>
+      <tr><td>5 - 7</td><td>12</td><td>2</td><td>$\frac{12}{2} \times 1 = 6$</td></tr>
+      <tr><td>7 - 10</td><td>9</td><td>3</td><td>$\frac{9}{3} \times 1 = 3$</td></tr>
+      <tr><td>10 - 15</td><td>10</td><td>5</td><td>$\frac{10}{5} \times 1 = 2$</td></tr>
+      <tr><td>15 - 17</td><td>4</td><td>2</td><td>$\frac{4}{2} \times 1 = 2$</td></tr>
     </table>
     <p><b>उपरोक्त आँकड़ों को निरूपित करने वाला एक आयतचित्र खींचिए।</b></p>
 
     <div class="step-box-blue">
       <p><b>हल एवं विशेष नियम (असमान वर्ग चौड़ाई):</b></p>
       <p>यहाँ वर्ग अंतरालों की चौड़ाई असमान है ($1, 2, 3, 5$)। न्यूनतम वर्ग चौड़ाई $= 1$ है।</p>
-      <div class="math-scroll">
-        $$\text{Length} = \frac{\text{Frequency}}{\text{Width}} \cdot \text{Min Width}$$
-      </div>
+      <div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.15em; font-weight:bold; margin:12px 0; color:#1e3a8a;"><span>आयत की लंबाई</span> = <div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;"><span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">बारंबारता</span><span>वर्ग चौड़ाई</span></div><span>&times; न्यूनतम वर्ग चौड़ाई</span></div>
       <p>समायोजित बारंबारता की गणना ऊपर सारणी के चौथे स्तंभ में पूर्ण की गई है। अब $X$-अक्ष पर आयु वर्ग तथा $Y$-अक्ष पर आयत की लंबाई लेकर आयतचित्र खींचा जाता है।</p>
     </div>
     <div class="answer-highlight">
@@ -773,11 +771,11 @@ window.MathJax = {
     <h3 class="question-heading">प्रश्न 9: एक स्थानीय टेलीफोन निर्देशिका से 100 कुलनाम (Surnames) यदृच्छया लिए गए और उनमें अंग्रेजी वर्णमाला के अक्षरों की संख्या का निम्नलिखित बारंबारता बंटन प्राप्त हुआ:</h3>
     <table class="stat-table">
       <tr><th>अक्षरों की संख्या</th><th>कुलनामों की संख्या ($f_i$)</th><th>वर्ग चौड़ाई ($w_i$)</th><th>आयत की लंबाई</th></tr>
-      <tr><td>1 - 4</td><td>6</td><td>3</td><td>$\frac{6}{3} \cdot 2 = 4$</td></tr>
-      <tr><td>4 - 6</td><td>30</td><td>2</td><td>$\frac{30}{2} \cdot 2 = 30$</td></tr>
-      <tr><td>6 - 8</td><td>44</td><td>2</td><td>$\frac{44}{2} \cdot 2 = 44$</td></tr>
-      <tr><td>8 - 12</td><td>16</td><td>4</td><td>$\frac{16}{4} \cdot 2 = 8$</td></tr>
-      <tr><td>12 - 20</td><td>4</td><td>8</td><td>$\frac{4}{8} \cdot 2 = 1$</td></tr>
+      <tr><td>1 - 4</td><td>6</td><td>3</td><td>$\frac{6}{3} \times 2 = 4$</td></tr>
+      <tr><td>4 - 6</td><td>30</td><td>2</td><td>$\frac{30}{2} \times 2 = 30$</td></tr>
+      <tr><td>6 - 8</td><td>44</td><td>2</td><td>$\frac{44}{2} \times 2 = 44$</td></tr>
+      <tr><td>8 - 12</td><td>16</td><td>4</td><td>$\frac{16}{4} \times 2 = 8$</td></tr>
+      <tr><td>12 - 20</td><td>4</td><td>8</td><td>$\frac{4}{8} \times 2 = 1$</td></tr>
     </table>
     <p><b>(i) दी हुई सूचनाओं को निरूपित करने वाला एक आयतचित्र खींचिए।</b><br>
     <b>(ii) वह वर्ग अंतराल बताइए जिसमें अधिकतम संख्या में कुलनाम हैं।</b></p>
@@ -785,9 +783,7 @@ window.MathJax = {
     <div class="step-box-purple">
       <p><b>हल:</b></p>
       <p><b>(i) आयत की लंबाई की गणना:</b> न्यूनतम वर्ग चौड़ाई $= 2$ है। प्रत्येक वर्ग के लिए सूत्र लागू किया गया:</p>
-      <div class="math-scroll">
-        $$\text{Length} = \frac{\text{Frequency}}{\text{Width}} \cdot 2$$
-      </div>
+      <div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.15em; font-weight:bold; margin:12px 0; color:#1e3a8a;"><span>आयत की लंबाई</span> = <div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;"><span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">बारंबारता</span><span>वर्ग चौड़ाई</span></div><span>&times; 2</span></div>
       <p>प्राप्त लंबाइयाँ क्रमशः $4, 30, 44, 8, 1$ हैं।</p>
       <p><b>(ii) अधिकतम कुलनामों वाला वर्ग अंतराल:</b></p>
       <p>सारणी से स्पष्ट है कि वर्ग अंतराल <b>$6 - 8$</b> में सर्वाधिक $44$ कुलनाम हैं।</p>
@@ -863,7 +859,14 @@ window.MathJax = {
       <label>न्यूनतम वर्ग चौड़ाई ($w_{min}$): <input type="number" id="sim4_minw" value="1" min="1" max="10" style="width:80px;" oninput="updateSim4()"></label>
     </div>
     <div class="sim-output" id="sim4_out">
-      $$\\text{Length} = \\frac{12}{2} \\cdot 1 = 6$$
+      <div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.2em; font-weight:bold; color:#1e3a8a; margin:10px 0;">
+        <span>आयत की लंबाई</span> = 
+        <div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;">
+          <span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">12</span>
+          <span>2</span>
+        </div>
+        <span>&times; 1 = <span style="color:#16a34a;">6</span></span>
+      </div>
     </div>
   </div>
 
@@ -1117,10 +1120,14 @@ function updateSim4() {
   const lengthClean = Number.isInteger(length) ? length : length.toFixed(2);
 
   const out = document.getElementById('sim4_out');
-  out.innerHTML = `$$\\\\text{Length} = \\\\frac{${f}}{${w}} \\\\cdot ${minw} = ${lengthClean}$$`;
-  if (window.MathJax && MathJax.typesetPromise) {
-    MathJax.typesetPromise([out]);
-  }
+  out.innerHTML = `<div style="display:flex; justify-content:center; align-items:center; gap:8px; font-size:1.2em; font-weight:bold; color:#1e3a8a; margin:10px 0;">` +
+    `<span>आयत की लंबाई</span> = ` +
+    `<div style="display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; line-height:1.2;">` +
+    `  <span style="border-bottom:2px solid #1e3a8a; padding:0 6px;">${f}</span>` +
+    `  <span>${w}</span>` +
+    `</div>` +
+    `<span>&times; ${minw} = <span style="color:#16a34a;">${lengthClean}</span></span>` +
+    `</div>`;
 }
 
 // Simulator 5: Mean, Median, Mode

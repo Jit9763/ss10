@@ -2186,7 +2186,7 @@ $$\begin{aligned} \quad
       '</div>' +
       '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
       '<p style="margin:0 0 6px 0;"><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर:</p>' +
-      '<div style="margin: 10px 0;">$$= \\frac{' + num + ' \cdot (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>' +
+      '<div style="margin: 10px 0;">$$= \\frac{' + num + ' \times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2}$$</div>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + a + ' - ' + b + '}$$</div>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + denDiff + '}$$</div>' +
@@ -2224,11 +2224,11 @@ $$\begin{aligned} \quad
 
     if (op === 'mult') {
       ruleName = 'गुणन नियम (Multiplication Rule)';
-      ruleFormula = '$$a^m \cdot a^n = a^{m+n}$$';
+      ruleFormula = '$$a^m \times a^n = a^{m+n}$$';
       var resExp = m + n;
       var resVal = Math.pow(a, resExp);
       finalResult = resVal;
-      stepsHtml = '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + a + '^{' + n + '}$$</div>' +
+      stepsHtml = '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \times ' + a + '^{' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' + ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + resExp + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
@@ -2244,23 +2244,23 @@ $$\begin{aligned} \quad
         '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
     } else if (op === 'pow') {
       ruleName = 'घात की घात नियम (Power of a Power Rule)';
-      ruleFormula = '$$(a^m)^n = a^{m \cdot n}$$';
+      ruleFormula = '$$(a^m)^n = a^{m \times n}$$';
       var resExp = m * n;
       var resVal = Math.pow(a, resExp);
       finalResult = resVal;
       stepsHtml = '<div style="margin:8px 0;">$$(' + a + '^{' + m + '})^{' + n + '}$$</div>' +
-        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \cdot ' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \times ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + resExp + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
     } else if (op === 'dist' || op === 'diff_base') {
       ruleName = 'भिन्न आधार नियम (Different Bases Rule)';
-      ruleFormula = '$$a^m \cdot b^m = (ab)^m$$';
+      ruleFormula = '$$a^m \times b^m = (ab)^m$$';
       var b = 3;
       var resVal = Math.pow(a * b, m);
       finalResult = resVal;
       stepsHtml = '<p style="font-size:20pt; color:#475569; margin:0 0 8px 0;">(यहाँ दूसरा आधार $b = 3$ लिया गया है)</p>' +
-        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + b + '^{' + m + '}$$</div>' +
-        '<div style="margin:8px 0;">$$= (' + a + ' \cdot ' + b + ')^{' + m + '}$$</div>' +
+        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \times ' + b + '^{' + m + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= (' + a + ' \times ' + b + ')^{' + m + '}$$</div>' +
         '<div style="margin:8px 0;">$$= (' + (a * b) + ')^{' + m + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
     }
