@@ -1680,11 +1680,11 @@ $$\begin{aligned} \quad
 
     <div class="sim-controls">
       <label>नियम चुनें:</label>
-      <select id="sim5_op" class="sim-input" style="width:340px; font-size:20pt;" onchange="calculateSim5()">
-        <option value="mult">a^m × a^n = a^(m+n)</option>
-        <option value="div">a^m ÷ a^n = a^(m-n)</option>
-        <option value="pow">(a^m)^n = a^(m×n)</option>
-        <option value="diff_base">a^m × b^m = (ab)^m</option>
+      <select id="sim5_op" class="sim-input" style="min-width:440px; max-width:100%; font-size:22pt; font-weight:900; padding:10px 16px; border-radius:12px; border:3px solid #2563eb; background:#ffffff; color:#1e3a8a;" onchange="calculateSim5()">
+        <option value="mult">1. गुणन नियम: aᵐ × aⁿ = aᵐ⁺ⁿ</option>
+        <option value="div">2. भाग नियम: aᵐ ÷ aⁿ = aᵐ⁻ⁿ</option>
+        <option value="pow">3. घात की घात नियम: (aᵐ)ⁿ = aᵐⁿ</option>
+        <option value="dist">4. भिन्न आधार नियम: aᵐ × bᵐ = (ab)ᵐ</option>
       </select>
 
       <label>आधार $a$:</label>
@@ -2077,55 +2077,65 @@ $$\begin{aligned} \quad
     var n = parseFloat(document.getElementById('sim5_n').value) || 2;
     var out = document.getElementById('sim5_output');
 
-    var html = '';
+    var ruleName = '';
+    var ruleFormula = '';
+    var stepsHtml = '';
+    var finalResult = '';
+
     if (op === 'mult') {
+      ruleName = 'गुणन नियम (Multiplication Rule)';
+      ruleFormula = '$$a^m \\times a^n = a^{m+n}$$';
       var resExp = m + n;
       var resVal = Math.pow(a, resExp);
-      html = '<div class="step-line">' +
-        '<p><strong>घातांक नियम:</strong> $$a^m \\times a^n = a^{m+n}$$</p>' +
-        '<p><strong>हल:</strong></p>' +
-        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \\times ' + a + '^{' + n + '}$$</div>' +
+      finalResult = resVal;
+      stepsHtml = '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \\times ' + a + '^{' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' + ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
-        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
-        '</div>';
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>';
     } else if (op === 'div') {
+      ruleName = 'भाग नियम (Division Rule)';
+      ruleFormula = '$$\\frac{a^m}{a^n} = a^{m-n}$$';
       var resExp = m - n;
       var resVal = Math.pow(a, resExp);
-      html = '<div class="step-line">' +
-        '<p><strong>घातांक नियम:</strong> $$\\frac{a^m}{a^n} = a^{m-n}$$</p>' +
-        '<p><strong>हल:</strong></p>' +
-        '<div style="margin:8px 0;">$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}}$$</div>' +
+      finalResult = resVal;
+      stepsHtml = '<div style="margin:8px 0;">$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' - ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
-        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
-        '</div>';
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>';
     } else if (op === 'pow') {
+      ruleName = 'घात की घात नियम (Power of a Power Rule)';
+      ruleFormula = '$$(a^m)^n = a^{m \\times n}$$';
       var resExp = m * n;
       var resVal = Math.pow(a, resExp);
-      html = '<div class="step-line">' +
-        '<p><strong>घातांक नियम:</strong> $$(a^m)^n = a^{m \\times n}$$</p>' +
-        '<p><strong>हल:</strong></p>' +
-        '<div style="margin:8px 0;">$$(' + a + '^{' + m + '})^{' + n + '}$$</div>' +
+      finalResult = resVal;
+      stepsHtml = '<div style="margin:8px 0;">$$(' + a + '^{' + m + '})^{' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \\times ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
-        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
-        '</div>';
-    } else if (op === 'dist') {
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>';
+    } else if (op === 'dist' || op === 'diff_base') {
+      ruleName = 'भिन्न आधार नियम (Different Bases Rule)';
+      ruleFormula = '$$a^m \\times b^m = (ab)^m$$';
       var b = 3;
       var resVal = Math.pow(a * b, m);
-      html = '<div class="step-line">' +
-        '<p><strong>घातांक नियम:</strong> $$a^m \\times b^m = (ab)^m$$ <span style="font-size:20pt; color:#475569;">(यहाँ $b=3$ लिया गया है)</span></p>' +
-        '<p><strong>हल:</strong></p>' +
+      finalResult = resVal;
+      stepsHtml = '<p style="font-size:20pt; color:#475569; margin:0 0 8px 0;">(यहाँ दूसरा आधार $b = 3$ लिया गया है)</p>' +
         '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \\times ' + b + '^{' + m + '}$$</div>' +
         '<div style="margin:8px 0;">$$= (' + a + ' \\times ' + b + ')^{' + m + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{(' + (a * b) + ')^{' + m + '}}$$</div>' +
-        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
-        '</div>';
+        '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>';
     }
 
-    html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
-      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ अंतिम उत्तर: $\\mathbf{' + (op === 'dist' ? Math.pow(a * 3, m) : Math.pow(a, op === 'mult' ? m+n : (op === 'div' ? m-n : m*n))) + '}$</p></div>';
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb;">' +
+      '<p><strong>चयनित घातांक नियम:</strong> <span class="badge-blue" style="font-size:20pt; padding:4px 12px; border-radius:8px;">' + ruleName + '</span></p>' +
+      '<div style="margin:10px 0; font-size:26pt;">' + ruleFormula + '</div>' +
+      '</div>' +
+      '<div class="step-line">' +
+      '<p><strong>हल के चरण:</strong></p>' +
+      stepsHtml +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
+      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ अंतिम परिणाम: $$\mathbf{' + finalResult + '}$$</p>' +
+      '</div>';
 
     out.innerHTML = html;
     if (window.MathJax) {
