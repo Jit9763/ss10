@@ -569,7 +569,7 @@ window.MathJax = {
        EXERCISE 4.1
        ========================================================= -->
   <div class="part-header">
-    📖 प्रश्नावली 4.1 (Exercise 4.1) — संपूर्ण 100% NCERT हल
+    📖 प्रश्नावली 4.1 (प्रश्नावली 4.1) — संपूर्ण 100% NCERT हल
   </div>
 
   <!-- Q1 -->
@@ -703,7 +703,7 @@ window.MathJax = {
        EXERCISE 4.2
        ========================================================= -->
   <div class="part-header">
-    📖 प्रश्नावली 4.2 (Exercise 4.2) — संपूर्ण 100% NCERT हल व आलेख
+    📖 प्रश्नावली 4.2 (प्रश्नावली 4.2) — संपूर्ण 100% NCERT हल व आलेख
   </div>
 
   <!-- Q1 -->
@@ -1209,10 +1209,10 @@ window.MathJax = {
   </div>
 
   <!-- =========================================================
-       5 LIVE INTERACTIVE SIMULATORS
+       ⚡ 5 सजीव इंटरैक्टिव सिमुलेटर
        ========================================================= -->
   <div class="part-header" id="simulators">
-    ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Linear Equation Simulators)
+    ⚡ लाइव सिमुलेटर अनुभाग (5 रैखिक समीकरण सिमुलेटर)
   </div>
 
   <!-- Simulator 1 -->
@@ -1238,7 +1238,7 @@ window.MathJax = {
 
   <!-- Simulator 2 -->
   <div class="inline-simulator-card">
-    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 2: चार क्रमिक हल जनरेटर (Four Solutions Table Generator)</h3>
+    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 2: चार क्रमिक हल जनरेटर (चार क्रमिक हल सारणी जनरेटर)</h3>
     <p style="font-size:18pt; font-weight:700; color:#334155;">समीकरण $ax + by = c$ के लिए चार क्रमिक हल $(x, y)$ तालिका तुरंत प्राप्त करें:</p>
     <div class="sim-controls-grid">
       <div class="sim-group">
@@ -1284,7 +1284,7 @@ window.MathJax = {
 
   <!-- Simulator 4 -->
   <div class="inline-simulator-card">
-    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 4: अज्ञात चर 'k' गणक (Find 'k' Calculator)</h3>
+    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 4: अज्ञात चर 'k' गणक ('k' का मान गणक)</h3>
     <p style="font-size:18pt; font-weight:700; color:#334155;">यदि $(x_0, y_0)$ समीकरण $ax + by = k$ का हल है, तो $k$ का मान तुरंत ज्ञात करें:</p>
     <div class="sim-controls-grid">
       <div class="sim-group">
@@ -1308,7 +1308,7 @@ window.MathJax = {
 
   <!-- Simulator 5 with DARK GRAPH & AXIS NUMBERS -->
   <div class="inline-simulator-card">
-    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 5: सरल रेखा आलेखक (Interactive Straight Line Grapher)</h3>
+    <h3 style="font-size:24pt; font-weight:900; color:#1e3a8a; margin-top:0;">⚡ लाइव सिमुलेटर 5: सरल रेखा आलेखक (सरल रेखा ग्राफ आलेखक)</h3>
     <p style="font-size:18pt; font-weight:700; color:#334155;">समीकरण $ax + by = c$ भरें और डार्क ग्रिड व अंकित अक्षों पर लाइव रेखा आलेख देखें:</p>
     <div class="sim-controls-grid">
       <div class="sim-group">
@@ -1494,13 +1494,19 @@ window.MathJax = {
       var oy = H / 2;
       var scale = 26;
 
-      // 1. Dark Visible Grid Lines
+      // 1. Dark Visible Grid Lines (Strictly aligned with origin ox, oy)
       ctx.strokeStyle = '#94a3b8';
       ctx.lineWidth = 1.2;
-      for (var gx = 0; gx <= W; gx += scale) {
+      for (var gx = ox; gx <= W; gx += scale) {
         ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, H); ctx.stroke();
       }
-      for (var gy = 0; gy <= H; gy += scale) {
+      for (var gx = ox; gx >= 0; gx -= scale) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, H); ctx.stroke();
+      }
+      for (var gy = oy; gy <= H; gy += scale) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
+      }
+      for (var gy = oy; gy >= 0; gy -= scale) {
         ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
       }
 
@@ -1564,14 +1570,44 @@ window.MathJax = {
 
         ctx.beginPath(); ctx.moveTo(px1, py1); ctx.lineTo(px2, py2); ctx.stroke();
 
-        // Plot 2 sample points
-        [0, 2].forEach(function(xp) {
-          var yp = (c - (a * xp)) / b;
-          var pxx = ox + (xp * scale);
-          var pyy = oy - (yp * scale);
+        // Plot key solution points with coordinates
+        var ptsToPlot = [];
+        // Y-intercept (x=0)
+        var y0 = c / b;
+        if (Math.abs(y0) <= 7) ptsToPlot.push({x: 0, y: y0});
+        // X-intercept (y=0)
+        if (a !== 0) {
+          var x0 = c / a;
+          if (Math.abs(x0) <= 11 && x0 !== 0) ptsToPlot.push({x: x0, y: 0});
+        }
+        // Additional integer point if possible
+        for (var testX = 1; testX <= 5; testX++) {
+          var testY = (c - (a * testX)) / b;
+          if (Number.isInteger(testY) && Math.abs(testY) <= 7) {
+            ptsToPlot.push({x: testX, y: testY});
+            break;
+          }
+        }
+
+        ptsToPlot.forEach(function(pt) {
+          var pxx = ox + (pt.x * scale);
+          var pyy = oy - (pt.y * scale);
           ctx.fillStyle = '#dc2626';
-          ctx.beginPath(); ctx.arc(pxx, pyy, 6, 0, Math.PI * 2); ctx.fill();
-          ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; ctx.stroke();
+          ctx.beginPath(); ctx.arc(pxx, pyy, 7, 0, Math.PI * 2); ctx.fill();
+          ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5; ctx.stroke();
+
+          // Label coordinates cleanly next to point
+          ctx.fillStyle = '#991b1b';
+          ctx.font = 'bold 14px system-ui, sans-serif';
+          var yStr = Number.isInteger(pt.y) ? pt.y : pt.y.toFixed(1);
+          var xStr = Number.isInteger(pt.x) ? pt.x : pt.x.toFixed(1);
+          var isRight = pxx > W - 90;
+          var isTop = pyy < 30;
+          ctx.textAlign = isRight ? 'right' : 'left';
+          ctx.textBaseline = isTop ? 'top' : 'bottom';
+          var lx = isRight ? (pxx - 10) : (pxx + 10);
+          var ly = isTop ? (pyy + 10) : (pyy - 8);
+          ctx.fillText('(' + xStr + ', ' + yStr + ')', lx, ly);
         });
       } else if (a !== 0) {
         var xFixed = c / a;
