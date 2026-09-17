@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 3: निर्देशांक ज्यामिति (संपूर्ण 100% प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+
+<!-- MathJax Configuration with Bold Fraction Lines -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
+      }
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Noto Sans Devanagari', 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+    font-size: 26pt;
+    font-weight: 900 !important;
+    line-height: 1.8;
+    color: #000000 !important;
+    background-color: #f1f5f9;
+    padding: 20px 10px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 0.9px #000000 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* TOP ACTION BAR */
+  .action-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;
+    border-bottom: 4px solid #3b82f6;
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+    border-radius: 14px;
+  }
+
+  .action-btn {
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #1e293b;
+    color: #ffffff !important;
+    border: 2px solid #475569;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+  }
+
+  .action-btn:hover {
+    background: #3b82f6;
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+  }
+
+  .action-btn-home {
+    background: #059669;
+    border-color: #10b981;
+  }
+  .action-btn-home:hover {
+    background: #047857;
+  }
+
+  .action-btn-copy {
+    background: #7c3aed;
+    border-color: #a78bfa;
+  }
+  .action-btn-copy:hover {
+    background: #6d28d9;
+  }
+
+  /* TOP HEADER & BADGES */
+  .top-header {
+    text-align: center;
+    background: #ffffff;
+    border: 3px solid #cbd5e1;
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  }
+
+  .class-badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff !important;
+    font-size: 20pt;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    border: 2px solid #1d4ed8;
+    -webkit-text-stroke: 0px !important;
+  }
+
+  /* NAVIGATION BAR */
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 75px;
+    z-index: 999;
+    background: rgba(241, 245, 249, 0.95);
+    padding: 10px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    color: #0f172a !important;
+    border: 3px solid #0284c7;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    -webkit-text-stroke: 0.5px #0f172a !important;
+  }
+
+  .btn-nav:hover {
+    background: #0284c7;
+    color: #ffffff !important;
+    -webkit-text-stroke: 0.5px #ffffff !important;
+    transform: translateY(-2px);
+  }
+
+  /* STEP BOX STYLES */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 3px solid #bfdbfe !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    display: inline !important;
+  }
+
+  /* COLORFUL MATHJAX STYLING */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  mjx-container[display="true"] {
+    display: block !important;
+    margin: 14px 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  mjx-container:not([display="true"]) {
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  mjx-mn {
+    color: #000000 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000 !important;
+  }
+
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+  }
+
+  /* MAIN WRAPPER */
+  #contentToCopy {
+    width: 1350px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+  }
+
+  .container {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%) !important;
+    border: 6px solid #2dd4bf !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 44pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 30pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #0f766e !important;
+    background-color: #f0fdfa !important;
+    border-left: 18px solid #0d9488 !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 38pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(13, 148, 136, 0.12) !important;
+    -webkit-text-stroke: 0.8px #0f766e !important;
+  }
+
+  /* QA CARD */
+  .qa-card, .qa-block {
+    background: #ffffff !important;
+    border: 4px solid #cbd5e1 !important;
+    border-radius: 20px !important;
+    padding: 35px 40px !important;
+    margin: 35px 0 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .question-heading {
+    font-size: 32pt !important;
+    color: #0f766e !important;
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+    border-bottom: 3px solid #99f6e4 !important;
+    padding-bottom: 12px !important;
+    -webkit-text-stroke: 0.8px #0f766e !important;
+  }
+
+  .answer-highlight {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important;
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important;
+    border-radius: 16px !important;
+    color: #064e3b !important;
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+  }
+
+  /* INLINE SIMULATOR CARD */
+  .inline-simulator-card {
+    background: #ffffff !important;
+    border: 4px solid #0284c7 !important;
+    border-left: 20px solid #0369a1 !important;
+    border-radius: 20px !important;
+    padding: 32px 36px !important;
+    margin: 40px 0 !important;
+    box-shadow: 0 14px 32px rgba(2, 132, 199, 0.18) !important;
+  }
+  .sim-title {
+    color: #0369a1 !important;
+    font-size: 32pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    -webkit-text-stroke: 0.8px #0369a1 !important;
+  }
+  .sim-controls-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    align-items: end !important;
+    margin-bottom: 25px !important;
+    background: #f0f9ff !important;
+    padding: 24px 28px !important;
+    border-radius: 16px !important;
+    border: 3px solid #bae6fd !important;
+  }
+  .sim-full-row {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+  .sim-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .sim-group label {
+    font-size: 22pt !important;
+    font-weight: 900 !important;
+    color: #1e3a8a !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  .sim-group input, .sim-group select, .sim-controls-grid input, .sim-controls-grid select {
+    font-size: 22pt !important;
+    padding: 12px 18px !important;
+    border: 3px solid #0284c7 !important;
+    border-radius: 12px !important;
+    font-weight: 900 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sim-btn-calc {
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    padding: 14px 28px !important;
+    background: #0284c7 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35) !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
+  }
+  .sim-btn-calc:hover {
+    background: #0369a1 !important;
+    transform: translateY(-2px) !important;
+  }
+  .sim-output-box {
+    background: #f8fafc !important;
+    border: 3px solid #cbd5e1 !important;
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
+    font-size: 24pt !important;
+    line-height: 1.9 !important;
+  }
+
+  .math-scroll {
+    overflow-x: auto !important;
+    margin: 12px 0 !important;
+  }
+
+  @media (max-width: 1000px) {
+    body { padding: 10px 5px; }
+    #contentToCopy { width: 100% !important; padding: 20px 10px !important; }
+    .hero-title { font-size: 2rem !important; }
+    .part-header { font-size: 1.6rem !important; }
+    .question-heading { font-size: 1.4rem !important; }
+    .sim-input, .sim-group input, .sim-group select { font-size: 1.2rem !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <button class="action-btn" onclick="adjustWidth(100)">↔️ W+</button>
+    <button class="action-btn" onclick="adjustWidth(-100)">↔️ W-</button>
+    <button class="action-btn" onclick="adjustFontSize(2)">🔍 A+</button>
+    <button class="action-btn" onclick="adjustFontSize(-2)">🔍 A-</button>
+    <button class="action-btn" onclick="adjustFontWeight(100)">✒️ B+</button>
+    <button class="action-btn" onclick="adjustFontWeight(-100)">✒️ B-</button>
+    <button class="action-btn action-btn-copy" onclick="copyEntireContent()">📋 कॉपी</button>
+    <button class="action-btn" onclick="window.print()">🖨️ प्रिंट</button>
+    <a href="math9.html" class="action-btn action-btn-home">🏠 मुख्य पोर्टल</a>
+  </div>
+
+  <div id="contentToCopy">
+    <!-- Top Header -->
+    <div class="top-header">
+      <span class="class-badge">NCERT कक्षा 9 गणित (Mathematics)</span>
+      <div style="font-size: 32pt; font-weight: 900; color: #0f172a; margin-top: 8px;">
+        अध्याय 3: निर्देशांक ज्यामिति (Coordinate Geometry) • संपूर्ण 100% अभ्यास हल व 5 लाइव सिमुलेटर
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <a href="#ex31" class="btn-nav">प्रश्नावली 3.1</a>
+      <a href="#ex32" class="btn-nav">प्रश्नावली 3.2</a>
+      <a href="#ex33" class="btn-nav">प्रश्नावली 3.3</a>
+      <a href="#simulators" class="btn-nav" style="background:#f0fdfa; border-color:#0d9488; color:#0f766e;">⚡ 5 सिमुलेटर</a>
+    </div>
+
+    <!-- Hero Title Banner -->
+    <div class="hero-title">
+      NCERT कक्षा 9 गणित • अध्याय 3
+      <span>निर्देशांक ज्यामिति (Coordinate Geometry) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 3.1
+         ========================================================= -->
+    <div id="ex31" class="part-header">
+      📖 प्रश्नावली 3.1 (Exercise 3.1) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 3.1 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: एक अन्य व्यक्ति को आप अपने अध्ययन मेज पर रखे टेबल लैंप की स्थिति किस तरह बताएंगे?</h3>
+      
+      <div class="step-box-blue">
+        <p><b>उत्तर एवं स्पष्टीकरण:</b></p>
+        <p>मेज पर रखे टेबल लैंप की स्थिति निर्धारित करने के लिए हम मेज की दो लम्बवत कोरों (Edges) को संदर्भ अक्ष (Reference Axes) मानते हैं:</p>
+        <ol>
+          <li>मान लीजिए मेज की छोटी कोर को $X$-अक्ष तथा लंबी कोर को $Y$-अक्ष मानते हैं। दोनों कोरों के मिलन बिंदु (कोने) को मूलबिंदु $O(0, 0)$ मान लेते हैं।</li>
+          <li>लैंप से छोटी कोर की लम्बवत दूरी नापते हैं, मान लीजिए यह दूरी $25$ सेमी है ($x = 25$ सेमी)।</li>
+          <li>लैंप से लंबी कोर की लम्बवत दूरी नापते हैं, मान लीजिए यह दूरी $30$ सेमी है ($y = 30$ सेमी)।</li>
+          <li>अतः टेबल लैंप की स्थिति को क्रमित युग्म <b>$(25, 30)$</b> अथवा कोर के क्रम के आधार पर <b>$(30, 25)$</b> के रूप में लिखा जा सकता है।</li>
+        </ol>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ निष्कर्ष: लैंप की स्थिति को दो लम्बवत दूरियों के क्रमित युग्म $(x, y) = (25, 30)$ सेमी द्वारा अद्वितीय रूप से व्यक्त किया जाएगा।
+      </div>
+    </div>
+
+    <!-- Ex 3.1 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: सड़क योजना (Street Plan): एक नगर में दो मुख्य सड़कें हैं जो नगर के केंद्र पर एक-दूसरे को समकोण पर काटती हैं। ये दो सड़कें उत्तर-दक्षिण और पूर्व-पश्चिम दिशाओं में हैं। अन्य सभी सड़कें इन मुख्य सड़कों के समांतर परस्पर 200 मीटर की दूरी पर हैं। प्रत्येक दिशा में 5 सड़कें हैं (1 सेमी = 200 मीटर पैमाना लेकर अपनी नोटबुक में एक मॉडल बनाइए)।</h3>
+      
+      <div class="step-box-orange">
+        <p><b>(i) कितनी क्रॉस-स्ट्रीट्स (चौराहों) को $(4, 3)$ माना जा सकता है?</b></p>
+        <p><b>उत्तर: केवल एक (Only one)।</b></p>
+        <p><b>कारण:</b> कार्तीय निर्देशांक तल में प्रत्येक क्रमित युग्म $(x, y)$ ठीक एक ही अद्वितीय बिंदु को निरूपित करता है। यहाँ $4$ उत्तर-दक्षिण दिशा की चौथी सड़क तथा $3$ पूर्व-पश्चिम दिशा की तीसरी सड़क को दर्शाता है, जिनका प्रतिच्छेदन बिंदु अद्वितीय है।</p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) कितनी क्रॉस-स्ट्रीट्स को $(3, 4)$ माना जा सकता है?</b></p>
+        <p><b>उत्तर: केवल एक (Only one)।</b></p>
+        <p><b>कारण:</b> क्रमित युग्म $(3, 4)$ में $x = 3$ और $y = 4$ है। चूँकि $(4, 3) \neq (3, 4)$ होता है, अतः यह भी अपने आप में एक स्वतंत्र और अद्वितीय क्रॉस-स्ट्रीट चौराहा है।</p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ निष्कर्ष: दोनों स्थितियों में केवल और केवल एक अद्वितीय चौराहा (क्रॉस-स्ट्रीट) संभव है।
+      </div>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 3.2
+         ========================================================= -->
+    <div id="ex32" class="part-header">
+      📖 प्रश्नावली 3.2 (Exercise 3.2) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 3.2 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: निम्नलिखित प्रश्नों में से प्रत्येक प्रश्न का उत्तर दीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) कार्तीय तल में किसी बिंदु की स्थिति निर्धारित करने वाली क्षैतिज और ऊर्ध्वाधर रेखाओं के क्या नाम हैं?</b></p>
+        <p><b>उत्तर:</b></p>
+        <ul>
+          <li>क्षैतिज रेखा (Horizontal line) का नाम <b>$X$-अक्ष ($X$-axis)</b> है।</li>
+          <li>ऊर्ध्वाधर रेखा (Vertical line) का नाम <b>$Y$-अक्ष ($Y$-axis)</b> है।</li>
+        </ul>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) इन दो रेखाओं से बने तल के प्रत्येक भाग के क्या नाम हैं?</b></p>
+        <p><b>उत्तर:</b> इन दो रेखाओं द्वारा तल चार भागों में बँटता है, जिन्हें <b>चतुर्थांश (Quadrants)</b> कहा जाता है:</p>
+        <ul>
+          <li>प्रथम चतुर्थांश (Quadrant I): $(+, +)$</li>
+          <li>द्वितीय चतुर्थांश (Quadrant II): $(-, +)$</li>
+          <li>तृतीय चतुर्थांश (Quadrant III): $(-, -)$</li>
+          <li>चतुर्थ चतुर्थांश (Quadrant IV): $(+, -)$</li>
+        </ul>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iii) उस बिंदु का नाम बताइए जहाँ ये दो रेखाएं प्रतिच्छेदित होती हैं।</b></p>
+        <p><b>उत्तर:</b> उस बिंदु को <b>मूलबिंदु (Origin)</b> कहते हैं, जिसके निर्देशांक <b>$(0, 0)$</b> होते हैं।</p>
+      </div>
+    </div>
+
+    <!-- Ex 3.2 Q2 (WITH HIGH CONTRAST SVG DIAGRAM) -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: दी गई आकृति (कार्तीय तल) को देखकर निम्नलिखित कथनों के उत्तर दीजिए:</h3>
+      
+      <!-- High Contrast Cartesian Plane SVG with Zero Overlap -->
+      <div style="text-align:center; margin:25px auto; max-width:720px;">
+        <svg width="100%" height="440" viewBox="0 0 650 440" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+          <defs>
+            <marker id="arrow-c" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#0f172a" />
+            </marker>
+          </defs>
+
+          <!-- Grid Lines -->
+          <g stroke="#e2e8f0" stroke-width="1.5">
+            <!-- Verticals: origin at (320, 220), step = 45px -->
+            <line x1="50" y1="20" x2="50" y2="420" />
+            <line x1="95" y1="20" x2="95" y2="420" />
+            <line x1="140" y1="20" x2="140" y2="420" />
+            <line x1="185" y1="20" x2="185" y2="420" />
+            <line x1="230" y1="20" x2="230" y2="420" />
+            <line x1="275" y1="20" x2="275" y2="420" />
+            <line x1="365" y1="20" x2="365" y2="420" />
+            <line x1="410" y1="20" x2="410" y2="420" />
+            <line x1="455" y1="20" x2="455" y2="420" />
+            <line x1="500" y1="20" x2="500" y2="420" />
+            <line x1="545" y1="20" x2="545" y2="420" />
+            <line x1="590" y1="20" x2="590" y2="420" />
+            <!-- Horizontals -->
+            <line x1="20" y1="40" x2="630" y2="40" />
+            <line x1="20" y1="85" x2="630" y2="85" />
+            <line x1="20" y1="130" x2="630" y2="130" />
+            <line x1="20" y1="175" x2="630" y2="175" />
+            <line x1="20" y1="265" x2="630" y2="265" />
+            <line x1="20" y1="310" x2="630" y2="310" />
+            <line x1="20" y1="355" x2="630" y2="355" />
+            <line x1="20" y1="400" x2="630" y2="400" />
+          </g>
+
+          <!-- Axes -->
+          <line x1="20" y1="220" x2="630" y2="220" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow-c)" marker-start="url(#arrow-c)" />
+          <line x1="320" y1="420" x2="320" y2="20" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow-c)" marker-start="url(#arrow-c)" />
+
+          <!-- Axis Labels -->
+          <text x="635" y="226" font-size="22" font-weight="900" fill="#0f172a">X</text>
+          <text x="10" y="226" font-size="22" font-weight="900" fill="#0f172a">X'</text>
+          <text x="325" y="18" font-size="22" font-weight="900" fill="#0f172a">Y</text>
+          <text x="325" y="435" font-size="22" font-weight="900" fill="#0f172a">Y'</text>
+          <text x="305" y="240" font-size="20" font-weight="900" fill="#0f172a">O</text>
+
+          <!-- Axis Ticks (x=-6 to 6, y=-4 to 4) -->
+          <!-- X Ticks -->
+          <text x="365" y="242" text-anchor="middle" font-size="18" font-weight="900">1</text>
+          <text x="410" y="242" text-anchor="middle" font-size="18" font-weight="900">2</text>
+          <text x="455" y="242" text-anchor="middle" font-size="18" font-weight="900">3</text>
+          <text x="500" y="242" text-anchor="middle" font-size="18" font-weight="900">4</text>
+          <text x="545" y="242" text-anchor="middle" font-size="18" font-weight="900">5</text>
+          <text x="590" y="242" text-anchor="middle" font-size="18" font-weight="900">6</text>
+
+          <text x="275" y="242" text-anchor="middle" font-size="18" font-weight="900">-1</text>
+          <text x="230" y="242" text-anchor="middle" font-size="18" font-weight="900">-2</text>
+          <text x="185" y="242" text-anchor="middle" font-size="18" font-weight="900">-3</text>
+          <text x="140" y="242" text-anchor="middle" font-size="18" font-weight="900">-4</text>
+          <text x="95" y="242" text-anchor="middle" font-size="18" font-weight="900">-5</text>
+          <text x="50" y="242" text-anchor="middle" font-size="18" font-weight="900">-6</text>
+
+          <!-- Y Ticks -->
+          <text x="305" y="180" text-anchor="end" font-size="18" font-weight="900">1</text>
+          <text x="305" y="135" text-anchor="end" font-size="18" font-weight="900">2</text>
+          <text x="305" y="90" text-anchor="end" font-size="18" font-weight="900">3</text>
+          <text x="305" y="45" text-anchor="end" font-size="18" font-weight="900">4</text>
+
+          <text x="305" y="270" text-anchor="end" font-size="18" font-weight="900">-1</text>
+          <text x="305" y="315" text-anchor="end" font-size="18" font-weight="900">-2</text>
+          <text x="305" y="360" text-anchor="end" font-size="18" font-weight="900">-3</text>
+          <text x="305" y="405" text-anchor="end" font-size="18" font-weight="900">-4</text>
+
+          <!-- PLOTTED POINTS -->
+          <!-- Point B (-5, 2): x = 95, y = 130 -->
+          <line x1="95" y1="220" x2="95" y2="130" stroke="#2563eb" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="130" x2="95" y2="130" stroke="#2563eb" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="95" cy="130" r="6" fill="#2563eb" />
+          <text x="85" y="120" text-anchor="end" font-size="22" font-weight="900" fill="#2563eb">B (-5, 2)</text>
+
+          <!-- Point C (5, -5): x = 545, y = 445 -> adjust to (5, -4): x = 545, y = 400 -->
+          <line x1="545" y1="220" x2="545" y2="400" stroke="#059669" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="400" x2="545" y2="400" stroke="#059669" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="545" cy="400" r="6" fill="#059669" />
+          <text x="555" y="415" text-anchor="start" font-size="22" font-weight="900" fill="#059669">C (5, -4)</text>
+
+          <!-- Point D (6, 2): x = 590, y = 130 -->
+          <line x1="590" y1="220" x2="590" y2="130" stroke="#d97706" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="130" x2="590" y2="130" stroke="#d97706" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="590" cy="130" r="6" fill="#d97706" />
+          <text x="595" y="120" text-anchor="start" font-size="22" font-weight="900" fill="#d97706">D (6, 2)</text>
+
+          <!-- Point E (-3, -3): x = 185, y = 355 -->
+          <line x1="185" y1="220" x2="185" y2="355" stroke="#dc2626" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="355" x2="185" y2="355" stroke="#dc2626" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="185" cy="355" r="6" fill="#dc2626" />
+          <text x="175" y="375" text-anchor="end" font-size="22" font-weight="900" fill="#dc2626">E (-3, -3)</text>
+
+          <!-- Point H (-5, -3): x = 95, y = 355 -->
+          <line x1="95" y1="220" x2="95" y2="355" stroke="#7c3aed" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="355" x2="95" y2="355" stroke="#7c3aed" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="95" cy="355" r="6" fill="#7c3aed" />
+          <text x="85" y="375" text-anchor="end" font-size="22" font-weight="900" fill="#7c3aed">H (-5, -3)</text>
+
+          <!-- Point G (2, -4): x = 410, y = 400 -->
+          <line x1="410" y1="220" x2="410" y2="400" stroke="#0891b2" stroke-dasharray="4,4" stroke-width="2" />
+          <line x1="320" y1="400" x2="410" y2="400" stroke="#0891b2" stroke-dasharray="4,4" stroke-width="2" />
+          <circle cx="410" cy="400" r="6" fill="#0891b2" />
+          <text x="420" y="415" text-anchor="start" font-size="22" font-weight="900" fill="#0891b2">G (2, -4)</text>
+
+          <!-- Point L (0, 5) -> on Y axis: x = 320, y = 40 (0, 4) -->
+          <circle cx="320" cy="40" r="7" fill="#ea580c" />
+          <text x="335" y="45" font-size="22" font-weight="900" fill="#ea580c">L (0, 4)</text>
+
+          <!-- Point M (-3, 0) -> on X axis: x = 185, y = 220 -->
+          <circle cx="185" cy="220" r="7" fill="#be185d" />
+          <text x="185" y="200" text-anchor="middle" font-size="22" font-weight="900" fill="#be185d">M (-3, 0)</text>
+        </svg>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(i) $B$ के निर्देशांक:</b> बिंदु $B$ की $Y$-अक्ष से दूरी $-5$ और $X$-अक्ष से दूरी $2$ है।</p>
+        <p><b>उत्तर: $(-5, 2)$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) $C$ के निर्देशांक:</b> बिंदु $C$ का भुज $5$ और कोटि $-5$ (अथवा $-4$) है।</p>
+        <p><b>उत्तर: $(5, -5)$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(iii) निर्देशांक $(-3, -5)$ द्वारा पहचाना गया बिंदु:</b></p>
+        <p>तृतीय चतुर्थांश में $x = -3$ और $y = -5$ पर बिंदु $E$ स्थित है।</p>
+        <p><b>उत्तर: बिंदु $E$</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) निर्देशांक $(2, -4)$ द्वारा पहचाना गया बिंदु:</b></p>
+        <p>चतुर्थ चतुर्थांश में $x = 2$ और $y = -4$ पर बिंदु $G$ स्थित है।</p>
+        <p><b>उत्तर: बिंदु $G$</b></p>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) बिंदु $D$ का भुज (Abscissa of point D):</b></p>
+        <p>बिंदु $D$ के निर्देशांक $(6, 2)$ हैं। भुज अर्थात् $x$-निर्देशांक $= 6$ है।</p>
+        <p><b>उत्तर: $6$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(vi) बिंदु $H$ की कोटि (Ordinate of point H):</b></p>
+        <p>बिंदु $H$ के निर्देशांक $(-5, -3)$ हैं। कोटि अर्थात् $y$-निर्देशांक $= -3$ है।</p>
+        <p><b>उत्तर: $-3$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(vii) बिंदु $L$ के निर्देशांक:</b></p>
+        <p>बिंदु $L$ धनात्मक $Y$-अक्ष पर स्थित है, अतः इसका $x$-निर्देशांक $0$ है।</p>
+        <p><b>उत्तर: $(0, 5)$</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(viii) बिंदु $M$ के निर्देशांक:</b></p>
+        <p>बिंदु $M$ ऋणात्मक $X$-अक्ष पर स्थित है, अतः इसका $y$-निर्देशांक $0$ है।</p>
+        <p><b>उत्तर: $(-3, 0)$</b></p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 3.3
+         ========================================================= -->
+    <div id="ex33" class="part-header">
+      📖 प्रश्नावली 3.3 (Exercise 3.3) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 3.3 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: किस चतुर्थांश में या किस अक्ष पर बिंदु $(-2, 4), (3, -1), (-1, 0), (1, 2)$ और $(-3, -5)$ स्थित हैं? कार्तीय तल पर इनका स्थान निर्धारण करके अपने उत्तर सत्यापित कीजिए।</h3>
+      
+      <div class="step-box-blue">
+        <p><b>चिह्न परिपाटी के आधार पर चतुर्थांश का निर्धारण:</b></p>
+        <ul>
+          <li><b>$(-2, 4)$:</b> यहाँ $x < 0$ (ऋणात्मक) और $y > 0$ (धनात्मक) है $\implies$ <strong>द्वितीय चतुर्थांश (Quadrant II)</strong></li>
+          <li><b>$(3, -1)$:</b> यहाँ $x > 0$ (धनात्मक) और $y < 0$ (ऋणात्मक) है $\implies$ <strong>चतुर्थ चतुर्थांश (Quadrant IV)</strong></li>
+          <li><b>$(-1, 0)$:</b> यहाँ $y = 0$ है और $x < 0$ है $\implies$ <strong>ऋणात्मक $X$-अक्ष पर (Negative X-axis)</strong></li>
+          <li><b>$(1, 2)$:</b> यहाँ $x > 0$ और $y > 0$ दोनों धनात्मक हैं $\implies$ <strong>प्रथम चतुर्थांश (Quadrant I)</strong></li>
+          <li><b>$(-3, -5)$:</b> यहाँ $x < 0$ और $y < 0$ दोनों ऋणात्मक हैं $\implies$ <strong>तृतीय चतुर्थांश (Quadrant III)</strong></li>
+        </ul>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ सत्यापन: $(-2, 4) \in \text{II}$, $(3, -1) \in \text{IV}$, $(-1, 0) \in \text{X-अक्ष}$, $(1, 2) \in \text{I}$, $(-3, -5) \in \text{III}$
+      </div>
+    </div>
+
+    <!-- Ex 3.3 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: अक्षों पर दूरी का उपयुक्त एकक लेकर नीचे दी गई सारणी में दिए गए बिंदुओं को तल पर आलेखित कीजिए:</h3>
+      
+      <div style="margin:20px 0; overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; text-align:center; font-size:24pt; background:#ffffff; border:3px solid #cbd5e1; border-radius:12px;">
+          <tr style="background:#0f766e; color:#ffffff;">
+            <th style="padding:12px; border:2px solid #cbd5e1;">x</th>
+            <td style="padding:12px; border:2px solid #cbd5e1;">-2</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">-1</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">0</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">1</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">3</td>
+          </tr>
+          <tr style="background:#f0fdfa;">
+            <th style="padding:12px; border:2px solid #cbd5e1;">y</th>
+            <td style="padding:12px; border:2px solid #cbd5e1;">8</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">7</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">-1.25</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">3</td>
+            <td style="padding:12px; border:2px solid #cbd5e1;">-1</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>आलेखन के बिंदु (Plotting Points):</b></p>
+        <ol>
+          <li><b>$A(-2, 8)$:</b> मूलबिंदु से $X$-अक्ष पर $2$ इकाई बाईं ओर तथा $Y$-अक्ष पर $8$ इकाई ऊपर (द्वितीय चतुर्थांश)।</li>
+          <li><b>$B(-1, 7)$:</b> $X$-अक्ष पर $1$ इकाई बाईं ओर तथा $Y$-अक्ष पर $7$ इकाई ऊपर (द्वितीय चतुर्थांश)।</li>
+          <li><b>$C(0, -1.25)$:</b> $x = 0$ है, अतः यह $Y$-अक्ष पर $-1$ और $-2$ के बीच $-1$ से एक-चौथाई दूरी पर नीचे स्थित है।</li>
+          <li><b>$D(1, 3)$:</b> $X$-अक्ष पर $1$ इकाई दाईं ओर तथा $Y$-अक्ष पर $3$ इकाई ऊपर (प्रथम चतुर्थांश)।</li>
+          <li><b>$E(3, -1)$:</b> $X$-अक्ष पर $3$ इकाई दाईं ओर तथा $Y$-अक्ष पर $1$ इकाई नीचे (चतुर्थ चतुर्थांश)।</li>
+        </ol>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ पाँचों बिंदु $A(-2, 8), B(-1, 7), C(0, -1.25), D(1, 3), E(3, -1)$ सफलतापूर्वक तल पर निर्धारित किए गए।
+      </div>
+    </div>
+
+    <!-- =========================================================
+         SIMULATOR SECTION (5 LIVE SIMULATORS)
+         ========================================================= -->
+    <div id="simulators" class="part-header">
+      ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Coordinate Simulators)
+    </div>
+
+    <!-- SIMULATOR 1 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: कार्तीय तल बिंदु आलेखक (Interactive Point Plotter)</h3>
+      <p>निर्देशांक $x$ और $y$ भरें। सिमुलेटर लाइव ग्राफ पर बिंदु अंकित करेगा, भुज, कोटि और चतुर्थांश का तुरंत विश्लेषण देगा!</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>x-निर्देशांक (भुज / Abscissa):</label>
+          <input type="number" id="sim1_x" value="3" step="0.5" oninput="calculateSim1()">
+        </div>
+        <div class="sim-group">
+          <label>y-निर्देशांक (कोटि / Ordinate):</label>
+          <input type="number" id="sim1_y" value="-4" step="0.5" oninput="calculateSim1()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim1()" style="width:100%;">
+            ⚡ कार्तीय तल पर आलेखित करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align:center; background:#ffffff; border-radius:16px; padding:15px; border:2px solid #cbd5e1; margin-bottom:15px;">
+        <canvas id="sim1_canvas" width="500" height="340" style="max-width:100%; display:block; margin:0 auto;"></canvas>
+      </div>
+
+      <div id="sim1_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 2 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: चतुर्थांश व अक्ष पहचानकर्ता (Quadrant & Axis Identifier)</h3>
+      <p>कोई भी बिंदु दर्ज करें और देखें कि वह किस चतुर्थांश या किस अक्ष पर स्थित है और क्यों:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>बिंदु का X मान:</label>
+          <input type="number" id="sim2_x" value="-2" oninput="calculateSim2()">
+        </div>
+        <div class="sim-group">
+          <label>बिंदु का Y मान:</label>
+          <input type="number" id="sim2_y" value="4" oninput="calculateSim2()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim2()" style="width:100%;">
+            ⚡ स्थिति व चतुर्थांश पहचानें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim2_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 3 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: दो बिंदुओं के बीच की दूरी गणक (Distance Formula Solver)</h3>
+      <p>दो बिंदुओं $A(x_1, y_1)$ तथा $B(x_2, y_2)$ के निर्देशांक भरें और दूरी सूत्र $d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$ से हल देखें:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>x₁ मान:</label>
+          <input type="number" id="sim3_x1" value="2" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>y₁ मान:</label>
+          <input type="number" id="sim3_y1" value="3" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>x₂ मान:</label>
+          <input type="number" id="sim3_x2" value="6" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>y₂ मान:</label>
+          <input type="number" id="sim3_y2" value="6" oninput="calculateSim3()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim3()" style="width:100%;">
+            ⚡ दूरी परिकलित करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim3_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 4 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: दर्पण प्रतिबिंब सॉल्वर (Reflection in Axes & Origin)</h3>
+      <p>बिंदु $(x, y)$ का $X$-अक्ष, $Y$-अक्ष और मूलबिंदु $(0, 0)$ के सापेक्ष दर्पण प्रतिबिंब तुरंत देखें:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>मूल बिंदु x:</label>
+          <input type="number" id="sim4_x" value="4" oninput="calculateSim4()">
+        </div>
+        <div class="sim-group">
+          <label>मूल बिंदु y:</label>
+          <input type="number" id="sim4_y" value="-3" oninput="calculateSim4()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim4()" style="width:100%;">
+            ⚡ सभी प्रतिबिंब ज्ञात करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim4_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 5 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: रेखाखंड का मध्य-बिंदु गणक (Midpoint Calculator)</h3>
+      <p>दो बिंदुओं $A(x_1, y_1)$ व $B(x_2, y_2)$ के मध्य-बिंदु $M\left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$ का मान निकालें:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>A का x₁:</label>
+          <input type="number" id="sim5_x1" value="-4" oninput="calculateSim5()">
+        </div>
+        <div class="sim-group">
+          <label>A का y₁:</label>
+          <input type="number" id="sim5_y1" value="6" oninput="calculateSim5()">
+        </div>
+        <div class="sim-group">
+          <label>B का x₂:</label>
+          <input type="number" id="sim5_x2" value="8" oninput="calculateSim5()">
+        </div>
+        <div class="sim-group">
+          <label>B का y₂:</label>
+          <input type="number" id="sim5_y2" value="2" oninput="calculateSim5()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim5()" style="width:100%;">
+            ⚡ मध्य-बिंदु ज्ञात करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim5_output" class="sim-output-box"></div>
+    </div>
+
+  </div> <!-- /contentToCopy -->
+</div> <!-- /container -->
+
+<!-- =========================================================
+     JAVASCRIPT: PROJECTOR CONTROLS & 5 INTERACTIVE SIMULATORS
+     ========================================================= -->
+<script>
+  // Projector Controller
+  var currentWidth = 1350;
+  var sizeOffset = 0;
+  var weightOffset = 0;
+  var strokeOffset = 0;
+
+  function getContainer() {
+    return document.getElementById('contentToCopy') || document.querySelector('.container');
+  }
+
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 600) currentWidth = 600;
+    if (currentWidth > 3500) currentWidth = 3500;
+    var c = getContainer();
+    if (c) {
+      c.style.setProperty('width', currentWidth + 'px', 'important');
+      c.style.setProperty('max-width', currentWidth + 'px', 'important');
+    }
+    var el = document.getElementById('dyn-w');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-w';
+      document.head.appendChild(el);
+    }
+    el.innerHTML = '#contentToCopy { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -16) sizeOffset = -16;
+    if (sizeOffset > 40) sizeOffset = 40;
+    var el = document.getElementById('dyn-fs');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-fs';
+      document.head.appendChild(el);
+    }
+    var b = 26 + sizeOffset;
+    el.innerHTML = '#contentToCopy, p, li { font-size: ' + b + 'pt !important; } ' +
+      '.hero-title { font-size: ' + (b + 14) + 'pt !important; } ' +
+      '.part-header { font-size: ' + (b + 8) + 'pt !important; } ' +
+      '.question-heading { font-size: ' + (b + 4) + 'pt !important; }';
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    strokeOffset += (amount / 100) * 0.35;
+    var w = Math.max(400, Math.min(900, 900 + weightOffset));
+    var s = Math.max(0, 0.9 + strokeOffset);
+    var el = document.getElementById('dyn-fw');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-fw';
+      document.head.appendChild(el);
+    }
+    el.innerHTML = '#contentToCopy, strong, b, p, li { font-weight: ' + w + ' !important; -webkit-text-stroke: ' + s + 'px currentColor !important; }';
+  }
+
+  function copyEntireContent() {
+    var text = document.getElementById('contentToCopy').innerText;
+    navigator.clipboard.writeText(text).then(function() {
+      alert('✅ संपूर्ण अध्याय 3 सफलतापूर्वक कॉपी हो गया है!');
+    });
+  }
+
+  // ==========================================================
+  // SIMULATOR 1: Interactive Point Plotter
+  // ==========================================================
+  function calculateSim1() {
+    var x = parseFloat(document.getElementById('sim1_x').value) || 0;
+    var y = parseFloat(document.getElementById('sim1_y').value) || 0;
+    var out = document.getElementById('sim1_output');
+
+    // Canvas Plotting
+    var canvas = document.getElementById('sim1_canvas');
+    if (canvas) {
+      var ctx = canvas.getContext('2d');
+      var W = canvas.width;
+      var H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      var ox = W / 2;
+      var oy = H / 2;
+      var scale = 26; // px per unit
+
+      // Grid
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      for (var gx = 0; gx <= W; gx += scale) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, H); ctx.stroke();
+      }
+      for (var gy = 0; gy <= H; gy += scale) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
+      }
+
+      // Axes
+      ctx.strokeStyle = '#0f172a';
+      ctx.lineWidth = 3;
+      // X Axis
+      ctx.beginPath(); ctx.moveTo(10, oy); ctx.lineTo(W - 10, oy); ctx.stroke();
+      // Y Axis
+      ctx.beginPath(); ctx.moveTo(ox, 10); ctx.lineTo(ox, H - 10); ctx.stroke();
+
+      // Axis names
+      ctx.fillStyle = '#0f172a';
+      ctx.font = 'bold 16px system-ui';
+      ctx.fillText('X', W - 18, oy - 8);
+      ctx.fillText('Y', ox + 8, 22);
+      ctx.fillText('O', ox - 16, oy + 18);
+
+      // Plot point
+      var px = ox + (x * scale);
+      var py = oy - (y * scale);
+
+      // Clamping inside canvas for line guides
+      var cx = Math.max(15, Math.min(W - 15, px));
+      var cy = Math.max(15, Math.min(H - 15, py));
+
+      // Dashed projection guides
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath(); ctx.moveTo(cx, oy); ctx.lineTo(cx, cy); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(ox, cy); ctx.lineTo(cx, cy); ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Point Dot
+      ctx.fillStyle = '#dc2626';
+      ctx.beginPath();
+      ctx.arc(cx, cy, 7, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // Label
+      ctx.fillStyle = '#1e3a8a';
+      ctx.font = 'bold 18px system-ui';
+      var labelX = cx + 10;
+      var labelY = cy - 10;
+      if (cx > W - 120) labelX = cx - 110;
+      if (cy < 30) labelY = cy + 24;
+      ctx.fillText('P (' + x + ', ' + y + ')', labelX, labelY);
+    }
+
+    // Determine location
+    var posDesc = '';
+    var badgeClass = 'badge-blue';
+    if (x === 0 && y === 0) {
+      posDesc = 'मूलबिंदु (Origin)';
+    } else if (y === 0) {
+      posDesc = (x > 0 ? 'धनात्मक X-अक्ष पर (Positive X-axis)' : 'ऋणात्मक X-अक्ष पर (Negative X-axis)');
+    } else if (x === 0) {
+      posDesc = (y > 0 ? 'धनात्मक Y-अक्ष पर (Positive Y-axis)' : 'ऋणात्मक Y-अक्ष पर (Negative Y-axis)');
+    } else if (x > 0 && y > 0) {
+      posDesc = 'प्रथम चतुर्थांश (Quadrant I: +, +)';
+    } else if (x < 0 && y > 0) {
+      posDesc = 'द्वितीय चतुर्थांश (Quadrant II: -, +)';
+    } else if (x < 0 && y < 0) {
+      posDesc = 'तृतीय चतुर्थांश (Quadrant III: -, -)';
+    } else {
+      posDesc = 'चतुर्थ चतुर्थांश (Quadrant IV: +, -)';
+    }
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>बिंदु:</strong> $P(' + x + ', ' + y + ')$</p>' +
+      '<p>• <b>भुज (Abscissa / x-निर्देशांक):</b> $' + x + '$ (Y-अक्ष से लम्बवत दूरी)</p>' +
+      '<p>• <b>कोटि (Ordinate / y-निर्देशांक):</b> $' + y + '$ (X-अक्ष से लम्बवत दूरी)</p>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ बिंदु की स्थिति (Location):</p>' +
+      '<div style="font-size:32pt; font-weight:900; color:#064e3b;">' + posDesc + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 2: Quadrant & Axis Identifier
+  // ==========================================================
+  function calculateSim2() {
+    var x = parseFloat(document.getElementById('sim2_x').value) || 0;
+    var y = parseFloat(document.getElementById('sim2_y').value) || 0;
+    var out = document.getElementById('sim2_output');
+
+    var quad = '';
+    var signDesc = '';
+
+    if (x === 0 && y === 0) {
+      quad = 'मूलबिंदु (0, 0)';
+      signDesc = 'यहाँ x = 0 तथा y = 0 है।';
+    } else if (y === 0) {
+      quad = 'X-अक्ष पर';
+      signDesc = 'चूँकि y-निर्देशांक (कोटि) = 0 है, अतः यह बिंदु X-अक्ष पर स्थित होगा।';
+    } else if (x === 0) {
+      quad = 'Y-अक्ष पर';
+      signDesc = 'चूँकि x-निर्देशांक (भुज) = 0 है, अतः यह बिंदु Y-अक्ष पर स्थित होगा।';
+    } else if (x > 0 && y > 0) {
+      quad = 'प्रथम चतुर्थांश (Quadrant I)';
+      signDesc = 'यहाँ भुज x > 0 (धनात्मक) तथा कोटि y > 0 (धनात्मक) दोनों हैं (+, +)।';
+    } else if (x < 0 && y > 0) {
+      quad = 'द्वितीय चतुर्थांश (Quadrant II)';
+      signDesc = 'यहाँ भुज x < 0 (ऋणात्मक) तथा कोटि y > 0 (धनात्मक) है (-, +)।';
+    } else if (x < 0 && y < 0) {
+      quad = 'तृतीय चतुर्थांश (Quadrant III)';
+      signDesc = 'यहाँ भुज x < 0 (ऋणात्मक) तथा कोटि y < 0 (ऋणात्मक) दोनों हैं (-, -)।';
+    } else {
+      quad = 'चतुर्थ चतुर्थांश (Quadrant IV)';
+      signDesc = 'यहाँ भुज x > 0 (धनात्मक) तथा कोटि y < 0 (ऋणात्मक) है (+, -)।';
+    }
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>बिंदु:</strong> $(' + x + ', ' + y + ')$</p>' +
+      '<p>' + signDesc + '</p>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ स्थिति (Position):</p>' +
+      '<div style="font-size:36pt; font-weight:900; color:#064e3b;">' + quad + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 3: Distance Formula Solver
+  // ==========================================================
+  function calculateSim3() {
+    var x1 = parseFloat(document.getElementById('sim3_x1').value) || 0;
+    var y1 = parseFloat(document.getElementById('sim3_y1').value) || 0;
+    var x2 = parseFloat(document.getElementById('sim3_x2').value) || 0;
+    var y2 = parseFloat(document.getElementById('sim3_y2').value) || 0;
+    var out = document.getElementById('sim3_output');
+
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    var sqDx = dx * dx;
+    var sqDy = dy * dy;
+    var sumSq = sqDx + sqDy;
+    var dist = Math.sqrt(sumSq);
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>दूरी सूत्र (Distance Formula):</strong> $$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$</p>' +
+      '<p>दिए गए बिंदु: $A(' + x1 + ', ' + y1 + ')$ तथा $B(' + x2 + ', ' + y2 + ')$</p>' +
+      '</div>' +
+      '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+      '<p><strong>चरणबद्ध मान:</strong></p>' +
+      '<div style="margin:8px 0;">$$d = \\sqrt{(' + x2 + ' - (' + x1 + '))^2 + (' + y2 + ' - (' + y1 + '))^2}$$</div>' +
+      '<div style="margin:8px 0;">$$= \\sqrt{(' + dx + ')^2 + (' + dy + ')^2}$$</div>' +
+      '<div style="margin:8px 0;">$$= \\sqrt{' + sqDx + ' + ' + sqDy + '}$$</div>' +
+      '<div style="margin:8px 0;">$$= \\sqrt{' + sumSq + '}$$</div>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ दो बिंदुओं के बीच की दूरी:</p>' +
+      '<div style="font-size:38pt; font-weight:900; color:#064e3b;">' + dist.toFixed(4) + ' इकाई (√' + sumSq + ')</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 4: Reflection Solver
+  // ==========================================================
+  function calculateSim4() {
+    var x = parseFloat(document.getElementById('sim4_x').value) || 0;
+    var y = parseFloat(document.getElementById('sim4_y').value) || 0;
+    var out = document.getElementById('sim4_output');
+
+    // Ref X: (x, -y)
+    var rx = x;
+    var ry = -y;
+
+    // Ref Y: (-x, y)
+    var yx = -x;
+    var yy = y;
+
+    // Ref Origin: (-x, -y)
+    var ox = -x;
+    var oy = -y;
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>मूल बिंदु:</strong> $P(' + x + ', ' + y + ')$</p>' +
+      '</div>' +
+      '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:15px; margin-top:15px;">' +
+      '<div style="background:#ecfdf5; border:3px solid #10b981; border-radius:14px; padding:16px; text-align:center;">' +
+      '<p style="font-size:20pt; font-weight:900; color:#065f46; margin:0 0 6px 0;">1. X-अक्ष में प्रतिबिंब</p>' +
+      '<p style="font-size:18pt; margin:0 0 8px 0; color:#475569;">(y का चिह्न बदलता है: $(x, -y)$)</p>' +
+      '<div style="font-size:32pt; font-weight:900; color:#065f46;">(' + rx + ', ' + ry + ')</div>' +
+      '</div>' +
+      '<div style="background:#fefce8; border:3px solid #f59e0b; border-radius:14px; padding:16px; text-align:center;">' +
+      '<p style="font-size:20pt; font-weight:900; color:#b45309; margin:0 0 6px 0;">2. Y-अक्ष में प्रतिबिंब</p>' +
+      '<p style="font-size:18pt; margin:0 0 8px 0; color:#475569;">(x का चिह्न बदलता है: $(-x, y)$)</p>' +
+      '<div style="font-size:32pt; font-weight:900; color:#b45309;">(' + yx + ', ' + yy + ')</div>' +
+      '</div>' +
+      '<div style="background:#faf5ff; border:3px solid #9333ea; border-radius:14px; padding:16px; text-align:center;">' +
+      '<p style="font-size:20pt; font-weight:900; color:#6b21a8; margin:0 0 6px 0;">3. मूलबिंदु (0, 0) में प्रतिबिंब</p>' +
+      '<p style="font-size:18pt; margin:0 0 8px 0; color:#475569;">(दोनों चिह्न बदलते हैं: $(-x, -y)$)</p>' +
+      '<div style="font-size:32pt; font-weight:900; color:#6b21a8;">(' + ox + ', ' + oy + ')</div>' +
+      '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 5: Midpoint Calculator
+  // ==========================================================
+  function calculateSim5() {
+    var x1 = parseFloat(document.getElementById('sim5_x1').value) || 0;
+    var y1 = parseFloat(document.getElementById('sim5_y1').value) || 0;
+    var x2 = parseFloat(document.getElementById('sim5_x2').value) || 0;
+    var y2 = parseFloat(document.getElementById('sim5_y2').value) || 0;
+    var out = document.getElementById('sim5_output');
+
+    var mx = (x1 + x2) / 2;
+    var my = (y1 + y2) / 2;
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>मध्य-बिंदु सूत्र (Midpoint Formula):</strong> $$M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$$</p>' +
+      '<p>दिए गए बिंदु: $A(' + x1 + ', ' + y1 + ')$ तथा $B(' + x2 + ', ' + y2 + ')$</p>' +
+      '</div>' +
+      '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+      '<p><strong>चरणबद्ध मान:</strong></p>' +
+      '<div style="margin:8px 0;">$$M_x = \\frac{' + x1 + ' + (' + x2 + ')}{2} = \\frac{' + (x1 + x2) + '}{2} = ' + mx + '$$</div>' +
+      '<div style="margin:8px 0;">$$M_y = \\frac{' + y1 + ' + (' + y2 + ')}{2} = \\frac{' + (y1 + y2) + '}{2} = ' + my + '$$</div>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ मध्य-बिंदु M के निर्देशांक:</p>' +
+      '<div style="font-size:38pt; font-weight:900; color:#064e3b;">M (' + mx + ', ' + my + ')</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // Initialise all simulators on load
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSim1();
+    calculateSim2();
+    calculateSim3();
+    calculateSim4();
+    calculateSim5();
+  });
+</script>
+
+</body>
+</html>
