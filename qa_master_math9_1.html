@@ -491,11 +491,121 @@
       padding: 8px 16px;
     }
   }
+
+    /* ==========================================================================
+       CLASS 10 MATCHING CONTAINER & CARD STYLES
+       ========================================================================== */
+    .container {
+      max-width: 1440px !important;
+      margin: 0 auto !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0 10px !important;
+    }
+
+    /* CARD CONTAINER (MATCHING CLASS 10 MATHS) */
+    .qa-card, .qa-block {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-radius: 20px !important;
+      padding: 35px 40px !important;
+      margin-bottom: 40px !important;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5) !important;
+      border: 3px solid #cbd5e1 !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* QUESTION BOX */
+    .q-box {
+      background: #eff6ff !important;
+      border-left: 14px solid #2563eb !important;
+      border-radius: 12px !important;
+      padding: 22px 28px !important;
+      margin-bottom: 25px !important;
+      font-size: 26pt !important;
+      font-weight: 900 !important;
+      color: #000000 !important;
+      -webkit-text-stroke: 1.1px #000000 !important;
+      text-shadow: 0 0 1px #000 !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    .q-tag {
+      background: #2563eb !important;
+      color: #ffffff !important;
+      font-size: 22pt !important;
+      padding: 4px 16px !important;
+      border-radius: 10px !important;
+      display: inline-block !important;
+      margin-bottom: 8px !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 0px !important;
+    }
+
+    /* STEP BY STEP ANSWER LINES */
+    .ans-box {
+      font-size: 26pt !important;
+      font-weight: 900 !important;
+      color: #000000 !important;
+      line-height: 2.2 !important;
+      -webkit-text-stroke: 1.1px #000000 !important;
+      text-shadow: 0 0 1px #000 !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    .step-line {
+      margin-bottom: 18px !important;
+      padding: 12px 20px !important;
+      border-radius: 12px !important;
+      background: #f8fafc !important;
+      border-left: 8px solid #94a3b8 !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* FINAL ANSWER BOX */
+    .final-ans, .answer-highlight {
+      background: #fef08a !important;
+      border: 5px solid #15803d !important;
+      border-left: 20px solid #15803d !important;
+      border-radius: 16px !important;
+      padding: 22px 30px !important;
+      margin-top: 25px !important;
+      font-size: 28pt !important;
+      font-weight: 900 !important;
+      color: #064e3b !important;
+      -webkit-text-stroke: 1.2px #064e3b !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* PREVENT ANY OVERFLOW */
+    mjx-container {
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      max-width: 100% !important;
+      display: block !important;
+      padding: 6px 0 !important;
+    }
+    
+    .inline-simulator-card {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      overflow-x: auto !important;
+    }
 </style>
 </head>
 <body>
-
-<!-- Floating Action Bar for Projector and Copying (Natural Flow at Top) -->
+  <div class="container">
 <div class="action-bar">
   <button class="action-btn" onclick="adjustWidth(50)" title="चौड़ाई बढ़ाएं (W+)">W+</button>
   <button class="action-btn" onclick="adjustWidth(-50)" title="चौड़ाई घटाएं (W-)">W-</button>
@@ -507,6 +617,12 @@
   <button class="action-btn" onclick="window.print()" title="प्रिंट करें">🖨️</button>
   <button class="action-btn" onclick="window.location.href='math9.html'" title="कक्षा 9 पोर्टल पर लौटें">🏠</button>
 </div>
+    <!-- TOP HEADER (Matching Class 10 Math Projector Standard) -->
+    <div class="top-header">
+      <h1>NCERT कक्षा 9 गणित — अध्याय 1</h1>
+      <div class="subtitle">संख्या पद्धति (Number Systems) • संपूर्ण 100% अभ्यास हल (प्रश्नावली 1.1 से 1.5) व 5 लाइव सिमुलेटर</div>
+    </div>
+
 
 <div id="contentToCopy">
 
@@ -535,7 +651,14 @@
       <li><span class="badge-blue">वास्तविक संख्याएँ (R):</span> सभी परिमेय और अपरिमेय संख्याओं का संपूर्ण संग्रह।</li>
       <li>
         <span class="badge-orange">वास्तविक संख्याओं के महत्वपूर्ण घातांक नियम:</span>
-        <div class="math-scroll">$$\mathbf{a^m \cdot a^n = a^{m+n} \quad \Big| \quad (a^m)^n = a^{mn} \quad \Big| \quad \frac{a^m}{a^n} = a^{m-n} \quad \Big| \quad a^m \cdot b^m = (ab)^m \quad \Big| \quad a^{-n} = \frac{1}{a^n} \quad \Big| \quad a^0 = 1}$$</div>
+        <div class="math-scroll"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 15px 0;">
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \cdot a^n = a^{m+n}$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$(a^m)^n = a^{mn}$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$\frac{a^m}{a^n} = a^{m-n}$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \cdot b^m = (ab)^m$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^{-n} = \frac{1}{a^n}$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^0 = 1$$</div>
+    </div></div>
       </li>
     </ul>
   </div>
@@ -554,7 +677,12 @@
       <p><b>उत्तर:</b> <strong>हाँ, शून्य ($0$) एक परिमेय संख्या है।</strong></p>
       <p><b>स्पष्टीकरण:</b></p>
       <p>शून्य को हम $\frac{p}{q}$ के रूप में लिख सकते हैं, जहाँ अंश $p = 0$ है तथा हर $q$ कोई भी शून्येतर पूर्णांक (जैसे $1, 2, 3, -1, -5$) हो सकता है।</p>
-      <div class="math-scroll">$$0 = \frac{0}{1} = \frac{0}{2} = \frac{0}{5} = \frac{0}{-3}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    0 &= \frac{0}{1} \\
+    &= \frac{0}{2} \\
+    &= \frac{0}{5} \\
+    &= \frac{0}{-3}
+    \end{aligned}$$</div>
       <p>यहाँ $p = 0$ (पूर्णांक) और $q = 1, 2, 5 \neq 0$ (पूर्णांक) हैं। अतः सभी शर्तें पूरी होती हैं।</p>
     </div>
     <div class="answer-highlight">
@@ -568,8 +696,14 @@
     <div class="step-box-blue">
       <p><b>चरण 1:</b> हमें $6$ परिमेय संख्याएँ ज्ञात करनी हैं, अतः हम $n + 1 = 6 + 1 = 7$ लेते हैं।</p>
       <p><b>चरण 2:</b> संख्याओं $3$ और $4$ को हर $7$ वाली तुल्य भिन्नों में बदलते हैं:</p>
-      <div class="math-scroll">$$3 = \frac{3 \times 7}{7} = \frac{21}{7}$$</div>
-      <div class="math-scroll">$$4 = \frac{4 \times 7}{7} = \frac{28}{7}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    3 &= \frac{3 \times 7}{7} \\
+    &= \frac{21}{7}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    4 &= \frac{4 \times 7}{7} \\
+    &= \frac{28}{7}
+    \end{aligned}$$</div>
       <p><b>चरण 3:</b> अब $\frac{21}{7}$ और $\frac{28}{7}$ के बीच के अंशों ($22, 23, 24, 25, 26, 27$) को लिखते हैं:</p>
       <div class="math-scroll">$$\frac{22}{7}, \quad \frac{23}{7}, \quad \frac{24}{7}, \quad \frac{25}{7}, \quad \frac{26}{7}, \quad \frac{27}{7}$$</div>
     </div>
@@ -584,8 +718,14 @@
     <div class="step-box-purple">
       <p><b>चरण 1:</b> हमें $5$ संख्याएँ निकालनी हैं, अतः $n + 1 = 5 + 1 = 6$ से अंश तथा हर में गुणा करेंगे।</p>
       <p><b>चरण 2:</b> दोनों भिन्नों को तुल्य रूप में बदलते हैं:</p>
-      <div class="math-scroll">$$\frac{3}{5} = \frac{3 \times 6}{5 \times 6} = \frac{18}{30}$$</div>
-      <div class="math-scroll">$$\frac{4}{5} = \frac{4 \times 6}{5 \times 6} = \frac{24}{30}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{3}{5} &= \frac{3 \times 6}{5 \times 6} \\
+    &= \frac{18}{30}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{4}{5} &= \frac{4 \times 6}{5 \times 6} \\
+    &= \frac{24}{30}
+    \end{aligned}$$</div>
       <p><b>चरण 3:</b> $\frac{18}{30}$ और $\frac{24}{30}$ के बीच की संख्याएँ:</p>
       <div class="math-scroll">$$\frac{19}{30}, \quad \frac{20}{30} \left(=\frac{2}{3}\right), \quad \frac{21}{30} \left(=\frac{7}{10}\right), \quad \frac{22}{30} \left(=\frac{11}{15}\right), \quad \frac{23}{30}$$</div>
     </div>
@@ -678,9 +818,27 @@
     <div class="step-box-blue">
       <p><b>उत्तर:</b> <strong>नहीं, सभी धनात्मक पूर्णांकों के वर्गमूल अपरिमेय नहीं होते।</strong></p>
       <p><b>उदाहरण:</b></p>
-      <div class="math-scroll">$$\sqrt{4} = 2 = \frac{2}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
-      <div class="math-scroll">$$\sqrt{9} = 3 = \frac{3}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
-      <div class="math-scroll">$$\sqrt{16} = 4 = \frac{4}{1} \quad (\text{एक परिमेय संख्या है})$$</div>
+      <div class="math-scroll"><div class="step-line">
+        $$\begin{aligned}
+        \sqrt{4} &= 2 \\
+        &= \frac{2}{1}
+        \end{aligned}$$
+        <p style="margin-top: 8px; font-weight: 900; color: #065f46;">यहाँ $2 = \frac{2}{1}$ <b>एक परिमेय संख्या है</b> (क्योंकि इसे $\frac{p}{q}$ के रूप में लिखा जा सकता है)।</p>
+      </div></div>
+      <div class="math-scroll"><div class="step-line">
+        $$\begin{aligned}
+        \sqrt{9} &= 3 \\
+        &= \frac{3}{1}
+        \end{aligned}$$
+        <p style="margin-top: 8px; font-weight: 900; color: #065f46;">यहाँ $3 = \frac{3}{1}$ <b>एक परिमेय संख्या है</b>।</p>
+      </div></div>
+      <div class="math-scroll"><div class="step-line">
+        $$\begin{aligned}
+        \sqrt{16} &= 4 \\
+        &= \frac{4}{1}
+        \end{aligned}$$
+        <p style="margin-top: 8px; font-weight: 900; color: #065f46;">यहाँ $4 = \frac{4}{1}$ <b>एक परिमेय संख्या है</b>।</p>
+      </div></div>
     </div>
     <div class="answer-highlight">
       ✅ स्पष्ट उत्तर: पूर्ण वर्ग संख्याओं (जैसे $4, 9, 16, 25$) के वर्गमूल परिमेय संख्याएँ होते हैं।
@@ -694,8 +852,15 @@
       <p><b>पाइथागोरस प्रमेय का प्रयोग:</b></p>
       <p>हम $5$ को दो पूर्ण वर्गों के योग के रूप में लिखते हैं: $5 = 2^2 + 1^2 = 4 + 1$</p>
       <p>समकोण त्रिभुज $OAB$ में, जहाँ आधार $OA = 2$ मात्रक और लम्ब $AB = 1$ मात्रक हो:</p>
-      <div class="math-scroll">$$OB^2 = OA^2 + AB^2 = 2^2 + 1^2 = 4 + 1 = 5$$</div>
-      <div class="math-scroll">$$OB = \sqrt{5} \text{ मात्रक}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    OB^2 &= OA^2 + AB^2 \\
+    &= 2^2 + 1^2 \\
+    &= 4 + 1 \\
+    &= 5 \\
+    OB &= \sqrt{5}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$OB = \sqrt{5}$$
+    <p style="font-weight: 900; color: #1e3a8a; margin-top: 6px;">अतः संख्या रेखा पर $OB = \sqrt{5}$ मात्रक (Units) प्राप्त होता है।</p></div>
       <p><b>रचना के चरण:</b></p>
       <ol>
         <li>संख्या रेखा पर बिंदु $O$ को $0$ और बिंदु $A$ को $2$ पर लें (अर्थात् $OA = 2$ इकाई)।</li>
@@ -801,33 +966,51 @@
     
     <div class="step-box-blue">
       <p><b>(i) $\frac{36}{100}$</b></p>
-      <div class="math-scroll">$$\frac{36}{100} = 0.36 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\frac{36}{100} = 0.36$$</div>
+        <div><span class="badge-green" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">सांत (Terminating)</span></div>
+      </div></div>
     </div>
 
     <div class="step-box-orange">
       <p><b>(ii) $\frac{1}{11}$</b></p>
       <p>भाग देने पर शेषफल बार-बार $1$ आता है:</p>
-      <div class="math-scroll">$$\frac{1}{11} = 0.090909\dots = 0.\overline{09} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती \text{ (Non-terminating Repeating)}}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\begin{aligned} \frac{1}{11} &= 0.090909\dots \\ &= 0.\overline{09} \end{aligned}$$</div>
+        <div><span class="badge-orange" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">अनवसानी आवर्ती (Non-terminating Repeating)</span></div>
+      </div></div>
     </div>
 
     <div class="step-box-green">
       <p><b>(iii) $4\frac{1}{8} = \frac{33}{8}$</b></p>
-      <div class="math-scroll">$$\frac{33}{8} = 4.125 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\begin{aligned} 4\frac{1}{8} &= \frac{33}{8} \\ &= 4.125 \end{aligned}$$</div>
+        <div><span class="badge-green" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">सांत (Terminating)</span></div>
+      </div></div>
     </div>
 
     <div class="step-box-purple">
       <p><b>(iv) $\frac{3}{13}$</b></p>
-      <div class="math-scroll">$$\frac{3}{13} = 0.230769230769\dots = 0.\overline{230769} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\begin{aligned} \frac{3}{13} &= 0.230769230769\dots \\ &= 0.\overline{230769} \end{aligned}$$</div>
+        <div><span class="badge-orange" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">अनवसानी आवर्ती (Non-terminating Repeating)</span></div>
+      </div></div>
     </div>
 
     <div class="step-box-red">
       <p><b>(v) $\frac{2}{11}$</b></p>
-      <div class="math-scroll">$$\frac{2}{11} = 0.181818\dots = 0.\overline{18} \quad \rightarrow \mathbf{अनवसानी \text{ } आवर्ती}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\begin{aligned} \frac{2}{11} &= 2 \times \frac{1}{11} \\ &= 2 \times 0.\overline{09} \\ &= 0.\overline{18} \end{aligned}$$</div>
+        <div><span class="badge-orange" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">अनवसानी आवर्ती (Non-terminating Repeating)</span></div>
+      </div></div>
     </div>
 
     <div class="step-box-blue">
       <p><b>(vi) $\frac{329}{400}$</b></p>
-      <div class="math-scroll">$$\frac{329}{400} = \frac{329}{4 \times 100} = \frac{82.25}{100} = 0.8225 \quad \rightarrow \mathbf{सांत \text{ (Terminating)}}$$</div>
+      <div class="math-scroll"><div class="step-line" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>$$\begin{aligned} \frac{329}{400} &= \frac{329}{4 \times 100} \\ &= \frac{82.25}{100} \\ &= 0.8225 \end{aligned}$$</div>
+        <div><span class="badge-green" style="font-size: 22pt; padding: 6px 18px; border-radius: 10px;">सांत (Terminating)</span></div>
+      </div></div>
     </div>
   </div>
 
@@ -837,11 +1020,31 @@
     <div class="step-box-green">
       <p><b>उत्तर: हाँ, हम बिना लंबा भाग दिए मान बता सकते हैं।</b></p>
       <p>चूँकि $\frac{1}{7} = 0.\overline{142857}$ है, अतः अन्य मान ज्ञात करने के लिए $0.142857$ को क्रमशः $2, 3, 4, 5, 6$ से गुणा करेंगे:</p>
-      <div class="math-scroll">$$\frac{2}{7} = 2 \times \frac{1}{7} = 2 \times 0.\overline{142857} = \mathbf{0.\overline{285714}}$$</div>
-      <div class="math-scroll">$$\frac{3}{7} = 3 \times \frac{1}{7} = 3 \times 0.\overline{142857} = \mathbf{0.\overline{428571}}$$</div>
-      <div class="math-scroll">$$\frac{4}{7} = 4 \times \frac{1}{7} = 4 \times 0.\overline{142857} = \mathbf{0.\overline{571428}}$$</div>
-      <div class="math-scroll">$$\frac{5}{7} = 5 \times \frac{1}{7} = 5 \times 0.\overline{142857} = \mathbf{0.\overline{714285}}$$</div>
-      <div class="math-scroll">$$\frac{6}{7} = 6 \times \frac{1}{7} = 6 \times 0.\overline{142857} = \mathbf{0.\overline{857142}}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{2}{7} &= 2 \times \frac{1}{7} \\
+    &= 2 \times 0.\overline{142857} \\
+    &= \mathbf{0.\overline{285714}}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{3}{7} &= 3 \times \frac{1}{7} \\
+    &= 3 \times 0.\overline{142857} \\
+    &= \mathbf{0.\overline{428571}}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{4}{7} &= 4 \times \frac{1}{7} \\
+    &= 4 \times 0.\overline{142857} \\
+    &= \mathbf{0.\overline{571428}}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{5}{7} &= 5 \times \frac{1}{7} \\
+    &= 5 \times 0.\overline{142857} \\
+    &= \mathbf{0.\overline{714285}}
+    \end{aligned}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{6}{7} &= 6 \times \frac{1}{7} \\
+    &= 6 \times 0.\overline{142857} \\
+    &= \mathbf{0.\overline{857142}}
+    \end{aligned}$$</div>
     </div>
     <div class="answer-highlight">
       ✅ ध्यान दें: सभी परिणामों में अंक वही रहते हैं ($1, 4, 2, 8, 5, 7$), केवल उनका आरंभिक बिंदु बदलता है!
@@ -855,9 +1058,9 @@
     <!-- Q3(i) -->
     <div class="step-box-blue">
       <p><b>(i) $0.\bar{6} = 0.6666\dots$</b></p>
-      <p>माना $x = 0.6666\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>माना <p>$x = 0.6666\dots$ &emsp; <b>...(समीकरण 1)</b></p></p>
       <p>यहाँ केवल $1$ अंक की पुनरावृत्ति है, अतः दोनों पक्षों को $10$ से गुणा करने पर:</p>
-      <div class="math-scroll">$$10x = 6.6666\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <div class="math-scroll"><p>$10x = 6.6666\dots$ &emsp; <b>...(समीकरण 2)</b></p></div>
       <p>समीकरण (2) में से समीकरण (1) को नीचे ऊपर रखकर घटाने पर:</p>
       <div class="math-scroll">
         $$\begin{aligned}
@@ -874,11 +1077,11 @@
     <!-- Q3(ii) -->
     <div class="step-box-orange">
       <p><b>(ii) $0.4\bar{7} = 0.47777\dots$</b></p>
-      <p>माना $x = 0.47777\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>माना <p>$x = 0.47777\dots$ &emsp; <b>...(समीकरण 1)</b></p></p>
       <p>पहले $10$ से गुणा करने पर (दशमलव आवर्ती अंक के पास लाने हेतु):</p>
-      <div class="math-scroll">$$10x = 4.7777\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <div class="math-scroll"><p>$10x = 4.7777\dots$ &emsp; <b>...(समीकरण 2)</b></p></div>
       <p>अब समीकरण (2) को पुनः $10$ से गुणा करने पर ($100$ से):</p>
-      <div class="math-scroll">$$100x = 47.7777\dots \quad \text{--- (समीकरण 3)}$$</div>
+      <div class="math-scroll"><p>$100x = 47.7777\dots$ &emsp; <b>...(समीकरण 3)</b></p></div>
       <p>समीकरण (3) में से समीकरण (2) घटाने पर:</p>
       <div class="math-scroll">
         $$\begin{aligned}
@@ -895,9 +1098,9 @@
     <!-- Q3(iii) -->
     <div class="step-box-purple">
       <p><b>(iii) $0.\overline{001} = 0.001001001\dots$</b></p>
-      <p>माना $x = 0.001001001\dots \quad \text{--- (समीकरण 1)}$</p>
+      <p>माना <p>$x = 0.001001001\dots$ &emsp; <b>...(समीकरण 1)</b></p></p>
       <p>यहाँ $3$ अंकों पर बार है, अतः दोनों पक्षों को $1000$ से गुणा करने पर:</p>
-      <div class="math-scroll">$$1000x = 1.001001001\dots \quad \text{--- (समीकरण 2)}$$</div>
+      <div class="math-scroll"><p>$1000x = 1.001001001\dots$ &emsp; <b>...(समीकरण 2)</b></p></div>
       <p>समीकरण (2) में से समीकरण (1) घटाने पर:</p>
       <div class="math-scroll">
         $$\begin{aligned}
@@ -941,9 +1144,9 @@
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 4: $0.99999\dots$ को $\frac{p}{q}$ के रूप में व्यक्त कीजिए। क्या आप अपने उत्तर से आश्चर्यचकित हैं?</h3>
     <div class="step-box-green">
-      <p><b>चरण 1:</b> माना $x = 0.99999\dots \quad \text{--- (1)}$</p>
+      <p><b>चरण 1:</b> माना <p>$x = 0.99999\dots$ &emsp; <b>...(समीकरण 1)</b></p></p>
       <p><b>चरण 2:</b> $10$ से दोनों ओर गुणा करने पर:</p>
-      <div class="math-scroll">$$10x = 9.99999\dots \quad \text{--- (2)}$$</div>
+      <div class="math-scroll"><p>$10x = 9.99999\dots$ &emsp; <b>...(समीकरण 2)</b></p></div>
       <p><b>चरण 3:</b> समीकरण (2) में से (1) घटाने पर:</p>
       <div class="math-scroll">
         $$\begin{aligned}
@@ -1000,9 +1203,9 @@
     <h3 class="question-heading">प्रश्न 7: ऐसी तीन संख्याएँ लिखिए जिनके दशमलव प्रसार अनवसानी अनावर्ती (Non-terminating Non-repeating) हों।</h3>
     <div class="step-box-orange">
       <p>अनवसानी अनावर्ती दशमलव प्रसार वाली संख्याएँ <b>अपरिमेय संख्याएँ</b> होती हैं। तीन उदाहरण:</p>
-      <div class="math-scroll">$$\text{संख्या 1: } 0.101001000100001000001\dots$$</div>
-      <div class="math-scroll">$$\text{संख्या 2: } 0.202002000200002000002\dots$$</div>
-      <div class="math-scroll">$$\text{संख्या 3: } \sqrt{2} = 1.414213562373095\dots$$</div>
+      <div class="math-scroll"><p><b>संख्या 1:</b> $0.101001000100001000001\dots$</p></div>
+      <div class="math-scroll"><p><b>संख्या 2:</b> $0.202002000200002000002\dots$</p></div>
+      <div class="math-scroll"><p><b>संख्या 3:</b> $\sqrt{2} = 1.414213562373095\dots$</p></div>
     </div>
   </div>
 
@@ -1014,9 +1217,9 @@
       <div class="math-scroll">$$\frac{5}{7} = 0.714285\dots$$</div>
       <div class="math-scroll">$$\frac{9}{11} = 0.818181\dots$$</div>
       <p><b>चरण 2:</b> हमें $0.714285\dots$ और $0.818181\dots$ के बीच तीन अनवसानी अनावर्ती संख्याएँ लिखनी हैं:</p>
-      <div class="math-scroll">$$\text{पहली संख्या: } \mathbf{0.7307300730007300007\dots}$$</div>
-      <div class="math-scroll">$$\text{दूसरी संख्या: } \mathbf{0.7507500750007500007\dots}$$</div>
-      <div class="math-scroll">$$\text{तीसरी संख्या: } \mathbf{0.7907900790007900007\dots}$$</div>
+      <div class="math-scroll"><p><b>पहली संख्या:</b> $\mathbf{0.7307300730007300007\dots}$</p></div>
+      <div class="math-scroll"><p><b>दूसरी संख्या:</b> $\mathbf{0.7507500750007500007\dots}$</p></div>
+      <div class="math-scroll"><p><b>तीसरी संख्या:</b> $\mathbf{0.7907900790007900007\dots}$</p></div>
     </div>
     <div class="answer-highlight">
       ✅ अभीष्ट अपरिमेय संख्याएँ: $0.7307300\dots, 0.7507500\dots, 0.7907900\dots$
@@ -1067,7 +1270,11 @@
 
     <div class="step-box-green">
       <p><b>(ii) $(3 + \sqrt{23}) - \sqrt{23}$</b></p>
-      <div class="math-scroll">$$= 3 + \sqrt{23} - \sqrt{23} = 3 = \frac{3}{1}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    (3 + \sqrt{23}) - \sqrt{23} &= 3 + \sqrt{23} - \sqrt{23} \\
+    &= 3 \\
+    &= \frac{3}{1}
+    \end{aligned}$$</div>
       <p><strong>उत्तर: परिमेय</strong></p>
     </div>
 
@@ -1183,7 +1390,10 @@
     <div class="step-box-blue">
       <p><b>(i) $\frac{1}{\sqrt{7}}$</b></p>
       <p>अंश और हर में $\sqrt{7}$ से गुणा करने पर:</p>
-      <div class="math-scroll">$$\frac{1}{\sqrt{7}} = \frac{1 \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} = \mathbf{\frac{\sqrt{7}}{7}}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    \frac{1}{\sqrt{7}} &= \frac{1 \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} \\
+    &= \mathbf{\frac{\sqrt{7}}{7}}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{7}}{7}$</div>
     </div>
 
@@ -1195,7 +1405,9 @@
         $$\begin{aligned}
         \frac{1}{\sqrt{7} - \sqrt{6}} &= \frac{1 \times (\sqrt{7} + \sqrt{6})}{(\sqrt{7} - \sqrt{6})(\sqrt{7} + \sqrt{6})} \\
         &= \frac{\sqrt{7} + \sqrt{6}}{(\sqrt{7})^2 - (\sqrt{6})^2} \\
-        &= \frac{\sqrt{7} + \sqrt{6}}{7 - 6} = \mathbf{\sqrt{7} + \sqrt{6}}
+        &= \frac{\sqrt{7} + \sqrt{6}}{7 - 6} \\
+        &= \frac{\sqrt{7} + \sqrt{6}}{1} \\
+        &= \mathbf{\sqrt{7} + \sqrt{6}}
         \end{aligned}$$
       </div>
       <div class="answer-highlight">✅ उत्तर: $\sqrt{7} + \sqrt{6}$</div>
@@ -1209,7 +1421,8 @@
         $$\begin{aligned}
         \frac{1}{\sqrt{5} + \sqrt{2}} &= \frac{1 \times (\sqrt{5} - \sqrt{2})}{(\sqrt{5} + \sqrt{2})(\sqrt{5} - \sqrt{2})} \\
         &= \frac{\sqrt{5} - \sqrt{2}}{(\sqrt{5})^2 - (\sqrt{2})^2} \\
-        &= \frac{\sqrt{5} - \sqrt{2}}{5 - 2} = \mathbf{\frac{\sqrt{5} - \sqrt{2}}{3}}
+        &= \frac{\sqrt{5} - \sqrt{2}}{5 - 2} \\
+        &= \mathbf{\frac{\sqrt{5} - \sqrt{2}}{3}}
         \end{aligned}$$
       </div>
       <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{5} - \sqrt{2}}{3}$</div>
@@ -1223,7 +1436,8 @@
         $$\begin{aligned}
         \frac{1}{\sqrt{7} - 2} &= \frac{1 \times (\sqrt{7} + 2)}{(\sqrt{7} - 2)(\sqrt{7} + 2)} \\
         &= \frac{\sqrt{7} + 2}{(\sqrt{7})^2 - (2)^2} \\
-        &= \frac{\sqrt{7} + 2}{7 - 4} = \mathbf{\frac{\sqrt{7} + 2}{3}}
+        &= \frac{\sqrt{7} + 2}{7 - 4} \\
+        &= \mathbf{\frac{\sqrt{7} + 2}{3}}
         \end{aligned}$$
       </div>
       <div class="answer-highlight">✅ उत्तर: $\frac{\sqrt{7} + 2}{3}$</div>
@@ -1275,21 +1489,36 @@
     <div class="step-box-blue">
       <p><b>(i) $64^{1/2}$</b></p>
       <p>$64 = 8^2$ लिखने पर, नियम $(a^m)^n = a^{mn}$ से:</p>
-      <div class="math-scroll">$$64^{1/2} = (8^2)^{1/2} = 8^{2 \times \frac{1}{2}} = 8^1 = \mathbf{8}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    64^{1/2} &= (8^2)^{1/2} \\
+    &= 8^{2 \times \frac{1}{2}} \\
+    &= 8^1 \\
+    &= \mathbf{8}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 8</div>
     </div>
 
     <div class="step-box-green">
       <p><b>(ii) $32^{1/5}$</b></p>
       <p>$32 = 2^5$ लिखने पर:</p>
-      <div class="math-scroll">$$32^{1/5} = (2^5)^{1/5} = 2^{5 \times \frac{1}{5}} = 2^1 = \mathbf{2}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    32^{1/5} &= (2^5)^{1/5} \\
+    &= 2^{5 \times \frac{1}{5}} \\
+    &= 2^1 \\
+    &= \mathbf{2}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 2</div>
     </div>
 
     <div class="step-box-purple">
       <p><b>(iii) $125^{1/3}$</b></p>
       <p>$125 = 5^3$ लिखने पर:</p>
-      <div class="math-scroll">$$125^{1/3} = (5^3)^{1/3} = 5^{3 \times \frac{1}{3}} = 5^1 = \mathbf{5}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    125^{1/3} &= (5^3)^{1/3} \\
+    &= 5^{3 \times \frac{1}{3}} \\
+    &= 5^1 \\
+    &= \mathbf{5}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 5</div>
     </div>
   </div>
@@ -1301,28 +1530,49 @@
     <div class="step-box-blue">
       <p><b>(i) $9^{3/2}$</b></p>
       <p>$9 = 3^2$ लिखने पर:</p>
-      <div class="math-scroll">$$9^{3/2} = (3^2)^{3/2} = 3^{2 \times \frac{3}{2}} = 3^3 = 3 \times 3 \times 3 = \mathbf{27}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    9^{3/2} &= (3^2)^{3/2} \\
+    &= 3^{2 \times \frac{3}{2}} \\
+    &= 3^3 \\
+    &= 3 \times 3 \times 3 \\
+    &= \mathbf{27}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 27</div>
     </div>
 
     <div class="step-box-green">
       <p><b>(ii) $32^{2/5}$</b></p>
       <p>$32 = 2^5$ लिखने पर:</p>
-      <div class="math-scroll">$$32^{2/5} = (2^5)^{2/5} = 2^{5 \times \frac{2}{5}} = 2^2 = \mathbf{4}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    32^{2/5} &= (2^5)^{2/5} \\
+    &= 2^{5 \times \frac{2}{5}} \\
+    &= 2^2 \\
+    &= \mathbf{4}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 4</div>
     </div>
 
     <div class="step-box-orange">
       <p><b>(iii) $16^{3/4}$</b></p>
       <p>$16 = 2^4$ लिखने पर:</p>
-      <div class="math-scroll">$$16^{3/4} = (2^4)^{3/4} = 2^{4 \times \frac{3}{4}} = 2^3 = \mathbf{8}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    16^{3/4} &= (2^4)^{3/4} \\
+    &= 2^{4 \times \frac{3}{4}} \\
+    &= 2^3 \\
+    &= \mathbf{8}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: 8</div>
     </div>
 
     <div class="step-box-purple">
       <p><b>(iv) $125^{-1/3}$</b></p>
       <p>$125 = 5^3$ तथा नियम $a^{-n} = \frac{1}{a^n}$ से:</p>
-      <div class="math-scroll">$$125^{-1/3} = (5^3)^{-1/3} = 5^{3 \times \left(-\frac{1}{3}\right)} = 5^{-1} = \mathbf{\frac{1}{5}}$$</div>
+      <div class="math-scroll">$$\begin{aligned}
+    125^{-1/3} &= (5^3)^{-1/3} \\
+    &= 5^{3 \times \left(-\frac{1}{3}\right)} \\
+    &= 5^{-1} \\
+    &= \mathbf{\frac{1}{5}}
+    \end{aligned}$$</div>
       <div class="answer-highlight">✅ उत्तर: $\frac{1}{5}$</div>
     </div>
   </div>
@@ -1348,7 +1598,11 @@
       <p>नियम $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$ तथा $(a^m)^n = a^{mn}$ से:</p>
       <div class="math-scroll">
         $$\begin{aligned}
-        \left(\frac{1}{3^3}\right)^7 &= \frac{1^7}{(3^3)^7} = \frac{1}{3^{3 \times 7}} = \mathbf{\frac{1}{3^{21}}} \text{ या } \mathbf{3^{-21}}
+        \left(\frac{1}{3^3}\right)^7 &= \frac{1^7}{(3^3)^7} \\
+        &= \frac{1}{3^{3 \times 7}} \\
+        &= \mathbf{\frac{1}{3^{21}}} \end{aligned}$$
+<p><b>अथवा घातांक रूप में:</b> $\mathbf{3^{-21}}$</p>
+$$\begin{aligned} \quad 
         \end{aligned}$$
       </div>
       <div class="answer-highlight">✅ उत्तर: $\frac{1}{3^{21}}$ या $3^{-21}$</div>
@@ -1412,6 +1666,7 @@
   </div>
 
 </div> <!-- /contentToCopy -->
+  </div> <!-- /container -->
 
 <!-- =========================================================
      JAVASCRIPT: PROJECTOR CONTROLS & 5 INTERACTIVE SIMULATORS
@@ -1427,7 +1682,7 @@
   var strokeOffset = 0;
 
   function getContainer() {
-    return document.getElementById('contentToCopy');
+    return document.querySelector('.container') || document.getElementById('contentToCopy');
   }
 
   // W+ / W- : Adjust Canvas Width
@@ -1506,7 +1761,7 @@
 
   // Copy Entire Page Content
   function copyEntireContent() {
-    var container = getContainer();
+    var container = document.getElementById('contentToCopy') || getContainer();
     if (!container) return;
     var range = document.createRange();
     range.selectNode(container);
@@ -1669,7 +1924,7 @@
     var out = document.getElementById('sim3_output');
 
     if (!repStr) {
-      out.innerHTML = '<span style="color:#dc2626;">कृपया आवर्ती (बार वाले) अंक अवश्य भरें।</span>';
+      out.innerHTML = '<span style="color:#dc2626; font-weight:900;">कृपया आवर्ती (बार वाले) अंक अवश्य भरें।</span>';
       return;
     }
 
@@ -1693,25 +1948,34 @@
 
     var displayDecimal = intPart + '.' + nonRepStr + '<span style="text-decoration:overline; font-weight:900;">' + repStr + '</span>';
 
-    var html = '<strong>संख्या:</strong> $' + displayDecimal + '$<br>' +
-      '<strong>चरण 1:</strong> माना $x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots \\quad \\text{--- (1)}$<br>' +
-      (m > 0 ? '<strong>चरण 2:</strong> $10^{' + m + '} = ' + Math.pow(10, m) + '$ से गुणा करने पर:<br>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots \\quad \\text{--- (2)}$<br>' : '') +
-      '<strong>चरण ' + (m > 0 ? '3' : '2') + ':</strong> $10^{' + (m + k) + '} = ' + Math.pow(10, m + k) + '$ से गुणा करने पर:<br>$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots \\quad \\text{--- (3)}$<br>' +
-      '<strong>चरण ' + (m > 0 ? '4' : '3') + ':</strong> समीकरणों को आपस में घटाने पर:<br>' +
-      '$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + fullVal + ' - ' + nonRepVal + ' = ' + numerator + '$$' +
-      '<div style="background:#f0fdf4; border:3px solid #86efac; padding:15px; border-radius:12px; margin-top:10px;">' +
-      '$$\\mathbf{x = \\frac{' + numerator + '}{' + denominator + '} = \\frac{' + simpNum + '}{' + simpDen + '}}$$' +
-      '</div>';
+    var html = '<p><strong>संख्या:</strong> $' + displayDecimal + '$</p>' +
+      '<p>माना $x = ' + displayDecimal + '$</p>' +
+      '<p>$x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 1)</b></p>';
+
+    if (m > 0) {
+      html += '<p>दोनों पक्षों में $10^' + m + '$ से गुणा करने पर:</p>' +
+        '<p>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 2)</b></p>';
+    }
+
+    html += '<p>समीकरण को $10^{' + (m + k) + '}$ से गुणा करने पर:</p>' +
+      '<p>$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण ' + (m > 0 ? '3' : '2') + ')</b></p>' +
+      '<p>समीकरणों को घटाने पर (Vertical One by One Steps):</p>' +
+      '$$\\begin{aligned}' +
+      (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x &= ' + fullVal + ' - ' + nonRepVal + ' \\' +
+      '&= ' + numerator + ' \\' +
+      'x &= \\frac{' + numerator + '}{' + denominator + '} \\' +
+      '&= \\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}' +
+      '\\end{aligned}$$';
+
+    html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
+      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ $\\frac{p}{q}$ रूप: $\\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}$</p></div>';
 
     out.innerHTML = html;
     if (window.MathJax && window.MathJax.typesetPromise) {
-      window.MathJax.typesetPromise([out]).catch(function(){});
+      MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
-  // ==========================================================
-  // 5. SIMULATOR 4 LOGIC: Denominator Rationalisation
-  // ==========================================================
   function calculateSim4() {
     var num = parseInt(document.getElementById('sim4_num').value) || 1;
     var a = parseInt(document.getElementById('sim4_a').value) || 7;
@@ -1722,30 +1986,31 @@
     var oppSign = (sign === '-' ? '+' : '-');
     var denDiff = (sign === '-' ? (a - b) : (a - b));
 
-    var html = '<strong>मूल व्यंजक:</strong> $$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$' +
-      '<strong>चरण 1:</strong> हर का संयुग्मी (Conjugate) $=\\mathbf{(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$ होगा।<br>' +
-      '<strong>चरण 2:</strong> अंश और हर दोनों में संयुग्मी से गुणा करने पर:<br>' +
-      '$$\\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$' +
-      '<strong>चरण 3:</strong> हर में $(a-b)(a+b) = a^2 - b^2$ लगाने पर हर $= (\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2 = ' + a + ' - ' + b + ' = ' + (a - b) + '$<br>' +
-      '<div style="background:#eff6ff; border:3px solid #93c5fd; padding:15px; border-radius:12px; margin-top:10px;">' +
-      '$$\\mathbf{\\text{सरल रूप: } ';
+    var html = '<p><strong>मूल व्यंजक:</strong></p>$$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$' +
+      '<p><strong>चरण 1:</strong> हर का संयुग्मी (Conjugate): $\\mathbf{\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '}}$</p>' +
+      '<p><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर (Vertical Steps):</p>' +
+      '$$\\begin{aligned}' +
+      '&= \\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})} \\' +
+      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2} \\' +
+      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + a + ' - ' + b + '} \\' +
+      '&= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}' +
+      '\\end{aligned}$$' +
+      '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
+      '<p style="margin:0 0 10px 0; color:#064e3b; font-weight:900;">✅ सरल रूप (Final Answer):</p>' +
+      '$$\\begin{aligned}';
     
     if (a - b === 1) {
-      html += (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}';
+      html += '&= ' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})';
     } else {
-      html += '\\frac{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}}';
+      html += '&= \\frac{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}';
     }
-    html += '$$</div>';
-
+    html += '\\end{aligned}$$</div>';
     out.innerHTML = html;
     if (window.MathJax && window.MathJax.typesetPromise) {
-      window.MathJax.typesetPromise([out]).catch(function(){});
+      MathJax.typesetPromise([out]);
     }
   }
 
-  // ==========================================================
-  // 6. SIMULATOR 5 LOGIC: Laws of Exponents
-  // ==========================================================
   function calculateSim5() {
     var op = document.getElementById('sim5_op').value;
     var a = parseFloat(document.getElementById('sim5_a').value) || 2;
@@ -1757,28 +2022,47 @@
     if (op === 'mult') {
       var resExp = m + n;
       var resVal = Math.pow(a, resExp);
-      html = '<strong>नियम:</strong> $a^m \\cdot a^n = a^{m+n}$<br>' +
-        '$$' + a + '^{' + m + '} \\cdot ' + a + '^{' + n + '} = ' + a + '^{' + m + ' + ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
+      html = '<p><strong>नियम:</strong> $a^m \cdot a^n = a^{m+n}$</p>' +
+        '$$\\begin{aligned}' +
+        a + '^{' + m + '} \cdot ' + a + '^{' + n + '} &= ' + a + '^{' + m + ' + ' + n + '} \\' +
+        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
+        '&= \\mathbf{' + resVal + '}' +
+        '\\end{aligned}$$';
     } else if (op === 'div') {
       var resExp = m - n;
       var resVal = Math.pow(a, resExp);
-      html = '<strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$<br>' +
-        '$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}} = ' + a + '^{' + m + ' - ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
+      html = '<p><strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$</p>' +
+        '$$\\begin{aligned}' +
+        '\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}} &= ' + a + '^{' + m + ' - ' + n + '} \\' +
+        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
+        '&= \\mathbf{' + resVal + '}' +
+        '\\end{aligned}$$';
     } else if (op === 'pow') {
       var resExp = m * n;
       var resVal = Math.pow(a, resExp);
-      html = '<strong>नियम:</strong> $(a^m)^n = a^{m \\times n}$<br>' +
-        '$$(' + a + '^{' + m + '})^{' + n + '} = ' + a + '^{' + m + ' \\times ' + n + '} = \\mathbf{' + a + '^{' + resExp + '}} = ' + resVal + '$$';
-    } else {
-      var b = n;
+      html = '<p><strong>नियम:</strong> $(a^m)^n = a^{m \times n}$</p>' +
+        '$$\\begin{aligned}' +
+        '(' + a + '^{' + m + '})^{' + n + '} &= ' + a + '^{' + m + ' \times ' + n + '} \\' +
+        '&= \\mathbf{' + a + '^{' + resExp + '}} \\' +
+        '&= \\mathbf{' + resVal + '}' +
+        '\\end{aligned}$$';
+    } else if (op === 'dist') {
+      var b = 3;
       var resVal = Math.pow(a * b, m);
-      html = '<strong>नियम:</strong> $a^m \\cdot b^m = (ab)^m$<br>' +
-        '$$' + a + '^{' + m + '} \\cdot ' + b + '^{' + m + '} = (' + a + ' \\times ' + b + ')^{' + m + '} = \\mathbf{(' + (a * b) + ')^{' + m + '}} = ' + resVal + '$$';
+      html = '<p><strong>नियम:</strong> $a^m \cdot b^m = (ab)^m$ (यहाँ $b=3$ लिया गया है)</p>' +
+        '$$\\begin{aligned}' +
+        a + '^{' + m + '} \cdot ' + b + '^{' + m + '} &= (' + a + ' \times ' + b + ')^{' + m + '} \\' +
+        '&= \\mathbf{(' + (a * b) + ')^{' + m + '}} \\' +
+        '&= \\mathbf{' + resVal + '}' +
+        '\\end{aligned}$$';
     }
+
+    html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
+      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ परिणाम: $\\mathbf{' + (op === 'dist' ? Math.pow(a * 3, m) : Math.pow(a, op === 'mult' ? m+n : (op === 'div' ? m-n : m*n))) + '}$</p></div>';
 
     out.innerHTML = html;
     if (window.MathJax && window.MathJax.typesetPromise) {
-      window.MathJax.typesetPromise([out]).catch(function(){});
+      MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
