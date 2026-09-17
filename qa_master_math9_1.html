@@ -613,6 +613,44 @@
       box-sizing: border-box !important;
       overflow-x: auto !important;
     }
+
+    /* SIMULATOR CONTROLS GRID (VERTICAL & PAIRED LABELS) */
+    .sim-controls-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+      gap: 16px !important;
+      margin-bottom: 25px !important;
+      background: #f0f9ff !important;
+      padding: 24px !important;
+      border-radius: 16px !important;
+      border: 3px solid #bae6fd !important;
+      box-sizing: border-box !important;
+    }
+    .sim-group {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+    .sim-group label {
+      font-size: 22pt !important;
+      font-weight: 900 !important;
+      color: #1e3a8a !important;
+      margin: 0 !important;
+    }
+    .sim-group input, .sim-group select {
+      width: 100% !important;
+      font-size: 24pt !important;
+      font-weight: 900 !important;
+      padding: 10px 16px !important;
+      border-radius: 10px !important;
+      border: 3px solid #94a3b8 !important;
+      background: #ffffff !important;
+      color: #0f172a !important;
+      box-sizing: border-box !important;
+    }
+    .sim-full-row {
+      grid-column: 1 / -1 !important;
+    }
 </style>
 </head>
 <body>
@@ -780,17 +818,24 @@
     <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: किन्हीं दो संख्याओं/भिन्नों के बीच परिमेय संख्याएँ जनरेटर</h3>
     <p>कक्षा में लाइव प्रयोग करें: कोई भी दो संख्याएँ भरें और चुनें कि बीच में कितनी परिमेय संख्याएँ निकालनी हैं!</p>
     
-    <div class="sim-controls">
-      <label>संख्या 1 ($a$):</label>
-      <input type="number" id="sim1_n1" class="sim-input" value="3" step="any">
-      
-      <label>संख्या 2 ($b$):</label>
-      <input type="number" id="sim1_n2" class="sim-input" value="4" step="any">
-      
-      <label>संख्याओं की संख्या ($n$):</label>
-      <input type="number" id="sim1_count" class="sim-input" value="6" min="1" max="20">
-      
-      <button class="sim-btn-calc" onclick="calculateSim1()">हल करें ➔</button>
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>संख्या 1 (a):</label>
+        <input type="number" id="sim1_n1" value="3" step="any">
+      </div>
+      <div class="sim-group">
+        <label>संख्या 2 (b):</label>
+        <input type="number" id="sim1_n2" value="4" step="any">
+      </div>
+      <div class="sim-group">
+        <label>संख्याओं की संख्या (n):</label>
+        <input type="number" id="sim1_count" value="6" min="1" max="20">
+      </div>
+      <div class="sim-full-row" style="margin-top: 10px;">
+        <button class="sim-btn-calc" onclick="calculateSim1()" style="width:100%; padding:14px; font-size:24pt;">
+          ⚡ हल करें ➔
+        </button>
+      </div>
     </div>
 
     <div id="sim1_output" class="sim-output-box">
@@ -973,17 +1018,23 @@
     <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: संख्या रेखा पर अपरिमेय संख्या (√n) एवं लाइव वर्गमूल सर्पिल</h3>
     <p>नीचे कोई भी मान चुनें (√2, √3, √5, √7, √10) और देखें कि ज्यामितीय रूप से संख्या रेखा पर इसका स्थान कहाँ आता है!</p>
 
-    <div class="sim-controls">
-      <label>अपरिमेय संख्या चुनें (√n):</label>
-      <select id="sim2_n" class="sim-input" style="width:260px; font-size:20pt;" onchange="drawSim2()">
-        <option value="2">√2 (≈ 1.414)</option>
-        <option value="3">√3 (≈ 1.732)</option>
-        <option value="5" selected>√5 (≈ 2.236)</option>
-        <option value="6">√6 (≈ 2.449)</option>
-        <option value="7">√7 (≈ 2.645)</option>
-        <option value="10">√10 (≈ 3.162)</option>
-      </select>
-      <button class="sim-btn-calc" onclick="drawSim2()">रचना देखें ➔</button>
+    <div class="sim-controls-grid">
+      <div class="sim-group sim-full-row">
+        <label>अपरिमेय संख्या चुनें (√n):</label>
+        <select id="sim2_n" style="border-color:#2563eb; color:#1e3a8a;" onchange="drawSim2()">
+          <option value="2">√2 (≈ 1.414)</option>
+          <option value="3">√3 (≈ 1.732)</option>
+          <option value="5" selected>√5 (≈ 2.236)</option>
+          <option value="6">√6 (≈ 2.449)</option>
+          <option value="7">√7 (≈ 2.645)</option>
+          <option value="10">√10 (≈ 3.162)</option>
+        </select>
+      </div>
+      <div class="sim-full-row" style="margin-top: 10px;">
+        <button class="sim-btn-calc" onclick="drawSim2()" style="width:100%; padding:14px; font-size:24pt;">
+          ⚡ रचना देखें ➔
+        </button>
+      </div>
     </div>
 
     <div style="text-align:center; background:#ffffff; border-radius:12px; padding:15px; border:2px solid #cbd5e1;">
@@ -1161,17 +1212,24 @@
     <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: आवर्ती दशमलव (0.ā) को p/q भिन्न में बदलने का लाइव सॉल्वर</h3>
     <p>किसी भी आवर्ती दशमलव संख्या का मान भरें और दोनों समीकरणों के घटाव के साथ पूरा चरणबद्ध हल देखें!</p>
 
-    <div class="sim-controls">
-      <label>पूर्णांक भाग:</label>
-      <input type="number" id="sim3_int" class="sim-input" value="0" style="width:90px;">
-      
-      <label>अनावर्ती दशमलव भाग:</label>
-      <input type="text" id="sim3_nonrep" class="sim-input" value="4" style="width:110px;" placeholder="जैसे 4">
-      
-      <label>आवर्ती भाग (बार वाले अंक):</label>
-      <input type="text" id="sim3_rep" class="sim-input" value="7" style="width:110px;" placeholder="जैसे 7">
-
-      <button class="sim-btn-calc" onclick="calculateSim3()">p/q में बदलें ➔</button>
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>पूर्णांक भाग:</label>
+        <input type="number" id="sim3_int" value="0">
+      </div>
+      <div class="sim-group">
+        <label>अनावर्ती दशमलव भाग:</label>
+        <input type="text" id="sim3_nonrep" value="4" placeholder="जैसे 4">
+      </div>
+      <div class="sim-group">
+        <label>आवर्ती भाग (बार वाले अंक):</label>
+        <input type="text" id="sim3_rep" value="7" placeholder="जैसे 7">
+      </div>
+      <div class="sim-full-row" style="margin-top: 10px;">
+        <button class="sim-btn-calc" onclick="calculateSim3()" style="width:100%; padding:14px; font-size:24pt;">
+          ⚡ p/q भिन्न में बदलें ➔
+        </button>
+      </div>
     </div>
 
     <div id="sim3_output" class="sim-output-box">
@@ -1490,23 +1548,31 @@
     <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: हर का परिमेयकरण (Rationalising Denominators) लाइव सॉल्वर</h3>
     <p>किसी भी करणी मान को भरें और संयुग्मी से गुणा करके हर का परिमेयकरण चरणबद्ध रूप से देखें!</p>
 
-    <div class="sim-controls">
-      <label>अंश ($N$):</label>
-      <input type="number" id="sim4_num" class="sim-input" value="1" style="width:90px;">
-      
-      <label>हर पहला पद ($a$): $\sqrt{a} \rightarrow$</label>
-      <input type="number" id="sim4_a" class="sim-input" value="7" style="width:90px;">
-      
-      <label>चिन्ह:</label>
-      <select id="sim4_sign" class="sim-input" style="width:90px;">
-        <option value="-">-</option>
-        <option value="+">+</option>
-      </select>
-
-      <label>हर दूसरा पद ($b$): $\sqrt{b} \rightarrow$</label>
-      <input type="number" id="sim4_b" class="sim-input" value="6" style="width:90px;">
-
-      <button class="sim-btn-calc" onclick="calculateSim4()">परिमेयकरण करें ➔</button>
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>अंश (N):</label>
+        <input type="number" id="sim4_num" value="1">
+      </div>
+      <div class="sim-group">
+        <label>हर पहला पद (√a):</label>
+        <input type="number" id="sim4_a" value="7">
+      </div>
+      <div class="sim-group">
+        <label>चिन्ह:</label>
+        <select id="sim4_sign">
+          <option value="-">-</option>
+          <option value="+">+</option>
+        </select>
+      </div>
+      <div class="sim-group">
+        <label>हर दूसरा पद (√b):</label>
+        <input type="number" id="sim4_b" value="6">
+      </div>
+      <div class="sim-full-row" style="margin-top: 10px;">
+        <button class="sim-btn-calc" onclick="calculateSim4()" style="width:100%; padding:14px; font-size:24pt;">
+          ⚡ परिमेयकरण करें ➔
+        </button>
+      </div>
     </div>
 
     <div id="sim4_output" class="sim-output-box">
@@ -1678,25 +1744,37 @@ $$\begin{aligned} \quad
     <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: वास्तविक संख्याओं के घातांक नियम (Laws of Exponents) लाइव सॉल्वर</h3>
     <p>घातांक संक्रिया चुनें, आधार ($a$) और घातांक ($m, n$) भरें तथा तुरंत परिणाम व प्रयुक्त नियम देखें!</p>
 
-    <div class="sim-controls">
-      <label>नियम चुनें:</label>
-      <select id="sim5_op" class="sim-input" style="min-width:440px; max-width:100%; font-size:22pt; font-weight:900; padding:10px 16px; border-radius:12px; border:3px solid #2563eb; background:#ffffff; color:#1e3a8a;" onchange="calculateSim5()">
-        <option value="mult">1. गुणन नियम: aᵐ × aⁿ = aᵐ⁺ⁿ</option>
-        <option value="div">2. भाग नियम: aᵐ ÷ aⁿ = aᵐ⁻ⁿ</option>
-        <option value="pow">3. घात की घात नियम: (aᵐ)ⁿ = aᵐⁿ</option>
-        <option value="dist">4. भिन्न आधार नियम: aᵐ × bᵐ = (ab)ᵐ</option>
-      </select>
+    <div class="sim-controls-grid">
+      <div class="sim-group sim-full-row">
+        <label>📌 नियम चुनें:</label>
+        <select id="sim5_op" style="border-color:#2563eb; color:#1e3a8a;" onchange="calculateSim5()">
+          <option value="mult">1. गुणन नियम: aᵐ × aⁿ = aᵐ⁺ⁿ</option>
+          <option value="div">2. भाग नियम: aᵐ ÷ aⁿ = aᵐ⁻ⁿ</option>
+          <option value="pow">3. घात की घात नियम: (aᵐ)ⁿ = aᵐⁿ</option>
+          <option value="dist">4. भिन्न आधार नियम: aᵐ × bᵐ = (ab)ᵐ</option>
+        </select>
+      </div>
 
-      <label>आधार $a$:</label>
-      <input type="number" id="sim5_a" class="sim-input" value="2" style="width:90px;">
+      <div class="sim-group">
+        <label>आधार (a):</label>
+        <input type="number" id="sim5_a" value="2">
+      </div>
 
-      <label>घातांक $m$:</label>
-      <input type="number" id="sim5_m" class="sim-input" value="3" style="width:90px;">
+      <div class="sim-group">
+        <label>घातांक (m):</label>
+        <input type="number" id="sim5_m" value="3">
+      </div>
 
-      <label id="sim5_label_n">घातांक $n$:</label>
-      <input type="number" id="sim5_n" class="sim-input" value="2" style="width:90px;">
+      <div class="sim-group">
+        <label>घातांक (n):</label>
+        <input type="number" id="sim5_n" value="2">
+      </div>
 
-      <button class="sim-btn-calc" onclick="calculateSim5()">गणना करें ➔</button>
+      <div class="sim-full-row" style="margin-top: 10px;">
+        <button class="sim-btn-calc" onclick="calculateSim5()" style="width:100%; padding:14px; font-size:24pt;">
+          ⚡ गणना करें ➔
+        </button>
+      </div>
     </div>
 
     <div id="sim5_output" class="sim-output-box">
