@@ -663,10 +663,10 @@
       <li>
         <span class="badge-orange">वास्तविक संख्याओं के महत्वपूर्ण घातांक नियम:</span>
         <div class="math-scroll"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 15px 0;">
-      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \cdot a^n = a^{m+n}$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \times a^n = a^{m+n}$$</div>
       <div class="step-line" style="text-align:center; padding:10px;">$$(a^m)^n = a^{mn}$$</div>
       <div class="step-line" style="text-align:center; padding:10px;">$$\frac{a^m}{a^n} = a^{m-n}$$</div>
-      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \cdot b^m = (ab)^m$$</div>
+      <div class="step-line" style="text-align:center; padding:10px;">$$a^m \times b^m = (ab)^m$$</div>
       <div class="step-line" style="text-align:center; padding:10px;">$$a^{-n} = \frac{1}{a^n}$$</div>
       <div class="step-line" style="text-align:center; padding:10px;">$$a^0 = 1$$</div>
     </div></div>
@@ -715,7 +715,7 @@
     4 &= \frac{4 \times 7}{7} \\
     &= \frac{28}{7}
     \end{aligned}$$</div>
-      <p><b>चरण 3:</b> अब $\frac{21}{7}$ और $\frac{28}{7}$ के बीच की $6$ परिमेय संख्याएँ (बिना स्क्रॉल किए एक-एक करके क्रमबद्ध):</p>
+      <p><b>चरण 3:</b> अब $\frac{21}{7}$ और $\frac{28}{7}$ के बीच की $6$ परिमेय संख्याएँ:</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 15px 0;">
         <div class="step-line" style="margin: 0; text-align: center; font-weight: 900;"><b>संख्या 1:</b><br>$$\mathbf{\frac{22}{7}}$$</div>
         <div class="step-line" style="margin: 0; text-align: center; font-weight: 900;"><b>संख्या 2:</b><br>$$\mathbf{\frac{23}{7}}$$</div>
@@ -752,7 +752,7 @@
     \frac{4}{5} &= \frac{4 \times 6}{5 \times 6} \\
     &= \frac{24}{30}
     \end{aligned}$$</div>
-      <p><b>चरण 3:</b> $\frac{18}{30}$ और $\frac{24}{30}$ के बीच की $5$ परिमेय संख्याएँ (बिना स्क्रॉल किए एक-एक करके क्रमबद्ध):</p>
+      <p><b>चरण 3:</b> $\frac{18}{30}$ और $\frac{24}{30}$ के बीच की $5$ परिमेय संख्याएँ:</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 15px 0;">
         <div class="step-line" style="margin: 0; text-align: center; font-weight: 900;"><b>संख्या 1:</b><br>$$\mathbf{\frac{19}{30}}$$</div>
         <div class="step-line" style="margin: 0; text-align: center; font-weight: 900;"><b>संख्या 2:</b><br>$$\frac{20}{30} = \mathbf{\frac{2}{3}}$$</div>
@@ -1621,11 +1621,11 @@
     <h3 class="question-heading">प्रश्न 3: सरल कीजिए:</h3>
     
     <div class="step-box-blue">
-      <p><b>(i) $2^{2/3} \cdot 2^{1/5}$</b></p>
-      <p>नियम $a^m \cdot a^n = a^{m+n}$ से घातांकों को जोड़ते हैं:</p>
+      <p><b>(i) $2^{2/3} \times 2^{1/5}$</b></p>
+      <p>नियम $a^m \times a^n = a^{m+n}$ से घातांकों को जोड़ते हैं:</p>
       <div class="math-scroll">
         $$\begin{aligned}
-        2^{2/3} \cdot 2^{1/5} &= 2^{\frac{2}{3} + \frac{1}{5}} \\
+        2^{2/3} \times 2^{1/5} &= 2^{\frac{2}{3} + \frac{1}{5}} \\
         &= 2^{\frac{10 + 3}{15}} = \mathbf{2^{13/15}}
         \end{aligned}$$
       </div>
@@ -1660,11 +1660,11 @@ $$\begin{aligned} \quad
     </div>
 
     <div class="step-box-purple">
-      <p><b>(iv) $7^{1/2} \cdot 8^{1/2}$</b></p>
-      <p>नियम $a^m \cdot b^m = (ab)^m$ से:</p>
+      <p><b>(iv) $7^{1/2} \times 8^{1/2}$</b></p>
+      <p>नियम $a^m \times b^m = (ab)^m$ से:</p>
       <div class="math-scroll">
         $$\begin{aligned}
-        7^{1/2} \cdot 8^{1/2} &= (7 \times 8)^{1/2} = \mathbf{56^{1/2}}
+        7^{1/2} \times 8^{1/2} &= (7 \times 8)^{1/2} = \mathbf{56^{1/2}}
         \end{aligned}$$
       </div>
       <div class="answer-highlight">✅ उत्तर: $56^{1/2}$</div>
@@ -1844,13 +1844,14 @@ $$\begin{aligned} \quad
     }
 
     var html = '<div class="step-line">' +
-      '<p><strong>चरण 1:</strong> हमें ' + count + ' परिमेय संख्याएँ निकालनी हैं, अतः विभाजक गुणक $n + 1 = ' + count + ' + 1 = ' + mult + '$ लेंगे।</p>' +
+      '<p><strong>चरण 1:</strong> हमें ' + count + ' परिमेय संख्याएँ निकालनी हैं, अतः विभाजक गुणक: <b>n + 1 = ' + count + ' + 1 = ' + mult + '</b> लेंगे।</p>' +
       '</div>' +
       '<div class="step-line">' +
-      '<p><strong>चरण 2:</strong> दोनों संख्याओं के बीच की दूरी $\\Delta = \\frac{' + n2 + ' - ' + n1 + '}{' + mult + '} = ' + Number(diff.toFixed(4)) + '$</p>' +
+      '<p><strong>चरण 2:</strong> दोनों संख्याओं के बीच की दूरी:</p>' +
+      '$$\\Delta = \\frac{' + n2 + ' - ' + n1 + '}{' + mult + '} = ' + Number(diff.toFixed(4)) + '$$' +
       '</div>' +
       '<div class="step-line">' +
-      '<p><strong>चरण 3:</strong> अभीष्ट ' + count + ' परिमेय संख्याएँ (बिना स्क्रॉल किए ग्रिड में व्यवस्थित):</p>' +
+      '<p><strong>चरण 3:</strong> अभीष्ट ' + count + ' परिमेय संख्याएँ:</p>' +
       '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 10px;">' +
       nums.map(function(num, idx) {
         return '<div class="step-line" style="margin:0; text-align:center; background:#ecfdf5; border-left:6px solid #10b981; color:#065f46;">' +
@@ -1860,8 +1861,9 @@ $$\begin{aligned} \quad
       '</div></div>';
 
     out.innerHTML = html;
-    if (window.MathJax && window.MathJax.typesetPromise) {
-      window.MathJax.typesetPromise([out]).catch(function(){});
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
@@ -1994,24 +1996,24 @@ $$\begin{aligned} \quad
     var displayDecimal = intPart + '.' + nonRepStr + '<span style="text-decoration:overline; font-weight:900;">' + repStr + '</span>';
 
     var html = '<div class="step-line">' +
-      '<p><strong>संख्या:</strong> $' + displayDecimal + '$</p>' +
-      '<p>माना $x = ' + displayDecimal + '$</p>' +
-      '<p>$x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 1)</b></p>' +
+      '<p><strong>संख्या:</strong> $$' + displayDecimal + '$$</p>' +
+      '<p>माना $$x = ' + displayDecimal + '$$</p>' +
+      '<p>$$x = ' + intPart + '.' + nonRepStr + repStr + repStr + '\\dots$$ &emsp; <b>...(समीकरण 1)</b></p>' +
       '</div>';
 
     if (m > 0) {
       html += '<div class="step-line">' +
         '<p>दोनों पक्षों में $10^' + m + '$ से गुणा करने पर:</p>' +
-        '<p>$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण 2)</b></p>' +
+        '<p>$$' + Math.pow(10, m) + 'x = ' + nonRepVal + '.' + repStr + repStr + '\\dots$$ &emsp; <b>...(समीकरण 2)</b></p>' +
         '</div>';
     }
 
     html += '<div class="step-line">' +
       '<p>समीकरण को $10^{' + (m + k) + '}$ से गुणा करने पर:</p>' +
-      '<p>$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots$ &emsp; <b>...(समीकरण ' + (m > 0 ? '3' : '2') + ')</b></p>' +
+      '<p>$$' + Math.pow(10, m + k) + 'x = ' + fullVal + '.' + repStr + repStr + '\\dots$$ &emsp; <b>...(समीकरण ' + (m > 0 ? '3' : '2') + ')</b></p>' +
       '</div>' +
       '<div class="step-line">' +
-      '<p><strong>समीकरणों को घटाने पर (One by One Steps - एक के नीचे एक):</strong></p>' +
+      '<p><strong>समीकरणों को घटाने पर:</strong></p>' +
       '<div style="margin:8px 0;">$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + fullVal + ' - ' + nonRepVal + '$$</div>' +
       '<div style="margin:8px 0;">$$' + (Math.pow(10, m + k) - (m > 0 ? Math.pow(10, m) : 1)) + 'x = ' + numerator + '$$</div>' +
       '<div style="margin:8px 0;">$$x = \\frac{' + numerator + '}{' + denominator + '}$$</div>' +
@@ -2019,11 +2021,12 @@ $$\begin{aligned} \quad
       '</div>';
 
     html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
-      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ $\\frac{p}{q}$ रूप: $\\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}$</p></div>';
+      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ $\\frac{p}{q}$ रूप: $$\mathbf{\\frac{' + simpNum + '}{' + simpDen + '}}$$</p></div>';
 
     out.innerHTML = html;
-    if (window.MathJax && window.MathJax.typesetPromise) {
-      MathJax.typesetPromise([out]).catch(function(){});
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
@@ -2042,17 +2045,17 @@ $$\begin{aligned} \quad
       '<div style="margin: 8px 0;">$$\\frac{' + num + '}{\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '}}$$</div>' +
       '</div>' +
       '<div class="step-line">' +
-      '<p><strong>चरण 1:</strong> हर का संयुग्मी (Conjugate): $\\mathbf{\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '}}$</p>' +
+      '<p><strong>चरण 1:</strong> हर का संयुग्मी (Conjugate): $$\mathbf{\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '}}$$</p>' +
       '</div>' +
       '<div class="step-line">' +
-      '<p><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर (Vertical Steps - एक के नीचे एक):</p>' +
+      '<p><strong>चरण 2:</strong> अंश और हर में संयुग्मी से गुणा करने पर:</p>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + ' \\times (\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '} ' + sign + ' \\sqrt{' + b + '})(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{(\\sqrt{' + a + '})^2 - (\\sqrt{' + b + '})^2}$$</div>' +
       '<div style="margin: 10px 0;">$$= \\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + a + ' - ' + b + '}$$</div>' +
-      '<div style="margin: 10px 0;">$$= \\mathbf{\\frac{' + num + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}{' + (a - b) + '}}$$</div>' +
+      '<div style="margin: 10px 0;">$$= \\mathbf{\\frac{' + num + '(\sqrt{' + a + '} ' + oppSign + ' \sqrt{' + b + '})}{' + (a - b) + '}}$$</div>' +
       '</div>' +
       '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
-      '<p style="margin:0 0 10px 0; color:#064e3b; font-weight:900;">✅ सरल रूप (Final Answer):</p>';
+      '<p style="margin:0 0 10px 0; color:#064e3b; font-weight:900;">✅ सरल रूप (अंतिम उत्तर):</p>';
     
     if (a - b === 1) {
       html += '<div style="margin:8px 0;">$$\\mathbf{' + (num === 1 ? '' : num) + '(\\sqrt{' + a + '} ' + oppSign + ' \\sqrt{' + b + '})}$$</div>';
@@ -2061,8 +2064,9 @@ $$\begin{aligned} \quad
     }
     html += '</div>';
     out.innerHTML = html;
-    if (window.MathJax && window.MathJax.typesetPromise) {
-      MathJax.typesetPromise([out]).catch(function(){});
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
@@ -2078,9 +2082,9 @@ $$\begin{aligned} \quad
       var resExp = m + n;
       var resVal = Math.pow(a, resExp);
       html = '<div class="step-line">' +
-        '<p><strong>नियम:</strong> $a^m \cdot a^n = a^{m+n}$</p>' +
-        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
-        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + a + '^{' + n + '}$$</div>' +
+        '<p><strong>घातांक नियम:</strong> $$a^m \\times a^n = a^{m+n}$$</p>' +
+        '<p><strong>हल:</strong></p>' +
+        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \\times ' + a + '^{' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' + ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
@@ -2089,8 +2093,8 @@ $$\begin{aligned} \quad
       var resExp = m - n;
       var resVal = Math.pow(a, resExp);
       html = '<div class="step-line">' +
-        '<p><strong>नियम:</strong> $\\frac{a^m}{a^n} = a^{m-n}$</p>' +
-        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<p><strong>घातांक नियम:</strong> $$\\frac{a^m}{a^n} = a^{m-n}$$</p>' +
+        '<p><strong>हल:</strong></p>' +
         '<div style="margin:8px 0;">$$\\frac{' + a + '^{' + m + '}}{' + a + '^{' + n + '}}$$</div>' +
         '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' - ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
@@ -2100,10 +2104,10 @@ $$\begin{aligned} \quad
       var resExp = m * n;
       var resVal = Math.pow(a, resExp);
       html = '<div class="step-line">' +
-        '<p><strong>नियम:</strong> $(a^m)^n = a^{m \times n}$</p>' +
-        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
+        '<p><strong>घातांक नियम:</strong> $$(a^m)^n = a^{m \\times n}$$</p>' +
+        '<p><strong>हल:</strong></p>' +
         '<div style="margin:8px 0;">$$(' + a + '^{' + m + '})^{' + n + '}$$</div>' +
-        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \times ' + n + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + a + '^{' + m + ' \\times ' + n + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + a + '^{' + resExp + '}}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
         '</div>';
@@ -2111,21 +2115,22 @@ $$\begin{aligned} \quad
       var b = 3;
       var resVal = Math.pow(a * b, m);
       html = '<div class="step-line">' +
-        '<p><strong>नियम:</strong> $a^m \cdot b^m = (ab)^m$ (यहाँ $b=3$ लिया गया है)</p>' +
-        '<p><strong>हल के चरण (One by One Steps - एक के नीचे एक):</strong></p>' +
-        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \cdot ' + b + '^{' + m + '}$$</div>' +
-        '<div style="margin:8px 0;">$$= (' + a + ' \times ' + b + ')^{' + m + '}$$</div>' +
+        '<p><strong>घातांक नियम:</strong> $$a^m \\times b^m = (ab)^m$$ <span style="font-size:20pt; color:#475569;">(यहाँ $b=3$ लिया गया है)</span></p>' +
+        '<p><strong>हल:</strong></p>' +
+        '<div style="margin:8px 0;">$$' + a + '^{' + m + '} \\times ' + b + '^{' + m + '}$$</div>' +
+        '<div style="margin:8px 0;">$$= (' + a + ' \\times ' + b + ')^{' + m + '}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{(' + (a * b) + ')^{' + m + '}}$$</div>' +
         '<div style="margin:8px 0;">$$= \\mathbf{' + resVal + '}$$</div>' +
         '</div>';
     }
 
     html += '<div class="final-ans" style="margin-top:15px; padding:15px 20px;">' +
-      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ परिणाम: $\\mathbf{' + (op === 'dist' ? Math.pow(a * 3, m) : Math.pow(a, op === 'mult' ? m+n : (op === 'div' ? m-n : m*n))) + '}$</p></div>';
+      '<p style="margin:0; color:#064e3b; font-weight:900;">✅ अंतिम उत्तर: $\\mathbf{' + (op === 'dist' ? Math.pow(a * 3, m) : Math.pow(a, op === 'mult' ? m+n : (op === 'div' ? m-n : m*n))) + '}$</p></div>';
 
     out.innerHTML = html;
-    if (window.MathJax && window.MathJax.typesetPromise) {
-      MathJax.typesetPromise([out]).catch(function(){});
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
     }
   }
 
