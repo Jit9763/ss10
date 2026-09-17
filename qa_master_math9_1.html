@@ -969,41 +969,71 @@
         <li>बिंदु $P$ संख्या रेखा पर <b>$\sqrt{5}$</b> को निरूपित करता है।</li>
       </ol>
       
-      <!-- SVG Diagram for Sqrt 5 -->
-      <div style="text-align:center; margin:20px 0;">
-        <svg width="550" height="220" viewBox="0 0 550 220" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:12px;">
+      <!-- SVG Diagram for Sqrt 5 (High Contrast & Zero Overlap) -->
+      <div style="text-align:center; margin:25px auto; max-width:680px;">
+        <svg width="100%" height="280" viewBox="0 0 680 280" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#0f172a" />
+            </marker>
+          </defs>
+
           <!-- Number Line -->
-          <line x1="40" y1="170" x2="510" y2="170" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)" />
-          <!-- Ticks -->
-          <line x1="80" y1="160" x2="80" y2="180" stroke="#0f172a" stroke-width="4" />
-          <text x="75" y="205" font-size="20" font-weight="900">-1</text>
+          <line x1="30" y1="170" x2="640" y2="170" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)" marker-start="url(#arrow)" />
           
-          <line x1="180" y1="160" x2="180" y2="180" stroke="#0f172a" stroke-width="4" />
-          <text x="175" y="205" font-size="22" font-weight="900">0 (O)</text>
+          <!-- Ticks & Values (Row 1 below line: y = 205) -->
+          <!-- Tick -1 -->
+          <line x1="60" y1="158" x2="60" y2="182" stroke="#0f172a" stroke-width="4" />
+          <text x="60" y="208" text-anchor="middle" font-size="22" font-weight="900" fill="#0f172a">-1</text>
           
+          <!-- Tick 0 (Origin O) -->
+          <line x1="170" y1="156" x2="170" y2="184" stroke="#0f172a" stroke-width="5" />
+          <text x="170" y="208" text-anchor="middle" font-size="22" font-weight="900" fill="#0f172a">0 (O)</text>
+          
+          <!-- Tick 1 -->
           <line x1="280" y1="160" x2="280" y2="180" stroke="#0f172a" stroke-width="4" />
-          <text x="275" y="205" font-size="20" font-weight="900">1</text>
+          <text x="280" y="208" text-anchor="middle" font-size="22" font-weight="900" fill="#0f172a">1</text>
           
-          <line x1="380" y1="160" x2="380" y2="180" stroke="#0f172a" stroke-width="4" />
-          <text x="370" y="205" font-size="22" font-weight="900">2 (A)</text>
+          <!-- Tick 2 -->
+          <line x1="390" y1="156" x2="390" y2="184" stroke="#0f172a" stroke-width="5" />
+          <text x="390" y="208" text-anchor="middle" font-size="22" font-weight="900" fill="#0f172a">2</text>
           
-          <!-- Perpendicular AB -->
-          <line x1="380" y1="170" x2="380" y2="70" stroke="#dc2626" stroke-width="5" />
-          <text x="390" y="115" font-size="20" font-weight="900" fill="#dc2626">1 इकाई</text>
-          <text x="375" y="60" font-size="22" font-weight="900" fill="#dc2626">B</text>
+          <!-- Point A (Base of Perpendicular) Label clearly above the line -->
+          <text x="372" y="160" text-anchor="end" font-size="22" font-weight="900" fill="#2563eb">A</text>
+          <!-- Right angle symbol at A -->
+          <polyline points="375,170 375,155 390,155" fill="none" stroke="#2563eb" stroke-width="2.5" />
+
+          <!-- Base OA (Blue) -->
+          <line x1="170" y1="170" x2="390" y2="170" stroke="#2563eb" stroke-width="6" />
+          <text x="280" y="145" text-anchor="middle" font-size="20" font-weight="900" fill="#2563eb">आधार OA = 2 इकाई</text>
+
+          <!-- Perpendicular AB (Red) -->
+          <line x1="390" y1="170" x2="390" y2="60" stroke="#dc2626" stroke-width="5" />
+          <text x="402" y="115" text-anchor="start" font-size="20" font-weight="900" fill="#dc2626">लम्ब AB = 1 इकाई</text>
+          <circle cx="390" cy="60" r="5" fill="#dc2626" />
+          <text x="390" y="45" text-anchor="middle" font-size="24" font-weight="900" fill="#dc2626">B</text>
+
+          <!-- Hypotenuse OB (Green) -->
+          <line x1="170" y1="170" x2="390" y2="60" stroke="#059669" stroke-width="5" />
+          <g transform="translate(265, 100) rotate(-26.5)">
+            <rect x="-65" y="-22" width="130" height="28" rx="6" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+            <text x="0" y="-3" text-anchor="middle" font-size="20" font-weight="900" fill="#059669">OB = √5</text>
+          </g>
+
+          <!-- Arc from B down to Number Line -->
+          <!-- Radius = sqrt(220^2 + 110^2) = 245.97. Target X = 170 + 245.97 = 416 -->
+          <path d="M 390 60 A 246 246 0 0 1 416 170" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6,6" />
           
-          <!-- Base OA -->
-          <line x1="180" y1="170" x2="380" y2="170" stroke="#2563eb" stroke-width="6" />
-          <text x="260" y="155" font-size="20" font-weight="900" fill="#2563eb">2 इकाई</text>
+          <!-- Point P on Number Line (Purple Dot) -->
+          <circle cx="416" cy="170" r="7" fill="#7c3aed" stroke="#ffffff" stroke-width="2" />
           
-          <!-- Hypotenuse OB -->
-          <line x1="180" y1="170" x2="380" y2="70" stroke="#059669" stroke-width="5" />
-          <text x="245" y="105" font-size="22" font-weight="900" fill="#059669">OB = √5</text>
-          
-          <!-- Arc -->
-          <path d="M 380 70 A 223 223 0 0 1 403 170" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6,6" />
-          <circle cx="403" cy="170" r="6" fill="#7c3aed" />
-          <text x="395" y="205" font-size="22" font-weight="900" fill="#7c3aed">P (√5 ≈ 2.236)</text>
+          <!-- Point P Callout Badge (Row 2 below: y = 228 to 268) -->
+          <!-- Clean dashed pointer dropping from Dot P down to its Badge -->
+          <line x1="416" y1="177" x2="416" y2="230" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="3,3" />
+          <g transform="translate(416, 230)">
+            <rect x="-95" y="0" width="190" height="38" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5" />
+            <text x="0" y="26" text-anchor="middle" font-size="20" font-weight="900" fill="#7c3aed">बिंदु P (√5 ≈ 2.236)</text>
+          </g>
         </svg>
       </div>
     </div>
