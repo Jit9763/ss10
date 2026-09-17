@@ -1,0 +1,1336 @@
+# -*- coding: utf-8 -*-
+"""
+Generator for Chapter 5: यूक्लिड की ज्यामिति का परिचय (Introduction to Euclid's Geometry)
+NCERT Class 9 Mathematics (Rationalised Syllabus)
+100% NCERT coverage, strictly vertical steps ("एक के नीचे एक"), zero horizontal chaining,
+zero Hindi inside MathJax, 5 interactive live simulators, high contrast & projector controls.
+"""
+
+html_content = r"""<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 5: यूक्लिड की ज्यामिति का परिचय (संपूर्ण प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+<meta name="description" content="NCERT कक्षा 9 गणित अध्याय 5 यूक्लिड की ज्यामिति का परिचय: सभी 7 परिभाषाएँ, 7 अभिगृहीत, 5 अभिधारणाएँ, प्रमेय 5.1, प्रश्नावली 5.1 के संपूर्ण 100% हल व 5 लाइव सिमुलेटर।">
+
+<!-- Google Fonts: Inter & Tiro Devanagari Hindi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #ffffff;
+    --primary-blue: #1e40af;
+    --accent-indigo: #4338ca;
+    --border-color: #cbd5e1;
+    --font-scale: 1.0;
+    --width-scale: 100%;
+  }
+
+  body.high-contrast {
+    --bg-page: #000000 !important;
+    --text-primary: #ffffff !important;
+    --card-bg: #121212 !important;
+    --border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .qa-block,
+  body.high-contrast .concept-box,
+  body.high-contrast .inline-simulator-card,
+  body.high-contrast .step-box-blue,
+  body.high-contrast .step-box-orange,
+  body.high-contrast .step-box-green,
+  body.high-contrast .step-box-purple,
+  body.high-contrast .step-box-red {
+    background: #18181b !important;
+    color: #ffffff !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .question-heading {
+    color: #38bdf8 !important;
+  }
+
+  body.high-contrast .step-txt {
+    color: #f1f5f9 !important;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Tiro Devanagari Hindi', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-rendering: optimizeLegibility;
+  }
+
+  body.high-contrast {
+    -webkit-text-stroke: 0.9px #ffffff;
+  }
+
+  /* Fixed Projector Control Toolbar */
+  .toolbar-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #0f172a;
+    color: white;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #38bdf8;
+  }
+
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .tool-btn {
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    color: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tool-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+  }
+
+  .main-wrapper {
+    max-width: 1400px;
+    width: var(--width-scale);
+    margin: 0 auto;
+    padding: 24px 20px 80px 20px;
+    font-size: calc(18px * var(--font-scale));
+    transition: all 0.2s ease;
+  }
+
+  /* Navigation Shortcuts */
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    color: #1e40af;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .btn-nav:hover {
+    background: #1e40af;
+    color: #ffffff;
+    border-color: #1e40af;
+  }
+
+  /* Hero Header */
+  .hero-title {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.4);
+    margin-bottom: 30px;
+    font-size: calc(26px * var(--font-scale));
+    font-weight: 900;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: #bae6fd;
+    margin-top: 8px;
+  }
+
+  /* Section Part Headers */
+  .part-header {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin: 40px 0 20px 0;
+    font-size: calc(22px * var(--font-scale));
+    font-weight: 900;
+    border-left: 8px solid #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Concept Theory Card */
+  .concept-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  }
+
+  .concept-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* QA Block Card */
+  .qa-block {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 2.5px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .question-heading {
+    font-size: calc(19px * var(--font-scale));
+    font-weight: 900;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  /* Step Boxes */
+  .step-box-blue {
+    background: #f8fafc;
+    border-left: 8px solid #2563eb;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-orange {
+    background: #fffaf5;
+    border-left: 8px solid #f97316;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-green {
+    background: #f0fdf4;
+    border-left: 8px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-purple {
+    background: #faf5ff;
+    border-left: 8px solid #9333ea;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-red {
+    background: #fff1f2;
+    border-left: 8px solid #e11d48;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-txt {
+    font-size: 1em;
+    color: #1e293b;
+    margin: 8px 0;
+    line-height: 1.8;
+  }
+
+  /* Final Answer Highlight */
+  .answer-highlight {
+    background: #fef08a;
+    color: #854d0e;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 900;
+    border-left: 6px solid #eab308;
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .math-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin: 6px 0;
+  }
+
+  /* Inline Simulator Cards */
+  .inline-simulator-card {
+    background: #ffffff;
+    border: 3px solid #2563eb;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+  }
+
+  .sim-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sim-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    margin-bottom: 20px;
+  }
+
+  .sim-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sim-group label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #334155;
+  }
+
+  .sim-group input, .sim-group select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc:hover {
+    background: #1d4ed8;
+  }
+
+  .sim-output-box {
+    background: #f8fafc;
+    border: 2px dashed #94a3b8;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 80px;
+  }
+
+  .sim-canvas {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  @media print {
+    .toolbar-fixed, .nav-pills, .inline-simulator-card {
+      display: none !important;
+    }
+    .main-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Projector Toolbar -->
+<div class="toolbar-fixed">
+  <div class="toolbar-group">
+    <span style="font-size:16px; font-weight:900; color:#38bdf8;">📽️ प्रोजेक्टर कंट्रोल:</span>
+    <button class="tool-btn" onclick="adjustFont(0.1)" title="फॉन्ट आकार बढ़ाएं">A+</button>
+    <button class="tool-btn" onclick="adjustFont(-0.1)" title="फॉन्ट आकार घटाएं">A-</button>
+    <button class="tool-btn" onclick="resetFont()" title="सामान्य आकार">A₀</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="adjustWidth(5)" title="चौड़ाई बढ़ाएं">W+</button>
+    <button class="tool-btn" onclick="adjustWidth(-5)" title="चौड़ाई घटाएं">W-</button>
+    <button class="tool-btn" onclick="resetWidth()" title="सामान्य चौड़ाई">W₀</button>
+    <button class="tool-btn" onclick="toggleContrast()" title="कंट्रास्ट बदलें">🌓 कंट्रास्ट</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️ प्रिंट</button>
+    <button class="tool-btn" onclick="window.location.reload()" title="रीलोड करें">🔄 रीसेट</button>
+    <a href="index.html" class="tool-btn" style="text-decoration:none; display:inline-block;">🏠 होम</a>
+  </div>
+</div>
+
+<div class="main-wrapper" id="mainContent">
+
+  <!-- Quick Navigation Pills -->
+  <div class="nav-pills">
+    <a href="#definitions" class="btn-nav">📌 7 परिभाषाएँ</a>
+    <a href="#axioms" class="btn-nav">📐 7 अभिगृहीत (Axioms)</a>
+    <a href="#postulates" class="btn-nav">📏 5 अभिधारणाएँ (Postulates)</a>
+    <a href="#theorem51" class="btn-nav">⭐ प्रमेय 5.1</a>
+    <a href="#ex51" class="btn-nav">प्रश्नावली 5.1 (Q1 - Q7)</a>
+    <a href="#simulators" class="btn-nav" style="background:#eff6ff; border-color:#2563eb; color:#1d4ed8;">⚡ 5 सिमुलेटर</a>
+  </div>
+
+  <!-- Hero Title Banner -->
+  <div class="hero-title">
+    NCERT कक्षा 9 गणित • अध्याय 5
+    <span>यूक्लिड की ज्यामिति का परिचय (Introduction to Euclid's Geometry) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+  </div>
+
+  <!-- =========================================================
+       SECTION 1: EUCLID'S DEFINITIONS
+       ========================================================= -->
+  <div id="definitions" class="concept-box">
+    <div class="concept-title">📌 यूक्लिड की 7 मुख्य परिभाषाएँ (Euclid's 7 Definitions)</div>
+    
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>1. बिंदु (Point):</strong> एक बिंदु वह है जिसका कोई भाग नहीं होता (अर्थात जिसकी न कोई लम्बाई, न चौड़ाई और न ही मोटाई होती है)।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>2. रेखा (Line):</strong> एक रेखा चौड़ाई-रहित लम्बाई होती है (Breadthless length)।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>3. रेखा के सिरे (Ends of a Line):</strong> एक रेखा के सिरे बिंदु होते हैं।</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>4. सीधी रेखा (Straight Line):</strong> एक सीधी रेखा ऐसी रेखा है जो स्वयं पर बिंदुओं के साथ सपाट रूप से स्थित होती है।</p>
+    </div>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>5. पृष्ठ (Surface):</strong> एक पृष्ठ (तल) वह है जिसकी केवल लम्बाई और चौड़ाई होती है।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>6. पृष्ठ के किनारे (Edges of a Surface):</strong> पृष्ठ के किनारे रेखाएँ होती हैं।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>7. समतल पृष्ठ (Plane Surface):</strong> एक समतल पृष्ठ ऐसा पृष्ठ है जो स्वयं पर सीधी रेखाओं के साथ सपाट रूप से स्थित होता है।</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SECTION 2: EUCLID'S 7 AXIOMS
+       ========================================================= -->
+  <div id="axioms" class="concept-box">
+    <div class="concept-title">📐 यूक्लिड के 7 अभिगृहीत (Euclid's 7 Axioms)</div>
+    <p class="step-txt"><b>अभिगृहीत (Axioms):</b> वे सार्वभौमिक सत्य हैं जिन्हें बिना प्रमाण के स्वीकार किया जाता है और जिनका उपयोग संपूर्ण गणित में होता है।</p>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>1.</strong> वे वस्तुएँ जो एक ही वस्तु के बराबर हों, एक-दूसरे के भी बराबर होती हैं।</p>
+      <p class="step-txt">गणितीय रूप: यदि $A = C$ तथा $B = C$ हो, तो $A = B$ होगा।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>2.</strong> यदि बराबरों को बराबरों में जोड़ा जाए, तो पूर्ण भी बराबर होते हैं।</p>
+      <p class="step-txt">गणितीय रूप: यदि $A = B$ हो, तो $A + C = B + C$ होगा।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>3.</strong> यदि बराबरों को बराबरों में से घटाया जाए, तो शेषफल भी बराबर होते हैं।</p>
+      <p class="step-txt">गणितीय रूप: यदि $A = B$ हो, तो $A - C = B - C$ होगा।</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>4.</strong> वे वस्तुएँ जो परस्पर संपाती (Coincide) हों, एक-दूसरे के बराबर होती हैं।</p>
+      <p class="step-txt">व्याख्या: यदि दो आकृतियाँ एक-दूसरे को पूरी तरह ढक लें, तो वे सर्वांगसम व बराबर होती हैं।</p>
+    </div>
+
+    <div class="step-box-red">
+      <p class="step-txt"><strong>5.</strong> पूर्ण अपने भाग से बड़ा होता है (The whole is greater than the part)।</p>
+      <p class="step-txt">गणितीय रूप: यदि $C$, $A$ का एक भाग है, तो सदैव $A > C$ होगा।</p>
+    </div>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>6.</strong> एक ही वस्तु के दुगुने परस्पर बराबर होते हैं।</p>
+      <p class="step-txt">गणितीय रूप: यदि $A = B$ हो, तो $2A = 2B$ होगा।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>7.</strong> एक ही वस्तु के आधे परस्पर बराबर होते हैं।</p>
+      <p class="step-txt">गणितीय रूप: यदि $A = B$ हो, तो $\frac{A}{2} = \frac{B}{2}$ होगा।</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SECTION 3: EUCLID'S 5 POSTULATES
+       ========================================================= -->
+  <div id="postulates" class="concept-box">
+    <div class="concept-title">📏 यूक्लिड की 5 अभिधारणाएँ (Euclid's 5 Postulates)</div>
+    <p class="step-txt"><b>अभिधारणाएँ (Postulates):</b> वे कल्पनाएँ हैं जो विशेष रूप से ज्यामिति (Geometry) से संबंधित होती हैं।</p>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>अभिधारणा 1 (Postulate 1):</strong> एक बिंदु से एक अन्य बिंदु तक एक सीधी रेखा खींची जा सकती है।</p>
+      <p class="step-txt"><b>अभिगृहीत 5.1:</b> दिए हुए दो भिन्न बिंदुओं से होकर एक और केवल एक ही अद्वितीय रेखा खींची जा सकती है।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>अभिधारणा 2 (Postulate 2):</strong> एक शांत रेखा (Terminated line / Line segment) को अनिश्चित रूप से विस्तृत किया जा सकता है।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>अभिधारणा 3 (Postulate 3):</strong> किसी केंद्र और किसी त्रिज्या से एक वृत्त खींचा जा सकता है।</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>अभिधारणा 4 (Postulate 4):</strong> सभी समकोण एक-दूसरे के बराबर होते हैं (प्रत्येक $90^\circ$ के बराबर)।</p>
+    </div>
+
+    <div class="step-box-red">
+      <p class="step-txt"><strong>अभिधारणा 5 (Postulate 5 - समांतर अभिधारणा):</strong></p>
+      <p class="step-txt">यदि एक सीधी रेखा दो सीधी रेखाओं पर गिरकर अपने एक ही ओर दो अंतःकोण इस प्रकार बनाए कि इन दोनों कोणों का योग मिलकर दो समकोण ($180^\circ$) से कम हो, तो वे दोनों सीधी रेखाएँ अनिश्चित रूप से बढ़ाए जाने पर उसी ओर मिलती हैं जिस ओर यह योग दो समकोण से कम होता है।</p>
+      
+      <!-- High contrast SVG illustration for Postulate 5 -->
+      <div style="text-align:center; margin:16px 0;">
+        <svg width="460" height="220" viewBox="0 0 460 220" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+          <!-- Line 1 -->
+          <line x1="40" y1="40" x2="420" y2="90" stroke="#2563eb" stroke-width="4"/>
+          <!-- Line 2 -->
+          <line x1="40" y1="180" x2="420" y2="130" stroke="#2563eb" stroke-width="4"/>
+          <!-- Transversal Line -->
+          <line x1="160" y1="20" x2="160" y2="200" stroke="#dc2626" stroke-width="4"/>
+          <!-- Angles -->
+          <path d="M 160 62 A 20 20 0 0 0 180 65" fill="none" stroke="#ea580c" stroke-width="3"/>
+          <path d="M 160 158 A 20 20 0 0 1 180 155" fill="none" stroke="#ea580c" stroke-width="3"/>
+          <!-- Labels -->
+          <text x="190" y="75" fill="#ea580c" font-size="16" font-weight="bold">∠1</text>
+          <text x="190" y="150" fill="#ea580c" font-size="16" font-weight="bold">∠2</text>
+          <text x="20" y="45" fill="#2563eb" font-size="16" font-weight="bold">l</text>
+          <text x="20" y="185" fill="#2563eb" font-size="16" font-weight="bold">m</text>
+          <text x="165" y="25" fill="#dc2626" font-size="16" font-weight="bold">n (तिर्यक रेखा)</text>
+          <text x="250" y="115" fill="#0f172a" font-size="15" font-weight="bold">∠1 + ∠2 &lt; 180° ➔ रेखाएँ दाईं ओर मिलेंगी</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SECTION 4: THEOREM 5.1
+       ========================================================= -->
+  <div id="theorem51" class="qa-block">
+    <h3 class="question-heading">⭐ प्रमेय 5.1 (Theorem 5.1): दो भिन्न रेखाओं में एक से अधिक बिंदु उभयनिष्ठ (Common) नहीं हो सकते।</h3>
+    
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति (Proof) - विरोधोक्ति द्वारा (By Contradiction):</b></p>
+      
+      <p class="step-txt"><strong>चरण 1 (मान्यता):</strong></p>
+      <p class="step-txt">मान लीजिए कि दो भिन्न रेखाएँ $l$ और $m$ हैं, और वे दो भिन्न बिंदुओं $P$ और $Q$ पर एक-दूसरे को प्रतिच्छेद करती हैं।</p>
+      
+      <p class="step-txt"><strong>चरण 2 (तर्क):</strong></p>
+      <p class="step-txt">इसका अर्थ यह हुआ कि दो भिन्न बिंदुओं $P$ और $Q$ से होकर दो अलग-अलग रेखाएँ $l$ और $m$ गुजरती हैं।</p>
+      
+      <p class="step-txt"><strong>चरण 3 (विरोधाभास):</strong></p>
+      <p class="step-txt">परन्तु यूक्लिड के अभिगृहीत 5.1 के अनुसार, <b>दो भिन्न बिंदुओं से होकर केवल और केवल एक ही अद्वितीय रेखा खींची जा सकती है।</b></p>
+      
+      <p class="step-txt"><strong>चरण 4 (निष्कर्ष):</strong></p>
+      <p class="step-txt">अतः हमारी यह कल्पना कि रेखाएँ दो बिंदुओं पर प्रतिच्छेद कर सकती हैं, गलत है।</p>
+      <p class="step-txt">अतः सिद्ध हुआ कि दो भिन्न रेखाओं में <b>एक से अधिक बिंदु उभयनिष्ठ नहीं हो सकते</b>।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम् (Hence Proved): दो रेखाएँ या तो परस्पर प्रतिच्छेद नहीं करेंगी (समांतर होंगी) अथवा केवल एक ही बिंदु पर प्रतिच्छेद करेंगी।
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 5.1
+       ========================================================= -->
+  <div id="ex51" class="part-header">
+    📖 प्रश्नावली 5.1 (Exercise 5.1) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 5.1 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: निम्नलिखित कथनों में से कौन-से कथन सत्य हैं और कौन-से कथन असत्य हैं? अपने उत्तरों के लिए कारण दीजिए:</h3>
+
+    <!-- Q1(i) -->
+    <div class="step-box-red">
+      <p class="step-txt"><b>(i) एक ही बिंदु से होकर केवल एक ही रेखा खींची जा सकती है।</b></p>
+      <p class="step-txt"><b>उत्तर: असत्य (False)</b></p>
+      <p class="step-txt"><b>कारण:</b> एक अकेले बिंदु से होकर विभिन्न दिशाओं में अपरिमित रूप से अनेक (अनंत) रेखाएँ खींची जा सकती हैं।</p>
+    </div>
+
+    <!-- Q1(ii) -->
+    <div class="step-box-red">
+      <p class="step-txt"><b>(ii) दो भिन्न बिंदुओं से होकर जाने वाली असंख्य रेखाएँ हैं।</b></p>
+      <p class="step-txt"><b>उत्तर: असत्य (False)</b></p>
+      <p class="step-txt"><b>कारण:</b> यूक्लिड के अभिगृहीत 5.1 के अनुसार, दो दिए गए भिन्न बिंदुओं से होकर <b>केवल एक ही अद्वितीय रेखा</b> गुजर सकती है।</p>
+    </div>
+
+    <!-- Q1(iii) -->
+    <div class="step-box-green">
+      <p class="step-txt"><b>(iii) एक शांत रेखा (Terminated line) दोनों ओर अनिश्चित रूप से बढ़ाई जा सकती है।</b></p>
+      <p class="step-txt"><b>उत्तर: सत्य (True)</b></p>
+      <p class="step-txt"><b>कारण:</b> यह यूक्लिड की अभिधारणा 2 (Postulate 2) का सीधा कथन है। एक रेखाखंड को दोनों दिशाओं में जितना चाहें उतना आगे विस्तृत किया जा सकता है।</p>
+    </div>
+
+    <!-- Q1(iv) -->
+    <div class="step-box-green">
+      <p class="step-txt"><b>(iv) यदि दो वृत्त बराबर हैं, तो उनकी त्रिज्याएँ बराबर होती हैं।</b></p>
+      <p class="step-txt"><b>उत्तर: सत्य (True)</b></p>
+      <p class="step-txt"><b>कारण:</b> दो वृत्तों के बराबर होने का अर्थ है कि उनके क्षेत्रफल समान हैं और उनके वृत्तीय क्षेत्र एक-दूसरे के पूर्णतः संपाती (Coincident) हैं। अतः यूक्लिड के अभिगृहीत 4 के अनुसार, उनके केंद्र और परिधियाँ एक-दूसरे को पूर्णतः ढक लेंगी, जिससे उनकी त्रिज्याएँ भी परस्पर बराबर होंगी।</p>
+    </div>
+
+    <!-- Q1(v) -->
+    <div class="step-box-green">
+      <p class="step-txt"><b>(v) आकृति में, यदि $AB = PQ$ और $PQ = XY$ है, तो $AB = XY$ होगा।</b></p>
+      <p class="step-txt"><b>उत्तर: सत्य (True)</b></p>
+      <p class="step-txt"><b>कारण:</b> यह यूक्लिड के अभिगृहीत 1 (Axiom 1) के अनुसार है: <i>"वे वस्तुएँ जो एक ही वस्तु के बराबर हों, परस्पर एक-दूसरे के बराबर होती हैं।"</i></p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &= PQ \\
+      XY &= PQ \\
+      \implies AB &= XY
+      \end{aligned}$$</div>
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: निम्नलिखित पदों में से प्रत्येक की परिभाषा दीजिए। क्या इनके लिए कुछ ऐसे पद हैं, जिन्हें परिभाषित करने की आवश्यकता है? वे क्या हैं और आप इन्हें कैसे परिभाषित कर सकते हैं?</h3>
+    <p class="step-txt"><b>प्रारंभिक अपरिभाषित पद:</b> इन परिभाषाओं को समझने के लिए बिंदु (Point), रेखा (Line), तल (Plane) तथा किरण/दूरी जैसे मूल पदों को पहले समझना आवश्यक होता है।</p>
+
+    <!-- Q2(i) -->
+    <div class="step-box-blue">
+      <p class="step-txt"><b>(i) समांतर रेखाएँ (Parallel Lines):</b></p>
+      <p class="step-txt">एक ही समतल में स्थित वे दो रेखाएँ, जो आगे या पीछे अनिश्चित रूप से बढ़ाए जाने पर कभी भी एक-दूसरे को प्रतिच्छेद नहीं करतीं (अर्थात जिनके बीच की लंबवत दूरी सदैव समान रहती है), <b>समांतर रेखाएँ</b> कहलाती हैं।</p>
+      <p class="step-txt">अपेक्षित पद: 'समतल' और 'प्रतिच्छेद'।</p>
+    </div>
+
+    <!-- Q2(ii) -->
+    <div class="step-box-green">
+      <p class="step-txt"><b>(ii) लम्ब रेखाएँ (Perpendicular Lines):</b></p>
+      <p class="step-txt">यदि दो रेखाएँ परस्पर एक बिंदु पर प्रतिच्छेद करें और उनके बीच का कोण एक समकोण ($90^\circ$) हो, तो वे रेखाएँ परस्पर <b>लम्ब रेखाएँ</b> कहलाती हैं।</p>
+      <p class="step-txt">अपेक्षित पद: 'प्रतिच्छेद बिंदु' और 'समकोण'।</p>
+    </div>
+
+    <!-- Q2(iii) -->
+    <div class="step-box-orange">
+      <p class="step-txt"><b>(iii) रेखाखंड (Line Segment):</b></p>
+      <p class="step-txt">किसी रेखा का वह भाग जिसके दो निश्चित अंत बिंदु (End points) होते हैं, <b>रेखाखंड</b> कहलाता है। इसकी लम्बाई निश्चित व मापन योग्य होती है।</p>
+      <p class="step-txt">अपेक्षित पद: 'रेखा' और 'अंत बिंदु'।</p>
+    </div>
+
+    <!-- Q2(iv) -->
+    <div class="step-box-purple">
+      <p class="step-txt"><b>(iv) वृत्त की त्रिज्या (Radius of a Circle):</b></p>
+      <p class="step-txt">वृत्त के केंद्र से उसकी परिधि (बाउंड्री) पर स्थित किसी भी बिंदु को मिलाने वाले रेखाखंड की लम्बाई को <b>वृत्त की त्रिज्या</b> कहते हैं।</p>
+      <p class="step-txt">अपेक्षित पद: 'केंद्र' और 'परिधि'।</p>
+    </div>
+
+    <!-- Q2(v) -->
+    <div class="step-box-blue">
+      <p class="step-txt"><b>(v) वर्ग (Square):</b></p>
+      <p class="step-txt">एक ऐसा चतुर्भुज जिसकी चारों भुजाएँ समान लम्बाई की हों तथा जिसके चारों अंतःकोण समकोण ($90^\circ$) हों, <b>वर्ग</b> कहलाता है।</p>
+      <p class="step-txt">अपेक्षित पद: 'चतुर्भुज', 'भुजा', और 'समकोण'।</p>
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: नीचे दी गई दो अभिधारणाओं पर विचार कीजिए:</h3>
+    <ol>
+      <li>(i) दो भिन्न बिंदु $A$ और $B$ दिए रहने पर, एक तीसरा बिंदु $C$ ऐसा विद्यमान है जो $A$ और $B$ के बीच स्थित होता है।</li>
+      <li>(ii) यहाँ कम से कम ऐसे तीन बिंदु विद्यमान हैं जो एक ही रेखा पर स्थित नहीं हैं।</li>
+    </ol>
+    <p class="step-txt">क्या इन अभिधारणाओं में कोई अपरिभाषित शब्द हैं? क्या ये अभिधारणाएँ अविरोधी (संगत / Consistent) हैं? क्या ये यूक्लिड की अभिधारणाओं से प्राप्त होती हैं? स्पष्ट कीजिए।</p>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>विस्तृत उत्तर व विश्लेषण:</b></p>
+      
+      <p class="step-txt"><strong>1. अपरिभाषित शब्द:</strong></p>
+      <p class="step-txt">हाँ, इन कथनों में कई पद अपरिभाषित हैं, जैसे कि 'बिंदु', 'रेखा', तथा 'के बीच स्थित होना'।</p>
+      
+      <p class="step-txt"><strong>2. संगतता (Consistency):</strong></p>
+      <p class="step-txt">हाँ, ये दोनों अभिधारणाएँ पूर्णतः <b>संगत (Consistent)</b> हैं, क्योंकि ये दोनों एक-दूसरे का विरोध नहीं करतीं बल्कि दो भिन्न ज्यामितीय स्थितियों का वर्णन करती हैं:</p>
+      <p class="step-txt">• कथन (i) यह बताता है कि यदि दो बिंदु $A$ और $B$ दिए हों, तो उन्हें मिलाने वाली रेखा पर उनके मध्य अनगिनत बिंदु $C$ स्थित हो सकते हैं (संरेखी बिंदु)।</p>
+      <p class="step-txt">• कथन (ii) यह बताता है कि हम कम से कम एक ऐसा बिंदु ले सकते हैं जो $A$ और $B$ से जाने वाली रेखा पर स्थित न हो (असंरेखी बिंदु)।</p>
+
+      <p class="step-txt"><strong>3. क्या ये यूक्लिड की अभिधारणाओं से प्राप्त होती हैं?</strong></p>
+      <p class="step-txt">नहीं, ये सीधे यूक्लिड की अभिधारणाओं से प्राप्त नहीं होतीं। तथापि, ये यूक्लिड के <b>अभिगृहीत 5.1</b> (दो भिन्न बिंदुओं से एक अद्वितीय रेखा गुजरती है) का अनुसरण करती हैं।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ निष्कर्ष: ये अभिधारणाएँ संगत हैं और यूक्लिड के अभिगृहीत 5.1 पर आधारित हैं।
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: यदि दो बिंदुओं $A$ और $B$ के बीच एक बिंदु $C$ ऐसा स्थित है कि $AC = BC$ है, तो सिद्ध कीजिए कि $AC = \frac{1}{2}AB$ है। एक आकृति खींचकर इसे स्पष्ट कीजिए।</h3>
+
+    <!-- High-contrast SVG line diagram -->
+    <div style="text-align:center; margin:18px 0;">
+      <svg width="480" height="90" viewBox="0 0 480 90" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+        <!-- Line segment AB -->
+        <line x1="50" y1="45" x2="430" y2="45" stroke="#1e40af" stroke-width="5"/>
+        <!-- Points A, C, B -->
+        <circle cx="50" cy="45" r="7" fill="#dc2626"/>
+        <circle cx="240" cy="45" r="7" fill="#16a34a"/>
+        <circle cx="430" cy="45" r="7" fill="#dc2626"/>
+        <!-- Labels -->
+        <text x="45" y="75" fill="#0f172a" font-size="18" font-weight="900">A</text>
+        <text x="235" y="75" fill="#0f172a" font-size="18" font-weight="900">C</text>
+        <text x="425" y="75" fill="#0f172a" font-size="18" font-weight="900">B</text>
+        <!-- Tick marks -->
+        <line x1="140" y1="35" x2="140" y2="55" stroke="#ea580c" stroke-width="3"/>
+        <line x1="330" y1="35" x2="330" y2="55" stroke="#ea580c" stroke-width="3"/>
+        <text x="110" y="28" fill="#ea580c" font-size="14" font-weight="bold">AC</text>
+        <text x="300" y="28" fill="#ea580c" font-size="14" font-weight="bold">BC</text>
+      </svg>
+    </div>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1:</strong> दिया गया है कि बिंदु $C$, $A$ और $B$ के मध्य स्थित है तथा:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= BC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2:</strong> यूक्लिड के अभिगृहीत 2 के अनुसार: <i>"यदि बराबरों को बराबरों में जोड़ा जाए, तो पूर्ण भी बराबर होते हैं।"</i></p>
+      <p class="step-txt">दोनों पक्षों में $AC$ जोड़ने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC + AC &= BC + AC \\
+      2AC &= AC + BC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3:</strong> आकृति से स्पष्ट है कि रेखाखंड $AC$ और $CB$ मिलकर पूर्ण रेखाखंड $AB$ के संपाती हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC + BC &= AB
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4:</strong> समीकरण में मान प्रतिस्थापित करने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      2AC &= AB \\
+      AC &= \frac{1}{2}AB
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम् (Hence Proved): $AC = \frac{1}{2}AB$
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: प्रश्न 4 में, $C$ रेखाखंड $AB$ का एक 'मध्य-बिंदु' कहलाता है। सिद्ध कीजिए कि एक रेखाखंड का एक और केवल एक ही मध्य-बिंदु (Unique Mid-point) होता है।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति (Proof) - विरोधोक्ति द्वारा:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1:</strong> मान लीजिए कि रेखाखंड $AB$ के दो भिन्न मध्य-बिंदु $C$ और $D$ हैं।</p>
+      
+      <p class="step-txt"><strong>चरण 2:</strong> यदि $C$ रेखाखंड $AB$ का मध्य-बिंदु है, तो प्रश्न 4 के अनुसार:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= \frac{1}{2}AB 
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3:</strong> यदि $D$ भी रेखाखंड $AB$ का मध्य-बिंदु है, तो उसी प्रकार:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AD &= \frac{1}{2}AB 
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4:</strong> यूक्लिड के अभिगृहीत 1 के अनुसार: <i>"वे वस्तुएँ जो एक ही वस्तु के बराबर हों, परस्पर बराबर होती हैं।"</i></p>
+      <p class="step-txt">समीकरण 1 और समीकरण 2 की तुलना करने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= AD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 5:</strong> $AC = AD$ केवल और केवल तभी संभव हो सकता है जब बिंदु $C$ और बिंदु $D$ परस्पर संपाती (Coincide) हों, अर्थात वे दोनों एक ही बिंदु हों।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: प्रत्येक रेखाखंड का एक और केवल एक ही अद्वितीय मध्य-बिंदु होता है।
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: दी गई आकृति में, यदि $AC = BD$ है, तो सिद्ध कीजिए कि $AB = CD$ है।</h3>
+
+    <!-- High-contrast SVG line diagram with 4 points A, B, C, D -->
+    <div style="text-align:center; margin:18px 0;">
+      <svg width="520" height="100" viewBox="0 0 520 100" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
+        <line x1="50" y1="45" x2="470" y2="45" stroke="#1e40af" stroke-width="5"/>
+        <circle cx="50" cy="45" r="7" fill="#dc2626"/>
+        <circle cx="180" cy="45" r="7" fill="#16a34a"/>
+        <circle cx="340" cy="45" r="7" fill="#16a34a"/>
+        <circle cx="470" cy="45" r="7" fill="#dc2626"/>
+        <text x="45" y="75" fill="#0f172a" font-size="18" font-weight="900">A</text>
+        <text x="175" y="75" fill="#0f172a" font-size="18" font-weight="900">B</text>
+        <text x="335" y="75" fill="#0f172a" font-size="18" font-weight="900">C</text>
+        <text x="465" y="75" fill="#0f172a" font-size="18" font-weight="900">D</text>
+        <!-- AC bracket -->
+        <path d="M 50 25 L 195 15 L 340 25" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <text x="180" y="10" fill="#2563eb" font-size="14" font-weight="bold">AC</text>
+        <!-- BD bracket -->
+        <path d="M 180 85 L 325 95 L 470 85" fill="none" stroke="#ea580c" stroke-width="2"/>
+        <text x="310" y="98" fill="#ea580c" font-size="14" font-weight="bold">BD</text>
+      </svg>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1:</strong> दिया गया है कि:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= BD 
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2:</strong> आकृति से हम देख सकते हैं कि बिंदु $B$, $A$ और $C$ के बीच स्थित है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= AB + BC 
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3:</strong> इसी प्रकार बिंदु $C$, $B$ और $D$ के बीच स्थित है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BD &= BC + CD 
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 4:</strong> समीकरण 2 और समीकरण 3 के मान समीकरण 1 में रखने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB + BC &= BC + CD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 5:</strong> यूक्लिड के अभिगृहीत 3 के अनुसार: <i>"यदि बराबरों को बराबरों में से घटाया जाए, तो शेषफल बराबर होते हैं।"</i></p>
+      <p class="step-txt">दोनों पक्षों में से $BC$ घटाने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB + BC - BC &= BC + CD - BC \\
+      AB &= CD
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम् (Hence Proved): $AB = CD$
+    </div>
+  </div>
+
+  <!-- Ex 5.1 Q7 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 7: यूक्लिड की अभिगृहीतों की सूची में दिया हुआ अभिगृहीत 5 एक 'सर्वव्यापी सत्य' (Universal Truth) क्यों माना जाता है? (ध्यान दीजिए कि यह प्रश्न पाँचवीं अभिधारणा के बारे में नहीं है)।</h3>
+    
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उत्तर व कारण:</b></p>
+      <p class="step-txt"><strong>अभिगृहीत 5 का कथन:</strong> <i>"पूर्ण अपने भाग से बड़ा होता है" (The whole is greater than the part)।</i></p>
+      
+      <p class="step-txt"><strong>यह सर्वव्यापी सत्य क्यों है?</strong></p>
+      <p class="step-txt">1. यह सिद्धांत केवल ज्यामिति या गणित तक ही सीमित नहीं है, बल्कि ब्रह्मांड के प्रत्येक भौतिक, प्राकृतिक और सैद्धांतिक संदर्भ में सदैव सत्य होता है।</p>
+      <p class="step-txt">2. यदि कोई वस्तु $A$ है और $B$ उसका कोई भी एक अंश या टुकड़ा (भाग) है, तो वस्तु $A$ सदैव अपने उस भाग $B$ से परिमाण में बड़ी होगी ($A > B$)।</p>
+      <p class="step-txt">3. उदाहरण के लिए:</p>
+      <p class="step-txt">• एक पूरा केक अपने किसी भी एक स्लाइस (टुकड़े) से बड़ा होता है।</p>
+      <p class="step-txt">• भारत देश (पूर्ण) अपने किसी भी एक राज्य (भाग, जैसे राजस्थान) से भौगोलिक रूप से बड़ा है।</p>
+      <p class="step-txt">• एक रेखाखंड $AB$ अपने किसी भी आंतरिक भाग $AC$ से सदैव लम्बा होता है।</p>
+      <p class="step-txt">चूँकि यह नियम विश्व की प्रत्येक वस्तु और सभी परिस्थितियों में बिना किसी अपवाद के लागू होता है, इसलिए इसे <b>सर्वव्यापी सत्य (Universal Truth)</b> माना जाता है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ निष्कर्ष: "पूर्ण अपने भाग से बड़ा होता है" प्रकृति का एक अपरिवर्तनीय नियम है, अतः यह एक सार्वभौमिक सत्य है।
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SIMULATOR SECTION (5 LIVE SIMULATORS)
+       ========================================================= -->
+  <div id="simulators" class="part-header">
+    ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Geometry Simulators)
+  </div>
+
+  <!-- SIMULATOR 1 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: यूक्लिड अभिगृहीत सत्यापनकर्ता (Euclid's Axioms Interactive Verifier)</h3>
+    <p class="step-txt">कोई भी अभिगृहीत चुनें और वास्तविक संख्याओं के साथ उसका नियम लाइव सिद्ध होते देखें:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>अभिगृहीत का चयन करें:</label>
+        <select id="sim1_axiom" onchange="runSim1()">
+          <option value="1">अभिगृहीत 1: एक ही वस्तु के बराबर वस्तुएँ (A=C, B=C ➔ A=B)</option>
+          <option value="2">अभिगृहीत 2: बराबरों में बराबर जोड़ना (A=B ➔ A+C = B+C)</option>
+          <option value="3">अभिगृहीत 3: बराबरों में से बराबर घटाना (A=B ➔ A-C = B-C)</option>
+          <option value="5">अभिगृहीत 5: पूर्ण अपने भाग से बड़ा है (Whole > Part)</option>
+          <option value="6">अभिगृहीत 6: एक ही वस्तु के दुगुने (A=B ➔ 2A = 2B)</option>
+          <option value="7">अभिगृहीत 7: एक ही वस्तु के आधे (A=B ➔ A/2 = B/2)</option>
+        </select>
+      </div>
+      <div class="sim-group">
+        <label>मान A (तथा B):</label>
+        <input type="number" id="sim1_a" value="10" oninput="runSim1()">
+      </div>
+      <div class="sim-group">
+        <label>जोड़ने/घटाने वाला मान C:</label>
+        <input type="number" id="sim1_c" value="4" oninput="runSim1()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim1()">
+          ⚡ सत्यापन देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim1_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 2 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: यूक्लिड अभिधारणा 5 कोण परीक्षक (Postulate 5 Line Intersection Tester)</h3>
+    <p class="step-txt">तिर्यक रेखा के एक ओर के दोनों अंतःकोण दर्ज करें। सिमुलेटर गणना करके दिखाएगा कि रेखाएँ मिलेंगी या समांतर रहेंगी:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>पहला अंतःकोण ∠1 (डिग्री):</label>
+        <input type="number" id="sim2_angle1" value="85" min="1" max="179" oninput="runSim2()">
+      </div>
+      <div class="sim-group">
+        <label>दूसरा अंतःकोण ∠2 (डिग्री):</label>
+        <input type="number" id="sim2_angle2" value="80" min="1" max="179" oninput="runSim2()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim2()">
+          ⚡ कोणों का योग व परिणाम देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <canvas id="sim2_canvas" class="sim-canvas" width="600" height="280"></canvas>
+    <div id="sim2_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 3 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: रेखाखंड मध्य-बिंदु व भाग गणक (Mid-point & Division Simulator)</h3>
+    <p class="step-txt">रेखाखंड $AB$ की कुल लम्बाई दर्ज करें। सिमुलेटर मध्य-बिंदु $C$ पर $AC = BC = \frac{1}{2}AB$ का सत्यापन दिखाएगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>रेखाखंड AB की कुल लम्बाई (cm):</label>
+        <input type="number" id="sim3_ab" value="12" min="1" max="100" oninput="runSim3()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim3()">
+          ⚡ मध्य-बिंदु गणना करें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim3_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 4 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: समकोण अभिधारणा 4 प्रदर्शक (Right Angle Equality Explorer)</h3>
+    <p class="step-txt">अलग-अलग भुजाओं व दिशाओं वाले समकोण बनाकर देखें कि यूक्लिड के अनुसार सभी समकोण परस्पर बराबर क्यों होते हैं:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>समकोण 1 की भुजा लम्बाई:</label>
+        <input type="number" id="sim4_s1" value="80" min="30" max="150" oninput="runSim4()">
+      </div>
+      <div class="sim-group">
+        <label>समकोण 2 की भुजा लम्बाई:</label>
+        <input type="number" id="sim4_s2" value="120" min="30" max="150" oninput="runSim4()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim4()">
+          ⚡ समकोणों की तुलना करें ➔
+        </button>
+      </div>
+    </div>
+
+    <canvas id="sim4_canvas" class="sim-canvas" width="600" height="240"></canvas>
+    <div id="sim4_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 5 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: पूर्ण बनाम भाग संपाती परीक्षक (Whole vs Part Visualizer)</h3>
+    <p class="step-txt">पूर्ण का मान और उसके एक भाग का मान दर्ज करें। सिमुलेटर अभिगृहीत 4 व 5 का व्यावहारिक प्रदर्शन करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>पूर्ण (Whole) का मान W:</label>
+        <input type="number" id="sim5_w" value="50" min="10" max="100" oninput="runSim5()">
+      </div>
+      <div class="sim-group">
+        <label>भाग (Part) का मान P:</label>
+        <input type="number" id="sim5_p" value="18" min="1" max="100" oninput="runSim5()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim5()">
+          ⚡ तुलना व शेषफल देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim5_output" class="sim-output-box"></div>
+  </div>
+
+</div><!-- End main-wrapper -->
+
+<!-- Scripts -->
+<script>
+  // Projector Toolbar Functions
+  var currentScale = 1.0;
+  var currentWidth = 100;
+
+  function adjustFont(delta) {
+    currentScale = Math.max(0.7, Math.min(2.0, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function resetFont() {
+    currentScale = 1.0;
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function adjustWidth(delta) {
+    currentWidth = Math.max(60, Math.min(100, currentWidth + delta));
+    document.documentElement.style.setProperty('--width-scale', currentWidth + '%');
+  }
+
+  function resetWidth() {
+    currentWidth = 100;
+    document.documentElement.style.setProperty('--width-scale', '100%');
+  }
+
+  function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  // ==========================================================
+  // SIMULATOR 1: Euclid's Axioms Validator
+  // ==========================================================
+  function runSim1() {
+    var ax = document.getElementById('sim1_axiom').value;
+    var a = parseFloat(document.getElementById('sim1_a').value) || 10;
+    var c = parseFloat(document.getElementById('sim1_c').value) || 4;
+    var out = document.getElementById('sim1_output');
+
+    var html = '';
+    if (ax === '1') {
+      html = '<div class="step-box-blue">' +
+        '<p class="step-txt"><strong>अभिगृहीत 1:</strong> वे वस्तुएँ जो एक ही वस्तु के बराबर हों, परस्पर बराबर होती हैं।</p>' +
+        '<p class="step-txt">यदि $A = ' + a + '$ तथा $B = ' + a + '$ (दोनों एक ही मान $C = ' + a + '$ के बराबर हैं):</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} A &= ' + a + ' \\\\ B &= ' + a + ' \\\\ \\implies A &= B \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ सत्यापन: दोनों का मान बराबर (' + a + ' = ' + a + ') है।</div></div>';
+    } else if (ax === '2') {
+      var res = a + c;
+      html = '<div class="step-box-green">' +
+        '<p class="step-txt"><strong>अभिगृहीत 2:</strong> बराबरों को बराबरों में जोड़ने पर पूर्ण भी बराबर होते हैं।</p>' +
+        '<p class="step-txt">यदि $A = B = ' + a + '$ और दोनों में $C = ' + c + '$ जोड़ा जाए:</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} A + C &= ' + a + ' + ' + c + ' \\\\ &= ' + res + ' \\\\ B + C &= ' + a + ' + ' + c + ' \\\\ &= ' + res + ' \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ पूर्ण बराबर हैं: $A + C = B + C = ' + res + '$</div></div>';
+    } else if (ax === '3') {
+      var resSub = a - c;
+      html = '<div class="step-box-orange">' +
+        '<p class="step-txt"><strong>अभिगृहीत 3:</strong> बराबरों में से बराबर घटाने पर शेषफल भी बराबर होते हैं।</p>' +
+        '<p class="step-txt">यदि $A = B = ' + a + '$ और दोनों में से $C = ' + c + '$ घटाया जाए:</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} A - C &= ' + a + ' - ' + c + ' \\\\ &= ' + resSub + ' \\\\ B - C &= ' + a + ' - ' + c + ' \\\\ &= ' + resSub + ' \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ शेषफल बराबर हैं: $A - C = B - C = ' + resSub + '$</div></div>';
+    } else if (ax === '5') {
+      var part = Math.min(a, c);
+      var whole = Math.max(a, c);
+      html = '<div class="step-box-red">' +
+        '<p class="step-txt"><strong>अभिगृहीत 5:</strong> पूर्ण अपने भाग से बड़ा होता है।</p>' +
+        '<p class="step-txt">पूर्ण मान $W = ' + whole + '$ तथा भाग $P = ' + part + '$</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} W &> P \\\\ ' + whole + ' &> ' + part + ' \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ सत्य सिद्ध हुआ: पूर्ण (' + whole + ') सदैव अपने भाग (' + part + ') से बड़ा है।</div></div>';
+    } else if (ax === '6') {
+      var dbl = 2 * a;
+      html = '<div class="step-box-blue">' +
+        '<p class="step-txt"><strong>अभिगृहीत 6:</strong> एक ही वस्तु के दुगुने परस्पर बराबर होते हैं।</p>' +
+        '<p class="step-txt">यदि $A = B = ' + a + '$ हो, तो उनके दुगुने:</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} 2A &= 2 \\times ' + a + ' \\\\ &= ' + dbl + ' \\\\ 2B &= 2 \\times ' + a + ' \\\\ &= ' + dbl + ' \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ दुगुने बराबर हैं: $2A = 2B = ' + dbl + '$</div></div>';
+    } else if (ax === '7') {
+      var half = a / 2;
+      html = '<div class="step-box-green">' +
+        '<p class="step-txt"><strong>अभिगृहीत 7:</strong> एक ही वस्तु के आधे परस्पर बराबर होते हैं।</p>' +
+        '<p class="step-txt">यदि $A = B = ' + a + '$ हो, तो उनके आधे:</p>' +
+        '<div class="math-scroll">$$\\begin{aligned} \\frac{A}{2} &= \\frac{' + a + '}{2} \\\\ &= ' + half + ' \\\\ \\frac{B}{2} &= \\frac{' + a + '}{2} \\\\ &= ' + half + ' \\end{aligned}$$</div>' +
+        '<div class="answer-highlight">✅ आधे बराबर हैं: $\\frac{A}{2} = \\frac{B}{2} = ' + half + '$</div></div>';
+    }
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 2: Postulate 5 Angle & Intersection Tester
+  // ==========================================================
+  function runSim2() {
+    var ang1 = parseFloat(document.getElementById('sim2_angle1').value) || 85;
+    var ang2 = parseFloat(document.getElementById('sim2_angle2').value) || 80;
+    var sum = ang1 + ang2;
+    var out = document.getElementById('sim2_output');
+
+    var canvas = document.getElementById('sim2_canvas');
+    if (canvas) {
+      var ctx = canvas.getContext('2d');
+      var W = canvas.width;
+      var H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      // Draw transversal line
+      ctx.strokeStyle = '#dc2626';
+      ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(180, 20); ctx.lineTo(180, H - 20); ctx.stroke();
+
+      // Top line inclined by (90 - ang1)
+      var slope1 = Math.tan((90 - ang1) * Math.PI / 180);
+      var y1_trans = 80;
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(30, y1_trans - (150 * slope1));
+      ctx.lineTo(W - 30, y1_trans + ((W - 30 - 180) * slope1));
+      ctx.stroke();
+
+      // Bottom line inclined by (ang2 - 90)
+      var slope2 = -Math.tan((90 - ang2) * Math.PI / 180);
+      var y2_trans = 200;
+      ctx.beginPath();
+      ctx.moveTo(30, y2_trans - (150 * slope2));
+      ctx.lineTo(W - 30, y2_trans + ((W - 30 - 180) * slope2));
+      ctx.stroke();
+
+      // Labels
+      ctx.fillStyle = '#0f172a';
+      ctx.font = 'bold 15px system-ui';
+      ctx.fillText('∠1 = ' + ang1 + '°', 200, 70);
+      ctx.fillText('∠2 = ' + ang2 + '°', 200, 195);
+      ctx.fillStyle = '#dc2626';
+      ctx.fillText('तिर्यक रेखा', 185, 30);
+    }
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>अंतःकोणों का योग:</strong> $\\angle 1 + \\angle 2 = ' + ang1 + '^\\circ + ' + ang2 + '^\\circ = ' + sum + '^\\circ$</p>';
+
+    if (sum < 180) {
+      html += '<div class="answer-highlight" style="background:#fff1f2; color:#be123c; border-color:#e11d48;">' +
+        '⚠️ योग ' + sum + '° &lt; 180° (दो समकोण से कम) है। यूक्लिड की अभिधारणा 5 के अनुसार <b>ये रेखाएँ आगे बढ़ाने पर दाईं ओर निश्चित रूप से मिलेंगी (प्रतिच्छेद करेंगी)</b>।</div>';
+    } else if (sum === 180) {
+      html += '<div class="answer-highlight" style="background:#ecfdf5; color:#065f46; border-color:#10b981;">' +
+        '✅ योग ठीक 180° (दो समकोण के बराबर) है। अतः <b>ये दोनों रेखाएँ कभी नहीं मिलेंगी, अर्थात परस्पर समांतर (Parallel) हैं</b>।</div>';
+    } else {
+      html += '<div class="answer-highlight" style="background:#fffaf5; color:#c2410c; border-color:#ea580c;">' +
+        'ℹ️ दाईं ओर योग ' + sum + '° &gt; 180° है। अतः ये रेखाएँ दाईं ओर फैलेंगी तथा <b>बाईं ओर पीछे बढ़ाने पर मिलेंगी</b>।</div>';
+    }
+    html += '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 3: Mid-point Division
+  // ==========================================================
+  function runSim3() {
+    var ab = parseFloat(document.getElementById('sim3_ab').value) || 12;
+    var half = ab / 2;
+    var out = document.getElementById('sim3_output');
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt"><strong>रेखाखंड की कुल लम्बाई:</strong> $AB = ' + ab + '$ cm</p>' +
+      '<p class="step-txt">चूँकि $C$ रेखाखंड $AB$ का मध्य-बिंदु है, अतः $AC = BC$:</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'AC &= \\frac{1}{2} AB \\\\' +
+      '&= \\frac{1}{2} \\times ' + ab + ' \\\\' +
+      '&= ' + half + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ परिणाम: $AC = ' + half + '$ cm तथा $BC = ' + half + '$ cm (दोनों भाग परस्पर बराबर हैं)।</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 4: Right Angle Equality Explorer
+  // ==========================================================
+  function runSim4() {
+    var s1 = parseFloat(document.getElementById('sim4_s1').value) || 80;
+    var s2 = parseFloat(document.getElementById('sim4_s2').value) || 120;
+    var out = document.getElementById('sim4_output');
+
+    var canvas = document.getElementById('sim4_canvas');
+    if (canvas) {
+      var ctx = canvas.getContext('2d');
+      var W = canvas.width;
+      var H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+
+      // Angle 1
+      var ox1 = 120, oy1 = 180;
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(ox1, oy1 - s1); ctx.lineTo(ox1, oy1); ctx.lineTo(ox1 + s1, oy1); ctx.stroke();
+      ctx.strokeStyle = '#ea580c';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(ox1, oy1 - 18, 18, 18);
+      ctx.fillStyle = '#1e40af';
+      ctx.font = 'bold 16px system-ui';
+      ctx.fillText('समकोण 1 (90°)', ox1 - 20, oy1 + 25);
+
+      // Angle 2
+      var ox2 = 380, oy2 = 180;
+      ctx.strokeStyle = '#16a34a';
+      ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(ox2, oy2 - s2); ctx.lineTo(ox2, oy2); ctx.lineTo(ox2 + s2, oy2); ctx.stroke();
+      ctx.strokeStyle = '#ea580c';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(ox2, oy2 - 18, 18, 18);
+      ctx.fillStyle = '#15803d';
+      ctx.font = 'bold 16px system-ui';
+      ctx.fillText('समकोण 2 (90°)', ox2 - 20, oy2 + 25);
+    }
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt"><strong>अभिधारणा 4 का सत्यापन:</strong> <i>"सभी समकोण एक-दूसरे के बराबर होते हैं।"</i></p>' +
+      '<p class="step-txt">चाहे समकोण की भुजाएँ छोटी हों (' + s1 + ' px) या बड़ी हों (' + s2 + ' px), दोनों के बीच का झुकाव (माप) सदैव <b>ठीक $90^\circ$</b> ही रहता है।</p>' +
+      '<div class="answer-highlight">✅ निष्कर्ष: भुजाओं की लम्बाई बदलने से कोण का मान नहीं बदलता। प्रत्येक समकोण = 90°।</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 5: Whole vs Part Explorer
+  // ==========================================================
+  function runSim5() {
+    var w = parseFloat(document.getElementById('sim5_w').value) || 50;
+    var p = parseFloat(document.getElementById('sim5_p').value) || 18;
+    var out = document.getElementById('sim5_output');
+
+    if (p >= w) {
+      out.innerHTML = '<div style="color:#e11d48; font-weight:900;">भाग (P) का मान पूर्ण (W) से छोटा होना चाहिए!</div>';
+      return;
+    }
+
+    var rem = w - p;
+    var pct = ((p / w) * 100).toFixed(1);
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>पूर्ण मान (Whole W):</strong> ' + w + '</p>' +
+      '<p class="step-txt"><strong>भाग का मान (Part P):</strong> ' + p + ' (' + pct + '% भाग)</p>' +
+      '<p class="step-txt"><strong>शेष भाग:</strong> ' + rem + '</p>' +
+      '<div class="math-scroll">$$\\begin{aligned} W &= P + \\text{R} \\\\ ' + w + ' &= ' + p + ' + ' + rem + ' \\\\ \\implies ' + w + ' &> ' + p + ' \\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ अभिगृहीत 5 सत्यापित: पूर्ण (' + w + ') सदैव अपने भाग (' + p + ') से परिमाण में बड़ा होता है।</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    runSim1();
+    runSim2();
+    runSim3();
+    runSim4();
+    runSim5();
+  });
+</script>
+
+</body>
+</html>
+"""
+
+with open('qa_master_math9_5.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("qa_master_math9_5.html generated successfully!")
