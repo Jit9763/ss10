@@ -1,0 +1,1010 @@
+# -*- coding: utf-8 -*-
+"""
+Generator for NCERT Class 9 Mathematics Chapter 10: हीरोन का सूत्र (Heron's Formula)
+File: qa_master_math9_10.html
+Strict compliance with:
+- Zero horizontal chaining
+- Strictly vertical aligned steps
+- No Hindi inside MathJax
+- Line breaks on long equations
+- Safe JS simulator strings (\cdot / ×)
+- 5 live interactive simulators with projector controls
+"""
+
+content = r'''<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 9 गणित - अध्याय 10: हीरोन का सूत्र (संपूर्ण 100% प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+
+  <!-- Google Fonts & MathJax -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      chtml: {
+        displayOverflow: 'scale'
+      },
+      startup: {
+        pageReady: () => {
+          return MathJax.startup.defaultPageReady().then(() => {
+            thickenFractionLines();
+          });
+        }
+      }
+    };
+    function thickenFractionLines() {
+      document.querySelectorAll('.mjx-mfrac > .mjx-line').forEach(line => {
+        line.style.borderTopWidth = '2.5px';
+        line.style.borderTopStyle = 'solid';
+      });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
+  <style>
+    :root {
+      --font-base: 22pt;
+      --font-weight: 700;
+      --primary: #1e3a8a;
+      --primary-dark: #172554;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --border: #cbd5e1;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      --container-width: 95%;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: var(--font-base);
+      font-weight: var(--font-weight);
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      word-wrap: break-word;
+    }
+
+    .projector-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      font-family: 'Outfit', sans-serif;
+      font-size: 14pt;
+    }
+    .projector-bar-title {
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .proj-btn {
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 13pt;
+      transition: all 0.2s;
+    }
+    .proj-btn:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      border-color: #38bdf8;
+    }
+
+    .container {
+      width: var(--container-width);
+      max-width: 1400px;
+      margin: 80px auto 40px;
+      padding: 24px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--border);
+      overflow-x: hidden;
+    }
+    .qa-block {
+      overflow-x: hidden;
+      word-wrap: break-word;
+    }
+    .question-heading {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .chapter-hero {
+      background: linear-gradient(135deg, #1e3a8a, #0369a1);
+      color: white;
+      padding: 36px 30px;
+      border-radius: 14px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .chapter-hero h1 {
+      margin: 0;
+      font-size: 38pt;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #f0f9ff;
+    }
+    .chapter-hero p {
+      margin: 10px 0 0;
+      font-size: 22pt;
+      color: #bae6fd;
+    }
+
+    .section-title {
+      background: #e0f2fe;
+      border-left: 10px solid #0284c7;
+      padding: 14px 22px;
+      font-size: 28pt;
+      font-weight: 900;
+      color: #0369a1;
+      border-radius: 8px;
+      margin: 40px 0 24px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .qa-block {
+      background: #ffffff;
+      border: 3px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .question-heading {
+      color: #1e3a8a;
+      font-size: 24pt;
+      font-weight: 900;
+      margin: 0 0 16px 0;
+      line-height: 1.5;
+    }
+
+    .step-box-blue {
+      background: #eff6ff;
+      border-left: 8px solid #2563eb;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+    .step-box-green {
+      background: #ecfdf5;
+      border-left: 8px solid #10b981;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+    .step-box-purple {
+      background: #faf5ff;
+      border-left: 8px solid #a855f7;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+    .step-box-orange {
+      background: #fff7ed;
+      border-left: 8px solid #f97316;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+
+    .answer-highlight {
+      background: #ecfdf5;
+      border: 3px solid #059669;
+      color: #064e3b;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 24pt;
+      font-weight: 900;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .step-txt {
+      margin: 6px 0;
+      font-size: 22pt;
+    }
+
+    .math-scroll {
+      overflow-x: hidden !important;
+      overflow-y: hidden !important;
+      max-width: 100%;
+      margin: 10px 0;
+      padding: 4px 0;
+    }
+
+    .badge-blue {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 20pt;
+    }
+
+    /* Simulator styling */
+    .sim-card {
+      background: #f0fdfa;
+      border: 4px solid #0d9488;
+      border-radius: 16px;
+      padding: 26px;
+      margin: 36px 0;
+      box-shadow: 0 8px 24px rgba(13, 148, 136, 0.15);
+    }
+    .sim-header {
+      color: #115e59;
+      font-size: 26pt;
+      font-weight: 900;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sim-input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin: 16px 0;
+    }
+    .sim-input-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20pt;
+      font-weight: 700;
+    }
+    .sim-input {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22pt;
+      font-weight: 800;
+      padding: 8px 14px;
+      border: 3px solid #14b8a6;
+      border-radius: 10px;
+      width: 130px;
+      text-align: center;
+      background: #ffffff;
+      color: #0f172a;
+    }
+    .sim-btn {
+      background: linear-gradient(135deg, #0d9488, #0f766e);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 20pt;
+      font-weight: 800;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+      transition: transform 0.1s;
+    }
+    .sim-btn:hover {
+      transform: scale(1.02);
+    }
+    .sim-result {
+      background: #ffffff;
+      border: 3px solid #ccfbf1;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    @media print {
+      .projector-bar { display: none; }
+      .container { margin: 0; width: 100%; max-width: 100%; border: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Projector Floating Bar -->
+  <div class="projector-bar">
+    <div class="projector-bar-title">
+      <span>📐 कक्षा 9 गणित</span>
+      <span style="color:#94a3b8;">|</span>
+      <span style="color:#fef08a;">अध्याय 10: हीरोन का सूत्र (Heron's Formula)</span>
+    </div>
+    <div class="btn-group">
+      <button class="proj-btn" onclick="adjustWidth(5)" title="चौड़ाई बढ़ाएँ">W+</button>
+      <button class="proj-btn" onclick="adjustWidth(-5)" title="चौड़ाई घटाएँ">W-</button>
+      <button class="proj-btn" onclick="adjustFontSize(2)" title="फ़ॉन्ट बढ़ाएँ">A+</button>
+      <button class="proj-btn" onclick="adjustFontSize(-2)" title="फ़ॉन्ट घटाएँ">A-</button>
+      <button class="proj-btn" onclick="adjustFontWeight(100)" title="बोल्डनेस बढ़ाएँ">B+</button>
+      <button class="proj-btn" onclick="adjustFontWeight(-100)" title="बोल्डनेस घटाएँ">B-</button>
+      <button class="proj-btn" onclick="copyEntireContent()" title="कॉपी करें">📋 कॉपी</button>
+      <button class="proj-btn" onclick="window.print()" title="प्रिंट करें">🖨️ प्रिंट</button>
+      <a href="index.html" class="proj-btn" style="text-decoration:none;">🏠 मुख्य पृष्ठ</a>
+    </div>
+  </div>
+
+  <div class="container" id="printable-content">
+
+    <!-- Hero Header -->
+    <div class="chapter-hero">
+      <h1>अध्याय 10: हीरोन का सूत्र (Heron's Formula)</h1>
+      <p>NCERT कक्षा 9 गणित (Rationalised Syllabus 2024-25) — संपूर्ण 100% प्रश्नोत्तर व 5 इंटरैक्टिव लाइव सिमुलेटर</p>
+    </div>
+
+    <!-- Core Formulas -->
+    <div class="section-title">🌟 मूलभूत सूत्र एवं नियम (Core Formulas)</div>
+
+    <div class="qa-block">
+      <div class="step-box-blue">
+        <p><b>1. अर्ध-परिमाप (Semi-perimeter, $s$):</b> त्रिभुज की भुजाएँ $a, b, c$ होने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{a + b + c}{2}
+        \end{aligned}$$</div>
+        
+        <p><b>2. हीरोन का सूत्र (Heron's Formula):</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)}
+        \end{aligned}$$</div>
+
+        <p><b>3. समबाहु त्रिभुज का क्षेत्रफल (भुजा $a$):</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{Area} &= \frac{\sqrt{3}}{4}a^2
+        \end{aligned}$$</div>
+
+        <p><b>4. त्रिभुज असमानता प्रमेय (Triangle Inequality):</b> किसी त्रिभुज का निर्माण तभी संभव है जब किन्हीं दो भुजाओं का योग तीसरी भुजा से अधिक हो ($a + b > c, b + c > a, c + a > b$)।</p>
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- EXERCISE 10.1 -->
+    <!-- ========================================================== -->
+    <div class="section-title">📝 प्रश्नावली 10.1 (संपूर्ण 6 प्रश्न)</div>
+
+    <!-- Ex 10.1 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: एक यातायात संकेत बोर्ड पर 'आगे स्कूल है' लिखा है और यह भुजा $a$ वाले एक समबाहु त्रिभुज के आकार का है। हीरोन के सूत्र का प्रयोग करके इस बोर्ड का क्षेत्रफल ज्ञात कीजिए। यदि संकेत बोर्ड का परिमाप $180\text{ cm}$ है, तो इसका क्षेत्रफल क्या होगा?</h3>
+      
+      <div class="step-box-blue">
+        <span class="badge-blue">भाग 1: भुजा $a$ के पदों में हीरोन के सूत्र से व्यंजक</span>
+        <p class="step-txt">समबाहु त्रिभुज की तीनों भुजाएँ बराबर हैं: $a, a, a$</p>
+        <p class="step-txt">अर्ध-परिमाप $s$:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{a + a + a}{2} \\
+        &= \frac{3a}{2}
+        \end{aligned}$$</div>
+        
+        <p class="step-txt">भुजाओं के अंतर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= \frac{3a}{2} - a \\
+        &= \frac{a}{2}
+        \end{aligned}$$</div>
+        <p class="step-txt">इसी प्रकार $s - b = \frac{a}{2}$ तथा $s - c = \frac{a}{2}$।</p>
+
+        <p class="step-txt">हीरोन के सूत्र में मान रखने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{Area} &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{\left(\frac{3a}{2}\right) \cdot \left(\frac{a}{2}\right) \cdot \left(\frac{a}{2}\right) \cdot \left(\frac{a}{2}\right)} \\
+        &= \sqrt{\frac{3a^4}{16}} \\
+        &= \frac{\sqrt{3}}{4}a^2
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <span class="badge-blue">भाग 2: परिमाप $180\text{ cm}$ होने पर मान</span>
+        <p class="step-txt">समबाहु त्रिभुज का परिमाप $= 3a = 180\text{ cm}$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        a &= \frac{180}{3} \\
+        &= 60\text{ cm}
+        \end{aligned}$$</div>
+        
+        <p class="step-txt">संकेत बोर्ड का क्षेत्रफल:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{Area} &= \frac{\sqrt{3}}{4}a^2 \\
+        &= \frac{\sqrt{3}}{4} \cdot (60)^2 \\
+        &= \frac{\sqrt{3}}{4} \cdot 3600 \\
+        &= 900\sqrt{3}\text{ cm}^2
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ संकेत बोर्ड का अभीष्ट क्षेत्रफल = $900\sqrt{3}\text{ cm}^2 \approx 1558.85\text{ cm}^2$</div>
+    </div>
+
+    <!-- Ex 10.1 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: किसी फ्लाईओवर (flyover) की त्रिभुजाकार दीवार को विज्ञापनों के लिए प्रयोग किया जाता है। दीवार की भुजाओं की लंबाइयाँ $122\text{ m}, 22\text{ m}$ और $120\text{ m}$ हैं। इस विज्ञापन से प्रति वर्ष ₹ $5000$ प्रति $\text{m}^2$ की प्राप्ति होती है। एक कंपनी ने एक दीवार को विज्ञापन देने के लिए $3$ महीने के लिए किराए पर लिया। उसने कुल कितना किराया दिया?</h3>
+      
+      <div class="step-box-blue">
+        <p class="step-txt"><b>चरण 1: दीवार की विमाएँ:</b></p>
+        <p class="step-txt">$a = 122\text{ m}, \quad b = 22\text{ m}, \quad c = 120\text{ m}$</p>
+        <p class="step-txt">अर्ध-परिमाप $s$ की गणना:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{a + b + c}{2} \\
+        &= \frac{122 + 22 + 120}{2} \\
+        &= \frac{264}{2} \\
+        &= 132\text{ m}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p class="step-txt"><b>चरण 2: अंतरों की गणना:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= 132 - 122 \\
+        &= 10\text{ m} \\
+        s - b &= 132 - 22 \\
+        &= 110\text{ m} \\
+        s - c &= 132 - 120 \\
+        &= 12\text{ m}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p class="step-txt"><b>चरण 3: हीरोन के सूत्र से दीवार का क्षेत्रफल:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{132 \cdot 10 \cdot 110 \cdot 12} \\
+        &= \sqrt{(11 \cdot 12) \cdot 10 \cdot (11 \cdot 10) \cdot 12} \\
+        &= \sqrt{11^2 \cdot 12^2 \cdot 10^2} \\
+        &= 11 \cdot 12 \cdot 10 \\
+        &= 1320\text{ m}^2
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p class="step-txt"><b>चरण 4: 3 महीने का कुल किराया:</b></p>
+        <p class="step-txt">1 वर्ष ($12$ महीने) की दर = ₹ $5000$ प्रति $\text{m}^2$</p>
+        <p class="step-txt">$3$ महीने का किराया $= 1320 \cdot 5000 \cdot \frac{3}{12}$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{Rent} &= 1320 \cdot 5000 \cdot \frac{1}{4} \\
+        &= 1320 \cdot 1250 \\
+        &= 1650000
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ कंपनी द्वारा दिया गया कुल किराया = ₹ 16,50,000 (सोलह लाख पचास हजार रुपये)</div>
+    </div>
+
+    <!-- Ex 10.1 Q3 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 3: किसी पार्क में एक फिसल पट्टी (slide) बनी हुई है। इसकी पार्श्वीय दीवारों में से एक दीवार पर रंग से पेंट किया गया है और उस पर "पार्क को हरा-भरा और साफ रखिए" लिखा हुआ है। यदि इस दीवार की विमाएँ $15\text{ m}, 11\text{ m}$ और $6\text{ m}$ हैं, तो रंग से पेंट हुए भाग का क्षेत्रफल ज्ञात कीजिए।</h3>
+      
+      <div class="step-box-blue">
+        <p class="step-txt"><b>चरण 1: विमाएँ व अर्ध-परिमाप $s$:</b></p>
+        <p class="step-txt">$a = 15\text{ m}, \quad b = 11\text{ m}, \quad c = 6\text{ m}$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{15 + 11 + 6}{2} \\
+        &= \frac{32}{2} \\
+        &= 16\text{ m}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p class="step-txt"><b>चरण 2: अंतरों की गणना:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= 16 - 15 \\
+        &= 1\text{ m} \\
+        s - b &= 16 - 11 \\
+        &= 5\text{ m} \\
+        s - c &= 16 - 6 \\
+        &= 10\text{ m}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p class="step-txt"><b>चरण 3: पेंट हुए भाग का क्षेत्रफल:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{16 \cdot 1 \cdot 5 \cdot 10} \\
+        &= \sqrt{16 \cdot 5 \cdot (5 \cdot 2)} \\
+        &= \sqrt{16 \cdot 25 \cdot 2} \\
+        &= 4 \cdot 5 \cdot \sqrt{2} \\
+        &= 20\sqrt{2}\text{ m}^2
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ पेंट हुए भाग का अभीष्ट क्षेत्रफल = $20\sqrt{2}\text{ m}^2 \approx 28.28\text{ m}^2$</div>
+    </div>
+
+    <!-- Ex 10.1 Q4 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 4: उस त्रिभुज का क्षेत्रफल ज्ञात कीजिए जिसकी दो भुजाएँ $18\text{ cm}$ और $10\text{ cm}$ हैं तथा उसका परिमाप $42\text{ cm}$ है।</h3>
+      
+      <div class="step-box-blue">
+        <p class="step-txt"><b>चरण 1: तीसरी भुजा $c$ की गणना:</b></p>
+        <p class="step-txt">दिया है: $a = 18\text{ cm}, \quad b = 10\text{ cm}, \quad P = 42\text{ cm}$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        a + b + c &= 42 \\
+        18 + 10 + c &= 42 \\
+        28 + c &= 42 \\
+        c &= 42 - 28 \\
+        &= 14\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p class="step-txt"><b>चरण 2: अर्ध-परिमाप $s$ व अंतर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{42}{2} \\
+        &= 21\text{ cm}
+        \end{aligned}$$</div>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= 21 - 18 \\
+        &= 3\text{ cm} \\
+        s - b &= 21 - 10 \\
+        &= 11\text{ cm} \\
+        s - c &= 21 - 14 \\
+        &= 7\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p class="step-txt"><b>चरण 3: क्षेत्रफल की गणना:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{21 \cdot 3 \cdot 11 \cdot 7} \\
+        &= \sqrt{(3 \cdot 7) \cdot 3 \cdot 11 \cdot 7} \\
+        &= \sqrt{3^2 \cdot 7^2 \cdot 11} \\
+        &= 3 \cdot 7 \cdot \sqrt{11} \\
+        &= 21\sqrt{11}\text{ cm}^2
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ त्रिभुज का अभीष्ट क्षेत्रफल = $21\sqrt{11}\text{ cm}^2 \approx 69.65\text{ cm}^2$</div>
+    </div>
+
+    <!-- Ex 10.1 Q5 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 5: एक त्रिभुज की भुजाओं का अनुपात $12 : 17 : 25$ है और उसका परिमाप $540\text{ cm}$ है। इस त्रिभुज का क्षेत्रफल ज्ञात कीजिए।</h3>
+      
+      <div class="step-box-blue">
+        <p class="step-txt"><b>चरण 1: भुजाओं का परिकलन:</b></p>
+        <p class="step-txt">माना भुजाएँ $12x, 17x, 25x$ हैं।</p>
+        <div class="math-scroll">$$\begin{aligned}
+        12x + 17x + 25x &= 540 \\
+        54x &= 540 \\
+        x &= \frac{540}{54} \\
+        &= 10
+        \end{aligned}$$</div>
+        <p class="step-txt">अतः वास्तविक भुजाएँ:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        a &= 12 \cdot 10 \\
+        &= 120\text{ cm} \\
+        b &= 17 \cdot 10 \\
+        &= 170\text{ cm} \\
+        c &= 25 \cdot 10 \\
+        &= 250\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p class="step-txt"><b>चरण 2: अर्ध-परिमाप $s$ व अंतर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{540}{2} \\
+        &= 270\text{ cm}
+        \end{aligned}$$</div>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= 270 - 120 \\
+        &= 150\text{ cm} \\
+        s - b &= 270 - 170 \\
+        &= 100\text{ cm} \\
+        s - c &= 270 - 250 \\
+        &= 20\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p class="step-txt"><b>चरण 3: क्षेत्रफल की गणना:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{270 \cdot 150 \cdot 100 \cdot 20} \\
+        &= \sqrt{(9 \cdot 30) \cdot (5 \cdot 30) \cdot 100 \cdot (4 \cdot 5)} \\
+        &= \sqrt{9 \cdot 30^2 \cdot 5^2 \cdot 100 \cdot 4} \\
+        &= 3 \cdot 30 \cdot 5 \cdot 10 \cdot 2 \\
+        &= 9000\text{ cm}^2
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ त्रिभुज का अभीष्ट क्षेत्रफल = $9000\text{ cm}^2$</div>
+    </div>
+
+    <!-- Ex 10.1 Q6 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 6: एक समद्विबाहु त्रिभुज का परिमाप $30\text{ cm}$ है और उसकी बराबर भुजाएँ $12\text{ cm}$ लंबाई की हैं। इस त्रिभुज का क्षेत्रफल ज्ञात कीजिए।</h3>
+      
+      <div class="step-box-blue">
+        <p class="step-txt"><b>चरण 1: तीसरी भुजा $c$ की गणना:</b></p>
+        <p class="step-txt">बराबर भुजाएँ $a = 12\text{ cm}, \quad b = 12\text{ cm}$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        a + b + c &= 30 \\
+        12 + 12 + c &= 30 \\
+        24 + c &= 30 \\
+        c &= 30 - 24 \\
+        &= 6\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p class="step-txt"><b>चरण 2: अर्ध-परिमाप $s$ व अंतर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        s &= \frac{30}{2} \\
+        &= 15\text{ cm}
+        \end{aligned}$$</div>
+        <div class="math-scroll">$$\begin{aligned}
+        s - a &= 15 - 12 \\
+        &= 3\text{ cm} \\
+        s - b &= 15 - 12 \\
+        &= 3\text{ cm} \\
+        s - c &= 15 - 6 \\
+        &= 9\text{ cm}
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p class="step-txt"><b>चरण 3: क्षेत्रफल की गणना:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \Delta &= \sqrt{s(s - a)(s - b)(s - c)} \\
+        &= \sqrt{15 \cdot 3 \cdot 3 \cdot 9} \\
+        &= \sqrt{15 \cdot 3^2 \cdot 3^2} \\
+        &= 3 \cdot 3 \cdot \sqrt{15} \\
+        &= 9\sqrt{15}\text{ cm}^2
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">✅ समद्विबाहु त्रिभुज का अभीष्ट क्षेत्रफल = $9\sqrt{15}\text{ cm}^2 \approx 34.86\text{ cm}^2$</div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 5 INTERACTIVE LIVE SIMULATORS -->
+    <!-- ========================================================== -->
+    <div class="section-title">⚡ 5 इंटरैक्टिव लाइव सिमुलेटर (Heron's Formula Simulators)</div>
+
+    <!-- SIMULATOR 1: Universal Heron Solver -->
+    <div class="sim-card">
+      <div class="sim-header">📐 सिमुलेटर 1: व्यापक हीरोन सूत्र कैलकुलेटर (Universal Heron's Solver)</div>
+      <p>त्रिभुज की कोई भी तीन भुजाएँ दर्ज करें और त्रिभुज जाँच, अर्ध-परिमाप तथा चरणबद्ध क्षेत्रफल प्राप्त करें!</p>
+      <div class="sim-input-row">
+        <div class="sim-input-box">
+          <label for="sim1_a">भुजा $a$:</label>
+          <input type="number" id="sim1_a" class="sim-input" value="15" min="1">
+        </div>
+        <div class="sim-input-box">
+          <label for="sim1_b">भुजा $b$:</label>
+          <input type="number" id="sim1_b" class="sim-input" value="11" min="1">
+        </div>
+        <div class="sim-input-box">
+          <label for="sim1_c">भुजा $c$:</label>
+          <input type="number" id="sim1_c" class="sim-input" value="6" min="1">
+        </div>
+        <button class="sim-btn" onclick="calculateSim1()">क्षेत्रफल निकालें</button>
+      </div>
+      <div id="sim1_output" class="sim-result"></div>
+    </div>
+
+    <!-- SIMULATOR 2: Equilateral Traffic Board Solver -->
+    <div class="sim-card">
+      <div class="sim-header">🚸 सिमुलेटर 2: समबाहु यातायात बोर्ड कैलकुलेटर (Equilateral Board Solver)</div>
+      <p>संकेत बोर्ड का परिमाप दर्ज करें और भुजा तथा सूत्र $\frac{\sqrt{3}}{4}a^2$ से क्षेत्रफल ज्ञात करें!</p>
+      <div class="sim-input-row">
+        <div class="sim-input-box">
+          <label for="sim2_p">परिमाप (cm):</label>
+          <input type="number" id="sim2_p" class="sim-input" value="180" min="3">
+        </div>
+        <button class="sim-btn" onclick="calculateSim2()">हल करें</button>
+      </div>
+      <div id="sim2_output" class="sim-result"></div>
+    </div>
+
+    <!-- SIMULATOR 3: Flyover Advertisement Rent Solver -->
+    <div class="sim-card">
+      <div class="sim-header">💰 सिमुलेटर 3: फ्लाईओवर विज्ञापन किराया कैलकुलेटर (Flyover Ad-Rent Solver)</div>
+      <p>दीवार क्षेत्रफल ($1320\text{ m}^2$), वार्षिक दर (₹/$\text{m}^2$) तथा अवधि (महीने) के आधार पर कुल किराया निकालें!</p>
+      <div class="sim-input-row">
+        <div class="sim-input-box">
+          <label for="sim3_rate">दर (₹ प्रति वर्ष):</label>
+          <input type="number" id="sim3_rate" class="sim-input" value="5000" min="100">
+        </div>
+        <div class="sim-input-box">
+          <label for="sim3_months">अवधि (महीने):</label>
+          <input type="number" id="sim3_months" class="sim-input" value="3" min="1" max="12">
+        </div>
+        <button class="sim-btn" onclick="calculateSim3()">किराया निकालें</button>
+      </div>
+      <div id="sim3_output" class="sim-result"></div>
+    </div>
+
+    <!-- SIMULATOR 4: Side Ratio & Perimeter Solver -->
+    <div class="sim-card">
+      <div class="sim-header">📊 सिमुलेटर 4: भुजाओं के अनुपात से क्षेत्रफल कैलकुलेटर (Ratio & Perimeter Solver)</div>
+      <p>अनुपात के तीन पद तथा कुल परिमाप दर्ज करें और वास्तविक भुजाएँ व क्षेत्रफल देखें!</p>
+      <div class="sim-input-row">
+        <div class="sim-input-box">
+          <label>अनुपात:</label>
+          <input type="number" id="sim4_r1" class="sim-input" style="width:70px;" value="12" min="1"> :
+          <input type="number" id="sim4_r2" class="sim-input" style="width:70px;" value="17" min="1"> :
+          <input type="number" id="sim4_r3" class="sim-input" style="width:70px;" value="25" min="1">
+        </div>
+        <div class="sim-input-box">
+          <label for="sim4_p">परिमाप:</label>
+          <input type="number" id="sim4_p" class="sim-input" value="540" min="10">
+        </div>
+        <button class="sim-btn" onclick="calculateSim4()">हल देखें</button>
+      </div>
+      <div id="sim4_output" class="sim-result"></div>
+    </div>
+
+    <!-- SIMULATOR 5: Isosceles Triangle Solver -->
+    <div class="sim-card">
+      <div class="sim-header">🔺 सिमुलेटर 5: समद्विबाहु त्रिभुज क्षेत्रफल कैलकुलेटर (Isosceles Triangle Solver)</div>
+      <p>बराबर भुजा $a$ और कुल परिमाप दर्ज करें और तीसरी भुजा $c$ तथा क्षेत्रफल प्राप्त करें!</p>
+      <div class="sim-input-row">
+        <div class="sim-input-box">
+          <label for="sim5_a">बराबर भुजा $a$ (cm):</label>
+          <input type="number" id="sim5_a" class="sim-input" value="12" min="1">
+        </div>
+        <div class="sim-input-box">
+          <label for="sim5_p">परिमाप (cm):</label>
+          <input type="number" id="sim5_p" class="sim-input" value="30" min="3">
+        </div>
+        <button class="sim-btn" onclick="calculateSim5()">गणना करें</button>
+      </div>
+      <div id="sim5_output" class="sim-result"></div>
+    </div>
+
+  </div> <!-- End Container -->
+
+  <!-- JavaScript for Projector Toolbar & Simulators -->
+  <script>
+  function getContainer() {
+    return document.getElementById('printable-content');
+  }
+
+  function adjustWidth(delta) {
+    const c = getContainer();
+    let cur = parseInt(window.getComputedStyle(c).width);
+    let nw = cur + delta * 20;
+    c.style.maxWidth = nw + 'px';
+    c.style.width = '98%';
+  }
+
+  function adjustFontSize(delta) {
+    const b = document.body;
+    let cur = parseFloat(window.getComputedStyle(b).fontSize);
+    let nw = Math.max(14, Math.min(36, cur + delta));
+    b.style.fontSize = nw + 'pt';
+  }
+
+  function adjustFontWeight(delta) {
+    const b = document.body;
+    let cur = parseInt(window.getComputedStyle(b).fontWeight) || 700;
+    let nw = Math.max(400, Math.min(900, cur + delta));
+    b.style.fontWeight = nw;
+  }
+
+  function copyEntireContent() {
+    const text = document.getElementById('printable-content').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert('संपूर्ण पाठ सफलतापूर्वक क्लिपबोर्ड में कॉपी हो गया!');
+    }).catch(err => {
+      alert('कॉपी करने में त्रुटि: ' + err);
+    });
+  }
+
+  // ==========================================================
+  // SIMULATOR 1: Universal Heron's Solver
+  // ==========================================================
+  function calculateSim1() {
+    var a = parseFloat(document.getElementById('sim1_a').value) || 0;
+    var b = parseFloat(document.getElementById('sim1_b').value) || 0;
+    var c = parseFloat(document.getElementById('sim1_c').value) || 0;
+    var out = document.getElementById('sim1_output');
+
+    if (a + b <= c || b + c <= a || c + a <= b) {
+      out.innerHTML = '<div class="step-box-orange"><p style="color:#c2410c; font-weight:900;">❌ त्रिभुज असमानता प्रमेय विफल: किन्हीं दो भुजाओं का योग तीसरी भुजा से बड़ा होना अनिवार्य है!</p></div>';
+      return;
+    }
+
+    var s = (a + b + c) / 2;
+    var diffA = s - a;
+    var diffB = s - b;
+    var diffC = s - c;
+    var areaSq = s * diffA * diffB * diffC;
+    var area = Math.sqrt(areaSq).toFixed(2);
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt"><strong>चरण 1: अर्ध-परिमाप $s$:</strong></p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      's &= \\frac{' + a + ' + ' + b + ' + ' + c + '}{2} \\\\' +
+      '&= ' + s +
+      '\\end{aligned}$$</div>' +
+      '<p class="step-txt"><strong>चरण 2: भुजाओं के अंतर:</strong></p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      's - a &= ' + s + ' - ' + a + ' \\\\ &= ' + diffA + ' \\\\' +
+      's - b &= ' + s + ' - ' + b + ' \\\\ &= ' + diffB + ' \\\\' +
+      's - c &= ' + s + ' - ' + c + ' \\\\ &= ' + diffC +
+      '\\end{aligned}$$</div>' +
+      '<p class="step-txt"><strong>चरण 3: हीरोन का सूत्र:</strong></p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\Delta &= \\sqrt{s(s - a)(s - b)(s - c)} \\\\' +
+      '&= \\sqrt{' + s + ' \\cdot ' + diffA + ' \\cdot ' + diffB + ' \\cdot ' + diffC + '} \\\\' +
+      '&= \\sqrt{' + areaSq.toFixed(2) + '} \\\\' +
+      '\\approx ' + area +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ अभीष्ट क्षेत्रफल = ' + area + ' वर्ग इकाई</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 2: Equilateral Board Solver
+  // ==========================================================
+  function calculateSim2() {
+    var p = parseFloat(document.getElementById('sim2_p').value) || 180;
+    var a = p / 3;
+    var area = ((Math.sqrt(3) / 4) * a * a).toFixed(2);
+    var coeff = (a * a / 4);
+    var out = document.getElementById('sim2_output');
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>समबाहु त्रिभुज की भुजा:</strong> $a = \\frac{' + p + '}{3} = ' + a + '$ cm</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\text{Area} &= \\frac{\\sqrt{3}}{4}a^2 \\\\' +
+      '&= \\frac{\\sqrt{3}}{4} \\cdot (' + a + ')^2 \\\\' +
+      '&= ' + coeff + '\\sqrt{3}\\text{ cm}^2 \\\\' +
+      '\\approx ' + area + '\\text{ cm}^2' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ बोर्ड का क्षेत्रफल = $' + coeff + '\\sqrt{3}\\text{ cm}^2 \\approx ' + area + '\\text{ cm}^2$</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 3: Flyover Ad-Rent Solver
+  // ==========================================================
+  function calculateSim3() {
+    var rate = parseFloat(document.getElementById('sim3_rate').value) || 5000;
+    var months = parseFloat(document.getElementById('sim3_months').value) || 3;
+    var area = 1320;
+    var totalRent = Math.round(area * rate * (months / 12));
+    var out = document.getElementById('sim3_output');
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt"><strong>दीवार क्षेत्रफल:</strong> $1320\\text{ m}^2$ &emsp; | &emsp; <strong>दर:</strong> ₹ ' + rate + '/m²/वर्ष &emsp; | &emsp; <strong>अवधि:</strong> ' + months + ' महीने</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\text{Rent} &= \\text{Area} \\cdot \\text{Rate} \\cdot \\frac{\\text{Months}}{12} \\\\' +
+      '&= 1320 \\cdot ' + rate + ' \\cdot \\frac{' + months + '}{12} \\\\' +
+      '&= ₹ ' + totalRent.toLocaleString('en-IN') +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ कुल विज्ञापन किराया = ₹ ' + totalRent.toLocaleString('en-IN') + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 4: Side Ratio & Perimeter Solver
+  // ==========================================================
+  function calculateSim4() {
+    var r1 = parseFloat(document.getElementById('sim4_r1').value) || 12;
+    var r2 = parseFloat(document.getElementById('sim4_r2').value) || 17;
+    var r3 = parseFloat(document.getElementById('sim4_r3').value) || 25;
+    var p = parseFloat(document.getElementById('sim4_p').value) || 540;
+    var sumR = r1 + r2 + r3;
+    var x = p / sumR;
+    var a = r1 * x;
+    var b = r2 * x;
+    var c = r3 * x;
+    var s = p / 2;
+    var area = Math.sqrt(s * (s - a) * (s - b) * (s - c)).toFixed(2);
+    var out = document.getElementById('sim4_output');
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt">अनुपात का योग $= ' + r1 + ' + ' + r2 + ' + ' + r3 + ' = ' + sumR + '$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'x &= \\frac{' + p + '}{' + sumR + '} = ' + x + ' \\\\' +
+      'a &= ' + r1 + ' \\cdot ' + x + ' = ' + a + ' \\\\' +
+      'b &= ' + r2 + ' \\cdot ' + x + ' = ' + b + ' \\\\' +
+      'c &= ' + r3 + ' \\cdot ' + x + ' = ' + c +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ त्रिभुज का क्षेत्रफल = ' + area + ' वर्ग इकाई</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 5: Isosceles Triangle Solver
+  // ==========================================================
+  function calculateSim5() {
+    var a = parseFloat(document.getElementById('sim5_a').value) || 12;
+    var p = parseFloat(document.getElementById('sim5_p').value) || 30;
+    var c = p - 2 * a;
+    var out = document.getElementById('sim5_output');
+
+    if (c <= 0 || 2 * a <= c) {
+      out.innerHTML = '<div class="step-box-orange"><p style="color:#c2410c; font-weight:900;">❌ अमान्य मान: परिमाप दोनों बराबर भुजाओं के योग ($2a = ' + (2 * a) + '$) से बड़ा तथा असमान भुजा से पर्याप्त होना चाहिए!</p></div>';
+      return;
+    }
+
+    var s = p / 2;
+    var diffA = s - a;
+    var diffC = s - c;
+    var area = Math.sqrt(s * diffA * diffA * diffC).toFixed(2);
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt">बराबर भुजाएँ: $a = b = ' + a + '$ cm, &emsp; परिमाप: $P = ' + p + '$ cm</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'c &= ' + p + ' - 2(' + a + ') \\\\ &= ' + c + '\\text{ cm} \\\\' +
+      's &= \\frac{' + p + '}{2} = ' + s + '\\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ समद्विबाहु त्रिभुज का क्षेत्रफल = ' + area + ' cm²</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // Initial calculation on page load
+  window.addEventListener('DOMContentLoaded', function() {
+    calculateSim1();
+    calculateSim2();
+    calculateSim3();
+    calculateSim4();
+    calculateSim5();
+  });
+  </script>
+</body>
+</html>
+'''
+
+with open('qa_master_math9_10.html', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("qa_master_math9_10.html generated successfully!")

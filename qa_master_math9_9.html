@@ -17,6 +17,9 @@
         displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
         processEscapes: true
       },
+      chtml: {
+        displayOverflow: 'scale'
+      },
       startup: {
         pageReady: () => {
           return MathJax.startup.defaultPageReady().then(() => {
@@ -48,6 +51,18 @@
       --border: #cbd5e1;
       --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
       --container-width: 95%;
+    }
+    .container {
+      overflow-x: hidden;
+    }
+    .qa-block {
+      overflow-x: hidden;
+      word-wrap: break-word;
+    }
+    .question-heading {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
     }
 
     * { box-sizing: border-box; }
@@ -218,9 +233,11 @@
     }
 
     .math-scroll {
-      overflow-x: auto;
+      overflow-x: hidden !important;
+      overflow-y: hidden !important;
+      max-width: 100%;
       margin: 10px 0;
-      padding: 6px 0;
+      padding: 4px 0;
     }
 
     .badge-blue {

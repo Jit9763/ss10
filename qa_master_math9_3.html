@@ -449,9 +449,12 @@
   }
 
   .math-scroll {
-    overflow-x: auto !important;
-    margin: 12px 0 !important;
-  }
+      overflow-x: hidden !important;
+      overflow-y: hidden !important;
+      max-width: 100%;
+      margin: 10px 0;
+      padding: 4px 0;
+    }
 
   @media (max-width: 1000px) {
     body { padding: 10px 5px; }
@@ -787,10 +790,10 @@
 
     <!-- Ex 3.3 Q2 -->
     <div class="qa-block">
-      <h3 class="question-heading">प्रश्न 2: अक्षों पर दूरी का उपयुक्त एकक लेकर नीचे दी गई सारणी में दिए गए बिंदुओं को तल पर आलेखित कीजिए:</h3>
+      <h3 class="question-heading">प्रश्न 2: अक्षों पर दूरी का उपयुक्त एकक लेकर नीचे दी गई सारणी में<br>दिए गए बिंदुओं को तल पर आलेखित कीजिए:</h3>
       
       <div style="margin:20px 0; overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; text-align:center; font-size:24pt; background:#ffffff; border:3px solid #cbd5e1; border-radius:12px;">
+        <table style="width:100%; border-collapse:collapse; text-align:center; font-size:1.25rem; max-width:100%; table-layout:fixed; background:#ffffff; border:3px solid #cbd5e1; border-radius:12px;">
           <tr style="background:#0f766e; color:#ffffff;">
             <th style="padding:12px; border:2px solid #cbd5e1;">x</th>
             <td style="padding:12px; border:2px solid #cbd5e1;">-2</td>
@@ -822,7 +825,7 @@
       </div>
 
       <div class="answer-highlight">
-        ✅ पाँचों बिंदु $A(-2, 8), B(-1, 7), C(0, -1.25), D(1, 3), E(3, -1)$ सफलतापूर्वक तल पर निर्धारित किए गए।
+        ✅ पाँचों बिंदु $A(-2, 8)$, $B(-1, 7)$, $C(0, -1.25)$, $D(1, 3)$, $E(3, -1)$ सफलतापूर्वक तल पर निर्धारित किए गए।
       </div>
     </div>
 
