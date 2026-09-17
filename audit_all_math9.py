@@ -45,6 +45,20 @@ for fn in files:
             print("   ->", cd)
         file_passed = False
 
+    # 4. Check for misplaced & in math
+    misplaced_amp = []
+    for d in disp_maths:
+        if '&' in d and '\\begin{aligned}' not in d and '\\begin{cases}' not in d and '\\begin{matrix}' not in d and '\\begin{array}' not in d:
+            misplaced_amp.append(d.strip())
+    for im in inline_maths:
+        if '&' in im:
+            misplaced_amp.append(im.strip())
+    if misplaced_amp:
+        print(f"❌ {fn}: Contains {len(misplaced_amp)} misplaced '&' symbols!")
+        for ma in misplaced_amp[:5]:
+            print("   ->", repr(ma))
+        file_passed = False
+
     # 4. Check for literal \mathbf
     if r'\mathbf' in text:
         print(f"⚠️ {fn}: Contains \\mathbf")
