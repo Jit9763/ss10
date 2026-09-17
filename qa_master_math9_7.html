@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 7: त्रिभुज (संपूर्ण प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+<meta name="description" content="NCERT कक्षा 9 गणित अध्याय 7 त्रिभुज: सर्वांगसमता नियम (SAS, ASA, SSS, RHS), प्रश्नावली 7.1 व 7.2 के 16 प्रश्नों के संपूर्ण 100% एक-के-नीचे-एक हल व 5 लाइव सिमुलेटर।">
+
+<!-- Google Fonts: Inter & Tiro Devanagari Hindi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #ffffff;
+    --primary-blue: #1e40af;
+    --accent-indigo: #4338ca;
+    --border-color: #cbd5e1;
+    --font-scale: 1.0;
+    --width-scale: 100%;
+  }
+
+  body.high-contrast {
+    --bg-page: #000000 !important;
+    --text-primary: #ffffff !important;
+    --card-bg: #121212 !important;
+    --border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .qa-block,
+  body.high-contrast .concept-box,
+  body.high-contrast .inline-simulator-card,
+  body.high-contrast .step-box-blue,
+  body.high-contrast .step-box-orange,
+  body.high-contrast .step-box-green,
+  body.high-contrast .step-box-purple,
+  body.high-contrast .step-box-red {
+    background: #18181b !important;
+    color: #ffffff !important;
+    border-color: #38bdf8 !important;
+  }
+
+  body.high-contrast .question-heading {
+    color: #38bdf8 !important;
+  }
+
+  body.high-contrast .step-txt {
+    color: #f1f5f9 !important;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Tiro Devanagari Hindi', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000;
+    text-rendering: optimizeLegibility;
+  }
+
+  body.high-contrast {
+    -webkit-text-stroke: 0.9px #ffffff;
+  }
+
+  /* Fixed Projector Control Toolbar */
+  .toolbar-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #0f172a;
+    color: white;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border-bottom: 2px solid #38bdf8;
+  }
+
+  .toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+  }
+
+  .tool-btn {
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    color: #f8fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tool-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+  }
+
+  .main-wrapper {
+    max-width: 1400px;
+    width: var(--width-scale);
+    margin: 0 auto;
+    padding: 24px 20px 80px 20px;
+    font-size: calc(18px * var(--font-scale));
+    transition: all 0.2s ease;
+  }
+
+  /* Navigation Shortcuts */
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    color: #1e40af;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .btn-nav:hover {
+    background: #1e40af;
+    color: #ffffff;
+    border-color: #1e40af;
+  }
+
+  /* Hero Header */
+  .hero-title {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.4);
+    margin-bottom: 30px;
+    font-size: calc(26px * var(--font-scale));
+    font-weight: 900;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: #bae6fd;
+    margin-top: 8px;
+  }
+
+  /* Section Part Headers */
+  .part-header {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 12px;
+    margin: 40px 0 20px 0;
+    font-size: calc(22px * var(--font-scale));
+    font-weight: 900;
+    border-left: 8px solid #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Concept Theory Card */
+  .concept-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  }
+
+  .concept-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* QA Block Card */
+  .qa-block {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 28px;
+    border: 2.5px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .question-heading {
+    font-size: calc(19px * var(--font-scale));
+    font-weight: 900;
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  /* Step Boxes */
+  .step-box-blue {
+    background: #f8fafc;
+    border-left: 8px solid #2563eb;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-orange {
+    background: #fffaf5;
+    border-left: 8px solid #f97316;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-green {
+    background: #f0fdf4;
+    border-left: 8px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-purple {
+    background: #faf5ff;
+    border-left: 8px solid #9333ea;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-box-red {
+    background: #fff1f2;
+    border-left: 8px solid #e11d48;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 14px 0;
+  }
+
+  .step-txt {
+    font-size: 1em;
+    color: #1e293b;
+    margin: 8px 0;
+    line-height: 1.8;
+  }
+
+  /* Final Answer Highlight */
+  .answer-highlight {
+    background: #fef08a;
+    color: #854d0e;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: calc(18px * var(--font-scale));
+    font-weight: 900;
+    border-left: 6px solid #eab308;
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .math-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin: 6px 0;
+  }
+
+  /* Inline Simulator Cards */
+  .inline-simulator-card {
+    background: #ffffff;
+    border: 3px solid #2563eb;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+  }
+
+  .sim-title {
+    font-size: calc(20px * var(--font-scale));
+    font-weight: 900;
+    color: #1e40af;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sim-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    margin-bottom: 20px;
+  }
+
+  .sim-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sim-group label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #334155;
+  }
+
+  .sim-group input, .sim-group select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #cbd5e1;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc {
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .sim-btn-calc:hover {
+    background: #1d4ed8;
+  }
+
+  .sim-output-box {
+    background: #f8fafc;
+    border: 2px dashed #94a3b8;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 80px;
+  }
+
+  .sim-canvas {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+  }
+
+  @media print {
+    .toolbar-fixed, .nav-pills, .inline-simulator-card {
+      display: none !important;
+    }
+    .main-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Projector Toolbar -->
+<div class="toolbar-fixed">
+  <div class="toolbar-group">
+    <span style="font-size:16px; font-weight:900; color:#38bdf8;">📽️ प्रोजेक्टर कंट्रोल:</span>
+    <button class="tool-btn" onclick="adjustFont(0.1)" title="फॉन्ट आकार बढ़ाएं">A+</button>
+    <button class="tool-btn" onclick="adjustFont(-0.1)" title="फॉन्ट आकार घटाएं">A-</button>
+    <button class="tool-btn" onclick="resetFont()" title="सामान्य आकार">A₀</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="adjustWidth(5)" title="चौड़ाई बढ़ाएं">W+</button>
+    <button class="tool-btn" onclick="adjustWidth(-5)" title="चौड़ाई घटाएं">W-</button>
+    <button class="tool-btn" onclick="resetWidth()" title="सामान्य चौड़ाई">W₀</button>
+    <button class="tool-btn" onclick="toggleContrast()" title="कंट्रास्ट बदलें">🌓 कंट्रास्ट</button>
+  </div>
+  <div class="toolbar-group">
+    <button class="tool-btn" onclick="window.print()" title="प्रिंट या PDF सेव करें">🖨️ प्रिंट</button>
+    <button class="tool-btn" onclick="window.location.reload()" title="रीलोड करें">🔄 रीसेट</button>
+    <a href="index.html" class="tool-btn" style="text-decoration:none; display:inline-block;">🏠 होम</a>
+  </div>
+</div>
+
+<div class="main-wrapper" id="mainContent">
+
+  <!-- Quick Navigation Pills -->
+  <div class="nav-pills">
+    <a href="#concepts" class="btn-nav">📌 सर्वांगसमता कसौटियाँ व प्रमेय</a>
+    <a href="#ex71" class="btn-nav">प्रश्नावली 7.1 (Q1 - Q8)</a>
+    <a href="#ex72" class="btn-nav">प्रश्नावली 7.2 (Q1 - Q8)</a>
+    <a href="#simulators" class="btn-nav" style="background:#eff6ff; border-color:#2563eb; color:#1d4ed8;">⚡ 5 सिमुलेटर</a>
+  </div>
+
+  <!-- Hero Title Banner -->
+  <div class="hero-title">
+    NCERT कक्षा 9 गणित • अध्याय 7
+    <span>त्रिभुज (Triangles) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+  </div>
+
+  <!-- =========================================================
+       SECTION 1: CORE CONCEPTS & THEOREMS
+       ========================================================= -->
+  <div id="concepts" class="concept-box">
+    <div class="concept-title">📌 त्रिभुजों की सर्वांगसमता की 5 मुख्य कसौटियाँ (Congruence Criteria)</div>
+    
+    <div class="step-box-blue">
+      <p class="step-txt"><strong>1. SAS कसौटी (भुजा-कोण-भुजा अभिगृहीत 7.1):</strong></p>
+      <p class="step-txt">यदि एक त्रिभुज की दो भुजाएँ और उनके अंतर्गत कोण दूसरे त्रिभुज की संगत दो भुजाओं और उनके अंतर्गत कोण के बराबर हों, तो दोनों त्रिभुज परस्पर सर्वांगसम होते हैं ($\Delta ABC \cong \Delta DEF$)।</p>
+    </div>
+
+    <div class="step-box-green">
+      <p class="step-txt"><strong>2. ASA कसौटी (कोण-भुजा-कोण प्रमेय 7.1):</strong></p>
+      <p class="step-txt">यदि एक त्रिभुज के दो कोण और उनकी अंतर्गत भुजा दूसरे त्रिभुज के दो संगत कोणों और अंतर्गत भुजा के बराबर हों, तो दोनों त्रिभुज सर्वांगसम होते हैं।</p>
+    </div>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><strong>3. AAS कसौटी (कोण-कोण-भुजा):</strong></p>
+      <p class="step-txt">यदि एक त्रिभुज के दो कोण और कोई एक भुजा दूसरे त्रिभुज के दो संगत कोणों और संगत भुजा के बराबर हों, तो दोनों त्रिभुज सर्वांगसम होते हैं।</p>
+    </div>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><strong>4. SSS कसौटी (भुजा-भुजा-भुजा प्रमेय 7.4):</strong></p>
+      <p class="step-txt">यदि एक त्रिभुज की तीनों भुजाएँ दूसरे त्रिभुज की तीनों संगत भुजाओं के बराबर हों, तो दोनों त्रिभुज सर्वांगसम होते हैं।</p>
+    </div>
+
+    <div class="step-box-red">
+      <p class="step-txt"><strong>5. RHS कसौटी (समकोण-कर्ण-भुजा प्रमेय 7.5):</strong></p>
+      <p class="step-txt">यदि दो समकोण त्रिभुजों में एक त्रिभुज का कर्ण और एक भुजा दूसरे त्रिभुज के कर्ण और संगत भुजा के बराबर हों, तो दोनों त्रिभुज सर्वांगसम होते हैं।</p>
+      <p class="step-txt"><b>CPCT नियम:</b> सर्वांगसम त्रिभुजों के संगत भाग परस्पर बराबर होते हैं (Corresponding Parts of Congruent Triangles are equal)।</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 7.1
+       ========================================================= -->
+  <div id="ex71" class="part-header">
+    📖 प्रश्नावली 7.1 (Exercise 7.1) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 7.1 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: चतुर्भुज $ACBD$ में, $AC = AD$ है और $AB$ कोण $A$ को समद्विभाजित करता है। दर्शाइए कि $\Delta ABC \cong \Delta ABD$ है। $BC$ और $BD$ के बारे में आप क्या कह सकते हैं?</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">$\Delta ABC$ और $\Delta ABD$ में तुलना करने पर:</p>
+      
+      <p class="step-txt">• <b>भुजा:</b> $AC = AD$ &emsp; [दिया है]</p>
+      <p class="step-txt">• <b>अंतर्गत कोण:</b> $\angle CAB = \angle DAB$ &emsp; [$AB$, $\angle A$ का समद्विभाजक है]</p>
+      <p class="step-txt">• <b>उभयनिष्ठ भुजा:</b> $AB = AB$</p>
+
+      <p class="step-txt">अतः SAS (भुजा-कोण-भुजा) सर्वांगसमता कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABC &\cong \Delta ABD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><b>$BC$ और $BD$ के संबंध में:</b></p>
+      <p class="step-txt">CPCT (सर्वांगसम त्रिभुजों के संगत भाग) नियम के अनुसार:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BC &= BD
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: $\Delta ABC \cong \Delta ABD$ &emsp; तथा &emsp; $BC = BD$ (दोनों भुजाएँ बराबर हैं)।
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: $ABCD$ एक चतुर्भुज है जिसमें $AD = BC$ और $\angle DAB = \angle CBA$ है। सिद्ध कीजिए कि: (i) $\Delta ABD \cong \Delta BAC$, (ii) $BD = AC$, (iii) $\angle ABD = \angle BAC$।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>(i) $\Delta ABD \cong \Delta BAC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta ABD$ और $\Delta BAC$ में तुलना करने पर:</p>
+      <p class="step-txt">• $AD = BC$ &emsp; [दिया है]</p>
+      <p class="step-txt">• $\angle DAB = \angle CBA$ &emsp; [दिया है]</p>
+      <p class="step-txt">• $AB = BA$ &emsp; [उभयनिष्ठ आधार]</p>
+      
+      <p class="step-txt">अतः SAS सर्वांगसमता कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABD &\cong \Delta BAC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $BD = AC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">चूँकि $\Delta ABD \cong \Delta BAC$ है, अतः CPCT द्वारा संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BD &= AC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(iii) $\angle ABD = \angle BAC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">CPCT द्वारा संगत कोण भी परस्पर बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ABD &= \angle BAC
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $\Delta ABD \cong \Delta BAC$, &emsp; (ii) $BD = AC$, &emsp; (iii) $\angle ABD = \angle BAC$
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: एक रेखाखंड $AB$ पर $AD$ और $BC$ दो बराबर लम्ब रेखाखंड हैं। दर्शाइए कि $CD$, रेखाखंड $AB$ को समद्विभाजित करता है।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">माना $AB$ और $CD$ का प्रतिच्छेद बिंदु $O$ है।</p>
+      <p class="step-txt">$\Delta BOC$ और $\Delta AOD$ में तुलना करने पर:</p>
+      
+      <p class="step-txt">• $\angle BOC = \angle AOD$ &emsp; [शीर्षाभिमुख कोण बराबर होते हैं]</p>
+      <p class="step-txt">• $\angle OBC = \angle OAD = 90^\circ$ &emsp; [दोनों लम्ब दिए हैं]</p>
+      <p class="step-txt">• $BC = AD$ &emsp; [दिया है कि दोनों लम्ब बराबर हैं]</p>
+
+      <p class="step-txt">अतः AAS (कोण-कोण-भुजा) सर्वांगसमता कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta BOC &\cong \Delta AOD
+      \end{aligned}$$</div>
+
+      <p class="step-txt">CPCT नियम से संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      OB &= OA
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः बिंदु $O$ रेखाखंड $AB$ का मध्य-बिंदु है, अर्थात $CD$, रेखाखंड $AB$ को समद्विभाजित करता है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: रेखाखंड $CD$, रेखाखंड $AB$ को समद्विभाजित करता है।
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: $l$ और $m$ दो समांतर रेखाएँ हैं जिन्हें समांतर रेखाओं $p$ और $q$ का एक अन्य युग्म प्रतिच्छेद करता है। दर्शाइए कि $\Delta ABC \cong \Delta CDA$ है।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">$\Delta ABC$ और $\Delta CDA$ में:</p>
+      
+      <p class="step-txt">1. चूँकि $p \parallel q$ और $AC$ तिर्यक रेखा है, अतः एकांतर अंतःकोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle BAC &= \angle DCA
+      \end{aligned}$$</div>
+
+      <p class="step-txt">2. दोनों त्रिभुजों में $AC$ उभयनिष्ठ विकर्ण है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AC &= CA
+      \end{aligned}$$</div>
+
+      <p class="step-txt">3. चूँकि $l \parallel m$ और $AC$ तिर्यक रेखा है, अतः एकांतर अंतःकोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle BCA &= \angle DAC
+      \end{aligned}$$</div>
+
+      <p class="step-txt">अतः ASA (कोण-भुजा-कोण) सर्वांगसमता कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABC &\cong \Delta CDA
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $\Delta ABC \cong \Delta CDA$
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: रेखा $l$ कोण $A$ को समद्विभाजित करती है और $B$ रेखा $l$ पर स्थित कोई बिंदु है। $BP$ और $BQ$ कोण $A$ की भुजाओं पर $B$ से डाले गए लम्ब हैं। दर्शाइए कि: (i) $\Delta APB \cong \Delta AQB$, (ii) $BP = BQ$।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>(i) $\Delta APB \cong \Delta AQB$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta APB$ और $\Delta AQB$ में तुलना करने पर:</p>
+      <p class="step-txt">• $\angle APB = \angle AQB = 90^\circ$ &emsp; [प्रत्येक समकोण]</p>
+      <p class="step-txt">• $\angle PAB = \angle QAB$ &emsp; [रेखा $l$, $\angle A$ का समद्विभाजक है]</p>
+      <p class="step-txt">• $AB = AB$ &emsp; [उभयनिष्ठ कर्ण]</p>
+
+      <p class="step-txt">अतः AAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta APB &\cong \Delta AQB
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $BP = BQ$ सिद्ध करना:</strong></p>
+      <p class="step-txt">चूँकि $\Delta APB \cong \Delta AQB$ है, अतः CPCT से संगत लम्ब बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BP &= BQ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $\Delta APB \cong \Delta AQB$ &emsp; तथा &emsp; (ii) $BP = BQ$
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: आकृति में, $AC = AE$, $AB = AD$ और $\angle BAD = \angle EAC$ है। दर्शाइए कि $BC = DE$ है।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: कोण संबंध स्थापित करना:</strong></p>
+      <p class="step-txt">दिया है: $\angle BAD = \angle EAC$</p>
+      <p class="step-txt">दोनों पक्षों में $\angle DAC$ जोड़ने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle BAD + \angle DAC &= \angle EAC + \angle DAC \\
+      \angle BAC &= \angle DAE
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\Delta BAC$ और $\Delta DAE$ की तुलना:</strong></p>
+      <p class="step-txt">• $AB = AD$ &emsp; [दिया है]</p>
+      <p class="step-txt">• $\angle BAC = \angle DAE$ &emsp; [ऊपर सिद्ध किया गया]</p>
+      <p class="step-txt">• $AC = AE$ &emsp; [दिया है]</p>
+
+      <p class="step-txt">अतः SAS सर्वांगसमता कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta BAC &\cong \Delta DAE
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: निष्कर्ष (CPCT द्वारा):</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      BC &= DE
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $BC = DE$
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q7 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 7: $AB$ एक रेखाखंड है और $P$ इसका मध्य-बिंदु है। $D$ और $E$ रेखाखंड $AB$ के एक ही ओर स्थित दो बिंदु इस प्रकार हैं कि $\angle BAD = \angle ABE$ और $\angle EPA = \angle DPB$ है। दर्शाइए कि: (i) $\Delta DAP \cong \Delta EBP$, (ii) $AD = BE$।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: कोण संबंध:</strong></p>
+      <p class="step-txt">दिया है: $\angle EPA = \angle DPB$</p>
+      <p class="step-txt">दोनों पक्षों में $\angle EPD$ जोड़ने पर:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle EPA + \angle EPD &= \angle DPB + \angle EPD \\
+      \angle APD &= \angle BPE
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: (i) $\Delta DAP$ और $\Delta EBP$ में तुलना:</strong></p>
+      <p class="step-txt">• $\angle PAD = \angle PBE$ &emsp; [दिया है: $\angle BAD = \angle ABE$]</p>
+      <p class="step-txt">• $AP = BP$ &emsp; [$P$ मध्य-बिंदु है]</p>
+      <p class="step-txt">• $\angle APD = \angle BPE$ &emsp; [चरण 1 से]</p>
+
+      <p class="step-txt">अतः ASA कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta DAP &\cong \Delta EBP
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: (ii) $AD = BE$ सिद्ध करना:</strong></p>
+      <p class="step-txt">CPCT द्वारा संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AD &= BE
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $\Delta DAP \cong \Delta EBP$ &emsp; तथा &emsp; (ii) $AD = BE$
+    </div>
+  </div>
+
+  <!-- Ex 7.1 Q8 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 8: एक समकोण त्रिभुज $ABC$ में, जिसमें कोण $C$ समकोण है, $M$ कर्ण $AB$ का मध्य-बिंदु है। $C$ को $M$ से मिलाकर $D$ तक इस प्रकार बढ़ाया गया है कि $DM = CM$ है। बिंदु $D$ को बिंदु $B$ से मिला दिया जाता है। दर्शाइए कि: (i) $\Delta AMC \cong \Delta BMD$, (ii) $\angle DBC$ एक समकोण है, (iii) $\Delta DBC \cong \Delta ACB$, (iv) $CM = \frac{1}{2}AB$।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>(i) $\Delta AMC \cong \Delta BMD$ सिद्ध करना:</strong></p>
+      <p class="step-txt">• $AM = BM$ &emsp; [$M$, $AB$ का मध्य-बिंदु है]</p>
+      <p class="step-txt">• $\angle AMC = \angle BMD$ &emsp; [शीर्षाभिमुख कोण बराबर होते हैं]</p>
+      <p class="step-txt">• $CM = DM$ &emsp; [दिया है]</p>
+      <p class="step-txt">अतः SAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta AMC &\cong \Delta BMD
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $\angle DBC = 90^\circ$ सिद्ध करना:</strong></p>
+      <p class="step-txt">चूँकि $\Delta AMC \cong \Delta BMD$, अतः CPCT से एकांतर कोण बराबर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ACM &= \angle BDM \implies DB \parallel AC
+      \end{aligned}$$</div>
+      <p class="step-txt">तिर्यक रेखा $BC$ के अंतःकोणों का योग $180^\circ$ होता है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle DBC + \angle ACB &= 180^\circ \\
+      \angle DBC + 90^\circ &= 180^\circ \\
+      \angle DBC &= 90^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(iii) $\Delta DBC \cong \Delta ACB$ सिद्ध करना:</strong></p>
+      <p class="step-txt">• $DB = AC$ &emsp; [भाग (i) से CPCT द्वारा]</p>
+      <p class="step-txt">• $\angle DBC = \angle ACB = 90^\circ$</p>
+      <p class="step-txt">• $BC = CB$ &emsp; [उभयनिष्ठ भुजा]</p>
+      <p class="step-txt">अतः SAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta DBC &\cong \Delta ACB
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(iv) $CM = \frac{1}{2}AB$ सिद्ध करना:</strong></p>
+      <p class="step-txt">चूँकि $\Delta DBC \cong \Delta ACB$, अतः CPCT से कर्ण बराबर हैं:</p>
+      <p class="step-txt">[चूँकि $CD = 2CM$]</p>
+      <div class="math-scroll">$$\begin{aligned}
+      CD &= AB \\
+      2CM &= AB \\
+      CM &= \frac{1}{2}AB
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: चारों भाग पूर्णतः प्रमाणित हुए ($CM = \frac{1}{2}AB$)।
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EXERCISE 7.2
+       ========================================================= -->
+  <div id="ex72" class="part-header">
+    📖 प्रश्नावली 7.2 (Exercise 7.2) — संपूर्ण 100% NCERT प्रश्नोत्तर
+  </div>
+
+  <!-- Ex 7.2 Q1 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 1: एक समद्विबाहु त्रिभुज $ABC$ में जिसमें $AB = AC$ है, $\angle B$ और $\angle C$ के समद्विभाजक परस्पर बिंदु $O$ पर प्रतिच्छेद करते हैं। $A$ और $O$ को जोड़िए। दर्शाइए कि: (i) $OB = OC$, (ii) $AO$ कोण $A$ को समद्विभाजित करता है।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>(i) $OB = OC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta ABC$ में, $AB = AC$ है। अतः सम्मुख कोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle B &= \angle C
+      \end{aligned}$$</div>
+      <p class="step-txt">दोनों कोणों के आधे भी बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \frac{1}{2}\angle B &= \frac{1}{2}\angle C \\
+      \angle OBC &= \angle OCB
+      \end{aligned}$$</div>
+      <p class="step-txt">अब $\Delta OBC$ में, बराबर कोणों की सम्मुख भुजाएँ बराबर होती हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      OB &= OC
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $AO$ कोण $A$ को समद्विभाजित करता है:</strong></p>
+      <p class="step-txt">$\Delta ABO$ और $\Delta ACO$ में:</p>
+      <p class="step-txt">• $AB = AC$ &emsp; [दिया है]</p>
+      <p class="step-txt">• $OB = OC$ &emsp; [ऊपर सिद्ध किया]</p>
+      <p class="step-txt">• $AO = AO$ &emsp; [उभयनिष्ठ]</p>
+      
+      <p class="step-txt">अतः SSS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABO &\cong \Delta ACO
+      \end{aligned}$$</div>
+      <p class="step-txt">CPCT से संगत कोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle BAO &= \angle CAO
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः रेखाखंड $AO$, कोण $A$ को समद्विभाजित करता है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $OB = OC$ &emsp; तथा &emsp; (ii) $AO$ कोण $A$ का समद्विभाजक है।
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q2 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 2: $\Delta ABC$ में, $AD$ भुजा $BC$ का लम्ब समद्विभाजक है। दर्शाइए कि $\Delta ABC$ एक समद्विबाहु त्रिभुज है, जिसमें $AB = AC$ है।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">$\Delta ABD$ और $\Delta ACD$ में तुलना करने पर:</p>
+      <p class="step-txt">• $BD = CD$ &emsp; [$AD$ भुजा $BC$ को समद्विभाजित करता है]</p>
+      <p class="step-txt">• $\angle ADB = \angle ADC = 90^\circ$ &emsp; [$AD \perp BC$ है]</p>
+      <p class="step-txt">• $AD = AD$ &emsp; [उभयनिष्ठ भुजा]</p>
+
+      <p class="step-txt">अतः SAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABD &\cong \Delta ACD
+      \end{aligned}$$</div>
+
+      <p class="step-txt">CPCT नियम से संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &= AC
+      \end{aligned}$$</div>
+      <p class="step-txt">चूँकि दो भुजाएँ $AB$ और $AC$ बराबर हैं, अतः $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $AB = AC$ &emsp; ➔ &emsp; $\Delta ABC$ एक समद्विबाहु त्रिभुज है।
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q3 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 3: $ABC$ एक समद्विबाहु त्रिभुज है जिसमें बराबर भुजाओं $AC$ और $AB$ पर क्रमशः शीर्षलम्ब $BE$ और $CF$ खींचे गए हैं। दर्शाइए कि ये शीर्षलम्ब बराबर हैं।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      <p class="step-txt">$\Delta ABE$ और $\Delta ACF$ में तुलना करने पर:</p>
+      <p class="step-txt">• $\angle AEB = \angle AFC = 90^\circ$ &emsp; [शीर्षलम्ब होने के कारण]</p>
+      <p class="step-txt">• $\angle A = \angle A$ &emsp; [उभयनिष्ठ कोण]</p>
+      <p class="step-txt">• $AB = AC$ &emsp; [समद्विबाहु त्रिभुज दिया है]</p>
+
+      <p class="step-txt">अतः AAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABE &\cong \Delta ACF
+      \end{aligned}$$</div>
+
+      <p class="step-txt">CPCT नियम से संगत शीर्षलम्ब बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      BE &= CF
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: दोनों शीर्षलम्ब परस्पर बराबर हैं ($BE = CF$)।
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q4 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 4: $ABC$ एक त्रिभुज है जिसमें भुजाओं $AC$ और $AB$ पर खींचे गए शीर्षलम्ब $BE$ और $CF$ बराबर हैं। दर्शाइए कि: (i) $\Delta ABE \cong \Delta ACF$, (ii) $AB = AC$ अर्थात $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+
+      <p class="step-txt"><strong>(i) $\Delta ABE \cong \Delta ACF$ सिद्ध करना:</strong></p>
+      <p class="step-txt">$\Delta ABE$ और $\Delta ACF$ में:</p>
+      <p class="step-txt">• $\angle AEB = \angle AFC = 90^\circ$ &emsp; [प्रत्येक समकोण]</p>
+      <p class="step-txt">• $\angle A = \angle A$ &emsp; [उभयनिष्ठ कोण]</p>
+      <p class="step-txt">• $BE = CF$ &emsp; [दिया है کہ शीर्षलम्ब बराबर हैं]</p>
+
+      <p class="step-txt">अतः AAS कसौटी से:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \Delta ABE &\cong \Delta ACF
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>(ii) $AB = AC$ सिद्ध करना:</strong></p>
+      <p class="step-txt">CPCT नियम से संगत भुजाएँ बराबर होंगी:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      AB &= AC
+      \end{aligned}$$</div>
+      <p class="step-txt">अतः $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</p>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: (i) $\Delta ABE \cong \Delta ACF$ &emsp; तथा &emsp; (ii) $AB = AC$ (समद्विबाहु त्रिभुज)।
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q5 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 5: $ABC$ और $DBC$ समान आधार $BC$ पर स्थित दो समद्विबाहु त्रिभुज हैं। दर्शाइए कि $\angle ABD = \angle ACD$ है।</h3>
+
+    <div class="step-box-blue">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $\Delta ABC$ से (समद्विबाहु त्रिभुज):</strong></p>
+      <p class="step-txt">चूँकि $AB = AC$ है, अतः सम्मुख कोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ABC &= \angle ACB
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\Delta DBC$ से (समद्विबाहु त्रिभुज):</strong></p>
+      <p class="step-txt">चूँकि $BD = CD$ है, अतः सम्मुख कोण बराबर होंगे:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle DBC &= \angle DCB
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: दोनों समीकरणों को जोड़ने पर:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ABC + \angle DBC &= \angle ACB + \angle DCB \\
+      \angle ABD &= \angle ACD
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ इति सिद्धम्: $\angle ABD = \angle ACD$
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q6 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 6: $\Delta ABC$ एक समद्विबाहु त्रिभुज है जिसमें $AB = AC$ है। भुजा $BA$ बिंदु $D$ तक इस प्रकार बढ़ाई गई है कि $AD = AB$ है। दर्शाइए कि $\angle BCD$ एक समकोण है।</h3>
+
+    <div class="step-box-orange">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: $\Delta ABC$ में:</strong></p>
+      <p class="step-txt">चूँकि $AB = AC$ है, अतः माना $\angle ACB = \angle ABC = x$:</p>
+      <p class="step-txt">माना दोनों कोणों की माप $x$ है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ACB &= x \\
+      \angle ABC &= x
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: $\Delta ACD$ में:</strong></p>
+      <p class="step-txt">दिया है $AD = AB$ और $AB = AC \implies AD = AC$:</p>
+      <p class="step-txt">अतः सम्मुख कोण बराबर होंगे, माना $\angle ACD = \angle ADC = y$:</p>
+      <p class="step-txt">माना दोनों कोणों की माप $y$ है:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle ACD &= y \\
+      \angle ADC &= y
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 3: बड़े त्रिभुज $\Delta BCD$ में कोण योग गुण:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle DBC + \angle BCD + \angle BDC &= 180^\circ \\
+      x + (x + y) + y &= 180^\circ \\
+      2x + 2y &= 180^\circ \\
+      2(x + y) &= 180^\circ \\
+      x + y &= \frac{180^\circ}{2} \\
+      x + y &= 90^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt">चूँकि $\angle BCD = x + y$, अतः:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle BCD &= 90^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: $\angle BCD$ एक समकोण ($90^\circ$) है।
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q7 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 7: $ABC$ एक समकोण त्रिभुज है जिसमें $\angle A = 90^\circ$ और $AB = AC$ है। $\angle B$ और $\angle C$ ज्ञात कीजिए।</h3>
+
+    <div class="step-box-green">
+      <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt"><strong>चरण 1: सम्मुख कोण संबंध:</strong></p>
+      <p class="step-txt">दिया है: $AB = AC$</p>
+      <p class="step-txt">बराबर भुजाओं के सम्मुख कोण बराबर होते हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle B &= \angle C
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: त्रिभुज के तीनों कोणों का योग:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle A + \angle B + \angle C &= 180^\circ \\
+      90^\circ + \angle B + \angle B &= 180^\circ \\
+      2\angle B &= 180^\circ - 90^\circ \\
+      2\angle B &= 90^\circ \\
+      \angle B &= \frac{90^\circ}{2} \\
+      \angle B &= 45^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt">चूँकि $\angle C = \angle B$, अतः:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle C &= 45^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ उत्तर: $\angle B = 45^\circ$ &emsp; तथा &emsp; $\angle C = 45^\circ$
+    </div>
+  </div>
+
+  <!-- Ex 7.2 Q8 -->
+  <div class="qa-block">
+    <h3 class="question-heading">प्रश्न 8: दर्शाइए कि किसी समबाहु त्रिभुज (Equilateral Triangle) का प्रत्येक कोण $60^\circ$ होता है।</h3>
+
+    <div class="step-box-purple">
+      <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
+      
+      <p class="step-txt">माना $ABC$ एक समबाहु त्रिभुज है, जिसमें तीनों भुजाएँ समान हैं:</p>
+      <p class="step-txt">समबाहु त्रिभुज की तीनों भुजाएँ बराबर होती हैं: <b>$AB = BC = AC$</b></p>
+
+      <p class="step-txt"><strong>चरण 1: सम्मुख कोणों की समानता:</strong></p>
+      <p class="step-txt">• $AB = AC \implies \angle B = \angle C$</p>
+      <p class="step-txt">• $AC = BC \implies \angle A = \angle B$</p>
+      <p class="step-txt">अतः तीनों कोण परस्पर बराबर हैं:</p>
+      <p class="step-txt">अतः तीनों कोण परस्पर बराबर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle A &= \angle B \\
+      \angle B &= \angle C
+      \end{aligned}$$</div>
+
+      <p class="step-txt"><strong>चरण 2: कोण योग गुण से:</strong></p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle A + \angle B + \angle C &= 180^\circ \\
+      3\angle A &= 180^\circ \\
+      \angle A &= \frac{180^\circ}{3} \\
+      \angle A &= 60^\circ
+      \end{aligned}$$</div>
+
+      <p class="step-txt">चूँकि सभी कोण बराबर हैं:</p>
+      <div class="math-scroll">$$\begin{aligned}
+      \angle A &= 60^\circ \\
+      \angle B &= 60^\circ \\
+      \angle C &= 60^\circ
+      \end{aligned}$$</div>
+    </div>
+
+    <div class="answer-highlight">
+      ✅ सिद्ध हुआ: समबाहु त्रिभुज का प्रत्येक कोण ठीक $60^\circ$ होता है।
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SIMULATOR SECTION (5 LIVE SIMULATORS)
+       ========================================================= -->
+  <div id="simulators" class="part-header">
+    ⚡ लाइव सिमुलेटर अनुभाग (5 Interactive Triangle Simulators)
+  </div>
+
+  <!-- SIMULATOR 1 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: त्रिभुज सर्वांगसमता कसौटी सत्यापनकर्ता (Congruence Tester)</h3>
+    <p class="step-txt">सर्वांगसमता कसौटी चुनें और देखें कि दोनों त्रिभुज किन शर्तों पर सर्वांगसम होते हैं:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कसौटी का चयन करें:</label>
+        <select id="sim1_rule" onchange="runSim1()">
+          <option value="SAS">SAS (भुजा-कोण-भुजा)</option>
+          <option value="ASA">ASA (कोण-भुजा-कोण)</option>
+          <option value="AAS">AAS (कोण-कोण-भुजा)</option>
+          <option value="SSS">SSS (भुजा-भुजा-भुजा)</option>
+          <option value="RHS">RHS (समकोण-कर्ण-भुजा)</option>
+        </select>
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim1()">
+          ⚡ कसौटी का विश्लेषण देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim1_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 2 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: समद्विबाहु त्रिभुज कोण गणक (Isosceles Triangle Calculator)</h3>
+    <p class="step-txt">शीर्ष कोण दर्ज करें, सिमुलेटर दोनों बराबर आधार कोणों की त्वरित गणना करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>शीर्ष कोण ∠A (डिग्री):</label>
+        <input type="number" id="sim2_vertex" value="40" min="1" max="178" oninput="runSim2()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim2()">
+          ⚡ आधार कोण निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim2_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 3 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: समबाहु त्रिभुज 60° प्रमाण सिमुलेटर (Equilateral Visualizer)</h3>
+    <p class="step-txt">समबाहु त्रिभुज की भुजा दर्ज करें और तीनों कोणों का $60^\circ$ होना व परिमाप देखें:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>समबाहु त्रिभुज की भुजा (cm):</label>
+        <input type="number" id="sim3_side" value="6" min="1" max="50" oninput="runSim3()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim3()">
+          ⚡ गुण व परिमाप देखें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim3_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 4 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: समकोण समद्विबाहु त्रिभुज गणक (Right Isosceles: 45°-45°-90°)</h3>
+    <p class="step-txt">समान भुजाओं की लम्बाई दर्ज करें। सिमुलेटर कर्ण व कोणों ($45^\circ, 45^\circ, 90^\circ$) का सत्यापन दिखाएगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>समान भुजा a की लम्बाई (cm):</label>
+        <input type="number" id="sim4_a" value="5" min="1" max="50" oninput="runSim4()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim4()">
+          ⚡ कर्ण व कोण निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim4_output" class="sim-output-box"></div>
+  </div>
+
+  <!-- SIMULATOR 5 -->
+  <div class="inline-simulator-card">
+    <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: समकोण त्रिभुज कर्ण मध्य-बिंदु संबंध ($CM = \frac{1}{2}AB$)</h3>
+    <p class="step-txt">कर्ण $AB$ की लम्बाई दर्ज करें। सिमुलेटर मध्यिका $CM$ की लम्बाई व समकोण शीर्ष से दूरी की पुष्टि करेगा:</p>
+
+    <div class="sim-controls-grid">
+      <div class="sim-group">
+        <label>कर्ण AB की लम्बाई (cm):</label>
+        <input type="number" id="sim5_hyp" value="14" min="2" max="100" oninput="runSim5()">
+      </div>
+      <div class="sim-group" style="justify-content:flex-end;">
+        <button class="sim-btn-calc" onclick="runSim5()">
+          ⚡ CM का मान निकालें ➔
+        </button>
+      </div>
+    </div>
+
+    <div id="sim5_output" class="sim-output-box"></div>
+  </div>
+
+</div><!-- End main-wrapper -->
+
+<!-- Scripts -->
+<script>
+  var currentScale = 1.0;
+  var currentWidth = 100;
+
+  function adjustFont(delta) {
+    currentScale = Math.max(0.7, Math.min(2.0, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function resetFont() {
+    currentScale = 1.0;
+    document.documentElement.style.setProperty('--font-scale', currentScale);
+  }
+
+  function adjustWidth(delta) {
+    currentWidth = Math.max(60, Math.min(100, currentWidth + delta));
+    document.documentElement.style.setProperty('--width-scale', currentWidth + '%');
+  }
+
+  function resetWidth() {
+    currentWidth = 100;
+    document.documentElement.style.setProperty('--width-scale', '100%');
+  }
+
+  function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+  }
+
+  // SIMULATOR 1: Congruence Rules
+  function runSim1() {
+    var r = document.getElementById('sim1_rule').value;
+    var out = document.getElementById('sim1_output');
+
+    var desc = {
+      'SAS': 'भुजा-कोण-भुजा (Side-Angle-Side): दो संगत भुजाएँ तथा उनके बीच का अंतर्गत कोण बराबर होना चाहिए।',
+      'ASA': 'कोण-भुजा-कोण (Angle-Side-Angle): दो संगत कोण तथा उनके बीच की अंतर्गत भुजा बराबर होनी चाहिए।',
+      'AAS': 'कोण-कोण-भुजा (Angle-Angle-Side): दो संगत कोण तथा कोई एक संगत भुजा बराबर होनी चाहिए।',
+      'SSS': 'भुजा-भुजा-भुजा (Side-Side-Side): तीनों संगत भुजाएँ परस्पर बराबर होनी चाहिए।',
+      'RHS': 'समकोण-कर्ण-भुजा (Right angle-Hypotenuse-Side): एक समकोण, कर्ण तथा कोई एक भुजा बराबर होनी चाहिए।'
+    };
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>चयनित कसौटी:</strong> <span style="font-size:22pt; color:#1e40af; font-weight:900;">' + r + '</span></p>' +
+      '<p class="step-txt">' + desc[r] + '</p>' +
+      '<div class="answer-highlight">✅ CPCT परिणाम: सर्वांगसम सिद्ध होने पर शेष सभी 3 संगत भाग (भुजाएँ व कोण) स्वतः परस्पर बराबर हो जाते हैं।</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+  }
+
+  // SIMULATOR 2: Isosceles Angles
+  function runSim2() {
+    var v = parseFloat(document.getElementById('sim2_vertex').value) || 40;
+    var rem = 180 - v;
+    var base = rem / 2;
+    var out = document.getElementById('sim2_output');
+
+    var html = '<div class="step-box-orange">' +
+      '<p class="step-txt"><strong>शीर्ष कोण:</strong> $\\angle A = ' + v + '^\\circ$</p>' +
+      '<p class="step-txt">दोनों आधार कोणों का योग: $180^\\circ - ' + v + '^\\circ = ' + rem + '^\\circ$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\angle B &= ' + base + '^\\circ \\\\' +
+      '\\angle C &= ' + base + '^\\circ' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ दोनों आधार कोण: $\\angle B = ' + base + '^\\circ$ &emsp; तथा &emsp; $\\angle C = ' + base + '^\\circ$</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 3: Equilateral Visualizer
+  function runSim3() {
+    var s = parseFloat(document.getElementById('sim3_side').value) || 6;
+    var p = 3 * s;
+    var out = document.getElementById('sim3_output');
+
+    var html = '<div class="step-box-green">' +
+      '<p class="step-txt"><strong>समबाहु त्रिभुज की भुजा:</strong> $a = ' + s + '$ cm</p>' +
+      '<p class="step-txt">परिमाप $= 3 \\times ' + s + ' = ' + p + '$ cm</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      '\\angle A &= 60^\\circ \\\\' +
+      '\\angle B &= 60^\\circ \\\\' +
+      '\\angle C &= 60^\\circ' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ प्रत्येक कोण = 60° &emsp; | &emsp; परिमाप = ' + p + ' cm</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 4: Right Isosceles
+  function runSim4() {
+    var a = parseFloat(document.getElementById('sim4_a').value) || 5;
+    var hyp = (a * Math.SQRT2).toFixed(2);
+    var out = document.getElementById('sim4_output');
+
+    var html = '<div class="step-box-purple">' +
+      '<p class="step-txt"><strong>समान भुजाएँ:</strong> $AB = AC = ' + a + '$ cm</p>' +
+      '<p class="step-txt"><strong>समकोण:</strong> $\\angle A = 90^\\circ$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'BC &= \\sqrt{' + a + '^2 + ' + a + '^2} \\\\' +
+      '&= \\sqrt{2 \\times ' + (a * a) + '} \\\\' +
+      '&= ' + a + '\\sqrt{2} \\approx ' + hyp + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ कोण: 90°, 45°, 45° &emsp; | &emsp; कर्ण = ' + hyp + ' cm</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // SIMULATOR 5: Hypotenuse Midpoint
+  function runSim5() {
+    var ab = parseFloat(document.getElementById('sim5_hyp').value) || 14;
+    var cm = (ab / 2);
+    var out = document.getElementById('sim5_output');
+
+    var html = '<div class="step-box-blue">' +
+      '<p class="step-txt"><strong>कर्ण AB की कुल लम्बाई:</strong> $' + ab + '$ cm</p>' +
+      '<p class="step-txt">संबंध: $CM = \\frac{1}{2}AB$</p>' +
+      '<div class="math-scroll">$$\\begin{aligned}' +
+      'CM &= \\frac{1}{2} \\times ' + ab + ' \\\\' +
+      '&= ' + cm + ' \\text{ cm}' +
+      '\\end{aligned}$$</div>' +
+      '<div class="answer-highlight">✅ मध्यिका CM की लम्बाई = ' + cm + ' cm &emsp; [AM = BM = CM = ' + cm + ' cm]</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    runSim1();
+    runSim2();
+    runSim3();
+    runSim4();
+    runSim5();
+  });
+</script>
+
+</body>
+</html>
