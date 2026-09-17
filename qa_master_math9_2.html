@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCERT कक्षा 9 गणित - अध्याय 2: बहुपद (संपूर्ण 100% प्रश्नोत्तर व 5 लाइव सिमुलेटर)</title>
+
+<!-- MathJax Configuration with Bold Fraction Lines -->
+<script>
+  function thickenFractionLines() {
+    document.querySelectorAll('mjx-line, mjx-frac mjx-line, .mjx-line').forEach(el => {
+      el.style.setProperty('border-top', '8px solid #047857', 'important');
+      el.style.setProperty('margin-top', '6px', 'important');
+      el.style.setProperty('margin-bottom', '6px', 'important');
+      el.style.setProperty('display', 'block', 'important');
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+      displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+      processEscapes: true
+    },
+    chtml: {
+      scale: 1.05
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          thickenFractionLines();
+        });
+      }
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  *, *:before, *:after {
+    box-sizing: border-box !important;
+    font-weight: 900 !important;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Noto Sans Devanagari', 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+    font-size: 26pt;
+    font-weight: 900 !important;
+    line-height: 1.8;
+    color: #000000 !important;
+    background-color: #f1f5f9;
+    padding: 20px 10px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 0.9px #000000 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* TOP ACTION BAR */
+  .action-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;
+    border-bottom: 4px solid #3b82f6;
+    padding: 12px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+    border-radius: 14px;
+  }
+
+  .action-btn {
+    font-size: 1.3rem !important;
+    font-weight: 900 !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #1e293b;
+    color: #ffffff !important;
+    border: 2px solid #475569;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+  }
+
+  .action-btn:hover {
+    background: #3b82f6;
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+  }
+
+  .action-btn-home {
+    background: #059669;
+    border-color: #10b981;
+  }
+  .action-btn-home:hover {
+    background: #047857;
+  }
+
+  .action-btn-copy {
+    background: #7c3aed;
+    border-color: #a78bfa;
+  }
+  .action-btn-copy:hover {
+    background: #6d28d9;
+  }
+
+  /* TOP HEADER & BADGES */
+  .top-header {
+    text-align: center;
+    background: #ffffff;
+    border: 3px solid #cbd5e1;
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  }
+
+  .class-badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff !important;
+    font-size: 20pt;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    border: 2px solid #1d4ed8;
+    -webkit-text-stroke: 0px !important;
+  }
+
+  /* NAVIGATION BAR */
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 75px;
+    z-index: 999;
+    background: rgba(241, 245, 249, 0.95);
+    padding: 10px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-nav {
+    background: #ffffff;
+    color: #0f172a !important;
+    border: 3px solid #0284c7;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    -webkit-text-stroke: 0.5px #0f172a !important;
+  }
+
+  .btn-nav:hover {
+    background: #0284c7;
+    color: #ffffff !important;
+    -webkit-text-stroke: 0.5px #ffffff !important;
+    transform: translateY(-2px);
+  }
+
+  /* STEP BOX STYLES */
+  .step-box-blue {
+    background: #eff6ff !important;
+    border: 3px solid #bfdbfe !important;
+    border-left: 16px solid #2563eb !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08) !important;
+  }
+
+  .step-box-orange {
+    background: #fffbeb !important;
+    border: 3px solid #fde68a !important;
+    border-left: 16px solid #f59e0b !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.08) !important;
+  }
+
+  .step-box-purple {
+    background: #faf5ff !important;
+    border: 3px solid #e9d5ff !important;
+    border-left: 16px solid #9333ea !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(147, 51, 234, 0.08) !important;
+  }
+
+  .step-box-green {
+    background: #f0fdf4 !important;
+    border: 3px solid #bbf7d0 !important;
+    border-left: 16px solid #16a34a !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.08) !important;
+  }
+
+  .step-box-red {
+    background: #fff1f2 !important;
+    border: 3px solid #fecdd3 !important;
+    border-left: 16px solid #e11d48 !important;
+    border-radius: 18px !important;
+    padding: 24px 26px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.08) !important;
+  }
+
+  /* TEXT ACCENTS */
+  b, strong, .text-red {
+    color: #991b1b !important;
+    -webkit-text-stroke: 0.8px #7f1d1d !important;
+    display: inline !important;
+  }
+  b.blue, .text-blue {
+    color: #1e3a8a !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+    display: inline !important;
+  }
+
+  /* COLORFUL MATHJAX STYLING */
+  mjx-container, .MathJax, .mjx-chtml, mjx-math {
+    font-weight: 900 !important;
+    max-width: 100% !important;
+  }
+
+  mjx-container[display="true"] {
+    display: block !important;
+    margin: 14px 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  mjx-container:not([display="true"]) {
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  mjx-mn {
+    color: #000000 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #000000 !important;
+  }
+
+  mjx-mo {
+    color: #1d4ed8 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.9px #1d4ed8 !important;
+  }
+
+  mjx-line, mjx-frac mjx-line, .mjx-line {
+    border-top: 8px solid #047857 !important;
+    border-bottom: none !important;
+    margin: 6px 0 !important;
+    border-radius: 3px !important;
+    display: block !important;
+  }
+
+  /* MAIN WRAPPER */
+  #contentToCopy {
+    width: 1350px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    padding: 45px 35px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    border: 6px solid #94a3b8 !important;
+  }
+
+  .container {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* HERO TITLE */
+  .hero-title {
+    text-align: center !important;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+    border: 6px solid #60a5fa !important;
+    border-radius: 24px !important;
+    padding: 30px !important;
+    margin-bottom: 45px !important;
+    font-size: 44pt !important;
+    font-weight: 900 !important;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4) !important;
+    -webkit-text-stroke: 0.8px #000000 !important;
+  }
+  .hero-title span {
+    color: #fef08a !important;
+    font-size: 30pt !important;
+    display: block;
+    margin-top: 15px;
+  }
+
+  /* PART HEADERS */
+  .part-header {
+    color: #1e3a8a !important;
+    background-color: #eff6ff !important;
+    border-left: 18px solid #2563eb !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    font-size: 38pt !important;
+    font-weight: 900 !important;
+    margin-top: 55px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12) !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+  }
+
+  /* QA CARD */
+  .qa-card, .qa-block {
+    background: #ffffff !important;
+    border: 4px solid #cbd5e1 !important;
+    border-radius: 20px !important;
+    padding: 35px 40px !important;
+    margin: 35px 0 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .question-heading {
+    font-size: 32pt !important;
+    color: #1e3a8a !important;
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+    border-bottom: 3px solid #bfdbfe !important;
+    padding-bottom: 12px !important;
+    -webkit-text-stroke: 0.8px #1e3a8a !important;
+  }
+
+  .answer-highlight {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 20px 26px !important;
+    background: #fef08a !important;
+    border: 4px solid #16a34a !important;
+    border-left: 20px solid #047857 !important;
+    border-radius: 16px !important;
+    color: #064e3b !important;
+    font-weight: 900 !important;
+    font-size: 28pt !important;
+    -webkit-text-stroke: 1.1px #064e3b !important;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.25) !important;
+  }
+
+  /* INLINE SIMULATOR CARD */
+  .inline-simulator-card {
+    background: #ffffff !important;
+    border: 4px solid #0284c7 !important;
+    border-left: 20px solid #0369a1 !important;
+    border-radius: 20px !important;
+    padding: 32px 36px !important;
+    margin: 40px 0 !important;
+    box-shadow: 0 14px 32px rgba(2, 132, 199, 0.18) !important;
+  }
+  .sim-title {
+    color: #0369a1 !important;
+    font-size: 32pt !important;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    -webkit-text-stroke: 0.8px #0369a1 !important;
+  }
+  .sim-controls-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+    align-items: end !important;
+    margin-bottom: 25px !important;
+    background: #f0f9ff !important;
+    padding: 24px 28px !important;
+    border-radius: 16px !important;
+    border: 3px solid #bae6fd !important;
+  }
+  .sim-full-row {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+  .sim-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .sim-group label {
+    font-size: 22pt !important;
+    font-weight: 900 !important;
+    color: #1e3a8a !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  .sim-group input, .sim-group select, .sim-controls-grid input, .sim-controls-grid select {
+    font-size: 22pt !important;
+    padding: 12px 18px !important;
+    border: 3px solid #0284c7 !important;
+    border-radius: 12px !important;
+    font-weight: 900 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sim-btn-calc {
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    padding: 14px 28px !important;
+    background: #0284c7 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35) !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
+  }
+  .sim-btn-calc:hover {
+    background: #0369a1 !important;
+    transform: translateY(-2px) !important;
+  }
+  .sim-output-box {
+    background: #f8fafc !important;
+    border: 3px solid #cbd5e1 !important;
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
+    font-size: 24pt !important;
+    line-height: 1.9 !important;
+  }
+
+  .math-scroll {
+    overflow-x: auto !important;
+    margin: 12px 0 !important;
+  }
+
+  @media (max-width: 1000px) {
+    body { padding: 10px 5px; }
+    #contentToCopy { width: 100% !important; padding: 20px 10px !important; }
+    .hero-title { font-size: 2rem !important; }
+    .part-header { font-size: 1.6rem !important; }
+    .question-heading { font-size: 1.4rem !important; }
+    .sim-input, .sim-group input, .sim-group select { font-size: 1.2rem !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <button class="action-btn" onclick="adjustWidth(100)">↔️ W+</button>
+    <button class="action-btn" onclick="adjustWidth(-100)">↔️ W-</button>
+    <button class="action-btn" onclick="adjustFontSize(2)">🔍 A+</button>
+    <button class="action-btn" onclick="adjustFontSize(-2)">🔍 A-</button>
+    <button class="action-btn" onclick="adjustFontWeight(100)">✒️ B+</button>
+    <button class="action-btn" onclick="adjustFontWeight(-100)">✒️ B-</button>
+    <button class="action-btn action-btn-copy" onclick="copyEntireContent()">📋 कॉपी</button>
+    <button class="action-btn" onclick="window.print()">🖨️ प्रिंट</button>
+    <a href="math9.html" class="action-btn action-btn-home">🏠 मुख्य पोर्टल</a>
+  </div>
+
+  <div id="contentToCopy">
+    <!-- Top Header -->
+    <div class="top-header">
+      <span class="class-badge">NCERT कक्षा 9 गणित (Mathematics)</span>
+      <div style="font-size: 32pt; font-weight: 900; color: #0f172a; margin-top: 8px;">
+        अध्याय 2: बहुपद (Polynomials) • संपूर्ण 100% अभ्यास हल (प्रश्नावली 2.1 से 2.4) व 5 लाइव सिमुलेटर
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <a href="#ex21" class="btn-nav">प्रश्नावली 2.1</a>
+      <a href="#ex22" class="btn-nav">प्रश्नावली 2.2</a>
+      <a href="#ex23" class="btn-nav">प्रश्नावली 2.3</a>
+      <a href="#ex24" class="btn-nav">प्रश्नावली 2.4</a>
+      <a href="#simulators" class="btn-nav" style="background:#eff6ff; border-color:#2563eb; color:#1d4ed8;">⚡ 5 सिमुलेटर</a>
+    </div>
+
+    <!-- Hero Title Banner -->
+    <div class="hero-title">
+      NCERT कक्षा 9 गणित • अध्याय 2
+      <span>बहुपद (Polynomials) — संपूर्ण मास्टर प्रश्न-उत्तर नोट्स</span>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 2.1
+         ========================================================= -->
+    <div id="ex21" class="part-header">
+      📖 प्रश्नावली 2.1 (Exercise 2.1) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 2.1 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: निम्नलिखित व्यंजकों में कौन-कौन एक चर में बहुपद हैं और कौन-कौन नहीं हैं? कारण के साथ अपने उत्तर दीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $4x^2 - 3x + 7$</b></p>
+        <p><b>उत्तर:</b> <strong>हाँ, यह एक चर में बहुपद है।</strong></p>
+        <p><b>कारण:</b> इसमें केवल एक चर $x$ है और चर के सभी घातांक ($2$ और $1$) पूर्ण संख्याएँ (Whole numbers) हैं।</p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) $y^2 + \sqrt{2}$</b></p>
+        <p><b>उत्तर:</b> <strong>हाँ, यह एक चर में बहुपद है।</strong></p>
+        <p><b>कारण:</b> इसमें केवल एक चर $y$ है और चर $y$ का घातांक $2$ एक पूर्ण संख्या है। ($\sqrt{2}$ एक अचर वास्तविक संख्या है)।</p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(iii) $3\sqrt{t} + t\sqrt{2}$</b></p>
+        <p><b>उत्तर:</b> <strong>नहीं, यह बहुपद नहीं है।</strong></p>
+        <p><b>कारण:</b> यहाँ पहले पद में $t$ का घातांक $\sqrt{t} = t^{1/2}$ है, जहाँ $\frac{1}{2}$ एक पूर्ण संख्या नहीं है। बहुपद होने के लिए चर का घातांक सदैव पूर्ण संख्या होना चाहिए।</p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(iv) $y + \frac{2}{y}$</b></p>
+        <p><b>उत्तर:</b> <strong>नहीं, यह बहुपद नहीं है।</strong></p>
+        <p><b>कारण:</b> इसे $y + 2y^{-1}$ लिखा जा सकता है। यहाँ चर $y$ का घातांक $-1$ है, जो कि पूर्ण संख्या नहीं है (ऋणात्मक पूर्णांक है)।</p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(v) $x^{10} + y^3 + t^{50}$</b></p>
+        <p><b>उत्तर:</b> <strong>यह बहुपद है, परन्तु एक चर में नहीं है (यह तीन चरों में बहुपद है)।</strong></p>
+        <p><b>कारण:</b> यहाँ सभी घातांक ($10, 3, 50$) पूर्ण संख्याएँ हैं, किन्तु इसमें तीन भिन्न चर $x, y, t$ उपस्थित हैं।</p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ सारांश: केवल व्यंजक (i) और (ii) एक चर में बहुपद हैं।
+      </div>
+    </div>
+
+    <!-- Ex 2.1 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: निम्नलिखित में से प्रत्येक में $x^2$ का गुणांक (Coefficient) लिखिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $2 + x^2 + x$</b></p>
+        <p>यहाँ $x^2$ को $1 \times x^2$ लिखा जा सकता है।</p>
+        <p><b>अतः $x^2$ का गुणांक = $1$ है।</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $2 - x^2 + x^3$</b></p>
+        <p>यहाँ $x^2$ वाला पद $-x^2 = -1 \times x^2$ है।</p>
+        <p><b>अतः $x^2$ का गुणांक = $-1$ है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $\frac{\pi}{2}x^2 + x$</b></p>
+        <p>यहाँ $x^2$ के साथ गुणन में $\frac{\pi}{2}$ उपस्थित है।</p>
+        <p><b>अतः $x^2$ का गुणांक = $\frac{\pi}{2}$ है।</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $\sqrt{2}x - 1$</b></p>
+        <p>इस व्यंजक में $x^2$ का पद उपस्थित नहीं है, अतः इसे $0 \times x^2 + \sqrt{2}x - 1$ लिखा जा सकता है।</p>
+        <p><b>अतः $x^2$ का गुणांक = $0$ है।</b></p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ $x^2$ के गुणांक क्रमशः: (i) $1$, (ii) $-1$, (iii) $\frac{\pi}{2}$, (iv) $0$
+      </div>
+    </div>
+
+    <!-- Ex 2.1 Q3 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 3: $35$ घात के द्विपद (Binomial of degree 35) का और $100$ घात के एकपदी (Monomial of degree 100) का एक-एक उदाहरण दीजिए।</h3>
+      
+      <div class="step-box-blue">
+        <p><b>1. $35$ घात का द्विपद (Binomial of degree 35):</b></p>
+        <p>द्विपद का अर्थ है जिसमें ठीक $2$ पद हों तथा उच्चतम घात $35$ हो।</p>
+        <div class="math-scroll">$$p(x) = x^{35} + 5$$</div>
+        <p>(अन्य मान्य उदाहरण: $3x^{35} - 4$, $y^{35} + 10$)</p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>2. $100$ घात का एकपदी (Monomial of degree 100):</b></p>
+        <p>एकपदी का अर्थ है जिसमें केवल $1$ पद हो तथा उच्चतम घात $100$ हो।</p>
+        <div class="math-scroll">$$q(y) = y^{100}$$</div>
+        <p>(अन्य मान्य उदाहरण: $2x^{100}$, $-\sqrt{5}t^{100}$)</p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ अभीष्ट उदाहरण: द्विपद = $x^{35} + 5$ तथा एकपदी = $y^{100}$
+      </div>
+    </div>
+
+    <!-- Ex 2.1 Q4 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 4: निम्नलिखित बहुपदों में से प्रत्येक बहुपद की घात (Degree of Polynomial) लिखिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $5x^3 + 4x^2 + 7x$</b></p>
+        <p>यहाँ चर $x$ की उच्चतम घात $3$ है।</p>
+        <p><b>अतः बहुपद की घात = $3$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $4 - y^2$</b></p>
+        <p>यहाँ चर $y$ की उच्चतम घात $2$ है।</p>
+        <p><b>अतः बहुपद की घात = $2$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $5t - \sqrt{7}$</b></p>
+        <p>यहाँ चर $t$ की उच्चतम घात $1$ है ($t = t^1$)।</p>
+        <p><b>अतः बहुपद की घात = $1$</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $3$</b></p>
+        <p>यह एक अचर बहुपद (Constant Polynomial) है। इसे $3 = 3x^0$ लिखा जा सकता है।</p>
+        <p><b>अतः बहुपद की घात = $0$</b></p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ बहुपदों की घात: (i) $3$, (ii) $2$, (iii) $1$, (iv) $0$
+      </div>
+    </div>
+
+    <!-- Ex 2.1 Q5 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 5: बताइए कि निम्नलिखित बहुपदों में कौन-कौन बहुपद रैखिक (Linear), कौन-कौन द्विघाती (Quadratic) और कौन-कौन त्रिघाती (Cubic) हैं:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $x^2 + x$</b> — घात $= 2$ $\implies$ <strong>द्विघाती बहुपद (Quadratic)</strong></p>
+      </div>
+      <div class="step-box-purple">
+        <p><b>(ii) $x - x^3$</b> — घात $= 3$ $\implies$ <strong>त्रिघाती बहुपद (Cubic)</strong></p>
+      </div>
+      <div class="step-box-blue">
+        <p><b>(iii) $y + y^2 + 4$</b> — घात $= 2$ $\implies$ <strong>द्विघाती बहुपद (Quadratic)</strong></p>
+      </div>
+      <div class="step-box-green">
+        <p><b>(iv) $1 + x$</b> — घात $= 1$ $\implies$ <strong>रैखिक बहुपद (Linear)</strong></p>
+      </div>
+      <div class="step-box-green">
+        <p><b>(v) $3t$</b> — घात $= 1$ $\implies$ <strong>रैखिक बहुपद (Linear)</strong></p>
+      </div>
+      <div class="step-box-blue">
+        <p><b>(vi) $r^2$</b> — घात $= 2$ $\implies$ <strong>द्विघाती बहुपद (Quadratic)</strong></p>
+      </div>
+      <div class="step-box-purple">
+        <p><b>(vii) $7x^3$</b> — घात $= 3$ $\implies$ <strong>त्रिघाती बहुपद (Cubic)</strong></p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ रैखिक: (iv), (v) | द्विघाती: (i), (iii), (vi) | त्रिघाती: (ii), (vii)
+      </div>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 2.2
+         ========================================================= -->
+    <div id="ex22" class="part-header">
+      📖 प्रश्नावली 2.2 (Exercise 2.2) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 2.2 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: निम्नलिखित पर बहुपद $5x - 4x^2 + 3$ के मान ज्ञात कीजिए:</h3>
+      <p>मान लीजिए $p(x) = 5x - 4x^2 + 3 = -4x^2 + 5x + 3$</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) $x = 0$ पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= 5(0) - 4(0)^2 + 3 \\
+        &= 0 - 0 + 3 \\
+        &= 3
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(0) = 3$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $x = -1$ पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= 5(-1) - 4(-1)^2 + 3 \\
+        &= -5 - 4(1) + 3 \\
+        &= -5 - 4 + 3 \\
+        &= -9 + 3 \\
+        &= -6
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(-1) = -6$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $x = 2$ पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(2) &= 5(2) - 4(2)^2 + 3 \\
+        &= 10 - 4(4) + 3 \\
+        &= 10 - 16 + 3 \\
+        &= 13 - 16 \\
+        &= -3
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(2) = -3$</b></p>
+      </div>
+
+      <div class="answer-highlight">
+        ✅ मान क्रमशः: (i) $3$, (ii) $-6$, (iii) $-3$
+      </div>
+    </div>
+
+    <!-- Ex 2.2 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: निम्नलिखित बहुपदों में से प्रत्येक बहुपद के लिए $p(0), p(1)$ और $p(2)$ ज्ञात कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $p(y) = y^2 - y + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= (0)^2 - (0) + 1 = 1 \\
+        p(1) &= (1)^2 - (1) + 1 = 1 - 1 + 1 = 1 \\
+        p(2) &= (2)^2 - (2) + 1 = 4 - 2 + 1 = 3
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(0) = 1, p(1) = 1, p(2) = 3$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $p(t) = 2 + t + 2t^2 - t^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= 2 + 0 + 2(0)^2 - (0)^3 = 2 \\
+        p(1) &= 2 + 1 + 2(1)^2 - (1)^3 = 2 + 1 + 2 - 1 = 4 \\
+        p(2) &= 2 + 2 + 2(2)^2 - (2)^3 = 2 + 2 + 8 - 8 = 4
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(0) = 2, p(1) = 4, p(2) = 4$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = x^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= (0)^3 = 0 \\
+        p(1) &= (1)^3 = 1 \\
+        p(2) &= (2)^3 = 8
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(0) = 0, p(1) = 1, p(2) = 8$</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $p(x) = (x - 1)(x + 1) = x^2 - 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(0) &= (0 - 1)(0 + 1) = (-1)(1) = -1 \\
+        p(1) &= (1 - 1)(1 + 1) = (0)(2) = 0 \\
+        p(2) &= (2 - 1)(2 + 1) = (1)(3) = 3
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $p(0) = -1, p(1) = 0, p(2) = 3$</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.2 Q3 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 3: सत्यापित कीजिए कि दिखाए गए मान निम्नलिखित स्थितियों में संगत बहुपद के शून्यक (Zeroes) हैं:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $p(x) = 3x + 1, \quad x = -\frac{1}{3}$</b></p>
+        <div class="math-scroll">$$p\left(-\frac{1}{3}\right) = 3\left(-\frac{1}{3}\right) + 1 = -1 + 1 = 0$$</div>
+        <p><b>निष्कर्ष: हाँ, $x = -\frac{1}{3}$ बहुपद का शून्यक है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(ii) $p(x) = 5x - \pi, \quad x = \frac{4}{5}$</b></p>
+        <div class="math-scroll">$$p\left(\frac{4}{5}\right) = 5\left(\frac{4}{5}\right) - \pi = 4 - \pi \neq 0$$</div>
+        <p><b>निष्कर्ष: नहीं, $x = \frac{4}{5}$ बहुपद का शून्यक नहीं है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = x^2 - 1, \quad x = 1, -1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= (1)^2 - 1 = 1 - 1 = 0 \\
+        p(-1) &= (-1)^2 - 1 = 1 - 1 = 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: हाँ, $x = 1$ और $x = -1$ दोनों शून्यक हैं।</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $p(x) = (x + 1)(x - 2), \quad x = -1, 2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1 + 1)(-1 - 2) = (0)(-3) = 0 \\
+        p(2) &= (2 + 1)(2 - 2) = (3)(0) = 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: हाँ, $x = -1$ और $x = 2$ दोनों शून्यक हैं।</b></p>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) $p(x) = x^2, \quad x = 0$</b></p>
+        <div class="math-scroll">$$p(0) = (0)^2 = 0$$</div>
+        <p><b>निष्कर्ष: हाँ, $x = 0$ शून्यक है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(vi) $p(x) = lx + m, \quad x = -\frac{m}{l}$</b></p>
+        <div class="math-scroll">$$p\left(-\frac{m}{l}\right) = l\left(-\frac{m}{l}\right) + m = -m + m = 0$$</div>
+        <p><b>निष्कर्ष: हाँ, $x = -\frac{m}{l}$ शून्यक है।</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(vii) $p(x) = 3x^2 - 1, \quad x = -\frac{1}{\sqrt{3}}, \frac{2}{\sqrt{3}}$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p\left(-\frac{1}{\sqrt{3}}\right) &= 3\left(-\frac{1}{\sqrt{3}}\right)^2 - 1 = 3\left(\frac{1}{3}\right) - 1 = 1 - 1 = 0 \implies \text{शून्यक है} \\
+        p\left(\frac{2}{\sqrt{3}}\right) &= 3\left(\frac{2}{\sqrt{3}}\right)^2 - 1 = 3\left(\frac{4}{3}\right) - 1 = 4 - 1 = 3 \neq 0 \implies \text{शून्यक नहीं है}
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: $x = -\frac{1}{\sqrt{3}}$ शून्यक है, परन्तु $x = \frac{2}{\sqrt{3}}$ शून्यक नहीं है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(viii) $p(x) = 2x + 1, \quad x = \frac{1}{2}$</b></p>
+        <div class="math-scroll">$$p\left(\frac{1}{2}\right) = 2\left(\frac{1}{2}\right) + 1 = 1 + 1 = 2 \neq 0$$</div>
+        <p><b>निष्कर्ष: नहीं, $x = \frac{1}{2}$ शून्यक नहीं है।</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.2 Q4 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 4: निम्नलिखित स्थितियों में से प्रत्येक स्थिति में बहुपद का शून्यक ज्ञात कीजिए:</h3>
+      <p>शून्यक ज्ञात करने हेतु हम $p(x) = 0$ रखते हैं:</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) $p(x) = x + 5$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x + 5 &= 0 \\
+        x &= -5
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = -5$ है।</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $p(x) = x - 5$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x - 5 &= 0 \\
+        x &= 5
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = 5$ है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = 2x + 5$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        2x + 5 &= 0 \\
+        2x &= -5 \\
+        x &= -\frac{5}{2}
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = -\frac{5}{2}$ है।</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $p(x) = 3x - 2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        3x - 2 &= 0 \\
+        3x &= 2 \\
+        x &= \frac{2}{3}
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = \frac{2}{3}$ है।</b></p>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) $p(x) = 3x$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        3x &= 0 \\
+        x &= \frac{0}{3} = 0
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = 0$ है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(vi) $p(x) = ax, \quad a \neq 0$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        ax &= 0 \\
+        x &= \frac{0}{a} = 0
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = 0$ है।</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(vii) $p(x) = cx + d, \quad c \neq 0, c, d \text{ वास्तविक संख्याएँ हैं}$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        cx + d &= 0 \\
+        cx &= -d \\
+        x &= -\frac{d}{c}
+        \end{aligned}$$</div>
+        <p><b>उत्तर: शून्यक $x = -\frac{d}{c}$ है।</b></p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         LIVE SIMULATOR 1: POLYNOMIAL ZERO EVALUATOR
+         ========================================================= -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 1: बहुपद मान व शून्यक गणक (Polynomial Evaluator & Zero Checker)</h3>
+      <p>द्विघात बहुपद $p(x) = ax^2 + bx + c$ के गुणांक भरें तथा $x$ का मान डालकर देखें कि बहुपद का मान क्या आता है और क्या वह शून्यक है!</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>गुणांक a (x² का):</label>
+          <input type="number" id="sim1_a" value="1" oninput="calculateSim1()">
+        </div>
+        <div class="sim-group">
+          <label>गुणांक b (x का):</label>
+          <input type="number" id="sim1_b" value="-5" oninput="calculateSim1()">
+        </div>
+        <div class="sim-group">
+          <label>अचर पद c:</label>
+          <input type="number" id="sim1_c" value="6" oninput="calculateSim1()">
+        </div>
+        <div class="sim-group">
+          <label>जांच हेतु x का मान:</label>
+          <input type="number" id="sim1_x" value="2" oninput="calculateSim1()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim1()" style="width:100%;">
+            ⚡ बहुपद का मान व शून्यक जांचें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim1_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 2.3
+         ========================================================= -->
+    <div id="ex23" class="part-header">
+      📖 प्रश्नावली 2.3 (Exercise 2.3) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 2.3 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: बताइए कि निम्नलिखित बहुपदों में से किस बहुपद का एक गुणनखंड $x + 1$ है:</h3>
+      <p><b>गुणनखंड प्रमेय (Factor Theorem):</b> यदि $p(-1) = 0$ हो, तो $(x + 1)$ बहुपद $p(x)$ का एक गुणनखंड होगा। अतः हम प्रत्येक में $x = -1$ रखेंगे:</p>
+
+      <div class="step-box-green">
+        <p><b>(i) $p(x) = x^3 + x^2 + x + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^3 + (-1)^2 + (-1) + 1 \\
+        &= -1 + 1 - 1 + 1 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-1) = 0$ है, अतः $(x + 1)$ इस बहुपद का एक गुणनखंड है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(ii) $p(x) = x^4 + x^3 + x^2 + x + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^4 + (-1)^3 + (-1)^2 + (-1) + 1 \\
+        &= 1 - 1 + 1 - 1 + 1 \\
+        &= 1 \neq 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-1) \neq 0$ है, अतः $(x + 1)$ इसका गुणनखंड नहीं है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(iii) $p(x) = x^4 + 3x^3 + 3x^2 + x + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^4 + 3(-1)^3 + 3(-1)^2 + (-1) + 1 \\
+        &= 1 + 3(-1) + 3(1) - 1 + 1 \\
+        &= 1 - 3 + 3 - 1 + 1 \\
+        &= 1 \neq 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-1) \neq 0$ है, अतः $(x + 1)$ इसका गुणनखंड नहीं है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(iv) $p(x) = x^3 - x^2 - (2 + \sqrt{2})x + \sqrt{2}$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= (-1)^3 - (-1)^2 - (2 + \sqrt{2})(-1) + \sqrt{2} \\
+        &= -1 - (1) + (2 + \sqrt{2}) + \sqrt{2} \\
+        &= -2 + 2 + \sqrt{2} + \sqrt{2} \\
+        &= 2\sqrt{2} \neq 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-1) = 2\sqrt{2} \neq 0$ है, अतः $(x + 1)$ इसका गुणनखंड नहीं है।</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.3 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: गुणनखंड प्रमेय लागू करके बताइए कि निम्नलिखित स्थितियों में से प्रत्येक स्थिति में $g(x), p(x)$ का एक गुणनखंड है या नहीं:</h3>
+      
+      <div class="step-box-green">
+        <p><b>(i) $p(x) = 2x^3 + x^2 - 2x - 1, \quad g(x) = x + 1$</b></p>
+        <p>$g(x) = 0 \implies x + 1 = 0 \implies x = -1$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-1) &= 2(-1)^3 + (-1)^2 - 2(-1) - 1 \\
+        &= 2(-1) + 1 + 2 - 1 \\
+        &= -2 + 1 + 2 - 1 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-1) = 0$, अतः $g(x), p(x)$ का एक गुणनखंड है।</b></p>
+      </div>
+
+      <div class="step-box-red">
+        <p><b>(ii) $p(x) = x^3 + 3x^2 + 3x + 1, \quad g(x) = x + 2$</b></p>
+        <p>$g(x) = 0 \implies x + 2 = 0 \implies x = -2$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(-2) &= (-2)^3 + 3(-2)^2 + 3(-2) + 1 \\
+        &= -8 + 3(4) - 6 + 1 \\
+        &= -8 + 12 - 6 + 1 \\
+        &= -14 + 13 \\
+        &= -1 \neq 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(-2) \neq 0$, अतः $g(x), p(x)$ का गुणनखंड नहीं है।</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = x^3 - 4x^2 + x + 6, \quad g(x) = x - 3$</b></p>
+        <p>$g(x) = 0 \implies x - 3 = 0 \implies x = 3$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(3) &= (3)^3 - 4(3)^2 + 3 + 6 \\
+        &= 27 - 4(9) + 9 \\
+        &= 27 - 36 + 9 \\
+        &= 36 - 36 \\
+        &= 0
+        \end{aligned}$$</div>
+        <p><b>निष्कर्ष: चूँकि $p(3) = 0$, अतः $g(x), p(x)$ का एक गुणनखंड है।</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.3 Q3 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 3: $k$ का मान ज्ञात कीजिए जबकि निम्नलिखित स्थितियों में से प्रत्येक स्थिति में $(x - 1), p(x)$ का एक गुणनखंड हो:</h3>
+      <p><b>सिद्धांत:</b> यदि $(x - 1)$ गुणनखंड है, तो गुणनखंड प्रमेय से $p(1) = 0$ होना चाहिए।</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) $p(x) = x^2 + x + k$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= (1)^2 + (1) + k = 0 \\
+        1 + 1 + k &= 0 \\
+        2 + k &= 0 \\
+        k &= -2
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $k = -2$</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $p(x) = 2x^2 + kx + \sqrt{2}$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= 2(1)^2 + k(1) + \sqrt{2} = 0 \\
+        2 + k + \sqrt{2} &= 0 \\
+        k &= -(2 + \sqrt{2})
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $k = -(2 + \sqrt{2})$</b></p>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = kx^2 - \sqrt{2}x + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= k(1)^2 - \sqrt{2}(1) + 1 = 0 \\
+        k - \sqrt{2} + 1 &= 0 \\
+        k &= \sqrt{2} - 1
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $k = \sqrt{2} - 1$</b></p>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $p(x) = kx^2 - 3x + k$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        p(1) &= k(1)^2 - 3(1) + k = 0 \\
+        k - 3 + k &= 0 \\
+        2k - 3 &= 0 \\
+        2k &= 3 \\
+        k &= \frac{3}{2}
+        \end{aligned}$$</div>
+        <p><b>उत्तर: $k = \frac{3}{2}$</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.3 Q4 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 4: गुणनखंड कीजिए (मध्य पद को विभक्त करके - Middle Term Splitting):</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $12x^2 - 7x + 1$</b></p>
+        <p>यहाँ $a \times c = 12 \times 1 = 12$ तथा $b = -7$। हमें ऐसी दो संख्याएँ चाहिए जिनका गुणनफल $12$ व योग $-7$ हो: $(-4)$ और $(-3)$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        12x^2 - 7x + 1 &= 12x^2 - 4x - 3x + 1 \\
+        &= 4x(3x - 1) - 1(3x - 1) \\
+        &= (3x - 1)(4x - 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ $12x^2 - 7x + 1 = (3x - 1)(4x - 1)$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $2x^2 + 7x + 3$</b></p>
+        <p>यहाँ $a \times c = 2 \times 3 = 6$ तथा $b = 7$। संख्याएँ: $6$ और $1$ ($6 \times 1 = 6, 6 + 1 = 7$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        2x^2 + 7x + 3 &= 2x^2 + 6x + 1x + 3 \\
+        &= 2x(x + 3) + 1(x + 3) \\
+        &= (x + 3)(2x + 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ $2x^2 + 7x + 3 = (x + 3)(2x + 1)$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $6x^2 + 5x - 6$</b></p>
+        <p>यहाँ $a \times c = 6 \times (-6) = -36$ तथा $b = 5$। संख्याएँ: $9$ और $-4$ ($9 \times (-4) = -36, 9 - 4 = 5$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        6x^2 + 5x - 6 &= 6x^2 + 9x - 4x - 6 \\
+        &= 3x(2x + 3) - 2(2x + 3) \\
+        &= (2x + 3)(3x - 2)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ $6x^2 + 5x - 6 = (2x + 3)(3x - 2)$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $3x^2 - x - 4$</b></p>
+        <p>यहाँ $a \times c = 3 \times (-4) = -12$ तथा $b = -1$। संख्याएँ: $-4$ और $3$ ($-4 \times 3 = -12, -4 + 3 = -1$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        3x^2 - x - 4 &= 3x^2 + 3x - 4x - 4 \\
+        &= 3x(x + 1) - 4(x + 1) \\
+        &= (x + 1)(3x - 4)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ $3x^2 - x - 4 = (x + 1)(3x - 4)$</div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         LIVE SIMULATOR 2: QUADRATIC FACTORISATION SOLVER
+         ========================================================= -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 2: द्विघात बहुपद मध्य-पद गुणनखंड सॉल्वर (Middle Term Splitter)</h3>
+      <p>द्विघात बहुपद $ax^2 + bx + c$ के गुणांक भरें और $p \times q = ac$ तथा $p + q = b$ के साथ संपूर्ण चरणबद्ध गुणनखंड देखें!</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>गुणांक a:</label>
+          <input type="number" id="sim2_a" value="12" oninput="calculateSim2()">
+        </div>
+        <div class="sim-group">
+          <label>गुणांक b:</label>
+          <input type="number" id="sim2_b" value="-7" oninput="calculateSim2()">
+        </div>
+        <div class="sim-group">
+          <label>अचर पद c:</label>
+          <input type="number" id="sim2_c" value="1" oninput="calculateSim2()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim2()" style="width:100%;">
+            ⚡ मध्य-पद विभक्तिकरण हल देखें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim2_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- Ex 2.3 Q5 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 5: त्रिघात बहुपदों के गुणनखंड कीजिए:</h3>
+      
+      <!-- Q5(i) -->
+      <div class="step-box-blue">
+        <p><b>(i) $p(x) = x^3 - 2x^2 - x + 2$</b></p>
+        <p><b>विधि 1: सीधे समूह बनाकर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^3 - 2x^2 - x + 2 &= x^2(x - 2) - 1(x - 2) \\
+        &= (x - 2)(x^2 - 1) \\
+        &= (x - 2)(x - 1)(x + 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ गुणनखंड = $(x - 1)(x + 1)(x - 2)$</div>
+      </div>
+
+      <!-- Q5(ii) -->
+      <div class="step-box-orange">
+        <p><b>(ii) $p(x) = x^3 - 3x^2 - 9x - 5$</b></p>
+        <p><b>चरण 1: ट्रायल विधि से पहला गुणनखंड:</b></p>
+        <p>अचर पद $-5$ के गुणनखंड $\pm 1, \pm 5$ हैं।</p>
+        <p>$x = -1$ रखने पर:</p>
+        <div class="math-scroll">$$p(-1) = (-1)^3 - 3(-1)^2 - 9(-1) - 5 = -1 - 3 + 9 - 5 = 0$$</div>
+        <p>अतः $(x + 1)$ बहुपद का एक गुणनखंड है।</p>
+        <p><b>चरण 2: बहुपद को $(x + 1)$ से भाग देने पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^3 - 3x^2 - 9x - 5 &= x^2(x + 1) - 4x(x + 1) - 5(x + 1) \\
+        &= (x + 1)(x^2 - 4x - 5)
+        \end{aligned}$$</div>
+        <p><b>चरण 3: द्विघात बहुपद $x^2 - 4x - 5$ का मध्य पद विभक्तिकरण:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^2 - 4x - 5 &= x^2 - 5x + x - 5 \\
+        &= x(x - 5) + 1(x - 5) \\
+        &= (x - 5)(x + 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संपूर्ण गुणनखंड = $(x + 1)(x + 1)(x - 5) = (x + 1)^2(x - 5)$</div>
+      </div>
+
+      <!-- Q5(iii) -->
+      <div class="step-box-green">
+        <p><b>(iii) $p(x) = x^3 + 13x^2 + 32x + 20$</b></p>
+        <p><b>चरण 1:</b> $x = -1$ रखने पर:</p>
+        <div class="math-scroll">$$p(-1) = (-1)^3 + 13(-1)^2 + 32(-1) + 20 = -1 + 13 - 32 + 20 = 33 - 33 = 0$$</div>
+        <p>अतः $(x + 1)$ एक गुणनखंड है।</p>
+        <p><b>चरण 2: $(x + 1)$ के पदों में विभक्तिकरण:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^3 + 13x^2 + 32x + 20 &= x^2(x + 1) + 12x(x + 1) + 20(x + 1) \\
+        &= (x + 1)(x^2 + 12x + 20)
+        \end{aligned}$$</div>
+        <p><b>चरण 3: $x^2 + 12x + 20$ का गुणनखंड ($10 \times 2 = 20, 10 + 2 = 12$):</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^2 + 12x + 20 &= x^2 + 10x + 2x + 20 \\
+        &= x(x + 10) + 2(x + 10) \\
+        &= (x + 10)(x + 2)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संपूर्ण गुणनखंड = $(x + 1)(x + 2)(x + 10)$</div>
+      </div>
+
+      <!-- Q5(iv) -->
+      <div class="step-box-purple">
+        <p><b>(iv) $p(y) = 2y^3 + y^2 - 2y - 1$</b></p>
+        <p><b>सीधे समूह बनाकर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        2y^3 + y^2 - 2y - 1 &= y^2(2y + 1) - 1(2y + 1) \\
+        &= (2y + 1)(y^2 - 1) \\
+        &= (2y + 1)(y - 1)(y + 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संपूर्ण गुणनखंड = $(y - 1)(y + 1)(2y + 1)$</div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         EXERCISE 2.4 (ALGEBRAIC IDENTITIES)
+         ========================================================= -->
+    <div id="ex24" class="part-header">
+      📖 प्रश्नावली 2.4 (Exercise 2.4) — संपूर्ण NCERT हल
+    </div>
+
+    <!-- Ex 2.4 Q1 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 1: उपयुक्त सर्वसमिकाओं को प्रयोग करके निम्नलिखित गुणनफल ज्ञात कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $(x + 4)(x + 10)$</b></p>
+        <p>सर्वसमिका: $(x + a)(x + b) = x^2 + (a + b)x + ab$ (यहाँ $a = 4, b = 10$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (x + 4)(x + 10) &= x^2 + (4 + 10)x + (4 \times 10) \\
+        &= x^2 + 14x + 40
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $x^2 + 14x + 40$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $(x + 8)(x - 10)$</b></p>
+        <p>यहाँ $a = 8, b = -10$</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (x + 8)(x - 10) &= x^2 + (8 - 10)x + (8 \times (-10)) \\
+        &= x^2 - 2x - 80
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $x^2 - 2x - 80$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $(3x + 4)(3x - 5)$</b></p>
+        <p>सर्वसमिका में $x$ के स्थान पर $3x$ तथा $a = 4, b = -5$ रखने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (3x + 4)(3x - 5) &= (3x)^2 + (4 - 5)(3x) + (4 \times (-5)) \\
+        &= 9x^2 + (-1)(3x) - 20 \\
+        &= 9x^2 - 3x - 20
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $9x^2 - 3x - 20$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $\left(y^2 + \frac{3}{2}\right)\left(y^2 - \frac{3}{2}\right)$</b></p>
+        <p>सर्वसमिका: $(a + b)(a - b) = a^2 - b^2$ (यहाँ $a = y^2, b = \frac{3}{2}$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        \left(y^2 + \frac{3}{2}\right)\left(y^2 - \frac{3}{2}\right) &= (y^2)^2 - \left(\frac{3}{2}\right)^2 \\
+        &= y^4 - \frac{9}{4}
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $y^4 - \frac{9}{4}$</div>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) $(3 - 2x)(3 + 2x)$</b></p>
+        <p>सर्वसमिका: $(a - b)(a + b) = a^2 - b^2$ (यहाँ $a = 3, b = 2x$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (3 - 2x)(3 + 2x) &= (3)^2 - (2x)^2 \\
+        &= 9 - 4x^2
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $9 - 4x^2$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q2 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 2: सीधे गुणा किए बिना निम्नलिखित गुणनफलों के मान ज्ञात कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $103 \times 107$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        103 \times 107 &= (100 + 3)(100 + 7) \\
+        &= (100)^2 + (3 + 7)(100) + (3 \times 7) \\
+        &= 10000 + 10(100) + 21 \\
+        &= 10000 + 1000 + 21 \\
+        &= 11021
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $11021$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $95 \times 96$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        95 \times 96 &= (100 - 5)(100 - 4) \\
+        &= (100)^2 + (-5 - 4)(100) + ((-5) \times (-4)) \\
+        &= 10000 - 9(100) + 20 \\
+        &= 10000 - 900 + 20 \\
+        &= 9120
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $9120$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $104 \times 96$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        104 \times 96 &= (100 + 4)(100 - 4) \\
+        &= (100)^2 - (4)^2 \\
+        &= 10000 - 16 \\
+        &= 9984
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $9984$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q3 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 3: उपयुक्त सर्वसमिकाएं प्रयोग करके निम्नलिखित का गुणनखंडन कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $9x^2 + 6xy + y^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        9x^2 + 6xy + y^2 &= (3x)^2 + 2(3x)(y) + (y)^2 \\
+        &= (3x + y)^2 \\
+        &= (3x + y)(3x + y)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(3x + y)^2$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $4y^2 - 4y + 1$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        4y^2 - 4y + 1 &= (2y)^2 - 2(2y)(1) + (1)^2 \\
+        &= (2y - 1)^2 \\
+        &= (2y - 1)(2y - 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(2y - 1)^2$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $x^2 - \frac{y^2}{100}$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^2 - \frac{y^2}{100} &= (x)^2 - \left(\frac{y}{10}\right)^2 \\
+        &= \left(x - \frac{y}{10}\right)\left(x + \frac{y}{10}\right)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $\left(x - \frac{y}{10}\right)\left(x + \frac{y}{10}\right)$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q4 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 4: उपयुक्त सर्वसमिका का प्रयोग करके निम्नलिखित में से प्रत्येक का प्रसार कीजिए:</h3>
+      <p><b>सर्वसमिका:</b> $(x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2zx$</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) $(x + 2y + 4z)^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (x)^2 + (2y)^2 + (4z)^2 + 2(x)(2y) + 2(2y)(4z) + 2(4z)(x) \\
+        &= x^2 + 4y^2 + 16z^2 + 4xy + 16yz + 8zx
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $(2x - y + z)^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2x)^2 + (-y)^2 + (z)^2 + 2(2x)(-y) + 2(-y)(z) + 2(z)(2x) \\
+        &= 4x^2 + y^2 + z^2 - 4xy - 2yz + 4zx
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $(-2x + 3y + 2z)^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (-2x)^2 + (3y)^2 + (2z)^2 + 2(-2x)(3y) + 2(3y)(2z) + 2(2z)(-2x) \\
+        &= 4x^2 + 9y^2 + 4z^2 - 12xy + 12yz - 8zx
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $(3a - 7b - c)^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (3a)^2 + (-7b)^2 + (-c)^2 + 2(3a)(-7b) + 2(-7b)(-c) + 2(-c)(3a) \\
+        &= 9a^2 + 49b^2 + c^2 - 42ab + 14bc - 6ca
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) $(-2x + 5y - 3z)^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (-2x)^2 + (5y)^2 + (-3z)^2 + 2(-2x)(5y) + 2(5y)(-3z) + 2(-3z)(-2x) \\
+        &= 4x^2 + 25y^2 + 9z^2 - 20xy - 30yz + 12zx
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(vi) $\left[\frac{1}{4}a - \frac{1}{2}b + 1\right]^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= \left(\frac{1}{4}a\right)^2 + \left(-\frac{1}{2}b\right)^2 + (1)^2 + 2\left(\frac{1}{4}a\right)\left(-\frac{1}{2}b\right) + 2\left(-\frac{1}{2}b\right)(1) + 2(1)\left(\frac{1}{4}a\right) \\
+        &= \frac{1}{16}a^2 + \frac{1}{4}b^2 + 1 - \frac{1}{4}ab - b + \frac{1}{2}a
+        \end{aligned}$$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q5 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 5: गुणनखंडन कीजिए (व्युत्क्रम सर्वसमिका से):</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $4x^2 + 9y^2 + 16z^2 + 12xy - 24yz - 16xz$</b></p>
+        <p>ऋणात्मक पदों ($-24yz, -16xz$) में $z$ उभयनिष्ठ है, अतः $z$ वाला पद ऋणात्मक होगा:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2x)^2 + (3y)^2 + (-4z)^2 + 2(2x)(3y) + 2(3y)(-4z) + 2(-4z)(2x) \\
+        &= (2x + 3y - 4z)^2
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(2x + 3y - 4z)^2$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) $2x^2 + y^2 + 8z^2 - 2\sqrt{2}xy + 4\sqrt{2}yz - 8xz$</b></p>
+        <p>ऋणात्मक पदों में $x$ उभयनिष्ठ है, अतः $x$ वाला पद ऋणात्मक ($-\sqrt{2}x$) होगा तथा $8z^2 = (2\sqrt{2}z)^2$:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (-\sqrt{2}x)^2 + (y)^2 + (2\sqrt{2}z)^2 + 2(-\sqrt{2}x)(y) + 2(y)(2\sqrt{2}z) + 2(2\sqrt{2}z)(-\sqrt{2}x) \\
+        &= (-\sqrt{2}x + y + 2\sqrt{2}z)^2
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(-\sqrt{2}x + y + 2\sqrt{2}z)^2$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q6 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 6: निम्नलिखित घनों को प्रसारित रूप में लिखिए:</h3>
+      <p><b>सर्वसमिकाएँ:</b> $(a + b)^3 = a^3 + b^3 + 3ab(a + b) = a^3 + 3a^2b + 3ab^2 + b^3$</p>
+      <p>तथा $(a - b)^3 = a^3 - b^3 - 3ab(a - b) = a^3 - 3a^2b + 3ab^2 - b^3$</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) $(2x + 1)^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2x)^3 + (1)^3 + 3(2x)^2(1) + 3(2x)(1)^2 \\
+        &= 8x^3 + 1 + 12x^2 + 6x \\
+        &= 8x^3 + 12x^2 + 6x + 1
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $(2a - 3b)^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2a)^3 - (3b)^3 - 3(2a)^2(3b) + 3(2a)(3b)^2 \\
+        &= 8a^3 - 27b^3 - 3(4a^2)(3b) + 3(2a)(9b^2) \\
+        &= 8a^3 - 36a^2b + 54ab^2 - 27b^3
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $\left[\frac{3}{2}x + 1\right]^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= \left(\frac{3}{2}x\right)^3 + (1)^3 + 3\left(\frac{3}{2}x\right)^2(1) + 3\left(\frac{3}{2}x\right)(1)^2 \\
+        &= \frac{27}{8}x^3 + 1 + 3\left(\frac{9}{4}x^2\right) + \frac{9}{2}x \\
+        &= \frac{27}{8}x^3 + \frac{27}{4}x^2 + \frac{9}{2}x + 1
+        \end{aligned}$$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $\left[x - \frac{2}{3}y\right]^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (x)^3 - \left(\frac{2}{3}y\right)^3 - 3(x)^2\left(\frac{2}{3}y\right) + 3(x)\left(\frac{2}{3}y\right)^2 \\
+        &= x^3 - \frac{8}{27}y^3 - 2x^2y + 3x\left(\frac{4}{9}y^2\right) \\
+        &= x^3 - 2x^2y + \frac{4}{3}xy^2 - \frac{8}{27}y^3
+        \end{aligned}$$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q7 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 7: उपयुक्त सर्वसमिकाएं प्रयोग करके निम्नलिखित के मान ज्ञात कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $(99)^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        (99)^3 &= (100 - 1)^3 \\
+        &= (100)^3 - (1)^3 - 3(100)(1)(100 - 1) \\
+        &= 1000000 - 1 - 300(99) \\
+        &= 1000000 - 1 - 29700 \\
+        &= 1000000 - 29701 \\
+        &= 970299
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $970299$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $(102)^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        (102)^3 &= (100 + 2)^3 \\
+        &= (100)^3 + (2)^3 + 3(100)(2)(100 + 2) \\
+        &= 1000000 + 8 + 600(102) \\
+        &= 1000000 + 8 + 61200 \\
+        &= 1061208
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $1061208$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $(998)^3$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        (998)^3 &= (1000 - 2)^3 \\
+        &= (1000)^3 - (2)^3 - 3(1000)(2)(1000 - 2) \\
+        &= 1000000000 - 8 - 6000(998) \\
+        &= 1000000000 - 8 - 5988000 \\
+        &= 1000000000 - 5988008 \\
+        &= 994011992
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $994011992$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q8 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 8: निम्नलिखित में से प्रत्येक का गुणनखंडन कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $8a^3 + b^3 + 12a^2b + 6ab^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2a)^3 + (b)^3 + 3(2a)^2(b) + 3(2a)(b)^2 \\
+        &= (2a + b)^3
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(2a + b)^3$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $8a^3 - b^3 - 12a^2b + 6ab^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (2a)^3 - (b)^3 - 3(2a)^2(b) + 3(2a)(b)^2 \\
+        &= (2a - b)^3
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(2a - b)^3$</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(iii) $27 - 125a^3 - 135a + 225a^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (3)^3 - (5a)^3 - 3(3)^2(5a) + 3(3)(5a)^2 \\
+        &= (3 - 5a)^3
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(3 - 5a)^3$</div>
+      </div>
+
+      <div class="step-box-purple">
+        <p><b>(iv) $64a^3 - 27b^3 - 144a^2b + 108ab^2$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (4a)^3 - (3b)^3 - 3(4a)^2(3b) + 3(4a)(3b)^2 \\
+        &= (4a - 3b)^3
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(4a - 3b)^3$</div>
+      </div>
+
+      <div class="step-box-blue">
+        <p><b>(v) $27p^3 - \frac{1}{216} - \frac{9}{2}p^2 + \frac{1}{4}p$</b></p>
+        <p>यहाँ $27p^3 = (3p)^3$ तथा $\frac{1}{216} = \left(\frac{1}{6}\right)^3$:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= (3p)^3 - \left(\frac{1}{6}\right)^3 - 3(3p)^2\left(\frac{1}{6}\right) + 3(3p)\left(\frac{1}{6}\right)^2 \\
+        &= \left(3p - \frac{1}{6}\right)^3
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $\left(3p - \frac{1}{6}\right)^3$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q9 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 9: सत्यापित कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $x^3 + y^3 = (x + y)(x^2 - xy + y^2)$</b></p>
+        <p><b>दायाँ पक्ष (R.H.S.) हल करने पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{R.H.S.} &= (x + y)(x^2 - xy + y^2) \\
+        &= x(x^2 - xy + y^2) + y(x^2 - xy + y^2) \\
+        &= (x^3 - x^2y + xy^2) + (x^2y - xy^2 + y^3) \\
+        &= x^3 - x^2y + x^2y + xy^2 - xy^2 + y^3 \\
+        &= x^3 + y^3 = \text{L.H.S.}
+        \end{aligned}$$</div>
+        <p><b>इति सिद्धम् (Hence Proved)।</b></p>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$</b></p>
+        <p><b>दायाँ पक्ष (R.H.S.) हल करने पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{R.H.S.} &= (x - y)(x^2 + xy + y^2) \\
+        &= x(x^2 + xy + y^2) - y(x^2 + xy + y^2) \\
+        &= (x^3 + x^2y + xy^2) - (x^2y + xy^2 + y^3) \\
+        &= x^3 + x^2y - x^2y + xy^2 - xy^2 - y^3 \\
+        &= x^3 - y^3 = \text{L.H.S.}
+        \end{aligned}$$</div>
+        <p><b>इति सिद्धम् (Hence Proved)।</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q10 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 10: निम्नलिखित में से प्रत्येक का गुणनखंडन कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $27y^3 + 125z^3$</b></p>
+        <p>सूत्र: $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ (यहाँ $a = 3y, b = 5z$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        27y^3 + 125z^3 &= (3y)^3 + (5z)^3 \\
+        &= (3y + 5z)\left[(3y)^2 - (3y)(5z) + (5z)^2\right] \\
+        &= (3y + 5z)(9y^2 - 15yz + 25z^2)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(3y + 5z)(9y^2 - 15yz + 25z^2)$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $64m^3 - 343n^3$</b></p>
+        <p>सूत्र: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ (यहाँ $a = 4m, b = 7n$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        64m^3 - 343n^3 &= (4m)^3 - (7n)^3 \\
+        &= (4m - 7n)\left[(4m)^2 + (4m)(7n) + (7n)^2\right] \\
+        &= (4m - 7n)(16m^2 + 28mn + 49n^2)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $(4m - 7n)(16m^2 + 28mn + 49n^2)$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q11 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 11: गुणनखंडन कीजिए: $27x^3 + y^3 + z^3 - 9xyz$</h3>
+      <div class="step-box-purple">
+        <p><b>सर्वसमिका:</b> $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$</p>
+        <p>यहाँ $a = 3x, b = y, c = z$ रखने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        27x^3 + y^3 + z^3 - 9xyz &= (3x)^3 + (y)^3 + (z)^3 - 3(3x)(y)(z) \\
+        &= (3x + y + z)\left[(3x)^2 + y^2 + z^2 - (3x)(y) - (y)(z) - (z)(3x)\right] \\
+        &= (3x + y + z)(9x^2 + y^2 + z^2 - 3xy - yz - 3zx)
+        \end{aligned}$$</div>
+      </div>
+      <div class="answer-highlight">
+        ✅ उत्तर: $(3x + y + z)(9x^2 + y^2 + z^2 - 3xy - yz - 3zx)$
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q12 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 12: सत्यापित कीजिए कि: $x^3 + y^3 + z^3 - 3xyz = \frac{1}{2}(x + y + z)\left[(x - y)^2 + (y - z)^2 + (z - x)^2\right]$</h3>
+      <div class="step-box-green">
+        <p><b>दायाँ पक्ष (R.H.S.) हल करने पर:</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        \text{R.H.S.} &= \frac{1}{2}(x + y + z)\left[(x^2 - 2xy + y^2) + (y^2 - 2yz + z^2) + (z^2 - 2zx + x^2)\right] \\
+        &= \frac{1}{2}(x + y + z)\left[2x^2 + 2y^2 + 2z^2 - 2xy - 2yz - 2zx\right] \\
+        &= \frac{1}{2}(x + y + z) \times 2\left[x^2 + y^2 + z^2 - xy - yz - zx\right] \\
+        &= (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx) \\
+        &= x^3 + y^3 + z^3 - 3xyz = \text{L.H.S.}
+        \end{aligned}$$</div>
+        <p><b>इति सिद्धम् (Hence Proved)।</b></p>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q13 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 13: यदि $x + y + z = 0$ हो, तो दिखाइए कि $x^3 + y^3 + z^3 = 3xyz$ है।</h3>
+      <div class="step-box-blue">
+        <p>हम जानते हैं कि सर्वसमिका:</p>
+        <div class="math-scroll">$$x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx)$$</div>
+        <p>दिए गए मान $x + y + z = 0$ को दाएँ पक्ष में रखने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        x^3 + y^3 + z^3 - 3xyz &= (0) \times (x^2 + y^2 + z^2 - xy - yz - zx) \\
+        x^3 + y^3 + z^3 - 3xyz &= 0 \\
+        x^3 + y^3 + z^3 &= 3xyz
+        \end{aligned}$$</div>
+        <p><b>इति सिद्धम् (Hence Proved)।</b></p>
+      </div>
+      <div class="answer-highlight">
+        ✅ अत्यंत महत्वपूर्ण निष्कर्ष: यदि तीनों संख्याओं का योग शून्य ($x+y+z=0$) हो, तो उनके घनों का योग $= 3xyz$ होता है।
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q14 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 14: वास्तव में घनों का परिकलन किए बिना निम्नलिखित में से प्रत्येक का मान ज्ञात कीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) $(-12)^3 + (7)^3 + (5)^3$</b></p>
+        <p>माना $x = -12, y = 7, z = 5$</p>
+        <p>तीनों का योग: $x + y + z = -12 + 7 + 5 = -12 + 12 = 0$</p>
+        <p>चूँकि $x + y + z = 0$, अतः $x^3 + y^3 + z^3 = 3xyz$ होगा:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (-12)^3 + (7)^3 + (5)^3 &= 3(-12)(7)(5) \\
+        &= 3 \times (-12) \times 35 \\
+        &= -36 \times 35 \\
+        &= -1260
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $-1260$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) $(28)^3 + (-15)^3 + (-13)^3$</b></p>
+        <p>माना $x = 28, y = -15, z = -13$</p>
+        <p>तीनों का योग: $x + y + z = 28 + (-15) + (-13) = 28 - 28 = 0$</p>
+        <p>चूँकि $x + y + z = 0$, अतः $x^3 + y^3 + z^3 = 3xyz$ होगा:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        (28)^3 + (-15)^3 + (-13)^3 &= 3(28)(-15)(-13) \\
+        &= 3 \times 28 \times 195 \\
+        &= 84 \times 195 \\
+        &= 16380
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ उत्तर: $16380$</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q15 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 15: नीचे दिए गए आयतों, जिनमें उनके क्षेत्रफल दिए गए हैं, में से प्रत्येक की लंबाई और चौड़ाई के लिए संभव व्यंजक दीजिए:</h3>
+      
+      <div class="step-box-blue">
+        <p><b>(i) क्षेत्रफल = $25a^2 - 35a + 12$</b></p>
+        <p>आयत का क्षेत्रफल $=$ लंबाई $\times$ चौड़ाई। अतः हमें बहुपद का गुणनखंड करना होगा:</p>
+        <p>$a \times c = 25 \times 12 = 300$ तथा $b = -35$। संख्याएँ: $-20$ और $-15$ ($-20 \times (-15) = 300, -20 - 15 = -35$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        25a^2 - 35a + 12 &= 25a^2 - 20a - 15a + 12 \\
+        &= 5a(5a - 4) - 3(5a - 4) \\
+        &= (5a - 4)(5a - 3)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संभावित विमाएँ: लंबाई $= (5a - 3)$ तथा चौड़ाई $= (5a - 4)$ (अथवा इसके विपरीत)</div>
+      </div>
+
+      <div class="step-box-green">
+        <p><b>(ii) क्षेत्रफल = $35y^2 + 13y - 12$</b></p>
+        <p>$a \times c = 35 \times (-12) = -420$ तथा $b = 13$। संख्याएँ: $28$ और $-15$ ($28 \times (-15) = -420, 28 - 15 = 13$)</p>
+        <div class="math-scroll">$$\begin{aligned}
+        35y^2 + 13y - 12 &= 35y^2 + 28y - 15y - 12 \\
+        &= 7y(5y + 4) - 3(5y + 4) \\
+        &= (5y + 4)(7y - 3)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संभावित विमाएँ: लंबाई $= (7y - 3)$ तथा चौड़ाई $= (5y + 4)$ (अथवा इसके विपरीत)</div>
+      </div>
+    </div>
+
+    <!-- Ex 2.4 Q16 -->
+    <div class="qa-block">
+      <h3 class="question-heading">प्रश्न 16: घनाभों (Cuboids), जिनके आयतन नीचे दिए गए हैं, की विमाओं के लिए संभव व्यंजक क्या हैं?</h3>
+      <p>घनाभ का आयतन $=$ लंबाई $\times$ चौड़ाई $\times$ ऊँचाई</p>
+
+      <div class="step-box-blue">
+        <p><b>(i) आयतन = $3x^2 - 12x$</b></p>
+        <div class="math-scroll">$$\begin{aligned}
+        3x^2 - 12x &= 3 \times x \times (x - 4)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संभावित विमाएँ: $3, \quad x, \quad (x - 4)$</div>
+      </div>
+
+      <div class="step-box-orange">
+        <p><b>(ii) आयतन = $12ky^2 + 8ky - 20k$</b></p>
+        <p>सर्वप्रथम उभयनिष्ठ पद $4k$ बाहर निकालने पर:</p>
+        <div class="math-scroll">$$\begin{aligned}
+        12ky^2 + 8ky - 20k &= 4k(3y^2 + 2y - 5)
+        \end{aligned}$$</div>
+        <p>अब $3y^2 + 2y - 5$ का गुणनखंड ($3 \times (-5) = -15, 5 - 3 = 2$):</p>
+        <div class="math-scroll">$$\begin{aligned}
+        &= 4k\left[3y^2 + 5y - 3y - 5\right] \\
+        &= 4k\left[y(3y + 5) - 1(3y + 5)\right] \\
+        &= 4k(3y + 5)(y - 1)
+        \end{aligned}$$</div>
+        <div class="answer-highlight">✅ संभावित विमाएँ: $4k, \quad (3y + 5), \quad (y - 1)$</div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         SIMULATOR SECTION
+         ========================================================= -->
+    <div id="simulators" class="part-header">
+      ⚡ लाइव सिमुलेटर अनुभाग (Interactive Polynomial Simulators)
+    </div>
+
+    <!-- SIMULATOR 3 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 3: शेषफल व गुणनखंड प्रमेय सॉल्वर (Remainder Theorem Solver)</h3>
+      <p>बहुपद $p(x) = ax^3 + bx^2 + cx + d$ को $(x - r)$ से विभाजित करने पर शेषफल $p(r)$ ज्ञात करें:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>a (x³):</label>
+          <input type="number" id="sim3_a" value="1" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>b (x²):</label>
+          <input type="number" id="sim3_b" value="-3" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>c (x):</label>
+          <input type="number" id="sim3_c" value="-9" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>d (अचर):</label>
+          <input type="number" id="sim3_d" value="-5" oninput="calculateSim3()">
+        </div>
+        <div class="sim-group">
+          <label>भाजक (x - r) में r का मान:</label>
+          <input type="number" id="sim3_r" value="-1" oninput="calculateSim3()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim3()" style="width:100%;">
+            ⚡ शेषफल प्रमेय से जांचें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim3_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 4 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 4: बीजीय सर्वसमिका प्रसारक (Algebraic Identity Expander)</h3>
+      <p>सर्वसमिका चुनें और मान भरकर तुरंत लाइव प्रसार व परिणाम देखें:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group sim-full-row">
+          <label>📌 सर्वसमिका चुनें:</label>
+          <select id="sim4_id" style="border-color:#2563eb; color:#1e3a8a;" onchange="calculateSim4()">
+            <option value="sq_sum">1. वर्ग योग: (x + y)² = x² + 2xy + y²</option>
+            <option value="sq_diff">2. वर्ग अंतर: (x - y)² = x² - 2xy + y²</option>
+            <option value="diff_sq">3. वर्गों का अंतर: (x + y)(x - y) = x² - y²</option>
+            <option value="cb_sum">4. घन योग: (x + y)³ = x³ + 3x²y + 3xy² + y³</option>
+            <option value="cb_diff">5. घन अंतर: (x - y)³ = x³ - 3x²y + 3xy² - y³</option>
+          </select>
+        </div>
+        <div class="sim-group">
+          <label>मान x:</label>
+          <input type="number" id="sim4_x" value="100" oninput="calculateSim4()">
+        </div>
+        <div class="sim-group">
+          <label>मान y:</label>
+          <input type="number" id="sim4_y" value="3" oninput="calculateSim4()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim4()" style="width:100%;">
+            ⚡ सर्वसमिका से प्रसार करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim4_output" class="sim-output-box"></div>
+    </div>
+
+    <!-- SIMULATOR 5 -->
+    <div class="inline-simulator-card">
+      <h3 class="sim-title">⚡ लाइव सिमुलेटर 5: विशेष घन सर्वसमिका गणक (यदि x + y + z = 0, तो x³ + y³ + z³ = 3xyz)</h3>
+      <p>तीन संख्याएँ भरें। यदि उनका योग शून्य होगा तो बिना घन निकाले तुरंत $3xyz$ से मान प्राप्त होगा:</p>
+
+      <div class="sim-controls-grid">
+        <div class="sim-group">
+          <label>संख्या x:</label>
+          <input type="number" id="sim5_x" value="-12" oninput="calculateSim5()">
+        </div>
+        <div class="sim-group">
+          <label>संख्या y:</label>
+          <input type="number" id="sim5_y" value="7" oninput="calculateSim5()">
+        </div>
+        <div class="sim-group">
+          <label>संख्या z:</label>
+          <input type="number" id="sim5_z" value="5" oninput="calculateSim5()">
+        </div>
+        <div class="sim-full-row" style="margin-top:10px;">
+          <button class="sim-btn-calc" onclick="calculateSim5()" style="width:100%;">
+            ⚡ घनों का मान परिकलित करें ➔
+          </button>
+        </div>
+      </div>
+
+      <div id="sim5_output" class="sim-output-box"></div>
+    </div>
+
+  </div> <!-- /contentToCopy -->
+</div> <!-- /container -->
+
+<!-- =========================================================
+     JAVASCRIPT: PROJECTOR CONTROLS & 5 INTERACTIVE SIMULATORS
+     ========================================================= -->
+<script>
+  // Projector Controller
+  var currentWidth = 1350;
+  var sizeOffset = 0;
+  var weightOffset = 0;
+  var strokeOffset = 0;
+
+  function getContainer() {
+    return document.getElementById('contentToCopy') || document.querySelector('.container');
+  }
+
+  function adjustWidth(amount) {
+    currentWidth += amount;
+    if (currentWidth < 600) currentWidth = 600;
+    if (currentWidth > 3500) currentWidth = 3500;
+    var c = getContainer();
+    if (c) {
+      c.style.setProperty('width', currentWidth + 'px', 'important');
+      c.style.setProperty('max-width', currentWidth + 'px', 'important');
+    }
+    var el = document.getElementById('dyn-w');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-w';
+      document.head.appendChild(el);
+    }
+    el.innerHTML = '#contentToCopy { width: ' + currentWidth + 'px !important; max-width: ' + currentWidth + 'px !important; }';
+  }
+
+  function adjustFontSize(amount) {
+    sizeOffset += amount;
+    if (sizeOffset < -16) sizeOffset = -16;
+    if (sizeOffset > 40) sizeOffset = 40;
+    var el = document.getElementById('dyn-fs');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-fs';
+      document.head.appendChild(el);
+    }
+    var b = 26 + sizeOffset;
+    el.innerHTML = '#contentToCopy, p, li { font-size: ' + b + 'pt !important; } ' +
+      '.hero-title { font-size: ' + (b + 14) + 'pt !important; } ' +
+      '.part-header { font-size: ' + (b + 8) + 'pt !important; } ' +
+      '.question-heading { font-size: ' + (b + 4) + 'pt !important; }';
+  }
+
+  function adjustFontWeight(amount) {
+    weightOffset += amount;
+    strokeOffset += (amount / 100) * 0.35;
+    var w = Math.max(400, Math.min(900, 900 + weightOffset));
+    var s = Math.max(0, 0.9 + strokeOffset);
+    var el = document.getElementById('dyn-fw');
+    if (!el) {
+      el = document.createElement('style');
+      el.id = 'dyn-fw';
+      document.head.appendChild(el);
+    }
+    el.innerHTML = '#contentToCopy, strong, b, p, li { font-weight: ' + w + ' !important; -webkit-text-stroke: ' + s + 'px currentColor !important; }';
+  }
+
+  function copyEntireContent() {
+    var text = document.getElementById('contentToCopy').innerText;
+    navigator.clipboard.writeText(text).then(function() {
+      alert('✅ संपूर्ण अध्याय 2 सफलतापूर्वक कॉपी हो गया है!');
+    });
+  }
+
+  // ==========================================================
+  // SIMULATOR 1: Polynomial Zero Evaluator
+  // ==========================================================
+  function calculateSim1() {
+    var a = parseFloat(document.getElementById('sim1_a').value) || 0;
+    var b = parseFloat(document.getElementById('sim1_b').value) || 0;
+    var c = parseFloat(document.getElementById('sim1_c').value) || 0;
+    var x = parseFloat(document.getElementById('sim1_x').value) || 0;
+    var out = document.getElementById('sim1_output');
+
+    var term1 = a * x * x;
+    var term2 = b * x;
+    var val = term1 + term2 + c;
+
+    var polyStr = (a !== 0 ? (a === 1 ? 'x^2' : (a === -1 ? '-x^2' : a + 'x^2')) : '') +
+      (b > 0 ? ' + ' + (b === 1 ? 'x' : b + 'x') : (b < 0 ? ' - ' + (b === -1 ? 'x' : Math.abs(b) + 'x') : '')) +
+      (c > 0 ? ' + ' + c : (c < 0 ? ' - ' + Math.abs(c) : ''));
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p style="margin:0 0 6px 0;"><strong>बहुपद व्यंजक:</strong> $$p(x) = ' + polyStr + '$$</p>' +
+      '<p style="margin:0 0 6px 0;">$x = ' + x + '$ रखने पर प्रतिस्थापन:</p>' +
+      '<div style="margin:8px 0;">$$p(' + x + ') = ' + a + '(' + x + ')^2 + (' + b + ')(' + x + ') + (' + c + ')$$</div>' +
+      '<div style="margin:8px 0;">$$= ' + term1 + ' + (' + term2 + ') + (' + c + ')$$</div>' +
+      '<div style="margin:8px 0;">$$= ' + val + '$$</div>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:' + (val === 0 ? '#ecfdf5; border:4px solid #10b981;' : '#fff1f2; border:4px solid #f43f5e;') + ' border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; font-size:22pt; font-weight:900; color:' + (val === 0 ? '#065f46;' : '#9f1239;') + '">' +
+      (val === 0 ? '🎉 बधाई! $p(' + x + ') = 0$ है, अतः $x = ' + x + '$ बहुपद का शून्यक है!' : '❌ $p(' + x + ') = ' + val + ' \\neq 0$ है, अतः यह शून्यक नहीं है।') + '</p>' +
+      '<div style="font-size:38pt; font-weight:900; color:' + (val === 0 ? '#065f46;' : '#9f1239;') + '">p(' + x + ') = ' + val + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 2: Middle Term Splitting
+  // ==========================================================
+  function calculateSim2() {
+    var a = parseInt(document.getElementById('sim2_a').value) || 1;
+    var b = parseInt(document.getElementById('sim2_b').value) || 0;
+    var c = parseInt(document.getElementById('sim2_c').value) || 0;
+    var out = document.getElementById('sim2_output');
+
+    var ac = a * c;
+    var foundP = null;
+    var foundQ = null;
+
+    for (var p = -Math.abs(ac); p <= Math.abs(ac); p++) {
+      if (p !== 0 && ac % p === 0) {
+        var q = ac / p;
+        if (p + q === b) {
+          foundP = p;
+          foundQ = q;
+          break;
+        }
+      }
+    }
+
+    if (foundP === null) {
+      out.innerHTML = '<div style="color:#e11d48; font-weight:900;">दी गई संख्याओं के लिए पूर्णांकों में मध्य-पद विभक्तिकरण संभव नहीं है।</div>';
+      return;
+    }
+
+    function gcd(x, y) {
+      x = Math.abs(x); y = Math.abs(y);
+      while(y) { var t = y; y = x % y; x = t; }
+      return x;
+    }
+
+    var g1 = gcd(a, foundP);
+    var r1 = a / g1;
+    var s1 = foundP / g1;
+
+    var g2 = gcd(foundQ, c);
+    if (foundQ < 0) g2 = -g2;
+    var r2 = foundQ / g2;
+    var s2 = c / g2;
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>चरण 1:</strong> $a \\\\times c = ' + a + ' \\\\times ' + c + ' = ' + ac + '$ तथा $b = ' + b + '$</p>' +
+      '<p>ऐसी दो संख्याएँ ढूँढते हैं जिनका गुणनफल $' + ac + '$ तथा योग $' + b + '$ हो:</p>' +
+      '<p><b>संख्याएँ:</b> $p = ' + foundP + '$ तथा $q = ' + foundQ + '$ &emsp; [$' + foundP + ' \\\\times ' + foundQ + ' = ' + ac + ', \\\\ ' + foundP + ' + (' + foundQ + ') = ' + b + '$]</p>' +
+      '</div>' +
+      '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+      '<p><strong>चरण 2: मध्य पद को विभक्त करने पर:</strong></p>' +
+      '<div style="margin:8px 0;">$$' + a + 'x^2 + (' + b + ')x + (' + c + ') = ' + a + 'x^2 + (' + foundP + ')x + (' + foundQ + ')x + (' + c + ')$$</div>' +
+      '<div style="margin:8px 0;">$$= ' + g1 + 'x(' + r1 + 'x + ' + s1 + ') + (' + g2 + ')(' + r1 + 'x + ' + s1 + ')$$</div>' +
+      '<div style="margin:8px 0;">$$= (' + r1 + 'x + ' + s1 + ')(' + g1 + 'x + ' + g2 + ')$$</div>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ अभीष्ट गुणनखंड (Factors):</p>' +
+      '<div style="font-size:36pt; font-weight:900; color:#064e3b;">(' + r1 + 'x + ' + s1 + ')(' + g1 + 'x + ' + g2 + ')</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 3: Remainder Theorem Solver
+  // ==========================================================
+  function calculateSim3() {
+    var a = parseFloat(document.getElementById('sim3_a').value) || 0;
+    var b = parseFloat(document.getElementById('sim3_b').value) || 0;
+    var c = parseFloat(document.getElementById('sim3_c').value) || 0;
+    var d = parseFloat(document.getElementById('sim3_d').value) || 0;
+    var r = parseFloat(document.getElementById('sim3_r').value) || 0;
+    var out = document.getElementById('sim3_output');
+
+    var rem = (a * Math.pow(r, 3)) + (b * Math.pow(r, 2)) + (c * r) + d;
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>शेषफल प्रमेय के अनुसार:</strong> जब $p(x)$ को $(x - r)$ से भाग दिया जाए, तो शेषफल $= p(r)$ होता है।</p>' +
+      '<p>यहाँ भाजक से $r = ' + r + '$ प्राप्त होता है।</p>' +
+      '</div>' +
+      '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+      '<p><strong>चरणबद्ध मान:</strong></p>' +
+      '<div style="margin:8px 0;">$$p(' + r + ') = ' + a + '(' + r + ')^3 + (' + b + ')(' + r + ')^2 + (' + c + ')(' + r + ') + (' + d + ')$$</div>' +
+      '<div style="margin:8px 0;">$$= ' + (a * Math.pow(r, 3)) + ' + ' + (b * Math.pow(r, 2)) + ' + ' + (c * r) + ' + ' + d + '$$</div>' +
+      '<div style="margin:8px 0;">$$= ' + rem + '$$</div>' +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:' + (rem === 0 ? '#ecfdf5; border:4px solid #10b981;' : '#fefce8; border:4px solid #f59e0b;') + ' border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">' +
+      (rem === 0 ? '✅ शेषफल $0$ है, अतः $(x - ' + r + ')$ बहुपद का एक गुणनखंड है!' : '✅ शेषफल (Remainder):') + '</p>' +
+      '<div style="font-size:38pt; font-weight:900; color:#064e3b;">शेषफल = ' + rem + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 4: Algebraic Identity Expander
+  // ==========================================================
+  function calculateSim4() {
+    var id = document.getElementById('sim4_id').value;
+    var x = parseFloat(document.getElementById('sim4_x').value) || 0;
+    var y = parseFloat(document.getElementById('sim4_y').value) || 0;
+    var out = document.getElementById('sim4_output');
+
+    var formulaName = '';
+    var formulaTex = '';
+    var stepsTex = '';
+    var resVal = 0;
+
+    if (id === 'sq_sum') {
+      formulaName = 'द्विपद वर्ग योग सर्वसमिका';
+      formulaTex = '(x + y)^2 = x^2 + 2xy + y^2';
+      resVal = Math.pow(x + y, 2);
+      stepsTex = '$$(' + x + ' + ' + y + ')^2 = (' + x + ')^2 + 2(' + x + ')(' + y + ') + (' + y + ')^2$$' +
+        '<div style="margin:8px 0;">$$= ' + Math.pow(x, 2) + ' + ' + (2 * x * y) + ' + ' + Math.pow(y, 2) + '$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
+    } else if (id === 'sq_diff') {
+      formulaName = 'द्विपद वर्ग अंतर सर्वसमिका';
+      formulaTex = '(x - y)^2 = x^2 - 2xy + y^2';
+      resVal = Math.pow(x - y, 2);
+      stepsTex = '$$(' + x + ' - ' + y + ')^2 = (' + x + ')^2 - 2(' + x + ')(' + y + ') + (' + y + ')^2$$' +
+        '<div style="margin:8px 0;">$$= ' + Math.pow(x, 2) + ' - ' + (2 * x * y) + ' + ' + Math.pow(y, 2) + '$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
+    } else if (id === 'diff_sq') {
+      formulaName = 'वर्गों का अंतर सर्वसमिका';
+      formulaTex = '(x + y)(x - y) = x^2 - y^2';
+      resVal = Math.pow(x, 2) - Math.pow(y, 2);
+      stepsTex = '$$(' + x + ' + ' + y + ')(' + x + ' - ' + y + ') = (' + x + ')^2 - (' + y + ')^2$$' +
+        '<div style="margin:8px 0;">$$= ' + Math.pow(x, 2) + ' - ' + Math.pow(y, 2) + '$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
+    } else if (id === 'cb_sum') {
+      formulaName = 'द्विपद घन योग सर्वसमिका';
+      formulaTex = '(x + y)^3 = x^3 + y^3 + 3xy(x + y)';
+      resVal = Math.pow(x + y, 3);
+      stepsTex = '$$(' + x + ' + ' + y + ')^3 = (' + x + ')^3 + (' + y + ')^3 + 3(' + x + ')(' + y + ')(' + x + ' + ' + y + ')$$' +
+        '<div style="margin:8px 0;">$$= ' + Math.pow(x, 3) + ' + ' + Math.pow(y, 3) + ' + ' + (3 * x * y * (x + y)) + '$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
+    } else if (id === 'cb_diff') {
+      formulaName = 'द्विपद घन अंतर सर्वसमिका';
+      formulaTex = '(x - y)^3 = x^3 - y^3 - 3xy(x - y)';
+      resVal = Math.pow(x - y, 3);
+      stepsTex = '$$(' + x + ' - ' + y + ')^3 = (' + x + ')^3 - (' + y + ')^3 - 3(' + x + ')(' + y + ')(' + x + ' - ' + y + ')$$' +
+        '<div style="margin:8px 0;">$$= ' + Math.pow(x, 3) + ' - ' + Math.pow(y, 3) + ' - ' + (3 * x * y * (x - y)) + '$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + resVal + '$$</div>';
+    }
+
+    var html = '<div class="step-line" style="background:#eff6ff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+      '<p><strong>प्रयुक्त सर्वसमिका:</strong> <span class="badge-blue" style="font-size:20pt; padding:4px 12px; border-radius:8px;">' + formulaName + '</span></p>' +
+      '<div style="margin:8px 0; font-size:26pt;">$$' + formulaTex + '$$</div>' +
+      '</div>' +
+      '<div class="step-line" style="background:#ffffff; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+      '<p><strong>चरणबद्ध परिकलन:</strong></p>' +
+      stepsTex +
+      '</div>' +
+      '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+      '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ अंतिम परिणाम (Final Value):</p>' +
+      '<div style="font-size:42pt; font-weight:900; color:#064e3b;">' + resVal + '</div>' +
+      '</div>';
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // ==========================================================
+  // SIMULATOR 5: Special Cubic Identity (x + y + z = 0)
+  // ==========================================================
+  function calculateSim5() {
+    var x = parseFloat(document.getElementById('sim5_x').value) || 0;
+    var y = parseFloat(document.getElementById('sim5_y').value) || 0;
+    var z = parseFloat(document.getElementById('sim5_z').value) || 0;
+    var out = document.getElementById('sim5_output');
+
+    var sum = x + y + z;
+    var html = '';
+
+    if (Math.abs(sum) < 0.000001) {
+      var prod = 3 * x * y * z;
+      html = '<div class="step-line" style="background:#ecfdf5; border-left:8px solid #10b981; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+        '<p style="color:#065f46; font-size:24pt; font-weight:900; margin:0 0 8px 0;">' +
+        '✅ शर्त संतुष्ट! $x + y + z = (' + x + ') + (' + y + ') + (' + z + ') = 0$</p>' +
+        '<p>अतः विशेष सर्वसमिका से: $$x^3 + y^3 + z^3 = 3xyz$$</p>' +
+        '</div>' +
+        '<div class="step-line" style="background:#ffffff; border-left:8px solid #2563eb; padding:16px 20px; border-radius:12px; margin-bottom:12px; border:2px solid #e2e8f0;">' +
+        '<p><strong>बिना घन किए सीधा परिकलन:</strong></p>' +
+        '<div style="margin:8px 0;">$$(' + x + ')^3 + (' + y + ')^3 + (' + z + ')^3 = 3 \\\\times (' + x + ') \\\\times (' + y + ') \\\\times (' + z + ')$$</div>' +
+        '<div style="margin:8px 0;">$$= ' + prod + '$$</div>' +
+        '</div>' +
+        '<div class="final-ans" style="margin-top:15px; padding:18px 24px; text-align:center; background:#ecfdf5; border:4px solid #10b981; border-radius:16px;">' +
+        '<p style="margin:0 0 8px 0; color:#064e3b; font-size:22pt; font-weight:900;">✅ अभीष्ट मान (Value):</p>' +
+        '<div style="font-size:42pt; font-weight:900; color:#064e3b;">' + prod + '</div>' +
+        '</div>';
+    } else {
+      var normalVal = Math.pow(x, 3) + Math.pow(y, 3) + Math.pow(z, 3);
+      html = '<div class="step-line" style="background:#fff1f2; border-left:8px solid #f43f5e; padding:16px 20px; border-radius:12px; margin-bottom:12px;">' +
+        '<p style="color:#9f1239; font-size:22pt; font-weight:900; margin:0 0 8px 0;">' +
+        'ℹ️ यहाँ $x + y + z = ' + sum + ' \\neq 0$ है, अतः विशेष सर्वसमिका लागू नहीं होगी। सामान्य घनों का योग:</p>' +
+        '<div style="margin:8px 0;">$$(' + x + ')^3 + (' + y + ')^3 + (' + z + ')^3 = ' + normalVal + '$$</div>' +
+        '</div>';
+    }
+
+    out.innerHTML = html;
+    if (window.MathJax) {
+      if (MathJax.typesetClear) MathJax.typesetClear([out]);
+      if (MathJax.typesetPromise) MathJax.typesetPromise([out]).catch(function(){});
+    }
+  }
+
+  // Initialise on DOM Ready
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSim1();
+    calculateSim2();
+    calculateSim3();
+    calculateSim4();
+    calculateSim5();
+  });
+</script>
+
+</body>
+</html>
