@@ -2300,7 +2300,7 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim4_pbar"></div></div>
 
-      <div class="sim-stage" id="sim4_stage">
+            <div class="sim-stage" id="sim4_stage">
         <svg id="sim4_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
             <linearGradient id="s4_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -2309,36 +2309,44 @@
             <linearGradient id="s4_benchFront" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
             </linearGradient>
-            <linearGradient id="s4_beakerGlass" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-              <stop offset="12%" stop-color="#e0f2fe" stop-opacity="0.3"/>
-              <stop offset="85%" stop-color="#bae6fd" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+            <linearGradient id="s4_glass3D" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+              <stop offset="8%" stop-color="#ffffff" stop-opacity="0.45"/>
+              <stop offset="25%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="75%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="92%" stop-color="#fdba74" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#ea580c" stop-opacity="0.55"/>
             </linearGradient>
-            <linearGradient id="s4_waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.85"/>
+            <linearGradient id="s4_clearWater" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8"/>
             </linearGradient>
-            <!-- Thick Milky Slaked Lime Liquid -->
-            <linearGradient id="s4_slakedLime" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="40%" stop-color="#f8fafc"/>
-              <stop offset="80%" stop-color="#f1f5f9"/>
-              <stop offset="100%" stop-color="#e2e8f0"/>
-            </linearGradient>
-            <!-- Billowing Steam Gradient -->
-            <radialGradient id="s4_steamGrad" cx="50%" cy="50%" r="50%">
+            <linearGradient id="s4_milkySlaked" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-              <stop offset="40%" stop-color="#f8fafc" stop-opacity="0.65"/>
-              <stop offset="80%" stop-color="#e2e8f0" stop-opacity="0.3"/>
+              <stop offset="60%" stop-color="#f1f5f9" stop-opacity="0.92"/>
+              <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.9"/>
+            </linearGradient>
+            <radialGradient id="s4_chalkRock" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="45%" stop-color="#f8fafc"/>
+              <stop offset="80%" stop-color="#e2e8f0"/>
+              <stop offset="100%" stop-color="#94a3b8"/>
+            </radialGradient>
+            <radialGradient id="s4_heatGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ea580c" stop-opacity="0.45"/>
+              <stop offset="50%" stop-color="#f97316" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="s4_steamGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+              <stop offset="45%" stop-color="#f8fafc" stop-opacity="0.6"/>
               <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
             </radialGradient>
-            <!-- Heat Glow Radial -->
-            <radialGradient id="s4_heatAura" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ea580c" stop-opacity="0.35"/>
-              <stop offset="60%" stop-color="#f97316" stop-opacity="0.15"/>
-              <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-            </radialGradient>
+            <linearGradient id="s4_streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.85"/>
+            </linearGradient>
             <filter id="s4_blur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
@@ -2347,191 +2355,181 @@
             </filter>
           </defs>
 
-          <!-- EXTENDED MAJESTIC WORKBENCH -->
-          <polygon points="30,410 1170,410 1130,465 70,465" fill="url(#s4_benchTop)"/>
-          <polygon points="70,465 1130,465 1130,472 70,472" fill="#94a3b8" opacity="0.8"/>
-          <polygon points="70,472 1130,472 1130,500 70,500" fill="url(#s4_benchFront)"/>
-          <ellipse cx="600" cy="502" rx="540" ry="12" fill="#000000" opacity="0.25" filter="url(#s4_blur)"/>
+          <!-- WORKBENCH -->
+          <polygon points="10,380 900,380 850,432 50,432" fill="url(#s4_benchTop)"/>
+          <polygon points="50,432 850,432 850,438 50,438" fill="#94a3b8" opacity="0.85"/>
+          <polygon points="50,438 850,438 850,470 50,470" fill="url(#s4_benchFront)"/>
+          <ellipse cx="460" cy="473" rx="420" ry="12" fill="#000000" opacity="0.3" filter="url(#s4_blur)"/>
 
-          <!-- ================= RECEIVING BEAKER: LARGE BOROSILICATE BEAKER (CENTER X: 310, BASE Y: 410) ================= -->
-          <g id="s4_big_beaker_group">
-            <ellipse cx="310" cy="415" rx="125" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s4_blur)"/>
+          <!-- HEAT AURA (INTENSE EXOTHERMIC GLOW) -->
+          <circle id="s4_heat_aura" cx="330" cy="300" r="160" fill="url(#s4_heatGlow)" opacity="0" style="transition: opacity 1s ease;"/>
 
-            <!-- Heat Glow Aura (Appears in Steps 2, 3, 4) -->
-            <ellipse id="s4_heat_aura" cx="310" cy="330" rx="140" ry="90" fill="url(#s4_heatAura)" opacity="0" style="transition: opacity 1s ease;"/>
+          <!-- RECEIVING BEAKER ASSEMBLY: CALCIUM OXIDE & SLAKED LIME (CENTER X: 330) -->
+          <g id="s4_beaker_assembly">
+            <!-- Table contact shadow -->
+            <ellipse cx="330" cy="406" rx="125" ry="18" fill="#020617" opacity="0.45" filter="url(#s4_blur)"/>
 
-            <!-- REALISTIC SOLID ROCK LUMPS (ठोस कली चूना, CaO) -->
+            <!-- Slaked Lime Liquid (Appears in Step 2 & 3) -->
+            <path id="s4_beaker_liquid" d="M 222,250 Q 330,260 438,250 L 438,388 Q 330,404 222,388 Z" fill="url(#s4_milkySlaked)" opacity="0" style="transition: all 1s ease;"/>
+            <ellipse id="s4_beaker_meniscus" cx="330" cy="250" rx="108" ry="11" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8" opacity="0" style="transition: all 1s ease;"/>
+
+            <!-- SOLID QUICKLIME LUMPS (CaO Rocks at bottom) -->
             <g id="s4_quicklime_rocks">
-              <!-- Rock 1 (Left Base Chunk) -->
-              <polygon points="215,408 230,375 255,380 262,408 225,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
-              <polygon points="230,375 248,370 255,380" fill="#ffffff"/>
-              <polygon points="215,408 230,375 225,412" fill="#cbd5e1"/>
-
-              <!-- Rock 2 (Large Center Rock) -->
-              <polygon points="255,408 275,365 315,358 335,392 300,412" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.8"/>
-              <polygon points="275,365 298,352 315,358" fill="#ffffff"/>
-              <polygon points="255,408 275,365 300,412" fill="#cbd5e1"/>
-              <polygon points="315,358 335,392 300,412" fill="#94a3b8"/>
-
-              <!-- Rock 3 (Right Base Chunk) -->
-              <polygon points="325,408 345,372 380,378 395,405 355,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
-              <polygon points="345,372 365,366 380,378" fill="#ffffff"/>
-              <polygon points="380,378 395,405 355,412" fill="#cbd5e1"/>
-
-              <!-- Rock 4 (Top Center Rock) -->
-              <polygon points="280,368 298,340 325,345 320,368 288,372" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
-              <polygon points="298,340 312,334 325,345" fill="#f8fafc"/>
-              <polygon points="280,368 288,372 320,368" fill="#cbd5e1"/>
-
-              <!-- Rock 5 (Left Upper Chunk) -->
-              <polygon points="240,385 258,358 278,365 272,388" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-              <polygon points="258,358 270,352 278,365" fill="#ffffff"/>
-
-              <!-- Rock 6 (Right Upper Chunk) -->
-              <polygon points="328,382 350,356 370,368 362,388" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
-              <polygon points="350,356 362,352 370,368" fill="#ffffff"/>
-
-              <!-- Small Solid Fragments & Gravel at Base -->
-              <polygon points="205,408 212,400 220,406 211,411" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
-              <polygon points="235,410 242,404 250,408 241,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
-              <polygon points="308,410 315,403 322,408 313,412" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-              <polygon points="385,408 392,401 402,406 393,411" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
-              <polygon points="270,394 278,388 284,395 276,398" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <polygon points="340,395 348,389 354,396 346,399" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <path d="M 235,372 Q 248,342 272,348 Q 288,368 280,388 Q 252,390 235,372 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 268,362 Q 292,332 322,338 Q 338,362 330,388 Q 295,392 268,362 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 318,364 Q 342,336 372,342 Q 394,368 382,388 Q 345,392 318,364 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 370,366 Q 395,342 425,352 Q 436,374 425,388 Q 395,390 370,366 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 258,344 Q 282,316 314,322 Q 330,348 314,364 Q 280,364 258,344 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 322,338 Q 348,314 380,320 Q 396,346 376,364 Q 345,364 322,338 Z" fill="url(#s4_chalkRock)" stroke="#94a3b8" stroke-width="1.5"/>
+              <path d="M 292,330 Q 316,305 342,312 Q 355,335 340,350 Q 310,350 292,330 Z" fill="url(#s4_chalkRock)" stroke="#cbd5e1" stroke-width="1.5"/>
             </g>
 
-            <!-- Milky Slaked Lime Liquid (Ca(OH)2) in Steps 2, 3, 4 -->
-            <path id="s4_beaker_liquid" d="M 205,275 Q 310,285 415,275 L 415,395 Q 310,408 205,395 Z" fill="url(#s4_slakedLime)" stroke="#cbd5e1" stroke-width="1" opacity="0" style="transition: opacity 0.8s ease;"/>
-            <ellipse id="s4_beaker_meniscus" cx="310" cy="275" rx="105" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" opacity="0" style="transition: opacity 0.8s ease;"/>
-
-            <!-- Violent Boiling & Effervescence Bubbles in Liquid -->
-            <g id="s4_boiling_bubbles" opacity="0" class="liquid-flow-stream">
-              <circle cx="250" cy="340" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="280" cy="305" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="310" cy="325" r="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="345" cy="295" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="370" cy="335" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="295" cy="282" r="6.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="330" cy="285" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+            <!-- BOILING BUBBLES & CHURNING (ACTIVE IN STEPS 2, 3) -->
+            <g id="s4_boiling_bubbles" opacity="0" style="transition: opacity 0.4s ease;">
+              <circle cx="260" cy="290" r="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" opacity="0.9"/>
+              <circle cx="295" cy="275" r="11" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" opacity="0.85"/>
+              <circle cx="340" cy="285" r="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" opacity="0.9"/>
+              <circle cx="375" cy="270" r="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" opacity="0.85"/>
+              <circle cx="410" cy="295" r="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" opacity="0.9"/>
+              <circle cx="280" cy="320" r="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" opacity="0.8"/>
+              <circle cx="360" cy="315" r="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" opacity="0.8"/>
+              <circle cx="320" cy="335" r="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" opacity="0.8"/>
             </g>
 
-            <!-- Large Borosilicate Beaker Glass Shell -->
-            <path d="M 190,195 L 202,197 L 202,390 Q 202,408 228,408 L 392,408 Q 418,408 418,390 L 418,197 L 410,195" fill="url(#s4_beakerGlass)" stroke="#94a3b8" stroke-width="3"/>
-            <ellipse cx="310" cy="196" rx="110" ry="11" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
-            <!-- Beaker Pouring Spout -->
-            <path d="M 202,197 Q 185,193 178,190 Q 190,200 202,202 Z" fill="#ffffff" opacity="0.8"/>
+            <!-- 3D CYLINDRICAL GLASS VESSEL BODY -->
+            <path d="M 220,180 L 220,388 Q 330,404 440,388 L 440,180 Z" fill="url(#s4_glass3D)" stroke="#334155" stroke-width="2.5"/>
+            <!-- Glass Specular Reflection Highlight Strip -->
+            <path d="M 228,185 L 228,384" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.65"/>
+            <path d="M 432,185 L 432,384" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
 
-            <!-- Volume Graduation Markings -->
-            <g opacity="0.95">
-              <line x1="210" y1="235" x2="242" y2="235" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="250" y="240" font-size="13" font-weight="900" fill="#0f172a">250 mL</text>
-              <line x1="210" y1="275" x2="242" y2="275" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="250" y="280" font-size="13" font-weight="900" fill="#0f172a">200 mL</text>
-              <line x1="210" y1="315" x2="242" y2="315" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="250" y="320" font-size="13" font-weight="900" fill="#0f172a">100 mL</text>
-            </g>
-            <line x1="208" y1="202" x2="208" y2="395" stroke="#ffffff" stroke-width="3.5" opacity="0.85" stroke-linecap="round"/>
+            <!-- Frosted measurement box 120 ml BOROSILICATE -->
+            <rect x="228" y="278" width="68" height="48" rx="4" fill="#ffffff" opacity="0.32" stroke="#ffffff" stroke-width="1.2"/>
+            <text x="262" y="297" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">120 ml</text>
+            <text x="262" y="312" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">BOROSILICATE</text>
 
-            <!-- Beaker Identification Tag -->
-            <g transform="translate(180, 425)">
-              <rect id="s4_label_box" x="0" y="0" width="260" height="32" rx="8" fill="#0f172a" stroke="#cbd5e1" stroke-width="2"/>
-              <text id="s4_beaker_label" x="130" y="21" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">ठोस बिना बुझा चूना [कली चूना, CaO]</text>
+            <!-- Volumetric Graduations (Ladder) -->
+            <line x1="436" y1="210" x2="385" y2="210" stroke="#ffffff" stroke-width="2.5" opacity="0.9"/>
+            <text x="378" y="214" font-size="12" font-weight="900" fill="#ffffff" text-anchor="end">500 mL</text>
+            <line x1="436" y1="250" x2="395" y2="250" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+            <text x="388" y="254" font-size="11" font-weight="900" fill="#ffffff" text-anchor="end">400 mL</text>
+            <line x1="436" y1="295" x2="395" y2="295" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+            <text x="388" y="299" font-size="11" font-weight="900" fill="#ffffff" text-anchor="end">200 mL</text>
+            <line x1="436" y1="340" x2="395" y2="340" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+            <text x="388" y="344" font-size="11" font-weight="900" fill="#ffffff" text-anchor="end">100 mL</text>
+
+            <!-- Beaker Rim and Spout -->
+            <ellipse cx="330" cy="175" rx="120" ry="14" fill="none" stroke="#64748b" stroke-width="3.2"/>
+            <ellipse cx="330" cy="177" rx="114" ry="11" fill="none" stroke="#e2e8f0" stroke-width="1.8"/>
+            <path d="M 210,175 Q 192,175 198,188 Q 212,185 214,178" fill="none" stroke="#64748b" stroke-width="2.5"/>
+            <path d="M 220,388 Q 330,404 440,388" fill="none" stroke="#334155" stroke-width="3.2"/>
+
+            <!-- Status Label Plaque at base -->
+            <g id="s4_label_box" transform="translate(330, 422)">
+              <rect x="-115" y="-14" width="230" height="28" rx="8" fill="#0f172a" stroke="#fdba74" stroke-width="2"/>
+              <text id="s4_beaker_label" x="0" y="5" font-size="13" font-weight="900" fill="#ffedd5" text-anchor="middle">बिना बुझा चूना (CaO कली चूना)</text>
             </g>
           </g>
 
-          <!-- ================= WATER POURING BEAKER (RESTS AT RIGHT, TILTS 45° IN STEP 2) ================= -->
-          <g id="s4_pouring_vessel_group" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
-            <g id="s4_vessel_inner">
-              <g transform="translate(560, 250)">
-                <ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s4_blur)"/>
-                <!-- Water liquid -->
-                <path d="M 8,45 L 8,135 Q 55,145 102,135 L 102,45 Z" fill="url(#s4_waterGrad)"/>
-                <ellipse cx="55" cy="45" rx="47" ry="6" fill="#38bdf8"/>
-                <path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>
-                <ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>
-                <!-- Label -->
-                <rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
-                <text x="55" y="172" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">जल (H₂O) बीकर</text>
-              </g>
+          <!-- ================= THERMOMETER (PERMANENTLY IMMERSED IN CENTER, REALTIME RISE) ================= -->
+          <g id="s4_thermometer_group" transform="translate(305, 45)">
+            <!-- Live Digital Temperature Badge at top -->
+            <g id="s4_thermo_badge" transform="translate(8, 0)">
+              <rect x="-42" y="-14" width="84" height="28" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+              <text id="s4_temp_badge_text" x="0" y="5" font-size="14" font-weight="900" fill="#fca5a5" text-anchor="middle">🌡️ 25°C</text>
             </g>
-          </g>
 
-          <!-- ================= WATER POURING STREAM (FROM 350, 155 TO 310, 275) ================= -->
-          <g id="s4_pouring_stream" opacity="0" style="transition: opacity 0.25s ease;">
-            <path d="M 335,160 Q 320,210 310,275" stroke="rgba(56, 189, 248, 0.9)" stroke-width="9" fill="none" stroke-linecap="round"/>
-            <path d="M 335,160 Q 320,210 310,275" stroke="#ffffff" stroke-width="3" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
-            <ellipse cx="310" cy="275" rx="20" ry="6" fill="none" stroke="#38bdf8" stroke-width="2.5" class="splash-ripple-wave"/>
+            <!-- Glass Stem Outer -->
+            <rect x="0" y="24" width="16" height="305" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2.2"/>
+            <!-- Inner Capillary Channel -->
+            <rect x="6" y="38" width="4" height="280" fill="#e2e8f0"/>
+            <!-- Red Mercury Column (rises smoothly from 25°C at Y: 260 to 85°C at Y: 100) -->
+            <rect id="s4_mercury_col" x="6" y="260" width="4" height="65" rx="2" fill="#dc2626" style="transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);"/>
+            <!-- Bulb at Bottom (Immersed in CaO) -->
+            <circle cx="8" cy="328" r="11" fill="#dc2626" stroke="#991b1b" stroke-width="2.2"/>
+
+            <!-- Temperature Graduations & Labels -->
+            <line x1="16" y1="75" x2="24" y2="75" stroke="#64748b" stroke-width="1.5"/>
+            <text x="28" y="79" font-size="11" font-weight="900" fill="#64748b">100°C</text>
+            
+            <line x1="16" y1="100" x2="28" y2="100" stroke="#dc2626" stroke-width="2.5"/>
+            <text x="32" y="105" font-size="14" font-weight="900" fill="#dc2626">85°C 🔥</text>
+
+            <line x1="16" y1="170" x2="24" y2="170" stroke="#64748b" stroke-width="1.5"/>
+            <text x="28" y="174" font-size="10" font-weight="800" fill="#64748b">50°C</text>
+
+            <line x1="16" y1="260" x2="26" y2="260" stroke="#0f172a" stroke-width="2"/>
+            <text x="30" y="264" font-size="12" font-weight="900" fill="#0f172a">25°C</text>
+
+            <line x1="16" y1="310" x2="24" y2="310" stroke="#64748b" stroke-width="1.5"/>
+            <text x="28" y="314" font-size="10" font-weight="800" fill="#64748b">0°C</text>
           </g>
 
           <!-- ================= BILLOWING STEAM & EXOTHERMIC HEAT VAPOR (STEPS 2, 3, 4) ================= -->
           <g id="s4_steam_plumes" class="s4-steam-loop" opacity="0" style="transition: opacity 0.8s ease;">
-            <circle cx="280" cy="150" r="35" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="320" cy="115" r="48" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="355" cy="80" r="58" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="295" cy="70" r="42" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <text x="310" y="85" font-size="15" font-weight="900" fill="#c2410c" text-anchor="middle">♨️ खौलती भाप व तीव्र ऊष्मा (Exothermic Heat)</text>
+            <circle cx="260" cy="130" r="32" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="320" cy="100" r="46" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="370" cy="75" r="54" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="290" cy="65" r="40" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <text x="330" y="55" font-size="16" font-weight="900" fill="#c2410c" text-anchor="middle">♨️ खौलती भाप व तीव्र ऊष्मा (Exothermic Reaction)</text>
           </g>
 
-          <!-- ================= LABORATORY THERMOMETER (DIPS IN STEP 4, MERCURY CLIMBS 25°C -> 85°C) ================= -->
-          <g id="s4_thermometer_group" opacity="0" transform="translate(365, 55)" style="transition: all 1s ease;">
-            <!-- Thermometer Glass Tube -->
-            <rect x="0" y="0" width="16" height="250" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
-            <!-- Bulb at bottom (immersed in hot liquid) -->
-            <circle cx="8" cy="250" r="13" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
-            <!-- Capillary Bore Track -->
-            <rect x="6" y="20" width="4" height="230" fill="#e2e8f0"/>
-            <!-- Red Mercury Column (Grows Upward to 85°C) -->
-            <rect id="s4_mercury_col" x="6" y="220" width="4" height="30" rx="2" fill="#dc2626" style="transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);"/>
-            <!-- Scale Markings on Stem -->
-            <line x1="16" y1="220" x2="25" y2="220" stroke="#0f172a" stroke-width="1.5"/>
-            <text x="29" y="224" font-size="11" font-weight="900" fill="#0f172a">25°C</text>
-            <line x1="16" y1="180" x2="23" y2="180" stroke="#64748b" stroke-width="1.2"/>
-            <text x="27" y="184" font-size="10" font-weight="800" fill="#64748b">50°C</text>
-            <line x1="16" y1="130" x2="27" y2="130" stroke="#dc2626" stroke-width="2.5"/>
-            <text x="31" y="135" font-size="14" font-weight="900" fill="#dc2626">85°C 🔥</text>
-            <line x1="16" y1="105" x2="23" y2="105" stroke="#64748b" stroke-width="1.2"/>
-            <text x="27" y="109" font-size="10" font-weight="800" fill="#64748b">100°C</text>
+          <!-- ================= WATER POURING BEAKER (RESTS AT RIGHT, TILTS 45° IN STEP 2 WITH MOUTH-DOWN PHYSICS) ================= -->
+          <g id="s4_pouring_vessel_group" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
+            <g id="s4_vessel_inner">
+              <g id="s4_upright_water_beaker" transform="translate(560, 240)">
+                <ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s4_blur)"/>
+                <!-- Water liquid -->
+                <path d="M 5,50 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,50 Z" fill="url(#s4_clearWater)"/>
+                <ellipse cx="55" cy="50" rx="47" ry="7" fill="#38bdf8" opacity="0.85"/>
+                <!-- Glass body -->
+                <path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_glass3D)" stroke="#334155" stroke-width="2.5"/>
+                <ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>
+                <line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                <!-- Label Tag -->
+                <rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+                <text x="55" y="172" font-size="13" font-weight="900" fill="#bae6fd" text-anchor="middle">जल (H₂O) बीकर</text>
+              </g>
+            </g>
           </g>
 
-          <!-- ================= LIVE DATA OBSERVATION PANEL (APPEARS ONLY IN LAST STEP, FAR RIGHT) ================= -->
+          <!-- ================= WATER POURING STREAM (FROM SPOUT 415,160 TO BEAKER LIQUID 330,260) ================= -->
+          <g id="s4_pouring_stream" opacity="0" style="transition: opacity 0.25s ease;">
+            <path d="M 415,160 Q 375,205 330,260" stroke="url(#s4_streamGrad)" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M 415,160 Q 375,205 330,260" stroke="#ffffff" stroke-width="3" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
+            <ellipse cx="330" cy="260" rx="20" ry="6" fill="none" stroke="#38bdf8" stroke-width="2.5" class="splash-ripple-wave"/>
+          </g>
+
+          <!-- ================= LIVE DATA OBSERVATION PANEL (APPEARS ONLY IN LAST STEP 4, FAR RIGHT) ================= -->
           <g id="s4_projector_panel" transform="translate(775, 40)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
-            <!-- Outer Shell (Class 10 SS Premium Light Card Style) -->
             <rect x="0" y="0" width="395" height="425" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" filter="drop-shadow(0 14px 28px rgba(0,0,0,0.1))"/>
-            
-            <!-- Header (Warm Rust / Crimson) -->
             <rect x="0" y="0" width="395" height="52" rx="18" fill="#c2410c"/>
             <rect x="0" y="34" width="395" height="18" fill="#c2410c"/>
             <text x="197" y="33" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">🌡️ प्रायोगिक प्रेक्षण व तापमापी डेटा</text>
 
-            <!-- Observation 1: Reactants -->
             <g transform="translate(18, 70)">
               <rect x="0" y="0" width="359" height="58" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
               <text x="14" y="22" font-size="13" font-weight="900" fill="#64748b">अभिकारक (Reactants):</text>
               <text x="14" y="44" font-size="16" font-weight="900" fill="#0f172a">ठोस कली चूना [CaO] + जल [H₂O]</text>
             </g>
 
-            <!-- Observation 2: Temperature Rise -->
             <g transform="translate(18, 140)">
               <rect x="0" y="0" width="359" height="65" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
               <text x="14" y="22" font-size="13" font-weight="900" fill="#b91c1c">तापमान वृद्धि (Temperature Jump):</text>
               <text id="s4_panel_temp" x="14" y="48" font-size="18" font-weight="900" fill="#dc2626">25°C ➔ 85°C (अत्यधिक गर्म 🔥)</text>
             </g>
 
-            <!-- Observation 3: Product Formed -->
             <g transform="translate(18, 218)">
               <rect x="0" y="0" width="359" height="58" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
               <text x="14" y="22" font-size="13" font-weight="900" fill="#15803d">उत्पाद (Product):</text>
               <text x="14" y="44" font-size="16" font-weight="900" fill="#166534">बुझा हुआ चूना [Ca(OH)₂] (दूधिया घोल)</text>
             </g>
 
-            <!-- Observation 4: Chemical Equation -->
             <g transform="translate(18, 288)">
               <rect x="0" y="0" width="359" height="65" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
               <text x="14" y="22" font-size="13" font-weight="900" fill="#c2410c">संतुलित रासायनिक समीकरण:</text>
               <text x="14" y="46" font-size="16" font-weight="900" fill="#9a3412">CaO(s) + H₂O(l) ➔ Ca(OH)₂(aq) + ऊष्मा</text>
             </g>
 
-            <!-- Observation 5: Reaction Types Conclusion -->
             <g transform="translate(18, 365)">
               <rect x="0" y="0" width="359" height="42" rx="10" fill="#1e293b"/>
               <text x="179" y="26" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">✔ संयोजन (Combination) व ऊष्माक्षेपी अभिक्रिया (Exothermic)</text>
@@ -5005,6 +5003,9 @@
     }
 
         /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) UPGRADED --- */
+        /* ==========================================================
+       SIMULATOR 4: QUICKLIME + WATER (EXOTHERMIC REACTION)
+       ========================================================== */
     function sim4Reset() {
       clearSimTimers(4);
       var pbar = document.getElementById('sim4_pbar'); if (pbar) pbar.style.width = '0%';
@@ -5014,44 +5015,36 @@
       // Reset water pouring vessel to right resting position
       var inner = document.getElementById('s4_vessel_inner');
       if (inner) {
-        inner.innerHTML = '<g transform="translate(560, 250)">' +
-          '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s4_blur)"/>' +
-          '<path d="M 8,45 L 8,135 Q 55,145 102,135 L 102,45 Z" fill="url(#s4_waterGrad)"/>' +
-          '<ellipse cx="55" cy="45" rx="47" ry="6" fill="#38bdf8"/>' +
-          '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
-          '<ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-          '<rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>' +
-          '<text x="55" y="172" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">जल (H₂O) बीकर</text>' +
+        inner.innerHTML = '<g id="s4_upright_water_beaker" transform="translate(560, 240)">' +
+          '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s4_blur)"/>' +
+          '<path d="M 5,50 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,50 Z" fill="url(#s4_clearWater)"/>' +
+          '<ellipse cx="55" cy="50" rx="47" ry="7" fill="#38bdf8" opacity="0.85"/>' +
+          '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_glass3D)" stroke="#334155" stroke-width="2.5"/>' +
+          '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
+          '<line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>' +
+          '<rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>' +
+          '<text x="55" y="172" font-size="13" font-weight="900" fill="#bae6fd" text-anchor="middle">जल (H₂O) बीकर</text>' +
           '</g>';
       }
 
-      var stream = document.getElementById('s4_pouring_stream'); if (stream) stream.setAttribute('opacity', '0');
-      var bLiq = document.getElementById('s4_beaker_liquid'); if (bLiq) bLiq.setAttribute('opacity', '0');
-      var bMen = document.getElementById('s4_beaker_meniscus'); if (bMen) bMen.setAttribute('opacity', '0');
-      var bub = document.getElementById('s4_boiling_bubbles'); if (bub) bub.setAttribute('opacity', '0');
-      var steam = document.getElementById('s4_steam_plumes'); if (steam) steam.setAttribute('opacity', '0');
-      var aura = document.getElementById('s4_heat_aura'); if (aura) aura.setAttribute('opacity', '0');
+      var stream = document.getElementById('s4_pouring_stream'); if (stream) stream.style.opacity = '0';
+      var bLiq = document.getElementById('s4_beaker_liquid'); if (bLiq) bLiq.style.opacity = '0';
+      var bMen = document.getElementById('s4_beaker_meniscus'); if (bMen) bMen.style.opacity = '0';
+      var bub = document.getElementById('s4_boiling_bubbles'); if (bub) bub.style.opacity = '0';
+      var steam = document.getElementById('s4_steam_plumes'); if (steam) steam.style.opacity = '0';
+      var aura = document.getElementById('s4_heat_aura'); if (aura) aura.style.opacity = '0';
       
-      var thermo = document.getElementById('s4_thermometer_group'); if (thermo) thermo.setAttribute('opacity', '0');
       var merc = document.getElementById('s4_mercury_col');
-      if (merc) { merc.setAttribute('y', '220'); merc.setAttribute('height', '30'); }
+      if (merc) { merc.setAttribute('y', '260'); merc.setAttribute('height', '65'); }
+      var badgeTxt = document.getElementById('s4_temp_badge_text');
+      if (badgeTxt) { badgeTxt.textContent = '🌡️ 25°C'; badgeTxt.style.fill = '#fca5a5'; }
 
-      var lblBox = document.getElementById('s4_label_box'); if (lblBox) lblBox.style.stroke = '#cbd5e1';
+      var lblBox = document.getElementById('s4_label_box'); if (lblBox) lblBox.style.stroke = '#fdba74';
       var lblTxt = document.getElementById('s4_beaker_label');
-      if (lblTxt) { lblTxt.textContent = "ठोस बिना बुझा चूना [कली चूना, CaO]"; lblTxt.style.fill = "#ffffff"; }
+      if (lblTxt) { lblTxt.textContent = "बिना बुझा चूना (CaO कली चूना)"; lblTxt.style.fill = "#ffedd5"; }
 
-      var pTemp = document.getElementById('s4_panel_temp');
-      if (pTemp) { pTemp.textContent = "25°C ➔ 85°C (अत्यधिक गर्म 🔥)"; }
-
-      // Hide observation panel during steps 1, 2, 3
       var panel = document.getElementById('s4_projector_panel');
-      if (panel) {
-        panel.style.opacity = '0';
-        panel.style.pointerEvents = 'none';
-        panel.style.transform = 'translate(775px, 40px) scale(0.96)';
-      }
-
-      var btn = document.getElementById('sim4_play_btn'); if (btn) btn.disabled = false;
+      if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
     }
 
     function sim4Step(s) {
@@ -5064,8 +5057,8 @@
       var bub = document.getElementById('s4_boiling_bubbles');
       var steam = document.getElementById('s4_steam_plumes');
       var aura = document.getElementById('s4_heat_aura');
-      var thermo = document.getElementById('s4_thermometer_group');
       var merc = document.getElementById('s4_mercury_col');
+      var badgeTxt = document.getElementById('s4_temp_badge_text');
       var lblBox = document.getElementById('s4_label_box');
       var lblTxt = document.getElementById('s4_beaker_label');
       var panel = document.getElementById('s4_projector_panel');
@@ -5073,87 +5066,102 @@
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
         sim4Reset();
-        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> बड़े बोरोसिलिकेट बीकर में ठोस, ढेलेदार बिना बुझा चूना (कली चूना, कैल्शियम ऑक्साइड CaO) लिया गया। प्रारंभिक तापमान सामान्य 25°C है।';
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> बड़े बोरोसिलिकेट बीकर में ठोस, ढेलेदार बिना बुझा चूना (कली चूना, कैल्शियम ऑक्साइड CaO) लिया गया। तापमापी में प्रारंभिक तापमान सामान्य 25°C है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        // Beaker lifts up, rear elevated, mouth tilted 45°
+        // Vessel elevates, rear raised in air, mouth tilted DOWNWARDS at (415, 160)
         if (inner) {
-          inner.innerHTML = '<g transform="translate(350, 160) rotate(45)">' +
-            '<path d="M 8,-35 L 8,35 Q 55,45 102,35 L 102,-35 Z" fill="url(#s4_waterGrad)"/>' +
-            '<path d="M 0,-55 L 5,-53 L 5,35 Q 5,48 25,48 L 85,48 Q 105,48 105,35 L 105,-55" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.5"/>' +
-            '<ellipse cx="55" cy="-55" rx="50" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-            '</g>';
+          inner.innerHTML = `<g id="s4_tilted_pouring_vessel">
+  <!-- 3D Glass Body tilted 45° with mouth DOWN and base UP in the air -->
+  <polygon points="415,160 360,105 450,15 505,70" fill="url(#s4_glass3D)" stroke="#334155" stroke-width="2.5"/>
+  <!-- Beaker rounded base cap elevated in air -->
+  <path d="M 450,15 Q 477,42 505,70" fill="none" stroke="#334155" stroke-width="3.2"/>
+  <!-- Spout Lip at lowest point -->
+  <path d="M 415,160 Q 425,165 422,154" fill="none" stroke="#334155" stroke-width="2.8"/>
+  <!-- Clear water flowing inside along lower wall -->
+  <polygon points="415,160 415,135 480,70 505,70" fill="url(#s4_clearWater)"/>
+  <!-- Glass specular highlight line -->
+  <line x1="375" y1="90" x2="435" y2="30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <!-- Label Tag on tilted beaker -->
+  <g transform="translate(440, 68) rotate(-45)">
+    <rect x="-35" y="-12" width="70" height="24" rx="5" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+    <text x="0" y="5" font-size="11" font-weight="900" fill="#bae6fd" text-anchor="middle">जल (H₂O)</text>
+  </g>
+</g>`;
         }
 
         addSimTimer(4, setTimeout(function() {
-          if (stream) stream.setAttribute('opacity', '1');
-          if (bLiq) bLiq.setAttribute('opacity', '1');
-          if (bMen) bMen.setAttribute('opacity', '1');
-          if (bub) bub.setAttribute('opacity', '1');
-          if (steam) steam.setAttribute('opacity', '1');
-          if (aura) aura.setAttribute('opacity', '0.6');
-        }, 500));
+          if (stream) stream.style.opacity = '1';
+          if (bLiq) bLiq.style.opacity = '1';
+          if (bMen) bMen.style.opacity = '1';
+          if (bub) bub.style.opacity = '1';
+          if (steam) steam.style.opacity = '1';
+          if (aura) aura.style.opacity = '0.5';
+
+          // Mercury starts rising to 50°C
+          if (merc) { merc.setAttribute('y', '170'); merc.setAttribute('height', '155'); }
+          if (badgeTxt) { badgeTxt.textContent = '🌡️ 50°C ⬆'; badgeTxt.style.fill = '#fde047'; }
+        }, 300));
 
         // Observation panel hidden during Step 2
         if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
 
-        if (st) st.innerHTML = '<strong>चरण 2 (जल योग व तीव्र खौलता संयोजन):</strong> बीकर ऊपर उठकर 45° कोण पर झुका और जल डाला। जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ खौलने लगा और प्रचुर मात्रा में ऊष्मा व भाप निकलनी शुरू हुई!';
+        if (st) st.innerHTML = '<strong>चरण 2 (जल योग व तीव्र खौलता संयोजन):</strong> बीकर ऊपर उठकर 45° कोण पर झुका और जल डाला। जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ खौलने लगा, प्रचुर भाप निकली और पारा चढ़ना शुरू हुआ!';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (stream) stream.setAttribute('opacity', '0');
+        if (stream) stream.style.opacity = '0';
         // Water beaker returns to bench
         if (inner) {
-          inner.innerHTML = '<g transform="translate(560, 250)">' +
-            '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s4_blur)"/>' +
-            '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
+          inner.innerHTML = '<g id="s4_upright_water_beaker" transform="translate(560, 240)">' +
+            '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s4_blur)"/>' +
+            '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_glass3D)" stroke="#334155" stroke-width="2.2"/>' +
+            '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
+            '<rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>' +
+            '<text x="55" y="172" font-size="13" font-weight="900" fill="#94a3b8" text-anchor="middle">खाली बीकर</text>' +
             '</g>';
         }
 
-        if (bLiq) bLiq.setAttribute('opacity', '1');
-        if (bMen) bMen.setAttribute('opacity', '1');
-        if (bub) bub.setAttribute('opacity', '0.7');
-        if (steam) steam.setAttribute('opacity', '1');
-        if (aura) aura.setAttribute('opacity', '0.9');
+        if (bLiq) bLiq.style.opacity = '1';
+        if (bMen) bMen.style.opacity = '1';
+        if (bub) bub.style.opacity = '0.85';
+        if (steam) steam.style.opacity = '1';
+        if (aura) aura.style.opacity = '0.85';
 
-        if (lblBox) lblBox.style.stroke = '#38bdf8';
-        if (lblTxt) { lblTxt.textContent = "बुझा चूना [Ca(OH)₂] दूधिया घोल"; lblTxt.style.fill = "#38bdf8"; }
+        // Mercury climbs to full 85°C
+        if (merc) { merc.setAttribute('y', '100'); merc.setAttribute('height', '225'); }
+        if (badgeTxt) { badgeTxt.textContent = '🌡️ 85°C 🔥'; badgeTxt.style.fill = '#ef4444'; }
+
+        if (lblBox) lblBox.style.stroke = '#ea580c';
+        if (lblTxt) { lblTxt.textContent = "बुझा चूना [Ca(OH)₂] खौलता दूधिया घोल"; lblTxt.style.fill = "#ffedd5"; }
 
         // Observation panel hidden during Step 3
         if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
 
-        if (st) st.innerHTML = '<strong>चरण 3 (बुझा चूना निर्माण व ऊष्मा निष्कासन):</strong> रासायनिक अभिक्रिया में कैल्शियम हाइड्रोक्साइड [Ca(OH)₂ - बुझा हुआ चूना] बना तथा बीकर अत्यधिक गर्म हो गया। बीकर की बाहरी दीवार छूने पर तीव्र ऊष्मा महसूस होती है!';
+        if (st) st.innerHTML = '<strong>चरण 3 (बुझा चूना निर्माण व भीषण ऊष्मा):</strong> रासायनिक अभिक्रिया में कैल्शियम हाइड्रोक्साइड [Ca(OH)₂ - बुझा हुआ चूना] बना तथा तापमापी में पारा उछलकर <strong>85°C</strong> तक पहुंच गया! बीकर अत्यधिक गर्म हो चुका है।';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        if (bLiq) bLiq.setAttribute('opacity', '1');
-        if (bMen) bMen.setAttribute('opacity', '1');
-        if (steam) steam.setAttribute('opacity', '1');
-        if (aura) aura.setAttribute('opacity', '1');
+        if (bLiq) bLiq.style.opacity = '1';
+        if (bMen) bMen.style.opacity = '1';
+        if (steam) steam.style.opacity = '1';
+        if (aura) aura.style.opacity = '1';
 
-        // Thermometer dips into liquid
-        if (thermo) thermo.setAttribute('opacity', '1');
+        if (merc) { merc.setAttribute('y', '100'); merc.setAttribute('height', '225'); }
+        if (badgeTxt) { badgeTxt.textContent = '🌡️ 85°C 🔥'; badgeTxt.style.fill = '#ef4444'; }
 
-        // Mercury climbs from 25°C to 85°C
-        addSimTimer(4, setTimeout(function() {
-          if (merc) {
-            merc.setAttribute('y', '130');
-            merc.setAttribute('height', '120');
-          }
-        }, 300));
-
-        // NOW, and ONLY in Step 4, observation panel appears on the right
+        // Observation panel appears ONLY in Step 4
         addSimTimer(4, setTimeout(function() {
           if (panel) {
             panel.style.opacity = '1';
             panel.style.pointerEvents = 'auto';
             panel.style.transform = 'translate(775px, 40px) scale(1)';
           }
-        }, 1200));
+        }, 500));
 
         if (st) st.innerHTML = '<span style="color:#c2410c; font-size:17px;"><strong>चरण 4 (तापमान वृद्धि 25°C ➔ 85°C व संतुलित रासायनिक समीकरण):</strong></span><br>' +
           '<span style="display:inline-block; margin-top:6px; font-size:16px; background:#ffedd5; padding:6px 14px; border-radius:8px; border:2px solid #fed7aa; color:#9a3412; font-weight:900;">' +
-          'CaO(s) + H₂O(l) ➔ <strong>Ca(OH)₂(aq) (बुझा चूना)</strong> + <strong>ऊष्मा (Heat)</strong>' +
+          'CaO(s) + H₂O(l) ➔ <strong>Ca(OH)₂(aq) (बुझा चूना)</strong> + <strong>ऊष्मा (Δ)</strong>' +
           '</span><br>' +
-          '<span style="font-size:15px; color:#334155; margin-top:4px; display:inline-block;">तापमापी में पारा 25°C से उछलकर <strong>85°C</strong> तक पहुँच जाता है। यह दो अभिकारकों के जुड़ने से एकल उत्पाद बनने के कारण <strong>संयोजन अभिक्रिया</strong> है, तथा प्रचुर ऊष्मा उत्सर्जित होने के कारण अत्यंत तीव्र <strong>ऊष्माक्षेपी अभिक्रिया (Exothermic Reaction)</strong> है।</span>';
+          '<span style="font-size:15px; color:#334155; margin-top:4px; display:inline-block;">तापमापी में पारा 25°C से उछलकर <strong>85°C</strong> तक पहुँच जाता है। यह दो अभिकारकों के संयोजन से एकल उत्पाद बनने के कारण <strong>संयोजन अभिक्रिया</strong> है, तथा प्रचुर ऊष्मा उत्सर्जित होने के कारण अत्यंत तीव्र <strong>ऊष्माक्षेपी अभिक्रिया (Exothermic Reaction)</strong> है।</span>';
       }
     }
 
