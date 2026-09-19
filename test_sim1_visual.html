@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>क्रियाकलाप 1.1: मैग्नीशियम रिबन दहन - यथार्थवादी सिमुलेटर</title>
+  <style>
+    body { background: #f1f5f9; padding: 20px; font-family: system-ui, -apple-system, sans-serif; color: #0f172a; margin: 0; }
+    .sim-card { background: #ffffff; border-radius: 14px; padding: 24px; max-width: 920px; margin: 0 auto; box-shadow: 0 6px 24px rgba(0,0,0,0.07); border: 1px solid #e2e8f0; }
+    .sim-stage { background: #ffffff !important; border: 2px solid #cbd5e1; border-radius: 12px; height: 370px; position: relative; overflow: hidden; }
+    
+    .sim-btn { padding: 10px 18px; font-size: 14px; font-weight: 700; border-radius: 8px; border: none; cursor: pointer; color: white; margin: 4px; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .sim-btn:hover { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+    .sim-btn:active { transform: translateY(0); }
+    .sim-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    /* Vertical Flame Animation */
+    @keyframes flameFlicker {
+      0%, 100% { transform: scale(1, 1); }
+      33% { transform: scale(1.05, 0.96) translate(-0.3px, -1px); }
+      66% { transform: scale(0.96, 1.04) translate(0.4px, -0.5px); }
+    }
+    .flame-anim { animation: flameFlicker 0.2s infinite alternate ease-in-out; transform-origin: 350px 140px; }
+
+    /* Starburst Flare Rotation & Brilliant Pulsing */
+    @keyframes starburstAnim {
+      0% { transform: scale(0.95) rotate(0deg); opacity: 0.92; }
+      50% { transform: scale(1.18) rotate(14deg); opacity: 1; }
+      100% { transform: scale(1.0) rotate(-10deg); opacity: 0.95; }
+    }
+    .flare-anim { animation: starburstAnim 0.25s infinite alternate ease-in-out; transform-origin: 350px 75px; }
+
+    /* Core Arc Bright Pulse */
+    @keyframes coreBrightPulse {
+      0%, 100% { r: 52px; opacity: 0.95; }
+      50% { r: 66px; opacity: 1; }
+    }
+    .core-pulse { animation: coreBrightPulse 0.18s infinite alternate ease-in-out; }
+
+    /* Smooth CSS Transitions */
+    .smooth-elem { transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+
+    /* Continuous Stream Animation for Falling Powder */
+    @keyframes pStreamA { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(160px); opacity: 0; } }
+    @keyframes pStreamB { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(160px); opacity: 0; } }
+    @keyframes pStreamC { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(160px); opacity: 0; } }
+    
+    .ps-1 { animation: pStreamA 0.7s infinite linear; }
+    .ps-2 { animation: pStreamB 0.8s infinite 0.22s linear; }
+    .ps-3 { animation: pStreamC 0.65s infinite 0.44s linear; }
+    .ps-4 { animation: pStreamA 0.75s infinite 0.55s linear; }
+  </style>
+</head>
+<body>
+  <div class="sim-card">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+      <div>
+        <h2 style="color: #0f172a; margin:0; font-size:22px; font-weight:800;">क्रियाकलाप 1.1: मैग्नीशियम रिबन दहन</h2>
+        <p style="margin:3px 0 0 0; color:#64748b; font-size:13.5px; font-weight:500;">क्रमबद्ध यथार्थवादी सिमुलेटर (भौतिक नियमों के अनुसार)</p>
+      </div>
+      <div style="text-align:right;">
+        <span style="font-weight:900; color:#2563eb; font-size:18px; letter-spacing:0.5px;">2Mg + O₂ ➔ 2MgO</span>
+      </div>
+    </div>
+
+    <!-- Step Controls -->
+    <div style="margin-bottom: 12px; display:flex; flex-wrap:wrap; gap:4px; align-items:center;">
+      <button class="sim-btn" id="play_btn" style="background:#059669; font-size:14.5px; padding:10px 20px;" onclick="playAuto()">▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)</button>
+      <button class="sim-btn" id="s1_btn" style="background:#475569;" onclick="goToStep(1)">1. आगमन</button>
+      <button class="sim-btn" id="s2_btn" style="background:#d97706;" onclick="goToStep(2)">2. दहन व चूर्ण गिरना</button>
+      <button class="sim-btn" id="s3_btn" style="background:#2563eb;" onclick="goToStep(3)">3. बर्नर हटना व जल योग</button>
+      <button class="sim-btn" id="s4_btn" style="background:#7c3aed;" onclick="goToStep(4)">4. लिटमस परीक्षण</button>
+      <button class="sim-btn" style="background:#dc2626;" onclick="resetSim()">🔄 रीसेट</button>
+    </div>
+
+    <!-- Progress Timeline Bar -->
+    <div style="width:100%; background:#e2e8f0; height:8px; border-radius:4px; overflow:hidden; margin-bottom:14px;">
+      <div id="pbar" style="height:100%; width:0%; background:linear-gradient(90deg, #3b82f6, #10b981); transition:width 0.6s ease;"></div>
+    </div>
+
+    <!-- SVG Canvas Stage -->
+    <div class="sim-stage" id="main_stage">
+      <svg id="s1_svg" viewBox="0 0 800 340" style="width:100%; height:100%; display:block;">
+        <defs>
+          <linearGradient id="t_top" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#e2e8f0"/>
+          </linearGradient>
+          <linearGradient id="t_front" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#64748b"/>
+          </linearGradient>
+          <linearGradient id="t_dishGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="50%" stop-color="#1d4ed8"/>
+            <stop offset="100%" stop-color="#1e3a8a"/>
+          </linearGradient>
+          <radialGradient id="t_powderGrad" cx="50%" cy="30%" r="65%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="65%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#e2e8f0"/>
+          </radialGradient>
+          <linearGradient id="t_burnerTube" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#818cf8"/>
+            <stop offset="50%" stop-color="#4f46e5"/>
+            <stop offset="100%" stop-color="#3730a3"/>
+          </linearGradient>
+          <linearGradient id="t_ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="30%" stop-color="#e2e8f0"/>
+            <stop offset="70%" stop-color="#cbd5e1"/>
+            <stop offset="100%" stop-color="#94a3b8"/>
+          </linearGradient>
+          <radialGradient id="t_flameOuter" cx="50%" cy="80%" r="65%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="25%" stop-color="#fef08a"/>
+            <stop offset="60%" stop-color="#f97316"/>
+            <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="t_flameInner" cx="50%" cy="85%" r="55%">
+            <stop offset="0%" stop-color="#93c5fd"/>
+            <stop offset="70%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+          </radialGradient>
+
+          <!-- BRILLIANT SUPER-BRIGHT DAZZLE LIGHT GRADIENTS -->
+          <radialGradient id="t_dazzleCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+            <stop offset="40%" stop-color="#ffffff" stop-opacity="1"/>
+            <stop offset="70%" stop-color="#fef08a" stop-opacity="0.95"/>
+            <stop offset="90%" stop-color="#93c5fd" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="t_wideRadiance" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+            <stop offset="30%" stop-color="#fef9c3" stop-opacity="0.5"/>
+            <stop offset="65%" stop-color="#fde047" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="t_blur"><feGaussianBlur stdDeviation="4"/></filter>
+          <filter id="t_superGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="16" result="glow"/>
+            <feMerge>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- 3D PERSPECTIVE LAB TABLE (मेज) -->
+        <polygon points="20,260 100,150 700,150 780,260" fill="url(#t_top)" stroke="#cbd5e1" stroke-width="1.5"/>
+        <polygon points="20,260 780,260 780,266 20,266" fill="#ffffff" opacity="0.8"/>
+        <polygon points="20,266 780,266 780,295 20,295" fill="url(#t_front)"/>
+        <ellipse cx="400" cy="305" rx="370" ry="12" fill="#000000" opacity="0.08" filter="url(#t_blur)"/>
+
+        <!-- BOTTOM: STATIONARY CHINA DISH (मेज पर चाइना डिश प्लेट - ठीक x=350 पर) -->
+        <g id="dish_group">
+          <!-- Support Mat -->
+          <rect x="260" y="248" width="180" height="18" rx="5" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
+          <ellipse cx="350" cy="250" rx="90" ry="8" fill="#475569" opacity="0.5"/>
+
+          <!-- Dish Bowl -->
+          <path d="M 280,240 Q 265,264 350,264 Q 435,240 420,240 Z" fill="url(#t_dishGrad)" stroke="#1e3a8a" stroke-width="2"/>
+          <ellipse cx="350" cy="240" rx="70" ry="15" fill="#1e3a8a" stroke="#1e40af" stroke-width="1.5"/>
+          <ellipse cx="350" cy="240" rx="66" ry="12" fill="#0f172a"/>
+          <ellipse cx="348" cy="238" rx="64" ry="11" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.7"/>
+
+          <!-- SUPER-WHITE POWDER MOUND (शुरू में 0, दहन होने पर बड़ा होकर भरता है) -->
+          <g id="powder_mound" transform="translate(350, 240) scale(0)" style="transition: transform 2.8s cubic-bezier(0.2, 0.8, 0.4, 1), opacity 0.8s;">
+            <ellipse cx="0" cy="2" rx="56" ry="12" fill="#cbd5e1"/>
+            <path d="M -52,0 Q 0,-26 52,0 Q 0,8 -52,0 Z" fill="url(#t_powderGrad)" stroke="#ffffff" stroke-width="1.5"/>
+            <ellipse cx="0" cy="-5" rx="38" ry="7" fill="#ffffff"/>
+            <circle cx="-18" cy="-4" r="1.5" fill="#f8fafc"/>
+            <circle cx="0" cy="-7" r="1.5" fill="#ffffff"/>
+            <circle cx="18" cy="-4" r="1.5" fill="#f8fafc"/>
+          </g>
+
+          <!-- Moist paste spot (water added in Step 3) -->
+          <ellipse id="moist_spot" cx="350" cy="238" rx="36" ry="8" fill="#60a5fa" fill-opacity="0.85" opacity="0" style="transition: opacity 1s ease;"/>
+
+          <!-- Dish Label (Dish ke neeche, NO COLLISION) -->
+          <text x="350" y="285" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">चाइना डिश (China Dish)</text>
+
+          <!-- White Powder Label on Right with leader line (NO COLLISION) -->
+          <g id="powder_label_group" opacity="0" style="transition: opacity 0.8s ease;">
+            <line x1="415" y1="240" x2="475" y2="240" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="415" cy="240" r="2.5" fill="#0f172a"/>
+            <rect x="480" y="226" width="155" height="28" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+            <text x="557" y="244" font-size="12.5" font-weight="900" fill="#0f172a" text-anchor="middle">श्वेत MgO चूर्ण (राख)</text>
+          </g>
+        </g>
+
+        <!-- STEP 1 & 2: HANDHELD BURNER IN AIR (हवा में पकड़ा हुआ आड़ा बर्नर) -->
+        <g id="burner_group" class="smooth-elem" opacity="0" transform="translate(-300, 0)">
+          <!-- Hand Grip held in AIR at (165, 185) -->
+          <ellipse cx="165" cy="185" rx="22" ry="14" fill="#312e81" stroke="#1e1b4b" stroke-width="2"/>
+          <path d="M 150,185 L 165,150 L 190,160 L 180,185 Z" fill="#4338ca"/>
+          <path d="M 150,185 C 115,195 75,190 40,190" fill="none" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+
+          <!-- Angled burner barrel reaching nozzle at (350, 140) -->
+          <path d="M 170,155 L 350,140" stroke="url(#t_burnerTube)" stroke-width="16" stroke-linecap="round"/>
+          <path d="M 170,153 L 350,138" stroke="#818cf8" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+          <ellipse cx="350" cy="140" rx="7.5" ry="3.5" fill="#1e1b4b"/>
+
+          <!-- STRAIGHT VERTICAL FLAME (लौ बिल्कुल सीधी खड़ी ऊपर x=350 पर) -->
+          <g id="burner_flame" class="flame-anim">
+            <path d="M 343,140 C 335,120 345,90 350,75 C 355,90 365,120 357,140 Z" fill="url(#t_flameOuter)"/>
+            <path d="M 346,140 C 342,122 348,98 350,90 C 352,98 358,122 354,140 Z" fill="url(#t_flameInner)"/>
+          </g>
+
+          <!-- Label on left (Placed safely away from center) -->
+          <text x="130" y="132" font-size="13" font-weight="900" fill="#0f172a">हाथ में बर्नर (हवा में) ➔</text>
+        </g>
+
+        <!-- STEP 1 & 2: TONGS & MAGNESIUM RIBBON IN AIR (हवा में चिमटा व रिबन) -->
+        <g id="tongs_group" class="smooth-elem" opacity="0" transform="translate(300, 0)">
+          <circle cx="670" cy="72" r="16" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+          <circle cx="670" cy="72" r="8" fill="#ef4444"/>
+
+          <rect x="560" y="59" width="55" height="10" rx="3" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+          <rect x="560" y="75" width="55" height="10" rx="3" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+
+          <line x1="670" y1="72" x2="615" y2="64" stroke="#3b82f6" stroke-width="5" stroke-linecap="round"/>
+          <line x1="670" y1="72" x2="615" y2="80" stroke="#3b82f6" stroke-width="5" stroke-linecap="round"/>
+          <line x1="560" y1="64" x2="510" y2="70" stroke="#475569" stroke-width="5"/>
+          <line x1="560" y1="80" x2="510" y2="74" stroke="#475569" stroke-width="5"/>
+
+          <!-- MAGNESIUM RIBBON: TIP SITS AT (350, 72) DIRECTLY OVER VERTICAL FLAME -->
+          <rect id="ribbon_body" x="350" y="66" width="160" height="12" rx="2.5" fill="url(#t_ribbonGrad)" stroke="#334155" stroke-width="1.5" style="transition: width 3.0s linear, transform 3.0s linear;"/>
+          <line id="ribbon_shine" x1="350" y1="69" x2="510" y2="69" stroke="#ffffff" stroke-width="2.5"/>
+
+          <!-- Labels on right - Positioned at x=670 to prevent any overlap! -->
+          <text x="670" y="44" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">चिमटा (हवा में)</text>
+          <text x="530" y="104" font-size="13" font-weight="900" fill="#0f172a">मैग्नीशियम रिबन ⯆</text>
+        </g>
+
+        <!-- FALLING POWDER PARTICLES STREAM (लौ से सीधे चाइना डिश में नीचे गिरते हुए) -->
+        <g id="powder_stream" opacity="0" style="transition: opacity 0.3s ease;">
+          <circle class="ps-1" cx="350" cy="80" r="4.5" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+          <circle class="ps-2" cx="347.5" cy="80" r="4" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+          <circle class="ps-3" cx="352.5" cy="80" r="5" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+          <circle class="ps-4" cx="349" cy="80" r="4.2" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+          <circle class="ps-1" cx="351" cy="80" r="4.8" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+        </g>
+        <g id="powder_particles_layer"></g>
+
+        <!-- STEP 2 ONLY: ULTRA-BRIGHT DAZZLING WHITE LIGHT FLARE (लौ पर तीव्र चमकदार प्रकाश) -->
+        <g id="burn_effects" opacity="0" style="transition: opacity 0.3s ease;">
+          <!-- Wide Ambient Radiance Glow (soft, beautiful warm white) -->
+          <circle cx="350" cy="75" r="140" fill="url(#t_wideRadiance)"/>
+
+          <!-- Starburst Rays & Core Flare -->
+          <g class="flare-anim">
+            <!-- 8 Radiant Starburst Rays -->
+            <path d="M 350,5 L 350,145 M 280,75 L 420,75 M 300,25 L 400,125 M 300,125 L 400,25" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.98"/>
+            <path d="M 350,16 L 350,134 M 291,75 L 409,75 M 308,33 L 392,117 M 308,117 L 392,33" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="350" cy="75" r="55" fill="url(#t_dazzleCore)" filter="url(#t_superGlow)" class="core-pulse"/>
+          </g>
+
+          <!-- Centered Glowing Banner at Top - Compact width 330, crisp dark slate, no overlap! -->
+          <rect x="185" y="8" width="330" height="34" rx="6" fill="#0f172a" fill-opacity="0.94" stroke="#fef08a" stroke-width="2"/>
+          <text x="350" y="30" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">★ तीव्र चमकदार श्वेत प्रकाश (Dazzling Light) ★</text>
+        </g>
+
+        <!-- STEP 3 ONLY: 3D WATER DROPPER (ENTERS AFTER BURNER/TONGS EXIT) -->
+        <g id="dropper_group" class="smooth-elem" opacity="0" transform="translate(350, -90)">
+          <path d="M 0,0 C -11,6 -11,26 0,34 C 11,26 11,6 0,0 Z" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+          <rect x="-5" y="34" width="10" height="52" fill="#e2e8f0" fill-opacity="0.75" stroke="#64748b" stroke-width="1.5"/>
+          <rect x="-3.5" y="44" width="7" height="40" fill="#3b82f6" fill-opacity="0.85"/>
+          <path d="M -5,86 L -1.5,102 L 1.5,102 L 5,86 Z" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+          <text x="20" y="62" font-size="13" font-weight="900" fill="#0369a1">जल ड्रॉपर</text>
+        </g>
+        <ellipse id="falling_drop" cx="350" cy="155" rx="4.5" ry="7" fill="#2563eb" opacity="0" style="transition: transform 0.75s ease-in, opacity 0.25s;"/>
+
+        <!-- STEP 4 ONLY: 3D RED LITMUS STRIP (ENTERS ONLY IN STEP 4) -->
+        <g id="litmus_group" class="smooth-elem" opacity="0" transform="translate(350, -90)">
+          <path d="M 0,-25 L -12,-48 M 0,-25 L 12,-48" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="0" cy="-25" r="3.5" fill="#0f172a"/>
+          <!-- Red Upper portion -->
+          <rect x="-10" y="-20" width="20" height="70" rx="2" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+          <text x="22" y="15" font-size="13" font-weight="900" fill="#b91c1c">लाल लिटमस पट्टी</text>
+
+          <!-- Dipping Tip (Turns deep Royal Blue) -->
+          <rect id="litmus_tip" x="-10" y="50" width="20" height="32" rx="1.5" fill="#ef4444" stroke="#991b1b" stroke-width="1.5" style="transition: fill 1.2s ease;"/>
+          <line x1="-10" y1="50" x2="10" y2="50" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+        </g>
+
+        <!-- STEP 4 ONLY: RESULT BADGE (TOP BANNER - ONLY IN STEP 4) -->
+        <g id="result_stamp" opacity="0" style="transition: opacity 0.8s ease;">
+          <rect x="130" y="8" width="540" height="36" rx="8" fill="#0f172a" fill-opacity="0.95" stroke="#38bdf8" stroke-width="2"/>
+          <text x="400" y="31" font-size="13.5" font-weight="900" fill="#38bdf8" text-anchor="middle">
+            ✓ 2Mg + O₂ → 2MgO (श्वेत चूर्ण) | MgO + H₂O → Mg(OH)₂ (क्षारक: लाल लिटमस ➔ नीला)
+          </text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Status Description Card -->
+    <div id="status_box" style="margin-top:14px; padding:14px 18px; background:#f8fafc; border-left:5px solid #2563eb; border-radius:8px; font-weight:700; color:#0f172a; font-size:15px; min-height:48px; display:flex; align-items:center;">
+      प्रारंभिक स्थिति: मेज पर खाली चाइना डिश रखी है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
+    </div>
+  </div>
+
+  <script>
+    var autoTimers = [];
+    var particleInterval = null;
+    var particleAnimId = null;
+    var activeParticles = [];
+
+    function clearTimers() {
+      autoTimers.forEach(function(t) { clearTimeout(t); });
+      autoTimers = [];
+      stopParticleFall();
+    }
+
+    function setSvg(id, transformStr, opacity) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (transformStr !== null) el.setAttribute('transform', transformStr);
+      if (opacity !== undefined) el.setAttribute('opacity', opacity);
+    }
+
+    // REALTIME GRAVITY PARTICLE STREAM (सीधे लौ से चाइना डिश में गिरते हुए कण)
+    function startParticleFall() {
+      stopParticleFall();
+      var stream = document.getElementById('powder_stream');
+      if (stream) stream.setAttribute('opacity', '1');
+
+      var container = document.getElementById('powder_particles_layer');
+      if (!container) return;
+      container.innerHTML = '';
+      activeParticles = [];
+
+      // Spawn a new crisp white ash particle every 50ms
+      particleInterval = setInterval(function() {
+        if (activeParticles.length > 35) return;
+        var p = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        var x = 350 + (Math.random() * 4 - 2);
+        var y = 78;
+        var r = 3.5 + Math.random() * 2;
+        p.setAttribute('cx', x);
+        p.setAttribute('cy', y);
+        p.setAttribute('r', r);
+        p.setAttribute('fill', '#ffffff');
+        p.setAttribute('stroke', '#334155');
+        p.setAttribute('stroke-width', '1');
+        p.setAttribute('opacity', '1');
+        container.appendChild(p);
+
+        activeParticles.push({
+          el: p,
+          x: x,
+          y: y,
+          vy: 2.8 + Math.random() * 1.5,
+          life: 1.0
+        });
+      }, 50);
+
+      // Animate active particles with gravity
+      function updatePhysics() {
+        for (var i = activeParticles.length - 1; i >= 0; i--) {
+          var pt = activeParticles[i];
+          pt.y += pt.vy;
+          pt.vy += 0.25; // True gravity acceleration straight down
+          pt.el.setAttribute('cy', pt.y);
+
+          // Landing into China dish at y = 238
+          if (pt.y >= 238) {
+            pt.life -= 0.18;
+            pt.el.setAttribute('opacity', Math.max(0, pt.life));
+            if (pt.life <= 0) {
+              if (pt.el.parentNode) pt.el.parentNode.removeChild(pt.el);
+              activeParticles.splice(i, 1);
+            }
+          }
+        }
+        particleAnimId = requestAnimationFrame(updatePhysics);
+      }
+      particleAnimId = requestAnimationFrame(updatePhysics);
+    }
+
+    function stopParticleFall() {
+      if (particleInterval) { clearInterval(particleInterval); particleInterval = null; }
+      if (particleAnimId) { cancelAnimationFrame(particleAnimId); particleAnimId = null; }
+      var stream = document.getElementById('powder_stream');
+      if (stream) stream.setAttribute('opacity', '0');
+      var container = document.getElementById('powder_particles_layer');
+      if (container) container.innerHTML = '';
+      activeParticles = [];
+    }
+
+    function resetSim() {
+      clearTimers();
+      document.getElementById('play_btn').disabled = false;
+      document.getElementById('pbar').style.width = '0%';
+
+      // 1. Burner & Tongs off-screen
+      setSvg('burner_group', 'translate(-300, 0)', 0);
+      setSvg('tongs_group', 'translate(300, 0)', 0);
+
+      // 2. Ribbons reset to full length
+      var rib = document.getElementById('ribbon_body');
+      if (rib) {
+        rib.style.width = '160px';
+        rib.style.transform = 'none';
+      }
+      var shine = document.getElementById('ribbon_shine');
+      if (shine) {
+        shine.setAttribute('x1', '350');
+        shine.setAttribute('x2', '510');
+      }
+
+      // 3. Flame effects OFF
+      setSvg('burn_effects', null, 0);
+      stopParticleFall();
+
+      // 4. Dish powder mound reset to zero
+      setSvg('powder_mound', 'translate(350, 240) scale(0)', 0);
+      setSvg('powder_label_group', null, 0);
+      document.getElementById('moist_spot').setAttribute('opacity', '0');
+
+      // 5. Dropper offscreen
+      setSvg('dropper_group', 'translate(350, -90)', 0);
+      var fd = document.getElementById('falling_drop');
+      if (fd) {
+        fd.setAttribute('opacity', '0');
+        fd.style.transform = 'translateY(0)';
+      }
+
+      // 6. Litmus offscreen & red
+      setSvg('litmus_group', 'translate(350, -90)', 0);
+      var tip = document.getElementById('litmus_tip');
+      if (tip) tip.setAttribute('fill', '#ef4444');
+
+      // 7. Result stamp OFF
+      setSvg('result_stamp', null, 0);
+
+      document.getElementById('status_box').innerHTML = 'प्रारंभिक स्थिति: मेज पर खाली चाइना डिश रखी है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+    }
+
+    // STRICT DISCRETE ONE-BY-ONE STATE MACHINE
+    function goToStep(s) {
+      var st = document.getElementById('status_box');
+      var pbar = document.getElementById('pbar');
+
+      if (s === 1) {
+        // Step 1: Only Burner & Tongs in air, Dish is empty, NO other elements!
+        pbar.style.width = '25%';
+        stopParticleFall();
+
+        // Hide later items strictly
+        setSvg('burn_effects', null, 0);
+        setSvg('dropper_group', 'translate(350, -90)', 0);
+        setSvg('litmus_group', 'translate(350, -90)', 0);
+        setSvg('result_stamp', null, 0);
+        setSvg('powder_mound', 'translate(350, 240) scale(0)', 0);
+        setSvg('powder_label_group', null, 0);
+        document.getElementById('moist_spot').setAttribute('opacity', '0');
+
+        // Reset ribbon
+        var rib = document.getElementById('ribbon_body');
+        if (rib) { rib.style.width = '160px'; rib.style.transform = 'none'; }
+
+        // Bring in burner and tongs
+        setSvg('burner_group', 'translate(0, 0)', 1);
+        setSvg('tongs_group', 'translate(0, 0)', 1);
+
+        st.innerHTML = '<strong>चरण 1 (आगमन):</strong> बायीं ओर से हाथ में आड़ा बर्नर (हवा में, सीधी खड़ी लौ) तथा दायीं ओर से चिमटे में मैग्नीशियम रिबन ठीक लौ के ऊपर स्थित हुआ।';
+      } else if (s === 2) {
+        // Step 2: Combustion, Blinding Bright Light, Straight Particle Fall into dish!
+        pbar.style.width = '50%';
+        // Ensure burner & tongs present
+        setSvg('burner_group', 'translate(0, 0)', 1);
+        setSvg('tongs_group', 'translate(0, 0)', 1);
+
+        // Turn ON blinding light flare
+        setSvg('burn_effects', null, 1);
+
+        // Start continuous straight gravity particle stream from flame (350, 78) down to dish (350, 238)
+        startParticleFall();
+
+        // Ribbon burns and shortens towards tongs
+        var rib = document.getElementById('ribbon_body');
+        if (rib) {
+          rib.style.transform = 'translateX(45px)';
+          rib.style.width = '115px';
+        }
+        var shine = document.getElementById('ribbon_shine');
+        if (shine) {
+          shine.setAttribute('x1', '395');
+          shine.setAttribute('x2', '510');
+        }
+
+        // Dish fills up with white MgO powder mound
+        setSvg('powder_mound', 'translate(350, 240) scale(1.0)', 1);
+        setSvg('powder_label_group', null, 1);
+
+        // Hide dropper & litmus
+        setSvg('dropper_group', 'translate(350, -90)', 0);
+        setSvg('litmus_group', 'translate(350, -90)', 0);
+        setSvg('result_stamp', null, 0);
+
+        st.innerHTML = '<strong>चरण 2 (दहन व चूर्ण गिरना):</strong> अत्यधिक तीव्र चमकदार श्वेत प्रकाश (Dazzling Light)! लौ से सीधे नीचे गुरुत्वाकर्षण द्वारा श्वेत MgO चूर्ण चाइना डिश में गिरकर संचित हो गया!';
+      } else if (s === 3) {
+        // Step 3: Burning stops, blinding light OFF, particles OFF.
+        // Burner and Tongs EXIT completely!
+        // THEN Dropper enters, drops water into dish, moistens paste, and exits!
+        pbar.style.width = '75%';
+        stopParticleFall();
+        setSvg('burn_effects', null, 0);
+
+        // Burner and Tongs EXIT completely
+        setSvg('burner_group', 'translate(-300, 0)', 0);
+        setSvg('tongs_group', 'translate(300, 0)', 0);
+
+        // Powder mound is full
+        setSvg('powder_mound', 'translate(350, 240) scale(1.0)', 1);
+        setSvg('powder_label_group', null, 1);
+
+        // Hide litmus & result stamp
+        setSvg('litmus_group', 'translate(350, -90)', 0);
+        setSvg('result_stamp', null, 0);
+
+        st.innerHTML = '<strong>चरण 3 (जल योग):</strong> दहन पूर्ण होने पर बर्नर व चिमटा हट गए! ड्रॉपर से चाइना डिश के श्वेत चूर्ण पर जल की बूंदें डाली गईं जिससे नम Mg(OH)₂ पेस्ट बना।';
+
+        // Dropper enters smoothly
+        setTimeout(function() {
+          setSvg('dropper_group', 'translate(350, 40)', 1);
+
+          // Droplet falls after dropper descends
+          setTimeout(function() {
+            var fd = document.getElementById('falling_drop');
+            if (fd) {
+              fd.setAttribute('opacity', '1');
+              fd.style.transform = 'translateY(95px)';
+            }
+            // Droplet lands in dish
+            setTimeout(function() {
+              if (fd) fd.setAttribute('opacity', '0');
+              document.getElementById('moist_spot').setAttribute('opacity', '0.85');
+
+              // Dropper exits
+              setTimeout(function() {
+                setSvg('dropper_group', 'translate(350, -90)', 0);
+              }, 600);
+            }, 750);
+          }, 700);
+        }, 600);
+      } else if (s === 4) {
+        // Step 4: Red Litmus strip descends, dips into moist paste, submerged tip turns deep Royal Blue!
+        pbar.style.width = '100%';
+        stopParticleFall();
+        setSvg('burn_effects', null, 0);
+
+        // Burner and Tongs MUST be gone
+        setSvg('burner_group', 'translate(-300, 0)', 0);
+        setSvg('tongs_group', 'translate(300, 0)', 0);
+
+        // Dropper MUST be gone
+        setSvg('dropper_group', 'translate(350, -90)', 0);
+
+        // Powder mound and moist spot present
+        setSvg('powder_mound', 'translate(350, 240) scale(1.0)', 1);
+        setSvg('powder_label_group', null, 1);
+        document.getElementById('moist_spot').setAttribute('opacity', '0.85');
+
+        st.innerHTML = '<strong>चरण 4 (लिटमस परीक्षण):</strong> लाल लिटमस पट्टी को श्वेत चूर्ण पेस्ट में डुबोया गया। Mg(OH)₂ की क्षारकीय प्रकृति के कारण डूबा हुआ सिरा गहरा नीला हो गया! (लाल ➔ नीला)';
+
+        // Litmus descends into dish
+        setSvg('litmus_group', 'translate(350, 150)', 1);
+
+        // Tip turns blue
+        setTimeout(function() {
+          var tip = document.getElementById('litmus_tip');
+          if (tip) tip.setAttribute('fill', '#1d4ed8');
+
+          // Lift slightly to clearly display the blue tip
+          setTimeout(function() {
+            setSvg('litmus_group', 'translate(350, 128)', 1);
+            setSvg('result_stamp', null, 1);
+          }, 800);
+        }, 1100);
+      }
+    }
+
+    function playAuto() {
+      resetSim();
+      document.getElementById('play_btn').disabled = true;
+
+      // Clean sequential timeline: one by one
+      // 0.2s: Step 1 (Burner & ribbon enter)
+      autoTimers.push(setTimeout(function() { goToStep(1); }, 200));
+
+      // 3.2s: Step 2 (Combustion, blinding bright light, straight particle fall, dish fills)
+      autoTimers.push(setTimeout(function() { goToStep(2); }, 3200));
+
+      // 7.8s: Step 3 (Burner/tongs exit, dropper comes, drops water, moistens, dropper exits)
+      autoTimers.push(setTimeout(function() { goToStep(3); }, 7800));
+
+      // 12.5s: Step 4 (Litmus strip descends, dips, turns blue, lifts, result badge)
+      autoTimers.push(setTimeout(function() {
+        goToStep(4);
+        document.getElementById('play_btn').disabled = false;
+      }, 12500));
+    }
+
+    window.addEventListener('DOMContentLoaded', resetSim);
+  </script>
+</body>
+</html>
