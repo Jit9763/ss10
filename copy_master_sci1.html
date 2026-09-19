@@ -7,8 +7,6 @@
   
   <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,54 +16,211 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    :root {
-      --primary: #1e3a8a;
-      --primary-dark: #1e40af;
-      --secondary: #059669;
-      --accent: #d97706;
-      --danger: #dc2626;
-      --bg-main: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #334155;
-      --border-color: #cbd5e1;
-      --sim-stroke: 2.5px;
+
+    /* =========================================================================
+       CLASS 10 SOCIAL SCIENCE MASTER PROJECTOR DESIGN SYSTEM (MATCHING CIV/GEO)
+       ========================================================================= */
+    body, p, li, td, th {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span {
+      font-weight: 900 !important;
+      -webkit-text-stroke: 1.1px #000000;
+      text-shadow: 0 0 1px #000;
     }
 
-    body {
-      background-color: #f1f5f9;
-      color: var(--text-main);
+    /* Outer layout container */
+    .doc-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
       font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
-      line-height: 1.85;
-      font-size: 19px;
-      font-weight: 700;
-      padding: 0;
-      margin: 0;
     }
 
-    /* Projector Top Toolbar matching 1400px container exactly */
-    
-    /* === CLASS 10 SOCIAL SCIENCE PROJECTOR DESIGN SYSTEM === */
-    body {
-      background-color: #f1f5f9;
-      color: #0f172a;
-      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
-      line-height: 1.9;
-      font-size: 20px;
-      font-weight: 800;
-      padding: 0;
-      margin: 0;
+    /* Chapter Title / Hero Matching SS10 Master */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px !important;
+      margin-bottom: 50px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.5) !important;
     }
 
-    /* Fixed Projector Toolbar - Exactly 1400px Matching Container */
-    .top-toolbar {
+    .chapter-tag {
+      display: inline-block !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+      font-size: 22pt !important;
+      font-weight: 900 !important;
+      padding: 6px 20px !important;
+      border-radius: 20px !important;
+      margin-bottom: 15px !important;
+      border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .chapter-title {
+      font-size: 48pt !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .chapter-subtitle {
+      color: #93c5fd !important;
+      font-size: 28pt !important;
+      font-weight: 800 !important;
+      display: block;
+      margin-top: 15px;
+      line-height: 1.5 !important;
+    }
+
+    /* Part / Section Headers Matching SS10 Master */
+    .section-heading, h2.section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 24px 30px !important;
+      border-radius: 16px !important;
+      font-size: 40pt !important;
+      font-weight: 900 !important;
+      margin-top: 55px !important;
+      margin-bottom: 35px !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
+      line-height: 1.4 !important;
+    }
+
+    /* Sub-Headers Matching SS10 Master */
+    .sub-header-red, h3.subsection-heading {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 18px 26px !important;
+      border-radius: 14px !important;
+      font-size: 32pt !important;
+      font-weight: 900 !important;
+      margin-top: 35px !important;
+      margin-bottom: 22px !important;
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.15) !important;
+      line-height: 1.4 !important;
+    }
+
+    .topic-header {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 34pt !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 30px !important;
+    }
+
+    /* Concept & Fact Boxes */
+    .concept-box, .fact-box, .warn-box, .reaction-box {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      padding: 26px 32px !important;
+      border-radius: 18px !important;
+      margin: 30px 0 !important;
+    }
+
+    /* Bolds in notes matching SS10 red badge style */
+    .concept-box b, .concept-card b, .warn-box b, .fact-box b, .point-tag-red, p b, li b, .reaction-box b, strong {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 2px solid #fca5a5 !important;
+      padding: 4px 12px !important;
+      border-radius: 10px !important;
+      display: inline-block !important;
+      margin-right: 6px !important;
+      margin-top: 3px !important;
+      margin-bottom: 3px !important;
+      font-size: 26pt !important;
+    }
+
+    /* Tables */
+    table, .data-table {
+      font-size: 24pt !important;
+      line-height: 1.8 !important;
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin: 30px 0 !important;
+    }
+    th {
+      background: #1e3a8a !important;
+      color: #ffffff !important;
+      font-size: 26pt !important;
+      padding: 16px !important;
+    }
+    td {
+      font-size: 24pt !important;
+      padding: 14px !important;
+      border: 2px solid #cbd5e1 !important;
+    }
+
+    /* =========================================================================
+       SAFETY SHIELD: SIMULATORS, SVGs, AND TOOLBAR EXCLUSIONS
+       ========================================================================= */
+    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn, .sim-btn, .sim-btn-step, select, option {
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+    }
+
+    .sim-card {
+      font-size: 18px !important;
+      line-height: 1.5 !important;
+      margin: 45px 0 !important;
+      border: 4px solid #3b82f6 !important;
+      box-shadow: 0 12px 30px rgba(30, 58, 138, 0.15) !important;
+    }
+
+    .sim-card p, .sim-card li {
+      font-size: 18px !important;
+      line-height: 1.6 !important;
+      font-weight: 700 !important;
+      -webkit-text-stroke: 0px !important;
+    }
+
+    .sim-card h3, .sim-card .sim-title, .sim-card .sim-title span {
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 0px !important;
+    }
+
+    .sim-card b, .sim-card strong {
+      font-size: 18px !important;
+      -webkit-text-stroke: 0px !important;
+      padding: 2px 8px !important;
+      background: #e0f2fe !important;
+      border-color: #7dd3fc !important;
+      color: #0369a1 !important;
+    }
+
+    .sim-card .sim-btn, .sim-card .sim-btn-step {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      letter-spacing: normal !important;
+    }
+
+    .top-toolbar, .top-toolbar * {
+      font-size: 15px !important;
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+      line-height: normal !important;
+    }
+
+.top-toolbar {
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -1320,7 +1475,7 @@
         <li><strong>दूध से दही का बनना:</strong> लैक्टोबैसिलस जीवाणुओं द्वारा किण्वन से नया पदार्थ लैक्टिक अम्ल बनता है (अपरिवर्तनीय)।</li>
         <li><strong>लोहे की वस्तुओं पर जंग लगना:</strong> आद्र वायुमंडल में खुला छोड़ने पर लोहे पर भूरी परत (जलयोजित आयरन ऑक्साइड) का निक्षेपण।</li>
         <li><strong>भोजन का पकाया जाना एवं पाचन:</strong> जटिल कार्बनिक अणुओं का सरल अणुओं में टूटना व ऊर्जा विमुक्त होना।</li>
-        <li><strong>हमारा श्वसन (Respiration):</strong> कोशिकाओं में ग्लूकोज का ऑक्सीजन से क्रिया करके \(CO_2\), जल व ऊर्जा उत्पन्न करना।</li>
+        <li><strong>हमारा श्वसन (Respiration):</strong> कोशिकाओं में ग्लूकोज का ऑक्सीजन से क्रिया करके CO₂, जल व ऊर्जा उत्पन्न करना।</li>
         <li><strong>अंगूर का किण्वन (Fermentation):</strong> शर्करा का ऐल्कोहॉल व कार्बन डाइऑक्साइड में रूपांतरण।</li>
       </ul>
     </div>
@@ -1338,7 +1493,7 @@
     </div>
     <div class="concept-box">
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        रासायनिक अभिक्रिया के फलस्वरूप अभिकारकों की भौतिक अवस्था (ठोस, द्रव या गैस) उत्पाद बनते समय बदल सकती है। उदाहरणार्थ, ठोस मैग्नीशियम फीते को वायु में जलाने पर श्वेत चूर्ण मैग्नीशियम ऑक्साइड (\(MgO\)) प्राप्त होता है।
+        रासायनिक अभिक्रिया के फलस्वरूप अभिकारकों की भौतिक अवस्था (ठोस, द्रव या गैस) उत्पाद बनते समय बदल सकती है। उदाहरणार्थ, ठोस मैग्नीशियम फीते को वायु में जलाने पर श्वेत चूर्ण मैग्नीशियम ऑक्साइड (MgO) प्राप्त होता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2Mg(s) <span style="font-size:15px; color:#475569; font-weight:700;">[चमकदार फीता]</span> + O₂(g) <span style="font-size:15px; color:#475569; font-weight:700;">[ऑक्सीजन]</span> ➔ 2MgO(s) <span style="font-size:15px; color:#15803d; font-weight:800;">[श्वेत भस्म/चूर्ण]</span></span>
@@ -1604,7 +1759,7 @@
     </div>
     <div class="concept-box">
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        अभिक्रिया के पश्चात रंग में स्पष्ट बदलाव आ जाता है अथवा एक अविलेय ठोस पदार्थ बनता है जो विलयन में से पृथक हो जाता है, जिसे <strong>अवक्षेप (Precipitate)</strong> कहते हैं। उदाहरणार्थ, रंगहीन लेड नाइट्रेट विलयन में रंगहीन पोटैशियम आयोडाइड विलयन मिलाने पर तुरंत <strong>चटक पीले रंग का लेड आयोडाइड (\(PbI_2\))</strong> अवक्षेप निर्मित होता है।
+        अभिक्रिया के पश्चात रंग में स्पष्ट बदलाव आ जाता है अथवा एक अविलेय ठोस पदार्थ बनता है जो विलयन में से पृथक हो जाता है, जिसे <strong>अवक्षेप (Precipitate)</strong> कहते हैं। उदाहरणार्थ, रंगहीन लेड नाइट्रेट विलयन में रंगहीन पोटैशियम आयोडाइड विलयन मिलाने पर तुरंत <strong>चटक पीले रंग का लेड आयोडाइड (PbI₂)</strong> अवक्षेप निर्मित होता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">Pb(NO₃)₂(aq) <span style="font-size:15px; color:#475569; font-weight:700;">[रंगहीन]</span> + 2KI(aq) <span style="font-size:15px; color:#475569; font-weight:700;">[रंगहीन]</span> ➔ PbI₂(s)↓ <span style="font-size:15px; color:#b45309; font-weight:900;">[चटक पीला अवक्षेप]</span> + 2KNO₃(aq)</span>
@@ -1861,7 +2016,7 @@
     </div>
     <div class="concept-box">
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        अनेक रासायनिक अभिक्रियाओं में कोई गैसीय उत्पाद तीव्र बुदबुदाहट (Effervescence) के साथ निकलता है। उदाहरणार्थ, शंक्वाकार फ्लास्क में दानेदार जस्ते (Zinc Granules) पर तनु सल्फ्यूरिक अम्ल या तनु हाइड्रोक्लोरिक अम्ल डालने पर <strong>हाइड्रोजन गैस (\(H_2\))</strong> के बुलबुले तेजी से निकलते हैं।
+        अनेक रासायनिक अभिक्रियाओं में कोई गैसीय उत्पाद तीव्र बुदबुदाहट (Effervescence) के साथ निकलता है। उदाहरणार्थ, शंक्वाकार फ्लास्क में दानेदार जस्ते (Zinc Granules) पर तनु सल्फ्यूरिक अम्ल या तनु हाइड्रोक्लोरिक अम्ल डालने पर <strong>हाइड्रोजन गैस (H₂)</strong> के बुलबुले तेजी से निकलते हैं।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">Zn(s) <span style="font-size:15px; color:#475569; font-weight:700;">[दानेदार जस्ता]</span> + H₂SO₄(aq) <span style="font-size:15px; color:#475569; font-weight:700;">[तनु अम्ल]</span> ➔ ZnSO₄(aq) + H₂(g)↑ <span style="font-size:15px; color:#2563eb; font-weight:900;">[हाइड्रोजन गैस (पॉप ध्वनि)]</span></span>
@@ -2052,7 +2207,7 @@
 
             <!-- Flask Label Badge -->
             <rect x="110" y="430" width="200" height="30" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-            <text x="210" y="450" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">दानेदार जस्ता (Zn) + तनु H₂SO₄</text>
+            <text x="210" y="450" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">दानेदार जस्ता Zn + तनु H₂SO₄</text>
           </g>
 
           <!-- ================= 2. SOAP SOLUTION TROUGH (CENTER X: 540, BASE Y: 410) ================= -->
@@ -2189,7 +2344,7 @@
         अभिक्रिया के दौरान ऊष्मा मुक्त हो सकती है (तापमान में वृद्धि — <strong>ऊष्माक्षेपी / Exothermic</strong>) अथवा ऊष्मा अवशोषित हो सकती है (तापमान में कमी — <strong>ऊष्माशोषी / Endothermic</strong>)।
       </p>
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        उदाहरणार्थ, एक बीकर में बिना बुझा चूना (कली चूना, \(CaO\)) लेकर उसमें धीरे-धीरे जल मिलाने पर सनसनाहट के साथ खौलता बुझा हुआ चूना बनता है और प्रचुर ऊष्मा विमुक्त होने से बीकर को छूने पर वह अत्यधिक गर्म महसूस होता है।
+        उदाहरणार्थ, एक बीकर में बिना बुझा चूना (कली चूना, CaO) लेकर उसमें धीरे-धीरे जल मिलाने पर सनसनाहट के साथ खौलता बुझा हुआ चूना बनता है और प्रचुर ऊष्मा विमुक्त होने से बीकर को छूने पर वह अत्यधिक गर्म महसूस होता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">CaO(s) <span style="font-size:15px; color:#475569; font-weight:700;">[बिना बुझा चूना]</span> + H₂O(l) <span style="font-size:15px; color:#475569; font-weight:700;">[जल]</span> ➔ Ca(OH)₂(aq) <span style="font-size:15px; color:#15803d; font-weight:800;">[बुझा हुआ चूना]</span> + <span style="color:#ea580c;">ऊष्मा (Heat)</span></span>
@@ -2236,7 +2391,7 @@
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-temperature-arrow-up" style="color: #ea580c;"></i>
-          <span>क्रियाकलाप 1.4: बिना बुझा चूना (CaO) + जल — 16:9 प्रोजेक्टर स्क्रीन ऊष्माक्षेपी संयोजन, खौलती भाप व तापमापी</span>
+          <span>क्रियाकलाप 1.4: बिना बुझा चूना CaO + जल — 16:9 प्रोजेक्टर स्क्रीन ऊष्माक्षेपी संयोजन, खौलती भाप व तापमापी</span>
         </div>
         <span class="sim-badge" style="background:#ffedd5; color:#c2410c; border:2px solid #fed7aa; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔥</span>
       </div>
@@ -2249,7 +2404,7 @@
           <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
         </button>
         <button class="sim-btn secondary" id="sim4_btn1" onclick="sim4Step(1)">
-          1. बीकर में बिना बुझा चूना (CaO)
+          1. बीकर में बिना बुझा चूना CaO
         </button>
         <button class="sim-btn warning" id="sim4_btn2" onclick="sim4Step(2)">
           2. जल का योग व खौलता बुझा हुआ चूना
@@ -2581,7 +2736,7 @@
       </div>
 
       <div id="sim4_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #ea580c; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
-        <strong>प्रारंभिक स्थिति:</strong> बीकर में बिना बुझा चूना (CaO) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
+        <strong>प्रारंभिक स्थिति:</strong> बीकर में बिना बुझा चूना CaO तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
 
@@ -2599,13 +2754,13 @@
       </div>
       <ul style="padding-left:22px; line-height:1.85; font-size:18px; color:#0f172a;">
         <li><strong>1. शब्द समीकरण (Word Equation):</strong> रासायनिक अभिक्रिया को शब्दों में लिखना।<br>
-          <em>जैसे:</em> मैग्नीशियम + ऑक्सीजन \(\longrightarrow\) मैग्नीशियम ऑक्साइड
+          <em>जैसे:</em> मैग्नीशियम + ऑक्सीजन ➔ मैग्नीशियम ऑक्साइड
         </li>
         <li><strong>2. ढांचा या कंकाली समीकरण (Skeletal Equation):</strong> रासायनिक सूत्रों का उपयोग करके लिखा गया असंतुलित समीकरण जिसमें दोनों पक्षों के परमाणुओं की संख्या समान नहीं होती।<br>
-          <em>जैसे:</em> \(Mg + O_2 \longrightarrow MgO\) (असंतुलित)
+          <em>जैसे:</em> Mg + O₂ ➔ MgO (असंतुलित)
         </li>
         <li><strong>3. संतुलित रासायनिक समीकरण (Balanced Chemical Equation):</strong> वह समीकरण जिसमें तीर के दोनों ओर (अभिकारकों व उत्पादों में) प्रत्येक तत्व के परमाणुओं की संख्या पूर्णतः बराबर होती है।<br>
-          <em>जैसे:</em> \(2Mg + O_2 \longrightarrow 2MgO\) (संतुलित)
+          <em>जैसे:</em> 2Mg + O₂ ➔ 2MgO (संतुलित)
         </li>
       </ul>
     </div>
@@ -2626,19 +2781,19 @@
       <i class="fas fa-list-check"></i> रासायनिक समीकरण को संतुलित करने की चरणबद्ध विधि (हिट-एंड-ट्रायल विधि)
     </div>
     <div class="concept-box" style="line-height:1.9; font-size:18px;">
-      <p><strong>NCERT पाठ्यपुस्तक का मुख्य उदाहरण:</strong> लोहे की जलवाष्प (भाप) से क्रिया: \(Fe + H_2O \longrightarrow Fe_3O_4 + H_2\)</p>
+      <p><strong>NCERT पाठ्यपुस्तक का मुख्य उदाहरण:</strong> लोहे की जलवाष्प (भाप) से क्रिया: Fe + H₂O ➔ Fe₃O₄ + H₂</p>
       <ol style="padding-left:24px; margin-top:8px;">
         <li><strong>चरण 1:</strong> प्रत्येक सूत्र के चारों ओर बॉक्स बनाएं और संतुलन के दौरान बॉक्स के अंदर कोई परिवर्तन न करें।</li>
         <li><strong>चरण 2:</strong> असंतुलित समीकरण में उपस्थित विभिन्न तत्वों के परमाणुओं की सूची (बायां पक्ष vs दायां पक्ष) बनाएं।</li>
-        <li><strong>चरण 3:</strong> सबसे अधिक परमाणुओं वाले यौगिक को पहले चुनें (चाहे वह अभिकारक हो या उत्पाद)। यहाँ \(Fe_3O_4\) में ऑक्सीजन के 4 परमाणु हैं, अतः दाएँ 4 करने के लिए बाएँ \(H_2O\) के आगे गुणांक 4 लगाएं: \(Fe + 4H_2O \longrightarrow Fe_3O_4 + H_2\)।</li>
-        <li><strong>चरण 4:</strong> अब हाइड्रोजन को संतुलित करें: बाएँ \(4 \times 2 = 8\) H परमाणु हैं, अतः दाएँ \(H_2\) के आगे 4 लगाएं: \(Fe + 4H_2O \longrightarrow Fe_3O_4 + 4H_2\)।</li>
-        <li><strong>चरण 5:</strong> अब तीसरे तत्व (लोहा - \(Fe\)) को संतुलित करें: दाएँ 3 Fe हैं, अतः बाएँ 3 लगाएं: \(3Fe + 4H_2O \longrightarrow Fe_3O_4 + 4H_2\)।</li>
+        <li><strong>चरण 3:</strong> सबसे अधिक परमाणुओं वाले यौगिक को पहले चुनें (चाहे वह अभिकारक हो या उत्पाद)। यहाँ Fe₃O₄ में ऑक्सीजन के 4 परमाणु हैं, अतः दाएँ 4 करने के लिए बाएँ H₂O के आगे गुणांक 4 लगाएं: Fe + 4H₂O ➔ Fe₃O₄ + H₂।</li>
+        <li><strong>चरण 4:</strong> अब हाइड्रोजन को संतुलित करें: बाएँ 4 × 2 = 8 H परमाणु हैं, अतः दाएँ H₂ के आगे 4 लगाएं: Fe + 4H₂O ➔ Fe₃O₄ + 4H₂।</li>
+        <li><strong>चरण 5:</strong> अब तीसरे तत्व (लोहा - Fe) को संतुलित करें: दाएँ 3 Fe हैं, अतः बाएँ 3 लगाएं: 3Fe + 4H₂O ➔ Fe₃O₄ + 4H₂।</li>
         <li><strong>चरण 6:</strong> अंत में, दोनों ओर के परमाणुओं की संख्या की पुनः जांच करें (Fe: 3=3, H: 8=8, O: 4=4)।</li>
         <li><strong>चरण 7 (भौतिक अवस्थाओं के संकेत लिखना):</strong>
           <div style="background:#f1f5f9; padding:8px 14px; border-radius:8px; margin-top:6px; font-weight:800;">
-            \(3Fe(s) + 4H_2O(g) \longrightarrow Fe_3O_4(s) + 4H_2(g)\)
+            3Fe(s) + 4H₂O(g) ➔ Fe₃O₄(s) + 4H₂(g)
           </div>
-          <em>नोट:</em> यहाँ \(H_2O\) के साथ \((g)\) चिह्न दर्शाता है कि जल का उपयोग भाप (वाष्प) के रूप में किया गया है।
+          <em>नोट:</em> यहाँ H₂O के साथ (g) चिह्न दर्शाता है कि जल का उपयोग भाप (वाष्प) के रूप में किया गया है।
         </li>
       </ol>
     </div>
@@ -2858,13 +3013,13 @@
         ऐसी रासायनिक अभिक्रिया जिसमें <strong>दो या दो से अधिक अभिकारक मिलकर एकल उत्पाद (Single Product)</strong> का निर्माण करते हैं, उसे <strong>संयोजन अभिक्रिया</strong> कहते हैं।
       </p>
       <div style="background:#ffffff; border:2px solid #93c5fd; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
-        सामान्य रूप: \(A + B \longrightarrow AB\)
+        सामान्य रूप: A + B ➔ AB
       </div>
       <div style="margin-top:14px; font-size:18px; line-height:1.8;">
         <strong>अन्य मुख्य उदाहरण:</strong>
         <ul style="padding-left:22px; margin-top:6px;">
-          <li><strong>कोयले का दहन:</strong> \(C(s) + O_2(g) \longrightarrow CO_2(g)\)</li>
-          <li><strong>जल का निर्माण:</strong> \(2H_2(g) + O_2(g) \longrightarrow 2H_2O(l)\)</li>
+          <li><strong>कोयले का दहन:</strong> C(s) + O₂(g) ➔ CO₂(g)</li>
+          <li><strong>जल का निर्माण:</strong> 2H₂(g) + O₂(g) ➔ 2H₂O(l)</li>
         </ul>
       </div>
     </div>
@@ -2874,13 +3029,13 @@
         <i class="fas fa-paint-roller" style="color:#eab308;"></i> दीवारों पर सफेदी (White-washing) और 2-3 दिन बाद चमक का वैज्ञानिक कारण
       </div>
       <p style="font-size:18px; line-height:1.8; color:#1e293b; margin-bottom:10px;">
-        जब बुझे हुए चूने के विलयन [\(Ca(OH)_2\)] से दीवारों पर सफेदी की जाती है, तो यह वायुमंडल में उपस्थित कार्बन डाइऑक्साइड (\(CO_2\)) के साथ धीमी गति से क्रिया करके दीवारों पर <strong>कैल्सियम कार्बोनेट (\(CaCO_3\))</strong> की एक पतली, चमकदार परत बना देता है।
+        जब बुझे हुए चूने के विलयन [Ca(OH)₂] से दीवारों पर सफेदी की जाती है, तो यह वायुमंडल में उपस्थित कार्बन डाइऑक्साइड (CO₂) के साथ धीमी गति से क्रिया करके दीवारों पर <strong>कैल्सियम कार्बोनेट (CaCO₃)</strong> की एक पतली, चमकदार परत बना देता है।
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:10px; padding:10px 16px; font-size:18px; font-weight:800; color:#713f12; text-align:center;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">Ca(OH)₂(aq) <span style="font-size:15px; color:#475569; font-weight:700;">[बुझा हुआ चूना]</span> + CO₂(g) ➔ CaCO₃(s) <span style="font-size:15px; color:#1e40af; font-weight:900;">[चमकदार कैल्सियम कार्बोनेट]</span> + H₂O(l)</span>
       </div>
       <p style="font-size:17px; margin-top:8px; color:#854d0e;">
-        <em>रोचक तथ्य:</em> संगमरमर (Marble), चूना पत्थर (Limestone) तथा खड़िया (Chalk) तीनों का रासायनिक सूत्र \(CaCO_3\) ही है!
+        <em>रोचक तथ्य:</em> संगमरमर (Marble), चूना पत्थर (Limestone) तथा खड़िया (Chalk) तीनों का रासायनिक सूत्र CaCO₃ ही है!
       </p>
     </div>
 
@@ -2917,7 +3072,7 @@
         ऐसी अभिक्रिया जिसमें <strong>एकल अभिकारक टूटकर दो या दो से अधिक सरल उत्पाद</strong> बनाता है, उसे <strong>वियोजन अभिक्रिया</strong> कहते हैं। यह संयोजन अभिक्रिया के ठीक विपरीत होती है।
       </p>
       <div style="background:#ffffff; border:2px solid #93c5fd; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
-        सामान्य रूप: \(AB \longrightarrow A + B\)
+        सामान्य रूप: AB ➔ A + B
       </div>
       <p style="font-size:18px; line-height:1.8; margin-top:12px;">
         अभिकारकों के बंधों को तोड़ने के लिए ऊर्जा (ऊष्मा, प्रकाश अथवा विद्युत) की आवश्यकता होती है। ऊर्जा के स्रोत के आधार पर वियोजन 3 प्रकार का होता है:
@@ -2935,7 +3090,7 @@
     <div class="fact-box">
       <strong>1. फेरस सल्फेट क्रिस्टल का तापन (NCERT क्रियाकलाप 1.5):</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        हरा फेरस सल्फेट क्रिस्टल (\(FeSO_4\cdot 7H_2O\)) गर्म करने पर पहले अपना क्रिस्टलन का जल त्यागकर सफेद हो जाता है। फिर अधिक गर्म करने पर यह फेरिक ऑक्साइड (\(Fe_2O_3\)) तथा सल्फर डाइऑक्साइड (\(SO_2\)) व सल्फर ट्राइऑक्साइड (\(SO_3\)) गैसों में वियोजित हो जाता है। गैसों से <strong>जलते हुए गंधक (सल्फर) की अभिलाक्षणिक तीखी गंध</strong> आती है।
+        हरा फेरस सल्फेट क्रिस्टल (FeSO₄·7H₂O) गर्म करने पर पहले अपना क्रिस्टलन का जल त्यागकर सफेद हो जाता है। फिर अधिक गर्म करने पर यह फेरिक ऑक्साइड (Fe₂O₃) तथा सल्फर डाइऑक्साइड (SO₂) व सल्फर ट्राइऑक्साइड (SO₃) गैसों में वियोजित हो जाता है। गैसों से <strong>जलते हुए गंधक (सल्फर) की अभिलाक्षणिक तीखी गंध</strong> आती है।
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#713f12; margin-top:8px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2FeSO₄(s) <span style="font-size:15px; color:#15803d; font-weight:700;">[हरा फेरस सल्फेट]</span> <span style="color:#dc2626;">➔ (ऊष्मा)</span> Fe₂O₃(s) <span style="font-size:15px; color:#9a3412; font-weight:800;">[भूरा फेरिक ऑक्साइड]</span> + SO₂(g)↑ + SO₃(g)↑</span>
@@ -3398,7 +3553,7 @@
     <div class="fact-box">
       <strong>2. लेड नाइट्रेट का तापन (NCERT क्रियाकलाप 1.6):</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        सफेद लेड नाइट्रेट चूर्ण [\(2Pb(NO_3)_2\)] को क्वथन नली में गर्म करने पर यह चटकने की आवाज के साथ वियोजित होकर <strong>भूरे रंग का नाइट्रोजन डाइऑक्साइड (\(NO_2\)) गैस का सघन धुआं</strong> तथा ऑक्सीजन गैस (\(O_2\)) उत्सर्जित करता है, और परखनली में पीले रंग का लेड ऑक्साइड (\(PbO\)) अवशेष बचता है।
+        सफेद लेड नाइट्रेट चूर्ण [2Pb(NO₃)₂] को क्वथन नली में गर्म करने पर यह चटकने की आवाज के साथ वियोजित होकर <strong>भूरे रंग का नाइट्रोजन डाइऑक्साइड (NO₂) गैस का सघन धुआं</strong> तथा ऑक्सीजन गैस (O₂) उत्सर्जित करता है, और परखनली में पीले रंग का लेड ऑक्साइड (PbO) अवशेष बचता है।
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#713f12; margin-top:8px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2Pb(NO₃)₂(s) <span style="font-size:15px; color:#475569; font-weight:700;">[श्वेत लेड नाइट्रेट]</span> <span style="color:#dc2626;">➔ (ऊष्मा)</span> 2PbO(s) <span style="font-size:15px; color:#d97706; font-weight:800;">[पीला लेड ऑक्साइड]</span> + 4NO₂(g)↑ <span style="font-size:15px; color:#9a3412; font-weight:900;">[भूरा धुआं]</span> + O₂(g)↑</span>
@@ -3815,7 +3970,7 @@
     <div class="concept-box" style="margin-top:20px;">
       <strong>3. चूना पत्थर का ऊष्मीय वियोजन (औद्योगिक दृष्टि से अति महत्वपूर्ण):</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        कैल्सियम कार्बोनेट (चूना पत्थर) को गर्म करने पर बिना बुझा चूना (कली चूना, \(CaO\)) तथा \(CO_2\) गैस बनती है। बिना बुझे चूने का उपयोग बड़े पैमाने पर <strong>सीमेंट उद्योग</strong> में किया जाता है।
+        कैल्सियम कार्बोनेट (चूना पत्थर) को गर्म करने पर बिना बुझा चूना (कली चूना, CaO) तथा CO₂ गैस बनती है। बिना बुझे चूने का उपयोग बड़े पैमाने पर <strong>सीमेंट उद्योग</strong> में किया जाता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#0f172a; margin-top:8px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">CaCO₃(s) <span style="font-size:15px; color:#475569; font-weight:700;">[चूना पत्थर]</span> <span style="color:#dc2626;">➔ (ऊष्मा)</span> CaO(s) <span style="font-size:15px; color:#15803d; font-weight:800;">[कली चूना (सीमेंट उद्योग)]</span> + CO₂(g)↑</span>
@@ -3831,7 +3986,7 @@
         जब किसी यौगिक की गलित अवस्था या जलीय विलयन में विद्युत धारा प्रवाहित की जाती है, तो वह अपने सरल घटकों में टूट जाता है। इसे <strong>विद्युत अपघटन</strong> कहते हैं।
       </p>
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        <strong>जल का विद्युत अपघटन (NCERT क्रियाकलाप 1.7):</strong> अम्लीकृत जल में विद्युत धारा प्रवाहित करने पर <strong>कैथोड (ऋण ध्रुव)</strong> पर हाइड्रोजन गैस (\(H_2\)) तथा <strong>एनोड (धन ध्रुव)</strong> पर ऑक्सीजन गैस (\(O_2\)) एकत्रित होती है। जल के अणु में 2 हाइड्रोजन तथा 1 ऑक्सीजन परमाणु होने के कारण कैथोड पर एकत्रित \(H_2\) का आयतन एनोड पर एकत्रित \(O_2\) से <strong>ठीक दोगुना (2 : 1)</strong> होता है।
+        <strong>जल का विद्युत अपघटन (NCERT क्रियाकलाप 1.7):</strong> अम्लीकृत जल में विद्युत धारा प्रवाहित करने पर <strong>कैथोड (ऋण ध्रुव)</strong> पर हाइड्रोजन गैस (H₂) तथा <strong>एनोड (धन ध्रुव)</strong> पर ऑक्सीजन गैस (O₂) एकत्रित होती है। जल के अणु में 2 हाइड्रोजन तथा 1 ऑक्सीजन परमाणु होने के कारण कैथोड पर एकत्रित H₂ का आयतन एनोड पर एकत्रित O₂ से <strong>ठीक दोगुना (2 : 1)</strong> होता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#0f172a;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2H₂O(l) <span style="color:#2563eb;">➔ (विद्युत धारा)</span> 2H₂(g)↑ <span style="font-size:15px; color:#1d4ed8; font-weight:900;">[कैथोड पर, आयतन 2]</span> + O₂(g)↑ <span style="font-size:15px; color:#b91c1c; font-weight:900;">[एनोड पर, आयतन 1]</span></span>
@@ -4389,16 +4544,16 @@
     </div>
 
 
-    <!-- (C) PHOTOLYTIC DECOMPOSITION -->
+    <!-- C PHOTOLYTIC DECOMPOSITION -->
     <div class="topic-heading-green" style="margin-top:35px;">
-      <i class="fas fa-sun"></i> (C) प्रकाशीय अपघटन (Photochemical Decomposition)
+      <i class="fas fa-sun"></i> C प्रकाशीय अपघटन (Photochemical Decomposition)
     </div>
     <div class="concept-box">
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
         सूर्य के प्रकाश (फोटॉन ऊर्जा) द्वारा होने वाला अपघटन प्रकाशीय अपघटन कहलाता है।
       </p>
       <p style="font-size:18px; line-height:1.8; margin-bottom:10px;">
-        <strong>सिल्वर क्लोराइड का धूप में धूसर होना (NCERT क्रियाकलाप 1.8):</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड (\(AgCl\)) को सूर्य के प्रकाश में रखने पर प्रकाश ऊर्जा पाकर क्लोरीन गैस उड़ जाती है और चांदी (सिल्वर धातु) बनने के कारण इसका रंग <strong>सफेद से बदलकर धूसर (सलेटी / Grey)</strong> हो जाता है।
+        <strong>सिल्वर क्लोराइड का धूप में धूसर होना (NCERT क्रियाकलाप 1.8):</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड (AgCl) को सूर्य के प्रकाश में रखने पर प्रकाश ऊर्जा पाकर क्लोरीन गैस उड़ जाती है और चांदी (सिल्वर धातु) बनने के कारण इसका रंग <strong>सफेद से बदलकर धूसर (सलेटी / Grey)</strong> हो जाता है।
       </p>
       <div style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#0f172a;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2AgCl(s) <span style="font-size:15px; color:#475569; font-weight:700;">[श्वेत AgCl]</span> <span style="color:#d97706;">➔ (सूर्य का प्रकाश)</span> 2Ag(s) <span style="font-size:15px; color:#475569; font-weight:900;">[धूसर सलेटी चांदी]</span> + Cl₂(g)↑</span>
@@ -4408,7 +4563,7 @@
     <div class="fact-box">
       <strong>श्याम-श्वेत (Black & White) फोटोग्राफी में उपयोग:</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        सिल्वर ब्रोमाइड (\(AgBr\)) भी इसी प्रकार सूर्य के प्रकाश में वियोजित होता है:
+        सिल्वर ब्रोमाइड (AgBr) भी इसी प्रकार सूर्य के प्रकाश में वियोजित होता है:
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#713f12; margin-top:6px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">2AgBr(s) <span style="color:#d97706;">➔ (सूर्य का प्रकाश)</span> 2Ag(s) + Br₂(g) <span style="font-size:15px; color:#1e3a8a; font-weight:800;">[श्याम-श्वेत फोटोग्राफी]</span></span>
@@ -4437,7 +4592,7 @@
         <span class="sim-badge" style="background:#fef9c3; color:#854d0e; border:2px solid #fde047; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू ☀️</span>
       </div>
       <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
-        <strong>एनसीईआरटी क्रियाकलाप 1.8:</strong> खुली खिड़की से आती सूर्य की किरणों में रखी चाइना डिश में श्वेत सिल्वर क्लोराइड (AgCl)। सूर्य के प्रकाश में फोटोलिटिक वियोजन से सफेद चूर्ण धूसर (सलेटी) सिल्वर धातु में बदल जाता है तथा क्लोरीन (Cl₂) गैस निष्कासित होती है:
+        <strong>एनसीईआरटी क्रियाकलाप 1.8:</strong> खुली खिड़की से आती सूर्य की किरणों में रखी चाइना डिश में श्वेत सिल्वर क्लोराइड AgCl। सूर्य के प्रकाश में फोटोलिटिक वियोजन से सफेद चूर्ण धूसर (सलेटी) सिल्वर धातु में बदल जाता है तथा क्लोरीन (Cl₂) गैस निष्कासित होती है:
       </p>
 
       <div class="sim-controls-grid">
@@ -4588,7 +4743,7 @@
       </div>
 
       <div id="sim8_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #eab308; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
-        <strong>प्रारंभिक स्थिति:</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड (AgCl) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
+        <strong>प्रारंभिक स्थिति:</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड AgCl तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
 
@@ -4606,14 +4761,14 @@
         ऐसी रासायनिक अभिक्रिया जिसमें <strong>अधिक अभिक्रियाशील तत्व, कम अभिक्रियाशील तत्व को उसके यौगिक (जलीय विलयन) से विस्थापित (हटा)</strong> देता है, उसे <strong>विस्थापन अभिक्रिया</strong> कहते हैं।
       </p>
       <div style="background:#ffffff; border:2px solid #93c5fd; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
-        सामान्य रूप: \(A + BC \longrightarrow AC + B \quad (\text{यदि } A > B \text{ सक्रियता में})\)
+        सामान्य रूप: <strong>A + BC ➔ AC + B</strong> &nbsp; (यदि सक्रियता श्रेणी में A &gt; B अधिक क्रियाशील है)
       </div>
     </div>
 
     <div class="fact-box">
       <strong>लोहे की कील व कॉपर सल्फेट का प्रयोग (NCERT क्रियाकलाप 1.9):</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        कॉपर सल्फेट के नीले विलयन में साफ लोहे की कीलें डुबोने पर लोहा (Fe), कॉपर (Cu) से अधिक क्रियाशील होने के कारण कॉपर को विस्थापित कर देता है। फलस्वरूप विलयन का रंग नीले से बदलकर <strong>हल्का हरा (फेरस सल्फेट, \(FeSO_4\))</strong> हो जाता है और लोहे की कील पर <strong>भूरे रंग के तांबे (Cu) की परत</strong> जमा हो जाती है।
+        कॉपर सल्फेट के नीले विलयन में साफ लोहे की कीलें डुबोने पर लोहा Fe, कॉपर Cu से अधिक क्रियाशील होने के कारण कॉपर को विस्थापित कर देता है। फलस्वरूप विलयन का रंग नीले से बदलकर <strong>हल्का हरा (फेरस सल्फेट, FeSO₄)</strong> हो जाता है और लोहे की कील पर <strong>भूरे रंग के तांबे Cu की परत</strong> जमा हो जाती है।
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#713f12; margin-top:8px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">Fe(s) <span style="font-size:15px; color:#475569; font-weight:700;">[धूसर लोहा]</span> + CuSO₄(aq) <span style="font-size:15px; color:#2563eb; font-weight:800;">[नीला विलयन]</span> ➔ FeSO₄(aq) <span style="font-size:15px; color:#15803d; font-weight:800;">[हल्का हरा विलयन]</span> + Cu(s)↓ <span style="font-size:15px; color:#9a3412; font-weight:900;">[भूरा कॉपर]</span></span>
@@ -4862,14 +5017,14 @@
         वे रासायनिक अभिक्रियाएं जिनमें <strong>अभिकारकों के बीच आयनों का पारस्परिक आदान-प्रदान (Mutual Exchange of Ions)</strong> होता है, उन्हें <strong>द्विविस्थापन अभिक्रियाएं</strong> कहते हैं।
       </p>
       <div style="background:#ffffff; border:2px solid #93c5fd; border-radius:10px; padding:12px 18px; font-size:18px; font-weight:800; color:#0f172a; text-align:center;">
-        सामान्य रूप: \(AB + CD \longrightarrow AD + CB\)
+        सामान्य रूप: AB + CD ➔ AD + CB
       </div>
     </div>
 
     <div class="fact-box">
       <strong>अवक्षेपण अभिक्रिया (Precipitation Reaction) — NCERT क्रियाकलाप 1.10:</strong>
       <p style="font-size:18px; line-height:1.8; margin-top:6px;">
-        जब सोडियम सल्फेट (\(Na_2SO_4\)) के रंगहीन विलयन में बेरियम क्लोराइड (\(BaCl_2\)) का विलयन मिलाया जाता है, तो \(Ba^{2+}\) तथा \(SO_4^{2-}\) आयनों की पारस्परिक क्रिया से जल में अघुलनशील <strong>सफेद बेरियम सल्फेट (\(BaSO_4\))</strong> का अवक्षेप बनता है:
+        जब सोडियम सल्फेट (Na₂SO₄) के रंगहीन विलयन में बेरियम क्लोराइड (BaCl₂) का विलयन मिलाया जाता है, तो Ba²⁺ तथा SO₄²⁻ आयनों की पारस्परिक क्रिया से जल में अघुलनशील <strong>सफेद बेरियम सल्फेट (BaSO₄)</strong> का अवक्षेप बनता है:
       </p>
       <div style="background:#ffffff; border:2px solid #fde047; border-radius:8px; padding:10px; font-weight:800; text-align:center; color:#713f12; margin-top:8px;">
         <span style="font-size:20px; font-weight:900; color:#0f172a;">Na₂SO₄(aq) + BaCl₂(aq) ➔ BaSO₄(s)↓ <span style="font-size:15px; color:#1e40af; font-weight:900;">[दूधिया श्वेत अवक्षेप]</span> + 2NaCl(aq)</span>
@@ -5097,16 +5252,16 @@
         <div style="background:#ffffff; border:2px solid #fca5a5; border-radius:10px; padding:14px;">
           <strong style="color:#b91c1c; font-size:19px;">🔥 उपचयन (Oxidation):</strong>
           <ul style="padding-left:18px; margin-top:6px; font-size:17px; line-height:1.7;">
-            <li>किसी पदार्थ में <strong>ऑक्सीजन (\(O\)) की वृद्धि</strong> होना।</li>
-            <li>अथवा किसी पदार्थ से <strong>हाइड्रोजन (\(H\)) का ह्रास</strong> होना।</li>
+            <li>किसी पदार्थ में <strong>ऑक्सीजन (O) की वृद्धि</strong> होना।</li>
+            <li>अथवा किसी पदार्थ से <strong>हाइड्रोजन (H) का ह्रास</strong> होना।</li>
             <li>इलेक्ट्रॉन त्यागना।</li>
           </ul>
         </div>
         <div style="background:#ffffff; border:2px solid #86efac; border-radius:10px; padding:14px;">
           <strong style="color:#15803d; font-size:19px;">💧 अपचयन (Reduction):</strong>
           <ul style="padding-left:18px; margin-top:6px; font-size:17px; line-height:1.7;">
-            <li>किसी पदार्थ से <strong>ऑक्सीजन (\(O\)) का ह्रास</strong> होना।</li>
-            <li>अथवा किसी पदार्थ में <strong>हाइड्रोजन (\(H\)) की वृद्धि</strong> होना।</li>
+            <li>किसी पदार्थ से <strong>ऑक्सीजन (O) का ह्रास</strong> होना।</li>
+            <li>अथवा किसी पदार्थ में <strong>हाइड्रोजन (H) की वृद्धि</strong> होना।</li>
             <li>इलेक्ट्रॉन ग्रहण करना।</li>
           </ul>
         </div>
@@ -5128,14 +5283,14 @@
           <div style="background:#ffffff; border:1.5px solid #fde047; border-radius:6px; padding:8px; font-weight:800; text-align:center; color:#713f12; margin:6px 0;">
             <span style="font-size:20px; font-weight:900; color:#0f172a;">CuO(s) <span style="font-size:15px; color:#0f172a; font-weight:700;">[काला CuO]</span> + H₂(g) <span style="color:#dc2626;">➔ (तापन)</span> Cu(s) <span style="font-size:15px; color:#9a3412; font-weight:900;">[पुनः चमकदार भूरा तांबा]</span> + H₂O(l)</span>
           </div>
-          <em>विश्लेषण:</em> यहाँ \(CuO\) से ऑक्सीजन हटती है (अतः \(CuO\) का \(Cu\) में <strong>अपचयन</strong> हुआ), जबकि \(H_2\) में ऑक्सीजन जुड़ती है (अतः \(H_2\) का \(H_2O\) में <strong>उपचयन</strong> हुआ)।
+          <em>विश्लेषण:</em> यहाँ CuO से ऑक्सीजन हटती है (अतः CuO का Cu में <strong>अपचयन</strong> हुआ), जबकि H₂ में ऑक्सीजन जुड़ती है (अतः H₂ का H₂O में <strong>उपचयन</strong> हुआ)।
         </li>
       </ol>
       <div style="margin-top:12px; font-size:18px; line-height:1.8;">
         <strong>परीक्षा में पूछे जाने वाले अन्य महत्वपूर्ण रेडॉक्स उदाहरण:</strong>
         <ul style="padding-left:22px; margin-top:6px;">
-          <li>\(ZnO + C \longrightarrow Zn + CO \quad\) [\(ZnO\) अपचयित होकर \(Zn\), \(C\) उपचयित होकर \(CO\)]</li>
-          <li>\(MnO_2 + 4HCl \longrightarrow MnCl_2 + 2H_2O + Cl_2 \quad\) [\(MnO_2\) अपचयित होकर \(MnCl_2\), \(HCl\) उपचयित होकर \(Cl_2\)]</li>
+          <li>ZnO + C ➔ Zn + CO [ZnO अपचयित होकर Zn, C उपचयित होकर CO]</li>
+          <li>MnO₂ + 4HCl ➔ MnCl₂ + 2H₂O + Cl₂ [MnO₂ अपचयित होकर MnCl₂, HCl उपचयित होकर Cl₂]</li>
         </ul>
       </div>
     </div>
@@ -5248,7 +5403,7 @@
             </linearGradient>
 
             <!-- Copper Powder Colors -->
-            <!-- 1. Metallic Brown Copper (Cu) -->
+            <!-- 1. Metallic Brown Copper Cu -->
             <radialGradient id="s11_copperBrown" cx="50%" cy="40%" r="55%">
               <stop offset="0%" stop-color="#f59e0b"/>
               <stop offset="35%" stop-color="#d97706"/>
@@ -5256,7 +5411,7 @@
               <stop offset="100%" stop-color="#78350f"/>
             </radialGradient>
 
-            <!-- 2. Jet Black Copper(II) Oxide (CuO) -->
+            <!-- 2. Jet Black Copper(II) Oxide CuO -->
             <radialGradient id="s11_blackCuO" cx="50%" cy="40%" r="55%">
               <stop offset="0%" stop-color="#334155"/>
               <stop offset="40%" stop-color="#1e293b"/>
@@ -5564,15 +5719,15 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:14px; margin-top:10px;">
         <div style="background:#ffffff; border:2px solid #fed7aa; border-radius:10px; padding:12px;">
           <strong style="color:#c2410c; font-size:18px;">1. लोहे पर जंग लगना:</strong><br>
-          लोहे की सतह पर भूरे रंग की परत (जलयोजित आयरन ऑक्साइड, \(Fe_2O_3\cdot xH_2O\)) चढ़ जाती है।
+          लोहे की सतह पर भूरे रंग की परत (जलयोजित आयरन ऑक्साइड, Fe₂O₃·xH₂O) चढ़ जाती है।
         </div>
         <div style="background:#ffffff; border:2px solid #cbd5e1; border-radius:10px; padding:12px;">
           <strong style="color:#334155; font-size:18px;">2. चांदी का काला पड़ना:</strong><br>
-          हवा में उपस्थित सल्फर से क्रिया कर सिल्वर सल्फाइड (\(Ag_2S\)) की काली परत बनना।
+          हवा में उपस्थित सल्फर से क्रिया कर सिल्वर सल्फाइड (Ag₂S) की काली परत बनना।
         </div>
         <div style="background:#ffffff; border:2px solid #bbf7d0; border-radius:10px; padding:12px;">
           <strong style="color:#15803d; font-size:18px;">3. तांबे पर हरी परत चढ़ना:</strong><br>
-          आर्द्र कार्बन डाइऑक्साइड से क्रिया कर बेसिक कॉपर कार्बोनेट [\(CuCO_3\cdot Cu(OH)_2\)] की हरी परत बनना।
+          आर्द्र कार्बन डाइऑक्साइड से क्रिया कर बेसिक कॉपर कार्बोनेट [CuCO₃·Cu(OH)₂] की हरी परत बनना।
         </div>
       </div>
     </div>
@@ -5901,7 +6056,7 @@
       <ol style="padding-left:24px; font-size:18px; line-height:1.85; margin-top:8px;">
         <li><strong>प्रति-ऑक्सीकारक (Antioxidants) मिलाना:</strong> वसायुक्त खाद्य पदार्थों में उपचयन को धीमा करने वाले रसायन (जैसे BHA, BHT) मिलाए जाते हैं।</li>
         <li><strong>वायुरोधी बर्तनों (Airtight Containers) में रखना:</strong> इससे खाद्य सामग्री का वायु की ऑक्सीजन से संपर्क न्यूनतम हो जाता है और उपचयन की गति धीमी पड़ जाती है।</li>
-        <li><strong>नाइट्रोजन गैस फ्लशिंग (NCERT मुख्य प्रश्न):</strong> आलू के चिप्स की थैलियों में से ऑक्सीजन गैस को हटाकर उसमें <strong>नाइट्रोजन (\(N_2\)) जैसी कम सक्रिय/अक्रिय गैस</strong> भर दी जाती है, जिससे चिप्स का उपचयन नहीं होता और वे हफ्तों तक कुरकुरे व ताजे बने रहते हैं।</li>
+        <li><strong>नाइट्रोजन गैस फ्लशिंग (NCERT मुख्य प्रश्न):</strong> आलू के चिप्स की थैलियों में से ऑक्सीजन गैस को हटाकर उसमें <strong>नाइट्रोजन (N₂) जैसी कम सक्रिय/अक्रिय गैस</strong> भर दी जाती है, जिससे चिप्स का उपचयन नहीं होता और वे हफ्तों तक कुरकुरे व ताजे बने रहते हैं।</li>
         <li><strong>शीतलन / रेफ्रिजरेशन:</strong> कम तापमान पर उपचयन की रासायनिक दर अत्यंत मंद हो जाती है।</li>
       </ol>
     </div>
@@ -5929,33 +6084,33 @@
         <tbody>
           <tr style="border-bottom:1px solid #cbd5e1;">
             <td style="padding:10px 14px; font-weight:800; color:#1e40af;">1. संयोजन अभिक्रिया</td>
-            <td style="padding:10px 14px;">\(A + B \longrightarrow AB\)</td>
+            <td style="padding:10px 14px;">A + B ➔ AB</td>
             <td style="padding:10px 14px;">केवल एक ही उत्पाद बनता है</td>
-            <td style="padding:10px 14px;">\(CaO + H_2O \longrightarrow Ca(OH)_2\)</td>
+            <td style="padding:10px 14px;">CaO + H₂O ➔ Ca(OH)₂</td>
           </tr>
           <tr style="background:#f8fafc; border-bottom:1px solid #cbd5e1;">
             <td style="padding:10px 14px; font-weight:800; color:#b91c1c;">2. वियोजन अभिक्रिया</td>
-            <td style="padding:10px 14px;">\(AB \longrightarrow A + B\)</td>
+            <td style="padding:10px 14px;">AB ➔ A + B</td>
             <td style="padding:10px 14px;">केवल एक ही अभिकारक टूटता है</td>
-            <td style="padding:10px 14px;">\(2FeSO_4 \xrightarrow{\Delta} Fe_2O_3 + SO_2 + SO_3\)</td>
+            <td style="padding:10px 14px;">2FeSO₄ <span style="font-size:0.85em; color:#b91c1c;">(ऊष्मा)</span> ➔ Fe₂O₃ + SO₂ + SO₃</td>
           </tr>
           <tr style="border-bottom:1px solid #cbd5e1;">
             <td style="padding:10px 14px; font-weight:800; color:#059669;">3. विस्थापन अभिक्रिया</td>
-            <td style="padding:10px 14px;">\(A + BC \longrightarrow AC + B\)</td>
+            <td style="padding:10px 14px;"><strong>A + BC ➔ AC + B</strong></td>
             <td style="padding:10px 14px;">अधिक सक्रिय तत्व कम सक्रिय को हटाता है</td>
-            <td style="padding:10px 14px;">\(Fe + CuSO_4 \longrightarrow FeSO_4 + Cu\)</td>
+            <td style="padding:10px 14px;">Fe + CuSO₄ ➔ FeSO₄ + Cu</td>
           </tr>
           <tr style="background:#f8fafc; border-bottom:1px solid #cbd5e1;">
             <td style="padding:10px 14px; font-weight:800; color:#d97706;">4. द्विविस्थापन अभिक्रिया</td>
-            <td style="padding:10px 14px;">\(AB + CD \longrightarrow AD + CB\)</td>
+            <td style="padding:10px 14px;">AB + CD ➔ AD + CB</td>
             <td style="padding:10px 14px;">आयनों का आदान-प्रदान, अवक्षेप निर्माण</td>
-            <td style="padding:10px 14px;">\(Na_2SO_4 + BaCl_2 \longrightarrow BaSO_4 \downarrow + 2NaCl\)</td>
+            <td style="padding:10px 14px;">Na₂SO₄ + BaCl₂ ➔ BaSO₄↓ + 2NaCl</td>
           </tr>
           <tr>
             <td style="padding:10px 14px; font-weight:800; color:#7c3aed;">5. रेडॉक्स अभिक्रिया</td>
             <td style="padding:10px 14px;">उपचयन + अपचयन साथ-साथ</td>
             <td style="padding:10px 14px;">एक में ऑक्सीजन वृद्धि, दूसरे में ह्रास</td>
-            <td style="padding:10px 14px;">\(CuO + H_2 \xrightarrow{\Delta} Cu + H_2O\)</td>
+            <td style="padding:10px 14px;">CuO + H₂ <span style="font-size:0.85em; color:#b91c1c;">(ऊष्मा)</span> ➔ Cu + H₂O</td>
           </tr>
         </tbody>
       </table>
@@ -5975,14 +6130,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">कली चूना (बिना बुझा चूना)</td><td style="padding:8px 12px;">कैल्सियम ऑक्साइड</td><td style="padding:8px 12px;">\(CaO\)</td><td style="padding:8px 12px;">सफेद ठोस</td></tr>
-          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">बुझा हुआ चूना (चूने का पानी)</td><td style="padding:8px 12px;">कैल्सियम हाइड्रॉक्साइड</td><td style="padding:8px 12px;">\(Ca(OH)_2\)</td><td style="padding:8px 12px;">रंगहीन विलयन / सफेद गाढ़ा लेप</td></tr>
-          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">संगमरमर / चूना पत्थर / खड़िया</td><td style="padding:8px 12px;">कैल्सियम कार्बोनेट</td><td style="padding:8px 12px;">\(CaCO_3\)</td><td style="padding:8px 12px;">सफेद ठोस (चमकदार)</td></tr>
-          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">नीला थोथा</td><td style="padding:8px 12px;">कॉपर सल्फेट</td><td style="padding:8px 12px;">\(CuSO_4\cdot 5H_2O\)</td><td style="padding:8px 12px;">गहरा नीला क्रिस्टल</td></tr>
-          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">हरा कसीस</td><td style="padding:8px 12px;">फेरस सल्फेट</td><td style="padding:8px 12px;">\(FeSO_4\cdot 7H_2O\)</td><td style="padding:8px 12px;">हल्का हरा क्रिस्टल</td></tr>
-          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">जंग (Rust)</td><td style="padding:8px 12px;">जलयोजित फेरिक ऑक्साइड</td><td style="padding:8px 12px;">\(Fe_2O_3\cdot xH_2O\)</td><td style="padding:8px 12px;">लालिमायुक्त भूरा चूर्ण</td></tr>
-          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">लेड आयोडाइड</td><td style="padding:8px 12px;">लेड(II) आयोडाइड</td><td style="padding:8px 12px;">\(PbI_2\)</td><td style="padding:8px 12px;">चटक पीला अवक्षेप</td></tr>
-          <tr style="background:#fffbeb;"><td style="padding:8px 12px; font-weight:800;">बेरियम सल्फेट</td><td style="padding:8px 12px;">बेरियम सल्फेट</td><td style="padding:8px 12px;">\(BaSO_4\)</td><td style="padding:8px 12px;">दूधिया सफेद अवक्षेप</td></tr>
+          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">कली चूना (बिना बुझा चूना)</td><td style="padding:8px 12px;">कैल्सियम ऑक्साइड</td><td style="padding:8px 12px;">CaO</td><td style="padding:8px 12px;">सफेद ठोस</td></tr>
+          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">बुझा हुआ चूना (चूने का पानी)</td><td style="padding:8px 12px;">कैल्सियम हाइड्रॉक्साइड</td><td style="padding:8px 12px;">Ca(OH)₂</td><td style="padding:8px 12px;">रंगहीन विलयन / सफेद गाढ़ा लेप</td></tr>
+          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">संगमरमर / चूना पत्थर / खड़िया</td><td style="padding:8px 12px;">कैल्सियम कार्बोनेट</td><td style="padding:8px 12px;">CaCO₃</td><td style="padding:8px 12px;">सफेद ठोस (चमकदार)</td></tr>
+          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">नीला थोथा</td><td style="padding:8px 12px;">कॉपर सल्फेट</td><td style="padding:8px 12px;">CuSO₄·5H₂O</td><td style="padding:8px 12px;">गहरा नीला क्रिस्टल</td></tr>
+          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">हरा कसीस</td><td style="padding:8px 12px;">फेरस सल्फेट</td><td style="padding:8px 12px;">FeSO₄·7H₂O</td><td style="padding:8px 12px;">हल्का हरा क्रिस्टल</td></tr>
+          <tr style="background:#fffbeb; border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">जंग (Rust)</td><td style="padding:8px 12px;">जलयोजित फेरिक ऑक्साइड</td><td style="padding:8px 12px;">Fe₂O₃·xH₂O</td><td style="padding:8px 12px;">लालिमायुक्त भूरा चूर्ण</td></tr>
+          <tr style="border-bottom:1px solid #fde047;"><td style="padding:8px 12px; font-weight:800;">लेड आयोडाइड</td><td style="padding:8px 12px;">लेड(II) आयोडाइड</td><td style="padding:8px 12px;">PbI₂</td><td style="padding:8px 12px;">चटक पीला अवक्षेप</td></tr>
+          <tr style="background:#fffbeb;"><td style="padding:8px 12px; font-weight:800;">बेरियम सल्फेट</td><td style="padding:8px 12px;">बेरियम सल्फेट</td><td style="padding:8px 12px;">BaSO₄</td><td style="padding:8px 12px;">दूधिया सफेद अवक्षेप</td></tr>
         </tbody>
       </table>
     </div>
@@ -5998,16 +6153,164 @@
        - Kinematic Scale Axis Precision (Pivot: 360, 85)
        ========================================================== */
 
-    // Top Toolbars
-    function adjustFontSize(delta) {
-      var doc = document.querySelector('.doc-container');
-      if (!doc) return;
-      var current = parseFloat(window.getComputedStyle(doc).fontSize) || 16;
-      doc.style.fontSize = Math.max(13, Math.min(22, current + delta)) + 'px';
+    
+    /* ==========================================================
+       PROJECTOR DYNAMIC TYPOGRAPHY & TOOLBAR CONTROLS
+       Universal scaling affecting every text across the document
+       ========================================================== */
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+    var currentContainerWidth = 1400; // in px
+
+    function applyDynamicTypography() {
+      var b = 26 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 900 + weightOffset));
+      var s = Math.max(0, 1.1 + strokeOffset);
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        /* Universal Font Size: affects every text element */
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd, 
+        .concept-box, .fact-box, .warn-box, .reaction-box, .qa-answer, .ncert-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        .concept-box b, .concept-card b, .warn-box b, .fact-box b, .reaction-box b, 
+        .point-tag-red, p b, li b, strong {
+          font-size: ${b}pt !important;
+        }
+        .chapter-hero .chapter-title {
+          font-size: ${b + 20}pt !important;
+          line-height: 1.25 !important;
+        }
+        .chapter-hero .chapter-subtitle {
+          font-size: ${b + 4}pt !important;
+          line-height: 1.5 !important;
+        }
+        .chapter-hero .chapter-tag {
+          font-size: ${Math.max(16, b - 4)}pt !important;
+        }
+        .section-heading, h2.section-heading, h2.section-title {
+          font-size: ${b + 14}pt !important;
+          line-height: 1.35 !important;
+        }
+        .sub-header-red, h3.subsection-heading, .topic-header {
+          font-size: ${b + 6}pt !important;
+          line-height: 1.4 !important;
+        }
+        table, .data-table {
+          font-size: ${Math.max(16, b - 2)}pt !important;
+        }
+        th {
+          font-size: ${b}pt !important;
+        }
+        td {
+          font-size: ${Math.max(16, b - 2)}pt !important;
+        }
+        /* Simulator text also scales with font size */
+        .sim-card {
+          font-size: ${Math.max(14, b - 8)}pt !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-note, .sim-card .sim-status-banner {
+          font-size: ${Math.max(15, b - 7)}pt !important;
+          line-height: 1.6 !important;
+        }
+        .sim-card h3, .sim-card .sim-title, .sim-card .sim-title span {
+          font-size: ${Math.max(18, b - 2)}pt !important;
+        }
+        .sim-card b, .sim-card strong {
+          font-size: ${Math.max(15, b - 7)}pt !important;
+        }
+        .sim-card .sim-btn, .sim-card .sim-btn-step {
+          font-size: ${Math.max(13, b - 11)}pt !important;
+        }
+        .sim-card select, .sim-card option {
+          font-size: ${Math.max(14, b - 9)}pt !important;
+        }
+        /* Preserve top-toolbar fixed compact size */
+        .top-toolbar, .top-toolbar * {
+          font-size: 15px !important;
+          line-height: normal !important;
+        }
+      `;
+
+      var elFw = document.getElementById('dyn-fw');
+      if (!elFw) {
+        elFw = document.createElement('style');
+        elFw.id = 'dyn-fw';
+        document.head.appendChild(elFw);
+      }
+
+      elFw.innerHTML = `
+        /* Universal Font Weight & Stroke: affects every text element on the page */
+        #mainDocContainer, #mainDocContainer *, 
+        body, p, li, h1, h2, h3, h4, h5, h6, b, strong, td, th, div, span, label, dt, dd {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s.toFixed(2)}px #000000;
+          text-shadow: 0 0 1px #000;
+        }
+        /* Shield top toolbar, SVG diagrams, and interactive simulator buttons */
+        .top-toolbar, .top-toolbar *, svg, svg *, .floating-home-btn {
+          -webkit-text-stroke: 0px !important;
+          text-shadow: none !important;
+        }
+        .sim-card .sim-btn, .sim-card .sim-btn-step, .sim-card select, .sim-card option {
+          -webkit-text-stroke: 0px !important;
+          text-shadow: none !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -14) sizeOffset = -14;
+      if (sizeOffset > 30) sizeOffset = 30;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      strokeOffset += (amount / 100) * 0.35;
+      if (weightOffset < -500) weightOffset = -500;
+      if (weightOffset > 100) weightOffset = 100;
+      if (strokeOffset < -1.1) strokeOffset = -1.1;
+      if (strokeOffset > 1.2) strokeOffset = 1.2;
+      applyDynamicTypography();
+    }
+
+    function adjustWidth(delta) {
+      currentContainerWidth = Math.max(900, Math.min(2200, currentContainerWidth + delta));
+      var doc = document.getElementById('mainDocContainer') || document.querySelector('.doc-container');
+      if (doc) {
+        doc.style.setProperty('max-width', currentContainerWidth + 'px', 'important');
+        doc.style.setProperty('width', '100%', 'important');
+      }
+    }
+
+    function adjustContentWidth(delta) {
+      adjustWidth(delta);
+    }
+
+    function adjustSimStroke(delta) {
+      var svgs = document.querySelectorAll('.sim-stage svg');
+      svgs.forEach(function(svg) {
+        var lines = svg.querySelectorAll('path, line, rect, circle, ellipse, polygon');
+        lines.forEach(function(el) {
+          var sw = parseFloat(el.getAttribute('stroke-width') || window.getComputedStyle(el).strokeWidth) || 2;
+          el.setAttribute('stroke-width', Math.max(0.8, Math.min(6, sw + delta * 0.5)));
+        });
+      });
     }
 
     function toggleDarkMode() {
-      var doc = document.querySelector('.doc-container');
+      var doc = document.getElementById('mainDocContainer') || document.querySelector('.doc-container');
       if (!doc) return;
       if (doc.style.filter === 'invert(1) hue-rotate(180deg)') {
         doc.style.filter = 'none';
@@ -6016,22 +6319,11 @@
       }
     }
 
-    function adjustContentWidth(delta) {
-      var doc = document.querySelector('.doc-container');
-      if (!doc) return;
-      var curW = parseInt(doc.style.maxWidth || '1100', 10);
-      doc.style.maxWidth = Math.max(800, Math.min(1600, curW + delta)) + 'px';
-    }
-
-    function adjustSimStroke(delta) {
-      var svgs = document.querySelectorAll('.sim-stage svg');
-      svgs.forEach(function(svg) {
-        var lines = svg.querySelectorAll('path, line, rect, circle, ellipse, polygon');
-        lines.forEach(function(el) {
-          var sw = parseFloat(el.getAttribute('stroke-width') || window.getComputedStyle(el).strokeWidth) || 1;
-          el.setAttribute('stroke-width', Math.max(0.8, Math.min(6, sw + delta)));
-        });
-      });
+    // Initialize Universal Projector Typography immediately on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+    } else {
+      applyDynamicTypography();
     }
 
     // Timer tracking to avoid overlapping animations
@@ -6745,7 +7037,7 @@ function sim4Reset() {
       clearSimTimers(4);
       var pbar = document.getElementById('sim4_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim4_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> बड़े बीकर में ठोस बिना बुझा चूना (CaO) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> बड़े बीकर में ठोस बिना बुझा चूना CaO तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
       // Reset water pouring vessel to right resting position
       var inner = document.getElementById('s4_vessel_inner');
@@ -6847,7 +7139,7 @@ function sim4Reset() {
         if (bub) bub.style.opacity = '0';
         if (aura) aura.style.opacity = '0';
 
-        if (st) st.innerHTML = '<strong>चरण 2 (जल योग):</strong> कली चूने (CaO) में जल मिलाया जा रहा है...';
+        if (st) st.innerHTML = '<strong>चरण 2 (जल योग):</strong> कली चूने CaO में जल मिलाया जा रहा है...';
 
         // 2. ONLY AFTER water is poured (at 1800ms), stream stops and BOILING STEAM begins!
         addSimTimer(4, setTimeout(function() {
@@ -7209,7 +7501,7 @@ function sim4Reset() {
         if (cG1) { cG1.textContent = 'NO₂ गैस (सघन गहरे भूरे रंग का धुआं)'; cG1.setAttribute('fill', '#7c2d12'); }
         if (cG2) { cG2.textContent = 'पीला अवशेष पेंदे में गर्म अवस्था में'; cG2.setAttribute('fill', '#ca8a04'); }
 
-        if (st) st.innerHTML = '<strong>चरण 3 (सघन भूरा धुआं व पीला अवशेष):</strong> तीव्र गर्म करने पर परखनली के मुंह से <strong>सघन गहरे भूरे रंग की नाइट्रोजन डाइऑक्साइड (NO₂) गैस</strong> का प्रचुर धुआं निकलता है तथा पेंदे में <strong>पीले रंग का लेड मोनोक्साइड (PbO)</strong> अवशेष बचता है!';
+        if (st) st.innerHTML = '<strong>चरण 3 (सघन भूरा धुआं व पीला अवशेष):</strong> तीव्र गर्म करने पर परखनली के मुंह से <strong>सघन गहरे भूरे रंग की नाइट्रोजन डाइऑक्साइड (NO₂) गैस</strong> का प्रचुर धुआं निकलता है तथा पेंदे में <strong>पीले रंग का लेड मोनोक्साइड PbO</strong> अवशेष बचता है!';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
         if (window.gsap) {
@@ -7456,7 +7748,7 @@ function sim4Reset() {
       clearSimTimers(8);
       var pbar = document.getElementById('sim8_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim8_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड (AgCl) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> चाइना डिश में श्वेत सिल्वर क्लोराइड AgCl तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
       var beams = document.getElementById('s8_sunbeams_group'); if (beams) beams.style.opacity = '0';
       var mound = document.getElementById('s8_powder_mound'); if (mound) mound.style.fill = '#ffffff';
@@ -7489,7 +7781,7 @@ function sim4Reset() {
         if (cl2) cl2.style.opacity = '0';
         if (ctrl) ctrl.style.opacity = '0';
 
-        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> चीनी मिट्टी की प्याली (China Dish) में लगभग 2 ग्राम शुद्ध श्वेत सिल्वर क्लोराइड (AgCl) चूर्ण लिया गया।';
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> चीनी मिट्टी की प्याली (China Dish) में लगभग 2 ग्राम शुद्ध श्वेत सिल्वर क्लोराइड AgCl चूर्ण लिया गया।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
         if (beams) beams.style.opacity = '1';
@@ -7872,7 +8164,7 @@ function sim4Reset() {
         if (cRedAgent) cRedAgent.textContent = 'Cu धातु (अपचायक)';
         if (cRule) cRule.textContent = '✓ ऑक्सीजन का जुड़ना = उपचयन (Oxidation)';
 
-        if (st) st.innerHTML = '<span style="color:#d97706; font-size:16px;"><strong>चरण 2 (उपचयन अभिक्रिया - काला CuO बनना):</strong></span> बर्नर जलाकर चाइना डिश को तेज गर्म किया जाता है। कॉपर चूर्ण वायुमंडल की ऑक्सीजन से अभिक्रिया करता है और उसकी सतह पर <strong>काले रंग के कॉपर(II) ऑक्साइड (CuO)</strong> की परत जम जाती है:<br>' +
+        if (st) st.innerHTML = '<span style="color:#d97706; font-size:16px;"><strong>चरण 2 (उपचयन अभिक्रिया - काला CuO बनना):</strong></span> बर्नर जलाकर चाइना डिश को तेज गर्म किया जाता है। कॉपर चूर्ण वायुमंडल की ऑक्सीजन से अभिक्रिया करता है और उसकी सतह पर <strong>काले रंग के कॉपर(II) ऑक्साइड CuO</strong> की परत जम जाती है:<br>' +
           '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#eff6ff; padding:5px 12px; border-radius:6px; border:2px solid #bfdbfe; color:#1e40af; font-weight:900;">' +
           '2Cu(s) + O₂(g) ➔ 2CuO(s) (काला पदार्थ)' +
           '</span><br>' +
@@ -7901,7 +8193,7 @@ function sim4Reset() {
         if (cRedAgent) cRedAgent.textContent = 'H₂ (ऑक्सीजन ग्राही ➔ अपचायक)';
         if (cRule) cRule.textContent = '✓ ऑक्सीजन का ह्रास = अपचयन (Reduction)';
 
-        if (st) st.innerHTML = '<span style="color:#2563eb; font-size:16px;"><strong>चरण 3 (अपचयन अभिक्रिया - पुनः भूरा कॉपर):</strong></span> इस गर्म काले पदार्थ (CuO) के ऊपर जब हाइड्रोजन (H₂) गैस प्रवाहित की जाती है, तो काली सतह पुनः <strong>चमकदार भूरे रंग के कॉपर (Cu)</strong> में बदल जाती है तथा जलवाष्प (H₂O) निकलती है:<br>' +
+        if (st) st.innerHTML = '<span style="color:#2563eb; font-size:16px;"><strong>चरण 3 (अपचयन अभिक्रिया - पुनः भूरा कॉपर):</strong></span> इस गर्म काले पदार्थ CuO के ऊपर जब हाइड्रोजन (H₂) गैस प्रवाहित की जाती है, तो काली सतह पुनः <strong>चमकदार भूरे रंग के कॉपर Cu</strong> में बदल जाती है तथा जलवाष्प (H₂O) निकलती है:<br>' +
           '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#f0fdf4; padding:5px 12px; border-radius:6px; border:2px solid #86efac; color:#166534; font-weight:900;">' +
           'CuO(s) [काला] + H₂(g) ➔ Cu(s) [भूरा] + H₂O(g)↑' +
           '</span><br>' +
@@ -8214,12 +8506,12 @@ function sim4Reset() {
       if (sb) {
         var sbHtml = '';
         var elNamesHindi = {
-          'Fe': 'लोहा (Fe)',
-          'H': 'हाइड्रोजन (H)',
-          'O': 'ऑक्सीजन (O)',
+          'Fe': 'लोहा Fe',
+          'H': 'हाइड्रोजन H',
+          'O': 'ऑक्सीजन O',
           'Mg': 'मैग्नीशियम (Mg)',
           'N': 'नाइट्रोजन (N)',
-          'C': 'कार्बन (C)',
+          'C': 'कार्बन C',
           'Ba': 'बेरियम (Ba)',
           'Cl': 'क्लोरीन (Cl)',
           'Al': 'एल्युमीनियम (Al)',
