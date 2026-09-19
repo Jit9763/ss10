@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान अध्याय 6: अध्याय 6: नियंत्रण एवं समन्वय (संपूर्ण डिजिटल नोट्स व 3D सिमुलेटर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    /* =========================================================================
+       CLASS 10 SOCIAL SCIENCE MASTER PROJECTOR DESIGN SYSTEM (MATCHING CIV/GEO)
+       ========================================================================= */
+    body, p, li, td, th {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+    }
+
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span {
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000;
+      text-shadow: 0 0 0.5px #000;
+    }
+
+    /* Outer layout container */
+    .doc-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      font-family: 'Nirmala UI', 'Outfit', 'Segoe UI', -apple-system, sans-serif;
+    }
+
+    /* Chapter Title / Hero Matching SS10 Master */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px !important;
+      margin-bottom: 50px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.5) !important;
+    }
+
+    .chapter-tag {
+      display: inline-block !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+      font-size: 22pt !important;
+      font-weight: 900 !important;
+      padding: 6px 20px !important;
+      border-radius: 20px !important;
+      margin-bottom: 15px !important;
+      border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .chapter-title {
+      font-size: 48pt !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .chapter-subtitle {
+      color: #93c5fd !important;
+      font-size: 28pt !important;
+      font-weight: 800 !important;
+      display: block;
+      margin-top: 15px;
+      line-height: 1.5 !important;
+    }
+
+    /* Part / Section Headers Matching SS10 Master */
+    .section-heading, h2.section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 24px 30px !important;
+      border-radius: 16px !important;
+      font-size: 40pt !important;
+      font-weight: 900 !important;
+      margin-top: 55px !important;
+      margin-bottom: 35px !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
+      line-height: 1.4 !important;
+    }
+
+    /* Sub-Headers Matching SS10 Master */
+    .sub-header-red, h3.subsection-heading {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 18px 26px !important;
+      border-radius: 14px !important;
+      font-size: 32pt !important;
+      font-weight: 900 !important;
+      margin-top: 35px !important;
+      margin-bottom: 22px !important;
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.15) !important;
+      line-height: 1.4 !important;
+    }
+
+    .topic-header {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 34pt !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 30px !important;
+    }
+
+    /* Concept & Fact Boxes */
+    .concept-box, .fact-box, .warn-box, .reaction-box {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      padding: 26px 32px !important;
+      border-radius: 18px !important;
+      margin: 30px 0 !important;
+    }
+
+    /* Bolds in notes matching SS10 red badge style */
+    .concept-box b, .concept-card b, .warn-box b, .fact-box b, .point-tag-red, p b, li b, .reaction-box b, strong {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 2px solid #fca5a5 !important;
+      padding: 4px 12px !important;
+      border-radius: 10px !important;
+      display: inline-block !important;
+      margin-right: 6px !important;
+      margin-top: 3px !important;
+      margin-bottom: 3px !important;
+      font-size: 26pt !important;
+    }
+
+    /* Tables */
+    table, .data-table {
+      font-size: 24pt !important;
+      line-height: 1.8 !important;
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin: 30px 0 !important;
+    }
+    th {
+      background: #1e3a8a !important;
+      color: #ffffff !important;
+      font-size: 26pt !important;
+      padding: 16px !important;
+    }
+    td {
+      font-size: 24pt !important;
+      padding: 14px !important;
+      border: 2px solid #cbd5e1 !important;
+    }
+
+        /* =========================================================================
+       ORIGINAL CLEAN SIMULATOR CARD & CONTROLS (RESTORED TO ORIGINAL)
+       ========================================================================= */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn {
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px !important;
+      font-weight: 900 !important;
+      color: #0f172a !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px !important;
+      font-weight: 900 !important;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+    }
+
+    .sim-card b, .sim-card strong {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      color: #0f172a !important;
+    }
+
+    .sim-card .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px !important;
+      font-weight: 900 !important;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-card .sim-btn-step {
+      font-size: 13.5px !important;
+      font-weight: 800 !important;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      font-weight: 700 !important;
+    }
+
+    .sim-card select, .sim-card option {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+    }
+
+    .top-toolbar, .top-toolbar * {
+      font-size: 15px !important;
+      line-height: normal !important;
+    }
+
+.top-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 3px solid #cbd5e1;
+      padding: 12px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      width: 100%;
+    }
+
+    .toolbar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .portal-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 10px;
+      background: #f0fdf4;
+      color: #166534;
+      border: 2px solid #86efac;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .portal-nav-btn:hover {
+      background: #dcfce7;
+      border-color: #22c55e;
+      transform: translateY(-1px);
+    }
+
+    .tool-btn {
+      padding: 7px 13px;
+      font-size: 15px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .tool-btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .tool-btn.primary {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #1d4ed8;
+    }
+
+    /* Main Container - Exactly 1400px Matching Toolbar */
+    .doc-container {
+      max-width: 1400px;
+      width: calc(100% - 50px);
+      margin: 25px auto;
+      background: #ffffff;
+      padding: 45px 50px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      border: 3px solid #cbd5e1;
+      transition: max-width 0.3s;
+    }
+
+    /* Class 10 SS Hero Title */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px 30px !important;
+      margin-bottom: 45px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4) !important;
+    }
+
+    .chapter-hero h1 {
+      font-size: 40px !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 0 0 12px 0 !important;
+    }
+
+    .chapter-hero p {
+      color: #bfdbfe !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      margin: 0 !important;
+    }
+
+    /* Section Headings (Part Header Blue) */
+    .section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 28px !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 25px !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12) !important;
+    }
+
+    /* Sub-Headings (Red Sub Header) */
+    .sub-heading-red, h3.topic-sub {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.1) !important;
+    }
+
+    /* Topic Headings (Green Topic Header) */
+    .topic-heading-green {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+    }
+
+    /* Highlight Tags & Keywords (Like Class 10 SS Red Pills) */
+    .point-tag-red, .concept-box b, .concept-card b, .reaction-box b, p b, li b {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 1.5px solid #fca5a5 !important;
+      padding: 2px 10px !important;
+      border-radius: 8px !important;
+      display: inline-block !important;
+      font-weight: 900 !important;
+    }
+
+    /* Concept & Fact Cards */
+    .concept-box, .concept-card {
+      background: #eff6ff !important;
+      border: 3px solid #93c5fd !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
+    }
+
+    .fact-box {
+      background: #fefce8 !important;
+      border: 3px solid #fde047 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    .warn-box {
+      background: #fef2f2 !important;
+      border: 3px solid #fca5a5 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    /* Simulator Card Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* Simulator 16:9 Projector Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Controls Grid */
+    .sim-controls-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .sim-btn.secondary { background: #0284c7; }
+    .sim-btn.warning { background: #d97706; }
+    .sim-btn.danger { background: #dc2626; }
+    .sim-btn.success { background: #059669; }
+
+    /* Progress bar */
+    .sim-progress-wrap {
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #10b981);
+      transition: width 0.4s ease;
+    }
+
+    /* Floating ONLY Home button */
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);
+    }
+
+    /* Typography & Hierarchy */
+    /* Projector Title Banner matching Class 10 SS Hero */
+    .chapter-hero {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      border: 5px solid #3b82f6;
+      border-radius: 24px;
+      padding: 38px 25px;
+      margin-bottom: 45px;
+      box-shadow: 0 12px 35px rgba(30, 58, 138, 0.45);
+    }
+
+    .chapter-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 6px 20px;
+      border-radius: 999px;
+      border: 2px solid #93c5fd;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    h1.chapter-title {
+      font-size: 38px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+
+    .chapter-subtitle {
+      font-size: 20px;
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    /* Section Headings matching Class 10 SS Part Headers */
+    h2.section-heading {
+      color: #1e3a8a;
+      background-color: #dbeafe;
+      border-left: 16px solid #2563eb;
+      padding: 18px 25px;
+      border-radius: 14px;
+      font-size: 27px;
+      font-weight: 900;
+      margin-top: 45px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3.subsection-heading {
+      color: #065f46;
+      background-color: #d1fae5;
+      border-left: 14px solid #059669;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 23px;
+      font-weight: 900;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+    }
+
+    /* Notes Concept Box */
+    .concept-box {
+      background: #f8fafc;
+      border: 3px solid #cbd5e1;
+      border-left: 12px solid #2563eb;
+      border-radius: 16px;
+      padding: 26px;
+      margin: 30px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      font-size: 20px;
+      line-height: 1.9;
+    }
+    
+    .concept-box b, .concept-box strong, p b, p strong, li b, li strong {
+      color: #991b1b;
+      background-color: #fee2e2;
+      border: 1.5px solid #fca5a5;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+      font-size: 0.98em;
+    }
+
+    .concept-box.amber {
+      border-left-color: var(--accent);
+    }
+
+    .concept-box.green {
+      border-left-color: var(--secondary);
+    }
+
+    .concept-box.rose {
+      border-left-color: #f43f5e;
+    }
+
+    .concept-box.purple {
+      border-left-color: #8b5cf6;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Reaction Equations Display Card */
+    .reaction-pill {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Simulators Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 2px solid #94a3b8;
+      border-radius: 14px;
+      padding: 22px;
+      margin: 28px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sim-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+    }
+
+    .sim-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .control-group {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sim-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .sim-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .sim-btn.secondary {
+      background: #475569;
+    }
+    .sim-btn.secondary:hover {
+      background: #334155;
+    }
+
+    .sim-btn.danger {
+      background: var(--danger);
+    }
+    .sim-btn.danger:hover {
+      background: #dc2626;
+    }
+
+    .sim-btn.success {
+      background: var(--secondary);
+    }
+    .sim-btn.success:hover {
+      background: #047857;
+    }
+
+        /* Projector 16:9 Widescreen Simulator Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-btn {
+      font-size: 15px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 16px !important;
+      font-weight: 800 !important;
+      line-height: 1.7 !important;
+      padding: 15px 20px !important;
+      border-radius: 10px !important;
+      border-left-width: 8px !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .sim-output-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Question & Answer Box */
+    .qa-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .q-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .q-num-badge {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ans-content {
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .ans-content strong {
+      color: #0f172a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .doc-container {
+        padding: 20px 14px;
+        margin: 10px;
+      }
+      h1.chapter-title {
+        font-size: 24px;
+      }
+      .reaction-pill {
+        font-size: 14px;
+      }
+    }
+  
+
+/* Premium 3D Laboratory Simulation Styles & Smooth Animations */
+
+/* Glassware 3D specular shine & lighting */
+.lab-glass {
+  stroke: #0284c7;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* Fluid keyframe animations */
+@keyframes flameFlicker {
+  0% { transform: scale(1) translateY(0); opacity: 0.92; }
+  50% { transform: scale(1.04, 0.96) translateY(-1px); opacity: 1; }
+  100% { transform: scale(0.98, 1.02) translateY(0); opacity: 0.94; }
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-45px) scale(1.4); opacity: 0; }
+}
+
+@keyframes smokeRise {
+  0% { transform: translateY(0) scale(0.7); opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-55px) scale(1.6); opacity: 0; }
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50% { transform: translateY(-25px) translateX(3px); opacity: 0.9; }
+  100% { transform: translateY(-50px) translateX(-2px); opacity: 0; }
+}
+
+@keyframes precipitateFall {
+  0% { transform: translateY(0); opacity: 0.4; }
+  100% { transform: translateY(60px); opacity: 0.9; }
+}
+
+@keyframes wirePulse {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes scalePointerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.anim-flame {
+  transform-origin: center bottom;
+  animation: flameFlicker 0.45s ease-in-out infinite alternate;
+}
+
+.anim-steam {
+  animation: steamRise 2s ease-out infinite;
+}
+
+.anim-bubble {
+  animation: bubbleFloat 1.8s ease-in-out infinite;
+}
+
+/* Compact, Screen-Fit Simulator Card & Stage */
+.sim-card {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 22px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sim-card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sim-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+
+.sim-stage svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+.sim-controls-grid {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.sim-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.18);
+}
+
+.sim-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+.sim-btn.secondary {
+  background: #475569;
+  box-shadow: 0 2px 4px rgba(71, 85, 105, 0.18);
+}
+.sim-btn.secondary:hover {
+  background: #334155;
+}
+
+.sim-btn.success {
+  background: #059669;
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.18);
+}
+.sim-btn.success:hover {
+  background: #047857;
+}
+
+.sim-btn.warning {
+  background: #d97706;
+  box-shadow: 0 2px 4px rgba(217, 119, 6, 0.18);
+}
+.sim-btn.warning:hover {
+  background: #b45309;
+}
+
+.sim-btn.danger {
+  background: #dc2626;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.18);
+}
+.sim-btn.danger:hover {
+  background: #b91c1c;
+}
+
+.sim-status-banner {
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1e293b;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.sim-output-box {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* Static SVGs Container-fit */
+.diagram-container svg, .qa-box svg {
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 250px !important;
+}
+
+
+    /* REALISTIC LIQUID STREAM & RIPPLE ANIMATIONS */
+    @keyframes liquidFlowAnim {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .liquid-flow-stream {
+      animation: liquidFlowAnim 0.6s linear infinite;
+    }
+    @keyframes rippleExpandAnim {
+      0% { r: 2; rx: 3; ry: 1; opacity: 1; }
+      100% { r: 18; rx: 20; ry: 6; opacity: 0; }
+    }
+    .splash-ripple-wave {
+      animation: rippleExpandAnim 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+      transform-origin: center;
+    }
+    .sim-status-banner, #sim4_status, [id$="_status"] {
+      display: block !important;
+      line-height: 1.6 !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+
+  
+    /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
+    @keyframes s4SteamBillow {
+      0% { transform: translateY(0px) scale(0.95); opacity: 0.92; }
+      50% { transform: translateY(-20px) scale(1.04); opacity: 1.0; }
+      100% { transform: translateY(-38px) scale(1.08); opacity: 0.88; }
+    }
+    #s4_steam_plumes {
+      display: none;
+    }
+    #s4_steam_plumes.active {
+      display: block !important;
+      animation: s4SteamBillow 2s infinite ease-in-out !important;
+      transform-origin: 330px 150px;
+    }
+
+    @keyframes s5FumesWaft {
+      0% { transform: translateY(0px) translateX(0px) scale(0.85); opacity: 0.2; }
+      50% { transform: translateY(-35px) translateX(15px) scale(1.1); opacity: 0.8; }
+      100% { transform: translateY(-70px) translateX(30px) scale(1.3); opacity: 0; }
+    }
+    .s5-fumes-loop {
+      animation: s5FumesWaft 2.5s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s6No2Billow {
+      0% { transform: translateY(0px) translateX(0px) scale(0.8); opacity: 0.25; }
+      50% { transform: translateY(-40px) translateX(12px) scale(1.15); opacity: 0.85; }
+      100% { transform: translateY(-80px) translateX(25px) scale(1.35); opacity: 0.1; }
+    }
+    .s6-no2-loop {
+      animation: s6No2Billow 2.6s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s7H2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-h2-loop {
+      animation: s7H2Rise 1.4s infinite linear !important;
+    }
+
+    @keyframes s7O2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-o2-loop {
+      animation: s7O2Rise 2.1s infinite linear !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="qa_master_sci6.html" class="portal-nav-btn" style="background:#0284c7; color:#ffffff; border-color:#0284c7; white-space: nowrap;" title="अभ्यास प्रश्नोत्तर"><i class="fas fa-question-circle"></i> ❓ प्रश्नोत्तर हल ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)" title="अक्षर बड़ा करें">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)" title="अक्षर छोटा करें">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)" title="मोटा करें">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)" title="पतला करें">B-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">पेज चौड़ाई:</span>
+          <button class="tool-btn" onclick="adjustWidth(100)" title="पेज चौड़ा करें">W+</button>
+          <button class="tool-btn" onclick="adjustWidth(-100)" title="पेज संकरा करें">W-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">🧪 सिमुलेटर:</span>
+          <button class="tool-btn" onclick="adjustSimFontSize(1)" title="सिमुलेटर टेक्स्ट बड़ा">सिम A+</button>
+          <button class="tool-btn" onclick="adjustSimFontSize(-1)" title="सिमुलेटर टेक्स्ट छोटा">सिम A-</button>
+          <button class="tool-btn" onclick="adjustSimStroke(0.5)" title="रेखा मोटी करें">रेखा +</button>
+          <button class="tool-btn" onclick="adjustSimStroke(-0.5)" title="रेखा पतली करें">रेखा -</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()" title="प्रिंट या PDF सेव करें"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="chapter-header-card">
+      <div class="chapter-badge">NCERT कक्षा 10 विज्ञान (Science) • अध्याय 6</div>
+      <h1 class="chapter-main-title">अध्याय 6: नियंत्रण एवं समन्वय</h1>
+      <p class="chapter-sub-title">Control and Coordination • तंत्रिका तंत्र, न्यूरॉन, प्रतिवर्ती चाप, मानव मस्तिष्क, पादप गतियां एवं अंतःस्रावी हॉर्मोन</p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-microscope"></i> 3D इंटरैक्टिव लैब सिमुलेटर</span>
+        <span class="highlight-chip"><i class="fas fa-book-open"></i> NCERT संपूर्ण पाठ्यक्रम नोट्स</span>
+        <span class="highlight-chip"><i class="fas fa-project-diagram"></i> उच्च कंट्रास्ट आरेख व फ्लोचार्ट</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा अभ्यास व समाधान</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: जंतु तंत्रिका तंत्र एवं प्रतिवर्ती क्रिया -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">1. जंतु तंत्रिका तंत्र, न्यूरॉन एवं प्रतिवर्ती चाप</h2>
+      </div>
+
+      <div class="ncert-card">
+        <p class="section-desc">
+          पर्यावरण में होने वाले परिवर्तनों (उद्दीपन) के प्रति जीवों की सटीक अनुक्रिया तंत्रिका तंत्र (Nervous System) एवं अंतःस्रावी तंत्र (Endocrine System) द्वारा नियंत्रित होती है।
+        </p>
+
+        <h3 class="subsection-heading"><i class="fas fa-network-wired"></i> (A) न्यूरॉन (तंत्रिका कोशिका - Neuron) की संरचना:</h3>
+        <ul class="concept-list">
+          <li><b>1. द्रुमाक्ष्य (Dendrite):</b> सूचना का उपार्जन करता है तथा विद्युत आवेग प्रारंभ करता है।</li>
+          <li><b>2. कोशिकाकाय (Cyton / Cell Body):</b> विद्युत संकेत द्रुमाक्ष्य से कोशिकाकाय में आता है।</li>
+          <li><b>3. तंत्रिकाक्ष (Axon):</b> यह सबसे लंबा प्रवर्ध है जो आवेग को कोशिकाकाय से आगे की ओर ले जाता है।</li>
+          <li><b>4. सिनेप्स (Synapse / अंतर्ग्रथन):</b> दो तंत्रिका कोशिकाओं के बीच का सूक्ष्म रिक्त स्थान। यहाँ विद्युत आवेग विशेष रासायनिक पदार्थों (न्यूरोट्रांसमीटर) का विमोचन करता है जो दरार को पार करके अगली न्यूरॉन के द्रुमाक्ष्य में समान विद्युत आवेग उत्पन्न करते हैं।</li>
+        </ul>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-bolt"></i> (B) प्रतिवर्ती क्रिया एवं प्रतिवर्ती चाप (Reflex Action & Reflex Arc):</h3>
+        <p class="concept-desc">
+          किसी उद्दीपन के प्रति अनैच्छिक, अत्यंत तीव्र एवं स्वतः होने वाली त्वरित अनुक्रिया को <b>प्रतिवर्ती क्रिया</b> कहते हैं (उदा. गर्म वस्तु छूने पर तुरंत हाथ हटना, पलकें झपकना)।
+          <br><b>प्रतिवर्ती चाप का पथ:</b>
+          <br><span class="reaction-box" style="display:inline-block; margin-top:8px;">
+            उद्दीपन (ऊष्मा) ➔ ग्राही अंग (त्वचा) ➔ संवेदी तंत्रिका ➔ मेरुरज्जु (Spinal Cord) ➔ प्रेरक तंत्रिका ➔ कार्यकर अंग (पेशी सिकुड़ना) ➔ हाथ हटना
+          </span>
+          <br>प्रतिवर्ती चाप सीधे <b>मेरुरज्जु</b> द्वारा नियंत्रित होता है जिससे मस्तिष्क तक जाने का समय बचता है और शरीर दुर्घटना से सुरक्षित रहता है।
+        </p>
+      </div>
+    </section>
+
+    <!-- SIMULATOR 6.1: प्रतिवर्ती चाप सिमुलेटर -->
+    <div class="sim-card" id="sim6_1">
+      <div class="sim-header">
+        <span class="sim-badge">प्रायोगिक 3D सिमुलेटर 6.1</span>
+        <h3 class="sim-title"><i class="fas fa-hand-sparkles"></i> प्रतिवर्ती क्रिया एवं प्रतिवर्ती चाप (Reflex Arc Lab)</h3>
+        <p class="sim-desc">
+          गर्म बर्तन पर हाथ छूने का परीक्षण करें और देखें कि कैसे संवेदी न्यूरॉन द्वारा सिग्नल मेरुरज्जु तक जाता है और बिना मस्तिष्क की प्रतीक्षा किए प्रेरक न्यूरॉन तुरंत हाथ को पीछे खींच लेता है।
+        </p>
+      </div>
+
+      <div class="sim-controls">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="sim-btn" onclick="triggerReflex()">🔥 गर्म बर्तन छुएं (प्रतिवर्ती क्रिया प्रारंभ)</button>
+          <button class="sim-btn" style="background:#64748b;" onclick="resetReflex()">🔄 रीसेट</button>
+        </div>
+      </div>
+
+      <div class="sim-stage-wrapper">
+        <div class="sim-stage" style="background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%); border: 3px solid #16a34a;">
+          <svg id="svg_sim61" viewBox="0 0 1000 500" width="100%" height="100%">
+            <!-- Hot Pan / Stove on Left -->
+            <rect x="80" y="320" width="150" height="30" rx="8" fill="#334155"/>
+            <path d="M 50 315 L 80 335 L 50 355" fill="none" stroke="#475569" stroke-width="6"/> <!-- Handle -->
+            <polygon points="120,310 130,270 145,310" fill="#f97316"/>
+            <polygon points="145,310 155,260 170,310" fill="#ef4444"/>
+            <text x="155" y="380" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#b91c1c" text-anchor="middle">गर्म बर्तन (उद्दीपन)</text>
+
+            <!-- Human Hand / Arm -->
+            <path id="reflex_arm" d="M 230 280 Q 350 260 450 300 Q 550 340 600 320" fill="none" stroke="#fdba74" stroke-width="26" stroke-linecap="round"/>
+            <circle id="reflex_finger" cx="215" cy="285" r="14" fill="#fb923c"/>
+            <text id="reflex_hand_lbl" x="215" y="250" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#0f172a" text-anchor="middle">ग्राही (त्वचा)</text>
+
+            <!-- Spinal Cord on Right -->
+            <rect x="750" y="100" width="160" height="280" rx="25" fill="#f1f5f9" stroke="#0f172a" stroke-width="4"/>
+            <path d="M 800 170 C 820 200 840 200 860 170 C 850 240 850 240 860 310 C 840 280 820 280 800 310 Z" fill="#94a3b8" stroke="#475569" stroke-width="2"/> <!-- Butterfly gray matter -->
+            <text x="830" y="80" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#0f172a" text-anchor="middle">मेरुरज्जु (Spinal Cord)</text>
+
+            <!-- Sensory Nerve (Blue) -->
+            <path id="sensory_path" d="M 220 280 Q 450 150 780 190" fill="none" stroke="#2563eb" stroke-width="5" stroke-dasharray="6,6"/>
+            <text x="500" y="155" font-family="'Outfit', sans-serif" font-size="15" font-weight="900" fill="#2563eb" text-anchor="middle">संवेदी तंत्रिका (Sensory Neuron) ➔</text>
+
+            <!-- Motor Nerve (Red) -->
+            <path id="motor_path" d="M 780 270 Q 550 360 450 300" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="6,6"/>
+            <text x="600" y="380" font-family="'Outfit', sans-serif" font-size="15" font-weight="900" fill="#dc2626" text-anchor="middle">➔ प्रेरक तंत्रिका (Motor Neuron)</text>
+
+            <!-- Pulse packet -->
+            <circle id="reflex_pulse" cx="220" cy="280" r="8" fill="#facc15" opacity="0"/>
+          </svg>
+        </div>
+
+        <div class="sim-status-banner" id="sim61_status" style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:15px; margin-top:15px; color:#0f172a;">
+          <i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> 'गर्म बर्तन छुएं' बटन दबाकर प्रतिवर्ती चाप का क्षणिक विद्युत आवेग एवं स्वतः हाथ हटने की गति देखें।
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: मानव मस्तिष्क एवं पादप गतियां -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">2. मानव मस्तिष्क एवं पादपों में दिशिक गतियां</h2>
+      </div>
+
+      <div class="ncert-card">
+        <h3 class="subsection-heading"><i class="fas fa-brain"></i> (A) मानव मस्तिष्क के तीन मुख्य भाग:</h3>
+        <ol class="concept-list">
+          <li><b>1. अग्र-मस्तिष्क (Forebrain):</b> इसका मुख्य भाग <b>प्रमस्तिष्क (Cerebrum)</b> है। यह मस्तिष्क का सोचने वाला मुख्य केंद्र है। यह ऐच्छिक क्रियाओं का नियंत्रण, ज्ञान, स्मृति, चेतना, तर्क, भूख-प्यास व सभी संवेदी अंगों (आंख, कान, नाक) के संकेतों का विश्लेषण करता है।</li>
+          <li><b>2. मध्य-मस्तिष्क (Midbrain):</b> सिर, गर्दन तथा नेत्र पेशियों की प्रतिवर्ती गतियों तथा श्रवण संकेतों का समन्वय करता है।</li>
+          <li><b>3. पश्च-मस्तिष्क (Hindbrain):</b>
+            <br>• <b>अनुमस्तिष्क (Cerebellum):</b> ऐच्छिक क्रियाओं की परिशुद्धि तथा <b>शरीर के संतुलन, मुद्रा (Posture) व साम्यावस्था</b> का नियंत्रण करता है (उदा. सीधी रेखा में चलना, साइकिल चलाना, पेंसिल उठाना)।
+            <br>• <b>मेडुला (Medulla):</b> सभी अनैच्छिक क्रियाओं जैसे <b>रक्तचाप (Blood pressure), लार आना (Salivation) तथा वमन (Upset/Vomiting)</b> का नियंत्रण करता है।
+            <br>• <b>पोंस (Pons):</b> श्वसन क्रिया के नियमन में भाग लेता है।
+          </li>
+        </ol>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-plant-wilt"></i> (B) पादपों में गतियां (Plant Movements):</h3>
+        <ul class="concept-list">
+          <li><b>1. उद्दीपन के प्रति तत्काल गति (Non-directional):</b> छुईमुई (Mimosa pudica) की पत्तियों को छूने पर वे तुरंत मुरझाकर झुक जाती हैं। यह पादप कोशिकाओं में <b>जल की मात्रा में परिवर्तन (Turgor pressure)</b> के कारण होता है।</li>
+          <li><b>2. वृद्धि पर आश्रित दिशिक गतियां (अनुवर्तन / Tropism):</b>
+            <br>• <b>प्रकाशानुवर्तन (Phototropism):</b> प्ररोह (तना) प्रकाश की दिशा में मुड़ता है (धनात्मक) तथा जड़ें प्रकाश से दूर (ऋणात्मक)।
+            <br>• <b>गुरुत्वानुवर्तन (Geotropism):</b> जड़ें पृथ्वी के गुरुत्व की दिशा में नीचे की ओर (धनात्मक) तथा तना ऊपर की ओर (ऋणात्मक)।
+            <br>• <b>रसायनानुवर्तन (Chemotropism):</b> बीजांड की ओर पराग नलिका की वृद्धि।
+            <br>• <b>जलानुवर्तन (Hydrotropism):</b> जड़ों का जल की दिशा में गति करना।
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SIMULATOR 6.2: पादप प्रकाशानुवर्तन एवं ऑक्सिन हॉर्मोन -->
+    <div class="sim-card" id="sim6_2">
+      <div class="sim-header">
+        <span class="sim-badge">प्रायोगिक 3D सिमुलेटर 6.2</span>
+        <h3 class="sim-title"><i class="fas fa-sun"></i> प्रकाशानुवर्तन (Phototropism) एवं ऑक्सिन हॉर्मोन का विसरण</h3>
+        <p class="sim-desc">
+          देखें कि पौधे पर केवल एक दिशा से प्रकाश डालने पर शीर्ष पर बनने वाला ऑक्सिन हॉर्मोन छायादार भाग की ओर कैसे विसरित होता है और उस भाग की कोशिकाओं को अधिक लंबा करके तने को प्रकाश की ओर झुका देता है।
+        </p>
+      </div>
+
+      <div class="sim-controls">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="sim-btn" onclick="setLightDir('top')">☀️ प्रकाश ऊपर से (सीधी वृद्धि)</button>
+          <button class="sim-btn" onclick="setLightDir('right')">👉 प्रकाश दाईं ओर से (प्रकाशानुवर्तन झुकाव)</button>
+          <button class="sim-btn" style="background:#64748b;" onclick="resetLightDir()">🔄 रीसेट</button>
+        </div>
+      </div>
+
+      <div class="sim-stage-wrapper">
+        <div class="sim-stage" style="background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%); border: 3px solid #16a34a;">
+          <svg id="svg_sim62" viewBox="0 0 1000 500" width="100%" height="100%">
+            <!-- Flower pot on ground -->
+            <rect x="0" y="440" width="1000" height="60" fill="#334155"/>
+            <polygon points="430,440 570,440 550,340 450,340" fill="#b45309" stroke="#78350f" stroke-width="4"/>
+            <text x="500" y="400" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">गमला (Pot)</text>
+
+            <!-- Plant Stem -->
+            <path id="tropism_stem" d="M 500 340 L 500 160" fill="none" stroke="#16a34a" stroke-width="24" stroke-linecap="round"/>
+            <circle id="tropism_tip" cx="500" cy="150" r="16" fill="#22c55e"/>
+            <text id="tropism_lbl" x="500" y="110" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#14532d" text-anchor="middle">प्ररोह शीर्ष (ऑक्सिन उत्पादन स्थल)</text>
+
+            <!-- Light Source Container -->
+            <g id="light_source">
+              <circle cx="500" cy="50" r="28" fill="#facc15"/>
+              <text x="500" y="56" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#0f172a" text-anchor="middle">सूर्य</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="sim-status-banner" id="sim62_status" style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:15px; margin-top:15px; color:#0f172a;">
+          <i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> प्रकाश की दिशा बदलकर तने के झुकाव एवं ऑक्सिन के छायादार भाग में विसरण का अवलोकन करें।
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: पादप हॉर्मोन एवं जंतु हॉर्मोन -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 3</span>
+        <h2 class="section-heading">3. पादप हॉर्मोन एवं मानव अंतःस्रावी ग्रंथियां</h2>
+      </div>
+
+      <div class="ncert-card">
+        <h3 class="subsection-heading"><i class="fas fa-vial"></i> (A) प्रमुख पादप हॉर्मोन (Phytohormones):</h3>
+        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+          <thead>
+            <tr style="background:#0f172a; color:#ffffff;">
+              <th style="padding:10px; border:1px solid #334155;">हॉर्मोन</th>
+              <th style="padding:10px; border:1px solid #334155;">प्रकृति</th>
+              <th style="padding:10px; border:1px solid #334155;">प्रमुख कार्य</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px; border:1px solid #e2e8f0; font-weight:800;">ऑक्सिन (Auxin)</td><td style="padding:8px; border:1px solid #e2e8f0;">वृद्धि प्रेरक</td><td style="padding:8px; border:1px solid #e2e8f0;">कोशिकाओं की लंबाई में वृद्धि, प्रकाशानुवर्तन में सहायक।</td></tr>
+            <tr><td style="padding:8px; border:1px solid #e2e8f0; font-weight:800;">जिबरेलिन (Gibberellin)</td><td style="padding:8px; border:1px solid #e2e8f0;">वृद्धि प्रेरक</td><td style="padding:8px; border:1px solid #e2e8f0;">तने की वृद्धि में सहायता करता है।</td></tr>
+            <tr><td style="padding:8px; border:1px solid #e2e8f0; font-weight:800;">साइटोकाइनिन (Cytokinin)</td><td style="padding:8px; border:1px solid #e2e8f0;">वृद्धि प्रेरक</td><td style="padding:8px; border:1px solid #e2e8f0;">तीव्र <b>कोशिका विभाजन</b> को प्रेरित करता है (फलों व बीजों में प्रचुर)।</td></tr>
+            <tr><td style="padding:8px; border:1px solid #e2e8f0; font-weight:800; color:#b91c1c;">एब्सिसिक अम्ल (ABA)</td><td style="padding:8px; border:1px solid #e2e8f0; color:#b91c1c;">वृद्धि संदमक</td><td style="padding:8px; border:1px solid #e2e8f0; color:#b91c1c;">वृद्धि को रोकता है, <b>पत्तियों का मुरझाना</b> व गिरना।</td></tr>
+          </tbody>
+        </table>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-hospital-user"></i> (B) जंतु हॉर्मोन (Endocrine Hormones):</h3>
+        <ul class="concept-list" style="line-height:2.1;">
+          <li><b>1. थायरॉक्सिन (थायरॉइड ग्रंथि):</b> कार्बोहाइड्रेट, प्रोटीन व वसा के उपापचय का नियमन। थायरॉक्सिन के संश्लेषण हेतु <b>आयोडीन</b> अनिवार्य है; इसकी कमी से गर्दन फूल जाती है जिसे <b>घेंघा रोग (Goitre)</b> कहते हैं।</li>
+          <li><b>2. वृद्धि हॉर्मोन (पीयूष ग्रंथि - Pituitary):</b> शरीर की वृद्धि व विकास का नियमन। बाल्यकाल में कमी से <b>बौनापन (Dwarfism)</b> तथा अतिस्राव से महाकायता होती है।</li>
+          <li><b>3. एड्रिनलिन (अधिवृक्क ग्रंथि - Adrenal):</b> 'करो या मरो' (आपातकालीन) हॉर्मोन। भय या गुस्से के समय हृदय धड़कन व सांस दर बढ़ाकर पेशियों को अधिक ऑक्सीजन देता है।</li>
+          <li><b>4. इंसुलिन (अग्न्याशय - Pancreas):</b> रक्त में <b>शर्करा (ग्लूकोज) के स्तर को नियंत्रित</b> करता है। उचित मात्रा में स्रावित न होने पर <b>मधुमेह (Diabetes)</b> रोग हो जाता है।</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+    var currentContainerWidth = 1400;
+
+    function applyDynamicTypography() {
+      var b = 26 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .concept-box, .fact-box, .warn-box, .reaction-box, .qa-answer, .ncert-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -10) sizeOffset = -10;
+      if (sizeOffset > 18) sizeOffset = 18;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    function adjustWidth(amount) {
+      currentContainerWidth += amount;
+      if (currentContainerWidth < 900) currentContainerWidth = 900;
+      if (currentContainerWidth > 2200) currentContainerWidth = 2200;
+      var el = document.getElementById('mainDocContainer');
+      if (el) el.style.maxWidth = currentContainerWidth + 'px';
+    }
+
+    var simTextOffset = 0;
+    function applySimTypography() {
+      var baseDesc = 19 + simTextOffset;
+      var baseTitle = 26 + simTextOffset;
+      var baseBanner = 18 + simTextOffset;
+      var baseBtn = 15.5 + (simTextOffset > 0 ? Math.round(simTextOffset * 0.5) : simTextOffset * 0.5);
+
+      var elSim = document.getElementById('dyn-sim-fs');
+      if (!elSim) {
+        elSim = document.createElement('style');
+        elSim.id = 'dyn-sim-fs';
+        document.head.appendChild(elSim);
+      }
+
+      elSim.innerHTML = `
+        .sim-card {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.65 !important;
+        }
+        .sim-title, .sim-title span {
+          font-size: ${baseTitle}px !important;
+          font-weight: 900 !important;
+          color: #0f172a !important;
+        }
+        .sim-badge {
+          font-size: ${Math.max(13, baseDesc - 3)}px !important;
+          font-weight: 800 !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-desc {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.7 !important;
+          font-weight: 700 !important;
+          color: #1e293b !important;
+        }
+        .sim-status-banner, [id$="_status"] {
+          font-size: ${baseBanner}px !important;
+          line-height: 1.6 !important;
+          font-weight: 800 !important;
+        }
+        .sim-card .sim-btn {
+          font-size: ${baseBtn}px !important;
+          font-weight: 900 !important;
+        }
+      `;
+    }
+
+    function adjustSimFontSize(amount) {
+      simTextOffset += amount;
+      if (simTextOffset < -6) simTextOffset = -6;
+      if (simTextOffset > 12) simTextOffset = 12;
+      applySimTypography();
+    }
+
+    function adjustSimStroke(delta) {
+      var svgs = document.querySelectorAll('.sim-stage svg');
+      svgs.forEach(function(svg) {
+        var lines = svg.querySelectorAll('path, line, rect, circle, ellipse, polygon');
+        lines.forEach(function(el) {
+          var sw = parseFloat(el.getAttribute('stroke-width'));
+          if (!isNaN(sw) && sw > 0) {
+            var nsw = Math.max(0.8, +(sw + delta * 0.35).toFixed(2));
+            el.setAttribute('stroke-width', nsw);
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      applyDynamicTypography();
+      applySimTypography();
+    });
+
+
+    /* --- SIM 6.1: Reflex Arc --- */
+    function triggerReflex() {
+      var arm = document.getElementById('reflex_arm');
+      var finger = document.getElementById('reflex_finger');
+      var pulse = document.getElementById('reflex_pulse');
+      var status = document.getElementById('sim61_status');
+
+      pulse.setAttribute('opacity', '1');
+      // Arm jerks back
+      arm.setAttribute('d', 'M 280 230 Q 380 200 450 280 Q 550 340 600 320');
+      finger.setAttribute('cx', '265');
+      finger.setAttribute('cy', '235');
+
+      status.innerHTML = '<span style="color:#b91c1c; font-weight:900;">⚡ प्रतिवर्ती क्रिया संपन्न:</span> त्वचा के ग्राही ने ऊष्मा पहचान कर संवेदी न्यूरॉन द्वारा मेरुरज्जु को संकेत भेजा। मेरुरज्जु ने बिना 1 सेकंड गंवाए प्रेरक न्यूरॉन द्वारा हाथ की पेशियों को संकुचित कर हाथ को गर्म बर्तन से तुरंत पीछे खींच लिया!';
+    }
+
+    function resetReflex() {
+      document.getElementById('reflex_arm').setAttribute('d', 'M 230 280 Q 350 260 450 300 Q 550 340 600 320');
+      document.getElementById('reflex_finger').setAttribute('cx', '215');
+      document.getElementById('reflex_finger').setAttribute('cy', '285');
+      document.getElementById('reflex_pulse').setAttribute('opacity', '0');
+      document.getElementById('sim61_status').innerHTML = '<i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> "गर्म बर्तन छुएं" बटन दबाकर प्रतिवर्ती चाप का क्षणिक विद्युत आवेग देखें।';
+    }
+
+    /* --- SIM 6.2: Phototropism --- */
+    function setLightDir(dir) {
+      var stem = document.getElementById('tropism_stem');
+      var tip = document.getElementById('tropism_tip');
+      var lbl = document.getElementById('tropism_lbl');
+      var light = document.getElementById('light_source');
+      var status = document.getElementById('sim62_status');
+
+      if (dir === 'top') {
+        light.innerHTML = '<circle cx="500" cy="50" r="28" fill="#facc15"/><text x="500" y="56" font-family="Outfit" font-size="14" font-weight="900" fill="#0f172a" text-anchor="middle">सूर्य</text>';
+        stem.setAttribute('d', 'M 500 340 L 500 160');
+        tip.setAttribute('cx', '500'); tip.setAttribute('cy', '150');
+        lbl.setAttribute('x', '500'); lbl.setAttribute('y', '110');
+        status.innerHTML = '<b>प्रकाश ऊपर से:</b> ऑक्सिन हॉर्मोन तने के शीर्ष पर समान रूप से वितरित होता है, जिससे दोनों ओर की कोशिकाएं समान दर से बढ़ती हैं और पौधा सीधा ऊपर बढ़ता है।';
+      } else if (dir === 'right') {
+        light.innerHTML = '<circle cx="850" cy="180" r="32" fill="#facc15"/><text x="850" y="186" font-family="Outfit" font-size="14" font-weight="900" fill="#0f172a" text-anchor="middle">सूर्य 👉</text>';
+        stem.setAttribute('d', 'M 500 340 Q 500 240 650 180');
+        tip.setAttribute('cx', '660'); tip.setAttribute('cy', '175');
+        lbl.setAttribute('x', '660'); lbl.setAttribute('y', '140');
+        status.innerHTML = '<span style="color:#15803d; font-weight:900;">प्रकाश दाईं ओर से (प्रकाशानुवर्तन):</span> जब प्रकाश केवल दाईं ओर से आता है, तो ऑक्सिन विसरित होकर तने के <b>छायादार (बाईं) भाग</b> में एकत्र हो जाता है। बाईं ओर की कोशिकाएं तेजी से लंबी होती हैं जिससे तना प्रकाश की ओर मुड़ जाता है!';
+      }
+    }
+
+    function resetLightDir() {
+      setLightDir('top');
+      document.getElementById('sim62_status').innerHTML = '<i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> प्रकाश की दिशा बदलकर तने के झुकाव एवं ऑक्सिन के विसरण का अवलोकन करें।';
+    }
+
+  </script>
+</body>
+</html>

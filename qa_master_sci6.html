@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 6: अध्याय 6: नियंत्रण एवं समन्वय (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci6.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 6</div>
+      <h1 class="qa-main-title">अध्याय 6: नियंत्रण एवं समन्वय — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Control and Coordination • तंत्रिका तंत्र, न्यूरॉन, प्रतिवर्ती चाप, मानव मस्तिष्क, पादप गतियां एवं अंतःस्रावी हॉर्मोन • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 132</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> प्रतिवर्ती क्रिया में मस्तिष्क की क्या भूमिका है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> प्रतिवर्ती क्रियाएं तुरंत और अनैच्छिक रूप से <b>मेरुरज्जु (Spinal cord)</b> द्वारा नियंत्रित होती हैं ताकि तात्कालिक खतरे से बचाव हो सके। इसमें मस्तिष्क की कोई सक्रिय भूमिका नहीं होती, परंतु क्रिया संपन्न होने के बाद सूचना मस्तिष्क तक स्मृति एवं ज्ञान हेतु भेज दी जाती है।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> दो तंत्रिका कोशिकाओं (न्यूरॉन) के मध्य अंतर्ग्रथन (सिनेप्स) में क्या होता है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> सिनेप्स पर पहले न्यूरॉन के अक्षतंतु के सिरे से विद्युत आवेग कुछ विशेष रासायनिक पदार्थों (न्यूरोट्रांसमीटर) का विमोचन कराता है। ये रसायन रिक्त स्थान को पार करके अगले न्यूरॉन के द्रुमाक्ष्य तक पहुंचते हैं और उसमें पुनः समान विद्युत आवेग प्रारंभ करते हैं।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 139</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> आयोडीन युक्त नमक के उपयोग की सलाह क्यों दी जाती है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> थायरॉइड ग्रंथि को <b>थायरॉक्सिन हॉर्मोन</b> बनाने के लिए आयोडीन अनिवार्य होता है। थायरॉक्सिन शरीर में कार्बोहाइड्रेट, वसा एवं प्रोटीन के उपापचय को नियंत्रित करता है। भोजन में आयोडीन की कमी से थायरॉक्सिन नहीं बन पाता और ग्रंथि फूल जाती है, जिसे <b>घेंघा रोग (Goitre)</b> कहते हैं। अतः घेंघा रोग से बचाव हेतु आयोडीन युक्त नमक की सलाह दी जाती है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> निम्नलिखित में से कौन-सा पादप हॉर्मोन है?</p>
+        <p style="padding-left:15px;">(a) इंसुलिन (b) थायरॉक्सिन (c) एस्ट्रोजन (d) साइटोकाइनिन</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (d) साइटोकाइनिन (Cytokinin)।</b> यह पादपों में तीव्र कोशिका विभाजन को प्रेरित करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2 (MCQ):</b> मस्तिष्क का कौन-सा भाग शरीर की स्थिति तथा संतुलन का अनुरक्षण करता है?</p>
+        <p style="padding-left:15px;">(a) प्रमस्तिष्क (b) अनुमस्तिष्क (c) मेडुला (d) ये सभी</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (b) अनुमस्तिष्क (Cerebellum)।</b> यह पश्च-मस्तिष्क का भाग है जो शरीर की साम्यावस्था व मुद्रा बनाए रखता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 9:</b> मधुमेह के कुछ रोगियों की चिकित्सा इंसुलिन का इंजेक्शन देकर क्यों की जाती है?</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+          <b>उत्तर:</b> इंसुलिन हॉर्मोन का उत्पादन अग्न्याशय द्वारा होता है जो रक्त में शर्करा (ग्लूकोज) के स्तर को नियंत्रित करता है। यदि यह उचित मात्रा में स्रावित न हो, तो रक्त में शर्करा का स्तर बहुत बढ़ जाता है जिससे शरीर के अंगों को गंभीर क्षति होती है। अतः रक्त शर्करा को सामान्य स्तर पर बनाए रखने हेतु रोगी को इंसुलिन का इंजेक्शन दिया जाता है।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) न्यूरॉन का नामांकित चित्र बनाकर सूचना संचरण का क्रम लिखिए। (b) किसी एक वृद्धि संदमक पादप हॉर्मोन का नाम व कार्य लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br><b>(a) सूचना संचरण क्रम:</b> द्रुमाक्ष्य (सूचना ग्रहण) ➔ कोशिकाकाय ➔ तंत्रिकाक्ष (विद्युत संकेत) ➔ सिनेप्स (रासायनिक विमोचन) ➔ अगला न्यूरॉन।
+          <br><b>(b) वृद्धि संदमक हॉर्मोन:</b> <b>एब्सिसिक अम्ल (ABA)</b>। यह पादप वृद्धि को रोकता है और पत्तियों के मुरझाने व झड़ने को प्रेरित करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          प्रतिवर्ती क्रिया तथा टहलने के बीच क्या अंतर है? प्रतिवर्ती चाप का रेखाचित्र बनाइए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>1. <b>प्रतिवर्ती क्रिया:</b> अनैच्छिक, तीव्र एवं स्वतः होती है। इसका नियंत्रण मेरुरज्जु करता है (उदा. गर्म वस्तु से हाथ हटना)।
+          <br>2. <b>टहलना:</b> ऐच्छिक क्रिया है जिसे सोच-समझकर किया जाता है। इसका नियंत्रण मस्तिष्क (प्रमस्तिष्क व अनुमस्तिष्क) द्वारा होता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          एड्रिनलिन हॉर्मोन को संकटकालीन हॉर्मोन क्यों कहते हैं? शरीर पर इसके प्रभाव लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> डर, क्रोध या तनाव की स्थिति में एड्रिनल ग्रंथि से यह हॉर्मोन स्रावित होकर शरीर को लड़ने या भागने ('करो या मरो') हेतु तैयार करता है। यह हृदय धड़कन तेज करता है, सांस दर बढ़ाता है तथा पेशियों में रक्त प्रवाह तीव्र करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          पादपों में प्रकाशानुवर्तन किस प्रकार होता है? ऑक्सिन हॉर्मोन की भूमिका समझाइए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> जब पौधे पर एक तरफ से प्रकाश पड़ता है, तो प्ररोह के शीर्ष पर बना ऑक्सिन हॉर्मोन छायादार भाग की ओर विसरित हो जाता है। छायादार भाग की कोशिकाएं अधिक तेजी से लंबी होती हैं जिससे तना प्रकाश की दिशा में मुड़ जाता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          मस्तिष्क के अनुमस्तिष्क (Cerebellum) तथा मेडुला के दो-दो मुख्य कार्य लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>अनुमस्तिष्क:</b> (1) शरीर का संतुलन व मुद्रा बनाए रखना। (2) ऐच्छिक पेशियों की परिशुद्ध गति (जैसे साइकिल चलाना)।
+          <br>• <b>मेडुला:</b> (1) रक्तचाप व हृदय गति का नियमन। (2) उल्टी (वमन) व लार आने जैसी अनैच्छिक क्रियाओं का नियंत्रण।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
