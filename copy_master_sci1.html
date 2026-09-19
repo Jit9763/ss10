@@ -1166,17 +1166,17 @@
   
     /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
     @keyframes s4SteamBillow {
-      0% { transform: translateY(0px) scale(0.96); opacity: 0.88; }
-      50% { transform: translateY(-22px) scale(1.06); opacity: 1.0; }
-      100% { transform: translateY(-40px) scale(1.12); opacity: 0.85; }
+      0% { transform: translateY(0px) scale(0.95); opacity: 0.92; }
+      50% { transform: translateY(-20px) scale(1.04); opacity: 1.0; }
+      100% { transform: translateY(-38px) scale(1.08); opacity: 0.88; }
     }
     #s4_steam_plumes {
       display: none;
     }
     #s4_steam_plumes.active {
       display: block !important;
-      animation: s4SteamBillow 2.2s infinite ease-in-out !important;
-      transform-origin: 330px 170px;
+      animation: s4SteamBillow 2s infinite ease-in-out !important;
+      transform-origin: 330px 150px;
     }
 
     @keyframes s5FumesWaft {
@@ -2304,13 +2304,13 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim4_pbar"></div></div>
 
-            <div class="sim-stage" id="sim4_stage" style="background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%) !important; border: 2.5px solid #86efac !important;">
-        <svg id="sim4_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+            <div class="sim-stage" id="sim4_stage" style="aspect-ratio: 1200 / 620 !important; min-height: 520px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important;">
+        <svg id="sim4_svg" viewBox="0 -80 1200 620" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
             <linearGradient id="s4_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f0fdf4"/>
-              <stop offset="65%" stop-color="#e8f9ee"/>
-              <stop offset="100%" stop-color="#d1fae5"/>
+              <stop offset="0%" stop-color="#dcfce7"/>
+              <stop offset="50%" stop-color="#bbf7d0"/>
+              <stop offset="100%" stop-color="#86efac"/>
             </linearGradient>
             <linearGradient id="s4_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
@@ -2365,13 +2365,15 @@
           </defs>
 
           <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
-          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+          <rect x="0" y="-80" width="1200" height="620" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="10,380 900,380 850,432 50,432" fill="url(#s4_benchTop)"/>
           <polygon points="50,432 850,432 850,438 50,438" fill="#94a3b8" opacity="0.85"/>
           <polygon points="50,438 850,438 850,470 50,470" fill="url(#s4_benchFront)"/>
           <ellipse cx="460" cy="473" rx="420" ry="12" fill="#000000" opacity="0.3" filter="url(#s4_blur)"/>
+
+          
 
           <!-- HEAT AURA (INTENSE EXOTHERMIC GLOW) -->
           <circle id="s4_heat_aura" cx="330" cy="300" r="160" fill="url(#s4_heatGlow)" opacity="0" style="transition: opacity 1s ease;"/>
@@ -2465,6 +2467,12 @@
             
             <line x1="16" y1="100" x2="28" y2="100" stroke="#dc2626" stroke-width="2.5"/>
             <text x="32" y="105" font-size="14" font-weight="900" fill="#dc2626">85°C 🔥</text>
+            <!-- Prominent Projector 85°C Callout Flag -->
+            <g id="s4_thermo_callout" transform="translate(30, 100)" opacity="0" style="transition: opacity 0.5s ease;">
+              <polygon points="0,0 12,-7 12,7" fill="#dc2626"/>
+              <rect x="12" y="-15" width="95" height="30" rx="6" fill="#dc2626" stroke="#ffffff" stroke-width="2.2" filter="drop-shadow(0 3px 8px rgba(0,0,0,0.3))"/>
+              <text x="59" y="6" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">85°C 🔥</text>
+            </g>
 
             <line x1="16" y1="170" x2="24" y2="170" stroke="#64748b" stroke-width="1.5"/>
             <text x="28" y="174" font-size="10" font-weight="800" fill="#64748b">50°C</text>
@@ -2478,43 +2486,58 @@
 
           <!-- ================= BILLOWING STEAM & EXOTHERMIC HEAT VAPOR (APPEARS AFTER WATER IS POURED) ================= -->
           <g id="s4_steam_plumes" style="display: none; transition: opacity 0.5s ease;">
-            <!-- Soft drop shadow / ambient mist layer -->
-            <g filter="url(#s4_blur)" opacity="0.35">
-              <circle cx="285" cy="155" r="32" fill="#94a3b8"/>
-              <circle cx="345" cy="150" r="36" fill="#94a3b8"/>
-              <circle cx="380" cy="155" r="30" fill="#94a3b8"/>
-              <circle cx="270" cy="120" r="38" fill="#94a3b8"/>
-              <circle cx="330" cy="110" r="46" fill="#94a3b8"/>
-              <circle cx="380" cy="115" r="42" fill="#94a3b8"/>
-              <circle cx="295" cy="75" r="44" fill="#94a3b8"/>
-              <circle cx="355" cy="70" r="50" fill="#94a3b8"/>
+            <!-- Ambient Mist & Soft Drop Shadows -->
+            <g opacity="0.38">
+              <!-- Left Spillover Mist -->
+              <circle cx="170" cy="180" r="48" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="130" cy="235" r="40" fill="#64748b" filter="url(#s4_blur)"/>
+              <!-- Right Spillover Mist -->
+              <circle cx="490" cy="180" r="48" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="530" cy="235" r="40" fill="#64748b" filter="url(#s4_blur)"/>
+              <!-- Central Canopy Shadows -->
+              <circle cx="270" cy="80" r="55" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="330" cy="65" r="65" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="395" cy="75" r="58" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="210" cy="120" r="50" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="450" cy="115" r="52" fill="#64748b" filter="url(#s4_blur)"/>
+              <circle cx="330" cy="10" r="60" fill="#64748b" filter="url(#s4_blur)"/>
             </g>
 
-            <!-- Prominent White Puffy Steam Cloud Formation -->
-            <!-- Base Puffs near beaker mouth -->
-            <circle cx="285" cy="155" r="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
-            <circle cx="345" cy="150" r="34" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
-            <circle cx="380" cy="155" r="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
-            
-            <!-- Mid-level Rising Puffs -->
-            <circle cx="270" cy="120" r="36" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" opacity="0.92"/>
-            <circle cx="330" cy="110" r="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
-            <circle cx="380" cy="115" r="40" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" opacity="0.92"/>
+            <!-- Dense Puffy White Cloud Formations ("धुआं ही धुआं") -->
+            <!-- Spillover Clouds over Left & Right Rim -->
+            <circle cx="170" cy="180" r="46" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
+            <circle cx="130" cy="235" r="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.92"/>
+            <circle cx="490" cy="180" r="46" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
+            <circle cx="530" cy="235" r="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.92"/>
 
-            <!-- High Billowing Steam Puffs -->
-            <circle cx="295" cy="75" r="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.92"/>
-            <circle cx="355" cy="70" r="48" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.95"/>
+            <!-- Mouth Erupting Clouds -->
+            <circle cx="280" cy="160" r="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
+            <circle cx="340" cy="150" r="48" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
+            <circle cx="395" cy="160" r="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
 
-            <!-- Rising Steam Wisp Curves -->
-            <path d="M 275,160 Q 250,115 280,75 Q 310,40 285,15" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.9" stroke-linecap="round"/>
-            <path d="M 335,160 Q 365,110 335,65 Q 310,30 335,10" fill="none" stroke="#ffffff" stroke-width="10" opacity="0.95" stroke-linecap="round"/>
-            <path d="M 380,165 Q 405,115 385,70 Q 365,35 390,12" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.9" stroke-linecap="round"/>
+            <!-- Mid-level Spreading Clouds -->
+            <circle cx="210" cy="120" r="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.2" opacity="0.95"/>
+            <circle cx="270" cy="105" r="55" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.95"/>
+            <circle cx="330" cy="95" r="62" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.96"/>
+            <circle cx="395" cy="100" r="58" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.95"/>
+            <circle cx="450" cy="115" r="50" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.2" opacity="0.95"/>
 
-            <!-- Top Indicator Badge -->
-            <g transform="translate(200, 60)">
-              <rect x="-115" y="-13" width="230" height="26" rx="8" fill="#0f172a" opacity="0.95" stroke="#ea580c" stroke-width="2"/>
-              <text x="0" y="5" font-size="12" font-weight="900" fill="#fde047" text-anchor="middle">♨️ खौलती भाप (Boiling Steam)</text>
-            </g>
+            <!-- High Canopy Clouds (Rising High into Headroom) -->
+            <circle cx="260" cy="40" r="52" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5" opacity="0.95"/>
+            <circle cx="330" cy="20" r="62" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5" opacity="0.96"/>
+            <circle cx="400" cy="35" r="56" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5" opacity="0.95"/>
+            <circle cx="330" cy="-25" r="48" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.92"/>
+
+            <!-- Rising Steam Wisp Swirls -->
+            <path d="M 275,160 Q 240,110 270,60 Q 300,15 270,-35" fill="none" stroke="#ffffff" stroke-width="10" opacity="0.95" stroke-linecap="round"/>
+            <path d="M 335,160 Q 370,105 335,50 Q 300,5 340,-45" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.95" stroke-linecap="round"/>
+            <path d="M 390,165 Q 420,110 395,55 Q 370,10 405,-30" fill="none" stroke="#ffffff" stroke-width="9" opacity="0.95" stroke-linecap="round"/>
+          </g>
+
+          <!-- ================= TOP HEADROOM PROJECTOR TEMPERATURE BANNER ================= -->
+          <g id="s4_big_temp_display" transform="translate(200, -50)">
+            <rect id="s4_big_temp_box" x="-155" y="-18" width="310" height="36" rx="9" fill="#0f172a" stroke="#38bdf8" stroke-width="2.2" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.15))"/>
+            <text id="s4_big_temp_text" x="0" y="6" font-size="16" font-weight="900" fill="#bae6fd" text-anchor="middle">🌡️ तापमान: 25°C (कमरे का सामान्य ताप)</text>
           </g>
 
           <!-- ================= WATER POURING BEAKER (RESTS AT RIGHT, TILTS 45° IN STEP 2 WITH MOUTH-DOWN PHYSICS) ================= -->
@@ -3175,7 +3198,7 @@
           </defs>
 
           <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
-          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+          <rect x="0" y="-80" width="1200" height="620" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s7_benchTop)"/>
@@ -3397,7 +3420,7 @@
           </defs>
 
           <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
-          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+          <rect x="0" y="-80" width="1200" height="620" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s8_benchTop)"/>
@@ -3608,7 +3631,7 @@
           </defs>
 
           <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
-          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+          <rect x="0" y="-80" width="1200" height="620" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s9_benchTop)"/>
@@ -3799,7 +3822,7 @@
           </defs>
 
           <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
-          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+          <rect x="0" y="-80" width="1200" height="620" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="10,380 900,380 850,432 50,432" fill="url(#s10_benchTop)"/>
@@ -5094,6 +5117,12 @@
       if (merc) { merc.setAttribute('y', '260'); merc.setAttribute('height', '65'); }
       var badgeTxt = document.getElementById('s4_temp_badge_text');
       if (badgeTxt) { badgeTxt.textContent = '🌡️ 25°C'; badgeTxt.style.fill = '#fca5a5'; }
+      var bigBox = document.getElementById('s4_big_temp_box');
+      var bigTxt = document.getElementById('s4_big_temp_text');
+      if (bigBox) { bigBox.setAttribute('fill', '#0f172a'); bigBox.setAttribute('stroke', '#38bdf8'); }
+      if (bigTxt) { bigTxt.textContent = '🌡️ तापमान: 25°C (कमरे का सामान्य ताप)'; bigTxt.setAttribute('fill', '#bae6fd'); }
+      var callout = document.getElementById('s4_thermo_callout');
+      if (callout) callout.style.opacity = '0';
 
       var lblBox = document.getElementById('s4_label_box'); if (lblBox) lblBox.style.stroke = '#fdba74';
       var lblTxt = document.getElementById('s4_beaker_label');
@@ -5173,6 +5202,10 @@
           // Mercury starts rising to 50°C
           if (merc) { merc.setAttribute('y', '170'); merc.setAttribute('height', '155'); }
           if (badgeTxt) { badgeTxt.textContent = '🌡️ 50°C ⬆'; badgeTxt.style.fill = '#fde047'; }
+          var bigBox = document.getElementById('s4_big_temp_box');
+          var bigTxt = document.getElementById('s4_big_temp_text');
+          if (bigBox) { bigBox.setAttribute('fill', '#0f172a'); bigBox.setAttribute('stroke', '#f59e0b'); }
+          if (bigTxt) { bigTxt.textContent = '🌡️ तापमान: 50°C ⬆ (तेजी से गर्म हो रहा है)'; bigTxt.setAttribute('fill', '#fde047'); }
 
           if (st) st.innerHTML = '<strong>चरण 2 (जल योग के बाद तीव्र खौलता संयोजन):</strong> जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ मिश्रण खौलने लगा, <strong>प्रचुर खौलती भाप</strong> उठी और तापमापी में पारा चढ़ना शुरू हुआ!';
         }, 1800));
@@ -5202,6 +5235,18 @@
         // Mercury climbs to full 85°C
         if (merc) { merc.setAttribute('y', '100'); merc.setAttribute('height', '225'); }
         if (badgeTxt) { badgeTxt.textContent = '🌡️ 85°C 🔥'; badgeTxt.style.fill = '#ef4444'; }
+        var bigBox = document.getElementById('s4_big_temp_box');
+        var bigTxt = document.getElementById('s4_big_temp_text');
+        if (bigBox) { bigBox.setAttribute('fill', '#dc2626'); bigBox.setAttribute('stroke', '#ffffff'); }
+        if (bigTxt) { bigTxt.textContent = '🔥 तापमान: 85°C (अत्यधिक खौलता हुआ!) 🔥'; bigTxt.setAttribute('fill', '#ffffff'); }
+        var callout = document.getElementById('s4_thermo_callout');
+        if (callout) callout.style.opacity = '1';
+        var bigBox = document.getElementById('s4_big_temp_box');
+        var bigTxt = document.getElementById('s4_big_temp_text');
+        if (bigBox) { bigBox.setAttribute('fill', '#dc2626'); bigBox.setAttribute('stroke', '#ffffff'); }
+        if (bigTxt) { bigTxt.textContent = '🔥 तापमान: 85°C (अत्यधिक खौलता हुआ!) 🔥'; bigTxt.setAttribute('fill', '#ffffff'); }
+        var callout = document.getElementById('s4_thermo_callout');
+        if (callout) callout.style.opacity = '1';
 
         if (lblBox) lblBox.style.stroke = '#ea580c';
         if (lblTxt) { lblTxt.textContent = "बुझा चूना [Ca(OH)₂] खौलता दूधिया घोल"; lblTxt.style.fill = "#ffedd5"; }
@@ -5219,6 +5264,12 @@
 
         if (merc) { merc.setAttribute('y', '100'); merc.setAttribute('height', '225'); }
         if (badgeTxt) { badgeTxt.textContent = '🌡️ 85°C 🔥'; badgeTxt.style.fill = '#ef4444'; }
+        var bigBox = document.getElementById('s4_big_temp_box');
+        var bigTxt = document.getElementById('s4_big_temp_text');
+        if (bigBox) { bigBox.setAttribute('fill', '#dc2626'); bigBox.setAttribute('stroke', '#ffffff'); }
+        if (bigTxt) { bigTxt.textContent = '🔥 तापमान: 85°C (अत्यधिक खौलता हुआ!) 🔥'; bigTxt.setAttribute('fill', '#ffffff'); }
+        var callout = document.getElementById('s4_thermo_callout');
+        if (callout) callout.style.opacity = '1';
 
         // Observation panel appears ONLY in Step 4
         addSimTimer(4, setTimeout(function() {
