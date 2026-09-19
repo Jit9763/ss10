@@ -1163,6 +1163,58 @@
       overflow-wrap: break-word !important;
     }
 
+  
+    /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
+    @keyframes s4SteamBillow {
+      0% { transform: translateY(0px) scale(0.92); opacity: 0.3; }
+      50% { transform: translateY(-25px) scale(1.08); opacity: 0.85; }
+      100% { transform: translateY(-50px) scale(1.2); opacity: 0.1; }
+    }
+    .s4-steam-loop {
+      animation: s4SteamBillow 2.8s infinite ease-in-out !important;
+      transform-origin: 340px 240px;
+    }
+
+    @keyframes s5FumesWaft {
+      0% { transform: translateY(0px) translateX(0px) scale(0.85); opacity: 0.2; }
+      50% { transform: translateY(-35px) translateX(15px) scale(1.1); opacity: 0.8; }
+      100% { transform: translateY(-70px) translateX(30px) scale(1.3); opacity: 0; }
+    }
+    .s5-fumes-loop {
+      animation: s5FumesWaft 2.5s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s6No2Billow {
+      0% { transform: translateY(0px) translateX(0px) scale(0.8); opacity: 0.25; }
+      50% { transform: translateY(-40px) translateX(12px) scale(1.15); opacity: 0.85; }
+      100% { transform: translateY(-80px) translateX(25px) scale(1.35); opacity: 0.1; }
+    }
+    .s6-no2-loop {
+      animation: s6No2Billow 2.6s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s7H2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-h2-loop {
+      animation: s7H2Rise 1.4s infinite linear !important;
+    }
+
+    @keyframes s7O2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-o2-loop {
+      animation: s7O2Rise 2.1s infinite linear !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1807,7 +1859,7 @@
           </g>
 
           <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1170, WIDTH: 400) ================= -->
-          <g id="s2_projector_panel" transform="translate(770, 20)">
+          <g id="s2_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <!-- Main Card Container -->
             <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
 
@@ -1916,6 +1968,12 @@
               <stop offset="0%" stop-color="#ffffff"/><stop offset="40%" stop-color="#f1f5f9"/>
               <stop offset="80%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#94a3b8"/>
             </linearGradient>
+                        <radialGradient id="s3_flaskBubbleGrad" cx="35%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="40%" stop-color="#bae6fd" stop-opacity="0.8"/>
+              <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
+            </radialGradient>
             <radialGradient id="s3_soapBubbleGrad" cx="35%" cy="35%" r="65%">
               <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
               <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.8"/>
@@ -1960,15 +2018,18 @@
               <polygon points="216,387 224,383 228,390" fill="#ffffff"/>
             </g>
 
-            <!-- CONTINUOUS JS EFFLEVESCENCE BUBBLES IN FLASK -->
+                        <!-- CONTINUOUS IRIDESCENT EFFLEVESCENCE BUBBLES IN FLASK -->
             <g id="s3_flask_bubbles">
-              <circle id="s3_fb1" cx="165" cy="400" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb2" cx="185" cy="402" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb3" cx="210" cy="405" r="4.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb4" cx="230" cy="402" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb5" cx="250" cy="400" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb6" cx="270" cy="404" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
-              <circle id="s3_fb7" cx="215" cy="408" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <g id="s3_fb1" transform="translate(165, 400)" opacity="0"><circle cx="0" cy="0" r="4.5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.5" cy="-1.5" rx="1.5" ry="0.8" fill="#ffffff"/></g>
+              <g id="s3_fb2" transform="translate(185, 402)" opacity="0"><circle cx="0" cy="0" r="5.5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.8" cy="-1.8" rx="1.8" ry="0.9" fill="#ffffff"/></g>
+              <g id="s3_fb3" transform="translate(208, 405)" opacity="0"><circle cx="0" cy="0" r="6" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.9"/><ellipse cx="-2" cy="-2" rx="2" ry="1" fill="#ffffff"/></g>
+              <g id="s3_fb4" transform="translate(228, 402)" opacity="0"><circle cx="0" cy="0" r="5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.5" cy="-1.5" rx="1.5" ry="0.8" fill="#ffffff"/></g>
+              <g id="s3_fb5" transform="translate(248, 400)" opacity="0"><circle cx="0" cy="0" r="5.5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.8" cy="-1.8" rx="1.8" ry="0.9" fill="#ffffff"/></g>
+              <g id="s3_fb6" transform="translate(268, 404)" opacity="0"><circle cx="0" cy="0" r="4.5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.5" cy="-1.5" rx="1.5" ry="0.8" fill="#ffffff"/></g>
+              <g id="s3_fb7" transform="translate(195, 406)" opacity="0"><circle cx="0" cy="0" r="5" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.5" cy="-1.5" rx="1.5" ry="0.8" fill="#ffffff"/></g>
+              <g id="s3_fb8" transform="translate(220, 407)" opacity="0"><circle cx="0" cy="0" r="6" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.9"/><ellipse cx="-2" cy="-2" rx="2" ry="1" fill="#ffffff"/></g>
+              <g id="s3_fb9" transform="translate(175, 403)" opacity="0"><circle cx="0" cy="0" r="4" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.2" cy="-1.2" rx="1.2" ry="0.6" fill="#ffffff"/></g>
+              <g id="s3_fb10" transform="translate(238, 404)" opacity="0"><circle cx="0" cy="0" r="5.2" fill="url(#s3_flaskBubbleGrad)" stroke="#38bdf8" stroke-width="0.8"/><ellipse cx="-1.6" cy="-1.6" rx="1.6" ry="0.8" fill="#ffffff"/></g>
             </g>
 
             <!-- Conical Flask Glass Body -->
@@ -2274,7 +2335,7 @@
           </g>
 
           <!-- BILLOWING STEAM & HEAT AURA (STEPS 2 & 3) -->
-          <g id="s4_steam_plumes" opacity="0" style="transition: opacity 0.8s ease;">
+          <g id="s4_steam_plumes" class="s4-steam-loop" opacity="0" style="transition: opacity 0.8s ease;">
             <circle cx="310" cy="150" r="30" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
             <circle cx="350" cy="120" r="45" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
             <circle cx="380" cy="90" r="55" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
@@ -2297,7 +2358,7 @@
           </g>
 
           <!-- DEDICATED PROJECTOR OBSERVATION & TEMPERATURE PANEL (RIGHT SIDE X: 640 to 880) -->
-          <g id="s4_projector_panel" transform="translate(635, 45)">
+          <g id="s4_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#ea580c" stroke-width="2.5" opacity="0.96"/>
             <rect x="0" y="0" width="245" height="42" rx="14" fill="#c2410c"/>
             <rect x="0" y="28" width="245" height="14" fill="#c2410c"/>
@@ -2513,7 +2574,7 @@
           </g>
 
           <!-- ================= BILLOWING SO2 & SO3 GAS FUMES (STEP 3) ================= -->
-          <g id="s5_gas_fumes" style="opacity: 0; transition: opacity 0.8s ease;">
+          <g id="s5_gas_fumes" class="s5-fumes-loop" style="opacity: 0; transition: opacity 0.8s ease;">
             <!-- Fumes billowing out of mouth (660, 110) towards right -->
             <path d="M 660 110 Q 720 90 750 60 Q 780 30 820 15" fill="none" stroke="#ea580c" stroke-width="16" stroke-linecap="round" opacity="0.4"/>
             <path d="M 660 110 Q 730 80 770 50 Q 800 20 830 10" fill="none" stroke="#fef08a" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
@@ -2764,7 +2825,7 @@
           </g>
 
           <!-- ================= BILLOWING REDDISH-BROWN NO2 FUMES (STEP 2 & 3) ================= -->
-          <g id="s6_no2_fumes" style="opacity: 0; transition: opacity 0.8s ease;">
+          <g id="s6_no2_fumes" class="s6-no2-loop" style="opacity: 0; transition: opacity 0.8s ease;">
             <!-- Dense reddish-brown gas clouds billowing out of mouth (660, 110) -->
             <path d="M 660 110 Q 720 85 760 50 Q 800 20 840 10" fill="none" stroke="url(#s6_no2Smoke)" stroke-width="28" stroke-linecap="round"/>
             <path d="M 660 110 Q 730 75 780 40 Q 820 15 850 5" fill="none" stroke="#ea580c" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
@@ -2984,7 +3045,7 @@
               <line x1="200" y1="180" x2="212" y2="180" stroke="#ffffff" stroke-width="2.5"/>
               <text x="175" y="184" font-size="11" font-weight="900" fill="#38bdf8" text-anchor="end">20 mL</text>
 
-              <g id="s7_h2_bubbles" opacity="0" class="liquid-flow-stream">
+              <g id="s7_h2_bubbles" class="s7-h2-loop" opacity="0" class="liquid-flow-stream">
                 <circle cx="196" cy="300" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
                 <circle cx="200" cy="270" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
                 <circle cx="195" cy="240" r="4" fill="#ffffff"/>
@@ -3005,7 +3066,7 @@
               <line x1="295" y1="140" x2="302" y2="140" stroke="#ffffff" stroke-width="2.5"/>
               <text x="308" y="144" font-size="11" font-weight="900" fill="#ef4444">10 mL</text>
 
-              <g id="s7_o2_bubbles" opacity="0" class="liquid-flow-stream">
+              <g id="s7_o2_bubbles" class="s7-o2-loop" opacity="0" class="liquid-flow-stream">
                 <circle cx="286" cy="300" r="2.8" fill="#ffffff" stroke="#ef4444" stroke-width="0.8"/>
                 <circle cx="284" cy="260" r="3.2" fill="#ffffff" stroke="#ef4444" stroke-width="0.8"/>
                 <circle cx="286" cy="210" r="3.5" fill="#ffffff"/>
@@ -3041,7 +3102,7 @@
           </g>
 
           <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
-          <g id="s7_projector_panel" transform="translate(640, 45)">
+          <g id="s7_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#2563eb" stroke-width="2.5" opacity="0.96"/>
             <rect x="0" y="0" width="245" height="42" rx="14" fill="#1e3a8a"/>
             <rect x="0" y="28" width="245" height="14" fill="#1e3a8a"/>
@@ -3202,7 +3263,7 @@
           </g>
 
           <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
-          <g id="s8_projector_panel" transform="translate(640, 45)">
+          <g id="s8_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#eab308" stroke-width="2.5" opacity="0.96"/>
             <rect x="0" y="0" width="245" height="42" rx="14" fill="#854d0e"/>
             <rect x="0" y="28" width="245" height="14" fill="#854d0e"/>
@@ -3383,7 +3444,7 @@
           </g>
 
           <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
-          <g id="s9_projector_panel" transform="translate(640, 45)">
+          <g id="s9_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#059669" stroke-width="2.5" opacity="0.96"/>
             <rect x="0" y="0" width="245" height="42" rx="14" fill="#065f46"/>
             <rect x="0" y="28" width="245" height="14" fill="#065f46"/>
@@ -3565,7 +3626,7 @@
           </g>
 
           <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
-          <g id="s10_projector_panel" transform="translate(640, 45)">
+          <g id="s10_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#6366f1" stroke-width="2.5" opacity="0.96"/>
             <rect x="0" y="0" width="245" height="42" rx="14" fill="#4338ca"/>
             <rect x="0" y="28" width="245" height="14" fill="#4338ca"/>
@@ -4707,6 +4768,9 @@
        SIMULATOR 2: LEAD NITRATE + KI 16:9 WIDESCREEN PROJECTOR SCRIPT
        ========================================================== */
     function sim2Reset() {
+      var panel_2 = document.getElementById('s2_projector_panel');
+      if (panel_2) { panel_2.style.opacity = '0'; panel_2.style.pointerEvents = 'none'; }
+
       clearSimTimers(2);
       var pbar = document.getElementById('sim2_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim2_status');
@@ -4822,6 +4886,9 @@
 
         if (st) st.innerHTML = '<span style="color:#059669; font-size:16px;"><strong>चरण 3:</strong> अभिक्रिया पूर्ण होने पर भारी पीला लेड आयोडाइड अवक्षेप बीकर के पेंदे में बैठ जाता है तथा ऊपर पोटैशियम नाइट्रेट का पारदर्शी विलयन बचता है।</span>';
       } else if (s === 4) {
+        var panel_2 = document.getElementById('s2_projector_panel');
+        if (panel_2) { panel_2.style.opacity = '1'; panel_2.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         if (vessel) {
           vessel.style.opacity = '0';
@@ -4865,12 +4932,15 @@
 
     var s3FlaskBubblesData = [
       { id: 's3_fb1', x: 165, y: 400, startY: 405, topY: 342, speed: 1.4, delay: 0 },
-      { id: 's3_fb2', x: 185, y: 402, startY: 406, topY: 342, speed: 1.7, delay: 12 },
-      { id: 's3_fb3', x: 210, y: 405, startY: 408, topY: 342, speed: 1.9, delay: 24 },
-      { id: 's3_fb4', x: 230, y: 402, startY: 407, topY: 342, speed: 1.5, delay: 36 },
-      { id: 's3_fb5', x: 250, y: 400, startY: 405, topY: 342, speed: 1.8, delay: 48 },
-      { id: 's3_fb6', x: 270, y: 404, startY: 406, topY: 342, speed: 1.6, delay: 60 },
-      { id: 's3_fb7', x: 215, y: 408, startY: 409, topY: 342, speed: 2.1, delay: 72 }
+      { id: 's3_fb2', x: 185, y: 402, startY: 406, topY: 342, speed: 1.7, delay: 10 },
+      { id: 's3_fb3', x: 208, y: 405, startY: 408, topY: 342, speed: 1.9, delay: 20 },
+      { id: 's3_fb4', x: 228, y: 402, startY: 407, topY: 342, speed: 1.5, delay: 30 },
+      { id: 's3_fb5', x: 248, y: 400, startY: 405, topY: 342, speed: 1.8, delay: 40 },
+      { id: 's3_fb6', x: 268, y: 404, startY: 406, topY: 342, speed: 1.6, delay: 50 },
+      { id: 's3_fb7', x: 195, y: 406, startY: 409, topY: 342, speed: 2.0, delay: 60 },
+      { id: 's3_fb8', x: 220, y: 407, startY: 409, topY: 342, speed: 1.8, delay: 70 },
+      { id: 's3_fb9', x: 175, y: 403, startY: 406, topY: 342, speed: 1.5, delay: 80 },
+      { id: 's3_fb10', x: 238, y: 404, startY: 408, topY: 342, speed: 1.7, delay: 90 }
     ];
 
     var s3SoapBubblesData = [
@@ -4893,8 +4963,10 @@
           var el = document.getElementById(b.id);
           if (el) {
             var progress = (b.startY - b.y) / (b.startY - b.topY);
-            var op = progress < 0.15 ? (progress / 0.15) : (progress > 0.85 ? (1 - progress) / 0.15 : 0.9);
-            el.setAttribute('cy', b.y);
+            var op = progress < 0.15 ? (progress / 0.15) : (progress > 0.85 ? (1 - progress) / 0.15 : 0.95);
+            var wobble = Math.sin((b.startY - b.y) * 0.12) * 4;
+            var sc = 0.6 + progress * 0.5;
+            el.setAttribute('transform', 'translate(' + (b.x + wobble) + ',' + b.y + ') scale(' + sc + ')');
             el.style.opacity = op;
           }
         });
@@ -4960,9 +5032,12 @@
       // Reset bubble data positions
       s3FlaskBubblesData.forEach(function(b, idx) {
         b.y = b.startY;
-        b.delay = idx * 12;
+        b.delay = idx * 10;
         var el = document.getElementById(b.id);
-        if (el) { el.setAttribute('cy', b.startY); el.style.opacity = '0'; }
+        if (el) {
+          el.setAttribute('transform', 'translate(' + b.x + ',' + b.startY + ') scale(0.6)');
+          el.style.opacity = '0';
+        }
       });
       s3SoapBubblesData.forEach(function(b, idx) {
         b.y = b.startY;
@@ -5098,6 +5173,9 @@
 
     /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) 16:9 PROJECTOR MASTER --- */
     function sim4Reset() {
+      var panel_4 = document.getElementById('s4_projector_panel');
+      if (panel_4) { panel_4.style.opacity = '0'; panel_4.style.pointerEvents = 'none'; }
+
       clearSimTimers(4);
       var pbar = document.getElementById('sim4_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim4_status');
@@ -5195,6 +5273,9 @@
 
         if (st) st.innerHTML = '<strong>चरण 3 (बुझा चूना निर्माण व ऊष्मा निष्कासन):</strong> अभिक्रिया में कैल्शियम हाइड्रोक्साइड [Ca(OH)₂ - बुझा हुआ चूना] बना तथा बीकर अत्यधिक गर्म हो गया। बीकर को छूने पर तीव्र गर्मी महसूस होती है!';
       } else if (s === 4) {
+        var panel_4 = document.getElementById('s4_projector_panel');
+        if (panel_4) { panel_4.style.opacity = '1'; panel_4.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         if (thermo) thermo.setAttribute('opacity', '1');
 
@@ -5503,6 +5584,9 @@
     }
 
     function sim7Reset() {
+      var panel_7 = document.getElementById('s7_projector_panel');
+      if (panel_7) { panel_7.style.opacity = '0'; panel_7.style.pointerEvents = 'none'; }
+
       clearSimTimers(7);
       var pbar = document.getElementById('sim7_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim7_status');
@@ -5593,6 +5677,9 @@
 
         if (st) st.innerHTML = '<strong>चरण 3 (अधोमुखी जल विस्थापन व 2:1 आयतन):</strong> कैथोड (-) पर एकत्रित हाइड्रोजन (H₂) गैस का आयतन 20 mL है, जबकि एनोड (+) पर एकत्रित ऑक्सीजन (O₂) का आयतन ठीक आधा (10 mL) है। गैसों का अनुपात <strong>2 : 1</strong> प्राप्त होता है!';
       } else if (s === 4) {
+        var panel_7 = document.getElementById('s7_projector_panel');
+        if (panel_7) { panel_7.style.opacity = '1'; panel_7.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         if (h2Gas) h2Gas.setAttribute('height', '70');
         if (o2Gas) o2Gas.setAttribute('height', '35');
@@ -5628,6 +5715,9 @@
 
             /* --- SIMULATOR 8: AgCl PHOTODECOMPOSITION (GOLD STANDARD) --- */
     function sim8Reset() {
+      var panel_8 = document.getElementById('s8_projector_panel');
+      if (panel_8) { panel_8.style.opacity = '0'; panel_8.style.pointerEvents = 'none'; }
+
       clearSimTimers(8);
       var pbar = document.getElementById('sim8_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim8_status');
@@ -5685,6 +5775,9 @@
 
         if (st) st.innerHTML = '<strong>चरण 3 (प्रकाश-रासायनिक वियोजन):</strong> धूप में रासायनिक बंध टूटने से श्वेत AgCl वियोजित होकर <strong>धूसर (सलेटी) रंग की सिल्वर (Ag) धातु</strong> में परिवर्तित हो गया तथा क्लोरीन (Cl₂) गैस वाष्प बनकर निकल गई।';
       } else if (s === 4) {
+        var panel_8 = document.getElementById('s8_projector_panel');
+        if (panel_8) { panel_8.style.opacity = '1'; panel_8.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         if (beams) beams.style.opacity = '0.7';
         if (mound) mound.style.fill = '#475569';
@@ -5718,6 +5811,9 @@
 
     /* --- SIMULATOR 9: Fe + CuSO4 DISPLACEMENT (GOLD STANDARD) --- */
     function sim9Reset() {
+      var panel_9 = document.getElementById('s9_projector_panel');
+      if (panel_9) { panel_9.style.opacity = '0'; panel_9.style.pointerEvents = 'none'; }
+
       clearSimTimers(9);
       var pbar = document.getElementById('sim9_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim9_status');
@@ -5784,6 +5880,9 @@
 
         if (st) st.innerHTML = '<strong>चरण 3 (20 मिनट बाद रंग परिवर्तन):</strong> विस्थापन अभिक्रिया के कारण परखनली B का गहरा नीला रंग फीका पड़कर <strong>हल्का हरा (फेरस सल्फेट, FeSO₄)</strong> हो गया, जबकि नियंत्रण परखनली A अभी भी गहरी नीली है!';
       } else if (s === 4) {
+        var panel_9 = document.getElementById('s9_projector_panel');
+        if (panel_9) { panel_9.style.opacity = '1'; panel_9.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         // Pull coated nails out of Tube B
         if (asm) asm.style.transform = 'translate(0px, 0px)';
@@ -5811,6 +5910,9 @@
 
         /* --- SIMULATOR 10: Na2SO4 + BaCl2 DOUBLE DISPLACEMENT 16:9 PROJECTOR MASTER --- */
     function sim10Reset() {
+      var panel_10 = document.getElementById('s10_projector_panel');
+      if (panel_10) { panel_10.style.opacity = '0'; panel_10.style.pointerEvents = 'none'; }
+
       clearSimTimers(10);
       var pbar = document.getElementById('sim10_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim10_status');
@@ -5911,6 +6013,9 @@
 
         if (st) st.innerHTML = '<strong>चरण 3 (अवसादन):</strong> बीकर वापस हट गया। भारी श्वेत BaSO₄ अवक्षेप के कण गुरुत्वाकर्षण से बीकर के निचले पेंदे में बैठ गए तथा ऊपर का द्रव स्वच्छ पारदर्शी सोडियम क्लोराइड (NaCl) बन गया।';
       } else if (s === 4) {
+        var panel_10 = document.getElementById('s10_projector_panel');
+        if (panel_10) { panel_10.style.opacity = '1'; panel_10.style.pointerEvents = 'auto'; }
+
         if (pbar) pbar.style.width = '100%';
         if (stream) stream.setAttribute('opacity', '0');
         if (bloom) bloom.setAttribute('opacity', '0.2');
