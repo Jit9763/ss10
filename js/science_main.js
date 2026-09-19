@@ -230,9 +230,14 @@ function renderScienceGrid(chaptersToRender) {
         <div style="font-size: 11px; font-weight: 700; color: #0284c7; margin-bottom: 4px;">🔬 मुख्य परीक्षा बिंदु:</div>
         <div style="font-size: 11px; color: #475569; line-height: 1.4;">${ch.keyPoints[0]}</div>
       </div>
-      <a href="qa_master_sci${ch.num}.html" style="display: block; text-align: center; background: #0284c7; color: #ffffff; padding: 10px 14px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; transition: background 0.2s;" onmouseover="this.style.background='#0369a1'" onmouseout="this.style.background='#0284c7'">
-        📖 संपूर्ण नोट्स व प्रयोग सिमुलेटर खोलें ➔
-      </a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
+        <a href="copy_master_sci${ch.num}.html" style="text-align: center; background: #059669; color: #ffffff; padding: 10px 8px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s;" onmouseover="this.style.background='#047857'" onmouseout="this.style.background='#059669'">
+          📝 संपूर्ण नोट्स व 3D लैब
+        </a>
+        <a href="qa_master_sci${ch.num}.html" style="text-align: center; background: #0284c7; color: #ffffff; padding: 10px 8px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s;" onmouseover="this.style.background='#0369a1'" onmouseout="this.style.background='#0284c7'">
+          ❓ अभ्यास प्रश्नोत्तर हल
+        </a>
+      </div>
     `;
     grid.appendChild(card);
   });

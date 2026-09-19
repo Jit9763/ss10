@@ -1,0 +1,3282 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>कक्षा 10 विज्ञान अध्याय 1: रासायनिक अभिक्रियाएं एवं समीकरण (संपूर्ण नोट्स व सिमुलेटर)</title>
+  
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --secondary: #059669;
+      --accent: #f59e0b;
+      --danger: #ef4444;
+      --bg-main: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+      --sim-stroke: 2.5px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: var(--text-main);
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.7;
+      font-size: 17px;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Fixed top projector toolbar (NOT FLOATING) */
+    .top-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 2px solid #cbd5e1;
+      padding: 10px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tool-btn {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+
+    .tool-btn:hover {
+      background: #f1f5f9;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .tool-btn.primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .tool-btn.primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .portal-nav-btn {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      color: #059669;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .portal-nav-btn:hover {
+      background: #dcfce7;
+    }
+
+    /* Main Container */
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      background: #ffffff;
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      transition: max-width 0.3s;
+    }
+
+    /* Floating ONLY Home button */
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);
+    }
+
+    /* Typography & Hierarchy */
+    .chapter-hero {
+      text-align: center;
+      padding-bottom: 25px;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 30px;
+    }
+
+    .chapter-tag {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0284c7;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      border: 1px solid #bae6fd;
+      margin-bottom: 12px;
+    }
+
+    h1.chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #64748b;
+    }
+
+    h2.section-heading {
+      font-size: 23px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 18px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3.subsection-heading {
+      font-size: 19px;
+      font-weight: 800;
+      color: #1e293b;
+      margin: 22px 0 12px 0;
+    }
+
+    /* Notes Concept Box */
+    .concept-box {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-left: 6px solid var(--primary);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .concept-box.amber {
+      border-left-color: var(--accent);
+    }
+
+    .concept-box.green {
+      border-left-color: var(--secondary);
+    }
+
+    .concept-box.rose {
+      border-left-color: #f43f5e;
+    }
+
+    .concept-box.purple {
+      border-left-color: #8b5cf6;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Reaction Equations Display Card */
+    .reaction-pill {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Simulators Styling */
+    .sim-card {
+      background: #ffffff;
+      border: 2px solid #94a3b8;
+      border-radius: 14px;
+      padding: 22px;
+      margin: 28px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sim-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+    }
+
+    .sim-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .control-group {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sim-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .sim-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .sim-btn.secondary {
+      background: #475569;
+    }
+    .sim-btn.secondary:hover {
+      background: #334155;
+    }
+
+    .sim-btn.danger {
+      background: var(--danger);
+    }
+    .sim-btn.danger:hover {
+      background: #dc2626;
+    }
+
+    .sim-btn.success {
+      background: var(--secondary);
+    }
+    .sim-btn.success:hover {
+      background: #047857;
+    }
+
+        .sim-stage {
+      background: #ffffff !important;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      color: #0f172a;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.02), 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .sim-output-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Question & Answer Box */
+    .qa-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .q-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .q-num-badge {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ans-content {
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .ans-content strong {
+      color: #0f172a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .doc-container {
+        padding: 20px 14px;
+        margin: 10px;
+      }
+      h1.chapter-title {
+        font-size: 24px;
+      }
+      .reaction-pill {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Non-Floating Projector Toolbar -->
+  <header class="top-toolbar">
+          <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="qa_master_sci1.html" class="portal-nav-btn" style="background:#0284c7; color:#ffffff; border-color:#0284c7;" title="अभ्यास प्रश्नोत्तर"><i class="fas fa-question-circle"></i> ❓ अभ्यास प्रश्नोत्तर खोलें ➔</a>
+      </div>
+
+    <div class="toolbar-right">
+      <!-- Font Size Controls -->
+      <button class="tool-btn" onclick="adjustFontSize(1)" title="फ़ॉन्ट आकार बढ़ाएं">
+        <i class="fas fa-font"></i> A+
+      </button>
+      <button class="tool-btn" onclick="adjustFontSize(-1)" title="फ़ॉन्ट आकार घटाएं">
+        A-
+      </button>
+
+      <!-- Font Weight Controls -->
+      <button class="tool-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएं">
+        <strong>B+</strong>
+      </button>
+      <button class="tool-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएं">
+        B-
+      </button>
+
+      <!-- Page Width Controls -->
+      <button class="tool-btn" onclick="adjustWidth(60)" title="पृष्ठ चौड़ाई बढ़ाएं">
+        <i class="fas fa-arrows-alt-h"></i> W+
+      </button>
+      <button class="tool-btn" onclick="adjustWidth(-60)" title="पृष्ठ चौड़ाई घटाएं">
+        W-
+      </button>
+
+      <!-- Simulator Line Thickness Controls -->
+      <button class="tool-btn" onclick="adjustSimStroke(1)" title="सिमुलेटर रेखाएं मोटी करें">
+        <i class="fas fa-pen-nib"></i> रेखा +
+      </button>
+      <button class="tool-btn" onclick="adjustSimStroke(-1)" title="सिमुलेटर रेखाएं पतली करें">
+        रेखा -
+      </button>
+
+      <!-- Print Button -->
+      <button class="tool-btn primary" onclick="window.print()">
+        <i class="fas fa-print"></i> प्रिंट
+      </button>
+    </div>
+  </header>
+
+  <!-- Floating ONLY Home Button -->
+  <a href="science10.html" class="floating-home-btn" title="मुख्य विज्ञान पोर्टल पर जाएं">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <main class="doc-container" id="mainDocContainer">
+    <!-- Chapter Hero -->
+    <div class="chapter-hero">
+      <span class="chapter-tag">NCERT कक्षा 10 विज्ञान (Hindi Medium)</span>
+      <h1 class="chapter-title">अध्याय 1: रासायनिक अभिक्रियाएं एवं समीकरण</h1>
+      <p class="chapter-subtitle">Chemical Reactions and Equations | सचित्र विस्तृत नोट्स, सभी NCERT प्रयोग सिमुलेटर एवं संपूर्ण अभ्यास प्रश्नोत्तर</p>
+    </div>
+
+    <!-- SECTION 1: रासायनिक अभिक्रिया एवं उसके लक्षण -->
+    <h2 class="section-heading">
+      <i class="fas fa-flask" style="color: #0284c7;"></i> 1. रासायनिक अभिक्रिया क्या है एवं इसके मुख्य लक्षण?
+    </h2>
+
+    <div class="concept-box">
+      <div class="concept-title">
+        <i class="fas fa-info-circle" style="color: #0284c7;"></i> परिभाषा (Definition)
+      </div>
+      <p>जब एक या एक से अधिक पदार्थ (अभिकारक) परस्पर क्रिया करके भिन्न गुणधर्म वाले नए पदार्थ (उत्पाद) बनाते हैं, तो इस प्रक्रम को <strong>रासायनिक अभिक्रिया (Chemical Reaction)</strong> कहते हैं।</p>
+      <p style="margin-top: 8px;"><strong>दैनिक जीवन में उदाहरण:</strong> दूध से दही बनना, भोजन का पकना, हमारे शरीर में भोजन का पाचन, लोहे की तवे/कील पर जंग लगना, तथा श्वसन क्रिया।</p>
+    </div>
+
+    <div class="concept-box amber">
+      <div class="concept-title">
+        <i class="fas fa-check-circle" style="color: #f59e0b;"></i> रासायनिक अभिक्रिया की पहचान (4 प्रमुख लक्षण)
+      </div>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>1. अवस्था में परिवर्तन (Change in State):</strong> जैसे मोमबत्ती का जलना (ठोस से द्रव व गैस)।</li>
+        <li><strong>2. रंग में परिवर्तन (Change in Colour):</strong> जैसे लोहे की कील डालने पर कॉपर सल्फेट का नीला रंग हरा हो जाना।</li>
+        <li><strong>3. गैस का निकास या उत्सर्जन (Evolution of Gas):</strong> जैसे जस्ते पर अम्ल डालने से हाइड्रोजन (\(H_2\)) गैस निकलना।</li>
+        <li><strong>4. तापमान में परिवर्तन (Change in Temperature):</strong> जैसे कली चूने में जल मिलाने पर बीकर का अत्यधिक गर्म हो जाना।</li>
+      </ul>
+    </div>
+
+    <!-- SVG 1: Magnesium Ribbon Burning Apparatus -->
+    <div style="text-align: center; margin: 25px auto; max-width: 680px;">
+      <svg viewBox="0 0 680 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" style="background:#0f172a; border-radius:12px; border:1px solid #334155; font-family:sans-serif;">
+        <text x="340" y="26" fill="#38bdf8" font-size="15" font-weight="bold" text-anchor="middle">क्रियाकलाप 1.1: मैग्नीशियम रिबन का वायु में दहन तथा MgO का संग्रह</text>
+        <!-- Bunsen Burner -->
+        <rect x="180" y="190" width="60" height="45" rx="4" fill="#64748b"/>
+        <rect x="200" y="135" width="20" height="55" fill="#94a3b8"/>
+        <!-- Flame -->
+        <path d="M 210 135 Q 195 90 210 65 Q 225 90 210 135" fill="#facc15" opacity="0.9"/>
+        <path d="M 210 135 Q 202 100 210 85 Q 218 100 210 135" fill="#ffffff"/>
+        <text x="210" y="250" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">बर्नर</text>
+
+        <!-- Tongs holding Ribbon -->
+        <path d="M 120 70 L 210 90 L 110 100" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+        <text x="100" y="65" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="end">चिमटा (Tongs)</text>
+
+        <!-- Ribbon Tip with Dazzling White Flame -->
+        <circle cx="210" cy="90" r="14" fill="#ffffff" filter="drop-shadow(0 0 8px #ffffff)"/>
+        <text x="270" y="85" fill="#fde047" font-size="12" font-weight="bold">चमकदार श्वेत लौ</text>
+
+        <!-- Watch Glass with White Powder -->
+        <ellipse cx="440" cy="210" rx="90" ry="20" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+        <ellipse cx="440" cy="208" rx="60" ry="12" fill="#ffffff" opacity="0.85"/>
+        <text x="440" y="245" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">वॉच ग्लास</text>
+        <text x="440" y="195" fill="#0f172a" font-size="11" font-weight="bold" text-anchor="middle">मैग्नीशियम ऑक्साइड (MgO) श्वेत चूर्ण</text>
+
+        <!-- Right Panel Summary Box -->
+        <rect x="520" y="55" width="145" height="125" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="592" y="78" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">रासायनिक समीकरण</text>
+        <text x="592" y="105" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">2Mg + O₂ → 2MgO</text>
+        <line x1="530" y1="118" x2="655" y2="118" stroke="#475569" stroke-width="1"/>
+        <text x="592" y="136" fill="#a7f3d0" font-size="11" text-anchor="middle">प्रकृति: क्षारकीय</text>
+        <text x="592" y="154" fill="#fef08a" font-size="11" text-anchor="middle">लाल लिटमस → नीला</text>
+      </svg>
+    </div>
+
+    <!-- SIMULATOR 1: Magnesium Ribbon Burning -->
+    <!-- SIMULATOR 1: MAGNESIUM RIBBON BURNING -->
+    <div class="sim-card" id="sim1_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-fire" style="color: #ea580c;"></i>
+          <span>लाइव 3D सिमुलेटर 1: मैग्नीशियम रिबन का दहन (क्रियाकलाप 1.1)</span>
+        </div>
+        <span class="sim-badge">3D प्रयोगशाला 🧪</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        मैग्नीशियम रिबन को जलाने से पूर्व रेगमाल से रगड़कर साफ किया जाता है ताकि उस पर जमी क्षारीय मैग्नीशियम ऑक्साइड/कार्बोनेट की धुंधली रक्षात्मक परत हट सके। नीचे दिए गए चरणों को क्रमवार क्लिक करके 3D प्रयोग देखें:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim1_btn1" onclick="sim1SetStep(1)">
+          <i class="fas fa-brush"></i> चरण 1: रेगमाल से रगड़ें
+        </button>
+        <button class="sim-btn" id="sim1_btn2" onclick="sim1SetStep(2)">
+          <i class="fas fa-fire"></i> चरण 2: बर्नर पर जलाएं
+        </button>
+        <button class="sim-btn success" id="sim1_btn3" onclick="sim1SetStep(3)">
+          <i class="fas fa-vial"></i> चरण 3: लिटमस परीक्षण
+        </button>
+        <button class="sim-btn danger" onclick="sim1Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim1_stage">
+        <svg id="sim1_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim1_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim1_burner_metal" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#475569"/>
+              <stop offset="50%" stop-color="#94a3b8"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <linearGradient id="sim1_mg_unclean" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#94a3b8"/>
+              <stop offset="100%" stop-color="#64748b"/>
+            </linearGradient>
+            <linearGradient id="sim1_mg_clean" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="35%" stop-color="#e2e8f0"/>
+              <stop offset="70%" stop-color="#cbd5e1"/>
+              <stop offset="100%" stop-color="#94a3b8"/>
+            </linearGradient>
+            <radialGradient id="sim1_dazzle" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+              <stop offset="30%" stop-color="#fef9c3" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#fef08a" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="sim1_glass" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.4"/>
+            </linearGradient>
+            <filter id="sim1_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim1_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Bunsen Burner -->
+          <ellipse cx="210" cy="270" rx="42" ry="12" fill="url(#sim1_burner_metal)" filter="url(#sim1_drop)"/>
+          <rect x="202" y="165" width="16" height="98" fill="url(#sim1_burner_metal)" rx="2"/>
+          <rect x="199" y="224" width="22" height="12" fill="#1e293b" rx="2"/>
+          <circle cx="206" cy="230" r="3" fill="#0f172a"/>
+          <polygon points="198,165 222,165 218,156 202,156" fill="#334155"/>
+          <text x="210" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">बन्सन बर्नर</text>
+
+          <!-- Flame -->
+          <g id="sim1_flame" style="display: none;">
+            <path d="M210,75 Q232,120 221,156 L199,156 Q188,120 210,75 Z" fill="#fb923c" opacity="0.85"/>
+            <path d="M210,95 Q224,130 217,156 L203,156 Q196,130 210,95 Z" fill="#facc15"/>
+            <path d="M210,122 Q219,142 215,156 L205,156 Q201,142 210,122 Z" fill="#38bdf8"/>
+            <circle id="sim1_flash_glow" cx="210" cy="120" r="55" fill="url(#sim1_dazzle)" opacity="0"/>
+          </g>
+
+          <!-- Tongs -->
+          <g id="sim1_tongs">
+            <path d="M380,105 L285,128 L230,135" stroke="#64748b" stroke-width="6" stroke-linecap="round" fill="none" filter="url(#sim1_drop)"/>
+            <path d="M380,118 L285,133 L230,138" stroke="#475569" stroke-width="6" stroke-linecap="round" fill="none" filter="url(#sim1_drop)"/>
+            <circle cx="285" cy="130" r="4" fill="#0f172a"/>
+            <rect x="375" y="100" width="75" height="24" rx="4" fill="#1e293b" filter="url(#sim1_drop)"/>
+            <text x="412" y="117" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">चिमटा (Tongs)</text>
+          </g>
+
+          <!-- Magnesium Ribbon -->
+          <rect id="sim1_ribbon" x="175" y="133" width="60" height="7" rx="2" fill="url(#sim1_mg_unclean)" stroke="#475569" stroke-width="1.2" filter="url(#sim1_drop)"/>
+          <text id="sim1_ribbon_lbl" x="155" y="125" font-size="11" font-weight="700" fill="#334155">Mg रिबन</text>
+
+          <!-- Sandpaper Tool Graphic -->
+          <g id="sim1_sandpaper" style="display: none;">
+            <rect x="190" y="110" width="34" height="20" rx="3" fill="#d97706" stroke="#78350f" stroke-width="1.5" filter="url(#sim1_drop)"/>
+            <text x="207" y="124" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">रेगमाल</text>
+            <line x1="185" y1="131" x2="235" y2="131" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,2"/>
+          </g>
+
+          <!-- Watch Glass -->
+          <g id="sim1_watch_glass" filter="url(#sim1_drop)">
+            <path d="M260,266 Q320,285 380,266 Q320,269 260,266 Z" fill="url(#sim1_glass)" stroke="#0284c7" stroke-width="1.5"/>
+            <ellipse cx="320" cy="266" rx="60" ry="8" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="320" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">वॉच ग्लास</text>
+            <!-- White MgO Ash -->
+            <ellipse id="sim1_ash_pile" cx="320" cy="267" rx="26" ry="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" style="display: none;"/>
+            <text id="sim1_ash_lbl" x="320" y="258" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle" style="display: none;">MgO (श्वेत चूर्ण)</text>
+          </g>
+
+          <!-- Litmus Strip -->
+          <g id="sim1_litmus" style="display: none;" filter="url(#sim1_drop)">
+            <rect x="310" y="195" width="22" height="68" rx="2" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+            <rect id="sim1_litmus_blue" x="310" y="238" width="22" height="25" rx="2" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+            <text x="342" y="225" font-size="12" font-weight="800" fill="#1d4ed8">लाल लिटमस → नीला (क्षारकीय प्रकृति)</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim1_status">
+          <strong>प्रारंभिक अवस्था:</strong> मैग्नीशियम रिबन कमरे के ताप पर है। सतह पर धुंधली रक्षात्मक ऑक्साइड परत विद्यमान है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim1_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(2Mg(s) + O_2(g) \xrightarrow{\Delta} 2MgO(s)\)। मैग्नीशियम चमकदार श्वेत ज्वाला (dazzling white flame) के साथ जलकर श्वेत चूर्ण मैग्नीशियम ऑक्साइड (\(MgO\)) बनाता है। जल में मिलाने पर यह \(Mg(OH)_2\) बनाकर लाल लिटमस को <strong>नीला</strong> कर देता है, जो धात्विक ऑक्साइड की <strong>क्षारकीय</strong> प्रकृति सिद्ध करता है।
+      </div>
+    </div>
+
+    <!-- SECTION 2: रासायनिक समीकरण एवं संतुलन -->
+    <h2 class="section-heading">
+      <i class="fas fa-balance-scale" style="color: #059669;"></i> 2. रासायनिक समीकरण एवं द्रव्यमान संरक्षण का नियम
+    </h2>
+
+    <div class="concept-box green">
+      <div class="concept-title">
+        <i class="fas fa-balance-scale" style="color: #059669;"></i> द्रव्यमान संरक्षण का नियम (Law of Conservation of Mass)
+      </div>
+      <p>कक्षा 9 के अनुसार: <em>"किसी भी रासायनिक अभिक्रिया में द्रव्यमान का न तो निर्माण होता है और न ही विनाश।"</em></p>
+      <p style="margin-top: 6px;">अर्थात्, <strong>अभिक्रिया के पहले (अभिकारकों) तथा अभिक्रिया के पश्चात (उत्पादों) प्रत्येक तत्व के परमाणुओं की कुल संख्या सदैव एक समान होनी चाहिए।</strong></p>
+      <p style="margin-top: 6px; color: #065f46; font-weight: 700;">असंतुलित रासायनिक समीकरण को ढांचा (कंकाली / Skeletal) समीकरण कहते हैं।</p>
+    </div>
+
+    <!-- SVG 2: Zinc and Acid Activity -->
+    <div style="text-align: center; margin: 25px auto; max-width: 680px;">
+      <svg viewBox="0 0 680 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" style="background:#0f172a; border-radius:12px; border:1px solid #334155; font-family:sans-serif;">
+        <text x="340" y="25" fill="#38bdf8" font-size="15" font-weight="bold" text-anchor="middle">क्रियाकलाप 1.3: दानेदार जस्ते पर तनु H₂SO₄ की क्रिया व H₂ गैस परीक्षण</text>
+        <!-- Flask -->
+        <path d="M 120 190 L 90 230 L 190 230 L 160 190 L 160 120 L 120 120 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="110" y="110" width="60" height="15" rx="3" fill="#64748b"/>
+        <!-- Zinc Granules -->
+        <circle cx="130" cy="220" r="5" fill="#94a3b8"/>
+        <circle cx="145" cy="223" r="6" fill="#94a3b8"/>
+        <circle cx="160" cy="220" r="5" fill="#94a3b8"/>
+        <text x="140" y="245" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle">दानेदार जस्ता (Zn)</text>
+
+        <!-- Delivery Tube -->
+        <path d="M 140 110 L 140 70 L 320 70 L 320 180" fill="none" stroke="#94a3b8" stroke-width="4"/>
+
+        <!-- Soap Solution Trough -->
+        <rect x="270" y="180" width="110" height="50" rx="4" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+        <text x="325" y="245" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle">साबुन का घोल</text>
+
+        <!-- Soap Bubbles with H2 -->
+        <circle cx="330" cy="150" r="12" fill="none" stroke="#7dd3fc" stroke-width="1.5"/>
+        <circle cx="350" cy="115" r="14" fill="none" stroke="#7dd3fc" stroke-width="1.5"/>
+        <text x="375" y="120" fill="#7dd3fc" font-size="11" font-weight="bold">H₂ से भरे बुलबुले</text>
+
+        <!-- Burning Candle popping the bubble -->
+        <rect x="460" y="90" width="12" height="45" fill="#f8fafc"/>
+        <path d="M 466 90 Q 460 70 466 55 Q 472 70 466 90" fill="#f59e0b"/>
+        <text x="466" y="150" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle">मोमबत्ती</text>
+
+        <!-- Pop sound burst -->
+        <polygon points="420,70 435,78 430,65 445,60 432,55 435,42 422,50 415,38 412,52 400,50 410,62" fill="#ef4444"/>
+        <text x="415" y="30" fill="#f87171" font-size="14" font-weight="bold">फट-फट (POP!)</text>
+
+        <!-- Right Equation Box -->
+        <rect x="515" y="60" width="150" height="150" rx="8" fill="#1e293b" stroke="#059669" stroke-width="1.5"/>
+        <text x="590" y="85" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">रासायनिक समीकरण</text>
+        <text x="590" y="112" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Zn + H₂SO₄ →</text>
+        <text x="590" y="132" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">ZnSO₄ + H₂↑</text>
+        <line x1="525" y1="145" x2="655" y2="145" stroke="#475569" stroke-width="1"/>
+        <text x="590" y="165" fill="#fde047" font-size="11" text-anchor="middle">गैस: हाइड्रोजन (H₂)</text>
+        <text x="590" y="185" fill="#cbd5e1" font-size="10" text-anchor="middle">तापमान: फ्लास्क गर्म होता है</text>
+        <text x="590" y="200" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">(ऊष्माक्षेपी अभिक्रिया)</text>
+      </svg>
+    </div>
+
+    <!-- SIMULATOR 2: Zinc + Acid with Pop Sound -->
+    <!-- SIMULATOR 2: ZINC + ACID & POP TEST -->
+    <div class="sim-card" id="sim2_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-atom" style="color: #0284c7;"></i>
+          <span>लाइव 3D सिमुलेटर 2: जस्ता + अम्ल एवं हाइड्रोजन गैस का पॉप ध्वनि परीक्षण (क्रियाकलाप 1.3)</span>
+        </div>
+        <span class="sim-badge">3D गैस परीक्षण 💥</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        शंक्वाकार फ्लास्क में दानेदार जस्ते (Zn) पर तनु सल्फ्यूरिक अम्ल (\(H_2SO_4\)) या हाइड्रोक्लोरिक अम्ल (\(HCl\)) डालने पर तीव्र बुदबुदाहट के साथ हाइड्रोजन गैस मुक्त होती है तथा ऊष्माक्षेपी प्रभाव से फ्लास्क गर्म हो जाता है। साबुन के बुलबुलों से निकलने वाली गैस जलती मोमबत्ती से 'पॉप' ध्वनि करती है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim2_btn1" onclick="sim2SetStep(1)">
+          <i class="fas fa-flask"></i> चरण 1: तनु अम्ल डालें
+        </button>
+        <button class="sim-btn" id="sim2_btn2" onclick="sim2SetStep(2)">
+          <i class="fas fa-circle-notch"></i> चरण 2: साबुन बुलबुले बनाएं
+        </button>
+        <button class="sim-btn warning" id="sim2_btn3" onclick="sim2SetStep(3)">
+          <i class="fas fa-burn"></i> चरण 3: पॉप ध्वनि परीक्षण
+        </button>
+        <button class="sim-btn danger" onclick="sim2Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim2_stage">
+        <svg id="sim2_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim2_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim2_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.7"/>
+            </linearGradient>
+            <linearGradient id="sim2_acid" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.8"/>
+            </linearGradient>
+            <linearGradient id="sim2_zinc" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#cbd5e1"/>
+              <stop offset="50%" stop-color="#64748b"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <linearGradient id="sim2_bubble" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8"/>
+            </linearGradient>
+            <filter id="sim2_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim2_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- 3D Conical Flask with Stand -->
+          <g id="sim2_flask_group" filter="url(#sim2_drop)">
+            <!-- Stand Base & Rod -->
+            <rect x="60" y="260" width="40" height="10" fill="#334155" rx="2"/>
+            <rect x="78" y="70" width="6" height="190" fill="#64748b"/>
+            <!-- Stand Clamp holding flask neck -->
+            <rect x="84" y="125" width="60" height="8" fill="#475569" rx="2"/>
+
+            <!-- Flask Body -->
+            <polygon points="120,260 180,260 162,130 138,130" fill="url(#sim2_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <rect x="136" y="115" width="28" height="18" fill="url(#sim2_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <ellipse cx="150" cy="115" rx="14" ry="4" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+
+            <!-- Rubber Cork -->
+            <polygon points="138,118 162,118 160,105 140,105" fill="#475569"/>
+
+            <!-- Thistle Funnel -->
+            <rect x="142" y="55" width="4" height="145" fill="#bae6fd" stroke="#0284c7" stroke-width="1"/>
+            <polygon points="134,55 154,55 147,42 141,42" fill="#bae6fd" stroke="#0284c7" stroke-width="1"/>
+
+            <!-- Glass Delivery Tube -->
+            <path d="M156,110 L156,80 L290,80 L290,225" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+            <path d="M156,110 L156,80 L290,80 L290,225" fill="none" stroke="#e0f2fe" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Acid Liquid in Flask (Default hidden) -->
+            <polygon id="sim2_acid_liquid" points="124,258 176,258 168,190 132,190" fill="url(#sim2_acid)" style="display: none;"/>
+
+            <!-- Granulated Zinc Pellets -->
+            <g id="sim2_zinc_pellets">
+              <ellipse cx="140" cy="254" rx="7" ry="4" fill="url(#sim2_zinc)" stroke="#334155" stroke-width="0.8"/>
+              <ellipse cx="155" cy="255" rx="8" ry="5" fill="url(#sim2_zinc)" stroke="#334155" stroke-width="0.8"/>
+              <ellipse cx="148" cy="250" rx="6" ry="4" fill="url(#sim2_zinc)" stroke="#334155" stroke-width="0.8"/>
+              <ellipse cx="163" cy="253" rx="7" ry="4" fill="url(#sim2_zinc)" stroke="#334155" stroke-width="0.8"/>
+              <ellipse cx="135" cy="256" rx="6" ry="4" fill="url(#sim2_zinc)" stroke="#334155" stroke-width="0.8"/>
+            </g>
+
+            <!-- Gas Bubbles in Flask (Default hidden) -->
+            <g id="sim2_flask_bubbles" style="display: none;">
+              <circle cx="145" cy="235" r="3" fill="#ffffff" opacity="0.8"/>
+              <circle cx="158" cy="220" r="4" fill="#ffffff" opacity="0.8"/>
+              <circle cx="140" cy="205" r="3.5" fill="#ffffff" opacity="0.8"/>
+              <circle cx="152" cy="195" r="3" fill="#ffffff" opacity="0.8"/>
+              <circle cx="148" cy="170" r="4.5" fill="#ffffff" opacity="0.8"/>
+            </g>
+
+            <text x="150" y="285" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">शंक्वाकार फ्लास्क</text>
+            <!-- Temp Gauge Badge -->
+            <rect id="sim2_temp_bg" x="100" y="90" width="45" height="18" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+            <text id="sim2_temp_val" x="122" y="103" font-size="11" font-weight="800" fill="#0284c7" text-anchor="middle">25°C</text>
+          </g>
+
+          <!-- Soap Solution Glass Trough -->
+          <g id="sim2_trough_group" filter="url(#sim2_drop)">
+            <rect x="250" y="210" width="90" height="50" rx="6" fill="url(#sim2_glass)" stroke="#0284c7" stroke-width="1.5"/>
+            <rect x="252" y="225" width="86" height="33" rx="4" fill="#38bdf8" opacity="0.4"/>
+            <text x="295" y="285" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">साबुन का घोल (Trough)</text>
+          </g>
+
+          <!-- Floating Soap Bubbles with H2 -->
+          <g id="sim2_soap_bubbles" style="display: none;">
+            <circle cx="330" cy="175" r="14" fill="url(#sim2_bubble)" stroke="#0284c7" stroke-width="1.5" filter="url(#sim2_drop)"/>
+            <text x="330" y="179" font-size="10" font-weight="800" fill="#0369a1" text-anchor="middle">H₂</text>
+
+            <circle cx="375" cy="130" r="16" fill="url(#sim2_bubble)" stroke="#0284c7" stroke-width="1.5" filter="url(#sim2_drop)"/>
+            <text x="375" y="134" font-size="11" font-weight="800" fill="#0369a1" text-anchor="middle">H₂</text>
+
+            <circle id="sim2_target_bubble" cx="440" cy="110" r="18" fill="url(#sim2_bubble)" stroke="#0284c7" stroke-width="1.5" filter="url(#sim2_drop)"/>
+            <text id="sim2_target_lbl" x="440" y="115" font-size="12" font-weight="800" fill="#0369a1" text-anchor="middle">H₂</text>
+          </g>
+
+          <!-- Burning Candle for Pop Test -->
+          <g id="sim2_candle_group" style="display: none;" filter="url(#sim2_drop)">
+            <rect x="520" y="150" width="18" height="110" rx="3" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+            <rect x="510" y="260" width="38" height="10" rx="2" fill="#713f12"/>
+            <!-- Candle Wick -->
+            <line x1="529" y1="150" x2="529" y2="140" stroke="#0f172a" stroke-width="2"/>
+            <!-- Flame -->
+            <path d="M529,115 Q538,132 534,142 L524,142 Q520,132 529,115 Z" fill="#ea580c"/>
+            <path d="M529,124 Q535,135 532,142 L526,142 Q523,135 529,124 Z" fill="#facc15"/>
+            <text x="529" y="285" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">जलती मोमबत्ती</text>
+          </g>
+
+          <!-- Pop Starburst Explosion Graphic (Step 3) -->
+          <g id="sim2_pop_burst" style="display: none;">
+            <polygon points="440,70 452,95 480,95 458,112 468,138 440,122 412,138 422,112 400,95 428,95" fill="#facc15" stroke="#ea580c" stroke-width="2.5" filter="url(#sim2_drop)"/>
+            <circle cx="440" cy="110" r="28" fill="#f97316" opacity="0.4"/>
+            <text x="440" y="116" font-size="15" font-weight="900" fill="#b91c1c" text-anchor="middle">💥 POP!</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim2_status">
+          <strong>प्रारंभिक अवस्था:</strong> शंक्वाकार फ्लास्क में दानेदार जस्ता (Zn) मौजूद है। अभी कोई अम्ल नहीं मिलाया गया है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim2_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(Zn(s) + H_2SO_4(aq) \to ZnSO_4(aq) + H_2(g) \uparrow + \text{ऊष्मा}\)। जस्ता तनु अम्ल से क्रिया कर हाइड्रोजन गैस विस्थापित करता है। अभिक्रिया तीव्र ऊष्माक्षेपी होने के कारण फ्लास्क का तापमान 25°C से बढ़कर लगभग 48°C हो जाता है। हल्की होने के कारण \(H_2\) साबुन के बुलबुलों को ऊपर ले जाती है और जलती मोमबत्ती के संपर्क में <strong>'पॉप' (POP) ध्वनि</strong> के साथ जलती है।
+      </div>
+    </div>
+
+    <!-- SECTION 3: रासायनिक अभिक्रियाओं के प्रकार -->
+    <h2 class="section-heading">
+      <i class="fas fa-network-wired" style="color: #7c3aed;"></i> 3. रासायनिक अभिक्रियाओं के प्रमुख प्रकार
+    </h2>
+
+    <!-- SUBSECTION 3.1: संयोजन अभिक्रिया -->
+    <h3 class="subsection-heading">
+      <span class="q-num-badge" style="background:#fef3c7; color:#b45309;">प्रकार 1</span> संयोजन अभिक्रिया (Combination Reaction)
+    </h3>
+
+    <div class="concept-box amber">
+      <div class="concept-title">
+        <i class="fas fa-plus-circle" style="color: #f59e0b;"></i> परिभाषा
+      </div>
+      <p>ऐसी अभिक्रिया जिसमें <strong>दो या दो से अधिक अभिकारक मिलकर केवल एक एकल उत्पाद (Single Product)</strong> का निर्माण करते हैं, उसे <strong>संयोजन अभिक्रिया</strong> कहते हैं।</p>
+      <div class="reaction-pill">
+        <span>A + B → AB</span>
+        <span style="color: #b45309;">(सामान्य प्रारूप)</span>
+      </div>
+      <p><strong>प्रमुख उदाहरण:</strong></p>
+      <ul style="padding-left: 20px; line-height: 1.8;">
+        <li>1. कली चूने (बिना बुझा चूना) की जल से क्रिया: \(CaO(s) + H_2O(l) \to Ca(OH)_2(aq) + \text{ऊष्मा}\)</li>
+        <li>2. कोयले का दहन: \(C(s) + O_2(g) \to CO_2(g)\)</li>
+        <li>3. हाइड्रोजन व ऑक्सीजन से जल बनना: \(2H_2(g) + O_2(g) \to 2H_2O(l)\)</li>
+      </ul>
+    </div>
+
+    <!-- SIMULATOR 3: Slaking of Lime (Exothermic) -->
+    <!-- SIMULATOR 3: SLAKING OF LIME -->
+    <div class="sim-card" id="sim3_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-temperature-high" style="color: #dc2626;"></i>
+          <span>लाइव 3D सिमुलेटर 3: कली चूने में जल मिलाना — संयोजन व ऊष्माक्षेपी अभिक्रिया (क्रियाकलाप 1.4)</span>
+        </div>
+        <span class="sim-badge">ऊष्माक्षेपी 3D ♨️</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        कली चूने (कैल्सियम ऑक्साइड - \(CaO\)) में जल मिलाने पर तीव्र ऊष्माक्षेपी संयोजन अभिक्रिया होती है जिससे बुझा चूना (\(Ca(OH)_2\)) बनता है और अत्यधिक ऊष्मा निकलती है (बीकर खौलने लगता है)। सफेदी के 2-3 दिन बाद वायु की \(CO_2\) से क्रिया कर चमकदार संगमरमर जैसी \(CaCO_3\) परत बनती है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim3_btn1" onclick="sim3SetStep(1)">
+          <i class="fas fa-tint"></i> चरण 1: जल मिलाएं
+        </button>
+        <button class="sim-btn" id="sim3_btn2" onclick="sim3SetStep(2)">
+          <i class="fas fa-thermometer-three-quarters"></i> चरण 2: तीव्र ऊष्मा व बुझा चूना
+        </button>
+        <button class="sim-btn success" id="sim3_btn3" onclick="sim3SetStep(3)">
+          <i class="fas fa-paint-roller"></i> चरण 3: दीवार पर सफेदी चमक
+        </button>
+        <button class="sim-btn danger" onclick="sim3Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim3_stage">
+        <svg id="sim3_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim3_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim3_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="25%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.7"/>
+            </linearGradient>
+            <linearGradient id="sim3_cao" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="60%" stop-color="#f1f5f9"/>
+              <stop offset="100%" stop-color="#cbd5e1"/>
+            </linearGradient>
+            <linearGradient id="sim3_mercury" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="50%" stop-color="#f87171"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+            <filter id="sim3_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim3_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- 3D Glass Beaker -->
+          <g id="sim3_beaker_group" filter="url(#sim3_drop)">
+            <rect x="180" y="110" width="160" height="155" rx="6" fill="url(#sim3_glass)" stroke="#0284c7" stroke-width="2"/>
+            <line x1="174" y1="110" x2="186" y2="110" stroke="#0284c7" stroke-width="3"/>
+            <line x1="334" y1="110" x2="346" y2="110" stroke="#0284c7" stroke-width="3"/>
+
+            <!-- Beaker graduation lines -->
+            <line x1="185" y1="150" x2="200" y2="150" stroke="#0284c7" stroke-width="1.5"/>
+            <line x1="185" y1="185" x2="205" y2="185" stroke="#0284c7" stroke-width="1.5"/>
+            <line x1="185" y1="220" x2="200" y2="220" stroke="#0284c7" stroke-width="1.5"/>
+
+            <!-- Liquid (Water / Slaked lime suspension) -->
+            <rect id="sim3_liquid" x="182" y="170" width="156" height="92" rx="4" fill="#38bdf8" opacity="0" style="transition: all 0.8s;"/>
+
+            <!-- Quicklime CaO solid lumps at bottom -->
+            <g id="sim3_cao_lumps">
+              <polygon points="200,260 220,240 245,260" fill="url(#sim3_cao)" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="235,260 260,235 285,260" fill="url(#sim3_cao)" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="275,260 300,242 325,260" fill="url(#sim3_cao)" stroke="#94a3b8" stroke-width="1"/>
+              <ellipse cx="250" cy="255" rx="20" ry="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="0.8"/>
+            </g>
+
+            <!-- Hissing Steam Clouds (Step 2) -->
+            <g id="sim3_steam" style="display: none;">
+              <path d="M220,105 Q228,85 220,65 Q212,45 224,25" stroke="#94a3b8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+              <path d="M260,105 Q270,80 260,55 Q250,30 264,15" stroke="#94a3b8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <path d="M300,105 Q308,85 298,65 Q290,45 304,25" stroke="#94a3b8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+            </g>
+
+            <text x="260" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">बीकर (कली चूना + जल)</text>
+          </g>
+
+          <!-- 3D Thermometer -->
+          <g id="sim3_thermometer_group" filter="url(#sim3_drop)">
+            <!-- Glass stem -->
+            <rect x="235" y="40" width="10" height="200" rx="4" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"/>
+            <!-- Mercury bulb -->
+            <circle cx="240" cy="240" r="9" fill="url(#sim3_mercury)" stroke="#991b1b" stroke-width="1"/>
+            <!-- Mercury column (expands upwards) -->
+            <rect id="sim3_mercury_col" x="238" y="210" width="4" height="30" fill="url(#sim3_mercury)" rx="1" style="transition: all 1s;"/>
+            <!-- Temp read badge -->
+            <rect id="sim3_temp_badge" x="120" y="45" width="85" height="24" rx="4" fill="#f8fafc" stroke="#ef4444" stroke-width="1.5"/>
+            <text id="sim3_temp_text" x="162" y="61" font-size="12" font-weight="800" fill="#ef4444" text-anchor="middle">25°C (शांत)</text>
+          </g>
+
+          <!-- Right Wall Whitewash Demonstration Panel -->
+          <g id="sim3_wall_panel" filter="url(#sim3_drop)">
+            <rect x="420" y="70" width="260" height="190" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+            <text x="550" y="95" font-size="13" font-weight="800" fill="#1e293b" text-anchor="middle">दीवार पर सफेदी परीक्षण</text>
+
+            <!-- Wall Surface (Brick pattern) -->
+            <rect id="sim3_brick_wall" x="435" y="110" width="230" height="135" rx="4" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5"/>
+            <!-- Whitewash Layer (transforms to shining CaCO3) -->
+            <rect id="sim3_paint_layer" x="435" y="110" width="230" height="135" rx="4" fill="#ffffff" opacity="0" style="transition: all 1.2s;"/>
+
+            <text id="sim3_wall_desc" x="550" y="175" font-size="12" font-weight="700" fill="#9a3412" text-anchor="middle">ईंट की खुरदरी दीवार</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim3_status">
+          <strong>प्रारंभिक अवस्था:</strong> बीकर में सूखा कली चूना (कैल्सियम ऑक्साइड - CaO) रखा है। तापमान सामान्य 25°C है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim3_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(CaO(s) + H_2O(l) \to Ca(OH)_2(aq) + \text{ऊष्मा}\)। यह एक तीव्र <strong>संयोजन अभिक्रिया</strong> तथा <strong>ऊष्माक्षेपी अभिक्रिया</strong> है। कली चूना जल से सनसनाहट के साथ क्रिया कर बुझा चूना बनाता है जिससे बीकर का तापमान 25°C से 85°C तक बढ़ जाता है। सफेदी करने पर: \(Ca(OH)_2(aq) + CO_2(g) \to CaCO_3(s) + H_2O(l)\), जो 2-3 दिन में दीवार को संगमरमर जैसी चमक प्रदान करता है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 4: Thermal Decomposition (FeSO4 & Pb(NO3)2) -->
+    <!-- SIMULATOR 4: THERMAL DECOMPOSITION -->
+    <div class="sim-card" id="sim4_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-burn" style="color: #dc2626;"></i>
+          <span>लाइव 3D सिमुलेटर 4: ऊष्मीय वियोजन सिमुलेटर (फेरस सल्फेट एवं लेड नाइट्रेट)</span>
+        </div>
+        <span class="sim-badge">ऊष्मीय अपघटन 🔥</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        ऊष्मा देने पर एकल अभिकारक टूटकर दो या अधिक उत्पाद बनाता है। फेरस सल्फेट के हरे क्रिस्टल गर्म करने पर गंधक की तीक्ष्ण गंध वाली गैसों में वियोजित होते हैं, जबकि लेड नाइट्रेट से भूरे रंग की नाइट्रोजन डाइऑक्साइड (\(NO_2\)) गैस के घने धुएं निकलते हैं। अभिकारक चुनें और 3D में देखें:
+      </p>
+
+      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+        <span style="font-weight: 700; color: #1e293b;">अभिकारक चुनें:</span>
+        <button class="sim-btn" id="sim4_sel_feso4" style="background:#059669;" onclick="sim4SelectCompound('feso4')">
+          🟢 फेरस सल्फेट (FeSO₄·7H₂O)
+        </button>
+        <button class="sim-btn secondary" id="sim4_sel_pbno3" onclick="sim4SelectCompound('pbno3')">
+          ⚪ लेड नाइट्रेट (Pb(NO₃)₂)
+        </button>
+      </div>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim4_btn1" onclick="sim4SetStep(1)">
+          <i class="fas fa-temperature-low"></i> चरण 1: हल्की ऊष्मा (क्रिस्टलन जल)
+        </button>
+        <button class="sim-btn" id="sim4_btn2" onclick="sim4SetStep(2)">
+          <i class="fas fa-fire-alt"></i> चरण 2: तीव्र ऊष्मा (गैस निकास)
+        </button>
+        <button class="sim-btn success" id="sim4_btn3" onclick="sim4SetStep(3)">
+          <i class="fas fa-flask"></i> चरण 3: गैस व अवशेष परीक्षण
+        </button>
+        <button class="sim-btn danger" onclick="sim4Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim4_stage">
+        <svg id="sim4_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim4_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim4_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="sim4_burner" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#334155"/>
+              <stop offset="50%" stop-color="#94a3b8"/>
+              <stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <!-- Brown NO2 Fume Radial -->
+            <radialGradient id="sim4_no2_fume" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#78350f" stop-opacity="0.85"/>
+              <stop offset="50%" stop-color="#b45309" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="sim4_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim4_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Bunsen Burner -->
+          <ellipse cx="260" cy="270" rx="42" ry="12" fill="url(#sim4_burner)" filter="url(#sim4_drop)"/>
+          <rect x="252" y="170" width="16" height="95" fill="url(#sim4_burner)" rx="2"/>
+          <polygon points="248,170 272,170 268,160 252,160" fill="#334155"/>
+
+          <!-- Burner Flame -->
+          <g id="sim4_flame" style="display: none;">
+            <path d="M260,85 Q280,128 271,160 L249,160 Q240,128 260,85 Z" fill="#fb923c"/>
+            <path d="M260,105 Q272,135 266,160 L254,160 Q248,135 260,105 Z" fill="#facc15"/>
+            <path d="M260,130 Q268,146 265,160 L255,160 Q252,146 260,130 Z" fill="#38bdf8"/>
+          </g>
+
+          <!-- 3D Boiling Tube (tilted 30 deg away safely) -->
+          <g id="sim4_tube_group" transform="rotate(-30 260 140)" filter="url(#sim4_drop)">
+            <!-- Tube glass body -->
+            <rect x="245" y="40" width="30" height="150" rx="15" fill="url(#sim4_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <ellipse cx="260" cy="40" rx="15" ry="4" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+
+            <!-- Test Tube Holder Wooden Clamp -->
+            <rect x="235" y="85" width="50" height="14" rx="2" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+            <rect x="285" y="88" width="90" height="8" rx="2" fill="#78350f"/>
+
+            <!-- Compound Solid at bottom -->
+            <path id="sim4_solid" d="M247,172 Q260,165 273,172 L273,180 Q260,190 247,180 Z" fill="#10b981" stroke="#047857" stroke-width="1"/>
+
+            <!-- Condensed Water Droplets on Upper Tube Neck -->
+            <g id="sim4_water_drops" style="display: none;">
+              <circle cx="250" cy="70" r="2" fill="#0284c7"/>
+              <circle cx="268" cy="75" r="2.5" fill="#0284c7"/>
+              <circle cx="253" cy="90" r="2" fill="#0284c7"/>
+              <circle cx="266" cy="100" r="2.2" fill="#0284c7"/>
+            </g>
+          </g>
+
+          <!-- Billowing Fumes (Rising from tube mouth) -->
+          <g id="sim4_fumes" style="display: none;">
+            <!-- FeSO4 pungent SO2/SO3 grey fumes OR Pb(NO3)2 dense brown NO2 fumes -->
+            <circle id="sim4_fume1" cx="370" cy="75" r="30" fill="url(#sim4_no2_fume)"/>
+            <circle id="sim4_fume2" cx="420" cy="55" r="40" fill="url(#sim4_no2_fume)"/>
+            <circle id="sim4_fume3" cx="475" cy="45" r="45" fill="url(#sim4_no2_fume)"/>
+            <text id="sim4_fume_lbl" x="430" y="115" font-size="13" font-weight="900" fill="#78350f" text-anchor="middle">भूरे रंग का धुआं (NO₂)</text>
+          </g>
+
+          <text x="260" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">क्वथन नली (Boiling Tube) व बर्नर</text>
+        </svg>
+
+        <div class="sim-status-banner" id="sim4_status">
+          <strong>प्रारंभिक अवस्था:</strong> क्वथन नली में हरे रंग के फेरस सल्फेट (FeSO₄·7H₂O) क्रिस्टल हैं। बर्नर अभी बंद है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim4_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(2FeSO_4(s) \xrightarrow{\Delta} Fe_2O_3(s) + SO_2(g) \uparrow + SO_3(g) \uparrow\)। पहले क्रिस्टलन जल (\(7H_2O\)) हटने से हरा रंग श्वेत होता है, फिर तीव्र ऊष्मा से यह भूरे रंग के फेरिक ऑक्साइड (\(Fe_2O_3\)) में बदलकर सल्फर की जलने जैसी तीक्ष्ण गंध वाली गैसें देता है। लेड नाइट्रेट के मामले में: \(2Pb(NO_3)_2(s) \xrightarrow{\Delta} 2PbO(s) + 4NO_2(g) \uparrow + O_2(g) \uparrow\), जिसमें भूरे रंग की नाइट्रोजन डाइऑक्साइड (\(NO_2\)) गैस के घने बादल निकलते हैं।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 5: Electrolysis of Water -->
+    <!-- SIMULATOR 5: ELECTROLYSIS OF WATER -->
+    <div class="sim-card" id="sim5_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-bolt" style="color: #3b82f6;"></i>
+          <span>लाइव 3D सिमुलेटर 5: जल का विद्युत अपघटन (क्रियाकलाप 1.7)</span>
+        </div>
+        <span class="sim-badge">विद्युत अपघटन ⚡</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        अम्लीकृत जल में विद्युत धारा प्रवाहित करने पर कैथोड (-) पर हाइड्रोजन (\(H_2\)) तथा एनोड (+) पर ऑक्सीजन (\(O_2\)) गैस मुक्त होती है। जल के अणु (\(H_2O\)) में हाइड्रोजन और ऑक्सीजन का आयतन अनुपात <strong>2:1</strong> होता है, इसलिए कैथोड पर एकत्रित गैस का आयतन एनोड से ठीक दुगुना होता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="sim5_btn1" onclick="sim5SetStep(1)">
+          <i class="fas fa-plug"></i> चरण 1: धारा चालू करें (2:1 अनुपात)
+        </button>
+        <button class="sim-btn secondary" id="sim5_btn2" onclick="sim5SetStep(2)">
+          <i class="fas fa-burn"></i> चरण 2: कैथोड गैस (H₂) पॉप टेस्ट
+        </button>
+        <button class="sim-btn success" id="sim5_btn3" onclick="sim5SetStep(3)">
+          <i class="fas fa-fire"></i> चरण 3: एनोड गैस (O₂) ज्वाला टेस्ट
+        </button>
+        <button class="sim-btn danger" onclick="sim5Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim5_stage">
+        <svg id="sim5_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim5_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim5_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="sim5_water" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.85"/>
+            </linearGradient>
+            <linearGradient id="sim5_graphite" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1e293b"/>
+              <stop offset="50%" stop-color="#475569"/>
+              <stop offset="100%" stop-color="#0f172a"/>
+            </linearGradient>
+            <linearGradient id="sim5_battery" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/>
+              <stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <filter id="sim5_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim5_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- 3D Plastic Mug / Cell -->
+          <g id="sim5_mug_group" filter="url(#sim5_drop)">
+            <rect x="190" y="100" width="220" height="165" rx="10" fill="#f0fdf4" stroke="#10b981" stroke-width="2.5" opacity="0.9"/>
+            <rect x="192" y="140" width="216" height="122" rx="4" fill="url(#sim5_water)"/>
+            <text x="300" y="285" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">प्लास्टिक मग (अम्लीकृत जल)</text>
+
+            <!-- Rubber Stoppers at base -->
+            <rect x="235" y="255" width="24" height="12" rx="2" fill="#334155"/>
+            <rect x="340" y="255" width="24" height="12" rx="2" fill="#334155"/>
+
+            <!-- Graphite Electrodes -->
+            <rect x="243" y="160" width="8" height="100" fill="url(#sim5_graphite)" rx="1"/>
+            <rect x="348" y="160" width="8" height="100" fill="url(#sim5_graphite)" rx="1"/>
+          </g>
+
+          <!-- Inverted Graduated Test Tubes -->
+          <!-- Tube 1: Cathode (-) Left (Hydrogen 2V) -->
+          <g id="sim5_cathode_tube" filter="url(#sim5_drop)">
+            <rect x="232" y="40" width="30" height="160" rx="12" fill="url(#sim5_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <!-- Water inside tube (Meniscus drops with H2 gas collection) -->
+            <rect id="sim5_cath_water" x="234" y="42" width="26" height="155" rx="8" fill="url(#sim5_water)" style="transition: all 1.2s;"/>
+            <!-- Gas space on top -->
+            <rect id="sim5_cath_gas" x="234" y="42" width="26" height="0" rx="8" fill="#ffffff" opacity="0.85" style="transition: all 1.2s;"/>
+            <text x="247" y="32" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">कैथोड (-)</text>
+            <text id="sim5_cath_vol" x="247" y="70" font-size="11" font-weight="800" fill="#2563eb" text-anchor="middle" style="display: none;">2V (H₂)</text>
+            <!-- Bubbles in Cathode (H2) -->
+            <g id="sim5_cath_bubbles" style="display: none;">
+              <circle cx="245" cy="180" r="2.5" fill="#ffffff"/>
+              <circle cx="249" cy="155" r="3" fill="#ffffff"/>
+              <circle cx="244" cy="130" r="3.5" fill="#ffffff"/>
+              <circle cx="248" cy="105" r="4" fill="#ffffff"/>
+            </g>
+          </g>
+
+          <!-- Tube 2: Anode (+) Right (Oxygen 1V) -->
+          <g id="sim5_anode_tube" filter="url(#sim5_drop)">
+            <rect x="337" y="40" width="30" height="160" rx="12" fill="url(#sim5_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <!-- Water inside tube -->
+            <rect id="sim5_anode_water" x="339" y="42" width="26" height="155" rx="8" fill="url(#sim5_water)" style="transition: all 1.2s;"/>
+            <!-- Gas space on top -->
+            <rect id="sim5_anode_gas" x="339" y="42" width="26" height="0" rx="8" fill="#ffffff" opacity="0.85" style="transition: all 1.2s;"/>
+            <text x="352" y="32" font-size="12" font-weight="800" fill="#b91c1c" text-anchor="middle">एनोड (+)</text>
+            <text id="sim5_anode_vol" x="352" y="60" font-size="11" font-weight="800" fill="#dc2626" text-anchor="middle" style="display: none;">1V (O₂)</text>
+            <!-- Bubbles in Anode (O2) -->
+            <g id="sim5_anode_bubbles" style="display: none;">
+              <circle cx="350" cy="180" r="2" fill="#ffffff"/>
+              <circle cx="353" cy="145" r="2.5" fill="#ffffff"/>
+              <circle cx="349" cy="115" r="3" fill="#ffffff"/>
+            </g>
+          </g>
+
+          <!-- 6V 3D Battery & Electrical Wiring -->
+          <g id="sim5_battery_group" filter="url(#sim5_drop)">
+            <rect x="490" y="160" width="95" height="75" rx="6" fill="url(#sim5_battery)" stroke="#0f172a" stroke-width="2"/>
+            <!-- Battery terminals -->
+            <rect x="505" y="150" width="16" height="10" rx="2" fill="#1e293b"/>
+            <text x="513" y="145" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">-</text>
+            <rect x="555" y="150" width="16" height="10" rx="2" fill="#b91c1c"/>
+            <text x="563" y="145" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">+</text>
+            <text x="537" y="195" font-size="13" font-weight="900" fill="#f8fafc" text-anchor="middle">6V बैटरी</text>
+            <text x="537" y="215" font-size="10" font-weight="700" fill="#cbd5e1" text-anchor="middle">D.C. स्रोत</text>
+
+            <!-- Black Cathode Wire (-) -->
+            <path d="M513,150 L513,290 L247,290 L247,267" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+            <!-- Red Anode Wire (+) -->
+            <path d="M563,150 L563,280 L352,280 L352,267" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+          </g>
+
+          <!-- Gas Testing Splinter Graphic (Steps 2 & 3) -->
+          <g id="sim5_test_splinter" style="display: none;" filter="url(#sim5_drop)">
+            <rect id="sim5_splinter_stick" x="180" y="30" width="45" height="5" rx="1" fill="#b45309"/>
+            <circle id="sim5_splinter_flame" cx="225" cy="32" r="9" fill="#facc15" stroke="#ea580c" stroke-width="1.5"/>
+            <text id="sim5_splinter_lbl" x="200" y="20" font-size="12" font-weight="800" fill="#ea580c">💥 POP!</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim5_status">
+          <strong>प्रारंभिक अवस्था:</strong> दोनों परखनलियां जल से पूरी तरह भरी हैं। विद्युत परिपथ खुला (OFF) है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim5_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(2H_2O(l) \xrightarrow{\text{विद्युत धारा}} 2H_2(g) + O_2(g)\)। कैथोड (ऋण ध्रुव) पर एकत्रित हाइड्रोजन गैस का आयतन, एनोड (धन ध्रुव) पर एकत्रित ऑक्सीजन गैस के आयतन से <strong>ठीक दुगुना (2:1)</strong> होता है क्योंकि जल के एक अणु में हाइड्रोजन के 2 परमाणु और ऑक्सीजन का 1 परमाणु होता है। कैथोड की गैस जलती तीली से 'पॉप' ध्वनि करती है जबकि एनोड की गैस अगरबत्ती/तीली को और तेज प्रज्वलित करती है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 6: Photochemical Decomposition (AgCl) -->
+    <!-- SIMULATOR 6: PHOTO-DECOMPOSITION OF AgCl -->
+    <div class="sim-card" id="sim6_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-sun" style="color: #eab308;"></i>
+          <span>लाइव 3D सिमुलेटर 6: सिल्वर क्लोराइड का प्रकाशीय वियोजन (क्रियाकलाप 1.8)</span>
+        </div>
+        <span class="sim-badge">प्रकाशीय अपघटन ☀️</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        सफेद रंग का सिल्वर क्लोराइड (\(AgCl\)) सूर्य के प्रकाश में रखने पर वियोजित होकर धूसर (Grey) रंग के धात्विक सिल्वर (\(Ag\)) में बदल जाता है और क्लोरीन (\(Cl_2\)) गैस मुक्त हो जाती है। इस सिद्धांत का उपयोग श्याम-श्वेत (Black & White) फोटोग्राफी में किया जाता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn warning" id="sim6_btn1" onclick="sim6SetStep(1)">
+          <i class="fas fa-sun"></i> चरण 1: सूर्य का प्रकाश आपतित करें
+        </button>
+        <button class="sim-btn" id="sim6_btn2" onclick="sim6SetStep(2)">
+          <i class="fas fa-magic"></i> चरण 2: धूसर रंग में परिवर्तन
+        </button>
+        <button class="sim-btn secondary" id="sim6_btn3" onclick="sim6SetStep(3)">
+          <i class="fas fa-camera-retro"></i> चरण 3: फोटोग्राफी अनुप्रयोग (AgBr)
+        </button>
+        <button class="sim-btn danger" onclick="sim6Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim6_stage">
+        <svg id="sim6_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim6_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim6_china_dish" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="70%" stop-color="#f1f5f9"/>
+              <stop offset="100%" stop-color="#cbd5e1"/>
+            </linearGradient>
+            <linearGradient id="sim6_sun_rays" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#facc15" stop-opacity="0.15"/>
+            </linearGradient>
+            <filter id="sim6_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim6_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Window Opening on top-left -->
+          <g id="sim6_window" filter="url(#sim6_drop)">
+            <rect x="40" y="20" width="140" height="120" rx="4" fill="#e0f2fe" stroke="#64748b" stroke-width="3"/>
+            <line x1="110" y1="20" x2="110" y2="140" stroke="#64748b" stroke-width="2"/>
+            <line x1="40" y1="80" x2="180" y2="80" stroke="#64748b" stroke-width="2"/>
+
+            <!-- 3D Sun in Window -->
+            <circle cx="85" cy="55" r="22" fill="#facc15" stroke="#eab308" stroke-width="2"/>
+          </g>
+
+          <!-- Sun Rays Streaming onto Dish -->
+          <g id="sim6_rays" style="display: none;">
+            <polygon points="95,65 110,65 390,260 300,260" fill="url(#sim6_sun_rays)"/>
+            <polygon points="75,70 90,70 330,260 260,260" fill="url(#sim6_sun_rays)"/>
+          </g>
+
+          <!-- 3D Porcelain China Dish on Table -->
+          <g id="sim6_dish_group" filter="url(#sim6_drop)">
+            <!-- China dish bowl -->
+            <ellipse cx="330" cy="255" rx="75" ry="18" fill="url(#sim6_china_dish)" stroke="#94a3b8" stroke-width="1.8"/>
+            <ellipse cx="330" cy="250" rx="70" ry="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+
+            <!-- AgCl / Ag Powder (transitions from pure white to dark grey Ag) -->
+            <ellipse id="sim6_powder" cx="330" cy="251" rx="55" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" style="transition: all 1.5s;"/>
+            <text id="sim6_powder_lbl" x="330" y="270" font-size="11" font-weight="800" fill="#475569" text-anchor="middle">श्वेत AgCl चूर्ण</text>
+
+            <text x="330" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">चाइना डिश (China Dish)</text>
+          </g>
+
+          <!-- Escaping Chlorine Gas molecules -->
+          <g id="sim6_cl2_gas" style="display: none;">
+            <circle cx="310" cy="210" r="5" fill="#a3e635" opacity="0.6"/>
+            <circle cx="335" cy="180" r="6" fill="#a3e635" opacity="0.7"/>
+            <circle cx="360" cy="150" r="7" fill="#a3e635" opacity="0.6"/>
+            <text x="380" y="160" font-size="12" font-weight="800" fill="#65a30d">Cl₂ गैस ↑</text>
+          </g>
+
+          <!-- Photography Film Mockup (Step 3) -->
+          <g id="sim6_photo_panel" style="display: none;" filter="url(#sim6_drop)">
+            <rect x="470" y="60" width="210" height="170" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <!-- Film perforations -->
+            <rect x="475" y="65" width="8" height="12" rx="1" fill="#ffffff"/>
+            <rect x="475" y="85" width="8" height="12" rx="1" fill="#ffffff"/>
+            <rect x="475" y="105" width="8" height="12" rx="1" fill="#ffffff"/>
+            <rect x="475" y="125" width="8" height="12" rx="1" fill="#ffffff"/>
+            <rect x="475" y="145" width="8" height="12" rx="1" fill="#ffffff"/>
+            <!-- Photo image negative -->
+            <rect x="495" y="70" width="165" height="130" rx="4" fill="#64748b"/>
+            <circle cx="575" cy="120" r="35" fill="#94a3b8"/>
+            <text x="575" y="180" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">ब्लैक & व्हाइट फोटोग्राफी (AgBr)</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim6_status">
+          <strong>प्रारंभिक अवस्था:</strong> चाइना डिश में शुद्ध सफेद रंग का सिल्वर क्लोराइड (AgCl) रखा है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim6_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(2AgCl(s) \xrightarrow{\text{सूर्य का प्रकाश}} 2Ag(s) + Cl_2(g) \uparrow\)। यह एक <strong>प्रकाशीय वियोजन (Photochemical Decomposition)</strong> अभिक्रिया है। सूर्य के प्रकाश की ऊर्जा से श्वेत सिल्वर क्लोराइड धूसर (Grey) रंग के धात्विक सिल्वर (\(Ag\)) में अपघटित हो जाता है। इसी प्रकार सिल्वर ब्रोमाइड: \(2AgBr(s) \xrightarrow{h\nu} 2Ag(s) + Br_2(g)\) का उपयोग श्याम-श्वेत फोटोग्राफी में होता है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 7: Displacement Reaction -->
+    <!-- SIMULATOR 7: DISPLACEMENT REACTION (Fe + CuSO4) -->
+    <div class="sim-card" id="sim7_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-exchange-alt" style="color: #0284c7;"></i>
+          <span>लाइव 3D सिमुलेटर 7: कॉपर सल्फेट विलयन में धातु विस्थापन (क्रियाकलाप 1.9)</span>
+        </div>
+        <span class="sim-badge">विस्थापन अभिक्रिया 🔄</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        अधिक अभिक्रियाशील धातु (लोहा - \(Fe\)) कम अभिक्रियाशील धातु (तांबा - \(Cu\)) को उसके लवण विलयन (कॉपर सल्फेट) से विस्थापित कर देती है। परखनली में नीले रंग का विलयन हल्के हरे रंग के फेरस सल्फेट में बदल जाता है और लोहे की कील पर लाल-भूरे रंग की तांबे की चमकीली परत जम जाती है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim7_btn1" onclick="sim7SetStep(1)">
+          <i class="fas fa-arrow-down"></i> चरण 1: लोहे की कील डुबोएं
+        </button>
+        <button class="sim-btn" id="sim7_btn2" onclick="sim7SetStep(2)">
+          <i class="fas fa-clock"></i> चरण 2: 20 मिनट बाद (विस्थापन)
+        </button>
+        <button class="sim-btn success" id="sim7_btn3" onclick="sim7SetStep(3)">
+          <i class="fas fa-balance-scale"></i> चरण 3: सक्रियता श्रेणी तुलना
+        </button>
+        <button class="sim-btn danger" onclick="sim7Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim7_stage">
+        <svg id="sim7_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim7_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim7_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+            </linearGradient>
+            <!-- Blue CuSO4 solution -->
+            <linearGradient id="sim7_cuso4" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95"/>
+            </linearGradient>
+            <!-- Iron nail metallic gradient -->
+            <linearGradient id="sim7_nail_fe" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#64748b"/>
+              <stop offset="50%" stop-color="#cbd5e1"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <!-- Copper brown coated nail -->
+            <linearGradient id="sim7_nail_cu" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#b45309"/>
+              <stop offset="50%" stop-color="#f59e0b"/>
+              <stop offset="100%" stop-color="#78350f"/>
+            </linearGradient>
+            <filter id="sim7_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim7_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Test Tube Stand on Left -->
+          <g id="sim7_stand" filter="url(#sim7_drop)">
+            <rect x="190" y="255" width="130" height="15" rx="3" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+            <rect x="195" y="120" width="10" height="135" fill="#78350f"/>
+            <rect x="200" y="130" width="110" height="12" rx="2" fill="#92400e"/>
+            <circle cx="255" cy="136" r="18" fill="none" stroke="#78350f" stroke-width="2"/>
+          </g>
+
+          <!-- Test Tube with CuSO4 liquid -->
+          <g id="sim7_tube_group" filter="url(#sim7_drop)">
+            <rect x="240" y="80" width="36" height="175" rx="18" fill="url(#sim7_glass)" stroke="#0284c7" stroke-width="2"/>
+            <!-- Liquid inside (CuSO4 blue -> FeSO4 pale green) -->
+            <rect id="sim7_liquid" x="242" y="115" width="32" height="138" rx="14" fill="url(#sim7_cuso4)" style="transition: fill 1.5s;"/>
+            <text id="sim7_liquid_lbl" x="258" y="285" font-size="12" font-weight="700" fill="#0284c7" text-anchor="middle">नीला CuSO₄ विलयन</text>
+          </g>
+
+          <!-- Thread & Iron Nail -->
+          <g id="sim7_nail_group" style="transition: transform 1s;" filter="url(#sim7_drop)">
+            <!-- Thread line -->
+            <line id="sim7_thread" x1="258" y1="20" x2="258" y2="70" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <!-- Nail Body -->
+            <rect id="sim7_nail" x="254" y="70" width="8" height="65" rx="2" fill="url(#sim7_nail_fe)" stroke="#334155" stroke-width="0.8"/>
+            <polygon id="sim7_nail_tip" points="252,135 264,135 258,145" fill="#334155"/>
+            <ellipse id="sim7_nail_head" cx="258" cy="70" rx="7" ry="2.5" fill="#475569"/>
+          </g>
+
+          <!-- Reference Control Nail on Table (Right) -->
+          <g id="sim7_ref_nail" filter="url(#sim7_drop)">
+            <rect x="420" y="260" width="70" height="7" rx="2" fill="url(#sim7_nail_fe)" stroke="#334155" stroke-width="0.8"/>
+            <ellipse cx="420" cy="263" rx="3" ry="5" fill="#475569"/>
+            <polygon points="490,260 490,267 498,263" fill="#334155"/>
+            <text x="455" y="285" font-size="11" font-weight="700" fill="#475569" text-anchor="middle">तुलना हेतु स्वच्छ लोहे की कील</text>
+          </g>
+
+          <!-- Reactivity Series Card (Step 3) -->
+          <g id="sim7_reactivity_card" style="display: none;" filter="url(#sim7_drop)">
+            <rect x="410" y="60" width="280" height="175" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
+            <text x="550" y="85" font-size="13" font-weight="800" fill="#0369a1" text-anchor="middle">सक्रियता श्रेणी तुलना</text>
+            <line x1="430" y1="95" x2="670" y2="95" stroke="#cbd5e1" stroke-width="1.5"/>
+
+            <text x="430" y="120" font-size="12" font-weight="700" fill="#047857">✅ Fe + CuSO₄ → FeSO₄ + Cu (संभव)</text>
+            <text x="430" y="145" font-size="12" font-weight="700" fill="#047857">✅ Zn + CuSO₄ → ZnSO₄ + Cu (संभव)</text>
+            <text x="430" y="170" font-size="12" font-weight="700" fill="#b91c1c">❌ Cu + FeSO₄ → कोई क्रिया नहीं!</text>
+            <text x="550" y="205" font-size="11" font-weight="800" fill="#0284c7" text-anchor="middle">सक्रियता क्रम: Zn > Fe > Pb > (H) > Cu</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim7_status">
+          <strong>प्रारंभिक अवस्था:</strong> परखनली में गहरा नीला कॉपर सल्फेट विलयन है। स्वच्छ लोहे की कील धागे से बंधी ऊपर लटकी है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim7_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(Fe(s) + CuSO_4(aq) \to FeSO_4(aq) + Cu(s)\)। लोहा (\(Fe\)) तांबे (\(Cu\)) से अधिक अभिक्रियाशील है, अतः यह कॉपर को विस्थापित कर देता है। परखनली का नीला रंग फीका पड़कर हल्का हरा (\(FeSO_4\)) हो जाता है तथा लोहे की कील पर <strong>लाल-भूरे रंग का तांबा</strong> निक्षेपित हो जाता है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 8: Double Displacement & Precipitation -->
+    <!-- SIMULATOR 8: DOUBLE DISPLACEMENT & PRECIPITATION -->
+    <div class="sim-card" id="sim8_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-layer-group" style="color: #6366f1;"></i>
+          <span>लाइव 3D सिमुलेटर 8: द्विविस्थापन एवं अवक्षेपण सिमुलेटर (क्रियाकलाप 1.2 एवं 1.10)</span>
+        </div>
+        <span class="sim-badge">अवक्षेपण 3D 🧪</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        द्विविस्थापन अभिक्रिया में अभिकारकों के बीच आयनों का आदान-प्रदान होता है। सोडियम सल्फेट और बेरियम क्लोराइड मिलाने पर बेरियम सल्फेट (\(BaSO_4\)) का <strong>सफेद अवक्षेप</strong> बनता है, जबकि लेड नाइट्रेट व पोटैशियम आयोडाइड मिलाने पर लेड आयोडाइड (\(PbI_2\)) का <strong>चमकीला पीला अवक्षेप</strong> बनता है:
+      </p>
+
+      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+        <span style="font-weight: 700; color: #1e293b;">अवक्षेपण अभिक्रिया चुनें:</span>
+        <button class="sim-btn" id="sim8_sel_baso4" style="background:#2563eb;" onclick="sim8SelectReaction('baso4')">
+          ⚪ Na₂SO₄ + BaCl₂ (श्वेत अवक्षेप)
+        </button>
+        <button class="sim-btn secondary" id="sim8_sel_pbi2" onclick="sim8SelectReaction('pbi2')">
+          🟡 Pb(NO₃)₂ + KI (पीला अवक्षेप)
+        </button>
+      </div>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim8_btn1" onclick="sim8SetStep(1)">
+          <i class="fas fa-flask"></i> चरण 1: विलयनों को मिलाएं
+        </button>
+        <button class="sim-btn" id="sim8_btn2" onclick="sim8SetStep(2)">
+          <i class="fas fa-filter"></i> चरण 2: अवक्षेप बनना व बैठना
+        </button>
+        <button class="sim-btn success" id="sim8_btn3" onclick="sim8SetStep(3)">
+          <i class="fas fa-atom"></i> चरण 3: आयन विनिमय विश्लेषण
+        </button>
+        <button class="sim-btn danger" onclick="sim8Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim8_stage">
+        <svg id="sim8_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim8_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim8_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+            </linearGradient>
+            <filter id="sim8_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim8_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Collecting Beaker in Center -->
+          <g id="sim8_beaker_group" filter="url(#sim8_drop)">
+            <rect x="280" y="130" width="160" height="135" rx="6" fill="url(#sim8_glass)" stroke="#0284c7" stroke-width="2"/>
+            <line x1="274" y1="130" x2="286" y2="130" stroke="#0284c7" stroke-width="3"/>
+            <line x1="434" y1="130" x2="446" y2="130" stroke="#0284c7" stroke-width="3"/>
+
+            <!-- Mixed Liquid in Beaker -->
+            <rect id="sim8_beaker_liquid" x="282" y="170" width="156" height="93" rx="4" fill="#e0f2fe" opacity="0.4" style="transition: all 0.8s;"/>
+
+            <!-- Curdy Precipitate Particles (Step 2) -->
+            <g id="sim8_precip_particles" style="display: none;">
+              <circle cx="310" cy="190" r="4" fill="#ffffff" stroke="#cbd5e1"/>
+              <circle cx="350" cy="180" r="5" fill="#ffffff" stroke="#cbd5e1"/>
+              <circle cx="390" cy="195" r="4.5" fill="#ffffff" stroke="#cbd5e1"/>
+              <circle cx="330" cy="210" r="5" fill="#ffffff" stroke="#cbd5e1"/>
+              <circle cx="370" cy="215" r="4" fill="#ffffff" stroke="#cbd5e1"/>
+            </g>
+
+            <!-- Settled Precipitate Layer at bottom -->
+            <rect id="sim8_settled_precip" x="282" y="245" width="156" height="18" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" style="display: none;"/>
+            <text id="sim8_precip_lbl" x="360" y="258" font-size="11" font-weight="900" fill="#0f172a" text-anchor="middle" style="display: none;">BaSO₄ श्वेत अवक्षेप</text>
+
+            <text x="360" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">अवक्षेपण बीकर</text>
+          </g>
+
+          <!-- Left Test Tube (Reactant A: Na2SO4 / Pb(NO3)2) -->
+          <g id="sim8_tube_left" transform="rotate(25 210 100)" filter="url(#sim8_drop)">
+            <rect x="195" y="40" width="28" height="110" rx="14" fill="url(#sim8_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <rect id="sim8_tube_left_liq" x="197" y="65" width="24" height="83" rx="10" fill="#bae6fd" opacity="0.8"/>
+            <text id="sim8_left_lbl" x="210" y="30" font-size="11" font-weight="800" fill="#0284c7" text-anchor="middle">Na₂SO₄ विलयन</text>
+          </g>
+
+          <!-- Right Test Tube (Reactant B: BaCl2 / KI) -->
+          <g id="sim8_tube_right" transform="rotate(-25 510 100)" filter="url(#sim8_drop)">
+            <rect x="495" y="40" width="28" height="110" rx="14" fill="url(#sim8_glass)" stroke="#0284c7" stroke-width="1.8"/>
+            <rect id="sim8_tube_right_liq" x="497" y="65" width="24" height="83" rx="10" fill="#bae6fd" opacity="0.8"/>
+            <text id="sim8_right_lbl" x="510" y="30" font-size="11" font-weight="800" fill="#0284c7" text-anchor="middle">BaCl₂ विलयन</text>
+          </g>
+
+          <!-- Ion Exchange Explanation Box (Step 3) -->
+          <g id="sim8_ion_panel" style="display: none;" filter="url(#sim8_drop)">
+            <rect x="180" y="30" width="360" height="90" rx="8" fill="#f8fafc" stroke="#6366f1" stroke-width="2"/>
+            <text x="360" y="55" font-size="13" font-weight="900" fill="#4338ca" text-anchor="middle">द्विविस्थापन: आयन विनिमय (Ion Exchange)</text>
+            <text id="sim8_ion_eq" x="360" y="85" font-size="13" font-weight="800" fill="#1e293b" text-anchor="middle">Ba²⁺ + SO₄²⁻ → BaSO₄ ↓ (अविलेय ठोस अवक्षेप)</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim8_status">
+          <strong>प्रारंभिक अवस्था:</strong> दोनों परखनलियों में पारदर्शी रंगहीन विलयन हैं। बीकर खाली है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim8_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> \(Na_2SO_4(aq) + BaCl_2(aq) \to BaSO_4(s)\downarrow + 2NaCl(aq)\)। इस अभिक्रिया में \(Ba^{2+}\) तथा \(SO_4^{2-}\) आयनों के संयोजन से <strong>बेरियम सल्फेट का श्वेत अवक्षेप</strong> बनता है जो जल में अविलेय है। इसी प्रकार लेड नाइट्रेट व पोटैशियम आयोडाइड में: \(Pb(NO_3)_2(aq) + 2KI(aq) \to PbI_2(s)\downarrow + 2KNO_3(aq)\), जिसमें <strong>लेड आयोडाइड का पीला अवक्षेप</strong> प्राप्त होता है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 9: Redox Reaction Analyzer -->
+    <!-- SIMULATOR 9: REDOX LIVE ANALYZER -->
+    <div class="sim-card" id="sim9_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-arrows-spin" style="color: #ea580c;"></i>
+          <span>लाइव 3D सिमुलेटर 9: रेडॉक्स (उपचयन-अपचयन) लाइव विश्लेषक सिमुलेटर</span>
+        </div>
+        <span class="sim-badge">रेडॉक्स 3D 🔄</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        किसी पदार्थ में ऑक्सीजन का जुड़ना या हाइड्रोजन का निकलना <strong>उपचयन (Oxidation)</strong> कहलाता है, जबकि ऑक्सीजन का निकलना या हाइड्रोजन का जुड़ना <strong>अपचयन (Reduction)</strong> कहलाता है। तांबे के चूर्ण को गर्म करने पर वह काले कॉपर(II) ऑक्साइड में बदलता है, जिस पर \(H_2\) गैस प्रवाहित करने पर वह पुनः भूरे तांबे में अपचयित हो जाता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim9_btn1" onclick="sim9SetStep(1)">
+          <i class="fas fa-fire"></i> चरण 1: तांबे को गर्म करें (उपचयन)
+        </button>
+        <button class="sim-btn" id="sim9_btn2" onclick="sim9SetStep(2)">
+          <i class="fas fa-wind"></i> चरण 2: H₂ गैस प्रवाहित करें (अपचयन)
+        </button>
+        <button class="sim-btn success" id="sim9_btn3" onclick="sim9SetStep(3)">
+          <i class="fas fa-table"></i> चरण 3: रेडॉक्स विश्लेषक तालिका
+        </button>
+        <button class="sim-btn danger" onclick="sim9Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim9_stage">
+        <svg id="sim9_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim9_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim9_burner" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#334155"/>
+              <stop offset="50%" stop-color="#94a3b8"/>
+              <stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <!-- Copper brown powder gradient -->
+            <radialGradient id="sim9_cu_powder" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f59e0b"/>
+              <stop offset="60%" stop-color="#b45309"/>
+              <stop offset="100%" stop-color="#78350f"/>
+            </radialGradient>
+            <!-- Black CuO powder gradient -->
+            <radialGradient id="sim9_cuo_powder" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#475569"/>
+              <stop offset="60%" stop-color="#1e293b"/>
+              <stop offset="100%" stop-color="#090d16"/>
+            </radialGradient>
+            <filter id="sim9_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim9_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Tripod Stand with Wire Gauze -->
+          <g id="sim9_tripod" filter="url(#sim9_drop)">
+            <!-- Legs -->
+            <line x1="210" y1="180" x2="190" y2="270" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+            <line x1="310" y1="180" x2="330" y2="270" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+            <line x1="260" y1="180" x2="260" y2="270" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+            <!-- Wire Gauze -->
+            <rect x="195" y="175" width="130" height="6" rx="2" fill="#64748b"/>
+            <!-- Ceramic center -->
+            <ellipse cx="260" cy="178" rx="35" ry="3" fill="#cbd5e1"/>
+          </g>
+
+          <!-- Bunsen Burner below gauze -->
+          <g id="sim9_burner_grp" filter="url(#sim9_drop)">
+            <ellipse cx="260" cy="270" rx="35" ry="10" fill="url(#sim9_burner)"/>
+            <rect x="254" y="210" width="12" height="60" fill="url(#sim9_burner)"/>
+            <polygon points="250,210 270,210 266,202 254,202" fill="#334155"/>
+          </g>
+
+          <!-- Flame (Default hidden) -->
+          <g id="sim9_flame" style="display: none;">
+            <path d="M260,178 Q274,192 268,202 L252,202 Q246,192 260,178 Z" fill="#fb923c"/>
+            <path d="M260,185 Q268,195 265,202 L255,202 Q252,195 260,185 Z" fill="#facc15"/>
+          </g>
+
+          <!-- 3D Porcelain China Dish with Copper Powder -->
+          <g id="sim9_dish_grp" filter="url(#sim9_drop)">
+            <ellipse cx="260" cy="170" rx="60" ry="15" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.8"/>
+            <ellipse cx="260" cy="166" rx="55" ry="11" fill="#e2e8f0"/>
+
+            <!-- Powder layer inside dish -->
+            <ellipse id="sim9_powder_layer" cx="260" cy="166" rx="42" ry="7" fill="url(#sim9_cu_powder)" style="transition: fill 1.2s;"/>
+            <text id="sim9_powder_lbl" x="260" y="152" font-size="11" font-weight="800" fill="#78350f" text-anchor="middle">भूरा तांबा (Cu)</text>
+
+            <text x="260" y="295" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">चाइना डिश व तिपाई स्टैंड</text>
+          </g>
+
+          <!-- H2 Gas Nozzle (Step 2) -->
+          <g id="sim9_h2_pipe" style="display: none;" filter="url(#sim9_drop)">
+            <path d="M370,120 L300,120 L275,150" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+            <path d="M370,120 L300,120 L275,150" fill="none" stroke="#bae6fd" stroke-width="2" stroke-linecap="round"/>
+            <text x="375" y="125" font-size="12" font-weight="800" fill="#0284c7">H₂ गैस प्रवाह</text>
+            <!-- Water vapor bubbles -->
+            <circle cx="285" cy="140" r="3" fill="#38bdf8" opacity="0.8"/>
+            <circle cx="295" cy="130" r="4" fill="#38bdf8" opacity="0.7"/>
+          </g>
+
+          <!-- Redox Analysis Table Overlay (Step 3) -->
+          <g id="sim9_table_panel" style="display: none;" filter="url(#sim9_drop)">
+            <rect x="420" y="50" width="280" height="200" rx="8" fill="#f8fafc" stroke="#ea580c" stroke-width="2"/>
+            <text x="560" y="75" font-size="13" font-weight="900" fill="#c2410c" text-anchor="middle">रेडॉक्स घटक विश्लेषण (Redox Table)</text>
+            <line x1="435" y1="85" x2="685" y2="85" stroke="#fed7aa" stroke-width="1.5"/>
+
+            <text x="440" y="110" font-size="12" font-weight="700" fill="#1e293b">अभिक्रिया: CuO + H₂ → Cu + H₂O</text>
+            <text x="440" y="138" font-size="12" font-weight="800" fill="#047857">🔹 उपचयित (Oxidized): H₂ (O जुड़ा)</text>
+            <text x="440" y="165" font-size="12" font-weight="800" fill="#b91c1c">🔸 अपचयित (Reduced): CuO (O निकला)</text>
+            <text x="440" y="192" font-size="12" font-weight="700" fill="#1e293b">🎯 उपचायक (Oxidizing Agent): CuO</text>
+            <text x="440" y="218" font-size="12" font-weight="700" fill="#1e293b">🎯 अपचायक (Reducing Agent): H₂</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim9_status">
+          <strong>प्रारंभिक अवस्था:</strong> चाइना डिश में चमकदार लाल-भूरे रंग का शुद्ध तांबा (Cu) चूर्ण रखा है।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim9_output">
+        <strong>📋 रासायनिक समीकरण एवं निष्कर्ष:</strong> <br>
+        1. <strong>उपचयन (Oxidation):</strong> \(2Cu(s) + O_2(g) \xrightarrow{\Delta} 2CuO(s)\) — कॉपर ऑक्सीजन ग्रहण कर काले कॉपर ऑक्साइड में बदलता है।<br>
+        2. <strong>अपचयन (Reduction):</strong> \(CuO(s) + H_2(g) \xrightarrow{\Delta} Cu(s) + H_2O(g)\) — गर्म CuO पर \(H_2\) प्रवाहित करने पर ऑक्सीजन हट जाती है और पुनः भूरा तांबा प्राप्त होता है। एक ही अभिक्रिया में उपचयन व अपचयन साथ-साथ होने के कारण इसे <strong>रेडॉक्स अभिक्रिया</strong> कहते हैं।
+      </div>
+    </div>
+
+    <!-- SECTION 4: रासायनिक समीकरण संतुलन लाइव सॉल्वर -->
+    <h2 class="section-heading">
+      <i class="fas fa-calculator" style="color: #0284c7;"></i> 4. रासायनिक समीकरण संतुलन लाइव सॉल्वर (हिट एंड ट्रायल विधि)
+    </h2>
+
+    <div class="concept-box">
+      <div class="concept-title">
+        <i class="fas fa-list-ol" style="color: #0284c7;"></i> समीकरण संतुलित करने के प्रमुख चरण
+      </div>
+      <ol style="padding-left: 20px; line-height: 1.8;">
+        <li><strong>चरण 1:</strong> असंतुलित रासायनिक समीकरण लिखें और प्रत्येक सूत्र के चारों ओर एक बॉक्स बना लें। बॉक्स के अंदर कोई परिवर्तन न करें।</li>
+        <li><strong>चरण 2:</strong> दोनों ओर के तत्वों के परमाणुओं की संख्या की सूची (सारणी) बनाएं।</li>
+        <li><strong>चरण 3:</strong> सबसे अधिक परमाणुओं वाले यौगिक (प्रायः ऑक्सीजन या धातु) को सबसे पहले संतुलित करें।</li>
+        <li><strong>चरण 4:</strong> अन्य तत्वों के परमाणुओं को उपयुक्त पूर्ण संख्यात्मक गुणांक (1, 2, 3, 4...) लगाकर संतुलित करें।</li>
+        <li><strong>चरण 5:</strong> दोनों ओर प्रत्येक तत्व के परमाणुओं की संख्या की पुनः जांच करें।</li>
+        <li><strong>चरण 6:</strong> भौतिक अवस्थाओं के संकेत लिखें: ठोस \((s)\), द्रव \((l)\), गैस \((g)\), जलीय विलयन \((aq)\)।</li>
+      </ol>
+    </div>
+
+    <!-- SIMULATOR 10: Chemical Equation Balancer with Dropdown -->
+    <!-- SIMULATOR 10: EQUATION BALANCER -->
+    <div class="sim-card" id="sim10_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-scale-balanced" style="color: #059669;"></i>
+          <span>लाइव 3D सिमुलेटर 10: रासायनिक समीकरण संतुलन सॉल्वर (ड्रॉपडाउन + 3D तुला)</span>
+        </div>
+        <span class="sim-badge">द्रव्यमान संरक्षण ⚖️</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        द्रव्यमान संरक्षण के नियम के अनुसार किसी रासायनिक अभिक्रिया में न तो द्रव्यमान का निर्माण होता है और न ही विनाश। अतः तीर के दोनों ओर प्रत्येक तत्व के परमाणुओं की संख्या बराबर होनी चाहिए। नीचे दी गई NCERT अभिक्रियाओं में से किसी एक को चुनें और + / - बटनों द्वारा गुणांक (Coefficients) बदलकर 3D तुला को संतुलित करें:
+      </p>
+
+      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+        <span style="font-weight: 700; color: #1e293b;">समीकरण चुनें:</span>
+        <select id="sim10_eq_select" class="sim-select" style="padding: 8px 14px; border-radius: 8px; border: 2px solid #059669; font-weight: 700; background: #ffffff;" onchange="sim10ChangeEquation()">
+          <option value="0">1. Fe + H₂O → Fe₃O₄ + H₂ (लोहे पर भाप)</option>
+          <option value="1">2. HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + H₂O (अम्ल-क्षारक)</option>
+          <option value="2">3. NaOH + H₂SO₄ → Na₂SO₄ + H₂O (उदासीनीकरण)</option>
+          <option value="3">4. NaCl + AgNO₃ → AgCl + NaNO₃ (अवक्षेपण)</option>
+          <option value="4">5. BaCl₂ + H₂SO₄ → BaSO₄ + HCl (द्विविस्थापन)</option>
+          <option value="5">6. CH₄ + O₂ → CO₂ + H₂O (मेथेन दहन)</option>
+        </select>
+        <button class="sim-btn success" onclick="sim10AutoSolve()">
+          <i class="fas fa-wand-magic-sparkles"></i> ✨ स्वतः संतुलित करें
+        </button>
+        <button class="sim-btn danger" onclick="sim10Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- Live Interactive Equation Builder -->
+      <div id="sim10_eq_builder" style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; background: #f8fafc; padding: 14px; border-radius: 10px; border: 1.5px solid #cbd5e1; margin-bottom: 15px;">
+        <!-- Dynamic Molecule Steppers Populated by JS -->
+      </div>
+
+      <!-- 3D White Stage with Balance Scale -->
+      <div class="sim-stage" id="sim10_stage">
+        <svg id="sim10_svg" viewBox="0 0 720 280" width="100%" height="auto" style="max-height: 280px; display: block;">
+          <defs>
+            <linearGradient id="sim10_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim10_metal" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#334155"/>
+              <stop offset="50%" stop-color="#94a3b8"/>
+              <stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="sim10_pan" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0f2fe"/>
+              <stop offset="100%" stop-color="#bae6fd"/>
+            </linearGradient>
+            <filter id="sim10_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="240" width="680" height="30" rx="4" fill="url(#sim10_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="240" x2="700" y2="240" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- Central Balance Pillar -->
+          <g id="sim10_scale_base" filter="url(#sim10_drop)">
+            <polygon points="360,110 375,240 345,240" fill="url(#sim10_metal)"/>
+            <rect x="330" y="235" width="60" height="10" rx="2" fill="#1e293b"/>
+            <!-- Fulcrum Pivot Point -->
+            <circle cx="360" cy="110" r="8" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+          </g>
+
+          <!-- Tilting Beam (Rotates dynamically around 360, 110) -->
+          <g id="sim10_scale_beam" style="transition: transform 0.5s ease-out;" filter="url(#sim10_drop)">
+            <!-- Beam bar -->
+            <rect x="160" y="106" width="400" height="8" rx="3" fill="url(#sim10_metal)"/>
+
+            <!-- Left Pan Hanger (LHS Reactants) -->
+            <line x1="200" y1="110" x2="175" y2="180" stroke="#64748b" stroke-width="2"/>
+            <line x1="200" y1="110" x2="225" y2="180" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="200" cy="180" rx="35" ry="8" fill="url(#sim10_pan)" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="200" y="200" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">अभिकारक (LHS)</text>
+            <text id="sim10_lhs_mass_txt" x="200" y="176" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">द्रव्यमान: 0</text>
+
+            <!-- Right Pan Hanger (RHS Products) -->
+            <line x1="520" y1="110" x2="495" y2="180" stroke="#64748b" stroke-width="2"/>
+            <line x1="520" y1="110" x2="545" y2="180" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="520" cy="180" rx="35" ry="8" fill="url(#sim10_pan)" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="520" y="200" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">उत्पाद (RHS)</text>
+            <text id="sim10_rhs_mass_txt" x="520" y="176" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">द्रव्यमान: 0</text>
+          </g>
+
+          <!-- Golden Celebration Stars when balanced -->
+          <g id="sim10_stars" style="display: none;">
+            <circle cx="360" cy="70" r="14" fill="#facc15" opacity="0.8"/>
+            <text x="360" y="75" font-size="16" font-weight="900" fill="#78350f" text-anchor="middle">⭐ संतुलित!</text>
+          </g>
+        </svg>
+
+        <!-- Dynamic Atom Count Comparison Table -->
+        <div id="sim10_atom_table_container" style="width: 100%; margin-top: 10px;">
+          <!-- Table inserted via JS -->
+        </div>
+
+        <div class="sim-status-banner" id="sim10_status">
+          <strong>समीकरण स्थिति:</strong> गुणांक बदलें और दोनों ओर के परमाणुओं की संख्या बराबर करें।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim10_output">
+        <strong>📋 द्रव्यमान संरक्षण नियम:</strong> \(3Fe + 4H_2O \to Fe_3O_4 + 4H_2\)। तीर के बाईं ओर (LHS) तथा दाईं ओर (RHS) प्रत्येक तत्व के परमाणुओं की कुल संख्या समान होने पर ही रासायनिक समीकरण संतुलित कहलाता है।
+      </div>
+    </div>
+
+    <!-- SECTION 5: संक्षारण एवं विकृतगंधिता -->
+    <h2 class="section-heading">
+      <i class="fas fa-shield-alt" style="color: #059669;"></i> 5. दैनिक जीवन में उपचयन के प्रभाव: संक्षारण एवं विकृतगंधिता
+    </h2>
+
+    <div class="concept-box rose">
+      <div class="concept-title">
+        <i class="fas fa-rust" style="color: #ef4444;"></i> (क) संक्षारण (Corrosion) एवं जंग लगना
+      </div>
+      <p>जब कोई धातु अपने आस-पास <strong>अम्ल, आर्द्रता (नमी), वायु या जल</strong> के संपर्क में आती है, तब इसकी ऊपरी परत धीरे-धीरे क्षय (नष्ट) होने लगती है। इस प्रक्रिया को <strong>संक्षारण</strong> कहते हैं।</p>
+      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 8px;">
+        <li><strong>1. लोहे पर जंग लगना:</strong> लोहे पर लाल-भूरे रंग की पपड़ीदार परत चढ़ जाती है। रासायनिक सूत्र: <strong>जलयोजित फेरिक ऑक्साइड (\(Fe_2O_3 \cdot xH_2O\))</strong>।</li>
+        <li><strong>2. चांदी का काला पड़ना:</strong> वायु में उपस्थित सल्फर से क्रिया करके सिल्वर सल्फाइड (\(Ag_2S\)) की काली परत बनना।</li>
+        <li><strong>3. तांबे पर हरी परत:</strong> कॉपर कार्बोनेट व हाइड्रॉक्साइड [\(CuCO_3 \cdot Cu(OH)_2\)] की हरी परत चढ़ना।</li>
+      </ul>
+      <p style="margin-top: 8px; font-weight: 700; color: #047857;">
+        बचाव के उपाय: पेंट करना, तेल या ग्रीस लगाना, यशदलेपन (गैल्वेनीकरण / Galvanization - जस्ते की परत चढ़ाना), क्रोमियम लेपन, एनोडीकरण या मिश्रधातु (Alloy) बनाना।
+      </p>
+    </div>
+
+    <!-- SVG 8: Rusting Test Tubes Experiment -->
+    <div style="text-align: center; margin: 25px auto; max-width: 680px;">
+      <svg viewBox="0 0 680 270" width="100%" height="270" xmlns="http://www.w3.org/2000/svg" style="background:#0f172a; border-radius:12px; border:1px solid #334155; font-family:sans-serif;">
+        <text x="340" y="24" fill="#38bdf8" font-size="15" font-weight="bold" text-anchor="middle">लोहे में जंग लगने की आवश्यक परिस्थितियां (3 परखनली प्रयोग)</text>
+        
+        <!-- Tube A: Water + Air (RUST OCCURS) -->
+        <rect x="70" y="60" width="55" height="150" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
+        <rect x="72" y="130" width="51" height="75" fill="#0284c7" opacity="0.4"/>
+        <line x1="97" y1="100" x2="97" y2="190" stroke="#b45309" stroke-width="7" stroke-linecap="round"/>
+        <text x="97" y="230" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">परखनली A</text>
+        <text x="97" y="248" fill="#fca5a5" font-size="11" text-anchor="middle">वायु + साधारण जल</text>
+        <text x="97" y="150" fill="#fef08a" font-size="12" font-weight="bold" text-anchor="middle">जंग लगता है! ❌</text>
+
+        <!-- Tube B: Boiled water + Oil layer (NO RUST) -->
+        <rect x="220" y="60" width="55" height="150" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+        <rect x="222" y="120" width="51" height="85" fill="#0284c7" opacity="0.4"/>
+        <!-- Oil Layer -->
+        <rect x="222" y="110" width="51" height="12" fill="#f59e0b" opacity="0.8"/>
+        <line x1="247" y1="125" x2="247" y2="195" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+        <text x="247" y="230" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">परखनली B</text>
+        <text x="247" y="248" fill="#a7f3d0" font-size="11" text-anchor="middle">उबला जल + तेल परत</text>
+        <text x="247" y="105" fill="#fef08a" font-size="9" text-anchor="middle">वायु प्रवेश बंद</text>
+        <text x="247" y="160" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">जंग नहीं! ✅</text>
+
+        <!-- Tube C: Dry air + Anhydrous CaCl2 (NO RUST) -->
+        <rect x="370" y="60" width="55" height="150" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="2.5"/>
+        <!-- Anhydrous CaCl2 grains at bottom -->
+        <circle cx="385" cy="195" r="4" fill="#ffffff"/>
+        <circle cx="397" cy="197" r="5" fill="#ffffff"/>
+        <circle cx="410" cy="195" r="4" fill="#ffffff"/>
+        <line x1="397" y1="90" x2="397" y2="180" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+        <text x="397" y="230" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">परखनली C</text>
+        <text x="397" y="248" fill="#a7f3d0" font-size="11" text-anchor="middle">शुष्क वायु + CaCl₂</text>
+        <text x="397" y="140" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">जंग नहीं! ✅</text>
+
+        <!-- Right Conclusion Panel -->
+        <rect x="460" y="55" width="205" height="185" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="562" y="78" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">वैज्ञानिक निष्कर्ष</text>
+        <line x1="470" y1="90" x2="655" y2="90" stroke="#475569" stroke-width="1"/>
+        <text x="475" y="112" fill="#ffffff" font-size="11" font-weight="bold">• जंग लगने हेतु 2 शर्तें अनिवार्य:</text>
+        <text x="485" y="130" fill="#fde047" font-size="11">1. वायु (ऑक्सीजन O₂)</text>
+        <text x="485" y="148" fill="#38bdf8" font-size="11">2. नमी या जल (H₂O)</text>
+        <text x="475" y="172" fill="#a7f3d0" font-size="11">• दोनों में से एक भी अनुपस्थित</text>
+        <text x="485" y="190" fill="#a7f3d0" font-size="11">  होने पर लोहे में जंग नहीं लगता।</text>
+        <rect x="475" y="202" width="175" height="26" rx="4" fill="#047857"/>
+        <text x="562" y="219" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">गैल्वेनीकरण: जिंक लेपन सुरक्षा</text>
+      </svg>
+    </div>
+
+    <!-- SIMULATOR 11: Corrosion, Rusting & Galvanization -->
+    <!-- SIMULATOR 11: CORROSION & GALVANIZATION -->
+    <div class="sim-card" id="sim11_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-shield-alt" style="color: #0284c7;"></i>
+          <span>लाइव 3D सिमुलेटर 11: जंग लगना (3 परखनली प्रयोग) एवं गैल्वेनीकरण सुरक्षा सिमुलेटर</span>
+        </div>
+        <span class="sim-badge">संक्षारण व बचाव 🛡️</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        लोहे पर जंग लगने के लिए <strong>वायु (ऑक्सीजन)</strong> तथा <strong>नमी (जल)</strong> दोनों की अनिवार्य उपस्थिति आवश्यक है। नीचे दी गई 3 परखनलियों में दिन बीतने का प्रभाव देखें तथा 'जस्ता लेपन (गैल्वेनीकरण)' चालू करके देखें कि कैसे जिंक की बलिदानी परत लोहे को संक्षारण से बचाती है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim11_btn1" onclick="sim11SetDays(0)">
+          <i class="fas fa-calendar-day"></i> दिन 0 (प्रारंभिक अवस्था)
+        </button>
+        <button class="sim-btn" id="sim11_btn2" onclick="sim11SetDays(7)">
+          <i class="fas fa-calendar-week"></i> दिन 7 (जंग का प्रभाव)
+        </button>
+        <button class="sim-btn success" id="sim11_btn3" onclick="sim11ToggleGalv()">
+          <i class="fas fa-shield"></i> 🛡️ जस्ता लेपन (गैल्वेनीकरण चालू/बंद)
+        </button>
+        <button class="sim-btn danger" onclick="sim11Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim11_stage">
+        <svg id="sim11_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim11_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <linearGradient id="sim11_glass" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="30%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="sim11_nail_clean" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#64748b"/>
+              <stop offset="50%" stop-color="#cbd5e1"/>
+              <stop offset="100%" stop-color="#334155"/>
+            </linearGradient>
+            <!-- Zinc coated shiny bluish white -->
+            <linearGradient id="sim11_nail_galv" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#93c5fd"/>
+              <stop offset="50%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#60a5fa"/>
+            </linearGradient>
+            <!-- Rusted brown flake gradient -->
+            <linearGradient id="sim11_nail_rust" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#b45309"/>
+              <stop offset="50%" stop-color="#ea580c"/>
+              <stop offset="100%" stop-color="#78350f"/>
+            </linearGradient>
+            <filter id="sim11_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim11_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- 3D Wooden Test Tube Stand -->
+          <g id="sim11_stand" filter="url(#sim11_drop)">
+            <rect x="80" y="255" width="560" height="15" rx="3" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+            <rect x="85" y="100" width="10" height="155" fill="#78350f"/>
+            <rect x="625" y="100" width="10" height="155" fill="#78350f"/>
+            <rect x="90" y="115" width="540" height="14" rx="2" fill="#92400e"/>
+          </g>
+
+          <!-- Tube A: Ordinary Water + Air (RUSTS) -->
+          <g id="sim11_tube_a" filter="url(#sim11_drop)">
+            <rect x="160" y="60" width="45" height="195" rx="22" fill="url(#sim11_glass)" stroke="#0284c7" stroke-width="2"/>
+            <!-- Water halfway -->
+            <rect x="162" y="150" width="41" height="103" rx="18" fill="#38bdf8" opacity="0.6"/>
+            <!-- Air on top half -->
+            <text x="182" y="100" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">वायु (O₂)</text>
+            <text x="182" y="200" font-size="10" font-weight="700" fill="#0369a1" text-anchor="middle">जल</text>
+
+            <!-- Nail A -->
+            <rect id="sim11_nail_a" x="178" y="100" width="8" height="120" rx="2" fill="url(#sim11_nail_clean)" stroke="#334155" stroke-width="0.8"/>
+            <!-- Rust flakes on bottom of Tube A -->
+            <ellipse id="sim11_rust_flakes_a" cx="182" cy="245" rx="12" ry="4" fill="#b45309" style="display: none;"/>
+
+            <text x="182" y="285" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">परखनली A</text>
+            <text id="sim11_status_a" x="182" y="50" font-size="11" font-weight="800" fill="#1e293b" text-anchor="middle">वायु + जल</text>
+          </g>
+
+          <!-- Tube B: Boiled Water + Oil Layer (NO AIR -> NO RUST) -->
+          <g id="sim11_tube_b" filter="url(#sim11_drop)">
+            <rect x="335" y="60" width="45" height="195" rx="22" fill="url(#sim11_glass)" stroke="#0284c7" stroke-width="2"/>
+            <!-- Boiled water (air-free) -->
+            <rect x="337" y="140" width="41" height="113" rx="18" fill="#38bdf8" opacity="0.6"/>
+            <!-- Olive oil seal layer -->
+            <rect x="337" y="130" width="41" height="14" fill="#facc15" stroke="#eab308" stroke-width="1"/>
+            <text x="357" y="122" font-size="9" font-weight="800" fill="#854d0e" text-anchor="middle">तेल की परत</text>
+            <text x="357" y="200" font-size="9" font-weight="700" fill="#0369a1" text-anchor="middle">उबला जल</text>
+
+            <!-- Nail B (stays clean) -->
+            <rect id="sim11_nail_b" x="353" y="100" width="8" height="120" rx="2" fill="url(#sim11_nail_clean)" stroke="#334155" stroke-width="0.8"/>
+
+            <text x="357" y="285" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">परखनली B</text>
+            <text id="sim11_status_b" x="357" y="50" font-size="11" font-weight="800" fill="#1e293b" text-anchor="middle">केवल जल (वायु नहीं)</text>
+          </g>
+
+          <!-- Tube C: Dry Air + Anhydrous CaCl2 (NO WATER -> NO RUST) -->
+          <g id="sim11_tube_c" filter="url(#sim11_drop)">
+            <rect x="510" y="60" width="45" height="195" rx="22" fill="url(#sim11_glass)" stroke="#0284c7" stroke-width="2"/>
+            <!-- Cork stopper on top -->
+            <rect x="518" y="55" width="29" height="12" fill="#78350f" rx="2"/>
+            <!-- Dry Air -->
+            <text x="532" y="120" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">शुष्क वायु</text>
+            <!-- Anhydrous CaCl2 drying agent pellets at bottom -->
+            <g id="sim11_cacl2_pellets">
+              <circle cx="525" cy="242" r="4" fill="#ffffff" stroke="#94a3b8"/>
+              <circle cx="538" cy="240" r="4.5" fill="#ffffff" stroke="#94a3b8"/>
+              <circle cx="532" cy="248" r="4" fill="#ffffff" stroke="#94a3b8"/>
+            </g>
+            <text x="532" y="225" font-size="8" font-weight="800" fill="#64748b" text-anchor="middle">निर्जल CaCl₂</text>
+
+            <!-- Nail C (stays clean) -->
+            <rect id="sim11_nail_c" x="528" y="90" width="8" height="120" rx="2" fill="url(#sim11_nail_clean)" stroke="#334155" stroke-width="0.8"/>
+
+            <text x="532" y="285" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">परखनली C</text>
+            <text id="sim11_status_c" x="532" y="50" font-size="11" font-weight="800" fill="#1e293b" text-anchor="middle">केवल शुष्क वायु</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim11_status">
+          <strong>प्रारंभिक अवस्था:</strong> दिन 0 — तीनों परखनलियों में लोहे की स्वच्छ चमकीली कीलें रखी गई हैं।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim11_output">
+        <strong>📋 निष्कर्ष एवं संक्षारण सुरक्षा:</strong> <br>
+        1. <strong>जंग की आवश्यक शर्तें:</strong> केवल परखनली A में जंग लगता है क्योंकि वहां <strong>ऑक्सीजन एवं नमी दोनों</strong> उपस्थित हैं। B में वायु नहीं थी और C में नमी नहीं थी, इसलिए उन पर जंग नहीं लगा।<br>
+        2. <strong>गैल्वेनीकरण (Galvanisation):</strong> लोहे व इस्पात को जंग से सुरक्षित रखने के लिए उन पर <strong>जस्ते (जिंक - Zn)</strong> की पतली परत चढ़ाई जाती है। जिंक लोहे से अधिक सक्रिय होने के कारण स्वयं बलिदानी संक्षारण (Sacrificial protection) कर लोहे की सुरक्षा करता है।
+      </div>
+    </div>
+
+    <!-- SIMULATOR 12: Rancidity & Chips Packet -->
+    <!-- SIMULATOR 12: RANCIDITY & NITROGEN PACKAGING -->
+    <div class="sim-card" id="sim12_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-cookie-bite" style="color: #f59e0b;"></i>
+          <span>लाइव 3D सिमुलेटर 12: विकृतगंधिता एवं चिप्स पैकेट में नाइट्रोजन गैस संरक्षण</span>
+        </div>
+        <span class="sim-badge">खाद्य संरक्षण 🥔</span>
+      </div>
+      <p style="font-size: 15px; color: #334155; margin-bottom: 14px; line-height: 1.6;">
+        तेल व वसायुक्त खाद्य पदार्थों को लंबे समय तक वायु में खुला रखने पर वे उपचयित (ऑक्सीकृत) हो जाते हैं, जिससे उनका स्वाद व गंध बदल जाती है—इसे <strong>विकृतगंधिता (Rancidity)</strong> कहते हैं। चिप्स निर्माता पैकेट में से ऑक्सीजन हटाकर <strong>अक्रिय नाइट्रोजन (\(N_2\)) गैस</strong> भरते हैं ताकि उपचयन न हो सके:
+      </p>
+
+      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+        <span style="font-weight: 700; color: #1e293b;">पैकिंग माध्यम चुनें:</span>
+        <button class="sim-btn secondary" id="sim12_sel_air" onclick="sim12SelectAtmosphere('air')">
+          💨 सामान्य वायु (O₂ उपस्थित)
+        </button>
+        <button class="sim-btn" id="sim12_sel_n2" style="background:#0284c7;" onclick="sim12SelectAtmosphere('n2')">
+          🛡️ अक्रिय नाइट्रोजन (N₂ गैस फ्लश)
+        </button>
+      </div>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn secondary" id="sim12_btn1" onclick="sim12SetDay(1)">
+          <i class="fas fa-calendar-day"></i> दिन 1 (ताजा पैकेट)
+        </button>
+        <button class="sim-btn" id="sim12_btn2" onclick="sim12SetDay(30)">
+          <i class="fas fa-calendar-alt"></i> दिन 30 (समय का प्रभाव)
+        </button>
+        <button class="sim-btn success" id="sim12_btn3" onclick="sim12ShowChemistry()">
+          <i class="fas fa-microscope"></i> रासायनिक क्रियाविधि विश्लेषण
+        </button>
+        <button class="sim-btn danger" onclick="sim12Reset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <!-- 3D White Stage -->
+      <div class="sim-stage" id="sim12_stage">
+        <svg id="sim12_svg" viewBox="0 0 720 320" width="100%" height="auto" style="max-height: 320px; display: block;">
+          <defs>
+            <linearGradient id="sim12_bench" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#e2e8f0"/>
+            </linearGradient>
+            <!-- 3D Metallic Foil Packet -->
+            <linearGradient id="sim12_foil_air" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="40%" stop-color="#f87171"/>
+              <stop offset="70%" stop-color="#dc2626"/>
+              <stop offset="100%" stop-color="#991b1b"/>
+            </linearGradient>
+            <linearGradient id="sim12_foil_n2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0284c7"/>
+              <stop offset="40%" stop-color="#38bdf8"/>
+              <stop offset="70%" stop-color="#0369a1"/>
+              <stop offset="100%" stop-color="#075985"/>
+            </linearGradient>
+            <!-- Fresh golden crispy chips -->
+            <linearGradient id="sim12_chip_fresh" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fef08a"/>
+              <stop offset="50%" stop-color="#facc15"/>
+              <stop offset="100%" stop-color="#eab308"/>
+            </linearGradient>
+            <!-- Rancid spoiled dark chips -->
+            <linearGradient id="sim12_chip_rancid" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a16207"/>
+              <stop offset="50%" stop-color="#713f12"/>
+              <stop offset="100%" stop-color="#451a03"/>
+            </linearGradient>
+            <filter id="sim12_drop" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.16"/>
+            </filter>
+          </defs>
+
+          <!-- Table -->
+          <rect x="20" y="270" width="680" height="36" rx="4" fill="url(#sim12_bench)" stroke="#cbd5e1" stroke-width="2"/>
+          <line x1="20" y1="270" x2="700" y2="270" stroke="#94a3b8" stroke-width="2"/>
+
+          <!-- 3D Puffed Snack Packet (Center-Left) -->
+          <g id="sim12_packet_grp" filter="url(#sim12_drop)">
+            <!-- Packet Body -->
+            <rect id="sim12_packet_body" x="140" y="45" width="180" height="210" rx="14" fill="url(#sim12_foil_n2)" stroke="#0f172a" stroke-width="2"/>
+            <!-- Top & Bottom crimp seals -->
+            <rect x="140" y="45" width="180" height="12" fill="#334155" opacity="0.4"/>
+            <line x1="140" y1="57" x2="320" y2="57" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <rect x="140" y="243" width="180" height="12" fill="#334155" opacity="0.4"/>
+            <line x1="140" y1="243" x2="320" y2="243" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+            <!-- Transparent Cutaway Window showing chips inside -->
+            <ellipse cx="230" cy="150" rx="60" ry="45" fill="#ffffff" opacity="0.9" stroke="#cbd5e1" stroke-width="1.5"/>
+
+            <!-- Inside Chips (Fresh Golden vs Rancid Dark) -->
+            <g id="sim12_chips_inside">
+              <ellipse id="sim12_chip1" cx="215" cy="140" rx="20" ry="12" fill="url(#sim12_chip_fresh)" stroke="#ca8a04" stroke-width="1" transform="rotate(-15 215 140)"/>
+              <ellipse id="sim12_chip2" cx="245" cy="155" rx="22" ry="14" fill="url(#sim12_chip_fresh)" stroke="#ca8a04" stroke-width="1" transform="rotate(20 245 155)"/>
+              <ellipse id="sim12_chip3" cx="225" cy="165" rx="18" ry="11" fill="url(#sim12_chip_fresh)" stroke="#ca8a04" stroke-width="1"/>
+            </g>
+
+            <text id="sim12_gas_badge" x="230" y="85" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">N₂ गैस फ्लश (100%)</text>
+            <text id="sim12_brand" x="230" y="225" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">क्रिस्पी आलू चिप्स</text>
+          </g>
+
+          <!-- Right Gauge & Quality Meter -->
+          <g id="sim12_gauge_grp" filter="url(#sim12_drop)">
+            <rect x="400" y="55" width="280" height="190" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+            <text x="540" y="82" font-size="13" font-weight="800" fill="#1e293b" text-anchor="middle">गुणवत्ता व ताजगी मीटर (Freshness)</text>
+            <line x1="420" y1="92" x2="660" y2="92" stroke="#cbd5e1" stroke-width="1.5"/>
+
+            <!-- Progress Bar Frame -->
+            <rect x="430" y="115" width="220" height="24" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.2"/>
+            <!-- Meter fill (98% green vs 15% red) -->
+            <rect id="sim12_meter_bar" x="432" y="117" width="216" height="20" rx="10" fill="#10b981" style="transition: width 0.8s, fill 0.8s;"/>
+            <text id="sim12_meter_val" x="540" y="132" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">ताजगी: 98% (कुरकुरा)</text>
+
+            <!-- Status Details -->
+            <text id="sim12_taste_txt" x="440" y="170" font-size="12" font-weight="700" fill="#047857">स्वाद: प्राकृतिक व स्वादिष्ट</text>
+            <text id="sim12_smell_txt" x="440" y="195" font-size="12" font-weight="700" fill="#047857">गंध: मनमोहक व शुद्ध</text>
+            <text id="sim12_oil_txt" x="440" y="220" font-size="12" font-weight="700" fill="#1e293b">उपचयन स्थिति: 0% उपचयित</text>
+          </g>
+        </svg>
+
+        <div class="sim-status-banner" id="sim12_status">
+          <strong>प्रारंभिक अवस्था:</strong> दिन 1 — पैकेट में अक्रिय नाइट्रोजन गैस भरी है। चिप्स 100% कुरकुरे व ताजे हैं।
+        </div>
+      </div>
+
+      <div class="sim-output-box" id="sim12_output">
+        <strong>📋 विकृतगंधिता एवं निवारण:</strong> <br>
+        1. <strong>विकृतगंधिता (Rancidity):</strong> तेल व वसा का हवा की ऑक्सीजन द्वारा उपचयन होने पर वाष्पशील अम्ल व एल्डिहाइड बनते हैं जिससे अप्रिय गंध व खराब स्वाद उत्पन्न होता है।<br>
+        2. <strong>उपाय:</strong> (क) पैकेट में <strong>अक्रिय नाइट्रोजन (\(N_2\)) गैस</strong> भरना (ऑक्सीजन का संपर्क रोकना), (ख) प्रति-ऑक्सीकारक (Antioxidants जैसे BHA/BHT) मिलाना, (ग) वायुरोधी (Airtight) बर्तनों में रखना, (घ) प्रशीतन (Refrigeration)।
+      </div>
+    </div>
+
+    
+  </div><!-- /doc-container -->
+
+  <script>
+/* ============================================================
+       TOP PROJECTOR TOOLBAR CONTROLS
+       ============================================================ */
+    var currentFontSize = 17;
+    var currentFontWeight = 400;
+    var currentContainerWidth = 1040;
+    var currentStrokeWidth = 2.0;
+
+    function adjustFontSize(delta) {
+      currentFontSize = Math.max(14, Math.min(26, currentFontSize + delta));
+      document.body.style.fontSize = currentFontSize + 'px';
+    }
+
+    function adjustFontWeight(delta) {
+      currentFontWeight = Math.max(300, Math.min(900, currentFontWeight + delta));
+      document.body.style.fontWeight = currentFontWeight;
+    }
+
+    function adjustWidth(delta) {
+      currentContainerWidth = Math.max(760, Math.min(1600, currentContainerWidth + delta));
+      var container = document.getElementById('mainDocContainer');
+      if (container) container.style.maxWidth = currentContainerWidth + 'px';
+    }
+
+    function adjustSimStroke(delta) {
+      currentStrokeWidth = Math.max(1, Math.min(6, currentStrokeWidth + delta * 0.5));
+      document.documentElement.style.setProperty('--sim-stroke', currentStrokeWidth + 'px');
+      var allSvgs = document.querySelectorAll('.sim-stage svg [stroke]');
+      allSvgs.forEach(function(el) {
+        var base = parseFloat(el.getAttribute('data-base-stroke'));
+        if (!base) {
+          base = parseFloat(el.getAttribute('stroke-width')) || 2;
+          el.setAttribute('data-base-stroke', base);
+        }
+        var newStroke = (base * (currentStrokeWidth / 2.0)).toFixed(1);
+        el.setAttribute('stroke-width', newStroke);
+      });
+    }
+
+    /* ============================================================
+       SIMULATOR 1: MAGNESIUM RIBBON BURNING
+       ============================================================ */
+    var sim1Timer = null;
+    var sim1Cleaned = false;
+
+    function sim1Reset() {
+      if (sim1Timer) clearTimeout(sim1Timer);
+      sim1Cleaned = false;
+      document.getElementById('sim1_sandpaper').style.display = 'none';
+      document.getElementById('sim1_flame').style.display = 'none';
+      document.getElementById('sim1_flash_glow').style.opacity = '0';
+      document.getElementById('sim1_ash_pile').style.display = 'none';
+      document.getElementById('sim1_ash_lbl').style.display = 'none';
+      document.getElementById('sim1_litmus').style.display = 'none';
+      var rib = document.getElementById('sim1_ribbon');
+      rib.setAttribute('fill', 'url(#sim1_mg_unclean)');
+      rib.setAttribute('width', '60');
+      document.getElementById('sim1_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> मैग्नीशियम रिबन कमरे के ताप पर है। सतह पर धुंधली रक्षात्मक ऑक्साइड परत विद्यमान है।';
+    }
+
+    function sim1SetStep(step) {
+      if (sim1Timer) clearTimeout(sim1Timer);
+
+      if (step === 1) {
+        sim1Cleaned = true;
+        document.getElementById('sim1_flame').style.display = 'none';
+        document.getElementById('sim1_litmus').style.display = 'none';
+        document.getElementById('sim1_sandpaper').style.display = 'block';
+        var rib = document.getElementById('sim1_ribbon');
+        rib.setAttribute('fill', 'url(#sim1_mg_clean)');
+        rib.setAttribute('width', '60');
+        document.getElementById('sim1_status').innerHTML = '<strong>चरण 1 पूर्ण:</strong> रेगमाल से रगड़कर रक्षात्मक क्षारीय परत हटाई गई। शुद्ध मैग्नीशियम की धात्विक सतह चमक उठी है!';
+      } else if (step === 2) {
+        if (!sim1Cleaned) {
+          document.getElementById('sim1_status').innerHTML = '⚠️ <strong>चेतावनी:</strong> रिबन पर रक्षात्मक ऑक्साइड परत है! कृपया पहले <strong>चरण 1 (रेगमाल से रगड़ें)</strong> पूरा करें।';
+          return;
+        }
+        document.getElementById('sim1_sandpaper').style.display = 'none';
+        document.getElementById('sim1_litmus').style.display = 'none';
+        document.getElementById('sim1_flame').style.display = 'block';
+        document.getElementById('sim1_flash_glow').style.opacity = '1';
+        document.getElementById('sim1_status').innerHTML = '<strong>चरण 2:</strong> ✨ चमकदार श्वेत ज्वाला (Dazzling White Flame) के साथ तीव्र दहन! 2Mg + O₂ → 2MgO बन रहा है...';
+
+        sim1Timer = setTimeout(function() {
+          document.getElementById('sim1_flash_glow').style.opacity = '0';
+          document.getElementById('sim1_ribbon').setAttribute('width', '20');
+          document.getElementById('sim1_ash_pile').style.display = 'block';
+          document.getElementById('sim1_ash_lbl').style.display = 'block';
+          document.getElementById('sim1_status').innerHTML = '<strong>चरण 2 पूर्ण:</strong> रिबन जलकर समाप्त हुआ। वॉच ग्लास में मैग्नीशियम ऑक्साइड (MgO) का श्वेत चूर्ण संचित हो गया है!';
+        }, 1500);
+      } else if (step === 3) {
+        document.getElementById('sim1_sandpaper').style.display = 'none';
+        document.getElementById('sim1_flame').style.display = 'none';
+        document.getElementById('sim1_ash_pile').style.display = 'block';
+        document.getElementById('sim1_ash_lbl').style.display = 'block';
+        document.getElementById('sim1_litmus').style.display = 'block';
+        document.getElementById('sim1_status').innerHTML = '<strong>चरण 3:</strong> 🧪 लिटमस परीक्षण: MgO + H₂O → Mg(OH)₂। नमी के संपर्क में लाल लिटमस <strong>नीला</strong> हो गया ⇒ <strong>धात्विक ऑक्साइड क्षारकीय होते हैं!</strong>';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 2: ZINC + ACID & POP TEST
+       ============================================================ */
+    var sim2Timer = null;
+
+    function sim2Reset() {
+      if (sim2Timer) clearTimeout(sim2Timer);
+      document.getElementById('sim2_acid_liquid').style.display = 'none';
+      document.getElementById('sim2_flask_bubbles').style.display = 'none';
+      document.getElementById('sim2_soap_bubbles').style.display = 'none';
+      document.getElementById('sim2_candle_group').style.display = 'none';
+      document.getElementById('sim2_pop_burst').style.display = 'none';
+      document.getElementById('sim2_temp_val').textContent = '25°C';
+      document.getElementById('sim2_temp_val').style.fill = '#0284c7';
+      document.getElementById('sim2_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> शंक्वाकार फ्लास्क में दानेदार जस्ता (Zn) मौजूद है। अभी कोई अम्ल नहीं मिलाया गया है।';
+    }
+
+    function sim2SetStep(step) {
+      if (sim2Timer) clearTimeout(sim2Timer);
+
+      if (step === 1) {
+        document.getElementById('sim2_acid_liquid').style.display = 'block';
+        document.getElementById('sim2_flask_bubbles').style.display = 'block';
+        document.getElementById('sim2_soap_bubbles').style.display = 'none';
+        document.getElementById('sim2_candle_group').style.display = 'none';
+        document.getElementById('sim2_pop_burst').style.display = 'none';
+        document.getElementById('sim2_temp_val').textContent = '48°C';
+        document.getElementById('sim2_temp_val').style.fill = '#dc2626';
+        document.getElementById('sim2_status').innerHTML = '<strong>चरण 1:</strong> तनु H₂SO₄ मिलाया गया! तीव्र बुदबुदाहट के साथ H₂ गैस निकल रही है। फ्लास्क का तापमान 48°C तक बढ़ गया (ऊष्माक्षेपी अभिक्रिया)।';
+      } else if (step === 2) {
+        document.getElementById('sim2_acid_liquid').style.display = 'block';
+        document.getElementById('sim2_flask_bubbles').style.display = 'block';
+        document.getElementById('sim2_soap_bubbles').style.display = 'block';
+        document.getElementById('sim2_candle_group').style.display = 'none';
+        document.getElementById('sim2_pop_burst').style.display = 'none';
+        document.getElementById('sim2_status').innerHTML = '<strong>चरण 2:</strong> हाइड्रोजन गैस निकास नली से होकर साबुन के घोल में पहुंचती है। वायु से हल्की होने के कारण साबुन के बुलबुले हवा में तैरने लगे हैं!';
+      } else if (step === 3) {
+        document.getElementById('sim2_acid_liquid').style.display = 'block';
+        document.getElementById('sim2_soap_bubbles').style.display = 'block';
+        document.getElementById('sim2_candle_group').style.display = 'block';
+        document.getElementById('sim2_pop_burst').style.display = 'block';
+        document.getElementById('sim2_status').innerHTML = '<strong>चरण 3:</strong> 💥 जलती मोमबत्ती बुलबुले के पास लाने पर हाइड्रोजन गैस <strong>\'पॉप\' ध्वनि</strong> के साथ जल उठती है! यह H₂ गैस का निर्णायक परीक्षण है।';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 3: SLAKING OF LIME
+       ============================================================ */
+    var sim3Timer = null;
+
+    function sim3Reset() {
+      if (sim3Timer) clearTimeout(sim3Timer);
+      var liq = document.getElementById('sim3_liquid');
+      liq.style.opacity = '0';
+      liq.setAttribute('fill', '#38bdf8');
+      document.getElementById('sim3_steam').style.display = 'none';
+      var merc = document.getElementById('sim3_mercury_col');
+      merc.setAttribute('y', '210');
+      merc.setAttribute('height', '30');
+      document.getElementById('sim3_temp_text').textContent = '25°C (शांत)';
+      document.getElementById('sim3_temp_text').style.fill = '#ef4444';
+      document.getElementById('sim3_paint_layer').style.opacity = '0';
+      document.getElementById('sim3_wall_desc').textContent = 'ईंट की खुरदरी दीवार';
+      document.getElementById('sim3_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> बीकर में सूखा कली चूना (कैल्सियम ऑक्साइड - CaO) रखा है। तापमान सामान्य 25°C है।';
+    }
+
+    function sim3SetStep(step) {
+      if (sim3Timer) clearTimeout(sim3Timer);
+
+      if (step === 1) {
+        var liq = document.getElementById('sim3_liquid');
+        liq.style.opacity = '0.7';
+        liq.setAttribute('fill', '#bae6fd');
+        document.getElementById('sim3_steam').style.display = 'block';
+        document.getElementById('sim3_paint_layer').style.opacity = '0';
+        document.getElementById('sim3_status').innerHTML = '<strong>चरण 1:</strong> बीकर में जल मिलाया गया! सनसनाहट की आवाज के साथ कली चूना बुझने लगा है और वाष्प उठ रही है...';
+      } else if (step === 2) {
+        var liq = document.getElementById('sim3_liquid');
+        liq.style.opacity = '0.9';
+        liq.setAttribute('fill', '#f1f5f9');
+        document.getElementById('sim3_steam').style.display = 'block';
+        var merc = document.getElementById('sim3_mercury_col');
+        merc.setAttribute('y', '120');
+        merc.setAttribute('height', '120');
+        document.getElementById('sim3_temp_text').textContent = '85°C (अत्यधिक गर्म!)';
+        document.getElementById('sim3_status').innerHTML = '<strong>चरण 2:</strong> तीव्र ऊष्माक्षेपी अभिक्रिया! थर्मामीटर का पाठ्यांक 85°C पहुंच गया है। बीकर छूने पर अत्यधिक गर्म लगता है। Ca(OH)₂ बन चुका है।';
+      } else if (step === 3) {
+        document.getElementById('sim3_paint_layer').style.opacity = '1';
+        document.getElementById('sim3_wall_desc').textContent = 'चमकदार CaCO₃ (संगमरमर जैसी परत)';
+        document.getElementById('sim3_status').innerHTML = '<strong>चरण 3:</strong> सफेदी परीक्षण: दीवार पर लगा Ca(OH)₂ वायु की CO₂ से क्रिया कर 2-3 दिन में चमकदार कैल्सियम कार्बोनेट (CaCO₃) में बदल गया!';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 4: THERMAL DECOMPOSITION
+       ============================================================ */
+    var sim4Timer = null;
+    var sim4Compound = 'feso4';
+
+    function sim4SelectCompound(cmp) {
+      sim4Compound = cmp;
+      document.getElementById('sim4_sel_feso4').className = (cmp === 'feso4') ? 'sim-btn' : 'sim-btn secondary';
+      document.getElementById('sim4_sel_feso4').style.background = (cmp === 'feso4') ? '#059669' : '';
+      document.getElementById('sim4_sel_pbno3').className = (cmp === 'pbno3') ? 'sim-btn' : 'sim-btn secondary';
+      document.getElementById('sim4_sel_pbno3').style.background = (cmp === 'pbno3') ? '#b45309' : '';
+      sim4Reset();
+    }
+
+    function sim4Reset() {
+      if (sim4Timer) clearTimeout(sim4Timer);
+      document.getElementById('sim4_flame').style.display = 'none';
+      document.getElementById('sim4_water_drops').style.display = 'none';
+      document.getElementById('sim4_fumes').style.display = 'none';
+      var solid = document.getElementById('sim4_solid');
+      if (sim4Compound === 'feso4') {
+        solid.setAttribute('fill', '#10b981');
+        solid.setAttribute('stroke', '#047857');
+        document.getElementById('sim4_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> क्वथन नली में हरे रंग के फेरस सल्फेट (FeSO₄·7H₂O) क्रिस्टल हैं। बर्नर बंद है।';
+      } else {
+        solid.setAttribute('fill', '#ffffff');
+        solid.setAttribute('stroke', '#cbd5e1');
+        document.getElementById('sim4_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> क्वथन नली में सफेद रंग का लेड नाइट्रेट [Pb(NO₃)₂] चूर्ण है। बर्नर बंद है।';
+      }
+    }
+
+    function sim4SetStep(step) {
+      if (sim4Timer) clearTimeout(sim4Timer);
+
+      if (step === 1) {
+        document.getElementById('sim4_flame').style.display = 'block';
+        document.getElementById('sim4_water_drops').style.display = 'block';
+        document.getElementById('sim4_fumes').style.display = 'none';
+        var solid = document.getElementById('sim4_solid');
+        if (sim4Compound === 'feso4') {
+          solid.setAttribute('fill', '#e2e8f0');
+          document.getElementById('sim4_status').innerHTML = '<strong>चरण 1:</strong> हल्की ऊष्मा से क्रिस्टलन जल (7H₂O) वाष्पीकृत होकर परखनली की दीवार पर संघनित हुआ। FeSO₄ का हरा रंग सफेद हो गया।';
+        } else {
+          document.getElementById('sim4_status').innerHTML = '<strong>चरण 1:</strong> हल्की ऊष्मा से लेड नाइट्रेट चूर्ण गर्म हो रहा है और चटकने की आवाज आने लगी है।';
+        }
+      } else if (step === 2) {
+        document.getElementById('sim4_flame').style.display = 'block';
+        document.getElementById('sim4_fumes').style.display = 'block';
+        var solid = document.getElementById('sim4_solid');
+        if (sim4Compound === 'feso4') {
+          solid.setAttribute('fill', '#78350f');
+          document.getElementById('sim4_fume1').setAttribute('fill', '#94a3b8');
+          document.getElementById('sim4_fume2').setAttribute('fill', '#94a3b8');
+          document.getElementById('sim4_fume3').setAttribute('fill', '#cbd5e1');
+          document.getElementById('sim4_fume_lbl').textContent = 'सल्फर की तीक्ष्ण गंध (SO₂ + SO₃)';
+          document.getElementById('sim4_fume_lbl').style.fill = '#475569';
+          document.getElementById('sim4_status').innerHTML = '<strong>चरण 2:</strong> तीव्र ऊष्मा पर FeSO₄ वियोजित होकर भूरे रंग के फेरिक ऑक्साइड (Fe₂O₃) में बदल गया तथा जलते गंधक जैसी तीक्ष्ण SO₂ व SO₃ गैसें निकलीं!';
+        } else {
+          solid.setAttribute('fill', '#facc15');
+          solid.setAttribute('stroke', '#ca8a04');
+          document.getElementById('sim4_fume1').setAttribute('fill', 'url(#sim4_no2_fume)');
+          document.getElementById('sim4_fume2').setAttribute('fill', 'url(#sim4_no2_fume)');
+          document.getElementById('sim4_fume3').setAttribute('fill', 'url(#sim4_no2_fume)');
+          document.getElementById('sim4_fume_lbl').textContent = 'भूरे रंग का धुआं (NO₂)';
+          document.getElementById('sim4_fume_lbl').style.fill = '#78350f';
+          document.getElementById('sim4_status').innerHTML = '<strong>चरण 2:</strong> तीव्र वियोजन! परखनली से <strong>भूरे रंग की नाइट्रोजन डाइऑक्साइड (NO₂) गैस</strong> के घने बादल निकल रहे हैं और पीला लेड ऑक्साइड (PbO) अवशेष बचा!';
+        }
+      } else if (step === 3) {
+        document.getElementById('sim4_status').innerHTML = (sim4Compound === 'feso4')
+          ? '<strong>चरण 3 निष्कर्ष:</strong> 2FeSO₄ → Fe₂O₃ + SO₂↑ + SO₃↑। अवशेष Fe₂O₃ ठोस भूरा है और निकलने वाली गैसें अम्लीय हैं (नीले लिटमस को लाल करती हैं)।'
+          : '<strong>चरण 3 निष्कर्ष:</strong> 2Pb(NO₃)₂ → 2PbO + 4NO₂↑ + O₂↑। भूरी गैस NO₂ है, पीला ठोस PbO है तथा जलती तीली का तीव्र जलना O₂ की उपस्थिति सिद्ध करता है।';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 5: ELECTROLYSIS OF WATER
+       ============================================================ */
+    var sim5Timer = null;
+
+    function sim5Reset() {
+      if (sim5Timer) clearTimeout(sim5Timer);
+      document.getElementById('sim5_cath_water').setAttribute('height', '155');
+      document.getElementById('sim5_cath_gas').setAttribute('height', '0');
+      document.getElementById('sim5_cath_vol').style.display = 'none';
+      document.getElementById('sim5_cath_bubbles').style.display = 'none';
+
+      document.getElementById('sim5_anode_water').setAttribute('height', '155');
+      document.getElementById('sim5_anode_gas').setAttribute('height', '0');
+      document.getElementById('sim5_anode_vol').style.display = 'none';
+      document.getElementById('sim5_anode_bubbles').style.display = 'none';
+
+      document.getElementById('sim5_test_splinter').style.display = 'none';
+      document.getElementById('sim5_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> दोनों परखनलियां जल से पूरी तरह भरी हैं। विद्युत परिपथ खुला (OFF) है।';
+    }
+
+    function sim5SetStep(step) {
+      if (sim5Timer) clearTimeout(sim5Timer);
+
+      if (step === 1) {
+        document.getElementById('sim5_cath_bubbles').style.display = 'block';
+        document.getElementById('sim5_anode_bubbles').style.display = 'block';
+        document.getElementById('sim5_cath_water').setAttribute('height', '75');
+        document.getElementById('sim5_cath_gas').setAttribute('height', '80');
+        document.getElementById('sim5_cath_vol').style.display = 'block';
+
+        document.getElementById('sim5_anode_water').setAttribute('height', '115');
+        document.getElementById('sim5_anode_gas').setAttribute('height', '40');
+        document.getElementById('sim5_anode_vol').style.display = 'block';
+
+        document.getElementById('sim5_test_splinter').style.display = 'none';
+        document.getElementById('sim5_status').innerHTML = '<strong>चरण 1:</strong> विद्युत धारा प्रवाहित! कैथोड (-) पर हाइड्रोजन गैस 2V अनुपात में तथा एनोड (+) पर ऑक्सीजन गैस 1V अनुपात में एकत्रित हो रही है (2:1 आयतन अनुपात)।';
+      } else if (step === 2) {
+        var sp = document.getElementById('sim5_test_splinter');
+        sp.style.display = 'block';
+        document.getElementById('sim5_splinter_stick').setAttribute('x', '180');
+        document.getElementById('sim5_splinter_flame').setAttribute('cx', '225');
+        document.getElementById('sim5_splinter_lbl').setAttribute('x', '190');
+        document.getElementById('sim5_splinter_lbl').textContent = '💥 POP!';
+        document.getElementById('sim5_status').innerHTML = '<strong>चरण 2:</strong> कैथोड (-) की परखनली के पास जलती तीली लाने पर वह तीव्र <strong>\'पॉप\' ध्वनि</strong> के साथ जल उठती है ⇒ <strong>हाइड्रोजन (H₂) गैस!</strong>';
+      } else if (step === 3) {
+        var sp = document.getElementById('sim5_test_splinter');
+        sp.style.display = 'block';
+        document.getElementById('sim5_splinter_stick').setAttribute('x', '375');
+        document.getElementById('sim5_splinter_flame').setAttribute('cx', '420');
+        document.getElementById('sim5_splinter_flame').setAttribute('r', '14');
+        document.getElementById('sim5_splinter_lbl').setAttribute('x', '385');
+        document.getElementById('sim5_splinter_lbl').textContent = '🔥 तेज ज्वाला!';
+        document.getElementById('sim5_status').innerHTML = '<strong>चरण 3:</strong> एनोड (+) की परखनली के पास सुलगती अगरबत्ती/तीली लाने पर वह तीव्र ज्योति के साथ प्रज्वलित हो उठती है ⇒ <strong>ऑक्सीजन (O₂) गैस!</strong>';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 6: PHOTO-DECOMPOSITION OF AgCl
+       ============================================================ */
+    var sim6Timer = null;
+
+    function sim6Reset() {
+      if (sim6Timer) clearTimeout(sim6Timer);
+      document.getElementById('sim6_rays').style.display = 'none';
+      document.getElementById('sim6_cl2_gas').style.display = 'none';
+      document.getElementById('sim6_photo_panel').style.display = 'none';
+      var p = document.getElementById('sim6_powder');
+      p.setAttribute('fill', '#ffffff');
+      document.getElementById('sim6_powder_lbl').textContent = 'श्वेत AgCl चूर्ण';
+      document.getElementById('sim6_powder_lbl').style.fill = '#475569';
+      document.getElementById('sim6_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> चाइना डिश में शुद्ध सफेद रंग का सिल्वर क्लोराइड (AgCl) रखा है।';
+    }
+
+    function sim6SetStep(step) {
+      if (sim6Timer) clearTimeout(sim6Timer);
+
+      if (step === 1) {
+        document.getElementById('sim6_rays').style.display = 'block';
+        document.getElementById('sim6_cl2_gas').style.display = 'none';
+        document.getElementById('sim6_photo_panel').style.display = 'none';
+        document.getElementById('sim6_status').innerHTML = '<strong>चरण 1:</strong> सूर्य का तेज प्रकाश चाइना डिश पर आपतित हो रहा है। फोटॉनों की ऊर्जा रासायनिक बंधों को तोड़ने लगी है...';
+      } else if (step === 2) {
+        document.getElementById('sim6_rays').style.display = 'block';
+        document.getElementById('sim6_cl2_gas').style.display = 'block';
+        document.getElementById('sim6_photo_panel').style.display = 'none';
+        var p = document.getElementById('sim6_powder');
+        p.setAttribute('fill', '#64748b');
+        document.getElementById('sim6_powder_lbl').textContent = 'धूसर धात्विक Ag (सिल्वर)';
+        document.getElementById('sim6_powder_lbl').style.fill = '#1e293b';
+        document.getElementById('sim6_status').innerHTML = '<strong>चरण 2:</strong> प्रकाशीय वियोजन संपन्न! श्वेत AgCl धूसर (Grey) रंग के धात्विक सिल्वर (Ag) में बदल गया और पीली-हरी Cl₂ गैस मुक्त हुई।';
+      } else if (step === 3) {
+        document.getElementById('sim6_photo_panel').style.display = 'block';
+        document.getElementById('sim6_status').innerHTML = '<strong>चरण 3:</strong> अनुप्रयोग: इसी प्रकाशीय वियोजन अभिक्रिया 2AgBr → 2Ag + Br₂ का उपयोग श्याम-श्वेत (Black & White) फोटोग्राफी में किया जाता है।';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 7: DISPLACEMENT REACTION (Fe + CuSO4)
+       ============================================================ */
+    var sim7Timer = null;
+
+    function sim7Reset() {
+      if (sim7Timer) clearTimeout(sim7Timer);
+      document.getElementById('sim7_nail_group').style.transform = 'translateY(0px)';
+      document.getElementById('sim7_nail').setAttribute('fill', 'url(#sim7_nail_fe)');
+      document.getElementById('sim7_liquid').setAttribute('fill', 'url(#sim7_cuso4)');
+      document.getElementById('sim7_liquid_lbl').textContent = 'नीला CuSO₄ विलयन';
+      document.getElementById('sim7_liquid_lbl').style.fill = '#0284c7';
+      document.getElementById('sim7_reactivity_card').style.display = 'none';
+      document.getElementById('sim7_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> परखनली में गहरा नीला कॉपर सल्फेट विलयन है। स्वच्छ लोहे की कील धागे से बंधी ऊपर लटकी है।';
+    }
+
+    function sim7SetStep(step) {
+      if (sim7Timer) clearTimeout(sim7Timer);
+
+      if (step === 1) {
+        document.getElementById('sim7_nail_group').style.transform = 'translateY(55px)';
+        document.getElementById('sim7_nail').setAttribute('fill', 'url(#sim7_nail_fe)');
+        document.getElementById('sim7_liquid').setAttribute('fill', 'url(#sim7_cuso4)');
+        document.getElementById('sim7_reactivity_card').style.display = 'none';
+        document.getElementById('sim7_status').innerHTML = '<strong>चरण 1:</strong> लोहे की स्वच्छ कील को नीले कॉपर सल्फेट विलयन में डुबोया गया। विस्थापन अभिक्रिया प्रारंभ...';
+      } else if (step === 2) {
+        document.getElementById('sim7_nail_group').style.transform = 'translateY(15px)';
+        document.getElementById('sim7_nail').setAttribute('fill', 'url(#sim7_nail_cu)');
+        document.getElementById('sim7_liquid').setAttribute('fill', '#86efac');
+        document.getElementById('sim7_liquid_lbl').textContent = 'हल्का हरा FeSO₄ विलयन';
+        document.getElementById('sim7_liquid_lbl').style.fill = '#15803d';
+        document.getElementById('sim7_reactivity_card').style.display = 'none';
+        document.getElementById('sim7_status').innerHTML = '<strong>चरण 2 (20 मिनट बाद):</strong> लोहा तांबे को विस्थापित कर देता है! विलयन का रंग हल्का हरा (FeSO₄) हो गया तथा कील पर लाल-भूरे तांबे की चमकीली परत जम गई!';
+      } else if (step === 3) {
+        document.getElementById('sim7_reactivity_card').style.display = 'block';
+        document.getElementById('sim7_status').innerHTML = '<strong>चरण 3:</strong> सक्रियता श्रेणी नियम: Fe, Cu से अधिक सक्रिय है अतः विस्थापन होता है। परंतु Cu को FeSO₄ में डालने पर कोई क्रिया नहीं होती!';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 8: DOUBLE DISPLACEMENT & PRECIPITATION
+       ============================================================ */
+    var sim8Timer = null;
+    var sim8Reaction = 'baso4';
+
+    function sim8SelectReaction(rxn) {
+      sim8Reaction = rxn;
+      document.getElementById('sim8_sel_baso4').className = (rxn === 'baso4') ? 'sim-btn' : 'sim-btn secondary';
+      document.getElementById('sim8_sel_baso4').style.background = (rxn === 'baso4') ? '#2563eb' : '';
+      document.getElementById('sim8_sel_pbi2').className = (rxn === 'pbi2') ? 'sim-btn' : 'sim-btn secondary';
+      document.getElementById('sim8_sel_pbi2').style.background = (rxn === 'pbi2') ? '#ca8a04' : '';
+      sim8Reset();
+    }
+
+    function sim8Reset() {
+      if (sim8Timer) clearTimeout(sim8Timer);
+      document.getElementById('sim8_precip_particles').style.display = 'none';
+      document.getElementById('sim8_settled_precip').style.display = 'none';
+      document.getElementById('sim8_precip_lbl').style.display = 'none';
+      document.getElementById('sim8_ion_panel').style.display = 'none';
+
+      var bLiq = document.getElementById('sim8_beaker_liquid');
+      bLiq.style.opacity = '0.3';
+      bLiq.setAttribute('fill', '#e0f2fe');
+
+      if (sim8Reaction === 'baso4') {
+        document.getElementById('sim8_left_lbl').textContent = 'Na₂SO₄ विलयन';
+        document.getElementById('sim8_right_lbl').textContent = 'BaCl₂ विलयन';
+        document.getElementById('sim8_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> सोडियम सल्फेट व बेरियम क्लोराइड के स्वच्छ रंगहीन विलयन तैयार हैं।';
+      } else {
+        document.getElementById('sim8_left_lbl').textContent = 'Pb(NO₃)₂ विलयन';
+        document.getElementById('sim8_right_lbl').textContent = 'KI विलयन';
+        document.getElementById('sim8_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> लेड नाइट्रेट व पोटैशियम आयोडाइड के पारदर्शी रंगहीन विलयन तैयार हैं।';
+      }
+    }
+
+    function sim8SetStep(step) {
+      if (sim8Timer) clearTimeout(sim8Timer);
+
+      if (step === 1) {
+        document.getElementById('sim8_beaker_liquid').style.opacity = '0.7';
+        document.getElementById('sim8_precip_particles').style.display = 'block';
+        document.getElementById('sim8_settled_precip').style.display = 'none';
+        document.getElementById('sim8_precip_lbl').style.display = 'none';
+        document.getElementById('sim8_ion_panel').style.display = 'none';
+
+        var color = (sim8Reaction === 'baso4') ? '#ffffff' : '#facc15';
+        var parts = document.querySelectorAll('#sim8_precip_particles circle');
+        parts.forEach(function(c) { c.setAttribute('fill', color); });
+
+        document.getElementById('sim8_status').innerHTML = '<strong>चरण 1:</strong> दोनों रंगहीन विलयनों को बीकर में मिलाया गया। मिलाते ही तात्कालिक रासायनिक क्रिया प्रारंभ!';
+      } else if (step === 2) {
+        document.getElementById('sim8_precip_particles').style.display = 'none';
+        document.getElementById('sim8_settled_precip').style.display = 'block';
+        document.getElementById('sim8_precip_lbl').style.display = 'block';
+        document.getElementById('sim8_ion_panel').style.display = 'none';
+
+        if (sim8Reaction === 'baso4') {
+          document.getElementById('sim8_settled_precip').setAttribute('fill', '#ffffff');
+          document.getElementById('sim8_precip_lbl').textContent = 'BaSO₄ श्वेत अवक्षेप (White Precipitate)';
+          document.getElementById('sim8_precip_lbl').style.fill = '#0f172a';
+          document.getElementById('sim8_status').innerHTML = '<strong>चरण 2:</strong> बेरियम सल्फेट का <strong>दही जैसा सफेद अवक्षेप</strong> बनकर बीकर की तली में बैठ गया!';
+        } else {
+          document.getElementById('sim8_settled_precip').setAttribute('fill', '#facc15');
+          document.getElementById('sim8_precip_lbl').textContent = 'PbI₂ पीला अवक्षेप (Canary Yellow Precipitate)';
+          document.getElementById('sim8_precip_lbl').style.fill = '#78350f';
+          document.getElementById('sim8_status').innerHTML = '<strong>चरण 2:</strong> लेड आयोडाइड का <strong>चमकीला पीला अवक्षेप</strong> बनकर बीकर की तली में बैठ गया!';
+        }
+      } else if (step === 3) {
+        document.getElementById('sim8_ion_panel').style.display = 'block';
+        if (sim8Reaction === 'baso4') {
+          document.getElementById('sim8_ion_eq').textContent = 'Ba²⁺ + SO₄²⁻ → BaSO₄ ↓ (अविलेय श्वेत ठोस अवक्षेप)';
+          document.getElementById('sim8_status').innerHTML = '<strong>चरण 3:</strong> द्विविस्थापन: अभिकारकों ने आयनों की परस्पर अदला-बदली की। BaSO₄ अवक्षेप बना और NaCl विलयन में घुलनशील रहा।';
+        } else {
+          document.getElementById('sim8_ion_eq').textContent = 'Pb²⁺ + 2I⁻ → PbI₂ ↓ (अविलेय पीला ठोस अवक्षेप)';
+          document.getElementById('sim8_status').innerHTML = '<strong>चरण 3:</strong> द्विविस्थापन: Pb²⁺ तथा I⁻ आयनों के संयोजन से अविलेय पीला लेड आयोडाइड (PbI₂) अवक्षेपित हुआ।';
+        }
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 9: REDOX LIVE ANALYZER
+       ============================================================ */
+    var sim9Timer = null;
+
+    function sim9Reset() {
+      if (sim9Timer) clearTimeout(sim9Timer);
+      document.getElementById('sim9_flame').style.display = 'none';
+      document.getElementById('sim9_h2_pipe').style.display = 'none';
+      document.getElementById('sim9_table_panel').style.display = 'none';
+      var p = document.getElementById('sim9_powder_layer');
+      p.setAttribute('fill', 'url(#sim9_cu_powder)');
+      document.getElementById('sim9_powder_lbl').textContent = 'भूरा तांबा (Cu)';
+      document.getElementById('sim9_powder_lbl').style.fill = '#78350f';
+      document.getElementById('sim9_status').innerHTML = '<strong>प्रारंभिक अवस्था:</strong> चाइना डिश में चमकदार लाल-भूरे रंग का शुद्ध तांबा (Cu) चूर्ण रखा है।';
+    }
+
+    function sim9SetStep(step) {
+      if (sim9Timer) clearTimeout(sim9Timer);
+
+      if (step === 1) {
+        document.getElementById('sim9_flame').style.display = 'block';
+        document.getElementById('sim9_h2_pipe').style.display = 'none';
+        document.getElementById('sim9_table_panel').style.display = 'none';
+        var p = document.getElementById('sim9_powder_layer');
+        p.setAttribute('fill', 'url(#sim9_cuo_powder)');
+        document.getElementById('sim9_powder_lbl').textContent = 'काला कॉपर ऑक्साइड (CuO)';
+        document.getElementById('sim9_powder_lbl').style.fill = '#0f172a';
+        document.getElementById('sim9_status').innerHTML = '<strong>चरण 1 (उपचयन):</strong> गर्म करने पर तांबे ने वायु की O₂ से क्रिया की। सतह पर काले कॉपर(II) ऑक्साइड (2Cu + O₂ → 2CuO) की परत चढ़ गई!';
+      } else if (step === 2) {
+        document.getElementById('sim9_flame').style.display = 'none';
+        document.getElementById('sim9_h2_pipe').style.display = 'block';
+        document.getElementById('sim9_table_panel').style.display = 'none';
+        var p = document.getElementById('sim9_powder_layer');
+        p.setAttribute('fill', 'url(#sim9_cu_powder)');
+        document.getElementById('sim9_powder_lbl').textContent = 'पुनः प्राप्त भूरा तांबा (Cu)';
+        document.getElementById('sim9_powder_lbl').style.fill = '#78350f';
+        document.getElementById('sim9_status').innerHTML = '<strong>चरण 2 (अपचयन):</strong> गर्म काले CuO पर H₂ गैस प्रवाहित की गई! हाइड्रोजन ने ऑक्सीजन खींच ली और पुनः चमकदार भूरा तांबा (CuO + H₂ → Cu + H₂O) प्राप्त हुआ!';
+      } else if (step === 3) {
+        document.getElementById('sim9_table_panel').style.display = 'block';
+        document.getElementById('sim9_status').innerHTML = '<strong>चरण 3:</strong> रेडॉक्स विश्लेषण: यहाँ H₂ का उपचयन H₂O में तथा CuO का अपचयन Cu में हुआ है।';
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 10: CHEMICAL EQUATION BALANCER
+       ============================================================ */
+    var sim10Equations = [
+      {
+        text: 'Fe + H₂O → Fe₃O₄ + H₂',
+        reactants: [{ name: 'Fe', atoms: { Fe: 1 }, def: 1, sol: 3 }, { name: 'H₂O', atoms: { H: 2, O: 1 }, def: 1, sol: 4 }],
+        products: [{ name: 'Fe₃O₄', atoms: { Fe: 3, O: 4 }, def: 1, sol: 1 }, { name: 'H₂', atoms: { H: 2 }, def: 1, sol: 4 }]
+      },
+      {
+        text: 'HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + H₂O',
+        reactants: [{ name: 'HNO₃', atoms: { H: 1, N: 1, O: 3 }, def: 1, sol: 2 }, { name: 'Ca(OH)₂', atoms: { Ca: 1, O: 2, H: 2 }, def: 1, sol: 1 }],
+        products: [{ name: 'Ca(NO₃)₂', atoms: { Ca: 1, N: 2, O: 6 }, def: 1, sol: 1 }, { name: 'H₂O', atoms: { H: 2, O: 1 }, def: 1, sol: 2 }]
+      },
+      {
+        text: 'NaOH + H₂SO₄ → Na₂SO₄ + H₂O',
+        reactants: [{ name: 'NaOH', atoms: { Na: 1, O: 1, H: 1 }, def: 1, sol: 2 }, { name: 'H₂SO₄', atoms: { H: 2, S: 1, O: 4 }, def: 1, sol: 1 }],
+        products: [{ name: 'Na₂SO₄', atoms: { Na: 2, S: 1, O: 4 }, def: 1, sol: 1 }, { name: 'H₂O', atoms: { H: 2, O: 1 }, def: 1, sol: 2 }]
+      },
+      {
+        text: 'NaCl + AgNO₃ → AgCl + NaNO₃',
+        reactants: [{ name: 'NaCl', atoms: { Na: 1, Cl: 1 }, def: 1, sol: 1 }, { name: 'AgNO₃', atoms: { Ag: 1, N: 1, O: 3 }, def: 1, sol: 1 }],
+        products: [{ name: 'AgCl', atoms: { Ag: 1, Cl: 1 }, def: 1, sol: 1 }, { name: 'NaNO₃', atoms: { Na: 1, N: 1, O: 3 }, def: 1, sol: 1 }]
+      },
+      {
+        text: 'BaCl₂ + H₂SO₄ → BaSO₄ + HCl',
+        reactants: [{ name: 'BaCl₂', atoms: { Ba: 1, Cl: 2 }, def: 1, sol: 1 }, { name: 'H₂SO₄', atoms: { H: 2, S: 1, O: 4 }, def: 1, sol: 1 }],
+        products: [{ name: 'BaSO₄', atoms: { Ba: 1, S: 1, O: 4 }, def: 1, sol: 1 }, { name: 'HCl', atoms: { H: 1, Cl: 1 }, def: 1, sol: 2 }]
+      },
+      {
+        text: 'CH₄ + O₂ → CO₂ + H₂O',
+        reactants: [{ name: 'CH₄', atoms: { C: 1, H: 4 }, def: 1, sol: 1 }, { name: 'O₂', atoms: { O: 2 }, def: 1, sol: 2 }],
+        products: [{ name: 'CO₂', atoms: { C: 1, O: 2 }, def: 1, sol: 1 }, { name: 'H₂O', atoms: { H: 2, O: 1 }, def: 1, sol: 2 }]
+      }
+    ];
+
+    var sim10CurrentIndex = 0;
+    var sim10Coeffs = { r: [], p: [] };
+
+    function sim10ChangeEquation() {
+      sim10CurrentIndex = parseInt(document.getElementById('sim10_eq_select').value);
+      sim10Reset();
+    }
+
+    function sim10Reset() {
+      var eq = sim10Equations[sim10CurrentIndex];
+      sim10Coeffs.r = eq.reactants.map(function() { return 1; });
+      sim10Coeffs.p = eq.products.map(function() { return 1; });
+      sim10Render();
+    }
+
+    function sim10AutoSolve() {
+      var eq = sim10Equations[sim10CurrentIndex];
+      sim10Coeffs.r = eq.reactants.map(function(item) { return item.sol; });
+      sim10Coeffs.p = eq.products.map(function(item) { return item.sol; });
+      sim10Render();
+    }
+
+    function sim10StepCoeff(side, idx, delta) {
+      if (side === 'r') {
+        sim10Coeffs.r[idx] = Math.max(1, Math.min(12, sim10Coeffs.r[idx] + delta));
+      } else {
+        sim10Coeffs.p[idx] = Math.max(1, Math.min(12, sim10Coeffs.p[idx] + delta));
+      }
+      sim10Render();
+    }
+
+    function sim10Render() {
+      var eq = sim10Equations[sim10CurrentIndex];
+      var container = document.getElementById('sim10_eq_builder');
+      if (!container) return;
+
+      var html = '';
+      // Reactants
+      eq.reactants.forEach(function(r, idx) {
+        if (idx > 0) html += '<span style="font-size: 20px; font-weight: 800; color: #64748b; margin: 0 4px;">+</span>';
+        html += '<div style="display:inline-flex; align-items:center; background:#ffffff; border:1.5px solid #059669; border-radius:6px; padding:2px 8px; margin:3px;">';
+        html += '<button onclick="sim10StepCoeff(\'r\',' + idx + ',-1)" style="border:none; background:#e2e8f0; font-weight:800; border-radius:4px; padding:2px 7px; cursor:pointer;">-</button>';
+        html += '<span style="font-size:16px; font-weight:900; color:#059669; margin:0 8px;">' + sim10Coeffs.r[idx] + '</span>';
+        html += '<button onclick="sim10StepCoeff(\'r\',' + idx + ',1)" style="border:none; background:#e2e8f0; font-weight:800; border-radius:4px; padding:2px 7px; cursor:pointer;">+</button>';
+        html += '<span style="font-size:15px; font-weight:700; color:#1e293b; margin-left:6px;">' + r.name + '</span>';
+        html += '</div>';
+      });
+
+      // Arrow
+      html += '<span style="font-size: 22px; font-weight: 900; color: #2563eb; margin: 0 8px;">→</span>';
+
+      // Products
+      eq.products.forEach(function(p, idx) {
+        if (idx > 0) html += '<span style="font-size: 20px; font-weight: 800; color: #64748b; margin: 0 4px;">+</span>';
+        html += '<div style="display:inline-flex; align-items:center; background:#ffffff; border:1.5px solid #2563eb; border-radius:6px; padding:2px 8px; margin:3px;">';
+        html += '<button onclick="sim10StepCoeff(\'p\',' + idx + ',-1)" style="border:none; background:#e2e8f0; font-weight:800; border-radius:4px; padding:2px 7px; cursor:pointer;">-</button>';
+        html += '<span style="font-size:16px; font-weight:900; color:#2563eb; margin:0 8px;">' + sim10Coeffs.p[idx] + '</span>';
+        html += '<button onclick="sim10StepCoeff(\'p\',' + idx + ',1)" style="border:none; background:#e2e8f0; font-weight:800; border-radius:4px; padding:2px 7px; cursor:pointer;">+</button>';
+        html += '<span style="font-size:15px; font-weight:700; color:#1e293b; margin-left:6px;">' + p.name + '</span>';
+        html += '</div>';
+      });
+
+      container.innerHTML = html;
+
+      // Count Atoms
+      var lhsAtoms = {};
+      var rhsAtoms = {};
+      var allElements = [];
+
+      eq.reactants.forEach(function(r, idx) {
+        var coeff = sim10Coeffs.r[idx];
+        for (var el in r.atoms) {
+          lhsAtoms[el] = (lhsAtoms[el] || 0) + r.atoms[el] * coeff;
+          if (allElements.indexOf(el) === -1) allElements.push(el);
+        }
+      });
+
+      eq.products.forEach(function(p, idx) {
+        var coeff = sim10Coeffs.p[idx];
+        for (var el in p.atoms) {
+          rhsAtoms[el] = (rhsAtoms[el] || 0) + p.atoms[el] * coeff;
+          if (allElements.indexOf(el) === -1) allElements.push(el);
+        }
+      });
+
+      var isBalanced = true;
+      var totalLhs = 0;
+      var totalRhs = 0;
+
+      var tableHtml = '<table style="width:100%; border-collapse:collapse; background:#ffffff; text-align:center; font-size:14px; border:1px solid #cbd5e1; border-radius:6px; overflow:hidden;">';
+      tableHtml += '<tr style="background:#f1f5f9; color:#334155; font-weight:700;"><th style="padding:6px; border:1px solid #cbd5e1;">तत्व (Element)</th><th style="padding:6px; border:1px solid #cbd5e1;">अभिकारक परमाणु (LHS)</th><th style="padding:6px; border:1px solid #cbd5e1;">उत्पाद परमाणु (RHS)</th><th style="padding:6px; border:1px solid #cbd5e1;">संतुलन स्थिति</th></tr>';
+
+      allElements.forEach(function(el) {
+        var l = lhsAtoms[el] || 0;
+        var r = rhsAtoms[el] || 0;
+        totalLhs += l;
+        totalRhs += r;
+        var match = (l === r);
+        if (!match) isBalanced = false;
+        tableHtml += '<tr><td style="padding:6px; font-weight:700; border:1px solid #cbd5e1;">' + el + '</td>';
+        tableHtml += '<td style="padding:6px; border:1px solid #cbd5e1; font-weight:800; color:#059669;">' + l + '</td>';
+        tableHtml += '<td style="padding:6px; border:1px solid #cbd5e1; font-weight:800; color:#2563eb;">' + r + '</td>';
+        tableHtml += '<td style="padding:6px; border:1px solid #cbd5e1;">' + (match ? '<span style="color:#16a34a; font-weight:800;">✅ संतुलित</span>' : '<span style="color:#dc2626; font-weight:800;">❌ असंतुलित</span>') + '</td></tr>';
+      });
+      tableHtml += '</table>';
+
+      var tableCont = document.getElementById('sim10_atom_table_container');
+      if (tableCont) tableCont.innerHTML = tableHtml;
+
+      // Update 3D Balance Beam
+      var lMass = document.getElementById('sim10_lhs_mass_txt');
+      var rMass = document.getElementById('sim10_rhs_mass_txt');
+      if (lMass) lMass.textContent = 'कुल परमाणु: ' + totalLhs;
+      if (rMass) rMass.textContent = 'कुल परमाणु: ' + totalRhs;
+
+      var beam = document.getElementById('sim10_scale_beam');
+      var stars = document.getElementById('sim10_stars');
+
+      if (isBalanced) {
+        if (beam) beam.style.transform = 'rotate(0deg)';
+        if (stars) stars.style.display = 'block';
+        var stat = document.getElementById('sim10_status');
+        if (stat) {
+          stat.innerHTML = '🎉 <strong>बधाई हो! समीकरण पूर्णतः संतुलित है!</strong> द्रव्यमान संरक्षण नियम सत्यापित हुआ।';
+          stat.style.borderLeftColor = '#16a34a';
+        }
+      } else {
+        var diff = totalRhs - totalLhs;
+        var rot = Math.max(-14, Math.min(14, diff * 2.5));
+        if (beam) beam.style.transform = 'rotate(' + rot + 'deg)';
+        if (stars) stars.style.display = 'none';
+        var stat = document.getElementById('sim10_status');
+        if (stat) {
+          stat.innerHTML = '⚖️ <strong>समीकरण असंतुलित है:</strong> दोनों ओर परमाणुओं की संख्या बराबर करने के लिए गुणांक घटाएं/बढ़ाएं।';
+          stat.style.borderLeftColor = '#ea580c';
+        }
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 11: CORROSION & GALVANIZATION
+       ============================================================ */
+    var sim11Days = 0;
+    var sim11Galvanized = false;
+
+    function sim11Reset() {
+      sim11Days = 0;
+      sim11Galvanized = false;
+      sim11Update();
+    }
+
+    function sim11SetDays(d) {
+      sim11Days = d;
+      sim11Update();
+    }
+
+    function sim11ToggleGalv() {
+      sim11Galvanized = !sim11Galvanized;
+      sim11Update();
+    }
+
+    function sim11Update() {
+      var nA = document.getElementById('sim11_nail_a');
+      var nB = document.getElementById('sim11_nail_b');
+      var nC = document.getElementById('sim11_nail_c');
+      var flakesA = document.getElementById('sim11_rust_flakes_a');
+      var btnGalv = document.getElementById('sim11_btn3');
+
+      if (sim11Galvanized) {
+        if (btnGalv) {
+          btnGalv.className = 'sim-btn success';
+          btnGalv.innerHTML = '<i class="fas fa-shield-halved"></i> 🛡️ जस्ता लेपन: सक्रिय (ON)';
+        }
+        if (nA) nA.setAttribute('fill', 'url(#sim11_nail_galv)');
+        if (nB) nB.setAttribute('fill', 'url(#sim11_nail_galv)');
+        if (nC) nC.setAttribute('fill', 'url(#sim11_nail_galv)');
+        if (flakesA) flakesA.style.display = 'none';
+        document.getElementById('sim11_status').innerHTML = '🛡️ <strong>गैल्वेनीकरण सक्रिय:</strong> तीनों कीलों पर जस्ते (Zn) की रक्षात्मक परत है। परखनली A में वायु व जल होने के बावजूद लोहा पूरी तरह सुरक्षित है!';
+      } else {
+        if (btnGalv) {
+          btnGalv.className = 'sim-btn secondary';
+          btnGalv.innerHTML = '<i class="fas fa-shield"></i> 🛡️ जस्ता लेपन: निष्क्रिय (OFF)';
+        }
+        if (sim11Days === 0) {
+          if (nA) nA.setAttribute('fill', 'url(#sim11_nail_clean)');
+          if (nB) nB.setAttribute('fill', 'url(#sim11_nail_clean)');
+          if (nC) nC.setAttribute('fill', 'url(#sim11_nail_clean)');
+          if (flakesA) flakesA.style.display = 'none';
+          document.getElementById('sim11_status').innerHTML = '<strong>दिन 0:</strong> तीनों परखनलियों में लोहे की स्वच्छ चमकीली कीलें रखी गई हैं।';
+        } else {
+          if (nA) nA.setAttribute('fill', 'url(#sim11_nail_rust)');
+          if (flakesA) flakesA.style.display = 'block';
+          if (nB) nB.setAttribute('fill', 'url(#sim11_nail_clean)');
+          if (nC) nC.setAttribute('fill', 'url(#sim11_nail_clean)');
+          document.getElementById('sim11_status').innerHTML = '<strong>दिन 7 (बिना जस्ता लेपन):</strong> केवल परखनली A की कील पर गहरा लाल-भूरा जंग (Fe₂O₃·xH₂O) लगा क्योंकि वहां <strong>जल व वायु दोनों</strong> उपस्थित थे!';
+        }
+      }
+    }
+
+    /* ============================================================
+       SIMULATOR 12: RANCIDITY & NITROGEN PACKAGING
+       ============================================================ */
+    var sim12Atmosphere = 'n2';
+    var sim12Day = 1;
+
+    function sim12SelectAtmosphere(atm) {
+      sim12Atmosphere = atm;
+      var btnAir = document.getElementById('sim12_sel_air');
+      var btnN2 = document.getElementById('sim12_sel_n2');
+      if (btnAir) {
+        btnAir.className = (atm === 'air') ? 'sim-btn' : 'sim-btn secondary';
+        btnAir.style.background = (atm === 'air') ? '#dc2626' : '';
+      }
+      if (btnN2) {
+        btnN2.className = (atm === 'n2') ? 'sim-btn' : 'sim-btn secondary';
+        btnN2.style.background = (atm === 'n2') ? '#0284c7' : '';
+      }
+      sim12Update();
+    }
+
+    function sim12SetDay(d) {
+      sim12Day = d;
+      sim12Update();
+    }
+
+    function sim12Reset() {
+      sim12Atmosphere = 'n2';
+      sim12Day = 1;
+      var btnAir = document.getElementById('sim12_sel_air');
+      var btnN2 = document.getElementById('sim12_sel_n2');
+      if (btnAir) {
+        btnAir.className = 'sim-btn secondary';
+        btnAir.style.background = '';
+      }
+      if (btnN2) {
+        btnN2.className = 'sim-btn';
+        btnN2.style.background = '#0284c7';
+      }
+      sim12Update();
+    }
+
+    function sim12ShowChemistry() {
+      document.getElementById('sim12_status').innerHTML = '🔬 <strong>रासायनिक क्रियाविधि:</strong> वसा/तेल + O₂ → पेरोक्साइड → वाष्पशील एल्डिहाइड व फैटी एसिड (दुर्गंध व कड़वा स्वाद)। नाइट्रोजन अक्रिय वातावरण बनाकर इस उपचयन को शून्य कर देती है।';
+    }
+
+    function sim12Update() {
+      var body = document.getElementById('sim12_packet_body');
+      var badge = document.getElementById('sim12_gas_badge');
+      var chip1 = document.getElementById('sim12_chip1');
+      var chip2 = document.getElementById('sim12_chip2');
+      var chip3 = document.getElementById('sim12_chip3');
+      var bar = document.getElementById('sim12_meter_bar');
+      var val = document.getElementById('sim12_meter_val');
+      var taste = document.getElementById('sim12_taste_txt');
+      var smell = document.getElementById('sim12_smell_txt');
+      var oil = document.getElementById('sim12_oil_txt');
+
+      if (sim12Atmosphere === 'n2') {
+        if (body) body.setAttribute('fill', 'url(#sim12_foil_n2)');
+        if (badge) badge.textContent = 'N₂ गैस फ्लश (100%)';
+
+        if (chip1) chip1.setAttribute('fill', 'url(#sim12_chip_fresh)');
+        if (chip2) chip2.setAttribute('fill', 'url(#sim12_chip_fresh)');
+        if (chip3) chip3.setAttribute('fill', 'url(#sim12_chip_fresh)');
+
+        if (bar) {
+          bar.setAttribute('width', '216');
+          bar.setAttribute('fill', '#10b981');
+        }
+        if (val) val.textContent = 'ताजगी: 98% (अत्यंत कुरकुरा)';
+        if (taste) {
+          taste.textContent = 'स्वाद: प्राकृतिक व स्वादिष्ट';
+          taste.style.fill = '#047857';
+        }
+        if (smell) {
+          smell.textContent = 'गंध: मनमोहक व शुद्ध';
+          smell.style.fill = '#047857';
+        }
+        if (oil) oil.textContent = 'उपचयन स्थिति: 0% (अक्रिय N₂ द्वारा सुरक्षित)';
+
+        document.getElementById('sim12_status').innerHTML = '🛡️ <strong>नाइट्रोजन संरक्षण:</strong> दिन ' + sim12Day + ' — अक्रिय N₂ गैस ने वसा का उपचयन पूरी तरह रोक दिया है। चिप्स पूरी तरह कुरकुरे और ताजे हैं!';
+      } else {
+        if (body) body.setAttribute('fill', 'url(#sim12_foil_air)');
+        if (badge) badge.textContent = 'सामान्य वायु (O₂ उपस्थित)';
+
+        if (sim12Day === 1) {
+          if (chip1) chip1.setAttribute('fill', 'url(#sim12_chip_fresh)');
+          if (chip2) chip2.setAttribute('fill', 'url(#sim12_chip_fresh)');
+          if (chip3) chip3.setAttribute('fill', 'url(#sim12_chip_fresh)');
+          if (bar) {
+            bar.setAttribute('width', '190');
+            bar.setAttribute('fill', '#facc15');
+          }
+          if (val) val.textContent = 'ताजगी: 85% (सामान्य)';
+          if (taste) {
+            taste.textContent = 'स्वाद: सामान्य';
+            taste.style.fill = '#ca8a04';
+          }
+          if (smell) {
+            smell.textContent = 'गंध: सामान्य';
+            smell.style.fill = '#ca8a04';
+          }
+          if (oil) oil.textContent = 'उपचयन स्थिति: 5% उपचयित';
+          document.getElementById('sim12_status').innerHTML = '💨 <strong>हवा में पैकिंग:</strong> दिन 1 — पैकेट में वायु मौजूद है, उपचयन प्रक्रिया धीमी गति से शुरू हो रही है।';
+        } else {
+          if (chip1) chip1.setAttribute('fill', 'url(#sim12_chip_rancid)');
+          if (chip2) chip2.setAttribute('fill', 'url(#sim12_chip_rancid)');
+          if (chip3) chip3.setAttribute('fill', 'url(#sim12_chip_rancid)');
+          if (bar) {
+            bar.setAttribute('width', '35');
+            bar.setAttribute('fill', '#dc2626');
+          }
+          if (val) val.textContent = 'ताजगी: 15% (विकृतगंधी)';
+          if (taste) {
+            taste.textContent = 'स्वाद: कड़वा व बदबूदार (खराब)';
+            taste.style.fill = '#dc2626';
+          }
+          if (smell) {
+            smell.textContent = 'गंध: सड़ांध/खट्टी तीक्ष्ण गंध';
+            smell.style.fill = '#dc2626';
+          }
+          if (oil) oil.textContent = 'उपचयन स्थिति: 95% उपचयित (Rancid)';
+          document.getElementById('sim12_status').innerHTML = '🤢 <strong>विकृतगंधिता (Rancidity):</strong> दिन 30 — तेल व वसा का हवा की O₂ से उपचयन हो चुका है। चिप्स सील चुके हैं और तीव्र दुर्गंध आ रही है!';
+        }
+      }
+    }
+
+    // Auto-init Sim 10 on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof sim10Reset === 'function') {
+        sim10Reset();
+      }
+    });
+  </script>
+</body>
+</html>
