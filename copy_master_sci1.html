@@ -1216,6 +1216,10 @@
     }
 
   </style>
+  <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
@@ -2180,7 +2184,7 @@
       </div>
     </div>
 
-    <div class="sim-card" id="sim4_box">
+        <div class="sim-card" id="sim4_box">
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-temperature-arrow-up" style="color: #ea580c;"></i>
@@ -2234,83 +2238,127 @@
               <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
               <stop offset="100%" stop-color="#0284c7" stop-opacity="0.85"/>
             </linearGradient>
-            <!-- Milky Slaked Lime Liquid -->
+            <!-- Thick Milky Slaked Lime Liquid -->
             <linearGradient id="s4_slakedLime" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f8fafc"/>
-              <stop offset="50%" stop-color="#f1f5f9"/>
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="40%" stop-color="#f8fafc"/>
+              <stop offset="80%" stop-color="#f1f5f9"/>
               <stop offset="100%" stop-color="#e2e8f0"/>
             </linearGradient>
-            <!-- Steam Gradient -->
+            <!-- Billowing Steam Gradient -->
             <radialGradient id="s4_steamGrad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-              <stop offset="50%" stop-color="#f8fafc" stop-opacity="0.5"/>
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="40%" stop-color="#f8fafc" stop-opacity="0.65"/>
+              <stop offset="80%" stop-color="#e2e8f0" stop-opacity="0.3"/>
               <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Heat Glow Radial -->
+            <radialGradient id="s4_heatAura" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ea580c" stop-opacity="0.35"/>
+              <stop offset="60%" stop-color="#f97316" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
             </radialGradient>
             <filter id="s4_blur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
             <filter id="s4_steamBlur" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="7"/>
+              <feGaussianBlur stdDeviation="6"/>
             </filter>
           </defs>
 
-          <!-- WORKBENCH -->
-          <polygon points="20,380 880,380 840,430 60,430" fill="url(#s4_benchTop)"/>
-          <polygon points="60,430 840,430 840,436 60,436" fill="#94a3b8" opacity="0.8"/>
-          <polygon points="60,436 840,436 840,465 60,465" fill="url(#s4_benchFront)"/>
-          <ellipse cx="450" cy="468" rx="420" ry="10" fill="#000000" opacity="0.25" filter="url(#s4_blur)"/>
+          <!-- EXTENDED MAJESTIC WORKBENCH -->
+          <polygon points="30,410 1170,410 1130,465 70,465" fill="url(#s4_benchTop)"/>
+          <polygon points="70,465 1130,465 1130,472 70,472" fill="#94a3b8" opacity="0.8"/>
+          <polygon points="70,472 1130,472 1130,500 70,500" fill="url(#s4_benchFront)"/>
+          <ellipse cx="600" cy="502" rx="540" ry="12" fill="#000000" opacity="0.25" filter="url(#s4_blur)"/>
 
-          <!-- RECEIVING BEAKER: LARGE BOROSILICATE BEAKER (CENTER X: 330, WIDTH: 210, HEIGHT: 215) -->
+          <!-- ================= RECEIVING BEAKER: LARGE BOROSILICATE BEAKER (CENTER X: 310, BASE Y: 410) ================= -->
           <g id="s4_big_beaker_group">
-            <ellipse cx="330" cy="402" rx="115" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s4_blur)"/>
+            <ellipse cx="310" cy="415" rx="125" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s4_blur)"/>
 
-            <!-- Initial Quicklime Lumps (CaO) at bottom -->
-            <g id="s4_quicklime_lumps">
-              <path d="M 235,365 Q 260,345 285,365 Q 315,340 345,365 Q 380,345 425,365 L 425,385 Q 330,398 225,385 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-              <ellipse cx="270" cy="365" rx="18" ry="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-              <ellipse cx="330" cy="360" rx="24" ry="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <ellipse cx="390" cy="365" rx="20" ry="11" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+            <!-- Heat Glow Aura (Appears in Steps 2, 3, 4) -->
+            <ellipse id="s4_heat_aura" cx="310" cy="330" rx="140" ry="90" fill="url(#s4_heatAura)" opacity="0" style="transition: opacity 1s ease;"/>
+
+            <!-- REALISTIC SOLID ROCK LUMPS (ठोस कली चूना, CaO) -->
+            <g id="s4_quicklime_rocks">
+              <!-- Rock 1 (Left Base Chunk) -->
+              <polygon points="215,408 230,375 255,380 262,408 225,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+              <polygon points="230,375 248,370 255,380" fill="#ffffff"/>
+              <polygon points="215,408 230,375 225,412" fill="#cbd5e1"/>
+
+              <!-- Rock 2 (Large Center Rock) -->
+              <polygon points="255,408 275,365 315,358 335,392 300,412" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.8"/>
+              <polygon points="275,365 298,352 315,358" fill="#ffffff"/>
+              <polygon points="255,408 275,365 300,412" fill="#cbd5e1"/>
+              <polygon points="315,358 335,392 300,412" fill="#94a3b8"/>
+
+              <!-- Rock 3 (Right Base Chunk) -->
+              <polygon points="325,408 345,372 380,378 395,405 355,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+              <polygon points="345,372 365,366 380,378" fill="#ffffff"/>
+              <polygon points="380,378 395,405 355,412" fill="#cbd5e1"/>
+
+              <!-- Rock 4 (Top Center Rock) -->
+              <polygon points="280,368 298,340 325,345 320,368 288,372" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+              <polygon points="298,340 312,334 325,345" fill="#f8fafc"/>
+              <polygon points="280,368 288,372 320,368" fill="#cbd5e1"/>
+
+              <!-- Rock 5 (Left Upper Chunk) -->
+              <polygon points="240,385 258,358 278,365 272,388" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+              <polygon points="258,358 270,352 278,365" fill="#ffffff"/>
+
+              <!-- Rock 6 (Right Upper Chunk) -->
+              <polygon points="328,382 350,356 370,368 362,388" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+              <polygon points="350,356 362,352 370,368" fill="#ffffff"/>
+
+              <!-- Small Solid Fragments & Gravel at Base -->
+              <polygon points="205,408 212,400 220,406 211,411" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="235,410 242,404 250,408 241,412" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="308,410 315,403 322,408 313,412" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="385,408 392,401 402,406 393,411" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="270,394 278,388 284,395 276,398" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <polygon points="340,395 348,389 354,396 346,399" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
             </g>
 
-            <!-- Water / Slaked Lime Solution (Appears on Step 2) -->
-            <path id="s4_beaker_liquid" d="M 228,265 Q 330,274 432,265 L 432,385 Q 330,398 228,385 Z" fill="url(#s4_slakedLime)" stroke="#cbd5e1" stroke-width="1" opacity="0" style="transition: opacity 0.8s ease;"/>
-            <ellipse id="s4_beaker_meniscus" cx="330" cy="265" rx="102" ry="10" fill="#f8fafc" opacity="0" style="transition: opacity 0.8s ease;"/>
+            <!-- Milky Slaked Lime Liquid (Ca(OH)2) in Steps 2, 3, 4 -->
+            <path id="s4_beaker_liquid" d="M 205,275 Q 310,285 415,275 L 415,395 Q 310,408 205,395 Z" fill="url(#s4_slakedLime)" stroke="#cbd5e1" stroke-width="1" opacity="0" style="transition: opacity 0.8s ease;"/>
+            <ellipse id="s4_beaker_meniscus" cx="310" cy="275" rx="105" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" opacity="0" style="transition: opacity 0.8s ease;"/>
 
-            <!-- Violent Boiling Effervescence Bubbles (Step 2 & 3) -->
+            <!-- Violent Boiling & Effervescence Bubbles in Liquid -->
             <g id="s4_boiling_bubbles" opacity="0" class="liquid-flow-stream">
-              <circle cx="280" cy="330" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="310" cy="300" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="345" cy="315" r="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="370" cy="290" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="325" cy="275" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="250" cy="340" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="280" cy="305" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="310" cy="325" r="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="345" cy="295" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="370" cy="335" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="295" cy="282" r="6.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="330" cy="285" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
             </g>
 
-            <!-- Beaker Glass Body -->
-            <path d="M 215,185 L 225,187 L 225,380 Q 225,396 250,396 L 410,396 Q 435,396 435,380 L 435,187 L 430,185" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.8"/>
-            <ellipse cx="330" cy="186" rx="105" ry="10" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
-            <!-- Spout -->
-            <path d="M 225,187 Q 210,183 205,180 Q 215,189 225,191 Z" fill="#ffffff" opacity="0.7"/>
+            <!-- Large Borosilicate Beaker Glass Shell -->
+            <path d="M 190,195 L 202,197 L 202,390 Q 202,408 228,408 L 392,408 Q 418,408 418,390 L 418,197 L 410,195" fill="url(#s4_beakerGlass)" stroke="#94a3b8" stroke-width="3"/>
+            <ellipse cx="310" cy="196" rx="110" ry="11" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+            <!-- Beaker Pouring Spout -->
+            <path d="M 202,197 Q 185,193 178,190 Q 190,200 202,202 Z" fill="#ffffff" opacity="0.8"/>
 
-            <!-- Measurement Scale -->
-            <g opacity="0.9">
-              <line x1="232" y1="225" x2="260" y2="225" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="230" font-size="13" font-weight="900" fill="#ffffff">200 mL</text>
-              <line x1="232" y1="265" x2="260" y2="265" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="270" font-size="13" font-weight="900" fill="#ffffff">150 mL</text>
-              <line x1="232" y1="305" x2="260" y2="305" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="310" font-size="13" font-weight="900" fill="#ffffff">100 mL</text>
+            <!-- Volume Graduation Markings -->
+            <g opacity="0.95">
+              <line x1="210" y1="235" x2="242" y2="235" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="250" y="240" font-size="13" font-weight="900" fill="#0f172a">250 mL</text>
+              <line x1="210" y1="275" x2="242" y2="275" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="250" y="280" font-size="13" font-weight="900" fill="#0f172a">200 mL</text>
+              <line x1="210" y1="315" x2="242" y2="315" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="250" y="320" font-size="13" font-weight="900" fill="#0f172a">100 mL</text>
             </g>
+            <line x1="208" y1="202" x2="208" y2="395" stroke="#ffffff" stroke-width="3.5" opacity="0.85" stroke-linecap="round"/>
 
-            <line x1="230" y1="192" x2="230" y2="385" stroke="#ffffff" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/>
-
-            <!-- Beaker Label Badge -->
-            <g transform="translate(205, 412)">
-              <rect id="s4_label_box" x="0" y="0" width="250" height="30" rx="8" fill="#0f172a" stroke="#ffffff" stroke-width="1.8"/>
-              <text id="s4_beaker_label" x="125" y="20" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">बिना बुझा चूना [कली चूना, CaO]</text>
+            <!-- Beaker Identification Tag -->
+            <g transform="translate(180, 425)">
+              <rect id="s4_label_box" x="0" y="0" width="260" height="32" rx="8" fill="#0f172a" stroke="#cbd5e1" stroke-width="2"/>
+              <text id="s4_beaker_label" x="130" y="21" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">ठोस बिना बुझा चूना [कली चूना, CaO]</text>
             </g>
           </g>
 
-          <!-- WATER POURING FLASK (IN STEP 1 ON BENCH, IN STEP 2 ELEVATED, REAR HIGH, FRONT TILTED 45°) -->
+          <!-- ================= WATER POURING BEAKER (RESTS AT RIGHT, TILTS 45° IN STEP 2) ================= -->
           <g id="s4_pouring_vessel_group" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
             <g id="s4_vessel_inner">
               <g transform="translate(560, 250)">
@@ -2327,62 +2375,85 @@
             </g>
           </g>
 
-          <!-- WATER STREAM (FROM 350, 155 TO 350, 265) -->
+          <!-- ================= WATER POURING STREAM (FROM 350, 155 TO 310, 275) ================= -->
           <g id="s4_pouring_stream" opacity="0" style="transition: opacity 0.25s ease;">
-            <path d="M 350,155 L 350,265" stroke="rgba(56, 189, 248, 0.85)" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <path d="M 350,155 L 350,265" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
-            <ellipse cx="350" cy="265" rx="16" ry="5" fill="none" stroke="#38bdf8" stroke-width="2.5" class="splash-ripple-wave"/>
+            <path d="M 335,160 Q 320,210 310,275" stroke="rgba(56, 189, 248, 0.9)" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M 335,160 Q 320,210 310,275" stroke="#ffffff" stroke-width="3" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
+            <ellipse cx="310" cy="275" rx="20" ry="6" fill="none" stroke="#38bdf8" stroke-width="2.5" class="splash-ripple-wave"/>
           </g>
 
-          <!-- BILLOWING STEAM & HEAT AURA (STEPS 2 & 3) -->
+          <!-- ================= BILLOWING STEAM & EXOTHERMIC HEAT VAPOR (STEPS 2, 3, 4) ================= -->
           <g id="s4_steam_plumes" class="s4-steam-loop" opacity="0" style="transition: opacity 0.8s ease;">
-            <circle cx="310" cy="150" r="30" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="350" cy="120" r="45" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="380" cy="90" r="55" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <text x="350" y="100" font-size="14" font-weight="900" fill="#ea580c">♨️ अत्यधिक ऊष्मा व भाप (Exothermic Heat)</text>
+            <circle cx="280" cy="150" r="35" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="320" cy="115" r="48" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="355" cy="80" r="58" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <circle cx="295" cy="70" r="42" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
+            <text x="310" y="85" font-size="15" font-weight="900" fill="#c2410c" text-anchor="middle">♨️ खौलती भाप व तीव्र ऊष्मा (Exothermic Heat)</text>
           </g>
 
-          <!-- THERMOMETER (DIPS IN STEP 4, MERCURY CLIMBS TO 85°C) -->
-          <g id="s4_thermometer_group" opacity="0" transform="translate(380, 50)" style="transition: all 1s ease;">
-            <!-- Thermometer Glass Stem (vertical) -->
-            <rect x="0" y="0" width="12" height="230" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.8"/>
-            <!-- Bulb at bottom -->
-            <circle cx="6" cy="230" r="10" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
-            <!-- Red Mercury Column (Grows upward) -->
-            <rect id="s4_mercury_col" x="4" y="200" width="4" height="30" rx="2" fill="#ef4444" style="transition: all 1.5s ease;"/>
-            <!-- Graduations & Scale -->
-            <line x1="12" y1="210" x2="18" y2="210" stroke="#000" stroke-width="1"/>
-            <text x="22" y="213" font-size="9" font-weight="800">25°C</text>
-            <line x1="12" y1="140" x2="18" y2="140" stroke="#ef4444" stroke-width="2"/>
-            <text x="22" y="144" font-size="11" font-weight="900" fill="#ef4444">85°C</text>
+          <!-- ================= LABORATORY THERMOMETER (DIPS IN STEP 4, MERCURY CLIMBS 25°C -> 85°C) ================= -->
+          <g id="s4_thermometer_group" opacity="0" transform="translate(365, 55)" style="transition: all 1s ease;">
+            <!-- Thermometer Glass Tube -->
+            <rect x="0" y="0" width="16" height="250" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+            <!-- Bulb at bottom (immersed in hot liquid) -->
+            <circle cx="8" cy="250" r="13" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+            <!-- Capillary Bore Track -->
+            <rect x="6" y="20" width="4" height="230" fill="#e2e8f0"/>
+            <!-- Red Mercury Column (Grows Upward to 85°C) -->
+            <rect id="s4_mercury_col" x="6" y="220" width="4" height="30" rx="2" fill="#dc2626" style="transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);"/>
+            <!-- Scale Markings on Stem -->
+            <line x1="16" y1="220" x2="25" y2="220" stroke="#0f172a" stroke-width="1.5"/>
+            <text x="29" y="224" font-size="11" font-weight="900" fill="#0f172a">25°C</text>
+            <line x1="16" y1="180" x2="23" y2="180" stroke="#64748b" stroke-width="1.2"/>
+            <text x="27" y="184" font-size="10" font-weight="800" fill="#64748b">50°C</text>
+            <line x1="16" y1="130" x2="27" y2="130" stroke="#dc2626" stroke-width="2.5"/>
+            <text x="31" y="135" font-size="14" font-weight="900" fill="#dc2626">85°C 🔥</text>
+            <line x1="16" y1="105" x2="23" y2="105" stroke="#64748b" stroke-width="1.2"/>
+            <text x="27" y="109" font-size="10" font-weight="800" fill="#64748b">100°C</text>
           </g>
 
-          <!-- DEDICATED PROJECTOR OBSERVATION & TEMPERATURE PANEL (RIGHT SIDE X: 640 to 880) -->
-          <g id="s4_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
-            <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#ea580c" stroke-width="2.5" opacity="0.96"/>
-            <rect x="0" y="0" width="245" height="42" rx="14" fill="#c2410c"/>
-            <rect x="0" y="28" width="245" height="14" fill="#c2410c"/>
-            <text x="122" y="26" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">🌡️ लाइव तापमापी व डेटा</text>
+          <!-- ================= LIVE DATA OBSERVATION PANEL (APPEARS ONLY IN LAST STEP, FAR RIGHT) ================= -->
+          <g id="s4_projector_panel" transform="translate(775, 40)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+            <!-- Outer Shell (Class 10 SS Premium Light Card Style) -->
+            <rect x="0" y="0" width="395" height="425" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" filter="drop-shadow(0 14px 28px rgba(0,0,0,0.1))"/>
+            
+            <!-- Header (Warm Rust / Crimson) -->
+            <rect x="0" y="0" width="395" height="52" rx="18" fill="#c2410c"/>
+            <rect x="0" y="34" width="395" height="18" fill="#c2410c"/>
+            <text x="197" y="33" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">🌡️ प्रायोगिक प्रेक्षण व तापमापी डेटा</text>
 
-            <g transform="translate(15, 60)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">अभिकारक:</text>
-              <text x="0" y="20" font-size="14" font-weight="900" fill="#fde047">CaO(s) + H₂O(l)</text>
+            <!-- Observation 1: Reactants -->
+            <g transform="translate(18, 70)">
+              <rect x="0" y="0" width="359" height="58" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#64748b">अभिकारक (Reactants):</text>
+              <text x="14" y="44" font-size="16" font-weight="900" fill="#0f172a">ठोस कली चूना [CaO] + जल [H₂O]</text>
             </g>
 
-            <g transform="translate(15, 115)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">बीकर का तापमान:</text>
-              <rect x="0" y="10" width="215" height="45" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1.8"/>
-              <text id="s4_panel_temp" x="107" y="38" font-size="18" font-weight="900" fill="#f87171" text-anchor="middle">25°C (सामान्य)</text>
+            <!-- Observation 2: Temperature Rise -->
+            <g transform="translate(18, 140)">
+              <rect x="0" y="0" width="359" height="65" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#b91c1c">तापमान वृद्धि (Temperature Jump):</text>
+              <text id="s4_panel_temp" x="14" y="48" font-size="18" font-weight="900" fill="#dc2626">25°C ➔ 85°C (अत्यधिक गर्म 🔥)</text>
             </g>
 
-            <g transform="translate(15, 185)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">उत्पाद:</text>
-              <text x="0" y="20" font-size="14" font-weight="900" fill="#4ade80">बुझा चूना [Ca(OH)₂] + ऊष्मा</text>
+            <!-- Observation 3: Product Formed -->
+            <g transform="translate(18, 218)">
+              <rect x="0" y="0" width="359" height="58" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#15803d">उत्पाद (Product):</text>
+              <text x="14" y="44" font-size="16" font-weight="900" fill="#166534">बुझा हुआ चूना [Ca(OH)₂] (दूधिया घोल)</text>
             </g>
 
-            <g transform="translate(15, 255)">
-              <rect x="0" y="0" width="215" height="34" rx="8" fill="#9a3412" stroke="#ea580c" stroke-width="1.5"/>
-              <text x="107" y="22" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">संयोजन एवं ऊष्माक्षेपी अभिक्रिया</text>
+            <!-- Observation 4: Chemical Equation -->
+            <g transform="translate(18, 288)">
+              <rect x="0" y="0" width="359" height="65" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#c2410c">संतुलित रासायनिक समीकरण:</text>
+              <text x="14" y="46" font-size="16" font-weight="900" fill="#9a3412">CaO(s) + H₂O(l) ➔ Ca(OH)₂(aq) + ऊष्मा</text>
+            </g>
+
+            <!-- Observation 5: Reaction Types Conclusion -->
+            <g transform="translate(18, 365)">
+              <rect x="0" y="0" width="359" height="42" rx="10" fill="#1e293b"/>
+              <text x="179" y="26" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">✔ संयोजन (Combination) व ऊष्माक्षेपी अभिक्रिया (Exothermic)</text>
             </g>
           </g>
         </svg>
@@ -2603,7 +2674,7 @@
           </g>
 
           <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g transform="translate(770, 20)">
+          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <!-- Main Card Container -->
             <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
 
@@ -2864,7 +2935,7 @@
           </g>
 
           <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g transform="translate(770, 20)">
+          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <!-- Main Card Container -->
             <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
 
@@ -3902,7 +3973,7 @@
           </g>
 
           <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g transform="translate(770, 20)">
+          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <!-- Main Card Container -->
             <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
 
@@ -4234,7 +4305,7 @@
           </g>
 
           <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g transform="translate(770, 20)">
+          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <!-- Main Card Container -->
             <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
 
@@ -5171,20 +5242,17 @@
       }, 12000));
     }
 
-    /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) 16:9 PROJECTOR MASTER --- */
+        /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) UPGRADED --- */
     function sim4Reset() {
-      var panel_4 = document.getElementById('s4_projector_panel');
-      if (panel_4) { panel_4.style.opacity = '0'; panel_4.style.pointerEvents = 'none'; }
-
       clearSimTimers(4);
       var pbar = document.getElementById('sim4_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim4_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> बीकर में बिना बुझा चूना (CaO) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> बड़े बीकर में ठोस बिना बुझा चूना (CaO) तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
-      var pv = document.getElementById('s4_pouring_vessel_group');
-      if (pv) {
-        var inner = document.getElementById('s4_vessel_inner');
-        if (inner) inner.innerHTML = '<g transform="translate(560, 250)">' +
+      // Reset water pouring vessel to right resting position
+      var inner = document.getElementById('s4_vessel_inner');
+      if (inner) {
+        inner.innerHTML = '<g transform="translate(560, 250)">' +
           '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s4_blur)"/>' +
           '<path d="M 8,45 L 8,135 Q 55,145 102,135 L 102,45 Z" fill="url(#s4_waterGrad)"/>' +
           '<ellipse cx="55" cy="45" rx="47" ry="6" fill="#38bdf8"/>' +
@@ -5200,14 +5268,26 @@
       var bMen = document.getElementById('s4_beaker_meniscus'); if (bMen) bMen.setAttribute('opacity', '0');
       var bub = document.getElementById('s4_boiling_bubbles'); if (bub) bub.setAttribute('opacity', '0');
       var steam = document.getElementById('s4_steam_plumes'); if (steam) steam.setAttribute('opacity', '0');
+      var aura = document.getElementById('s4_heat_aura'); if (aura) aura.setAttribute('opacity', '0');
+      
       var thermo = document.getElementById('s4_thermometer_group'); if (thermo) thermo.setAttribute('opacity', '0');
       var merc = document.getElementById('s4_mercury_col');
-      if (merc) { merc.setAttribute('y', '200'); merc.setAttribute('height', '30'); }
+      if (merc) { merc.setAttribute('y', '220'); merc.setAttribute('height', '30'); }
 
-      var lblBox = document.getElementById('s4_label_box'); if (lblBox) lblBox.style.stroke = '#ffffff';
-      var lblTxt = document.getElementById('s4_beaker_label'); if (lblTxt) { lblTxt.textContent = "बिना बुझा चूना [कली चूना, CaO]"; lblTxt.style.fill = "#ffffff"; }
+      var lblBox = document.getElementById('s4_label_box'); if (lblBox) lblBox.style.stroke = '#cbd5e1';
+      var lblTxt = document.getElementById('s4_beaker_label');
+      if (lblTxt) { lblTxt.textContent = "ठोस बिना बुझा चूना [कली चूना, CaO]"; lblTxt.style.fill = "#ffffff"; }
 
-      var pTemp = document.getElementById('s4_panel_temp'); if (pTemp) { pTemp.textContent = "25°C (सामान्य)"; pTemp.style.fill = "#f87171"; }
+      var pTemp = document.getElementById('s4_panel_temp');
+      if (pTemp) { pTemp.textContent = "25°C ➔ 85°C (अत्यधिक गर्म 🔥)"; }
+
+      // Hide observation panel during steps 1, 2, 3
+      var panel = document.getElementById('s4_projector_panel');
+      if (panel) {
+        panel.style.opacity = '0';
+        panel.style.pointerEvents = 'none';
+        panel.style.transform = 'translate(775px, 40px) scale(0.96)';
+      }
 
       var btn = document.getElementById('sim4_play_btn'); if (btn) btn.disabled = false;
     }
@@ -5221,24 +5301,25 @@
       var bMen = document.getElementById('s4_beaker_meniscus');
       var bub = document.getElementById('s4_boiling_bubbles');
       var steam = document.getElementById('s4_steam_plumes');
+      var aura = document.getElementById('s4_heat_aura');
       var thermo = document.getElementById('s4_thermometer_group');
       var merc = document.getElementById('s4_mercury_col');
       var lblBox = document.getElementById('s4_label_box');
       var lblTxt = document.getElementById('s4_beaker_label');
-      var pTemp = document.getElementById('s4_panel_temp');
+      var panel = document.getElementById('s4_projector_panel');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
         sim4Reset();
-        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> बड़े बोरोसिलिकेट बीकर में शुद्ध सफेद बिना बुझा चूना (कली चूना, कैल्शियम ऑक्साइड CaO) लिया गया। प्रारंभिक तापमान सामान्य 25°C है।';
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> बड़े बोरोसिलिकेट बीकर में ठोस, ढेलेदार बिना बुझा चूना (कली चूना, कैल्शियम ऑक्साइड CaO) लिया गया। प्रारंभिक तापमान सामान्य 25°C है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        // Flask lifts up, tilts 45° with rear elevated
+        // Beaker lifts up, rear elevated, mouth tilted 45°
         if (inner) {
-          inner.innerHTML = '<g transform="translate(350, 155) rotate(48)">' +
-            '<path d="M 8,-40 L 8,30 Q 55,40 102,30 L 102,-40 Z" fill="url(#s4_waterGrad)"/>' +
-            '<path d="M 0,-60 L 5,-58 L 5,30 Q 5,45 25,45 L 85,45 Q 105,45 105,30 L 105,-60" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.5"/>' +
-            '<ellipse cx="55" cy="-60" rx="50" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
+          inner.innerHTML = '<g transform="translate(350, 160) rotate(45)">' +
+            '<path d="M 8,-35 L 8,35 Q 55,45 102,35 L 102,-35 Z" fill="url(#s4_waterGrad)"/>' +
+            '<path d="M 0,-55 L 5,-53 L 5,35 Q 5,48 25,48 L 85,48 Q 105,48 105,35 L 105,-55" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.5"/>' +
+            '<ellipse cx="55" cy="-55" rx="50" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
             '</g>';
         }
 
@@ -5248,16 +5329,19 @@
           if (bMen) bMen.setAttribute('opacity', '1');
           if (bub) bub.setAttribute('opacity', '1');
           if (steam) steam.setAttribute('opacity', '1');
-          if (pTemp) { pTemp.textContent = "खौलता हुआ (~85°C)"; pTemp.style.fill = "#ef4444"; }
-        }, 600));
+          if (aura) aura.setAttribute('opacity', '0.6');
+        }, 500));
 
-        if (st) st.innerHTML = '<strong>चरण 2 (जल योग व खौलता हुआ संयोजन):</strong> बीकर ऊपर उठकर 45° झुका और जल डाला। जल मिलते ही अत्यधिक तीव्र सनसनाहट के साथ खौलने लगा और प्रचुर मात्रा में ऊष्मा व भाप निकलनी शुरू हुई!';
+        // Observation panel hidden during Step 2
+        if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+
+        if (st) st.innerHTML = '<strong>चरण 2 (जल योग व तीव्र खौलता संयोजन):</strong> बीकर ऊपर उठकर 45° कोण पर झुका और जल डाला। जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ खौलने लगा और प्रचुर मात्रा में ऊष्मा व भाप निकलनी शुरू हुई!';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
         if (stream) stream.setAttribute('opacity', '0');
-        // Flask returns to right
+        // Water beaker returns to bench
         if (inner) {
-          inner.innerHTML = '<g transform="translate(680, 250)">' +
+          inner.innerHTML = '<g transform="translate(560, 250)">' +
             '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s4_blur)"/>' +
             '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s4_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
             '</g>';
@@ -5265,32 +5349,49 @@
 
         if (bLiq) bLiq.setAttribute('opacity', '1');
         if (bMen) bMen.setAttribute('opacity', '1');
-        if (bub) bub.setAttribute('opacity', '0.6');
+        if (bub) bub.setAttribute('opacity', '0.7');
         if (steam) steam.setAttribute('opacity', '1');
+        if (aura) aura.setAttribute('opacity', '0.9');
 
         if (lblBox) lblBox.style.stroke = '#38bdf8';
         if (lblTxt) { lblTxt.textContent = "बुझा चूना [Ca(OH)₂] दूधिया घोल"; lblTxt.style.fill = "#38bdf8"; }
 
-        if (st) st.innerHTML = '<strong>चरण 3 (बुझा चूना निर्माण व ऊष्मा निष्कासन):</strong> अभिक्रिया में कैल्शियम हाइड्रोक्साइड [Ca(OH)₂ - बुझा हुआ चूना] बना तथा बीकर अत्यधिक गर्म हो गया। बीकर को छूने पर तीव्र गर्मी महसूस होती है!';
-      } else if (s === 4) {
-        var panel_4 = document.getElementById('s4_projector_panel');
-        if (panel_4) { panel_4.style.opacity = '1'; panel_4.style.pointerEvents = 'auto'; }
+        // Observation panel hidden during Step 3
+        if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
 
+        if (st) st.innerHTML = '<strong>चरण 3 (बुझा चूना निर्माण व ऊष्मा निष्कासन):</strong> रासायनिक अभिक्रिया में कैल्शियम हाइड्रोक्साइड [Ca(OH)₂ - बुझा हुआ चूना] बना तथा बीकर अत्यधिक गर्म हो गया। बीकर की बाहरी दीवार छूने पर तीव्र ऊष्मा महसूस होती है!';
+      } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
+        if (bLiq) bLiq.setAttribute('opacity', '1');
+        if (bMen) bMen.setAttribute('opacity', '1');
+        if (steam) steam.setAttribute('opacity', '1');
+        if (aura) aura.setAttribute('opacity', '1');
+
+        // Thermometer dips into liquid
         if (thermo) thermo.setAttribute('opacity', '1');
 
-        // Mercury climbs to 85°C
-        if (merc) {
-          merc.setAttribute('y', '140');
-          merc.setAttribute('height', '90');
-        }
-        if (pTemp) { pTemp.textContent = "85°C (अत्यधिक गर्म 🔥)"; pTemp.style.fill = "#dc2626"; }
+        // Mercury climbs from 25°C to 85°C
+        addSimTimer(4, setTimeout(function() {
+          if (merc) {
+            merc.setAttribute('y', '130');
+            merc.setAttribute('height', '120');
+          }
+        }, 300));
 
-        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:16px;"><strong>चरण 4 (तापमान वृद्धि 25°C ➔ 85°C व संतुलित रासायनिक समीकरण):</strong></span><br>' +
-          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#ffedd5; padding:6px 14px; border-radius:8px; border:2px solid #fed7aa; color:#9a3412; font-weight:900;">' +
+        // NOW, and ONLY in Step 4, observation panel appears on the right
+        addSimTimer(4, setTimeout(function() {
+          if (panel) {
+            panel.style.opacity = '1';
+            panel.style.pointerEvents = 'auto';
+            panel.style.transform = 'translate(775px, 40px) scale(1)';
+          }
+        }, 1200));
+
+        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:17px;"><strong>चरण 4 (तापमान वृद्धि 25°C ➔ 85°C व संतुलित रासायनिक समीकरण):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:16px; background:#ffedd5; padding:6px 14px; border-radius:8px; border:2px solid #fed7aa; color:#9a3412; font-weight:900;">' +
           'CaO(s) + H₂O(l) ➔ <strong>Ca(OH)₂(aq) (बुझा चूना)</strong> + <strong>ऊष्मा (Heat)</strong>' +
           '</span><br>' +
-          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">यह <strong>संयोजन अभिक्रिया (Combination Reaction)</strong> होने के साथ-साथ एक अत्यंत तीव्र <strong>ऊष्माक्षेपी अभिक्रिया (Exothermic Reaction)</strong> है।</span>';
+          '<span style="font-size:15px; color:#334155; margin-top:4px; display:inline-block;">तापमापी में पारा 25°C से उछलकर <strong>85°C</strong> तक पहुँच जाता है। यह दो अभिकारकों के जुड़ने से एकल उत्पाद बनने के कारण <strong>संयोजन अभिक्रिया</strong> है, तथा प्रचुर ऊष्मा उत्सर्जित होने के कारण अत्यंत तीव्र <strong>ऊष्माक्षेपी अभिक्रिया (Exothermic Reaction)</strong> है।</span>';
       }
     }
 
@@ -5303,10 +5404,10 @@
       addSimTimer(4, setTimeout(function() {
         sim4Step(4);
         if (btn) btn.disabled = false;
-      }, 12000));
+      }, 12500));
     }
 
-            /* --- SIMULATOR 5: FeSO4 THERMAL DECOMPOSITION 16:9 PROJECTOR MASTER --- */
+    /* --- SIMULATOR 5: FeSO4 THERMAL DECOMPOSITION 16:9 PROJECTOR MASTER --- */
         /* ==========================================================
        SIMULATOR 5: FeSO4 THERMAL DECOMPOSITION (PROJECTOR SCRIPT)
        ========================================================== */
@@ -5314,25 +5415,26 @@
       clearSimTimers(5);
       var pbar = document.getElementById('sim5_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim5_status');
-      if (st) st.innerHTML = '<span style="color:#0f172a; font-size:16px;"><strong>प्रारंभिक स्थिति:</strong> क्वथन नली में हरे फेरस सल्फेट क्रिस्टल तैयार हैं। \"संपूर्ण वीडियो एनिमेशन\" दबाएं।</span>';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> 3D क्लैंप स्टैंड में सीधी लौ के ऊपर क्वथन नली में हरे फेरस सल्फेट क्रिस्टल तैयार हैं। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
-      var flame = document.getElementById('s5_flame'); if (flame) flame.style.opacity = '0';
-      var bed = document.getElementById('s5_cryst_bed');
-      if (bed) { bed.setAttribute('fill', 'url(#s5_greenCryst)'); bed.setAttribute('stroke', '#15803d'); }
-      var drops = document.getElementById('s5_water_drops'); if (drops) drops.style.opacity = '0';
-      var fumes = document.getElementById('s5_gas_fumes'); if (fumes) fumes.style.opacity = '0';
-      var wafting = document.getElementById('s5_wafting_group'); if (wafting) wafting.style.opacity = '0';
+      if (window.gsap) {
+        gsap.to('#s5_flame', { opacity: 0, duration: 0.4 });
+        gsap.to('#s5_cryst_bed', { fill: 'url(#s5_greenCryst)', duration: 0.6 });
+        gsap.to('#s5_water_drops', { opacity: 0, duration: 0.4 });
+        gsap.to('#s5_gas_fumes', { opacity: 0, duration: 0.4 });
+        gsap.to('#s5_wafting_group', { opacity: 0, duration: 0.4 });
+        gsap.to('#s5_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+      } else {
+        var flame = document.getElementById('s5_flame'); if (flame) flame.style.opacity = '0';
+        var bed = document.getElementById('s5_cryst_bed'); if (bed) bed.setAttribute('fill', 'url(#s5_greenCryst)');
+        var drops = document.getElementById('s5_water_drops'); if (drops) drops.style.opacity = '0';
+        var fumes = document.getElementById('s5_gas_fumes'); if (fumes) fumes.style.opacity = '0';
+        var waft = document.getElementById('s5_wafting_group'); if (waft) waft.style.opacity = '0';
+        var panel = document.getElementById('s5_projector_panel'); if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+      }
 
-      var sText = document.getElementById('s5_stage_status_text'); if (sText) sText.textContent = 'हरे क्रिस्टल [FeSO₄·7H₂O]';
       var lBox = document.getElementById('s5_label_box'); if (lBox) { lBox.setAttribute('fill', '#f0fdf4'); lBox.setAttribute('stroke', '#16a34a'); }
-
-      // Card Updates
-      var phBox = document.getElementById('s5_card_phase_box'); if (phBox) { phBox.setAttribute('fill', '#f0fdf4'); phBox.style.borderColor = '#16a34a'; }
-      var ph = document.getElementById('s5_card_phase'); if (ph) { ph.textContent = 'चरण 1: क्वथन नली में हरे क्रिस्टल'; ph.style.fill = '#15803d'; }
-      var cCol = document.getElementById('s5_card_color'); if (cCol) { cCol.textContent = 'हरा रंग [FeSO₄·7H₂O ठोस]'; cCol.style.fill = '#15803d'; }
-      var cGas = document.getElementById('s5_card_gas'); if (cGas) { cGas.textContent = 'कोई गैस नहीं (शुरुआत)'; cGas.style.fill = '#0f172a'; }
-      var eq = document.getElementById('s5_card_eq'); if (eq) { eq.textContent = 'FeSO₄·7H₂O (ठोस)'; eq.style.fill = '#1e3a8a'; }
-      var eqSub = document.getElementById('s5_card_eq_sub'); if (eqSub) eqSub.textContent = 'क्रिस्टलन जल युक्त हरा ठोस';
+      var lTxt = document.getElementById('s5_stage_status_text'); if (lTxt) { lTxt.textContent = 'हरे क्रिस्टल [FeSO₄·7H₂O]'; lTxt.setAttribute('fill', '#15803d'); }
 
       var btn = document.getElementById('sim5_play_btn'); if (btn) btn.disabled = false;
     }
@@ -5340,109 +5442,85 @@
     function sim5Step(s) {
       var st = document.getElementById('sim5_status');
       var pbar = document.getElementById('sim5_pbar');
-      var flame = document.getElementById('s5_flame');
-      var bed = document.getElementById('s5_cryst_bed');
-      var drops = document.getElementById('s5_water_drops');
-      var fumes = document.getElementById('s5_gas_fumes');
-      var wafting = document.getElementById('s5_wafting_group');
-      var sText = document.getElementById('s5_stage_status_text');
       var lBox = document.getElementById('s5_label_box');
-
-      var phBox = document.getElementById('s5_card_phase_box');
+      var lTxt = document.getElementById('s5_stage_status_text');
       var ph = document.getElementById('s5_card_phase');
       var cCol = document.getElementById('s5_card_color');
       var cGas = document.getElementById('s5_card_gas');
-      var eq = document.getElementById('s5_card_eq');
-      var eqSub = document.getElementById('s5_card_eq_sub');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
-        if (flame) flame.style.opacity = '0';
-        if (bed) { bed.setAttribute('fill', 'url(#s5_greenCryst)'); bed.setAttribute('stroke', '#15803d'); }
-        if (drops) drops.style.opacity = '0';
-        if (fumes) fumes.style.opacity = '0';
-        if (wafting) wafting.style.opacity = '0';
-
-        if (sText) sText.textContent = 'हरे क्रिस्टल [FeSO₄·7H₂O]';
-        if (lBox) { lBox.setAttribute('fill', '#f0fdf4'); lBox.setAttribute('stroke', '#16a34a'); }
-
-        if (phBox) { phBox.setAttribute('fill', '#f0fdf4'); phBox.style.borderColor = '#16a34a'; }
-        if (ph) { ph.textContent = 'चरण 1: क्वथन नली में हरे क्रिस्टल'; ph.style.fill = '#15803d'; }
-        if (cCol) { cCol.textContent = 'हरा रंग [FeSO₄·7H₂O ठोस]'; cCol.style.fill = '#15803d'; }
-        if (cGas) { cGas.textContent = 'कोई गैस नहीं (शुरुआत)'; cGas.style.fill = '#0f172a'; }
-        if (eq) { eq.textContent = 'FeSO₄·7H₂O (ठोस)'; eq.style.fill = '#1e3a8a'; }
-        if (eqSub) eqSub.textContent = 'क्रिस्टलन जल युक्त हरा ठोस';
-
-        if (st) st.innerHTML = '<span style="color:#15803d; font-size:16px;"><strong>चरण 1:</strong> शुष्क क्वथन नली में 2g हरे रंग के फेरस सल्फेट क्रिस्टल [FeSO₄·7H₂O] लिए गए हैं।</span>';
+        sim5Reset();
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक व्यवस्था):</strong> शुष्क क्वथन नली में हरे रंग के फेरस सल्फेट क्रिस्टल [FeSO₄·7H₂O] लिए गए हैं। बर्नर बंद है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        if (flame) flame.style.opacity = '0.8';
-        if (bed) { bed.setAttribute('fill', 'url(#s5_whiteCryst)'); bed.setAttribute('stroke', '#94a3b8'); }
-        if (drops) drops.style.opacity = '1';
-        if (fumes) fumes.style.opacity = '0';
-        if (wafting) wafting.style.opacity = '0';
+        if (window.gsap) {
+          gsap.to('#s5_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s5_cryst_bed', { fill: 'url(#s5_whiteCryst)', duration: 1.2 });
+          gsap.to('#s5_water_drops', { opacity: 1, duration: 0.8, delay: 0.3 });
+          gsap.to('#s5_gas_fumes', { opacity: 0, duration: 0.4 });
+          gsap.to('#s5_wafting_group', { opacity: 0, duration: 0.4 });
+          gsap.to('#s5_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (sText) sText.textContent = 'क्रिस्टलन जल त्यागकर श्वेत FeSO₄ बना';
-        if (lBox) { lBox.setAttribute('fill', '#f8fafc'); lBox.setAttribute('stroke', '#64748b'); }
+        if (lBox) { lBox.setAttribute('fill', '#f8fafc'); lBox.setAttribute('stroke', '#94a3b8'); }
+        if (lTxt) { lTxt.textContent = 'क्रिस्टलन जल निष्कासन [श्वेत FeSO₄]'; lTxt.setAttribute('fill', '#475569'); }
+        if (ph) ph.textContent = 'चरण 2: मंद तापन व क्रिस्टलन जल निष्कासन';
+        if (cCol) cCol.textContent = 'सफेद (क्रिस्टलन जल FeSO₄·7H₂O ➔ FeSO₄ + 7H₂O)';
+        if (cGas) cGas.textContent = 'जलवाष्प संघनन (दीवारों पर बूंदें)';
 
-        if (phBox) { phBox.setAttribute('fill', '#eff6ff'); phBox.style.borderColor = '#3b82f6'; }
-        if (ph) { ph.textContent = 'चरण 2: मंद तापन (श्वेत निर्जल FeSO₄)'; ph.style.fill = '#1e3a8a'; }
-        if (cCol) { cCol.textContent = 'श्वेत निर्जल FeSO₄ ठोस'; cCol.style.fill = '#0f172a'; }
-        if (cGas) { cGas.textContent = 'जल वाष्प (नली की दीवार पर बूंदें)'; cGas.style.fill = '#0284c7'; }
-        if (eq) { eq.textContent = 'FeSO₄·7H₂O ➔ FeSO₄ + 7H₂O↑'; eq.style.fill = '#0284c7'; }
-        if (eqSub) eqSub.textContent = 'क्रिस्टलन जल का निष्कासन';
-
-        if (st) st.innerHTML = '<span style="color:#0284c7; font-size:16px;"><strong>चरण 2 (मंद तापन):</strong> सीधे लौ पर गर्म करने पर क्रिस्टल अपना 7 अणु जल त्याग देते हैं और हरा रंग उड़कर सफेद निर्जल FeSO₄ बन जाता है। नली की भीतरी दीवार पर जल की बूंदें जमती हैं।</span>';
+        if (st) st.innerHTML = '<strong>चरण 2 (मंद तापन व क्रिस्टलन जल निष्कासन):</strong> बर्नर की लौ पर हल्का गर्म करते ही हरे क्रिस्टल अपना क्रिस्टलन जल (7H₂O) त्यागकर सफेद निर्जल FeSO₄ में बदल जाते हैं तथा परखनली की ठंडी दीवार पर जल की छोटी-छोटी बूंदें दिखाई देती हैं।';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (flame) flame.style.opacity = '1';
-        if (bed) { bed.setAttribute('fill', 'url(#s5_brownFe2O3)'); bed.setAttribute('stroke', '#7c2d12'); }
-        if (drops) drops.style.opacity = '0.3';
-        if (fumes) fumes.style.opacity = '1';
-        if (wafting) wafting.style.opacity = '0';
+        if (window.gsap) {
+          gsap.to('#s5_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s5_cryst_bed', { fill: 'url(#s5_brownFe2O3)', duration: 1.4 });
+          gsap.to('#s5_water_drops', { opacity: 0.5, duration: 0.5 });
+          gsap.to('#s5_gas_fumes', { opacity: 1, duration: 0.8 });
+          gsap.to('#s5_wafting_group', { opacity: 0, duration: 0.4 });
+          gsap.to('#s5_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (sText) sText.textContent = 'तीव्र वियोजन: लाल-भूरा Fe₂O₃ + दमघोंटू SO₂/SO₃';
         if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
+        if (lTxt) { lTxt.textContent = 'लाल-भूरा ठोस Fe₂O₃ + तीक्ष्ण गंध वाली गैसें'; lTxt.setAttribute('fill', '#9a3412'); }
+        if (ph) ph.textContent = 'चरण 3: तीव्र ऊष्मीय अपघटन';
+        if (cCol) cCol.textContent = 'लाल-भूरा ठोस [फेरिक ऑक्साइड, Fe₂O₃]';
+        if (cGas) cGas.textContent = 'SO₂ + SO₃ (सल्फर के जलने जैसी विशिष्ट तीखी गंध)';
 
-        if (phBox) { phBox.setAttribute('fill', '#fff7ed'); phBox.style.borderColor = '#ea580c'; }
-        if (ph) { ph.textContent = 'चरण 3: तीव्र तापन (ऊष्मीय वियोजन)'; ph.style.fill = '#9a3412'; }
-        if (cCol) { cCol.textContent = 'लाल-भूरा फेरिक ऑक्साइड [Fe₂O₃]'; cCol.style.fill = '#9a3412'; }
-        if (cGas) { cGas.textContent = 'सल्फर डाइऑक्साइड (SO₂) + SO₃'; cGas.style.fill = '#c2410c'; }
-        if (eq) { eq.textContent = '2FeSO₄ ➔ Fe₂O₃ + SO₂↑ + SO₃↑'; eq.style.fill = '#9a3412'; }
-        if (eqSub) eqSub.textContent = 'सल्फर के जलने जैसी लाक्षणिक गंध';
-
-        if (st) st.innerHTML = '<span style="color:#b45309; font-size:16px;"><strong>चरण 3 (ऊष्मीय वियोजन):</strong> तीव्र गर्म करने पर सफेद पदार्थ टूटकर <strong>लाल-भूरा फेरिक ऑक्साइड (Fe₂O₃)</strong> बनाता है और जलते हुए सल्फर जैसी दमघोंटू गंध वाली <strong>SO₂ व SO₃ गैसें</strong> निकलती हैं!</span>';
+        if (st) st.innerHTML = '<strong>चरण 3 (तीव्र ऊष्मीय अपघटन):</strong> तेज गर्म करने पर निर्जल FeSO₄ विघटित होकर लाल-भूरे रंग के <strong>फेरिक ऑक्साइड (Fe₂O₃)</strong> में बदल जाता है तथा सल्फर के जलने जैसी विशिष्ट दमघोंटू गंध वाली <strong>SO₂ व SO₃ गैसें</strong> तेजी से बाहर निकलती हैं!';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        if (flame) flame.style.opacity = '0.5';
-        if (bed) { bed.setAttribute('fill', 'url(#s5_brownFe2O3)'); bed.setAttribute('stroke', '#7c2d12'); }
-        if (fumes) fumes.style.opacity = '0.7';
-        if (wafting) wafting.style.opacity = '1';
+        if (window.gsap) {
+          gsap.to('#s5_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s5_cryst_bed', { fill: 'url(#s5_brownFe2O3)', duration: 0.6 });
+          gsap.to('#s5_gas_fumes', { opacity: 1, duration: 0.8 });
+          gsap.to('#s5_wafting_group', { opacity: 1, duration: 0.8, delay: 0.3 });
+          // Live Data observation panel smoothly appears in Step 4!
+          gsap.to('#s5_projector_panel', { opacity: 1, pointerEvents: 'auto', duration: 0.8, delay: 0.8 });
+        }
 
-        if (sText) sText.textContent = 'Wafting विधि द्वारा गैस सूंघना व निष्कर्ष';
-        if (lBox) { lBox.setAttribute('fill', '#faf5ff'); lBox.setAttribute('stroke', '#7c3aed'); }
+        if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
+        if (lTxt) { lTxt.textContent = 'Wafting विधि द्वारा सुरक्षित गंध परीक्षण'; lTxt.setAttribute('fill', '#1e3a8a'); }
+        if (ph) ph.textContent = 'चरण 4: Wafting परीक्षण व संतुलित समीकरण';
 
-        if (phBox) { phBox.setAttribute('fill', '#faf5ff'); phBox.style.borderColor = '#7c3aed'; }
-        if (ph) { ph.textContent = 'चरण 4: NCERT Wafting विधि व निष्कर्ष'; ph.style.fill = '#6d28d9'; }
-        if (cCol) { cCol.textContent = 'स्थायी लाल-भूरा अवशेष (Fe₂O₃)'; cCol.style.fill = '#7c2d12'; }
-        if (cGas) { cGas.textContent = 'दमघोंटू सल्फर गैसें (Wafting)'; cGas.style.fill = '#6d28d9'; }
-        if (eq) { eq.textContent = '2FeSO₄(s) ➔ Fe₂O₃(s) + SO₂↑ + SO₃↑'; eq.style.fill = '#6d28d9'; }
-        if (eqSub) eqSub.textContent = 'ऊष्मीय वियोजन (Decomposition) अभिक्रिया';
-
-        if (st) st.innerHTML = '<span style="color:#7c3aed; font-size:16px;"><strong>चरण 4 (सुरक्षा व निष्कर्ष):</strong> क्वथन नली का मुंह कभी भी अपनी या सहपाठी की ओर नहीं रखना चाहिए। गैस को हाथ से अपनी नाक की ओर धीरे-धीरे हिलाकर (Wafting) सूंघा जाता है। यह <strong>ऊष्मीय वियोजन अभिक्रिया</strong> का उत्कृष्ट उदाहरण है।</span>';
+        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:16px;"><strong>चरण 4 (Wafting सूंघने की सुरक्षित विधि व संतुलित समीकरण):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#ffedd5; padding:6px 14px; border-radius:8px; border:2px solid #fed7aa; color:#9a3412; font-weight:900;">' +
+          '2FeSO₄(s) ➔ <strong>Fe₂O₃(s) (लाल-भूरा ठोस)</strong> + <strong>SO₂(g)↑</strong> + <strong>SO₃(g)↑</strong>' +
+          '</span><br>' +
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">क्वथन नली के मुंह को कभी भी अपने या साथी के चेहरे की ओर नहीं करना चाहिए। गैसों को हाथ से धीरे-धीरे नाक की ओर हिलाकर (Wafting) सुरक्षित रूप से सूंघा जाता है। यह एक <strong>ऊष्मीय वियोजन (Decomposition) अभिक्रिया</strong> है।</span>';
       }
     }
 
     function sim5PlayAuto() {
       sim5Reset();
       var btn = document.getElementById('sim5_play_btn'); if (btn) btn.disabled = true;
-      addSimTimer(5, setTimeout(function() { sim5Step(1); }, 300));
-      addSimTimer(5, setTimeout(function() { sim5Step(2); }, 2800));
+      sim5Step(1);
+      addSimTimer(5, setTimeout(function() { sim5Step(2); }, 2200));
       addSimTimer(5, setTimeout(function() { sim5Step(3); }, 6800));
       addSimTimer(5, setTimeout(function() {
         sim5Step(4);
         if (btn) btn.disabled = false;
-      }, 11500));
+      }, 12000));
     }
 
         /* ==========================================================
@@ -5452,25 +5530,26 @@
       clearSimTimers(6);
       var pbar = document.getElementById('sim6_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim6_status');
-      if (st) st.innerHTML = '<span style="color:#0f172a; font-size:16px;"><strong>प्रारंभिक स्थिति:</strong> क्वथन नली में सफेद लेड नाइट्रेट चूर्ण तैयार है। \"संपूर्ण वीडियो एनिमेशन\" दबाएं।</span>';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> क्वथन नली में श्वेत लेड नाइट्रेट तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
-      var flame = document.getElementById('s6_flame'); if (flame) flame.style.opacity = '0';
-      var bed = document.getElementById('s6_cryst_bed');
-      if (bed) { bed.setAttribute('fill', 'url(#s6_whitePbNO3)'); bed.setAttribute('stroke', '#94a3b8'); }
-      var sparks = document.getElementById('s6_sparks'); if (sparks) sparks.style.opacity = '0';
-      var fumes = document.getElementById('s6_no2_fumes'); if (fumes) fumes.style.opacity = '0';
-      var splinter = document.getElementById('s6_splinter_group'); if (splinter) splinter.style.opacity = '0';
+      if (window.gsap) {
+        gsap.to('#s6_flame', { opacity: 0, duration: 0.4 });
+        gsap.to('#s6_cryst_bed', { fill: '#ffffff', duration: 0.6 });
+        gsap.to('#s6_sparks', { opacity: 0, duration: 0.4 });
+        gsap.to('#s6_no2_fumes', { opacity: 0, duration: 0.4 });
+        gsap.to('#s6_splinter_group', { opacity: 0, duration: 0.4 });
+        gsap.to('#s6_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+      } else {
+        var flame = document.getElementById('s6_flame'); if (flame) flame.style.opacity = '0';
+        var bed = document.getElementById('s6_cryst_bed'); if (bed) bed.setAttribute('fill', '#ffffff');
+        var sparks = document.getElementById('s6_sparks'); if (sparks) sparks.style.opacity = '0';
+        var fumes = document.getElementById('s6_no2_fumes'); if (fumes) fumes.style.opacity = '0';
+        var spl = document.getElementById('s6_splinter_group'); if (spl) spl.style.opacity = '0';
+        var panel = document.getElementById('s6_projector_panel'); if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+      }
 
-      var sText = document.getElementById('s6_stage_status_text'); if (sText) sText.textContent = 'सफेद क्रिस्टल [Pb(NO₃)₂]';
       var lBox = document.getElementById('s6_label_box'); if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
-
-      // Card Updates
-      var phBox = document.getElementById('s6_card_phase_box'); if (phBox) { phBox.setAttribute('fill', '#eff6ff'); phBox.style.borderColor = '#3b82f6'; }
-      var ph = document.getElementById('s6_card_phase'); if (ph) { ph.textContent = 'चरण 1: लेड नाइट्रेट क्रिस्टल'; ph.style.fill = '#1e3a8a'; }
-      var cFumes = document.getElementById('s6_card_fumes'); if (cFumes) { cFumes.textContent = 'कोई धुआं नहीं (शुरुआत)'; cFumes.style.fill = '#0f172a'; }
-      var cSplinter = document.getElementById('s6_card_splinter'); if (cSplinter) { cSplinter.textContent = 'लौ परीक्षण शेष'; cSplinter.style.fill = '#0f172a'; }
-      var eq = document.getElementById('s6_card_eq'); if (eq) { eq.textContent = '2Pb(NO₃)₂ (सफेद क्रिस्टल)'; eq.style.fill = '#1e3a8a'; }
-      var eqSub = document.getElementById('s6_card_eq_sub'); if (eqSub) eqSub.textContent = 'लेड नाइट्रेट चूर्ण';
+      var lTxt = document.getElementById('s6_stage_status_text'); if (lTxt) { lTxt.textContent = 'सफेद क्रिस्टल [Pb(NO₃)₂]'; lTxt.setAttribute('fill', '#1e3a8a'); }
 
       var btn = document.getElementById('sim6_play_btn'); if (btn) btn.disabled = false;
     }
@@ -5478,109 +5557,83 @@
     function sim6Step(s) {
       var st = document.getElementById('sim6_status');
       var pbar = document.getElementById('sim6_pbar');
-      var flame = document.getElementById('s6_flame');
-      var bed = document.getElementById('s6_cryst_bed');
-      var sparks = document.getElementById('s6_sparks');
-      var fumes = document.getElementById('s6_no2_fumes');
-      var splinter = document.getElementById('s6_splinter_group');
-      var sText = document.getElementById('s6_stage_status_text');
       var lBox = document.getElementById('s6_label_box');
-
-      var phBox = document.getElementById('s6_card_phase_box');
+      var lTxt = document.getElementById('s6_stage_status_text');
       var ph = document.getElementById('s6_card_phase');
       var cFumes = document.getElementById('s6_card_fumes');
-      var cSplinter = document.getElementById('s6_card_splinter');
-      var eq = document.getElementById('s6_card_eq');
-      var eqSub = document.getElementById('s6_card_eq_sub');
+      var cSpl = document.getElementById('s6_card_splinter');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
-        if (flame) flame.style.opacity = '0';
-        if (bed) { bed.setAttribute('fill', 'url(#s6_whitePbNO3)'); bed.setAttribute('stroke', '#94a3b8'); }
-        if (sparks) sparks.style.opacity = '0';
-        if (fumes) fumes.style.opacity = '0';
-        if (splinter) splinter.style.opacity = '0';
-
-        if (sText) sText.textContent = 'सफेद क्रिस्टल [Pb(NO₃)₂]';
-        if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
-
-        if (phBox) { phBox.setAttribute('fill', '#eff6ff'); phBox.style.borderColor = '#3b82f6'; }
-        if (ph) { ph.textContent = 'चरण 1: लेड नाइट्रेट क्रिस्टल'; ph.style.fill = '#1e3a8a'; }
-        if (cFumes) { cFumes.textContent = 'कोई धुआं नहीं (शुरुआत)'; cFumes.style.fill = '#0f172a'; }
-        if (cSplinter) { cSplinter.textContent = 'लौ परीक्षण शेष'; cSplinter.style.fill = '#0f172a'; }
-        if (eq) { eq.textContent = '2Pb(NO₃)₂ (सफेद क्रिस्टल)'; eq.style.fill = '#1e3a8a'; }
-        if (eqSub) eqSub.textContent = 'लेड नाइट्रेट चूर्ण';
-
-        if (st) st.innerHTML = '<span style="color:#0284c7; font-size:16px;"><strong>चरण 1:</strong> परखनली धारक में कसी क्वथन नली में 2g सफेद लेड नाइट्रेट चूर्ण लिया गया है।</span>';
+        sim6Reset();
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> शुष्क क्वथन नली में सफेद लेड नाइट्रेट [Pb(NO₃)₂] क्रिस्टल लिए गए हैं।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        if (flame) flame.style.opacity = '1';
-        if (sparks) sparks.style.opacity = '1';
-        if (fumes) fumes.style.opacity = '0.7';
-        if (splinter) splinter.style.opacity = '0';
+        if (window.gsap) {
+          gsap.to('#s6_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s6_sparks', { opacity: 1, duration: 0.8 });
+          gsap.to('#s6_no2_fumes', { opacity: 0, duration: 0.4 });
+          gsap.to('#s6_splinter_group', { opacity: 0, duration: 0.4 });
+          gsap.to('#s6_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (sText) sText.textContent = 'चट-चट ध्वनि (Decrepitation) व भूरा धुआं निकलना';
         if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
+        if (lTxt) { lTxt.textContent = 'तापन शुरू: चटकने की आवाज (Decrepitation)'; lTxt.setAttribute('fill', '#9a3412'); }
+        if (ph) ph.textContent = 'चरण 2: मंद तापन व चटकने की ध्वनि';
+        if (cFumes) cFumes.textContent = 'क्रिस्टल टूटने की चटक ध्वनि';
 
-        if (phBox) { phBox.setAttribute('fill', '#fff7ed'); phBox.style.borderColor = '#ea580c'; }
-        if (ph) { ph.textContent = 'चरण 2: तापन व भूरा धुआं'; ph.style.fill = '#9a3412'; }
-        if (cFumes) { cFumes.textContent = 'घना भूरा धुआं [NO₂ गैस]'; cFumes.style.fill = '#c2410c'; }
-        if (cSplinter) { cSplinter.textContent = 'चट-चट ध्वनि (स्फुटन)'; cSplinter.style.fill = '#b45309'; }
-        if (eq) { eq.textContent = '2Pb(NO₃)₂ ➔ भूरा धुआं'; eq.style.fill = '#9a3412'; }
-        if (eqSub) eqSub.textContent = 'NO₂ (नाइट्रोजन डाइऑक्साइड)';
-
-        if (st) st.innerHTML = '<span style="color:#b45309; font-size:16px;"><strong>चरण 2 (स्फुटन व भूरा धुआं):</strong> बर्नर की सीधी लौ पर गर्म करने पर क्रिस्टल चट-चट की ध्वनि (Decrepitation) के साथ टूटते हैं और नली के मुंह से <strong>घने लाल-भूरे रंग का धुआं (NO₂ गैस)</strong> तेजी से निकलने लगता है!</span>';
+        if (st) st.innerHTML = '<strong>चरण 2 (चटकने की ध्वनि / Decrepitation):</strong> बर्नर की तेज लौ पर गर्म करते ही लेड नाइट्रेट क्रिस्टल चटकने की विशिष्ट ध्वनि (Crackling sound) के साथ टूटने लगते हैं।';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (flame) flame.style.opacity = '1';
-        if (sparks) sparks.style.opacity = '0.3';
-        if (bed) { bed.setAttribute('fill', 'url(#s6_yellowPbO)'); bed.setAttribute('stroke', '#854d0e'); }
-        if (fumes) fumes.style.opacity = '1';
-        if (splinter) splinter.style.opacity = '0';
+        if (window.gsap) {
+          gsap.to('#s6_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s6_cryst_bed', { fill: '#facc15', duration: 1.4 }); // Yellow solid PbO
+          gsap.to('#s6_sparks', { opacity: 0.4, duration: 0.5 });
+          gsap.to('#s6_no2_fumes', { opacity: 1, duration: 0.8 });
+          gsap.to('#s6_splinter_group', { opacity: 0, duration: 0.4 });
+          gsap.to('#s6_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (sText) sText.textContent = 'पीला अवशेष (PbO) व भूरी NO₂ गैस';
-        if (lBox) { lBox.setAttribute('fill', '#fefce8'); lBox.setAttribute('stroke', '#ca8a04'); }
+        if (lBox) { lBox.setAttribute('fill', '#fef2f2'); lBox.setAttribute('stroke', '#dc2626'); }
+        if (lTxt) { lTxt.textContent = 'तीव्र भूरा धुआं [NO₂↑] + पीला लेड ऑक्साइड [PbO]'; lTxt.setAttribute('fill', '#991b1b'); }
+        if (ph) ph.textContent = 'चरण 3: भूरे धुएं का उत्सर्जन व अवशेष';
+        if (cFumes) cFumes.textContent = 'गहरे भूरे रंग का नाइट्रोजन डाइऑक्साइड (NO₂) धुआं';
+        if (cSpl) cSpl.textContent = 'पीला अवशेष = लेड मोनोक्साइड (PbO)';
 
-        if (phBox) { phBox.setAttribute('fill', '#fefce8'); phBox.style.borderColor = '#ca8a04'; }
-        if (ph) { ph.textContent = 'चरण 3: पीला अवशेष व पूर्ण वियोजन'; ph.style.fill = '#a16207'; }
-        if (cFumes) { cFumes.textContent = 'तीव्र भूरी NO₂ गैस लगातार'; cFumes.style.fill = '#c2410c'; }
-        if (cSplinter) { cSplinter.textContent = 'पीला अवशेष [PbO] नली में'; cSplinter.style.fill = '#854d0e'; }
-        if (eq) { eq.textContent = '2Pb(NO₃)₂ ➔ 2PbO + 4NO₂↑'; eq.style.fill = '#a16207'; }
-        if (eqSub) eqSub.textContent = 'PbO: लेड मोनोऑक्साइड (पीला ठोस)';
-
-        if (st) st.innerHTML = '<span style="color:#a16207; font-size:16px;"><strong>चरण 3:</strong> क्वथन नली के पेंदे में <strong>पीले रंग का ठोस अवशेष लेड मोनोऑक्साइड (PbO)</strong> बचता है तथा समस्त नाइट्रोजन डाइऑक्साइड (NO₂) गैस निष्कासित हो जाती है।</span>';
+        if (st) st.innerHTML = '<strong>चरण 3 (भूरा NO₂ धुआं व पीला अवशेष):</strong> तीव्र गर्म करने पर परखनली के मुंह से <strong>गहरे भूरे रंग का नाइट्रोजन डाइऑक्साइड (NO₂) गैस</strong> का धुआं निकलता है तथा पेंदे में गर्म अवस्था में पीला <strong>लेड ऑक्साइड (PbO)</strong> अवशेष बचता है!';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        if (flame) flame.style.opacity = '0.5';
-        if (sparks) sparks.style.opacity = '0';
-        if (bed) { bed.setAttribute('fill', 'url(#s6_yellowPbO)'); bed.setAttribute('stroke', '#854d0e'); }
-        if (fumes) fumes.style.opacity = '0.4';
-        if (splinter) splinter.style.opacity = '1';
+        if (window.gsap) {
+          gsap.to('#s6_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s6_cryst_bed', { fill: '#facc15', duration: 0.6 });
+          gsap.to('#s6_no2_fumes', { opacity: 1, duration: 0.8 });
+          gsap.to('#s6_splinter_group', { opacity: 1, duration: 0.8, delay: 0.3 });
+          // Live Data observation panel smoothly appears in Step 4!
+          gsap.to('#s6_projector_panel', { opacity: 1, pointerEvents: 'auto', duration: 0.8, delay: 0.8 });
+        }
 
-        if (sText) sText.textContent = 'O₂ गैस पुष्टिकरण व संतुलित समीकरण';
-        if (lBox) { lBox.setAttribute('fill', '#faf5ff'); lBox.setAttribute('stroke', '#7c3aed'); }
+        if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
+        if (lTxt) { lTxt.textContent = 'ऑक्सीजन पुष्टिकरण (अगरबत्ती प्रज्वलित) व समीकरण'; lTxt.setAttribute('fill', '#1e3a8a'); }
+        if (ph) ph.textContent = 'चरण 4: रासायनिक समीकरण व निष्कर्ष';
 
-        if (phBox) { phBox.setAttribute('fill', '#faf5ff'); phBox.style.borderColor = '#7c3aed'; }
-        if (ph) { ph.textContent = 'चरण 4: O₂ परीक्षण व निष्कर्ष'; ph.style.fill = '#6d28d9'; }
-        if (cFumes) { cFumes.textContent = 'NO₂ (भूरा धुआं पहचान)'; cFumes.style.fill = '#c2410c'; }
-        if (cSplinter) { cSplinter.textContent = 'अगरबत्ती पुनः धधकना (O₂)'; cSplinter.style.fill = '#059669'; }
-        if (eq) { eq.textContent = '2Pb(NO₃)₂ ➔ 2PbO + 4NO₂↑ + O₂↑'; eq.style.fill = '#6d28d9'; }
-        if (eqSub) eqSub.textContent = 'ऊष्मीय वियोजन रासायनिक समीकरण';
-
-        if (st) st.innerHTML = '<span style="color:#7c3aed; font-size:16px;"><strong>चरण 4 (ऑक्सीजन परीक्षण व निष्कर्ष):</strong> नली के मुंह पर सुलगती अगरबत्ती लाने पर वह तेजी से धधकने लगती है, जो <strong>ऑक्सीजन (O₂) गैस</strong> की उपस्थिति सिद्ध करती है। संतुलित समीकरण: <strong>2Pb(NO₃)₂(s) ➔ 2PbO(s) (पीला) + 4NO₂(g)↑ (भूरा धुआं) + O₂(g)↑</strong></span>';
+        if (st) st.innerHTML = '<span style="color:#b91c1c; font-size:16px;"><strong>चरण 4 (ऑक्सीजन पुष्टिकरण परीक्षण व संतुलित रासायनिक समीकरण):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#fef2f2; padding:6px 14px; border-radius:8px; border:2px solid #fecaca; color:#991b1b; font-weight:900;">' +
+          '2Pb(NO₃)₂(s) ➔ <strong>2PbO(s) (पीला ठोस)</strong> + <strong>4NO₂(g)↑ (भूरा धुआं)</strong> + <strong>O₂(g)↑</strong>' +
+          '</span><br>' +
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">धुएं के पास सुलगती हुई अगरबत्ती लाने पर वह तेजी से प्रज्वलित हो उठती है, जो साथ में <strong>ऑक्सीजन (O₂) गैस</strong> निकलने की पुष्टि करती है। यह एक <strong>ऊष्मीय वियोजन अभिक्रिया</strong> है।</span>';
       }
     }
 
     function sim6PlayAuto() {
       sim6Reset();
       var btn = document.getElementById('sim6_play_btn'); if (btn) btn.disabled = true;
-      addSimTimer(6, setTimeout(function() { sim6Step(1); }, 300));
-      addSimTimer(6, setTimeout(function() { sim6Step(2); }, 2800));
+      sim6Step(1);
+      addSimTimer(6, setTimeout(function() { sim6Step(2); }, 2200));
       addSimTimer(6, setTimeout(function() { sim6Step(3); }, 6800));
       addSimTimer(6, setTimeout(function() {
         sim6Step(4);
         if (btn) btn.disabled = false;
-      }, 11500));
+      }, 12000));
     }
 
     function sim7Reset() {
@@ -6052,28 +6105,26 @@
       clearSimTimers(11);
       var pbar = document.getElementById('sim11_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim11_status');
-      if (st) st.innerHTML = '<span style="color:#0f172a; font-size:16px;"><strong>प्रारंभिक स्थिति:</strong> तिपाई स्टैंड पर चाइना डिश में चमकदार भूरा कॉपर चूर्ण तैयार है। \"संपूर्ण वीडियो एनिमेशन\" दबाएं।</span>';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> तिपाई स्टैंड पर चाइना डिश में चमकदार भूरा कॉपर चूर्ण तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
-      var flame = document.getElementById('s11_flame'); if (flame) flame.style.opacity = '0';
-      var gauzeGlow = document.getElementById('s11_gauze_glow'); if (gauzeGlow) gauzeGlow.style.opacity = '0';
-      var o2 = document.getElementById('s11_o2_flow'); if (o2) o2.style.opacity = '0';
-      var powder = document.getElementById('s11_cu_powder');
-      if (powder) { powder.setAttribute('fill', 'url(#s11_brownCu)'); powder.setAttribute('stroke', '#9a3412'); }
-      var lblBox = document.getElementById('s11_label_box'); if (lblBox) lblBox.style.stroke = '#ea580c';
-      var lbl = document.getElementById('s11_powder_label');
-      if (lbl) { lbl.textContent = 'भूरा कॉपर चूर्ण [Cu]'; lbl.style.fill = '#f97316'; }
-      var h2 = document.getElementById('s11_h2_tube');
-      if (h2) { h2.style.opacity = '0'; h2.style.transform = 'translate(-140px, 0)'; }
-      var vap = document.getElementById('s11_water_vapors'); if (vap) vap.style.opacity = '0';
+      if (window.gsap) {
+        gsap.to('#s11_flame', { opacity: 0, duration: 0.4 });
+        gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 0.6 });
+        gsap.to('#s11_o2_flow', { opacity: 0, duration: 0.4 });
+        gsap.to('#s11_h2_tube', { opacity: 0, duration: 0.4 });
+        gsap.to('#s11_water_vapors', { opacity: 0, duration: 0.4 });
+        gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+      } else {
+        var flame = document.getElementById('s11_flame'); if (flame) flame.style.opacity = '0';
+        var powder = document.getElementById('s11_china_dish_powder'); if (powder) powder.setAttribute('fill', 'url(#s11_copperBrown)');
+        var o2 = document.getElementById('s11_o2_flow'); if (o2) o2.style.opacity = '0';
+        var h2 = document.getElementById('s11_h2_tube'); if (h2) h2.style.opacity = '0';
+        var vap = document.getElementById('s11_water_vapors'); if (vap) vap.style.opacity = '0';
+        var panel = document.getElementById('s11_projector_panel'); if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+      }
 
-      // Card Updates
-      var phBox = document.getElementById('s11_card_phase_box'); if (phBox) phBox.style.borderColor = '#f97316';
-      var phText = document.getElementById('s11_card_phase'); if (phText) { phText.textContent = 'चरण 1: कॉपर धातु (भूरा)'; phText.style.fill = '#c2410c'; }
-      var obs1 = document.getElementById('s11_card_obs1'); if (obs1) { obs1.textContent = 'भूरा चमकदार कॉपर (Cu)'; obs1.style.fill = '#9a3412'; }
-      var obs2 = document.getElementById('s11_card_obs2'); if (obs2) { obs2.textContent = 'प्रारंभिक अवस्था (No Reaction)'; obs2.style.fill = '#0369a1'; }
-      var eq = document.getElementById('s11_card_eq'); if (eq) { eq.textContent = 'Cu (चूर्ण)'; eq.style.fill = '#92400e'; }
-      var eqSub = document.getElementById('s11_card_eq_sub'); if (eqSub) eqSub.textContent = 'चमकदार लाल-भूरा चूर्ण';
-      var rule = document.getElementById('s11_card_rule'); if (rule) rule.textContent = 'ऑक्सीजन जुड़ना = उपचयन';
+      var lBox = document.getElementById('s11_label_box'); if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
+      var lTxt = document.getElementById('s11_powder_label'); if (lTxt) { lTxt.textContent = 'भूरा कॉपर चूर्ण [Cu]'; lTxt.setAttribute('fill', '#9a3412'); }
 
       var btn = document.getElementById('sim11_play_btn'); if (btn) btn.disabled = false;
     }
@@ -6081,466 +6132,88 @@
     function sim11Step(s) {
       var st = document.getElementById('sim11_status');
       var pbar = document.getElementById('sim11_pbar');
-      var flame = document.getElementById('s11_flame');
-      var gauzeGlow = document.getElementById('s11_gauze_glow');
-      var o2 = document.getElementById('s11_o2_flow');
-      var powder = document.getElementById('s11_cu_powder');
-      var lblBox = document.getElementById('s11_label_box');
-      var lbl = document.getElementById('s11_powder_label');
-      var h2 = document.getElementById('s11_h2_tube');
-      var vap = document.getElementById('s11_water_vapors');
-
-      var phBox = document.getElementById('s11_card_phase_box');
-      var phText = document.getElementById('s11_card_phase');
+      var lBox = document.getElementById('s11_label_box');
+      var lTxt = document.getElementById('s11_powder_label');
+      var ph = document.getElementById('s11_card_phase');
       var obs1 = document.getElementById('s11_card_obs1');
       var obs2 = document.getElementById('s11_card_obs2');
-      var eq = document.getElementById('s11_card_eq');
-      var eqSub = document.getElementById('s11_card_eq_sub');
-      var rule = document.getElementById('s11_card_rule');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
-        if (flame) flame.style.opacity = '0';
-        if (gauzeGlow) gauzeGlow.style.opacity = '0';
-        if (o2) o2.style.opacity = '0';
-        if (powder) { powder.setAttribute('fill', 'url(#s11_brownCu)'); powder.setAttribute('stroke', '#9a3412'); }
-        if (lblBox) lblBox.style.stroke = '#ea580c';
-        if (lbl) { lbl.textContent = 'भूरा कॉपर चूर्ण [Cu]'; lbl.style.fill = '#f97316'; }
-        if (h2) { h2.style.opacity = '0'; h2.style.transform = 'translate(-140px, 0)'; }
-        if (vap) vap.style.opacity = '0';
-
-        if (phBox) phBox.style.borderColor = '#f97316';
-        if (phText) { phText.textContent = 'चरण 1: कॉपर धातु (भूरा)'; phText.style.fill = '#c2410c'; }
-        if (obs1) { obs1.textContent = 'भूरा चमकदार कॉपर (Cu)'; obs1.style.fill = '#9a3412'; }
-        if (obs2) { obs2.textContent = 'प्रारंभिक अवस्था (No Reaction)'; obs2.style.fill = '#0369a1'; }
-        if (eq) { eq.textContent = 'Cu (चूर्ण)'; eq.style.fill = '#92400e'; }
-        if (eqSub) eqSub.textContent = 'चमकदार लाल-भूरा चूर्ण';
-        if (rule) rule.textContent = 'ऑक्सीजन जुड़ना = उपचयन';
-
-        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:16px;"><strong>चरण 1:</strong> चाइना डिश में 1g भूरा कॉपर चूर्ण (Cu) रखा गया है। यह शुद्ध तांबा धातु है।</span>';
+        sim11Reset();
+        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> चाइना डिश में शुद्ध लाल-भूरे रंग का कॉपर चूर्ण (Cu) लिया गया है। बर्नर बंद है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        if (flame) flame.style.opacity = '1';
-        if (gauzeGlow) gauzeGlow.style.opacity = '0.7';
-        if (o2) o2.style.opacity = '1';
-        if (powder) { powder.setAttribute('fill', 'url(#s11_blackCuO)'); powder.setAttribute('stroke', '#0f172a'); }
-        if (lblBox) lblBox.style.stroke = '#38bdf8';
-        if (lbl) { lbl.textContent = 'काला कॉपर(II) ऑक्साइड [CuO]'; lbl.style.fill = '#e2e8f0'; }
-        if (h2) { h2.style.opacity = '0'; h2.style.transform = 'translate(-140px, 0)'; }
-        if (vap) vap.style.opacity = '0';
+        if (window.gsap) {
+          gsap.to('#s11_flame', { opacity: 1, duration: 0.6 });
+          gsap.to('#s11_o2_flow', { opacity: 1, duration: 0.8 });
+          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_blackCuO)', duration: 1.5 });
+          gsap.to('#s11_h2_tube', { opacity: 0, duration: 0.4 });
+          gsap.to('#s11_water_vapors', { opacity: 0, duration: 0.4 });
+          gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (phBox) phBox.style.borderColor = '#38bdf8';
-        if (phText) { phText.textContent = 'चरण 2: उपचयन (Oxidation)'; phText.style.fill = '#0284c7'; }
-        if (obs1) { obs1.textContent = 'काला कॉपर(II) ऑक्साइड [CuO]'; obs1.style.fill = '#0f172a'; }
-        if (obs2) { obs2.textContent = 'ऑक्सीजन का जुड़ना (उपचयन)'; obs2.style.fill = '#c2410c'; }
-        if (eq) { eq.textContent = '2Cu + O₂ → 2CuO'; eq.style.fill = '#1e3a8a'; }
-        if (eqSub) eqSub.textContent = 'तापन पर काला लेप बना';
-        if (rule) rule.textContent = 'कॉपर का उपचयन हुआ (+O)';
+        if (lBox) { lBox.setAttribute('fill', '#f1f5f9'); lBox.setAttribute('stroke', '#0f172a'); }
+        if (lTxt) { lTxt.textContent = 'काला कॉपर(II) ऑक्साइड [CuO] - उपचयन'; lTxt.setAttribute('fill', '#0f172a'); }
+        if (ph) ph.textContent = 'चरण 2: वायु में तापन व उपचयन (काला CuO)';
+        if (obs1) obs1.textContent = 'काला कॉपर(II) ऑक्साइड [CuO]';
+        if (obs2) obs2.textContent = 'उपचयन (ऑक्सीजन का योग)';
 
-        if (st) st.innerHTML = '<span style="color:#0284c7; font-size:16px;"><strong>चरण 2 (उपचयन / Oxidation):</strong> बर्नर जलाने पर कॉपर ने वायु की ऑक्सीजन से क्रिया की और चाइना डिश में काला कॉपर(II) ऑक्साइड (CuO) बन गया: <strong>2Cu + O₂ → 2CuO</strong></span>';
+        if (st) st.innerHTML = '<strong>चरण 2 (उपचयन अभिक्रिया - काला CuO बनना):</strong> कॉपर चूर्ण को वायु में गर्म करने पर कॉपर ऑक्सीजन से क्रिया करके काले रंग के <strong>कॉपर(II) ऑक्साइड (CuO)</strong> की परत में बदल जाता है (2Cu + O₂ ➔ 2CuO)। इसमें कॉपर का <strong>उपचयन (Oxidation)</strong> हुआ है।';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (flame) flame.style.opacity = '0.8';
-        if (gauzeGlow) gauzeGlow.style.opacity = '0.5';
-        if (o2) o2.style.opacity = '0';
-        if (h2) { h2.style.opacity = '1'; h2.style.transform = 'translate(0, 0)'; }
-        if (vap) vap.style.opacity = '1';
-        if (powder) { powder.setAttribute('fill', 'url(#s11_brownCu)'); powder.setAttribute('stroke', '#9a3412'); }
-        if (lblBox) lblBox.style.stroke = '#10b981';
-        if (lbl) { lbl.textContent = 'पुनः भूरा कॉपर [Cu] + जल वाष्प'; lbl.style.fill = '#34d399'; }
+        if (window.gsap) {
+          gsap.to('#s11_flame', { opacity: 0.6, duration: 0.6 });
+          gsap.to('#s11_o2_flow', { opacity: 0, duration: 0.4 });
+          gsap.to('#s11_h2_tube', { opacity: 1, duration: 0.8 });
+          gsap.to('#s11_water_vapors', { opacity: 1, duration: 0.8, delay: 0.4 });
+          // Restoring back to reddish-brown copper!
+          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 2, delay: 0.6 });
+          gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
+        }
 
-        if (phBox) phBox.style.borderColor = '#10b981';
-        if (phText) { phText.textContent = 'चरण 3: अपचयन (Reduction)'; phText.style.fill = '#10b981'; }
-        if (obs1) { obs1.textContent = 'पुनः भूरा कॉपर (Cu) अवक्षेपित'; obs1.style.fill = '#9a3412'; }
-        if (obs2) { obs2.textContent = 'ऑक्सीजन का निष्कासन (अपचयन)'; obs2.style.fill = '#047857'; }
-        if (eq) { eq.textContent = 'CuO + H₂ → Cu + H₂O'; eq.style.fill = '#065f46'; }
-        if (eqSub) eqSub.textContent = 'H₂ गैस प्रवाहित करने पर';
-        if (rule) rule.textContent = 'CuO का अपचयन हुआ (-O)';
+        if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
+        if (lTxt) { lTxt.textContent = 'H₂ गैस प्रवाह: पुनः भूरा कॉपर [Cu] - अपचयन'; lTxt.setAttribute('fill', '#9a3412'); }
+        if (ph) ph.textContent = 'चरण 3: H₂ गैस प्रवाह व अपचयन';
+        if (obs1) obs1.textContent = 'पुनः चमकदार भूरा कॉपर (Cu) + H₂O भाप';
+        if (obs2) obs2.textContent = 'अपचयन (CuO से ऑक्सीजन हटी)';
 
-        if (st) st.innerHTML = '<span style="color:#059669; font-size:16px;"><strong>चरण 3 (अपचयन / Reduction):</strong> गर्म काले CuO पर H₂ गैस प्रवाहित करने पर विपरीत अभिक्रिया हुई। ऑक्सीजन हटने से सतह पुनः भूरे कॉपर में बदल गई: <strong>CuO + H₂ → Cu + H₂O</strong></span>';
+        if (st) st.innerHTML = '<strong>चरण 3 (अपचयन अभिक्रिया - पुनः भूरा कॉपर):</strong> गर्म काले CuO के ऊपर हाइड्रोजन (H₂) गैस प्रवाहित करने पर काली सतह पुनः चमकदार <strong>भूरे रंग के कॉपर (Cu)</strong> में बदल जाती है तथा जलवाष्प बनती है (CuO + H₂ ➔ Cu + H₂O)। इसमें CuO का <strong>अपचयन (Reduction)</strong> हुआ है।';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        if (flame) flame.style.opacity = '0';
-        if (gauzeGlow) gauzeGlow.style.opacity = '0';
-        if (o2) o2.style.opacity = '0';
-        if (h2) { h2.style.opacity = '0.6'; h2.style.transform = 'translate(0, 0)'; }
-        if (vap) vap.style.opacity = '0.6';
+        if (window.gsap) {
+          gsap.to('#s11_flame', { opacity: 0, duration: 0.4 });
+          gsap.to('#s11_h2_tube', { opacity: 0.4, duration: 0.5 });
+          gsap.to('#s11_water_vapors', { opacity: 0.4, duration: 0.5 });
+          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 0.6 });
+          // Live Data observation panel smoothly appears in Step 4!
+          gsap.to('#s11_projector_panel', { opacity: 1, pointerEvents: 'auto', duration: 0.8, delay: 0.5 });
+        }
 
-        if (phBox) phBox.style.borderColor = '#a855f7';
-        if (phText) { phText.textContent = 'चरण 4: रेडॉक्स (RedOx) विश्लेषण'; phText.style.fill = '#7c3aed'; }
-        if (obs1) { obs1.textContent = 'उपचयन + अपचयन साथ-साथ'; obs1.style.fill = '#854d0e'; }
-        if (obs2) { obs2.textContent = 'रेडॉक्स अभिक्रिया (RedOx)'; obs2.style.fill = '#6d28d9'; }
-        if (eq) { eq.textContent = 'CuO(अपचयन)+H₂(उपचयन)'; eq.style.fill = '#1e3a8a'; }
-        if (eqSub) eqSub.textContent = 'CuO→Cu (-O) | H₂→H₂O (+O)';
-        if (rule) rule.textContent = 'रेडॉक्स = उपचयन-अपचयन';
+        if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
+        if (lTxt) { lTxt.textContent = 'रेडॉक्स (RedOx) निष्कर्ष व रासायनिक समीकरण'; lTxt.setAttribute('fill', '#1e3a8a'); }
+        if (ph) ph.textContent = 'चरण 4: रेडॉक्स अभिक्रिया निष्कर्ष';
 
-        if (st) st.innerHTML = '<span style="color:#7c3aed; font-size:16px;"><strong>चरण 4 (रेडॉक्स निष्कर्ष / RedOx Master):</strong> इस अभिक्रिया में <strong>CuO का अपचयन (Reduction)</strong> होकर Cu बनता है तथा <strong>H₂ का उपचयन (Oxidation)</strong> होकर H₂O बनता है। चूंकि उपचयन व अपचयन साथ-साथ होते हैं, इसे <strong>रेडॉक्स (RedOx) अभिक्रिया</strong> कहते हैं।</span>';
+        if (st) st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>चरण 4 (रेडॉक्स अभिक्रिया निष्कर्ष व संतुलित रासायनिक समीकरण):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#eff6ff; padding:6px 14px; border-radius:8px; border:2px solid #93c5fd; color:#1e40af; font-weight:900;">' +
+          'CuO(s) + H₂(g) ➔ <strong>Cu(s) (अपचयित, भूरा)</strong> + <strong>H₂O(l) (उपचयित)</strong>' +
+          '</span><br>' +
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">इस अभिक्रिया में CuO से ऑक्सीजन हटी (अतः CuO का <strong>अपचयन</strong> हुआ), जबकि H₂ में ऑक्सीजन जुड़ी (अतः H₂ का <strong>उपचयन</strong> हुआ)। चूंकि उपचयन व अपचयन दोनों साथ-साथ होते हैं, अतः इसे <strong>रेडॉक्स अभिक्रिया (RedOx Reaction)</strong> कहते हैं।</span>';
       }
     }
 
-    function sim11PlayAuto() {
+        function sim11PlayAuto() {
       sim11Reset();
       var btn = document.getElementById('sim11_play_btn'); if (btn) btn.disabled = true;
       sim11Step(1);
-      addSimTimer(11, setTimeout(function() { sim11Step(2); }, 2500));
+      addSimTimer(11, setTimeout(function() { sim11Step(2); }, 2200));
       addSimTimer(11, setTimeout(function() { sim11Step(3); }, 7000));
       addSimTimer(11, setTimeout(function() {
         sim11Step(4);
         if (btn) btn.disabled = false;
       }, 12500));
     }
-
-    function sim12SelectEquation(idx) {
-      currentEqIndex = parseInt(idx, 10) || 0;
-      var eq = ncertEquations[currentEqIndex];
-      var totalTerms = eq.reactants.length + eq.products.length;
-      currentCoeffs = [];
-      for (var i = 0; i < totalTerms; i++) currentCoeffs.push(1);
-      renderSim12Controls();
-      updateSim12Balance();
-    }
-
-    function renderSim12Controls() {
-      var grid = document.getElementById('sim12_coeff_grid');
-      if (!grid) return;
-      var eq = ncertEquations[currentEqIndex];
-      var html = '';
-      var coeffIdx = 0;
-
-      // Reactants
-      eq.reactants.forEach(function(r, i) {
-        if (i > 0) html += '<span style="font-weight:900; font-size:18px; color:#475569; margin:0 4px;">+</span>';
-        html += '<div style="display:flex; align-items:center; background:#f1f5f9; padding:4px 8px; border-radius:6px; border:1px solid #cbd5e1;">';
-        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', -1)" style="width:26px; height:26px; border-radius:4px; border:1px solid #94a3b8; background:#ffffff; font-weight:bold; cursor:pointer;">-</button>';
-        html += '<span id="s12_c_' + coeffIdx + '" style="font-size:16px; font-weight:900; color:#1d4ed8; min-width:24px; text-align:center;">' + currentCoeffs[coeffIdx] + '</span>';
-        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', 1)" style="width:26px; height:26px; border-radius:4px; border:1px solid #94a3b8; background:#ffffff; font-weight:bold; cursor:pointer;">+</button>';
-        html += '<span style="margin-left:6px; font-weight:700; color:#1e293b; font-size:15px;">' + r.formula + '</span>';
-        html += '</div>';
-        coeffIdx++;
-      });
-
-      html += '<span style="font-weight:900; font-size:22px; color:#2563eb; margin:0 8px;">➔</span>';
-
-      // Products
-      eq.products.forEach(function(p, i) {
-        if (i > 0) html += '<span style="font-weight:900; font-size:18px; color:#475569; margin:0 4px;">+</span>';
-        html += '<div style="display:flex; align-items:center; background:#f1f5f9; padding:4px 8px; border-radius:6px; border:1px solid #cbd5e1;">';
-        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', -1)" style="width:26px; height:26px; border-radius:4px; border:1px solid #94a3b8; background:#ffffff; font-weight:bold; cursor:pointer;">-</button>';
-        html += '<span id="s12_c_' + coeffIdx + '" style="font-size:16px; font-weight:900; color:#047857; min-width:24px; text-align:center;">' + currentCoeffs[coeffIdx] + '</span>';
-        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', 1)" style="width:26px; height:26px; border-radius:4px; border:1px solid #94a3b8; background:#ffffff; font-weight:bold; cursor:pointer;">+</button>';
-        html += '<span style="margin-left:6px; font-weight:700; color:#1e293b; font-size:15px;">' + p.formula + '</span>';
-        html += '</div>';
-        coeffIdx++;
-      });
-
-      grid.innerHTML = html;
-    }
-
-    function sim12ChangeCoeff(idx, delta) {
-      var newVal = Math.max(1, Math.min(10, currentCoeffs[idx] + delta));
-      currentCoeffs[idx] = newVal;
-      var span = document.getElementById('s12_c_' + idx);
-      if (span) span.textContent = newVal;
-      updateSim12Balance();
-    }
-
-    function sim12ResetCoeffs() {
-      for (var i = 0; i < currentCoeffs.length; i++) currentCoeffs[i] = 1;
-      renderSim12Controls();
-      updateSim12Balance();
-    }
-
-    function sim12AutoSolve() {
-      var eq = ncertEquations[currentEqIndex];
-      for (var i = 0; i < eq.balanced.length; i++) {
-        currentCoeffs[i] = eq.balanced[i];
-      }
-      renderSim12Controls();
-      updateSim12Balance();
-    }
-
-    var scaleAnimFrame = null;
-    var currentScaleAngle = 0;
-
-        /* ==========================================================
-       SIMULATOR 12: EQUATION BALANCE SCALE SCRIPT (PROJECTOR MASTER)
-       ========================================================== */
-    function updateSim12Balance() {
-      var eq = ncertEquations[currentEqIndex];
-      var beam = document.getElementById('s12_beam_group');
-      var leftAtoms = document.getElementById('s12_left_atoms');
-      var rightAtoms = document.getElementById('s12_right_atoms');
-      var stamp = document.getElementById('s12_stamp');
-      var badgeBg = document.getElementById('s12_badge_bg');
-      var badgeText = document.getElementById('s12_badge_text');
-
-      var totalReactants = {};
-      var totalProducts = {};
-      var coeffIdx = 0;
-
-      // Count Reactant Atoms
-      eq.reactants.forEach(function(r) {
-        var c = currentCoeffs[coeffIdx++];
-        for (var el in r.atoms) {
-          totalReactants[el] = (totalReactants[el] || 0) + (r.atoms[el] * c);
-        }
-      });
-
-      // Count Product Atoms
-      eq.products.forEach(function(p) {
-        var c = currentCoeffs[coeffIdx++];
-        for (var el in p.atoms) {
-          totalProducts[el] = (totalProducts[el] || 0) + (p.atoms[el] * c);
-        }
-      });
-
-      // Check Equality
-      var allBalanced = true;
-      var totalLeftCount = 0;
-      var totalRightCount = 0;
-
-      for (var el in totalReactants) totalLeftCount += totalReactants[el];
-      for (var el in totalProducts) totalRightCount += totalProducts[el];
-
-      var allElements = {};
-      for (var el in totalReactants) allElements[el] = true;
-      for (var el in totalProducts) allElements[el] = true;
-
-      for (var el in allElements) {
-        var l = totalReactants[el] || 0;
-        var r = totalProducts[el] || 0;
-        if (l !== r) allBalanced = false;
-      }
-
-      // Render 3D Atom Spheres in Pans
-      if (leftAtoms) {
-        var lHtml = '';
-        var xOffset = -45;
-        var yOffset = -8;
-        var col = 0;
-        for (var el in totalReactants) {
-          var count = totalReactants[el];
-          var color = elementColors[el] || '#38bdf8';
-          for (var i = 0; i < count; i++) {
-            var ax = 180 + xOffset + (col % 6) * 18;
-            var ay = 258 + yOffset - Math.floor(col / 6) * 16;
-            lHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="8" fill="' + color + '" stroke="#0f172a" stroke-width="1.5"/>';
-            lHtml += '<text x="' + ax + '" y="' + (ay + 3.5) + '" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle">' + el + '</text>';
-            col++;
-          }
-        }
-        leftAtoms.innerHTML = lHtml;
-      }
-
-      if (rightAtoms) {
-        var rHtml = '';
-        var xOffset = -45;
-        var yOffset = -8;
-        var col = 0;
-        for (var el in totalProducts) {
-          var count = totalProducts[el];
-          var color = elementColors[el] || '#38bdf8';
-          for (var i = 0; i < count; i++) {
-            var ax = 720 + xOffset + (col % 6) * 18;
-            var ay = 258 + yOffset - Math.floor(col / 6) * 16;
-            rHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="8" fill="' + color + '" stroke="#0f172a" stroke-width="1.5"/>';
-            rHtml += '<text x="' + ax + '" y="' + (ay + 3.5) + '" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle">' + el + '</text>';
-            col++;
-          }
-        }
-        rightAtoms.innerHTML = rHtml;
-      }
-
-      // Calculate Tilt Angle (Max +/- 7 degrees)
-      var diff = totalRightCount - totalLeftCount;
-      var tilt = 0;
-      if (allBalanced) {
-        tilt = 0;
-      } else {
-        tilt = Math.max(-7, Math.min(7, diff * 1.5));
-      }
-
-      if (beam) {
-        beam.style.transform = 'rotate(' + tilt + 'deg)';
-      }
-
-      // Update Stamp and Center Badge
-      if (allBalanced) {
-        if (stamp) stamp.style.opacity = '1';
-        if (badgeBg) { badgeBg.setAttribute('fill', '#ecfdf5'); badgeBg.setAttribute('stroke', '#10b981'); }
-        if (badgeText) { badgeText.textContent = '✓ पूर्ण संतुलित (BALANCED)'; badgeText.setAttribute('fill', '#065f46'); }
-      } else {
-        if (stamp) stamp.style.opacity = '0';
-        if (badgeBg) { badgeBg.setAttribute('fill', '#fff7ed'); badgeBg.setAttribute('stroke', '#ea580c'); }
-        if (badgeText) {
-          badgeText.textContent = diff > 0 ? 'दायां पलड़ा भारी (उत्पाद अधिक)' : 'बायां पलड़ा भारी (अभिकारक अधिक)';
-          badgeText.setAttribute('fill', '#9a3412');
-        }
-      }
-
-      // Update Scoreboard Cards
-      var sb = document.getElementById('sim12_score_board');
-      if (sb) {
-        var sbHtml = '';
-        for (var el in allElements) {
-          var l = totalReactants[el] || 0;
-          var r = totalProducts[el] || 0;
-          var isEq = (l === r);
-          var color = elementColors[el] || '#38bdf8';
-          sbHtml += '<div style="display:flex; align-items:center; gap:8px; background:' + (isEq ? '#ecfdf5' : '#fff1f2') + '; border:2px solid ' + (isEq ? '#10b981' : '#f43f5e') + '; padding:6px 14px; border-radius:8px;">';
-          sbHtml += '<span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:' + color + '; border:1px solid #334155;"></span>';
-          sbHtml += '<strong style="font-size:15px; color:#0f172a;">' + el + ':</strong>';
-          sbHtml += '<span style="font-size:15px; font-weight:900; color:' + (isEq ? '#059669' : '#e11d48') + ';">बायां ' + l + ' vs दायां ' + r + ' ' + (isEq ? '✓' : '✗') + '</span>';
-          sbHtml += '</div>';
-        }
-        sb.innerHTML = sbHtml;
-      }
-
-      var st = document.getElementById('sim12_status');
-      if (st) {
-        if (allBalanced) {
-          st.innerHTML = '<span style="color:#059669; font-size:16px;"><strong>शानदार! समीकरण पूर्ण संतुलित है:</strong> द्रव्यमान संरक्षण नियम के अनुसार अभिकारकों व उत्पादों के सभी परमाणुओं की संख्या पूर्णतः बराबर है।</span>';
-        } else {
-          st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>संतुलन प्रगति:</strong> गुणांक बदलें या "स्वतः संतुलित करें" बटन दबाकर सही गुणांक देखें।</span>';
-        }
-      }
-    }
-
-    // Initialize Simulator 12 on load
-    window.addEventListener('DOMContentLoaded', function() {
-      sim12SelectEquation(0);
-    });
-  
-    /* ==========================================================
-       SIMULATOR 13: RUSTING OF IRON (CORROSION) 3D PERSPECTIVE
-       ========================================================== */
-        /* ==========================================================
-       SIMULATOR 13: RUSTING CONDITIONS SCRIPT (PROJECTOR MASTER)
-       ========================================================== */
-    function sim13Reset() {
-      clearSimTimers(13);
-      var btn = document.getElementById('sim13_play_btn'); if (btn) btn.disabled = false;
-      var pbar = document.getElementById('sim13_pbar'); if (pbar) pbar.style.width = '0%';
-
-      // Reset Corks
-      setSimSvg('s13_corkA', 'translate(0, -35px)', 0);
-      setSimSvg('s13_corkB', 'translate(0, -35px)', 0);
-      setSimSvg('s13_corkC', 'translate(0, -35px)', 0);
-
-      // Reset Nails Rust & Sediment
-      var rust = document.getElementById('s13_nailA_rust'); if (rust) rust.style.opacity = '0';
-      var sed = document.getElementById('s13_sediment_A'); if (sed) sed.style.opacity = '0';
-
-      // Reset Badges
-      setSimSvg('s13_resA', null, 0);
-      setSimSvg('s13_resB', null, 0);
-      setSimSvg('s13_resC', null, 0);
-
-      // Reset Card
-      var dayBox = document.getElementById('s13_card_day_box'); if (dayBox) dayBox.style.borderColor = '#38bdf8';
-      var dayText = document.getElementById('s13_card_day'); if (dayText) { dayText.textContent = 'दिवस 1: परखनलियां तैयार'; dayText.style.fill = '#38bdf8'; }
-      var obsA = document.getElementById('s13_card_obsA'); if (obsA) { obsA.textContent = 'स्वच्छ कीलें (शुरुआत)'; obsA.style.fill = '#fdba74'; }
-      var obsB = document.getElementById('s13_card_obsB'); if (obsB) { obsB.textContent = 'वायु विलीन नहीं (सुरक्षित)'; obsB.style.fill = '#a7f3d0'; }
-      var obsC = document.getElementById('s13_card_obsC'); if (obsC) { obsC.textContent = 'नमी अवशोषित (सुरक्षित)'; obsC.style.fill = '#a7f3d0'; }
-
-      var st = document.getElementById('sim13_status');
-      if (st) st.innerHTML = '<span style="color:#0f172a; font-size:16px;"><strong>प्रारंभिक स्थिति:</strong> तीन परखनलियां A, B, C तैयार हैं। \"संपूर्ण 3-दिवसीय टाइम-लैप्स एनिमेशन\" दबाएं।</span>';
-    }
-
-    function sim13Step(s) {
-      var st = document.getElementById('sim13_status');
-      var pbar = document.getElementById('sim13_pbar');
-      var rust = document.getElementById('s13_nailA_rust');
-      var sed = document.getElementById('s13_sediment_A');
-      var dayBox = document.getElementById('s13_card_day_box');
-      var dayText = document.getElementById('s13_card_day');
-      var obsA = document.getElementById('s13_card_obsA');
-      var obsB = document.getElementById('s13_card_obsB');
-      var obsC = document.getElementById('s13_card_obsC');
-
-      if (s === 1) {
-        if (pbar) pbar.style.width = '25%';
-        setSimSvg('s13_corkA', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkB', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkC', 'translate(0, 0)', 1);
-        if (rust) rust.style.opacity = '0';
-        if (sed) sed.style.opacity = '0';
-        setSimSvg('s13_resA', null, 0);
-        setSimSvg('s13_resB', null, 0);
-        setSimSvg('s13_resC', null, 0);
-
-        if (dayBox) dayBox.style.borderColor = '#38bdf8';
-        if (dayText) { dayText.textContent = 'दिवस 1: परखनलियां कॉर्क बंद'; dayText.style.fill = '#38bdf8'; }
-        if (obsA) { obsA.textContent = 'चमकदार साफ कीलें'; obsA.style.fill = '#fdba74'; }
-        if (obsB) { obsB.textContent = 'उबला जल + तेल परत'; obsB.style.fill = '#a7f3d0'; }
-        if (obsC) { obsC.textContent = 'शुष्क वायु + निर्जल CaCl₂'; obsC.style.fill = '#a7f3d0'; }
-
-        if (st) st.innerHTML = '<span style="color:#0284c7; font-size:16px;"><strong>दिवस 1:</strong> परखनलियों में कॉर्क लगाए गए। A में जल व वायु दोनों उपस्थित हैं, B में तेल की परत ने वायु को रोक रखा है, C में CaCl₂ ने समस्त नमी सोख ली है।</span>';
-      } else if (s === 2) {
-        if (pbar) pbar.style.width = '50%';
-        setSimSvg('s13_corkA', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkB', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkC', 'translate(0, 0)', 1);
-        if (rust) rust.style.opacity = '0.45';
-        if (sed) sed.style.opacity = '0.3';
-        setSimSvg('s13_resA', null, 0);
-        setSimSvg('s13_resB', null, 0);
-        setSimSvg('s13_resC', null, 0);
-
-        if (dayBox) dayBox.style.borderColor = '#f59e0b';
-        if (dayText) { dayText.textContent = 'दिवस 2 (24 घंटे बाद)'; dayText.style.fill = '#fde047'; }
-        if (obsA) { obsA.textContent = 'हल्की भूरी परत दिखने लगी'; obsA.style.fill = '#fde047'; }
-        if (obsB) { obsB.textContent = 'कोई परिवर्तन नहीं (साफ)'; obsB.style.fill = '#a7f3d0'; }
-        if (obsC) { obsC.textContent = 'कोई परिवर्तन नहीं (साफ)'; obsC.style.fill = '#a7f3d0'; }
-
-        if (st) st.innerHTML = '<span style="color:#b45309; font-size:16px;"><strong>दिवस 2 (24 घंटे पश्चात):</strong> परखनली A में कीलों की सतह पर हल्की लाल-भूरी जंग (Rust) दिखनी शुरू हुई। परखनली B व C में कीलें पूर्ववत पूर्णतः चमकदार व साफ हैं।</span>';
-      } else if (s === 3) {
-        if (pbar) pbar.style.width = '75%';
-        setSimSvg('s13_corkA', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkB', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkC', 'translate(0, 0)', 1);
-        if (rust) rust.style.opacity = '1';
-        if (sed) sed.style.opacity = '1';
-        setSimSvg('s13_resA', null, 1);
-        setSimSvg('s13_resB', null, 1);
-        setSimSvg('s13_resC', null, 1);
-
-        if (dayBox) dayBox.style.borderColor = '#ef4444';
-        if (dayText) { dayText.textContent = 'दिवस 3 (72 घंटे बाद)'; dayText.style.fill = '#f87171'; }
-        if (obsA) { obsA.textContent = '⚠️ गहरी लाल-भूरी पपड़ीदार जंग'; obsA.style.fill = '#f87171'; }
-        if (obsB) { obsB.textContent = '✓ पूर्णतः चमकदार (जंग मुक्त)'; obsB.style.fill = '#34d399'; }
-        if (obsC) { obsC.textContent = '✓ पूर्णतः चमकदार (जंग मुक्त)'; obsC.style.fill = '#34d399'; }
-
-        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:16px;"><strong>दिवस 3 (72 घंटे पश्चात अंतिम प्रेक्षण):</strong> केवल <strong>परखनली A</strong> में रखी कीलों पर गहरी लाल-भूरी पपड़ीदार जंग लगी और नीचे अवक्षेप जमा हुआ! <strong>परखनली B व C</strong> की कीलें बिल्कुल नई जैसी चमकदार रहीं।</span>';
-      } else if (s === 4) {
-        if (pbar) pbar.style.width = '100%';
-        setSimSvg('s13_corkA', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkB', 'translate(0, 0)', 1);
-        setSimSvg('s13_corkC', 'translate(0, 0)', 1);
-        if (rust) rust.style.opacity = '1';
-        if (sed) sed.style.opacity = '1';
-        setSimSvg('s13_resA', null, 1);
-        setSimSvg('s13_resB', null, 1);
-        setSimSvg('s13_resC', null, 1);
-
-        if (dayBox) dayBox.style.borderColor = '#8b5cf6';
-        if (dayText) { dayText.textContent = 'प्रायोगिक निष्कर्ष (NCERT Rule)'; dayText.style.fill = '#c084fc'; }
-
-        if (st) st.innerHTML = '<span style="color:#7c3aed; font-size:16px;"><strong>वैज्ञानिक निष्कर्ष (NCERT Law):</strong> लोहे में जंग (Fe₂O₃·xH₂O) लगने के लिए <strong>वायु (ऑक्सीजन) एवं जल (नमी) दोनों का एक साथ संपर्क में होना अनिवार्य</strong> है। केवल जल (B) या केवल शुष्क वायु (C) में जंग नहीं लगती।</span>';
-      }
-    }
-
-    function sim13PlayAuto() {
-      sim13Reset();
-      var btn = document.getElementById('sim13_play_btn'); if (btn) btn.disabled = true;
-      addSimTimer(13, setTimeout(function() { sim13Step(1); }, 400));
-      addSimTimer(13, setTimeout(function() { sim13Step(2); }, 3200));
-      addSimTimer(13, setTimeout(function() { sim13Step(3); }, 6800));
-      addSimTimer(13, setTimeout(function() {
-        sim13Step(4);
-        if (btn) btn.disabled = false;
-      }, 11500));
-    }
+    
   
 
   </script>
