@@ -169,54 +169,98 @@
       border: 2px solid #cbd5e1 !important;
     }
 
-    /* =========================================================================
-       SAFETY SHIELD: SIMULATORS, SVGs, AND TOOLBAR EXCLUSIONS
+        /* =========================================================================
+       ORIGINAL CLEAN SIMULATOR CARD & CONTROLS (RESTORED TO ORIGINAL)
        ========================================================================= */
-    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn, .sim-btn, .sim-btn-step, select, option {
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn {
       -webkit-text-stroke: 0px !important;
       text-shadow: none !important;
     }
 
-    .sim-card {
-      font-size: 18px !important;
-      line-height: 1.5 !important;
-      margin: 45px 0 !important;
-      border: 4px solid #3b82f6 !important;
-      box-shadow: 0 12px 30px rgba(30, 58, 138, 0.15) !important;
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
     }
 
-    .sim-card p, .sim-card li {
-      font-size: 18px !important;
-      line-height: 1.6 !important;
-      font-weight: 700 !important;
-      -webkit-text-stroke: 0px !important;
-    }
-
-    .sim-card h3, .sim-card .sim-title, .sim-card .sim-title span {
-      font-size: 24px !important;
+    .sim-title {
+      font-size: 22px !important;
       font-weight: 900 !important;
-      -webkit-text-stroke: 0px !important;
+      color: #0f172a !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px !important;
+      font-weight: 900 !important;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
     }
 
     .sim-card b, .sim-card strong {
-      font-size: 18px !important;
-      -webkit-text-stroke: 0px !important;
-      padding: 2px 8px !important;
-      background: #e0f2fe !important;
-      border-color: #7dd3fc !important;
-      color: #0369a1 !important;
-    }
-
-    .sim-card .sim-btn, .sim-card .sim-btn-step {
       font-size: 15px !important;
       font-weight: 800 !important;
-      letter-spacing: normal !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      color: #0f172a !important;
+    }
+
+    .sim-card .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px !important;
+      font-weight: 900 !important;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-card .sim-btn-step {
+      font-size: 13.5px !important;
+      font-weight: 800 !important;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      font-weight: 700 !important;
+    }
+
+    .sim-card select, .sim-card option {
+      font-size: 14px !important;
+      font-weight: 700 !important;
     }
 
     .top-toolbar, .top-toolbar * {
       font-size: 15px !important;
-      -webkit-text-stroke: 0px !important;
-      text-shadow: none !important;
       line-height: normal !important;
     }
 
@@ -6156,8 +6200,8 @@
     
     /* ==========================================================
        PROJECTOR DYNAMIC TYPOGRAPHY & TOOLBAR CONTROLS
-       Universal scaling affecting every text & formula across the document
-       Lighter, sharper default bold matching Class 10 SS (Hist5)
+       Notes & Formulas scale dynamically with A+/A- and B+/B-
+       Simulator text is preserved in original clean styling
        ========================================================== */
     var sizeOffset = 0;
     var weightOffset = 0;
@@ -6177,14 +6221,18 @@
       }
 
       elFs.innerHTML = `
-        /* Universal Font Size: affects ALL text, paragraphs, and formulas */
-        #mainDocContainer, #mainDocContainer *,
-        body, p, li, td, th, label, dt, dd, div, span, strong, b,
+        /* Universal Font Size: affects ALL notes text, paragraphs, and formulas */
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
         .concept-box, .fact-box, .warn-box, .reaction-box, .qa-answer, .ncert-card {
           font-size: ${b}pt !important;
         }
         body, p, li, td, th, .concept-box, .fact-box, .warn-box, .reaction-box {
           line-height: 2.0 !important;
+        }
+        /* Notes Bold Badges */
+        .concept-box b, .concept-card b, .warn-box b, .fact-box b, .reaction-box b, 
+        .point-tag-red, p b, li b, strong {
+          font-size: ${b}pt !important;
         }
         /* Formulas & Equation boxes: scale prominently with A+/A- */
         .formula-box, .formula-box *, .equation-card, .equation-card *,
@@ -6229,27 +6277,53 @@
         td {
           font-size: ${Math.max(16, b - 2)}pt !important;
         }
-        /* Simulator Text */
+
+        /* RESTORE SIMULATOR TEXT TO ORIGINAL CLEAN VALUES (DO NOT TOUCH SIM TEXT) */
         .sim-card {
-          font-size: ${Math.max(14, b - 8)}pt !important;
+          font-size: 15px !important;
+          line-height: 1.5 !important;
         }
-        .sim-card p, .sim-card li, .sim-card .sim-note, .sim-card .sim-status-banner {
-          font-size: ${Math.max(15, b - 7)}pt !important;
+        .sim-title, .sim-title span {
+          font-size: 22px !important;
+          font-weight: 900 !important;
+          color: #0f172a !important;
+        }
+        .sim-badge {
+          font-size: 14px !important;
+          font-weight: 900 !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+          font-size: 15px !important;
           line-height: 1.6 !important;
-        }
-        .sim-card h3, .sim-card .sim-title, .sim-card .sim-title span {
-          font-size: ${Math.max(18, b - 2)}pt !important;
+          font-weight: 600 !important;
+          color: #334155 !important;
         }
         .sim-card b, .sim-card strong {
-          font-size: ${Math.max(15, b - 7)}pt !important;
+          font-size: 15px !important;
+          font-weight: 800 !important;
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          color: #0f172a !important;
         }
-        .sim-card .sim-btn, .sim-card .sim-btn-step {
-          font-size: ${Math.max(13, b - 11)}pt !important;
+        .sim-card .sim-btn {
+          font-size: 14.5px !important;
+          font-weight: 900 !important;
+        }
+        .sim-card .sim-btn-step {
+          font-size: 13.5px !important;
+          font-weight: 800 !important;
         }
         .sim-card select, .sim-card option {
-          font-size: ${Math.max(14, b - 9)}pt !important;
+          font-size: 14px !important;
+          font-weight: 700 !important;
         }
-        /* Top toolbar stays fixed */
+        .sim-status-banner, [id$="_status"] {
+          font-size: 15px !important;
+          line-height: 1.5 !important;
+          font-weight: 700 !important;
+        }
+        /* Top toolbar stays fixed compact */
         .top-toolbar, .top-toolbar * {
           font-size: 15px !important;
           line-height: normal !important;
@@ -6264,21 +6338,28 @@
       }
 
       elFw.innerHTML = `
-        /* Universal Font Weight & Stroke - Clean, not over-bolded */
-        #mainDocContainer, #mainDocContainer *, 
+        /* Universal Font Weight & Stroke on notes text */
+        #mainDocContainer, 
         body, p, li, h1, h2, h3, h4, h5, h6, b, strong, td, th, div, span, label, dt, dd {
           font-weight: ${w} !important;
           -webkit-text-stroke: ${s}px #000000;
           text-shadow: 0 0 0.5px #000;
         }
-        /* Shield interactive controls, top toolbar, SVG diagrams */
-        .top-toolbar, .top-toolbar *, svg, svg *, .floating-home-btn {
+        /* Formulas bold styling */
+        .formula-box, .formula-box * {
+          font-weight: 900 !important;
+          -webkit-text-stroke: ${s}px #000000;
+        }
+        /* EXCLUDE SIMULATOR CARD, TOOLBAR, AND SVGs COMPLETELY FROM STROKE */
+        .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn {
           -webkit-text-stroke: 0px !important;
           text-shadow: none !important;
         }
-        .sim-card .sim-btn, .sim-card .sim-btn-step, .sim-card select, .sim-card option {
-          -webkit-text-stroke: 0px !important;
-          text-shadow: none !important;
+        .sim-card p, .sim-card li {
+          font-weight: 600 !important;
+        }
+        .sim-card b, .sim-card strong, .sim-card .sim-title, .sim-card .sim-btn {
+          font-weight: 900 !important;
         }
       `;
     }
