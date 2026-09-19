@@ -1462,6 +1462,14 @@
         W-
       </button>
 
+            <!-- Dedicated Simulator Text Size Controls -->
+      <button class="tool-btn" onclick="adjustSimFontSize(1)" style="background:#eff6ff; color:#1d4ed8; border-color:#93c5fd;" title="सिमुलेटर का टेक्स्ट बड़ा करें">
+        <i class="fas fa-flask"></i> सिम A+
+      </button>
+      <button class="tool-btn" onclick="adjustSimFontSize(-1)" style="background:#eff6ff; color:#1d4ed8; border-color:#93c5fd;" title="सिमुलेटर का टेक्स्ट छोटा करें">
+        सिम A-
+      </button>
+
       <!-- Simulator Line Thickness Controls -->
       <button class="tool-btn" onclick="adjustSimStroke(1)" title="सिमुलेटर रेखाएं मोटी करें">
         <i class="fas fa-pen-nib"></i> रेखा +
@@ -6369,6 +6377,7 @@
       if (sizeOffset < -14) sizeOffset = -14;
       if (sizeOffset > 30) sizeOffset = 30;
       applyDynamicTypography();
+      applySimTypography();
     }
 
     function adjustFontWeight(amount) {
@@ -6379,6 +6388,7 @@
       if (strokeOffset < -0.55) strokeOffset = -0.55;
       if (strokeOffset > 1.2) strokeOffset = 1.2;
       applyDynamicTypography();
+      applySimTypography();
     }
 
     function adjustWidth(delta) {
@@ -6392,6 +6402,78 @@
 
     function adjustContentWidth(delta) {
       adjustWidth(delta);
+    }
+
+        /* ==========================================================
+       DEDICATED SIMULATOR TYPOGRAPHY & CONTROLS
+       Controls ONLY Simulator Cards (Projector-Friendly 19px / 26px)
+       ========================================================== */
+    var simTextOffset = 0;
+
+    function applySimTypography() {
+      var baseDesc = 19 + simTextOffset;
+      var baseTitle = 26 + simTextOffset;
+      var baseBanner = 18 + simTextOffset;
+      var baseBtn = 15.5 + (simTextOffset > 0 ? Math.round(simTextOffset * 0.5) : simTextOffset * 0.5);
+
+      var elSim = document.getElementById('dyn-sim-fs');
+      if (!elSim) {
+        elSim = document.createElement('style');
+        elSim.id = 'dyn-sim-fs';
+        document.head.appendChild(elSim);
+      }
+
+      elSim.innerHTML = `
+        /* Projector Friendly Simulator Typography */
+        .sim-card {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.65 !important;
+        }
+        .sim-title, .sim-title span {
+          font-size: ${baseTitle}px !important;
+          font-weight: 900 !important;
+          color: #0f172a !important;
+        }
+        .sim-badge {
+          font-size: ${Math.max(13, baseDesc - 3)}px !important;
+          font-weight: 800 !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.7 !important;
+          font-weight: 700 !important;
+          color: #1e293b !important;
+        }
+        .sim-card b, .sim-card strong {
+          font-size: ${baseDesc}px !important;
+          font-weight: 900 !important;
+          color: #1e40af !important;
+        }
+        .sim-status-banner, [id$="_status"] {
+          font-size: ${baseBanner}px !important;
+          line-height: 1.6 !important;
+          font-weight: 800 !important;
+        }
+        .sim-card .sim-btn {
+          font-size: ${baseBtn}px !important;
+          font-weight: 900 !important;
+        }
+        .sim-card .sim-btn-step {
+          font-size: ${Math.max(13, baseBtn - 1)}px !important;
+          font-weight: 800 !important;
+        }
+        .sim-card select, .sim-card option {
+          font-size: ${baseDesc}px !important;
+          font-weight: 700 !important;
+        }
+      `;
+    }
+
+    function adjustSimFontSize(amount) {
+      simTextOffset += amount;
+      if (simTextOffset < -6) simTextOffset = -6;
+      if (simTextOffset > 12) simTextOffset = 12;
+      applySimTypography();
     }
 
     function adjustSimStroke(delta) {
@@ -6417,9 +6499,10 @@
 
     // Initialize Universal Projector Typography immediately on load
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+      document.addEventListener('DOMContentLoaded', function() { applyDynamicTypography(); applySimTypography(); });
     } else {
       applyDynamicTypography();
+      applySimTypography();
     }
 
     // Timer tracking to avoid overlapping animations
