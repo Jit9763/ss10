@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान अध्याय 8: अध्याय 8: आनुवंशिकता (संपूर्ण डिजिटल नोट्स व 3D सिमुलेटर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    /* =========================================================================
+       CLASS 10 SOCIAL SCIENCE MASTER PROJECTOR DESIGN SYSTEM (MATCHING CIV/GEO)
+       ========================================================================= */
+    body, p, li, td, th {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+    }
+
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span {
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000;
+      text-shadow: 0 0 0.5px #000;
+    }
+
+    /* Outer layout container */
+    .doc-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      font-family: 'Nirmala UI', 'Outfit', 'Segoe UI', -apple-system, sans-serif;
+    }
+
+    /* Chapter Title / Hero Matching SS10 Master */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px !important;
+      margin-bottom: 50px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.5) !important;
+    }
+
+    .chapter-tag {
+      display: inline-block !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+      font-size: 22pt !important;
+      font-weight: 900 !important;
+      padding: 6px 20px !important;
+      border-radius: 20px !important;
+      margin-bottom: 15px !important;
+      border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .chapter-title {
+      font-size: 48pt !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .chapter-subtitle {
+      color: #93c5fd !important;
+      font-size: 28pt !important;
+      font-weight: 800 !important;
+      display: block;
+      margin-top: 15px;
+      line-height: 1.5 !important;
+    }
+
+    /* Part / Section Headers Matching SS10 Master */
+    .section-heading, h2.section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 24px 30px !important;
+      border-radius: 16px !important;
+      font-size: 40pt !important;
+      font-weight: 900 !important;
+      margin-top: 55px !important;
+      margin-bottom: 35px !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
+      line-height: 1.4 !important;
+    }
+
+    /* Sub-Headers Matching SS10 Master */
+    .sub-header-red, h3.subsection-heading {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 18px 26px !important;
+      border-radius: 14px !important;
+      font-size: 32pt !important;
+      font-weight: 900 !important;
+      margin-top: 35px !important;
+      margin-bottom: 22px !important;
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.15) !important;
+      line-height: 1.4 !important;
+    }
+
+    .topic-header {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 34pt !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 30px !important;
+    }
+
+    /* Concept & Fact Boxes */
+    .concept-box, .fact-box, .warn-box, .reaction-box {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      padding: 26px 32px !important;
+      border-radius: 18px !important;
+      margin: 30px 0 !important;
+    }
+
+    /* Bolds in notes matching SS10 red badge style */
+    .concept-box b, .concept-card b, .warn-box b, .fact-box b, .point-tag-red, p b, li b, .reaction-box b, strong {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 2px solid #fca5a5 !important;
+      padding: 4px 12px !important;
+      border-radius: 10px !important;
+      display: inline-block !important;
+      margin-right: 6px !important;
+      margin-top: 3px !important;
+      margin-bottom: 3px !important;
+      font-size: 26pt !important;
+    }
+
+    /* Tables */
+    table, .data-table {
+      font-size: 24pt !important;
+      line-height: 1.8 !important;
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin: 30px 0 !important;
+    }
+    th {
+      background: #1e3a8a !important;
+      color: #ffffff !important;
+      font-size: 26pt !important;
+      padding: 16px !important;
+    }
+    td {
+      font-size: 24pt !important;
+      padding: 14px !important;
+      border: 2px solid #cbd5e1 !important;
+    }
+
+        /* =========================================================================
+       ORIGINAL CLEAN SIMULATOR CARD & CONTROLS (RESTORED TO ORIGINAL)
+       ========================================================================= */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn {
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px !important;
+      font-weight: 900 !important;
+      color: #0f172a !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px !important;
+      font-weight: 900 !important;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+    }
+
+    .sim-card b, .sim-card strong {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      color: #0f172a !important;
+    }
+
+    .sim-card .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px !important;
+      font-weight: 900 !important;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-card .sim-btn-step {
+      font-size: 13.5px !important;
+      font-weight: 800 !important;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      font-weight: 700 !important;
+    }
+
+    .sim-card select, .sim-card option {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+    }
+
+    .top-toolbar, .top-toolbar * {
+      font-size: 15px !important;
+      line-height: normal !important;
+    }
+
+.top-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 3px solid #cbd5e1;
+      padding: 12px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      width: 100%;
+    }
+
+    .toolbar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .portal-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 10px;
+      background: #f0fdf4;
+      color: #166534;
+      border: 2px solid #86efac;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .portal-nav-btn:hover {
+      background: #dcfce7;
+      border-color: #22c55e;
+      transform: translateY(-1px);
+    }
+
+    .tool-btn {
+      padding: 7px 13px;
+      font-size: 15px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .tool-btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .tool-btn.primary {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #1d4ed8;
+    }
+
+    /* Main Container - Exactly 1400px Matching Toolbar */
+    .doc-container {
+      max-width: 1400px;
+      width: calc(100% - 50px);
+      margin: 25px auto;
+      background: #ffffff;
+      padding: 45px 50px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      border: 3px solid #cbd5e1;
+      transition: max-width 0.3s;
+    }
+
+    /* Class 10 SS Hero Title */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px 30px !important;
+      margin-bottom: 45px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4) !important;
+    }
+
+    .chapter-hero h1 {
+      font-size: 40px !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 0 0 12px 0 !important;
+    }
+
+    .chapter-hero p {
+      color: #bfdbfe !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      margin: 0 !important;
+    }
+
+    /* Section Headings (Part Header Blue) */
+    .section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 28px !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 25px !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12) !important;
+    }
+
+    /* Sub-Headings (Red Sub Header) */
+    .sub-heading-red, h3.topic-sub {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.1) !important;
+    }
+
+    /* Topic Headings (Green Topic Header) */
+    .topic-heading-green {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+    }
+
+    /* Highlight Tags & Keywords (Like Class 10 SS Red Pills) */
+    .point-tag-red, .concept-box b, .concept-card b, .reaction-box b, p b, li b {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 1.5px solid #fca5a5 !important;
+      padding: 2px 10px !important;
+      border-radius: 8px !important;
+      display: inline-block !important;
+      font-weight: 900 !important;
+    }
+
+    /* Concept & Fact Cards */
+    .concept-box, .concept-card {
+      background: #eff6ff !important;
+      border: 3px solid #93c5fd !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
+    }
+
+    .fact-box {
+      background: #fefce8 !important;
+      border: 3px solid #fde047 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    .warn-box {
+      background: #fef2f2 !important;
+      border: 3px solid #fca5a5 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    /* Simulator Card Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* Simulator 16:9 Projector Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Controls Grid */
+    .sim-controls-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .sim-btn.secondary { background: #0284c7; }
+    .sim-btn.warning { background: #d97706; }
+    .sim-btn.danger { background: #dc2626; }
+    .sim-btn.success { background: #059669; }
+
+    /* Progress bar */
+    .sim-progress-wrap {
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #10b981);
+      transition: width 0.4s ease;
+    }
+
+    /* Floating ONLY Home button */
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);
+    }
+
+    /* Typography & Hierarchy */
+    /* Projector Title Banner matching Class 10 SS Hero */
+    .chapter-hero {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      border: 5px solid #3b82f6;
+      border-radius: 24px;
+      padding: 38px 25px;
+      margin-bottom: 45px;
+      box-shadow: 0 12px 35px rgba(30, 58, 138, 0.45);
+    }
+
+    .chapter-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 6px 20px;
+      border-radius: 999px;
+      border: 2px solid #93c5fd;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    h1.chapter-title {
+      font-size: 38px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+
+    .chapter-subtitle {
+      font-size: 20px;
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    /* Section Headings matching Class 10 SS Part Headers */
+    h2.section-heading {
+      color: #1e3a8a;
+      background-color: #dbeafe;
+      border-left: 16px solid #2563eb;
+      padding: 18px 25px;
+      border-radius: 14px;
+      font-size: 27px;
+      font-weight: 900;
+      margin-top: 45px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3.subsection-heading {
+      color: #065f46;
+      background-color: #d1fae5;
+      border-left: 14px solid #059669;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 23px;
+      font-weight: 900;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+    }
+
+    /* Notes Concept Box */
+    .concept-box {
+      background: #f8fafc;
+      border: 3px solid #cbd5e1;
+      border-left: 12px solid #2563eb;
+      border-radius: 16px;
+      padding: 26px;
+      margin: 30px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      font-size: 20px;
+      line-height: 1.9;
+    }
+    
+    .concept-box b, .concept-box strong, p b, p strong, li b, li strong {
+      color: #991b1b;
+      background-color: #fee2e2;
+      border: 1.5px solid #fca5a5;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+      font-size: 0.98em;
+    }
+
+    .concept-box.amber {
+      border-left-color: var(--accent);
+    }
+
+    .concept-box.green {
+      border-left-color: var(--secondary);
+    }
+
+    .concept-box.rose {
+      border-left-color: #f43f5e;
+    }
+
+    .concept-box.purple {
+      border-left-color: #8b5cf6;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Reaction Equations Display Card */
+    .reaction-pill {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Simulators Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 2px solid #94a3b8;
+      border-radius: 14px;
+      padding: 22px;
+      margin: 28px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sim-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+    }
+
+    .sim-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .control-group {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sim-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .sim-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .sim-btn.secondary {
+      background: #475569;
+    }
+    .sim-btn.secondary:hover {
+      background: #334155;
+    }
+
+    .sim-btn.danger {
+      background: var(--danger);
+    }
+    .sim-btn.danger:hover {
+      background: #dc2626;
+    }
+
+    .sim-btn.success {
+      background: var(--secondary);
+    }
+    .sim-btn.success:hover {
+      background: #047857;
+    }
+
+        /* Projector 16:9 Widescreen Simulator Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-btn {
+      font-size: 15px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 16px !important;
+      font-weight: 800 !important;
+      line-height: 1.7 !important;
+      padding: 15px 20px !important;
+      border-radius: 10px !important;
+      border-left-width: 8px !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .sim-output-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Question & Answer Box */
+    .qa-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .q-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .q-num-badge {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ans-content {
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .ans-content strong {
+      color: #0f172a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .doc-container {
+        padding: 20px 14px;
+        margin: 10px;
+      }
+      h1.chapter-title {
+        font-size: 24px;
+      }
+      .reaction-pill {
+        font-size: 14px;
+      }
+    }
+  
+
+/* Premium 3D Laboratory Simulation Styles & Smooth Animations */
+
+/* Glassware 3D specular shine & lighting */
+.lab-glass {
+  stroke: #0284c7;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* Fluid keyframe animations */
+@keyframes flameFlicker {
+  0% { transform: scale(1) translateY(0); opacity: 0.92; }
+  50% { transform: scale(1.04, 0.96) translateY(-1px); opacity: 1; }
+  100% { transform: scale(0.98, 1.02) translateY(0); opacity: 0.94; }
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-45px) scale(1.4); opacity: 0; }
+}
+
+@keyframes smokeRise {
+  0% { transform: translateY(0) scale(0.7); opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-55px) scale(1.6); opacity: 0; }
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50% { transform: translateY(-25px) translateX(3px); opacity: 0.9; }
+  100% { transform: translateY(-50px) translateX(-2px); opacity: 0; }
+}
+
+@keyframes precipitateFall {
+  0% { transform: translateY(0); opacity: 0.4; }
+  100% { transform: translateY(60px); opacity: 0.9; }
+}
+
+@keyframes wirePulse {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes scalePointerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.anim-flame {
+  transform-origin: center bottom;
+  animation: flameFlicker 0.45s ease-in-out infinite alternate;
+}
+
+.anim-steam {
+  animation: steamRise 2s ease-out infinite;
+}
+
+.anim-bubble {
+  animation: bubbleFloat 1.8s ease-in-out infinite;
+}
+
+/* Compact, Screen-Fit Simulator Card & Stage */
+.sim-card {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 22px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sim-card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sim-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+
+.sim-stage svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+.sim-controls-grid {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.sim-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.18);
+}
+
+.sim-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+.sim-btn.secondary {
+  background: #475569;
+  box-shadow: 0 2px 4px rgba(71, 85, 105, 0.18);
+}
+.sim-btn.secondary:hover {
+  background: #334155;
+}
+
+.sim-btn.success {
+  background: #059669;
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.18);
+}
+.sim-btn.success:hover {
+  background: #047857;
+}
+
+.sim-btn.warning {
+  background: #d97706;
+  box-shadow: 0 2px 4px rgba(217, 119, 6, 0.18);
+}
+.sim-btn.warning:hover {
+  background: #b45309;
+}
+
+.sim-btn.danger {
+  background: #dc2626;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.18);
+}
+.sim-btn.danger:hover {
+  background: #b91c1c;
+}
+
+.sim-status-banner {
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1e293b;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.sim-output-box {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* Static SVGs Container-fit */
+.diagram-container svg, .qa-box svg {
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 250px !important;
+}
+
+
+    /* REALISTIC LIQUID STREAM & RIPPLE ANIMATIONS */
+    @keyframes liquidFlowAnim {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .liquid-flow-stream {
+      animation: liquidFlowAnim 0.6s linear infinite;
+    }
+    @keyframes rippleExpandAnim {
+      0% { r: 2; rx: 3; ry: 1; opacity: 1; }
+      100% { r: 18; rx: 20; ry: 6; opacity: 0; }
+    }
+    .splash-ripple-wave {
+      animation: rippleExpandAnim 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+      transform-origin: center;
+    }
+    .sim-status-banner, #sim4_status, [id$="_status"] {
+      display: block !important;
+      line-height: 1.6 !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+
+  
+    /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
+    @keyframes s4SteamBillow {
+      0% { transform: translateY(0px) scale(0.95); opacity: 0.92; }
+      50% { transform: translateY(-20px) scale(1.04); opacity: 1.0; }
+      100% { transform: translateY(-38px) scale(1.08); opacity: 0.88; }
+    }
+    #s4_steam_plumes {
+      display: none;
+    }
+    #s4_steam_plumes.active {
+      display: block !important;
+      animation: s4SteamBillow 2s infinite ease-in-out !important;
+      transform-origin: 330px 150px;
+    }
+
+    @keyframes s5FumesWaft {
+      0% { transform: translateY(0px) translateX(0px) scale(0.85); opacity: 0.2; }
+      50% { transform: translateY(-35px) translateX(15px) scale(1.1); opacity: 0.8; }
+      100% { transform: translateY(-70px) translateX(30px) scale(1.3); opacity: 0; }
+    }
+    .s5-fumes-loop {
+      animation: s5FumesWaft 2.5s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s6No2Billow {
+      0% { transform: translateY(0px) translateX(0px) scale(0.8); opacity: 0.25; }
+      50% { transform: translateY(-40px) translateX(12px) scale(1.15); opacity: 0.85; }
+      100% { transform: translateY(-80px) translateX(25px) scale(1.35); opacity: 0.1; }
+    }
+    .s6-no2-loop {
+      animation: s6No2Billow 2.6s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s7H2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-h2-loop {
+      animation: s7H2Rise 1.4s infinite linear !important;
+    }
+
+    @keyframes s7O2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-o2-loop {
+      animation: s7O2Rise 2.1s infinite linear !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="qa_master_sci8.html" class="portal-nav-btn" style="background:#0284c7; color:#ffffff; border-color:#0284c7; white-space: nowrap;" title="अभ्यास प्रश्नोत्तर"><i class="fas fa-question-circle"></i> ❓ प्रश्नोत्तर हल ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)" title="अक्षर बड़ा करें">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)" title="अक्षर छोटा करें">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)" title="मोटा करें">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)" title="पतला करें">B-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">पेज चौड़ाई:</span>
+          <button class="tool-btn" onclick="adjustWidth(100)" title="पेज चौड़ा करें">W+</button>
+          <button class="tool-btn" onclick="adjustWidth(-100)" title="पेज संकरा करें">W-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">🧪 सिमुलेटर:</span>
+          <button class="tool-btn" onclick="adjustSimFontSize(1)" title="सिमुलेटर टेक्स्ट बड़ा">सिम A+</button>
+          <button class="tool-btn" onclick="adjustSimFontSize(-1)" title="सिमुलेटर टेक्स्ट छोटा">सिम A-</button>
+          <button class="tool-btn" onclick="adjustSimStroke(0.5)" title="रेखा मोटी करें">रेखा +</button>
+          <button class="tool-btn" onclick="adjustSimStroke(-0.5)" title="रेखा पतली करें">रेखा -</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()" title="प्रिंट या PDF सेव करें"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="chapter-header-card">
+      <div class="chapter-badge">NCERT कक्षा 10 विज्ञान (Science) • अध्याय 8</div>
+      <h1 class="chapter-main-title">अध्याय 8: आनुवंशिकता</h1>
+      <p class="chapter-sub-title">Heredity • मेंडल के नियम, एकसंकर व द्विसंकर संकरण, पन्नेट्ट वर्ग एवं मानव में लिंग निर्धारण</p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-microscope"></i> 3D इंटरैक्टिव लैब सिमुलेटर</span>
+        <span class="highlight-chip"><i class="fas fa-book-open"></i> NCERT संपूर्ण पाठ्यक्रम नोट्स</span>
+        <span class="highlight-chip"><i class="fas fa-project-diagram"></i> उच्च कंट्रास्ट आरेख व फ्लोचार्ट</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा अभ्यास व समाधान</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: आनुवंशिकता एवं मेंडल का एकसंकर संकरण -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">1. आनुवंशिकता, विभिन्नता एवं मेंडल का एकसंकर संकरण</h2>
+      </div>
+
+      <div class="ncert-card">
+        <p class="section-desc">
+          माता-पिता (जनकों) से शारीरिक एवं जैविक लक्षणों का संततियों में स्थानांतरण <b>आनुवंशिकता (Heredity)</b> कहलाता है।
+          <br>ग्रेगर जोहान मेंडल (Gregor Johann Mendel) को <b>'आनुवंशिकी का जनक' (Father of Genetics)</b> कहा जाता है। उन्होंने अपने ऐतिहासिक प्रयोग <b>उद्यान मटर (Pisum sativum)</b> पर किए थे।
+        </p>
+
+        <h3 class="subsection-heading"><i class="fas fa-seedling"></i> मेंडल द्वारा मटर के पौधे के चयन के कारण:</h3>
+        <ul class="concept-list">
+          <li>1. मटर का जीवन चक्र छोटा होता है, जिससे कम समय में कई पीढ़ियों का अध्ययन संभव था।</li>
+          <li>2. इसमें स्पष्ट विपर्यासी (परस्पर विरोधी) लक्षण उपस्थित थे (उदा. लंबा/बौना पौधा, गोल/झुर्रीदार बीज, पीले/हरे बीज)।</li>
+          <li>3. यह सामान्यतः स्व-परागित होता है, परंतु कृत्रिम रूप से पर-परागण सरलता से कराया जा सकता था।</li>
+        </ul>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-sitemap"></i> एकसंकर संकरण (Monohybrid Cross):</h3>
+        <p class="concept-desc">
+          जब केवल एक लक्षण (जैसे पौधे की लंबाई: लंबा TT × बौना tt) को लेकर संकरण कराया जाता है:
+        </p>
+        <div class="reaction-box">
+          • <b>जनक (P पीढ़ी):</b> शुद्ध लंबा (TT) × शुद्ध बौना (tt)
+          <br>• <b>प्रथम संतति पीढ़ी (F1):</b> सभी पौधे <b>लंबे संकर (Tt)</b> प्राप्त हुए (बौनापन छिपा रहा)।
+          <br>• <b>F1 का स्व-परागण:</b> Tt × Tt
+          <br>• <b>द्वितीय संतति पीढ़ी (F2):</b>
+          <br>&nbsp;&nbsp;➔ <b>लक्षणप्ररूपी अनुपात (Phenotypic Ratio):</b> <b>3 लंबा : 1 बौना (3 : 1)</b>
+          <br>&nbsp;&nbsp;➔ <b>जीनप्ररूपी अनुपात (Genotypic Ratio):</b> <b>1 TT : 2 Tt : 1 tt (1 : 2 : 1)</b>
+        </div>
+        <p style="margin-top:10px; font-weight:800; color:#0f172a;">
+          <b>निष्कर्ष (प्रभाविता का नियम):</b> जो लक्षण F1 पीढ़ी में दिखाई देता है उसे <b>प्रभावी लक्षण (Dominant trait - लंबा 'T')</b> कहते हैं तथा जो लक्षण छिप जाता है उसे <b>अप्रभावी लक्षण (Recessive trait - बौना 't')</b> कहते हैं।
+        </p>
+      </div>
+    </section>
+
+    <!-- SIMULATOR 8.1: मेंडल का एकसंकर संकरण एवं पन्नेट्ट वर्ग -->
+    <div class="sim-card" id="sim8_1">
+      <div class="sim-header">
+        <span class="sim-badge">प्रायोगिक 3D सिमुलेटर 8.1</span>
+        <h3 class="sim-title"><i class="fas fa-table-cells"></i> मेंडल का एकसंकर संकरण एवं पन्नेट्ट वर्ग (Punnett Square Lab)</h3>
+        <p class="sim-desc">
+          देखें कि कैसे शुद्ध लंबा (TT) और शुद्ध बौना (tt) मिलकर F1 में 100% लंबे संकर (Tt) बनते हैं और F2 में 3:1 लक्षणप्ररूप तथा 1:2:1 जीनप्ररूप प्रकट होता है।
+        </p>
+      </div>
+
+      <div class="sim-controls">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="sim-btn" onclick="runMendelStep(1)">चरण 1: P पीढ़ी (TT × tt संकरण)</button>
+          <button class="sim-btn" onclick="runMendelStep(2)">चरण 2: F1 पीढ़ी (सभी संकर लंबे Tt)</button>
+          <button class="sim-btn" onclick="runMendelStep(3)">चरण 3: F2 पन्नेट्ट वर्ग (3:1 एवं 1:2:1)</button>
+          <button class="sim-btn" style="background:#64748b;" onclick="resetMendel()">🔄 रीसेट</button>
+        </div>
+      </div>
+
+      <div class="sim-stage-wrapper">
+        <div class="sim-stage" style="background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%); border: 3px solid #16a34a;">
+          <svg id="svg_sim81" viewBox="0 0 1000 500" width="100%" height="100%">
+            <g id="mendel_canvas"></g>
+          </svg>
+        </div>
+
+        <div class="sim-status-banner" id="sim81_status" style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:15px; margin-top:15px; color:#0f172a;">
+          <i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> 'चरण 1' से 'चरण 3' तक क्रमवार क्लिक करके एकसंकर संकरण का पन्नेट्ट वर्ग देखें।
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: द्विसंकर संकरण एवं लिंग निर्धारण -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">2. द्विसंकर संकरण एवं मानव में लिंग निर्धारण</h2>
+      </div>
+
+      <div class="ncert-card">
+        <h3 class="subsection-heading"><i class="fas fa-shuffle"></i> (A) द्विसंकर संकरण (Dihybrid Cross):</h3>
+        <p class="concept-desc">
+          दो विपर्यासी लक्षणों (बीज का आकार एवं रंग: <b>गोल-पीला RRYY</b> × <b>झुर्रीदार-हरा rryy</b>) को लेकर कराया गया संकरण:
+          <br>• F1 पीढ़ी में सभी पौधे <b>गोल-पीले (RrYy)</b> प्राप्त होते हैं।
+          <br>• F2 पीढ़ी का लक्षणप्ररूपी अनुपात: <b>9 : 3 : 3 : 1</b>
+          <br>&nbsp;&nbsp;• 9 गोल-पीले (Round-Yellow)
+          <br>&nbsp;&nbsp;• 3 गोल-हरे (Round-Green)
+          <br>&nbsp;&nbsp;• 3 झुर्रीदार-पीले (Wrinkled-Yellow)
+          <br>&nbsp;&nbsp;• 1 झुर्रीदार-हरा (Wrinkled-Green)
+          <br><b>निष्कर्ष (स्वतंत्र अपव्यूहन का नियम):</b> दोनों लक्षणों के जीन एक-दूसरे से स्वतंत्र होकर संतति में वंशागत होते हैं।
+        </p>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-dna"></i> (B) मानव में लिंग निर्धारण (Sex Determination in Humans):</h3>
+        <ul class="concept-list" style="line-height:2.1;">
+          <li>• मनुष्य की प्रत्येक कोशिका में <b>23 जोड़े गुणसूत्र (कुल 46)</b> होते हैं।
+            <br>• इनमें से 22 जोड़े गुणसूत्र पुरुष एवं स्त्री में समान होते हैं, जिन्हें <b>अलिंगी गुणसूत्र (Autosomes)</b> कहते हैं।
+            <br>• <b>23वां जोड़ा लिंग गुणसूत्र (Sex Chromosomes)</b> कहलाता है:
+            <br>&nbsp;&nbsp;• स्त्री में: दो समान लिंग गुणसूत्र <b>XX</b> होते हैं (समयुग्मजी - सभी अंडाणु केवल 'X' वहन करते हैं)।
+            <br>&nbsp;&nbsp;• पुरुष में: एक सामान्य X तथा एक छोटा Y अर्थात <b>XY</b> होता है (विषमयुग्मजी - 50% शुक्राणु 'X' तथा 50% 'Y' वहन करते हैं)।
+          </li>
+          <li>• <b>लिंग निर्धारण की क्रियाविधि:</b>
+            <br>• यदि X-युक्त शुक्राणु अंडाणु (X) को निषेचित करता है, तो युग्मनज <b>XX (लड़की)</b> बनता है।
+            <br>• यदि Y-युक्त शुक्राणु अंडाणु (X) को निषेचित करता है, तो युग्मनज <b>XY (लड़का)</b> बनता है।
+            <br><b>महत्वपूर्ण वैज्ञानिक तथ्य:</b> बच्चे का लिंग <b>पूर्णतः पिता के शुक्राणु द्वारा</b> निर्धारित होता है। अतः लड़की के जन्म के लिए माता को उत्तरदायी ठहराना वैज्ञानिक रूप से सर्वथा अनुचित एवं निराधार है!
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SIMULATOR 8.2: मानव लिंग निर्धारण पन्नेट्ट सिमुलेटर -->
+    <div class="sim-card" id="sim8_2">
+      <div class="sim-header">
+        <span class="sim-badge">प्रायोगिक 3D सिमुलेटर 8.2</span>
+        <h3 class="sim-title"><i class="fas fa-child"></i> मानव में लिंग निर्धारण (Sex Determination Lab)</h3>
+        <p class="sim-desc">
+          माता (XX) एवं पिता (XY) के युग्मकों के संलयन का 50% लड़का (XY) व 50% लड़की (XX) अनुपात पन्नेट्ट वर्ग द्वारा जीवंत देखें।
+        </p>
+      </div>
+
+      <div class="sim-controls">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="sim-btn" onclick="runSexSim('X')">🧬 X-शुक्राणु द्वारा निषेचन (पुत्री XX)</button>
+          <button class="sim-btn" onclick="runSexSim('Y')">🧬 Y-शुक्राणु द्वारा निषेचन (पुत्र XY)</button>
+          <button class="sim-btn" style="background:#64748b;" onclick="resetSexSim()">🔄 रीसेट</button>
+        </div>
+      </div>
+
+      <div class="sim-stage-wrapper">
+        <div class="sim-stage" style="background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%); border: 3px solid #16a34a;">
+          <svg id="svg_sim82" viewBox="0 0 1000 500" width="100%" height="100%">
+            <!-- Parents Box -->
+            <rect x="250" y="40" width="200" height="90" rx="14" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+            <text x="350" y="75" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#9d174d" text-anchor="middle">माता (Female)</text>
+            <text x="350" y="110" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#be185d" text-anchor="middle">XX</text>
+
+            <rect x="550" y="40" width="200" height="90" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+            <text x="650" y="75" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#1e40af" text-anchor="middle">पिता (Male)</text>
+            <text x="650" y="110" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#1d4ed8" text-anchor="middle">XY</text>
+
+            <!-- Punnett Box Center -->
+            <rect x="300" y="180" width="400" height="240" rx="15" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+            <line x1="300" y1="300" x2="700" y2="300" stroke="#0f172a" stroke-width="3"/>
+            <line x1="500" y1="180" x2="500" y2="420" stroke="#0f172a" stroke-width="3"/>
+
+            <!-- Cells -->
+            <g id="box_xx1">
+              <rect x="305" y="185" width="190" height="110" fill="#fce7f3" fill-opacity="0.4"/>
+              <text x="400" y="240" font-family="'Outfit', sans-serif" font-size="26" font-weight="900" fill="#db2777" text-anchor="middle">XX</text>
+              <text x="400" y="270" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#9d174d" text-anchor="middle">पुत्री (Girl - 25%)</text>
+            </g>
+
+            <g id="box_xy1">
+              <rect x="505" y="185" width="190" height="110" fill="#dbeafe" fill-opacity="0.4"/>
+              <text x="600" y="240" font-family="'Outfit', sans-serif" font-size="26" font-weight="900" fill="#2563eb" text-anchor="middle">XY</text>
+              <text x="600" y="270" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#1e40af" text-anchor="middle">पुत्र (Boy - 25%)</text>
+            </g>
+
+            <g id="box_xx2">
+              <rect x="305" y="305" width="190" height="110" fill="#fce7f3" fill-opacity="0.4"/>
+              <text x="400" y="360" font-family="'Outfit', sans-serif" font-size="26" font-weight="900" fill="#db2777" text-anchor="middle">XX</text>
+              <text x="400" y="390" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#9d174d" text-anchor="middle">पुत्री (Girl - 25%)</text>
+            </g>
+
+            <g id="box_xy2">
+              <rect x="505" y="305" width="190" height="110" fill="#dbeafe" fill-opacity="0.4"/>
+              <text x="600" y="360" font-family="'Outfit', sans-serif" font-size="26" font-weight="900" fill="#2563eb" text-anchor="middle">XY</text>
+              <text x="600" y="390" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#1e40af" text-anchor="middle">पुत्र (Boy - 25%)</text>
+            </g>
+
+            <text x="500" y="460" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#0f172a" text-anchor="middle">कुल संभावना: 50% लड़का (XY) : 50% लड़की (XX)</text>
+          </svg>
+        </div>
+
+        <div class="sim-status-banner" id="sim82_status" style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:15px; margin-top:15px; color:#0f172a;">
+          <i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> X अथवा Y शुक्राणु का चयन करके लिंग निर्धारण प्रक्रिया का सचित्र परिणाम देखें।
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+    var currentContainerWidth = 1400;
+
+    function applyDynamicTypography() {
+      var b = 26 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .concept-box, .fact-box, .warn-box, .reaction-box, .qa-answer, .ncert-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -10) sizeOffset = -10;
+      if (sizeOffset > 18) sizeOffset = 18;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    function adjustWidth(amount) {
+      currentContainerWidth += amount;
+      if (currentContainerWidth < 900) currentContainerWidth = 900;
+      if (currentContainerWidth > 2200) currentContainerWidth = 2200;
+      var el = document.getElementById('mainDocContainer');
+      if (el) el.style.maxWidth = currentContainerWidth + 'px';
+    }
+
+    var simTextOffset = 0;
+    function applySimTypography() {
+      var baseDesc = 19 + simTextOffset;
+      var baseTitle = 26 + simTextOffset;
+      var baseBanner = 18 + simTextOffset;
+      var baseBtn = 15.5 + (simTextOffset > 0 ? Math.round(simTextOffset * 0.5) : simTextOffset * 0.5);
+
+      var elSim = document.getElementById('dyn-sim-fs');
+      if (!elSim) {
+        elSim = document.createElement('style');
+        elSim.id = 'dyn-sim-fs';
+        document.head.appendChild(elSim);
+      }
+
+      elSim.innerHTML = `
+        .sim-card {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.65 !important;
+        }
+        .sim-title, .sim-title span {
+          font-size: ${baseTitle}px !important;
+          font-weight: 900 !important;
+          color: #0f172a !important;
+        }
+        .sim-badge {
+          font-size: ${Math.max(13, baseDesc - 3)}px !important;
+          font-weight: 800 !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-desc {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.7 !important;
+          font-weight: 700 !important;
+          color: #1e293b !important;
+        }
+        .sim-status-banner, [id$="_status"] {
+          font-size: ${baseBanner}px !important;
+          line-height: 1.6 !important;
+          font-weight: 800 !important;
+        }
+        .sim-card .sim-btn {
+          font-size: ${baseBtn}px !important;
+          font-weight: 900 !important;
+        }
+      `;
+    }
+
+    function adjustSimFontSize(amount) {
+      simTextOffset += amount;
+      if (simTextOffset < -6) simTextOffset = -6;
+      if (simTextOffset > 12) simTextOffset = 12;
+      applySimTypography();
+    }
+
+    function adjustSimStroke(delta) {
+      var svgs = document.querySelectorAll('.sim-stage svg');
+      svgs.forEach(function(svg) {
+        var lines = svg.querySelectorAll('path, line, rect, circle, ellipse, polygon');
+        lines.forEach(function(el) {
+          var sw = parseFloat(el.getAttribute('stroke-width'));
+          if (!isNaN(sw) && sw > 0) {
+            var nsw = Math.max(0.8, +(sw + delta * 0.35).toFixed(2));
+            el.setAttribute('stroke-width', nsw);
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      applyDynamicTypography();
+      applySimTypography();
+    });
+
+
+    /* --- SIM 8.1: Mendel Monohybrid --- */
+    function runMendelStep(step) {
+      var c = document.getElementById('mendel_canvas');
+      var s = document.getElementById('sim81_status');
+
+      if (step === 1) {
+        c.innerHTML = `
+          <rect x="250" y="60" width="200" height="100" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+          <text x="350" y="100" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#15803d" text-anchor="middle">शुद्ध लंबा (TT)</text>
+          <text x="350" y="130" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#166534" text-anchor="middle">प्रभावी जनक</text>
+
+          <text x="500" y="115" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#0f172a" text-anchor="middle">×</text>
+
+          <rect x="550" y="60" width="200" height="100" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+          <text x="650" y="100" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#b91c1c" text-anchor="middle">शुद्ध बौना (tt)</text>
+          <text x="650" y="130" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#991b1b" text-anchor="middle">अप्रभावी जनक</text>
+        `;
+        s.innerHTML = '<b>चरण 1 (P पीढ़ी):</b> समयुग्मजी प्रभावी लंबा जनक (TT) तथा समयुग्मजी अप्रभावी बौना जनक (tt)।';
+      } else if (step === 2) {
+        c.innerHTML = `
+          <rect x="350" y="160" width="300" height="140" rx="15" fill="#f0fdf4" stroke="#22c55e" stroke-width="4"/>
+          <text x="500" y="210" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#15803d" text-anchor="middle">F1 पीढ़ी: सभी लंबे संकर (Tt)</text>
+          <text x="500" y="250" font-family="'Outfit', sans-serif" font-size="18" font-weight="800" fill="#166534" text-anchor="middle">100% पौधे विषमयुग्मजी लंबे</text>
+          <text x="500" y="280" font-family="'Outfit', sans-serif" font-size="15" font-weight="700" fill="#475569" text-anchor="middle">बौनापन 't' प्रभावी 'T' के कारण छिपा रहा</text>
+        `;
+        s.innerHTML = '<b>चरण 2 (F1 पीढ़ी):</b> सभी संततियां संकर लंबी (Tt) हैं क्योंकि प्रभावी जीन (T) अप्रभावी जीन (t) को प्रकट नहीं होने देता (प्रभाविता का नियम)।';
+      } else if (step === 3) {
+        c.innerHTML = `
+          <!-- Punnett Square for F2 -->
+          <rect x="300" y="80" width="400" height="300" rx="15" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+          <line x1="300" y1="230" x2="700" y2="230" stroke="#0f172a" stroke-width="3"/>
+          <line x1="500" y1="80" x2="500" y2="380" stroke="#0f172a" stroke-width="3"/>
+
+          <!-- TT -->
+          <rect x="305" y="85" width="190" height="140" fill="#dcfce7"/>
+          <text x="400" y="150" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#15803d" text-anchor="middle">TT</text>
+          <text x="400" y="185" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#166534" text-anchor="middle">शुद्ध लंबा</text>
+
+          <!-- Tt -->
+          <rect x="505" y="85" width="190" height="140" fill="#f0fdf4"/>
+          <text x="600" y="150" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#15803d" text-anchor="middle">Tt</text>
+          <text x="600" y="185" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#166534" text-anchor="middle">संकर लंबा</text>
+
+          <!-- Tt -->
+          <rect x="305" y="235" width="190" height="140" fill="#f0fdf4"/>
+          <text x="400" y="300" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#15803d" text-anchor="middle">Tt</text>
+          <text x="400" y="335" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#166534" text-anchor="middle">संकर लंबा</text>
+
+          <!-- tt -->
+          <rect x="505" y="235" width="190" height="140" fill="#fee2e2"/>
+          <text x="600" y="300" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#dc2626" text-anchor="middle">tt</text>
+          <text x="600" y="335" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#991b1b" text-anchor="middle">शुद्ध बौना</text>
+
+          <text x="500" y="420" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#0f172a" text-anchor="middle">लक्षणप्ररूप = 3 लंबा : 1 बौना | जीनप्ररूप = 1 TT : 2 Tt : 1 tt</text>
+        `;
+        s.innerHTML = '<span style="color:#15803d; font-weight:900;">🎉 F2 पीढ़ी पूर्ण:</span> लक्षणप्ररूपी अनुपात <b>3 : 1</b> तथा जीनप्ररूपी अनुपात <b>1 : 2 : 1</b> सिद्ध हुआ। विसंयोजन के नियम से अप्रभावी लक्षण (tt) पुनः प्रकट हो जाता है।';
+      }
+    }
+
+    function resetMendel() {
+      runMendelStep(1);
+      document.getElementById('sim81_status').innerHTML = '<i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> "चरण 1" से "चरण 3" तक क्रमवार क्लिक करके एकसंकर संकरण का पन्नेट्ट वर्ग देखें।';
+    }
+
+    /* --- SIM 8.2: Sex Determination --- */
+    function runSexSim(sperm) {
+      var s = document.getElementById('sim82_status');
+      if (sperm === 'X') {
+        s.innerHTML = '<span style="color:#db2777; font-weight:900;">👩 X-शुक्राणु संलयन:</span> पिता से प्राप्त "X" गुणसूत्र माता के "X" गुणसूत्र से मिलकर "XX" संयोजन बनाता है। संतति निश्चित रूप से <b>लड़की (पुत्री)</b> होगी।';
+      } else if (sperm === 'Y') {
+        s.innerHTML = '<span style="color:#2563eb; font-weight:900;">👨 Y-शुक्राणु संलयन:</span> पिता से प्राप्त "Y" गुणसूत्र माता के "X" गुणसूत्र से मिलकर "XY" संयोजन बनाता है। संतति निश्चित रूप से <b>लड़का (पुत्र)</b> होगा।';
+      }
+    }
+
+    function resetSexSim() {
+      document.getElementById('sim82_status').innerHTML = '<i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>निर्देश:</b> X अथवा Y शुक्राणु का चयन करके लिंग निर्धारण प्रक्रिया का सचित्र परिणाम देखें।';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      runMendelStep(1);
+    });
+
+  </script>
+</body>
+</html>

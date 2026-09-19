@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 8: अध्याय 8: आनुवंशिकता (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci8.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 8</div>
+      <h1 class="qa-main-title">अध्याय 8: आनुवंशिकता — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Heredity • मेंडल के नियम, एकसंकर व द्विसंकर संकरण, पन्नेट्ट वर्ग एवं मानव में लिंग निर्धारण • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 181</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> मेंडल के प्रयोगों द्वारा कैसे पता चला कि लक्षण प्रभावी अथवा अप्रभावी होते हैं?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> जब मेंडल ने शुद्ध लंबे (TT) तथा शुद्ध बौने (tt) मटर के पौधों में संकरण कराया, तो F1 पीढ़ी में केवल लंबे पौधे (Tt) प्राप्त हुए, कोई भी पौधा बौना या मध्यम लंबाई का नहीं था। इससे सिद्ध हुआ कि लंबाई का लक्षण 'T' बौनेपन 't' पर <b>प्रभावी (Dominant)</b> है। जब F1 का स्व-परागण कराया गया, तो F2 पीढ़ी में बौनापन (tt) पुनः 1/4 अनुपात में प्रकट हुआ। अतः जो लक्षण F1 में दबा रहा वह <b>अप्रभावी (Recessive)</b> था।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> मानव में बच्चे का लिंग निर्धारण कैसे होता है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b>
+            <br>1. स्त्री में दोनों लिंग गुणसूत्र समान (XX) होते हैं, अतः सभी अंडाणुओं में केवल X गुणसूत्र होता है।
+            <br>2. पुरुष में लिंग गुणसूत्र XY होते हैं, अतः 50% शुक्राणु X-युक्त तथा 50% शुक्राणु Y-युक्त होते हैं।
+            <br>3. यदि X-युक्त शुक्राणु अंडाणु को निषेचित करता है, तो युग्मनज XX (लड़की) बनता है।
+            <br>4. यदि Y-युक्त शुक्राणु अंडाणु को निषेचित करता है, तो युग्मनज XY (लड़का) बनता है।
+            <br>अतः लड़का या लड़की होने की संभावना 50-50% होती है और यह पूर्णतः पिता के शुक्राणु पर निर्भर करता है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> मेंडल के एक प्रयोग में लंबे मटर के पौधे जिनके बैंगनी पुष्प थे, का संकरण बौने पौधों जिनके सफेद पुष्प थे, से कराया गया। इनकी संतति के सभी पौधों में पुष्प बैंगनी रंग के थे परंतु उनमें से लगभग आधे बौने थे। इससे कहा जा सकता है कि लंबे जनक पौधे की आनुवंशिक रचना निम्न थी:</p>
+        <p style="padding-left:15px;">(a) TTWW (b) TTww (c) TtWW (d) TtWw</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (c) TtWW।</b>
+          <br>चूंकि सभी संतति में बैंगनी पुष्प आए, अतः पुष्प रंग प्रभावी समयुग्मजी (WW) था। चूंकि आधे पौधे बौने निकले, अतः लंबाई विषमयुग्मजी (Tt) थी।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 3:</b> एक 'A' रुधिर वर्ग वाला पुरुष एक स्त्री जिसका रुधिर वर्ग 'O' है, से विवाह करता है। उनकी पुत्री का रुधिर वर्ग 'O' है। क्या यह सूचना यह बताने के लिए पर्याप्त है कि कौन-सा विकल्प प्रभावी लक्षण है?</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+          <b>उत्तर: नहीं, यह सूचना पर्याप्त नहीं है।</b>
+          <br>रुधिर वर्ग O हमेशा अप्रभावी (ii) होता है तथा रुधिर वर्ग A समयुग्मजी (IᴬIᴬ) अथवा विषमयुग्मजी (Iᴬi) हो सकता है। चूंकि पुत्री का रुधिर वर्ग O (ii) है, अतः उसे एक 'i' पिता से और एक 'i' माता से मिला। इससे यह तो सिद्ध होता है कि पिता विषमयुग्मजी (Iᴬi) था, परंतु यह सूचना अकेले यह सिद्ध करने हेतु पर्याप्त नहीं है कि A प्रभावी है या O, जब तक कि संततियों का बड़ा अनुपात ज्ञात न हो।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) मेंडल के एकसंकर संकरण में F2 पीढ़ी का लक्षणप्ररूपी एवं जीनप्ररूपी अनुपात लिखिए। (b) किसी व्यक्ति में लक्षण का प्रकटन DNA किस प्रकार नियंत्रित करता है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br><b>(a) अनुपात:</b>
+          <br>• लक्षणप्ररूपी अनुपात = <b>3 लंबा : 1 बौना (3 : 1)</b>
+          <br>• जीनप्ररूपी अनुपात = <b>1 TT : 2 Tt : 1 tt (1 : 2 : 1)</b>
+          <br><b>(b) DNA द्वारा लक्षण नियंत्रण:</b>
+          <br>कोशिका के DNA में प्रोटीन संश्लेषण की सूचना होती है। DNA का एक विशिष्ट खंड (जीन) एक विशिष्ट एंजाइम/हॉर्मोन बनाता है। यह एंजाइम कार्यक्षमता बढ़ाकर लक्षण (जैसे पौधे की वृद्धि हॉर्मोन से लंबाई) को अभिव्यक्त करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          आरेख की सहायता से समझाइए कि मानव में बच्चे का लिंग निर्धारण किस प्रकार होता है। क्या इसमें माता की कोई भूमिका होती है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• माता (XX) केवल X गुणसूत्र वाले अंडाणु बनाती है।
+          <br>• पिता (XY) 50% X तथा 50% Y गुणसूत्र वाले शुक्राणु बनाता है।
+          <br>• X-अंडाणु + X-शुक्राणु ➔ XX (पुत्री)।
+          <br>• X-अंडाणु + Y-शुक्राणु ➔ XY (पुत्र)।
+          <br><b>माता की भूमिका:</b> माता सदैव केवल X गुणसूत्र ही देती है, अतः बच्चे का लिंग पूर्णतः पिता के शुक्राणु (X या Y) पर निर्भर करता है। माता का लिंग निर्धारण में कोई हाथ नहीं होता।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          मेंडल ने अपने प्रयोग के लिए मटर के पौधे का ही चयन क्यों किया? कोई दो प्रमुख कारण लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>1. मटर के पौधे में कई स्पष्ट परस्पर विरोधी (विपर्यासी) लक्षण उपस्थित थे (जैसे लंबा/बौना, पीला/हरा बीज)।
+          <br>2. इसका जीवन काल अल्प होता है जिससे कम समय में अनेक पीढ़ियों के परिणाम प्राप्त हो जाते हैं।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          द्विसंकर संकरण क्या है? मेंडल के द्विसंकर संकरण में F2 पीढ़ी का लक्षणप्ररूपी अनुपात क्या प्राप्त हुआ था?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>दो विपरीत लक्षणों (जैसे गोल-पीले बीज RRYY × झुर्रीदार-हरे बीज rryy) की वंशागति का एक साथ अध्ययन द्विसंकर संकरण कहलाता है।
+          <br><b>F2 लक्षणप्ररूपी अनुपात:</b> <b>9 : 3 : 3 : 1</b>
+          <br>(9 गोल-पीले : 3 गोल-हरे : 3 झुर्रीदार-पीले : 1 झुर्रीदार-हरा)।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          प्रभावी लक्षण एवं अप्रभावी लक्षण में अंतर स्पष्ट कीजिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>प्रभावी लक्षण (Dominant):</b> वह लक्षण जो विषमयुग्मजी अवस्था (F1 पीढ़ी) में अपने आपको अभिव्यक्त करता है और दूसरे को दबा देता है (उदा. पौधे की लंबाई 'T')।
+          <br>• <b>अप्रभावी लक्षण (Recessive):</b> वह लक्षण जो प्रभावी की उपस्थिति में छिप जाता है और केवल समयुग्मजी अवस्था में ही प्रकट होता है (उदा. बौनापन 'tt')।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
