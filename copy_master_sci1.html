@@ -1166,13 +1166,17 @@
   
     /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
     @keyframes s4SteamBillow {
-      0% { transform: translateY(0px) scale(0.92); opacity: 0.3; }
-      50% { transform: translateY(-25px) scale(1.08); opacity: 0.85; }
-      100% { transform: translateY(-50px) scale(1.2); opacity: 0.1; }
+      0% { transform: translateY(0px) scale(0.96); opacity: 0.88; }
+      50% { transform: translateY(-22px) scale(1.06); opacity: 1.0; }
+      100% { transform: translateY(-40px) scale(1.12); opacity: 0.85; }
     }
-    .s4-steam-loop {
-      animation: s4SteamBillow 2.8s infinite ease-in-out !important;
-      transform-origin: 340px 240px;
+    #s4_steam_plumes {
+      display: none;
+    }
+    #s4_steam_plumes.active {
+      display: block !important;
+      animation: s4SteamBillow 2.2s infinite ease-in-out !important;
+      transform-origin: 330px 170px;
     }
 
     @keyframes s5FumesWaft {
@@ -2300,9 +2304,14 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim4_pbar"></div></div>
 
-            <div class="sim-stage" id="sim4_stage">
+            <div class="sim-stage" id="sim4_stage" style="background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%) !important; border: 2.5px solid #86efac !important;">
         <svg id="sim4_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
+            <linearGradient id="s4_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f0fdf4"/>
+              <stop offset="65%" stop-color="#e8f9ee"/>
+              <stop offset="100%" stop-color="#d1fae5"/>
+            </linearGradient>
             <linearGradient id="s4_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
             </linearGradient>
@@ -2354,6 +2363,9 @@
               <feGaussianBlur stdDeviation="6"/>
             </filter>
           </defs>
+
+          <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
+          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="10,380 900,380 850,432 50,432" fill="url(#s4_benchTop)"/>
@@ -2433,7 +2445,7 @@
           <!-- ================= THERMOMETER (PERMANENTLY IMMERSED IN CENTER, REALTIME RISE) ================= -->
           <g id="s4_thermometer_group" transform="translate(305, 45)">
             <!-- Live Digital Temperature Badge at top -->
-            <g id="s4_thermo_badge" transform="translate(8, 0)">
+            <g id="s4_thermo_badge" transform="translate(48, 10)">
               <rect x="-42" y="-14" width="84" height="28" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
               <text id="s4_temp_badge_text" x="0" y="5" font-size="14" font-weight="900" fill="#fca5a5" text-anchor="middle">🌡️ 25°C</text>
             </g>
@@ -2464,13 +2476,45 @@
             <text x="28" y="314" font-size="10" font-weight="800" fill="#64748b">0°C</text>
           </g>
 
-          <!-- ================= BILLOWING STEAM & EXOTHERMIC HEAT VAPOR (STEPS 2, 3, 4) ================= -->
-          <g id="s4_steam_plumes" class="s4-steam-loop" opacity="0" style="transition: opacity 0.8s ease;">
-            <circle cx="260" cy="130" r="32" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="320" cy="100" r="46" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="370" cy="75" r="54" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <circle cx="290" cy="65" r="40" fill="url(#s4_steamGrad)" filter="url(#s4_steamBlur)"/>
-            <text x="330" y="55" font-size="16" font-weight="900" fill="#c2410c" text-anchor="middle">♨️ खौलती भाप व तीव्र ऊष्मा (Exothermic Reaction)</text>
+          <!-- ================= BILLOWING STEAM & EXOTHERMIC HEAT VAPOR (APPEARS AFTER WATER IS POURED) ================= -->
+          <g id="s4_steam_plumes" style="display: none; transition: opacity 0.5s ease;">
+            <!-- Soft drop shadow / ambient mist layer -->
+            <g filter="url(#s4_blur)" opacity="0.35">
+              <circle cx="285" cy="155" r="32" fill="#94a3b8"/>
+              <circle cx="345" cy="150" r="36" fill="#94a3b8"/>
+              <circle cx="380" cy="155" r="30" fill="#94a3b8"/>
+              <circle cx="270" cy="120" r="38" fill="#94a3b8"/>
+              <circle cx="330" cy="110" r="46" fill="#94a3b8"/>
+              <circle cx="380" cy="115" r="42" fill="#94a3b8"/>
+              <circle cx="295" cy="75" r="44" fill="#94a3b8"/>
+              <circle cx="355" cy="70" r="50" fill="#94a3b8"/>
+            </g>
+
+            <!-- Prominent White Puffy Steam Cloud Formation -->
+            <!-- Base Puffs near beaker mouth -->
+            <circle cx="285" cy="155" r="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
+            <circle cx="345" cy="150" r="34" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
+            <circle cx="380" cy="155" r="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" opacity="0.95"/>
+            
+            <!-- Mid-level Rising Puffs -->
+            <circle cx="270" cy="120" r="36" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" opacity="0.92"/>
+            <circle cx="330" cy="110" r="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
+            <circle cx="380" cy="115" r="40" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" opacity="0.92"/>
+
+            <!-- High Billowing Steam Puffs -->
+            <circle cx="295" cy="75" r="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.92"/>
+            <circle cx="355" cy="70" r="48" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.2" opacity="0.95"/>
+
+            <!-- Rising Steam Wisp Curves -->
+            <path d="M 275,160 Q 250,115 280,75 Q 310,40 285,15" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 335,160 Q 365,110 335,65 Q 310,30 335,10" fill="none" stroke="#ffffff" stroke-width="10" opacity="0.95" stroke-linecap="round"/>
+            <path d="M 380,165 Q 405,115 385,70 Q 365,35 390,12" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.9" stroke-linecap="round"/>
+
+            <!-- Top Indicator Badge -->
+            <g transform="translate(200, 60)">
+              <rect x="-115" y="-13" width="230" height="26" rx="8" fill="#0f172a" opacity="0.95" stroke="#ea580c" stroke-width="2"/>
+              <text x="0" y="5" font-size="12" font-weight="900" fill="#fde047" text-anchor="middle">♨️ खौलती भाप (Boiling Steam)</text>
+            </g>
           </g>
 
           <!-- ================= WATER POURING BEAKER (RESTS AT RIGHT, TILTS 45° IN STEP 2 WITH MOUTH-DOWN PHYSICS) ================= -->
@@ -3130,6 +3174,9 @@
             </filter>
           </defs>
 
+          <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
+          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s7_benchTop)"/>
           <polygon points="60,435 840,435 840,441 60,441" fill="#94a3b8" opacity="0.8"/>
@@ -3349,6 +3396,9 @@
             </filter>
           </defs>
 
+          <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
+          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s8_benchTop)"/>
           <polygon points="60,435 840,435 840,441 60,441" fill="#94a3b8" opacity="0.8"/>
@@ -3557,6 +3607,9 @@
             </filter>
           </defs>
 
+          <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
+          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
+
           <!-- WORKBENCH -->
           <polygon points="20,390 880,390 840,435 60,435" fill="url(#s9_benchTop)"/>
           <polygon points="60,435 840,435 840,441 60,441" fill="#94a3b8" opacity="0.8"/>
@@ -3744,6 +3797,9 @@
               <feGaussianBlur stdDeviation="5"/>
             </filter>
           </defs>
+
+          <!-- LIGHT GREEN LABORATORY BACKGROUND FOR CONTRAST -->
+          <rect width="1200" height="540" fill="url(#s4_labBg)"/>
 
           <!-- WORKBENCH -->
           <polygon points="10,380 900,380 850,432 50,432" fill="url(#s10_benchTop)"/>
@@ -5031,7 +5087,7 @@
       var bLiq = document.getElementById('s4_beaker_liquid'); if (bLiq) bLiq.style.opacity = '0';
       var bMen = document.getElementById('s4_beaker_meniscus'); if (bMen) bMen.style.opacity = '0';
       var bub = document.getElementById('s4_boiling_bubbles'); if (bub) bub.style.opacity = '0';
-      var steam = document.getElementById('s4_steam_plumes'); if (steam) steam.style.opacity = '0';
+      var steam = document.getElementById('s4_steam_plumes'); if (steam) { steam.classList.remove('active'); steam.style.display = 'none'; }
       var aura = document.getElementById('s4_heat_aura'); if (aura) aura.style.opacity = '0';
       
       var merc = document.getElementById('s4_mercury_col');
@@ -5069,7 +5125,8 @@
         if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> बड़े बोरोसिलिकेट बीकर में ठोस, ढेलेदार बिना बुझा चूना (कली चूना, कैल्शियम ऑक्साइड CaO) लिया गया। तापमापी में प्रारंभिक तापमान सामान्य 25°C है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        // Vessel elevates, rear raised in air, mouth tilted DOWNWARDS at (415, 160)
+        
+        // 1. First: Water beaker elevates and tilts 45° with mouth DOWNWARDS
         if (inner) {
           inner.innerHTML = `<g id="s4_tilted_pouring_vessel">
   <!-- 3D Glass Body tilted 45° with mouth DOWN and base UP in the air -->
@@ -5090,23 +5147,38 @@
 </g>`;
         }
 
+        // Water stream starts pouring into the CaO lumps
         addSimTimer(4, setTimeout(function() {
           if (stream) stream.style.opacity = '1';
           if (bLiq) bLiq.style.opacity = '1';
           if (bMen) bMen.style.opacity = '1';
+        }, 200));
+
+        // Steam is NOT active while water is pouring
+        if (steam) steam.classList.remove('active');
+        if (bub) bub.style.opacity = '0';
+        if (aura) aura.style.opacity = '0';
+
+        if (st) st.innerHTML = '<strong>चरण 2 (जल योग):</strong> 45° झुका बीकर कली चूने (CaO) पर जल डाल रहा है...';
+
+        // 2. ONLY AFTER water is poured (at 1800ms), stream stops and BOILING STEAM begins!
+        addSimTimer(4, setTimeout(function() {
+          if (stream) stream.style.opacity = '0';
+          
+          // Steam and boiling start NOW after water is poured!
+          if (steam) steam.classList.add('active');
           if (bub) bub.style.opacity = '1';
-          if (steam) steam.style.opacity = '1';
-          if (aura) aura.style.opacity = '0.5';
+          if (aura) aura.style.opacity = '0.65';
 
           // Mercury starts rising to 50°C
           if (merc) { merc.setAttribute('y', '170'); merc.setAttribute('height', '155'); }
           if (badgeTxt) { badgeTxt.textContent = '🌡️ 50°C ⬆'; badgeTxt.style.fill = '#fde047'; }
-        }, 300));
+
+          if (st) st.innerHTML = '<strong>चरण 2 (जल योग के बाद तीव्र खौलता संयोजन):</strong> जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ मिश्रण खौलने लगा, <strong>प्रचुर खौलती भाप</strong> उठी और तापमापी में पारा चढ़ना शुरू हुआ!';
+        }, 1800));
 
         // Observation panel hidden during Step 2
         if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
-
-        if (st) st.innerHTML = '<strong>चरण 2 (जल योग व तीव्र खौलता संयोजन):</strong> बीकर ऊपर उठकर 45° कोण पर झुका और जल डाला। जल मिलते ही अत्यधिक तीव्र सनसनाहट (Hissing sound) के साथ खौलने लगा, प्रचुर भाप निकली और पारा चढ़ना शुरू हुआ!';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
         if (stream) stream.style.opacity = '0';
@@ -5124,7 +5196,7 @@
         if (bLiq) bLiq.style.opacity = '1';
         if (bMen) bMen.style.opacity = '1';
         if (bub) bub.style.opacity = '0.85';
-        if (steam) steam.style.opacity = '1';
+        if (steam) { steam.classList.add('active'); steam.style.display = 'block'; }
         if (aura) aura.style.opacity = '0.85';
 
         // Mercury climbs to full 85°C
@@ -5142,7 +5214,7 @@
         if (pbar) pbar.style.width = '100%';
         if (bLiq) bLiq.style.opacity = '1';
         if (bMen) bMen.style.opacity = '1';
-        if (steam) steam.style.opacity = '1';
+        if (steam) { steam.classList.add('active'); steam.style.display = 'block'; }
         if (aura) aura.style.opacity = '1';
 
         if (merc) { merc.setAttribute('y', '100'); merc.setAttribute('height', '225'); }
