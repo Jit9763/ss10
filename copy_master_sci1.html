@@ -256,6 +256,7 @@
 
     /* Simulator Card Styling */
     .sim-card {
+      scroll-margin-top: 80px;
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
@@ -515,6 +516,7 @@
 
     /* Simulators Styling */
     .sim-card {
+      scroll-margin-top: 80px;
       background: #ffffff;
       border: 2px solid #94a3b8;
       border-radius: 14px;
@@ -630,6 +632,7 @@
     }
     
     .sim-card {
+      scroll-margin-top: 80px;
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
@@ -5058,7 +5061,7 @@
       </div>
 
       <div class="sim-stage" id="sim12_stage">
-        <svg id="sim12_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+        <svg id="sim12_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMid meet">
           <defs>
             <!-- Bench Gradients -->
             <linearGradient id="s12_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -5079,6 +5082,20 @@
             <radialGradient id="s12_panGrad" cx="50%" cy="40%" r="60%">
               <stop offset="0%" stop-color="#fef08a"/><stop offset="60%" stop-color="#eab308"/><stop offset="100%" stop-color="#854d0e"/>
             </radialGradient>
+            <!-- 3D Atom Sphere Shading -->
+            <radialGradient id="s12_atom_Fe" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#fdba74"/><stop offset="70%" stop-color="#f97316"/><stop offset="100%" stop-color="#9a3412"/></radialGradient>
+            <radialGradient id="s12_atom_H" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#bae6fd"/><stop offset="70%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></radialGradient>
+            <radialGradient id="s12_atom_O" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#fca5a5"/><stop offset="70%" stop-color="#ef4444"/><stop offset="100%" stop-color="#991b1b"/></radialGradient>
+            <radialGradient id="s12_atom_Mg" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#d8b4fe"/><stop offset="70%" stop-color="#a855f7"/><stop offset="100%" stop-color="#6b21a8"/></radialGradient>
+            <radialGradient id="s12_atom_N" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#93c5fd"/><stop offset="70%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1d4ed8"/></radialGradient>
+            <radialGradient id="s12_atom_C" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#64748b"/><stop offset="70%" stop-color="#334155"/><stop offset="100%" stop-color="#0f172a"/></radialGradient>
+            <radialGradient id="s12_atom_Ba" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#5eead4"/><stop offset="70%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></radialGradient>
+            <radialGradient id="s12_atom_Cl" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#86efac"/><stop offset="70%" stop-color="#22c55e"/><stop offset="100%" stop-color="#15803d"/></radialGradient>
+            <radialGradient id="s12_atom_Al" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#e2e8f0"/><stop offset="70%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#475569"/></radialGradient>
+            <radialGradient id="s12_atom_S" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#fef08a"/><stop offset="70%" stop-color="#eab308"/><stop offset="100%" stop-color="#854d0e"/></radialGradient>
+            <radialGradient id="s12_atom_Ca" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#fde68a"/><stop offset="70%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></radialGradient>
+            <radialGradient id="s12_atom_Na" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#c4b5fd"/><stop offset="70%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#5b21b6"/></radialGradient>
+            <radialGradient id="s12_atom_Pb" cx="35%" cy="35%" r="65%"><stop offset="0%" stop-color="#cbd5e1"/><stop offset="70%" stop-color="#64748b"/><stop offset="100%" stop-color="#334155"/></radialGradient>
             <!-- Glow Filters for Balanced State -->
             <filter id="s12_greenGlow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="6" result="blur"/>
@@ -5086,93 +5103,93 @@
             </filter>
           </defs>
 
-          <!-- 3D Lab Bench Surface -->
-          <polygon points="0,400 900,400 900,455 0,455" fill="url(#s12_benchTop)"/>
-          <line x1="0" y1="400" x2="900" y2="400" stroke="#475569" stroke-width="2"/>
-          <polygon points="0,455 900,455 900,480 0,480" fill="url(#s12_benchFront)"/>
-          <line x1="0" y1="455" x2="900" y2="455" stroke="#020617" stroke-width="2.5"/>
+          <!-- 3D Lab Bench Surface across entire 1200px width -->
+          <polygon points="0,400 1200,400 1200,455 0,455" fill="url(#s12_benchTop)"/>
+          <line x1="0" y1="400" x2="1200" y2="400" stroke="#475569" stroke-width="2"/>
+          <polygon points="0,455 1200,455 1200,540 0,540" fill="url(#s12_benchFront)"/>
+          <line x1="0" y1="455" x2="1200" y2="455" stroke="#020617" stroke-width="2.5"/>
 
-          <!-- Centered Scale Marble Plinth & Base -->
-          <ellipse cx="450" cy="425" rx="160" ry="24" fill="#0f172a" stroke="#64748b" stroke-width="3"/>
-          <ellipse cx="450" cy="422" rx="145" ry="18" fill="#1e293b"/>
-          <ellipse cx="450" cy="418" rx="110" ry="12" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+          <!-- Centered Scale Marble Plinth & Base at X=600 -->
+          <ellipse cx="600" cy="425" rx="190" ry="26" fill="#0f172a" stroke="#64748b" stroke-width="3"/>
+          <ellipse cx="600" cy="422" rx="170" ry="20" fill="#1e293b"/>
+          <ellipse cx="600" cy="418" rx="135" ry="14" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
 
-          <!-- Vertical Analytical Fluted Pillar -->
-          <rect x="440" y="140" width="20" height="275" fill="url(#s12_pillarGrad)" stroke="#1e293b" stroke-width="2"/>
-          <circle cx="450" cy="140" r="16" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="2"/>
+          <!-- Vertical Analytical Fluted Pillar at X=600 -->
+          <rect x="588" y="140" width="24" height="275" fill="url(#s12_pillarGrad)" stroke="#1e293b" stroke-width="2"/>
+          <circle cx="600" cy="140" r="18" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="2"/>
           <!-- Dial Scale Protractor Arc -->
-          <path d="M 400 170 A 55 55 0 0 0 500 170" fill="none" stroke="#fef08a" stroke-width="4"/>
-          <line x1="450" y1="165" x2="450" y2="175" stroke="#ef4444" stroke-width="2.5"/>
-          <circle cx="450" cy="140" r="5" fill="#ef4444"/>
+          <path d="M 545 175 A 60 60 0 0 0 655 175" fill="none" stroke="#fef08a" stroke-width="4"/>
+          <line x1="600" y1="168" x2="600" y2="182" stroke="#ef4444" stroke-width="2.5"/>
+          <circle cx="600" cy="140" r="6" fill="#ef4444"/>
 
           <!-- Status Indicator Stamp at Top Center -->
           <g id="s12_stamp" style="opacity: 0; transition: opacity 0.5s ease;">
-            <rect x="310" y="15" width="280" height="42" rx="10" fill="#059669" fill-opacity="0.95" stroke="#34d399" stroke-width="2.5" filter="url(#s12_greenGlow)"/>
-            <text x="450" y="42" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+            <rect x="440" y="15" width="320" height="44" rx="10" fill="#059669" fill-opacity="0.95" stroke="#34d399" stroke-width="2.5" filter="url(#s12_greenGlow)"/>
+            <text x="600" y="43" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
               ✓ पूर्ण संतुलित (EQUATION BALANCED)!
             </text>
           </g>
 
-          <!-- Tilting Beam and Pans Assembly (Pivot: 450, 140) -->
-          <g id="s12_beam_group" style="transform-origin: 450px 140px; transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);">
-            <!-- Brass Balance Beam (Length: 540px) -->
-            <line x1="180" y1="140" x2="720" y2="140" stroke="url(#s12_brassBeam)" stroke-width="12" stroke-linecap="round"/>
-            <line x1="180" y1="140" x2="720" y2="140" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+          <!-- Tilting Beam and Pans Assembly (Pivot: 600, 140) -->
+          <g id="s12_beam_group" style="transform-origin: 600px 140px; transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);">
+            <!-- Brass Balance Beam (Length: 720px, from 240 to 960) -->
+            <line x1="240" y1="140" x2="960" y2="140" stroke="url(#s12_brassBeam)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="240" y1="140" x2="960" y2="140" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
 
             <!-- Center Vertical Needle Pointer -->
-            <polygon points="448,140 452,140 450,185" fill="#ef4444"/>
+            <polygon points="597,140 603,140 600,195" fill="#ef4444"/>
 
             <!-- Pivot Ends -->
-            <circle cx="180" cy="140" r="7" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="1.5"/>
-            <circle cx="720" cy="140" r="7" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="1.5"/>
+            <circle cx="240" cy="140" r="8" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="1.5"/>
+            <circle cx="960" cy="140" r="8" fill="url(#s12_brassBeam)" stroke="#78350f" stroke-width="1.5"/>
 
-            <!-- ================= LEFT PAN (REACTANTS) AT X=180 ================= -->
+            <!-- ================= LEFT PAN (REACTANTS) AT X=240 ================= -->
             <g id="s12_left_pan_group">
               <!-- Golden Suspension Chains -->
-              <line x1="180" y1="140" x2="110" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
-              <line x1="180" y1="140" x2="180" y2="265" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
-              <line x1="180" y1="140" x2="250" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="240" y1="140" x2="165" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="240" y1="140" x2="240" y2="265" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="240" y1="140" x2="315" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
 
               <!-- Left Pan Dish -->
-              <ellipse cx="180" cy="275" rx="85" ry="20" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="2.5"/>
-              <ellipse cx="180" cy="273" rx="76" ry="15" fill="#fef08a" opacity="0.4"/>
+              <ellipse cx="240" cy="275" rx="90" ry="22" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="2.5"/>
+              <ellipse cx="240" cy="273" rx="80" ry="16" fill="#fef08a" opacity="0.4"/>
 
               <!-- Left Pan Atom Container (Injected dynamically) -->
               <g id="s12_left_atoms"></g>
 
               <!-- Left Pan Title Badge -->
-              <rect x="80" y="305" width="200" height="34" rx="8" fill="#1e3a8a" fill-opacity="0.95" stroke="#3b82f6" stroke-width="2"/>
-              <text x="180" y="328" font-size="15" font-weight="900" fill="#93c5fd" text-anchor="middle">
+              <rect x="140" y="305" width="200" height="34" rx="8" fill="#1e3a8a" fill-opacity="0.95" stroke="#3b82f6" stroke-width="2"/>
+              <text x="240" y="328" font-size="15" font-weight="900" fill="#93c5fd" text-anchor="middle">
                 अभिकारक (Reactants)
               </text>
             </g>
 
-            <!-- ================= RIGHT PAN (PRODUCTS) AT X=720 ================= -->
+            <!-- ================= RIGHT PAN (PRODUCTS) AT X=960 ================= -->
             <g id="s12_right_pan_group">
               <!-- Golden Suspension Chains -->
-              <line x1="720" y1="140" x2="650" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
-              <line x1="720" y1="140" x2="720" y2="265" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
-              <line x1="720" y1="140" x2="790" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="960" y1="140" x2="885" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="960" y1="140" x2="960" y2="265" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
+              <line x1="960" y1="140" x2="1035" y2="270" stroke="#fde047" stroke-width="2.2" stroke-dasharray="4,2"/>
 
               <!-- Right Pan Dish -->
-              <ellipse cx="720" cy="275" rx="85" ry="20" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="2.5"/>
-              <ellipse cx="720" cy="273" rx="76" ry="15" fill="#fef08a" opacity="0.4"/>
+              <ellipse cx="960" cy="275" rx="90" ry="22" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="2.5"/>
+              <ellipse cx="960" cy="273" rx="80" ry="16" fill="#fef08a" opacity="0.4"/>
 
               <!-- Right Pan Atom Container (Injected dynamically) -->
               <g id="s12_right_atoms"></g>
 
               <!-- Right Pan Title Badge -->
-              <rect x="620" y="305" width="200" height="34" rx="8" fill="#065f46" fill-opacity="0.95" stroke="#10b981" stroke-width="2"/>
-              <text x="720" y="328" font-size="15" font-weight="900" fill="#6ee7b7" text-anchor="middle">
+              <rect x="860" y="305" width="200" height="34" rx="8" fill="#065f46" fill-opacity="0.95" stroke="#10b981" stroke-width="2"/>
+              <text x="960" y="328" font-size="15" font-weight="900" fill="#6ee7b7" text-anchor="middle">
                 उत्पाद (Products)
               </text>
             </g>
           </g>
 
-          <!-- Central Balance Status Banner -->
-          <g id="s12_center_balance_badge" transform="translate(325, 360)">
-            <rect id="s12_badge_bg" x="0" y="0" width="250" height="40" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
-            <text id="s12_badge_text" x="125" y="26" font-size="15" font-weight="900" fill="#9a3412" text-anchor="middle">
+          <!-- Central Balance Status Banner at X=600 -->
+          <g id="s12_center_balance_badge" transform="translate(460, 360)">
+            <rect id="s12_badge_bg" x="0" y="0" width="280" height="40" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+            <text id="s12_badge_text" x="140" y="26" font-size="15" font-weight="900" fill="#9a3412" text-anchor="middle">
               असंतुलित (UNBALANCED)
             </text>
           </g>
@@ -7155,6 +7172,312 @@ function sim4Reset() {
         if (btn) btn.disabled = false;
       }, 13000));
     }
+  
+
+    /* ==========================================================
+       SIMULATOR 12: CHEMICAL EQUATION BALANCER (3D SCALE ENGINE)
+       ========================================================== */
+    var ncertEquations = [
+      {
+        name: "1. Fe + H₂O → Fe₃O₄ + H₂ (लोहा + भाप — NCERT पाठ्यपुस्तक मुख्य उदाहरण)",
+        reactants: [{ formula: "Fe", atoms: { Fe: 1 } }, { formula: "H₂O", atoms: { H: 2, O: 1 } }],
+        products: [{ formula: "Fe₃O₄", atoms: { Fe: 3, O: 4 } }, { formula: "H₂", atoms: { H: 2 } }],
+        balanced: [3, 4, 1, 4]
+      },
+      {
+        name: "2. Mg + O₂ → MgO (मैग्नीशियम फीते का दहन)",
+        reactants: [{ formula: "Mg", atoms: { Mg: 1 } }, { formula: "O₂", atoms: { O: 2 } }],
+        products: [{ formula: "MgO", atoms: { Mg: 1, O: 1 } }],
+        balanced: [2, 1, 2]
+      },
+      {
+        name: "3. H₂ + O₂ → H₂O (जल का निर्माण)",
+        reactants: [{ formula: "H₂", atoms: { H: 2 } }, { formula: "O₂", atoms: { O: 2 } }],
+        products: [{ formula: "H₂O", atoms: { H: 2, O: 1 } }],
+        balanced: [2, 1, 2]
+      },
+      {
+        name: "4. N₂ + H₂ → NH₃ (अमोनिया संश्लेषण — हैबर प्रक्रम)",
+        reactants: [{ formula: "N₂", atoms: { N: 2 } }, { formula: "H₂", atoms: { H: 2 } }],
+        products: [{ formula: "NH₃", atoms: { N: 1, H: 3 } }],
+        balanced: [1, 3, 2]
+      },
+      {
+        name: "5. CH₄ + O₂ → CO₂ + H₂O (प्राकृतिक गैस का दहन)",
+        reactants: [{ formula: "CH₄", atoms: { C: 1, H: 4 } }, { formula: "O₂", atoms: { O: 2 } }],
+        products: [{ formula: "CO₂", atoms: { C: 1, O: 2 } }, { formula: "H₂O", atoms: { H: 2, O: 1 } }],
+        balanced: [1, 2, 1, 2]
+      },
+      {
+        name: "6. BaCl₂ + Al₂(SO₄)₃ → BaSO₄ + AlCl₃ (द्विविस्थापन अवक्षेपण)",
+        reactants: [{ formula: "BaCl₂", atoms: { Ba: 1, Cl: 2 } }, { formula: "Al₂(SO₄)₃", atoms: { Al: 2, S: 3, O: 12 } }],
+        products: [{ formula: "BaSO₄", atoms: { Ba: 1, S: 1, O: 4 } }, { formula: "AlCl₃", atoms: { Al: 1, Cl: 3 } }],
+        balanced: [3, 1, 3, 2]
+      },
+      {
+        name: "7. HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + H₂O (उदासीनीकरण)",
+        reactants: [{ formula: "HNO₃", atoms: { H: 1, N: 1, O: 3 } }, { formula: "Ca(OH)₂", atoms: { Ca: 1, O: 2, H: 2 } }],
+        products: [{ formula: "Ca(NO₃)₂", atoms: { Ca: 1, N: 2, O: 6 } }, { formula: "H₂O", atoms: { H: 2, O: 1 } }],
+        balanced: [2, 1, 1, 2]
+      },
+      {
+        name: "8. NaOH + H₂SO₄ → Na₂SO₄ + H₂O (उदासीनीकरण)",
+        reactants: [{ formula: "NaOH", atoms: { Na: 1, O: 1, H: 1 } }, { formula: "H₂SO₄", atoms: { H: 2, S: 1, O: 4 } }],
+        products: [{ formula: "Na₂SO₄", atoms: { Na: 2, S: 1, O: 4 } }, { formula: "H₂O", atoms: { H: 2, O: 1 } }],
+        balanced: [2, 1, 1, 2]
+      },
+      {
+        name: "9. Pb(NO₃)₂ → PbO + NO₂ + O₂ (लेड नाइट्रेट वियोजन)",
+        reactants: [{ formula: "Pb(NO₃)₂", atoms: { Pb: 1, N: 2, O: 6 } }],
+        products: [{ formula: "PbO", atoms: { Pb: 1, O: 1 } }, { formula: "NO₂", atoms: { N: 1, O: 2 } }, { formula: "O₂", atoms: { O: 2 } }],
+        balanced: [2, 2, 4, 1]
+      },
+      {
+        name: "10. FeSO₄ → Fe₂O₃ + SO₂ + SO₃ (फेरस सल्फेट वियोजन)",
+        reactants: [{ formula: "FeSO₄", atoms: { Fe: 1, S: 1, O: 4 } }],
+        products: [{ formula: "Fe₂O₃", atoms: { Fe: 2, O: 3 } }, { formula: "SO₂", atoms: { S: 1, O: 2 } }, { formula: "SO₃", atoms: { S: 1, O: 3 } }],
+        balanced: [2, 1, 1, 1]
+      }
+    ];
+
+    var currentEqIndex = 0;
+    var currentCoeffs = [];
+
+    function sim12SelectEquation(val) {
+      currentEqIndex = parseInt(val, 10) || 0;
+      var eq = ncertEquations[currentEqIndex];
+      var totalTerms = eq.reactants.length + eq.products.length;
+      currentCoeffs = [];
+      for (var i = 0; i < totalTerms; i++) currentCoeffs.push(1);
+      renderSim12Controls();
+      updateSim12Balance();
+    }
+
+    function renderSim12Controls() {
+      var grid = document.getElementById('sim12_coeff_grid');
+      if (!grid) return;
+      var eq = ncertEquations[currentEqIndex];
+      var html = '';
+      var coeffIdx = 0;
+
+      // Reactants
+      eq.reactants.forEach(function(r, i) {
+        if (i > 0) html += '<span style="font-weight:900; font-size:22px; color:#475569; margin:0 8px;">+</span>';
+        html += '<div style="display:inline-flex; align-items:center; background:#ffffff; padding:6px 14px; border-radius:10px; border:2px solid #cbd5e1; box-shadow:0 3px 6px rgba(0,0,0,0.06); gap:6px;">';
+        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', -1)" style="width:32px; height:32px; border-radius:6px; border:1.5px solid #cbd5e1; background:#f1f5f9; font-weight:900; font-size:18px; cursor:pointer; color:#1e293b; display:flex; align-items:center; justify-content:center;">−</button>';
+        html += '<span id="s12_c_' + coeffIdx + '" style="font-size:20px; font-weight:900; color:#1d4ed8; min-width:32px; text-align:center;">' + currentCoeffs[coeffIdx] + '</span>';
+        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', 1)" style="width:32px; height:32px; border-radius:6px; border:1.5px solid #cbd5e1; background:#f1f5f9; font-weight:900; font-size:18px; cursor:pointer; color:#1e293b; display:flex; align-items:center; justify-content:center;">+</button>';
+        html += '<span style="margin-left:6px; font-weight:800; color:#0f172a; font-size:18px;">' + r.formula + '</span>';
+        html += '</div>';
+        coeffIdx++;
+      });
+
+      html += '<span style="font-weight:900; font-size:28px; color:#2563eb; margin:0 14px;">➔</span>';
+
+      // Products
+      eq.products.forEach(function(p, i) {
+        if (i > 0) html += '<span style="font-weight:900; font-size:22px; color:#475569; margin:0 8px;">+</span>';
+        html += '<div style="display:inline-flex; align-items:center; background:#ffffff; padding:6px 14px; border-radius:10px; border:2px solid #cbd5e1; box-shadow:0 3px 6px rgba(0,0,0,0.06); gap:6px;">';
+        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', -1)" style="width:32px; height:32px; border-radius:6px; border:1.5px solid #cbd5e1; background:#f1f5f9; font-weight:900; font-size:18px; cursor:pointer; color:#1e293b; display:flex; align-items:center; justify-content:center;">−</button>';
+        html += '<span id="s12_c_' + coeffIdx + '" style="font-size:20px; font-weight:900; color:#059669; min-width:32px; text-align:center;">' + currentCoeffs[coeffIdx] + '</span>';
+        html += '<button onclick="sim12ChangeCoeff(' + coeffIdx + ', 1)" style="width:32px; height:32px; border-radius:6px; border:1.5px solid #cbd5e1; background:#f1f5f9; font-weight:900; font-size:18px; cursor:pointer; color:#1e293b; display:flex; align-items:center; justify-content:center;">+</button>';
+        html += '<span style="margin-left:6px; font-weight:800; color:#0f172a; font-size:18px;">' + p.formula + '</span>';
+        html += '</div>';
+        coeffIdx++;
+      });
+
+      grid.innerHTML = html;
+    }
+
+    function sim12ChangeCoeff(idx, delta) {
+      var newVal = Math.max(1, Math.min(10, currentCoeffs[idx] + delta));
+      currentCoeffs[idx] = newVal;
+      var span = document.getElementById('s12_c_' + idx);
+      if (span) span.textContent = newVal;
+      updateSim12Balance();
+    }
+
+    function sim12ResetCoeffs() {
+      for (var i = 0; i < currentCoeffs.length; i++) currentCoeffs[i] = 1;
+      renderSim12Controls();
+      updateSim12Balance();
+    }
+
+    function sim12AutoSolve() {
+      var eq = ncertEquations[currentEqIndex];
+      for (var i = 0; i < eq.balanced.length; i++) {
+        currentCoeffs[i] = eq.balanced[i];
+      }
+      renderSim12Controls();
+      updateSim12Balance();
+    }
+
+    function updateSim12Balance() {
+      var eq = ncertEquations[currentEqIndex];
+      var beam = document.getElementById('s12_beam_group');
+      var leftAtoms = document.getElementById('s12_left_atoms');
+      var rightAtoms = document.getElementById('s12_right_atoms');
+      var stamp = document.getElementById('s12_stamp');
+      var badgeBg = document.getElementById('s12_badge_bg');
+      var badgeText = document.getElementById('s12_badge_text');
+
+      var totalReactants = {};
+      var totalProducts = {};
+      var coeffIdx = 0;
+
+      // Count Reactant Atoms
+      eq.reactants.forEach(function(r) {
+        var c = currentCoeffs[coeffIdx++];
+        for (var el in r.atoms) {
+          totalReactants[el] = (totalReactants[el] || 0) + (r.atoms[el] * c);
+        }
+      });
+
+      // Count Product Atoms
+      eq.products.forEach(function(p) {
+        var c = currentCoeffs[coeffIdx++];
+        for (var el in p.atoms) {
+          totalProducts[el] = (totalProducts[el] || 0) + (p.atoms[el] * c);
+        }
+      });
+
+      // Check Equality
+      var allBalanced = true;
+      var totalLeftCount = 0;
+      var totalRightCount = 0;
+
+      for (var el in totalReactants) totalLeftCount += totalReactants[el];
+      for (var el in totalProducts) totalRightCount += totalProducts[el];
+
+      var allElements = {};
+      for (var el in totalReactants) allElements[el] = true;
+      for (var el in totalProducts) allElements[el] = true;
+
+      for (var el in allElements) {
+        var l = totalReactants[el] || 0;
+        var r = totalProducts[el] || 0;
+        if (l !== r) allBalanced = false;
+      }
+
+      // Render 3D Atom Spheres in Pans (Left Pan Center: 240, 265; Right Pan Center: 960, 265)
+      if (leftAtoms) {
+        var lHtml = '';
+        var col = 0;
+        var rowLimit = 7;
+        for (var el in totalReactants) {
+          var count = totalReactants[el];
+          var gradId = 'url(#s12_atom_' + el + ')';
+          for (var i = 0; i < count; i++) {
+            var colIdx = col % rowLimit;
+            var rowIdx = Math.floor(col / rowLimit);
+            var ax = 240 - ((rowLimit - 1) * 9.5) + (colIdx * 19);
+            var ay = 265 - (rowIdx * 17);
+            lHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="8.5" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.3" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.4))"/>';
+            lHtml += '<text x="' + ax + '" y="' + (ay + 3.5) + '" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none;">' + el + '</text>';
+            col++;
+          }
+        }
+        leftAtoms.innerHTML = lHtml;
+      }
+
+      if (rightAtoms) {
+        var rHtml = '';
+        var col = 0;
+        var rowLimit = 7;
+        for (var el in totalProducts) {
+          var count = totalProducts[el];
+          var gradId = 'url(#s12_atom_' + el + ')';
+          for (var i = 0; i < count; i++) {
+            var colIdx = col % rowLimit;
+            var rowIdx = Math.floor(col / rowLimit);
+            var ax = 960 - ((rowLimit - 1) * 9.5) + (colIdx * 19);
+            var ay = 265 - (rowIdx * 17);
+            rHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="8.5" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.3" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.4))"/>';
+            rHtml += '<text x="' + ax + '" y="' + (ay + 3.5) + '" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none;">' + el + '</text>';
+            col++;
+          }
+        }
+        rightAtoms.innerHTML = rHtml;
+      }
+
+      // Calculate Tilt Angle (Pivot: 600, 140)
+      var diff = totalRightCount - totalLeftCount;
+      var tilt = 0;
+      if (allBalanced) {
+        tilt = 0;
+      } else {
+        tilt = Math.max(-8, Math.min(8, diff * 1.5));
+      }
+
+      if (beam) {
+        beam.style.transformOrigin = '600px 140px';
+        beam.style.transform = 'rotate(' + tilt + 'deg)';
+      }
+
+      // Update Stamp and Center Badge
+      if (allBalanced) {
+        if (stamp) stamp.style.opacity = '1';
+        if (badgeBg) { badgeBg.setAttribute('fill', '#065f46'); badgeBg.setAttribute('stroke', '#10b981'); }
+        if (badgeText) { badgeText.textContent = '✓ 0° शून्य झुकाव (समीकरण संतुलित)'; badgeText.setAttribute('fill', '#34d399'); }
+      } else {
+        if (stamp) stamp.style.opacity = '0';
+        if (badgeBg) { badgeBg.setAttribute('fill', '#1e293b'); badgeBg.setAttribute('stroke', '#ea580c'); }
+        if (badgeText) {
+          badgeText.textContent = diff > 0 ? 'दायां पलड़ा भारी (उत्पाद अधिक)' : 'बायां पलड़ा भारी (अभिकारक अधिक)';
+          badgeText.setAttribute('fill', '#fde047');
+        }
+      }
+
+      // Update Scoreboard Cards
+      var sb = document.getElementById('sim12_score_board');
+      if (sb) {
+        var sbHtml = '';
+        var elNamesHindi = {
+          'Fe': 'लोहा (Fe)',
+          'H': 'हाइड्रोजन (H)',
+          'O': 'ऑक्सीजन (O)',
+          'Mg': 'मैग्नीशियम (Mg)',
+          'N': 'नाइट्रोजन (N)',
+          'C': 'कार्बन (C)',
+          'Ba': 'बेरियम (Ba)',
+          'Cl': 'क्लोरीन (Cl)',
+          'Al': 'एल्युमीनियम (Al)',
+          'S': 'सल्फर (S)',
+          'Ca': 'कैल्शियम (Ca)',
+          'Na': 'सोडियम (Na)',
+          'Pb': 'लेड (Pb)'
+        };
+        for (var el in allElements) {
+          var l = totalReactants[el] || 0;
+          var r = totalProducts[el] || 0;
+          var isEq = (l === r);
+          var displayName = elNamesHindi[el] || el;
+          sbHtml += '<div style="display:flex; align-items:center; gap:8px; background:' + (isEq ? '#ecfdf5' : '#fff1f2') + '; border:2px solid ' + (isEq ? '#10b981' : '#f43f5e') + '; padding:8px 16px; border-radius:10px; box-shadow:0 2px 4px rgba(0,0,0,0.05);">';
+          sbHtml += '<strong style="font-size:15px; color:#0f172a;">' + displayName + ':</strong>';
+          sbHtml += '<span style="font-size:15px; font-weight:900; color:' + (isEq ? '#059669' : '#e11d48') + ';">बायां ' + l + ' vs दायां ' + r + ' ' + (isEq ? '✓' : '✗') + '</span>';
+          sbHtml += '</div>';
+        }
+        sb.innerHTML = sbHtml;
+      }
+
+      var st = document.getElementById('sim12_status');
+      if (st) {
+        if (allBalanced) {
+          st.innerHTML = '<span style="color:#059669; font-size:16px;"><strong>शानदार! समीकरण पूर्ण संतुलित है:</strong> द्रव्यमान संरक्षण नियम के अनुसार अभिकारकों व उत्पादों के सभी परमाणुओं की संख्या पूर्णतः बराबर है (0° संतुलन)।</span>';
+        } else {
+          var heavier = (totalLeftCount > totalRightCount) ? 'बायां पलड़ा (अभिकारक) भारी है' : 'दायां पलड़ा (उत्पाद) भारी है';
+          st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>असंतुलित (' + heavier + '):</strong> गुणांक (+/-) बदलें या "⚡ स्वतः संतुलित करें" बटन दबाकर सही गुणांक देखें।</span>';
+        }
+      }
+    }
+
+    // Auto-initialize Simulator 12
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { sim12SelectEquation(0); });
+    } else {
+      sim12SelectEquation(0);
+    }
+
   </script>
 </body>
 </html>
