@@ -1857,7 +1857,7 @@
       </div>
     </div>
 
-    <div class="sim-card" id="sim3_box">
+            <div class="sim-card" id="sim3_box">
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-flask-vial" style="color: #3b82f6;"></i>
@@ -1883,7 +1883,7 @@
           3. साबुन घोल से H₂ बुलबुले उठना
         </button>
         <button class="sim-btn success" id="sim3_btn4" style="background:#7c3aed; color:#fff;" onclick="sim3Step(4)">
-          4. मोमबत्ती से 'POP!' दहन व समीकरण
+          4. मोमबत्ती से 'POP!' दहन व निष्कर्ष
         </button>
         <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="sim3Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
@@ -1902,156 +1902,213 @@
               <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
             </linearGradient>
             <linearGradient id="s3_glass" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
-              <stop offset="15%" stop-color="#e0f2fe" stop-opacity="0.25"/>
-              <stop offset="85%" stop-color="#bae6fd" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="12%" stop-color="#e0f2fe" stop-opacity="0.3"/>
+              <stop offset="88%" stop-color="#bae6fd" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
             </linearGradient>
             <linearGradient id="s3_acid" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.6"/>
-              <stop offset="60%" stop-color="#e0f2fe" stop-opacity="0.75"/>
+              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.5"/>
+              <stop offset="60%" stop-color="#e0f2fe" stop-opacity="0.7"/>
               <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.9"/>
             </linearGradient>
             <linearGradient id="s3_zinc" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#ffffff"/><stop offset="40%" stop-color="#f1f5f9"/>
               <stop offset="80%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#94a3b8"/>
             </linearGradient>
-            <radialGradient id="s3_soapBubble" cx="35%" cy="35%" r="65%">
+            <radialGradient id="s3_soapBubbleGrad" cx="35%" cy="35%" r="65%">
               <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-              <stop offset="45%" stop-color="#bae6fd" stop-opacity="0.7"/>
-              <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.5"/>
+              <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+              <stop offset="70%" stop-color="#7dd3fc" stop-opacity="0.55"/>
               <stop offset="100%" stop-color="#0284c7" stop-opacity="0.85"/>
             </radialGradient>
             <linearGradient id="s3_flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
               <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.95"/>
-              <stop offset="30%" stop-color="#3b82f6" stop-opacity="0.85"/>
-              <stop offset="70%" stop-color="#f59e0b" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+              <stop offset="25%" stop-color="#3b82f6" stop-opacity="0.85"/>
+              <stop offset="65%" stop-color="#f59e0b" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#ef4444" stop-opacity="0.1"/>
             </linearGradient>
             <filter id="s3_blur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
           </defs>
 
-          <!-- WORKBENCH -->
-          <polygon points="20,385 880,385 840,435 60,435" fill="url(#s3_benchTop)"/>
-          <polygon points="60,435 840,435 840,441 60,441" fill="#94a3b8" opacity="0.8"/>
-          <polygon points="60,441 840,441 840,470 60,470" fill="url(#s3_benchFront)"/>
-          <ellipse cx="450" cy="472" rx="420" ry="10" fill="#000000" opacity="0.25" filter="url(#s3_blur)"/>
+          <!-- EXTENDED MAJESTIC WORKBENCH -->
+          <polygon points="30,410 1170,410 1130,465 70,465" fill="url(#s3_benchTop)"/>
+          <polygon points="70,465 1130,465 1130,472 70,472" fill="#94a3b8" opacity="0.8"/>
+          <polygon points="70,472 1130,472 1130,500 70,500" fill="url(#s3_benchFront)"/>
+          <ellipse cx="600" cy="502" rx="540" ry="12" fill="#000000" opacity="0.25" filter="url(#s3_blur)"/>
 
-          <!-- ERLENMEYER FLASK (CONICAL FLASK, CENTER X: 260, BASE Y: 395) -->
+          <!-- ================= 1. ERLENMEYER FLASK (CENTER X: 210, BASE Y: 410) ================= -->
           <g id="s3_flask_assembly">
-            <ellipse cx="260" cy="400" rx="100" ry="15" fill="#0f172a" opacity="0.35" filter="url(#s3_blur)"/>
+            <ellipse cx="210" cy="415" rx="105" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s3_blur)"/>
 
-            <!-- Dilute Acid inside Flask -->
-            <path id="s3_acid_fluid" d="M 195,330 L 165,390 Q 260,402 355,390 L 325,330 Z" fill="url(#s3_acid)" stroke="#38bdf8" stroke-width="1"/>
-            <ellipse cx="260" cy="330" rx="65" ry="8" fill="#bae6fd" fill-opacity="0.8"/>
+            <!-- Dilute Acid inside Flask (from Y: 340 to 408) -->
+            <path id="s3_acid_fluid" d="M 152,345 L 118,405 Q 210,418 302,405 L 268,345 Z" fill="url(#s3_acid)" stroke="#38bdf8" stroke-width="1.2"/>
+            <ellipse cx="210" cy="345" rx="58" ry="8" fill="#bae6fd" fill-opacity="0.8"/>
 
-            <!-- Gleaming Silvery Zinc Granules at bottom -->
+            <!-- Silvery Granular Zinc Pieces at bottom -->
             <g id="s3_zinc_granules">
-              <polygon points="190,388 205,376 215,385 200,394" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
-              <polygon points="215,385 230,372 245,382 230,394" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
-              <polygon points="245,382 260,370 275,382 260,394" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
-              <polygon points="275,382 290,374 305,385 290,394" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
-              <polygon points="305,385 320,376 330,387 318,393" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
-              <!-- Shimmer facets -->
-              <polygon points="200,380 208,375 212,382" fill="#ffffff"/>
-              <polygon points="230,375 238,371 242,378" fill="#ffffff"/>
-              <polygon points="260,373 268,369 272,376" fill="#ffffff"/>
+              <polygon points="140,404 156,390 168,400 152,410" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
+              <polygon points="168,400 185,386 200,398 184,410" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
+              <polygon points="200,398 218,384 234,398 218,410" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
+              <polygon points="234,398 250,388 266,400 250,410" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
+              <polygon points="266,400 280,392 292,403 278,410" fill="url(#s3_zinc)" stroke="#38bdf8" stroke-width="1.2"/>
+              <!-- Highlights -->
+              <polygon points="150,394 158,389 162,396" fill="#ffffff"/>
+              <polygon points="184,389 192,385 196,392" fill="#ffffff"/>
+              <polygon points="216,387 224,383 228,390" fill="#ffffff"/>
             </g>
 
-            <!-- H2 Gas Bubbles in Acid (Step 2) -->
-            <g id="s3_acid_bubbles" opacity="0" class="liquid-flow-stream">
-              <circle cx="210" cy="370" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
-              <circle cx="230" cy="355" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
-              <circle cx="250" cy="340" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
-              <circle cx="270" cy="350" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
-              <circle cx="290" cy="365" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="0.8"/>
-              <circle cx="240" cy="375" r="2.5" fill="#ffffff"/>
-              <circle cx="280" cy="375" r="2.5" fill="#ffffff"/>
+            <!-- CONTINUOUS JS EFFLEVESCENCE BUBBLES IN FLASK -->
+            <g id="s3_flask_bubbles">
+              <circle id="s3_fb1" cx="165" cy="400" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb2" cx="185" cy="402" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb3" cx="210" cy="405" r="4.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb4" cx="230" cy="402" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb5" cx="250" cy="400" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb6" cx="270" cy="404" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
+              <circle id="s3_fb7" cx="215" cy="408" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0"/>
             </g>
 
-            <!-- Conical Flask Glass Shell -->
-            <path d="M 245,185 L 245,240 L 160,385 Q 160,398 185,398 L 335,398 Q 360,398 360,385 L 275,240 L 275,185 Z" fill="url(#s3_glass)" stroke="#cbd5e1" stroke-width="2.8"/>
-            <ellipse cx="260" cy="185" rx="16" ry="5" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
-            <line x1="175" y1="385" x2="245" y2="245" stroke="#ffffff" stroke-width="3" opacity="0.8"/>
+            <!-- Conical Flask Glass Body -->
+            <path d="M 194,195 L 194,250 L 112,402 Q 112,416 136,416 L 284,416 Q 308,416 308,402 L 226,250 L 226,195 Z" fill="url(#s3_glass)" stroke="#94a3b8" stroke-width="3"/>
+            <ellipse cx="210" cy="195" rx="16" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+            <line x1="125" y1="400" x2="195" y2="255" stroke="#ffffff" stroke-width="3.5" opacity="0.85"/>
 
             <!-- Rubber Cork with Two Holes -->
-            <path d="M 244,185 L 276,185 L 273,205 L 247,205 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+            <path d="M 193,195 L 227,195 L 224,217 L 196,217 Z" fill="#78350f" stroke="#451a03" stroke-width="1.8"/>
 
-            <!-- Thistle Funnel (लम्बी कीप, Left Hole) -->
-            <path d="M 235,110 L 265,110 L 253,135 L 253,375 L 249,375 L 249,135 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.8"/>
-            <ellipse cx="251" cy="110" rx="15" ry="4" fill="#bae6fd"/>
+            <!-- Thistle Funnel (लम्बी थिसिल कीप - Left Hole) -->
+            <path d="M 186,115 L 214,115 L 203,142 L 203,388 L 199,388 L 199,142 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+            <ellipse cx="200" cy="115" rx="14" ry="4" fill="#bae6fd"/>
+            <text x="200" y="98" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">थिसिल कीप</text>
 
-            <!-- Glass Delivery Tube (Right Hole to Soap Trough) -->
-            <path d="M 268,195 L 268,140 Q 268,125 285,125 L 435,125 Q 455,125 455,145 L 455,345 Q 455,360 475,360 L 515,360" stroke="#38bdf8" stroke-width="7" fill="none" stroke-linecap="round"/>
-            <path d="M 268,195 L 268,140 Q 268,125 285,125 L 435,125 Q 455,125 455,145 L 455,345 Q 455,360 475,360 L 515,360" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <!-- Delivery Tube (कांच की निकास नली - Right Hole to Soap Dish) -->
+            <path id="s3_tube_bg" d="M 218,206 L 218,140 Q 218,122 236,122 L 485,122 Q 505,122 505,142 L 505,350 Q 505,368 522,368 L 545,368" stroke="#38bdf8" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path id="s3_tube_inner" d="M 218,206 L 218,140 Q 218,122 236,122 L 485,122 Q 505,122 505,142 L 505,350 Q 505,368 522,368 L 545,368" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+            <!-- Pulsing Gas Flow inside tube -->
+            <path id="s3_tube_pulse" d="M 218,206 L 218,140 Q 218,122 236,122 L 485,122 Q 505,122 505,142 L 505,350 Q 505,368 522,368 L 545,368" stroke="#2563eb" stroke-width="4.5" fill="none" stroke-dasharray="14 18" stroke-dashoffset="0" opacity="0"/>
 
-            <!-- Flask Label Tag -->
-            <rect x="160" y="415" width="200" height="28" rx="7" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
-            <text x="260" y="434" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">दानेदार जस्ता (Zn) + तनु H₂SO₄</text>
+            <!-- Flask Label Badge -->
+            <rect x="110" y="430" width="200" height="30" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+            <text x="210" y="450" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">दानेदार जस्ता (Zn) + तनु H₂SO₄</text>
           </g>
 
-          <!-- SOAP SOLUTION TROUGH (WHITE PORCELAIN DISH AT X: 480 to 600, BASE Y: 395) -->
+          <!-- ================= 2. SOAP SOLUTION TROUGH (CENTER X: 540, BASE Y: 410) ================= -->
           <g id="s3_trough_assembly">
-            <ellipse cx="540" cy="400" rx="70" ry="12" fill="#0f172a" opacity="0.3" filter="url(#s3_blur)"/>
-            <!-- Pure White Porcelain Dish -->
-            <path d="M 470,345 Q 540,380 610,345 Q 610,395 540,398 Q 470,395 470,345 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5"/>
-            <ellipse cx="540" cy="345" rx="70" ry="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-            <!-- Bright Pinkish/Blue Soap Liquid -->
-            <ellipse cx="540" cy="348" rx="64" ry="11" fill="#f43f5e" fill-opacity="0.3" stroke="#fb7185" stroke-width="1"/>
-            <text x="540" y="425" font-size="12" font-weight="900" fill="#e11d48" text-anchor="middle">साबुन का घोल (Soap Solution)</text>
+            <ellipse cx="540" cy="415" rx="75" ry="14" fill="#0f172a" opacity="0.3" filter="url(#s3_blur)"/>
+            <!-- Porcelain Bowl -->
+            <path d="M 465,355 Q 540,392 615,355 Q 615,410 540,413 Q 465,410 465,355 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+            <ellipse cx="540" cy="355" rx="75" ry="15" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+            <!-- Translucent Soapy Solution -->
+            <ellipse cx="540" cy="358" rx="68" ry="12" fill="#f43f5e" fill-opacity="0.35" stroke="#fb7185" stroke-width="1.5"/>
+            <!-- Trough Label Badge -->
+            <rect x="440" y="430" width="200" height="30" rx="8" fill="#881337" stroke="#f43f5e" stroke-width="2"/>
+            <text x="540" y="450" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">साबुन का घोल (Soap Solution)</text>
           </g>
 
-          <!-- RISING SOAP BUBBLES FILLED WITH H2 GAS (STEP 3) -->
-          <g id="s3_floating_bubbles" opacity="0" style="transition: opacity 0.8s ease;">
-            <circle cx="530" cy="315" r="16" fill="url(#s3_soapBubble)"/>
-            <circle cx="555" cy="275" r="20" fill="url(#s3_soapBubble)"/>
-            <circle cx="535" cy="225" r="24" fill="url(#s3_soapBubble)"/>
-            <circle cx="560" cy="170" r="26" fill="url(#s3_soapBubble)"/>
-            <text x="560" y="175" font-size="11" font-weight="900" fill="#1e3a8a" text-anchor="middle">H₂ बुलबुला</text>
-          </g>
-
-          <!-- BURNING CANDLE TOOL (APPROACHES TOP BUBBLE IN STEP 4) -->
-          <g id="s3_candle_tool" opacity="0" transform="translate(680, 110)" style="transition: all 1s ease;">
-            <rect x="0" y="40" width="16" height="60" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-            <line x1="8" y1="40" x2="8" y2="30" stroke="#000000" stroke-width="2"/>
-            <path d="M 8,30 C 2,18 2,10 8,0 C 14,10 14,18 8,30 Z" fill="url(#s3_flameGrad)"/>
-
-            <!-- POP BURST FLARE -->
-            <g id="s3_pop_flare" opacity="0" style="transition: opacity 0.3s ease;">
-              <polygon points="8,-25 18,-8 35,-15 25,2 40,12 22,18 26,35 10,25 -5,36 -2,22 -18,16 -5,3 -15,-12 2,-6" fill="#facc15" stroke="#ea580c" stroke-width="2"/>
-              <text x="10" y="-35" font-size="18" font-weight="900" fill="#b45309" text-anchor="middle">💥 POP! आवाज</text>
+          <!-- ================= 3. CONTINUOUS RISING SOAP BUBBLES IN A LOOP (JS CONTROLLED) ================= -->
+          <g id="s3_soap_bubbles_group">
+            <!-- Bubble 1 -->
+            <g id="s3_sbub_1" transform="translate(535, 350)" opacity="0">
+              <circle cx="0" cy="0" r="18" fill="url(#s3_soapBubbleGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+              <ellipse cx="-5" cy="-6" rx="5" ry="2.5" fill="#ffffff" opacity="0.85"/>
+              <text x="0" y="4" font-size="10" font-weight="900" fill="#0f172a" text-anchor="middle">H₂</text>
+            </g>
+            <!-- Bubble 2 -->
+            <g id="s3_sbub_2" transform="translate(550, 350)" opacity="0">
+              <circle cx="0" cy="0" r="22" fill="url(#s3_soapBubbleGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+              <ellipse cx="-6" cy="-7" rx="6" ry="3" fill="#ffffff" opacity="0.85"/>
+              <text x="0" y="5" font-size="11" font-weight="900" fill="#0f172a" text-anchor="middle">H₂ गैस</text>
+            </g>
+            <!-- Bubble 3 -->
+            <g id="s3_sbub_3" transform="translate(525, 350)" opacity="0">
+              <circle cx="0" cy="0" r="25" fill="url(#s3_soapBubbleGrad)" stroke="#38bdf8" stroke-width="1.8"/>
+              <ellipse cx="-7" cy="-8" rx="7" ry="3.5" fill="#ffffff" opacity="0.85"/>
+              <text x="0" y="5" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">H₂ बुलबुला</text>
+            </g>
+            <!-- Bubble 4 -->
+            <g id="s3_sbub_4" transform="translate(560, 350)" opacity="0">
+              <circle cx="0" cy="0" r="20" fill="url(#s3_soapBubbleGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+              <ellipse cx="-5" cy="-6" rx="5" ry="3" fill="#ffffff" opacity="0.85"/>
+              <text x="0" y="4" font-size="10" font-weight="900" fill="#0f172a" text-anchor="middle">H₂</text>
+            </g>
+            <!-- Bubble 5 -->
+            <g id="s3_sbub_5" transform="translate(540, 350)" opacity="0">
+              <circle cx="0" cy="0" r="26" fill="url(#s3_soapBubbleGrad)" stroke="#38bdf8" stroke-width="1.8"/>
+              <ellipse cx="-7" cy="-9" rx="7" ry="4" fill="#ffffff" opacity="0.85"/>
+              <text x="0" y="5" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">H₂ गैस</text>
             </g>
           </g>
 
-          <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
-          <g id="s3_projector_panel" transform="translate(640, 45)">
-            <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5" opacity="0.96"/>
-            <rect x="0" y="0" width="245" height="42" rx="14" fill="#1e3a8a"/>
-            <rect x="0" y="28" width="245" height="14" fill="#1e3a8a"/>
-            <text x="122" y="26" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">📊 लाइव प्रेक्षण (Live Data)</text>
+          <!-- ================= 4. BURNING CANDLE TOOL (GLIDES TO BUBBLE IN STEP 4) ================= -->
+          <g id="s3_candle_tool" opacity="0" transform="translate(710, 110)" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
+            <!-- Candle Body -->
+            <rect x="0" y="42" width="18" height="70" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+            <line x1="9" y1="42" x2="9" y2="30" stroke="#1e293b" stroke-width="2.5"/>
+            <!-- Flame -->
+            <path d="M 9,30 C 2,16 2,8 9,-2 C 16,8 16,16 9,30 Z" fill="url(#s3_flameGrad)"/>
+            <text x="9" y="130" font-size="12" font-weight="900" fill="#475569" text-anchor="middle">जलती मोमबत्ती</text>
 
-            <g transform="translate(15, 60)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">अभिकारक:</text>
-              <text x="0" y="20" font-size="14" font-weight="900" fill="#38bdf8">Zn(s) + तनु H₂SO₄(aq)</text>
+            <!-- POP EXPLOSION FLASH & SOUND BANNER -->
+            <g id="s3_pop_flare" opacity="0" style="transition: all 0.35s ease-out; transform-origin: 9px 15px;">
+              <!-- Shockwave blast rings -->
+              <circle cx="9" cy="15" r="45" fill="none" stroke="#facc15" stroke-width="3" opacity="0.7"/>
+              <circle cx="9" cy="15" r="70" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.4"/>
+              <!-- Starburst flare -->
+              <polygon points="9,-25 18,-8 36,-15 26,4 42,15 24,20 28,38 11,26 -5,38 -2,22 -20,16 -6,4 -16,-12 2,-6" fill="#facc15" stroke="#ea580c" stroke-width="3"/>
+              <!-- Bold POP Callout Box -->
+              <g transform="translate(-60, -75)">
+                <rect x="0" y="0" width="140" height="38" rx="8" fill="#b91c1c" stroke="#fef08a" stroke-width="2.5" filter="drop-shadow(0 4px 10px rgba(185,28,28,0.4))"/>
+                <text x="70" y="25" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">💥 'पॉप' (POP!)</text>
+              </g>
+            </g>
+          </g>
+
+          <!-- ================= 5. LIVE OBSERVATION & RESULTS PANEL (APPEARS ONLY IN LAST STEP) ================= -->
+          <g id="s3_projector_panel" transform="translate(775, 40)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
+            <!-- Outer Card Shell (Class 10 SS Premium Light Card Style) -->
+            <rect x="0" y="0" width="395" height="425" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="3" filter="drop-shadow(0 14px 28px rgba(0,0,0,0.1))"/>
+            
+            <!-- Card Header (Royal Blue) -->
+            <rect x="0" y="0" width="395" height="52" rx="18" fill="#1e3a8a"/>
+            <rect x="0" y="34" width="395" height="18" fill="#1e3a8a"/>
+            <text x="197" y="33" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📊 प्रायोगिक प्रेक्षण व निष्कर्ष (Live Data)</text>
+
+            <!-- Observation 1: Reactants -->
+            <g transform="translate(18, 70)">
+              <rect x="0" y="0" width="359" height="58" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#64748b">अभिकारक (Reactants):</text>
+              <text x="14" y="44" font-size="16" font-weight="900" fill="#1e40af">दानेदार जस्ता [Zn] + तनु सल्फ्यूरिक अम्ल [H₂SO₄]</text>
             </g>
 
-            <g transform="translate(15, 115)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">उत्सर्जित गैस:</text>
-              <text x="0" y="20" font-size="14" font-weight="900" fill="#4ade80">हाइड्रोजन गैस (H₂↑)</text>
+            <!-- Observation 2: Gas Emitted -->
+            <g transform="translate(18, 140)">
+              <rect x="0" y="0" width="359" height="58" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#15803d">उत्सर्जित गैस (Gas Produced):</text>
+              <text x="14" y="44" font-size="16" font-weight="900" fill="#166534">हाइड्रोजन गैस (H₂↑) — तीव्र बुदबुदाहट के साथ</text>
             </g>
 
-            <g transform="translate(15, 170)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">दहन पुष्टिकरण परीक्षण:</text>
-              <rect x="0" y="10" width="215" height="50" rx="8" fill="#1e293b" stroke="#facc15" stroke-width="1.5"/>
-              <text id="s3_panel_obs" x="107" y="32" font-size="13" font-weight="900" fill="#fde047" text-anchor="middle">प्रारंभिक स्थिति</text>
-              <text id="s3_panel_sub" x="107" y="50" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">चरण 2 दबाएं</text>
+            <!-- Observation 3: Confirmation Test -->
+            <g transform="translate(18, 210)">
+              <rect x="0" y="0" width="359" height="66" rx="10" fill="#fefce8" stroke="#fde047" stroke-width="2"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#a16207">दहन परीक्षण (Flame Test):</text>
+              <text x="14" y="44" font-size="16" font-weight="900" fill="#b45309">💥 'पॉप' ध्वनि (POP Sound) के साथ दहन!</text>
+              <text x="14" y="60" font-size="12" font-weight="800" fill="#78350f">साबुन बुलबुले हवा से हल्के होने के कारण ऊपर उठते हैं</text>
             </g>
 
-            <g transform="translate(15, 255)">
-              <rect x="0" y="0" width="215" height="34" rx="8" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5"/>
-              <text x="107" y="22" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">धातु + अम्ल ➔ लवण + H₂↑</text>
+            <!-- Observation 4: Chemical Equation & Type -->
+            <g transform="translate(18, 288)">
+              <rect x="0" y="0" width="359" height="65" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+              <text x="14" y="22" font-size="13" font-weight="900" fill="#1d4ed8">संतुलित रासायनिक समीकरण:</text>
+              <text x="14" y="46" font-size="16" font-weight="900" fill="#1e3a8a">Zn(s) + H₂SO₄(aq) ➔ ZnSO₄(aq) + H₂↑</text>
+            </g>
+
+            <!-- Observation 5: Conclusion Badge -->
+            <g transform="translate(18, 365)">
+              <rect x="0" y="0" width="359" height="42" rx="10" fill="#1e293b"/>
+              <text x="179" y="26" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">✔ विस्थापन अभिक्रिया एवं ऊष्माक्षेपी प्रभाव (ताप वृद्धि)</text>
             </g>
           </g>
         </svg>
@@ -4800,20 +4857,146 @@
       }, 11500));
     }
 
+            /* --- SIMULATOR 3 (Zn + H2SO4 -> H2 + POP Sound) 60FPS CONTINUOUS LOOP --- */
+    var s3AnimFrameId = null;
+    var s3FlaskActive = false;
+    var s3SoapActive = false;
+    var s3TubeOffset = 0;
+
+    var s3FlaskBubblesData = [
+      { id: 's3_fb1', x: 165, y: 400, startY: 405, topY: 342, speed: 1.4, delay: 0 },
+      { id: 's3_fb2', x: 185, y: 402, startY: 406, topY: 342, speed: 1.7, delay: 12 },
+      { id: 's3_fb3', x: 210, y: 405, startY: 408, topY: 342, speed: 1.9, delay: 24 },
+      { id: 's3_fb4', x: 230, y: 402, startY: 407, topY: 342, speed: 1.5, delay: 36 },
+      { id: 's3_fb5', x: 250, y: 400, startY: 405, topY: 342, speed: 1.8, delay: 48 },
+      { id: 's3_fb6', x: 270, y: 404, startY: 406, topY: 342, speed: 1.6, delay: 60 },
+      { id: 's3_fb7', x: 215, y: 408, startY: 409, topY: 342, speed: 2.1, delay: 72 }
+    ];
+
+    var s3SoapBubblesData = [
+      { id: 's3_sbub_1', x: 535, y: 350, startY: 350, topY: 130, speed: 1.6, delay: 0 },
+      { id: 's3_sbub_2', x: 550, y: 350, startY: 350, topY: 130, speed: 1.9, delay: 45 },
+      { id: 's3_sbub_3', x: 525, y: 350, startY: 350, topY: 130, speed: 1.7, delay: 90 },
+      { id: 's3_sbub_4', x: 560, y: 350, startY: 350, topY: 130, speed: 2.1, delay: 135 },
+      { id: 's3_sbub_5', x: 540, y: 350, startY: 350, topY: 130, speed: 1.8, delay: 180 }
+    ];
+
+    function s3RunContinuousLoop() {
+      // 1. Animate Flask effervescence bubbles
+      if (s3FlaskActive) {
+        s3FlaskBubblesData.forEach(function(b) {
+          if (b.delay > 0) { b.delay--; return; }
+          b.y -= b.speed;
+          if (b.y <= b.topY) {
+            b.y = b.startY;
+          }
+          var el = document.getElementById(b.id);
+          if (el) {
+            var progress = (b.startY - b.y) / (b.startY - b.topY);
+            var op = progress < 0.15 ? (progress / 0.15) : (progress > 0.85 ? (1 - progress) / 0.15 : 0.9);
+            el.setAttribute('cy', b.y);
+            el.style.opacity = op;
+          }
+        });
+
+        // Tube pulse flow
+        s3TubeOffset -= 2.2;
+        var tPulse = document.getElementById('s3_tube_pulse');
+        if (tPulse) {
+          tPulse.style.strokeDashoffset = s3TubeOffset;
+        }
+      }
+
+      // 2. Animate Soap bubbles floating into sky
+      if (s3SoapActive) {
+        s3SoapBubblesData.forEach(function(b) {
+          if (b.delay > 0) { b.delay--; return; }
+          b.y -= b.speed;
+          if (b.y <= b.topY) {
+            b.y = b.startY; // Continuously loop!
+          }
+          var el = document.getElementById(b.id);
+          if (el) {
+            var progress = (b.startY - b.y) / (b.startY - b.topY);
+            var op = progress < 0.1 ? (progress / 0.1) : (progress > 0.88 ? (1 - progress) / 0.12 : 0.95);
+            var wobble = Math.sin((350 - b.y) * 0.08) * 8;
+            var scale = 0.6 + progress * 0.5;
+            el.setAttribute('transform', 'translate(' + (b.x + wobble) + ',' + b.y + ') scale(' + scale + ')');
+            el.style.opacity = op;
+          }
+        });
+      }
+
+      if (s3FlaskActive || s3SoapActive) {
+        s3AnimFrameId = requestAnimationFrame(s3RunContinuousLoop);
+      }
+    }
+
+    function playPopSound() {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        var ctx = new AudioCtx();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(240, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(35, ctx.currentTime + 0.14);
+        gain.gain.setValueAtTime(0.85, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.14);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.15);
+      } catch (e) {}
+    }
+
     function sim3Reset() {
       clearSimTimers(3);
+      if (s3AnimFrameId) { cancelAnimationFrame(s3AnimFrameId); s3AnimFrameId = null; }
+      s3FlaskActive = false;
+      s3SoapActive = false;
+
+      // Reset bubble data positions
+      s3FlaskBubblesData.forEach(function(b, idx) {
+        b.y = b.startY;
+        b.delay = idx * 12;
+        var el = document.getElementById(b.id);
+        if (el) { el.setAttribute('cy', b.startY); el.style.opacity = '0'; }
+      });
+      s3SoapBubblesData.forEach(function(b, idx) {
+        b.y = b.startY;
+        b.delay = idx * 45;
+        var el = document.getElementById(b.id);
+        if (el) {
+          el.setAttribute('transform', 'translate(' + b.x + ',' + b.startY + ') scale(0.6)');
+          el.style.opacity = '0';
+        }
+      });
+
       var pbar = document.getElementById('sim3_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sim3_status');
       if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> शंक्वाकार फ्लास्क में जस्ता व तनु सल्फ्यूरिक अम्ल तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
 
-      var bub = document.getElementById('s3_acid_bubbles'); if (bub) bub.style.opacity = '0';
-      var soap = document.getElementById('s3_floating_bubbles'); if (soap) soap.style.opacity = '0';
-      var cTool = document.getElementById('s3_candle_tool');
-      if (cTool) { cTool.style.opacity = '0'; cTool.style.transform = 'translate(680px, 110px)'; }
-      var pop = document.getElementById('s3_pop_flare'); if (pop) pop.style.opacity = '0';
+      var tubePulse = document.getElementById('s3_tube_pulse');
+      if (tubePulse) tubePulse.style.opacity = '0';
 
-      var pObs = document.getElementById('s3_panel_obs'); if (pObs) pObs.textContent = 'प्रारंभिक स्थिति';
-      var pSub = document.getElementById('s3_panel_sub'); if (pSub) pSub.textContent = 'चरण 2 दबाएं';
+      // Hide Candle & POP Flare
+      var cTool = document.getElementById('s3_candle_tool');
+      if (cTool) {
+        cTool.style.opacity = '0';
+        cTool.style.transform = 'translate(710px, 110px)';
+      }
+      var pop = document.getElementById('s3_pop_flare');
+      if (pop) pop.style.opacity = '0';
+
+      // Observation window HIDDEN during steps 1, 2, 3
+      var panel = document.getElementById('s3_projector_panel');
+      if (panel) {
+        panel.style.opacity = '0';
+        panel.style.pointerEvents = 'none';
+        panel.style.transform = 'translate(775px, 40px) scale(0.96)';
+      }
 
       var btn = document.getElementById('sim3_play_btn'); if (btn) btn.disabled = false;
     }
@@ -4821,12 +5004,10 @@
     function sim3Step(s) {
       var st = document.getElementById('sim3_status');
       var pbar = document.getElementById('sim3_pbar');
-      var bub = document.getElementById('s3_acid_bubbles');
-      var soap = document.getElementById('s3_floating_bubbles');
+      var tubePulse = document.getElementById('s3_tube_pulse');
       var cTool = document.getElementById('s3_candle_tool');
       var pop = document.getElementById('s3_pop_flare');
-      var pObs = document.getElementById('s3_panel_obs');
-      var pSub = document.getElementById('s3_panel_sub');
+      var panel = document.getElementById('s3_projector_panel');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
@@ -4834,44 +5015,72 @@
         if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक व्यवस्था):</strong> शंक्वाकार फ्लास्क में चमकदार दानेदार जस्ता (Zinc), थिसिल कीप व निकास नली लगी है जो साबुन के घोल में खुलती है।';
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        if (bub) bub.style.opacity = '1';
-        if (soap) soap.style.opacity = '0';
-        if (cTool) cTool.style.opacity = '0';
-        if (pObs) pObs.textContent = 'तीव्र बुदबुदाहट (Effervescence)';
-        if (pSub) pSub.textContent = 'H₂ गैस का तेज उत्सर्जन';
+        // Start continuous effervescence in flask
+        s3FlaskActive = true;
+        s3SoapActive = false;
+        if (tubePulse) tubePulse.style.opacity = '1';
 
-        if (st) st.innerHTML = '<strong>चरण 2 (तीव्र बुदबुदाहट व H₂ उत्सर्जन):</strong> जस्ते पर तनु H₂SO₄ गिरते ही संपर्क सतह पर अत्यधिक तीव्र बुदबुदाहट (Effervescence) शुरू हुई और हाइड्रोजन (H₂) गैस के बुलबुले निकास नली की ओर दौड़े!';
+        // Hide soap bubbles, candle and panel
+        s3SoapBubblesData.forEach(function(b) {
+          var el = document.getElementById(b.id);
+          if (el) el.style.opacity = '0';
+        });
+        if (cTool) { cTool.style.opacity = '0'; cTool.style.transform = 'translate(710px, 110px)'; }
+        if (pop) pop.style.opacity = '0';
+        if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+
+        if (!s3AnimFrameId) s3AnimFrameId = requestAnimationFrame(s3RunContinuousLoop);
+
+        if (st) st.innerHTML = '<strong>चरण 2 (तीव्र बुदबुदाहट व H₂ उत्सर्जन):</strong> जस्ते पर तनु H₂SO₄ का संपर्क होते ही तीव्र बुदबुदाहट शुरू हुई और हाइड्रोजन (H₂) गैस लगातार निकलकर निकास नली में प्रवाहित हो रही है!';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (bub) bub.style.opacity = '1';
-        if (soap) soap.style.opacity = '1';
-        if (cTool) cTool.style.opacity = '0';
-        if (pObs) pObs.textContent = 'साबुन बुलबुले (H₂ Gas Filled)';
-        if (pSub) pSub.textContent = 'हल्की होने से हवा में उठे';
+        // BOTH flask effervescence and soap bubbles continuous loop active!
+        s3FlaskActive = true;
+        s3SoapActive = true;
+        if (tubePulse) tubePulse.style.opacity = '1';
 
-        if (st) st.innerHTML = '<strong>चरण 3 (साबुन घोल से बुलबुले उठना):</strong> निकास नली से निकलकर H₂ गैस साबुन के घोल में पहुंची। साबुन के बुलबुलों में हाइड्रोजन गैस भर गई और वे हवा से हल्के होने के कारण ऊपर तैरने लगे!';
+        // Candle & Panel remain hidden
+        if (cTool) { cTool.style.opacity = '0'; cTool.style.transform = 'translate(710px, 110px)'; }
+        if (pop) pop.style.opacity = '0';
+        if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
+
+        if (!s3AnimFrameId) s3AnimFrameId = requestAnimationFrame(s3RunContinuousLoop);
+
+        if (st) st.innerHTML = '<strong>चरण 3 (साबुन घोल से लगातार बुलबुले उठना):</strong> H₂ गैस साबुन के घोल में बुलबुले बनाती है। हाइड्रोजन गैस हवा से काफी हल्की होने के कारण बुलबुले लगातार ऊपर तैरते हैं!';
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        if (bub) bub.style.opacity = '1';
-        if (soap) soap.style.opacity = '1';
+        // Keep continuous bubbling stream active
+        s3FlaskActive = true;
+        s3SoapActive = true;
+        if (tubePulse) tubePulse.style.opacity = '1';
+        if (!s3AnimFrameId) s3AnimFrameId = requestAnimationFrame(s3RunContinuousLoop);
 
-        // Candle approaches
+        // Candle approaches the rising bubble stream smoothly
         if (cTool) {
           cTool.style.opacity = '1';
-          cTool.style.transform = 'translate(565px, 110px)';
+          cTool.style.transform = 'translate(545px, 110px)';
         }
+
+        // Pop flare bursts when flame touches bubble
         addSimTimer(3, setTimeout(function() {
           if (pop) pop.style.opacity = '1';
-        }, 600));
+          playPopSound();
+        }, 1200));
 
-        if (pObs) pObs.textContent = 'पॉप ध्वनि (POP! Burst)';
-        if (pSub) pSub.textContent = 'H₂ का निर्णायक परीक्षण';
+        // NOW, and ONLY at the very last step, the observation panel appears!
+        addSimTimer(3, setTimeout(function() {
+          if (panel) {
+            panel.style.opacity = '1';
+            panel.style.pointerEvents = 'auto';
+            panel.style.transform = 'translate(775px, 40px) scale(1)';
+          }
+        }, 1800));
 
-        if (st) st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>चरण 4 (पॉप दहन परीक्षण व संतुलित रासायनिक समीकरण):</strong></span><br>' +
-          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#dbeafe; padding:6px 14px; border-radius:8px; border:2px solid #93c5fd; color:#1e40af; font-weight:900;">' +
+        if (st) st.innerHTML = '<span style="color:#1d4ed8; font-size:17px;"><strong>चरण 4 (पॉप दहन परीक्षण व संतुलित रासायनिक समीकरण):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:16px; background:#dbeafe; padding:6px 14px; border-radius:8px; border:2px solid #93c5fd; color:#1e40af; font-weight:900;">' +
           'Zn(s) + H₂SO₄(aq) ➔ ZnSO₄(aq) + <strong>H₂(g)↑ (\'POP\' ध्वनि से दहन)</strong>' +
           '</span><br>' +
-          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">जलती हुई मोमबत्ती बुलबुले के पास लाने पर हाइड्रोजन गैस विशिष्ट <strong>\'पॉप\' ध्वनि (POP Sound)</strong> के साथ फटकर जलती है, जो इसके दहनशील होने का पुख्ता प्रमाण है।</span>';
+          '<span style="font-size:15px; color:#334155; margin-top:4px; display:inline-block;">जलती हुई मोमबत्ती बुलबुले के पास लाने पर हाइड्रोजन गैस विशिष्ट <strong>\'पॉप\' ध्वनि (POP Sound)</strong> के साथ फटकर जलती है, जो इसके दहनशील होने का पुख्ता प्रमाण है। फ्लास्क को छूने पर गर्म महसूस होता है (ऊष्माक्षेपी अभिक्रिया)।</span>';
       }
     }
 
@@ -4884,10 +5093,10 @@
       addSimTimer(3, setTimeout(function() {
         sim3Step(4);
         if (btn) btn.disabled = false;
-      }, 11500));
+      }, 12000));
     }
 
-            /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) 16:9 PROJECTOR MASTER --- */
+    /* --- SIMULATOR 4 (CaO + H2O -> Ca(OH)2 + Heat) 16:9 PROJECTOR MASTER --- */
     function sim4Reset() {
       clearSimTimers(4);
       var pbar = document.getElementById('sim4_pbar'); if (pbar) pbar.style.width = '0%';
