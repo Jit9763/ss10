@@ -578,26 +578,35 @@ window.MathJax = {
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 1: आकृति में, रेखाएँ $AB$ और $CD$ बिंदु $O$ पर प्रतिच्छेद करती हैं। यदि $\angle AOC + \angle BOE = 70^\circ$ है और $\angle BOD = 40^\circ$ है, तो $\angle BOE$ और प्रतिवर्ती $\angle COE$ ज्ञात कीजिए।</h3>
 
-    <!-- SVG Diagram for Ex 6.1 Q1 -->
-    <div style="text-align:center; margin:16px 0;">
-      <svg width="480" height="240" viewBox="0 0 480 240" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
-        <!-- Line AB -->
-        <line x1="50" y1="140" x2="430" y2="140" stroke="#1e40af" stroke-width="4"/>
-        <!-- Line CD -->
-        <line x1="120" y1="210" x2="360" y2="70" stroke="#16a34a" stroke-width="4"/>
-        <!-- Ray OE -->
-        <line x1="240" y1="140" x2="380" y2="30" stroke="#dc2626" stroke-width="4"/>
-        <!-- Center O -->
-        <circle cx="240" cy="140" r="6" fill="#0f172a"/>
-        <!-- Labels -->
-        <text x="35" y="145" fill="#1e40af" font-size="16" font-weight="900">A</text>
-        <text x="440" y="145" fill="#1e40af" font-size="16" font-weight="900">B</text>
-        <text x="100" y="225" fill="#16a34a" font-size="16" font-weight="900">C</text>
-        <text x="365" y="65" fill="#16a34a" font-size="16" font-weight="900">D</text>
-        <text x="385" y="30" fill="#dc2626" font-size="16" font-weight="900">E</text>
-        <text x="240" y="165" fill="#0f172a" font-size="16" font-weight="900">O</text>
-        <text x="180" y="125" fill="#ea580c" font-size="14" font-weight="bold">40°</text>
-        <text x="330" y="125" fill="#ea580c" font-size="14" font-weight="bold">40°</text>
+    <div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: प्रतिच्छेदी रेखाएँ AB व CD तथा किरण OE</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line AB -->
+  <line x1="40" y1="140" x2="460" y2="140" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <!-- Line CD (C top-left, D bottom-right) -->
+  <line x1="120" y1="50" x2="380" y2="230" stroke="#16a34a" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <!-- Ray OE (top-right) -->
+  <line x1="250" y1="140" x2="380" y2="60" stroke="#dc2626" stroke-width="4" marker-end="url(#arr-red)"/>
+  <!-- Center O -->
+  <circle cx="250" cy="140" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="35" y="168" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="450" y="168" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="105" y="45" fill="#16a34a" font-size="18" font-weight="900">C</text>
+  <text x="385" y="240" fill="#16a34a" font-size="18" font-weight="900">D</text>
+  <text x="390" y="60" fill="#dc2626" font-size="18" font-weight="900">E</text>
+  <text x="245" y="168" fill="#0f172a" font-size="18" font-weight="900">O</text>
+  <!-- Angle markings -->
+  <text x="160" y="125" fill="#ea580c" font-size="15" font-weight="bold">∠AOC=40°</text>
+  <text x="320" y="175" fill="#ea580c" font-size="15" font-weight="bold">∠BOD=40°</text>
+  <text x="320" y="120" fill="#7c3aed" font-size="15" font-weight="bold">∠BOE=30°</text>
+
       </svg>
     </div>
 
@@ -646,23 +655,36 @@ window.MathJax = {
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 2: आकृति में, रेखाएँ $XY$ और $MN$ बिंदु $O$ पर प्रतिच्छेद करती हैं। यदि $\angle POY = 90^\circ$ और $a : b = 2 : 3$ है, तो $c$ ज्ञात कीजिए।</h3>
 
-    <!-- SVG Diagram for Ex 6.1 Q2 -->
-    <div style="text-align:center; margin:16px 0;">
-      <svg width="480" height="250" viewBox="0 0 480 250" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
-        <line x1="40" y1="150" x2="440" y2="150" stroke="#1e40af" stroke-width="4"/>
-        <line x1="240" y1="150" x2="240" y2="30" stroke="#dc2626" stroke-width="4"/>
-        <line x1="120" y1="60" x2="360" y2="240" stroke="#16a34a" stroke-width="4"/>
-        <circle cx="240" cy="150" r="6" fill="#0f172a"/>
-        <rect x="240" y="130" width="20" height="20" fill="none" stroke="#dc2626" stroke-width="2"/>
-        <text x="25" y="155" fill="#1e40af" font-size="16" font-weight="900">X</text>
-        <text x="450" y="155" fill="#1e40af" font-size="16" font-weight="900">Y</text>
-        <text x="235" y="25" fill="#dc2626" font-size="16" font-weight="900">P</text>
-        <text x="105" y="55" fill="#16a34a" font-size="16" font-weight="900">M</text>
-        <text x="370" y="245" fill="#16a34a" font-size="16" font-weight="900">N</text>
-        <text x="235" y="175" fill="#0f172a" font-size="16" font-weight="900">O</text>
-        <text x="195" y="110" fill="#ea580c" font-size="16" font-weight="bold">a</text>
-        <text x="145" y="140" fill="#ea580c" font-size="16" font-weight="bold">b</text>
-        <text x="200" y="205" fill="#ea580c" font-size="16" font-weight="bold">c</text>
+    <div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: प्रतिच्छेदी रेखाएँ XY व MN तथा लम्ब OP</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line XY -->
+  <line x1="40" y1="150" x2="460" y2="150" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <!-- Ray OP (Perpendicular at 90 deg) -->
+  <line x1="250" y1="150" x2="250" y2="30" stroke="#dc2626" stroke-width="4" marker-end="url(#arr-red)"/>
+  <!-- Line MN -->
+  <line x1="120" y1="50" x2="380" y2="250" stroke="#16a34a" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <circle cx="250" cy="150" r="5" fill="#0f172a"/>
+  <!-- Right angle box at POY -->
+  <polyline points="250,130 270,130 270,150" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- Labels -->
+  <text x="30" y="178" fill="#1e40af" font-size="18" font-weight="900">X</text>
+  <text x="455" y="178" fill="#1e40af" font-size="18" font-weight="900">Y</text>
+  <text x="242" y="24" fill="#dc2626" font-size="18" font-weight="900">P</text>
+  <text x="105" y="45" fill="#16a34a" font-size="18" font-weight="900">M</text>
+  <text x="385" y="260" fill="#16a34a" font-size="18" font-weight="900">N</text>
+  <text x="255" y="175" fill="#0f172a" font-size="18" font-weight="900">O</text>
+  <text x="280" y="100" fill="#dc2626" font-size="16" font-weight="bold">90°</text>
+  <text x="200" y="105" fill="#ea580c" font-size="17" font-weight="bold">a</text>
+  <text x="160" y="140" fill="#ea580c" font-size="17" font-weight="bold">b</text>
+  <text x="200" y="200" fill="#ea580c" font-size="17" font-weight="bold">c</text>
+
       </svg>
     </div>
 
@@ -712,17 +734,31 @@ window.MathJax = {
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 3: आकृति में, यदि $\angle PQR = \angle PRQ$ है, तो सिद्ध कीजिए कि $\angle PQS = \angle PRT$ है।</h3>
 
-    <!-- SVG Diagram for Ex 6.1 Q3 -->
-    <div style="text-align:center; margin:16px 0;">
-      <svg width="480" height="220" viewBox="0 0 480 220" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px;">
-        <line x1="40" y1="170" x2="440" y2="170" stroke="#0f172a" stroke-width="4"/>
-        <line x1="140" y1="170" x2="240" y2="50" stroke="#2563eb" stroke-width="4"/>
-        <line x1="340" y1="170" x2="240" y2="50" stroke="#2563eb" stroke-width="4"/>
-        <text x="30" y="195" fill="#0f172a" font-size="16" font-weight="900">S</text>
-        <text x="135" y="195" fill="#0f172a" font-size="16" font-weight="900">Q</text>
-        <text x="335" y="195" fill="#0f172a" font-size="16" font-weight="900">R</text>
-        <text x="445" y="195" fill="#0f172a" font-size="16" font-weight="900">T</text>
-        <text x="235" y="40" fill="#2563eb" font-size="16" font-weight="900">P</text>
+    <div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: सरल रेखा ST पर त्रिभुज PQR (∠PQR = ∠PRQ)</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line ST -->
+  <line x1="30" y1="180" x2="470" y2="180" stroke="#0f172a" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <!-- Triangle PQR -->
+  <polygon points="250,50 150,180 350,180" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <circle cx="150" cy="180" r="5" fill="#0f172a"/>
+  <circle cx="350" cy="180" r="5" fill="#0f172a"/>
+  <circle cx="250" cy="50" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="35" y="205" fill="#0f172a" font-size="18" font-weight="900">S</text>
+  <text x="145" y="208" fill="#1e40af" font-size="18" font-weight="900">Q</text>
+  <text x="345" y="208" fill="#1e40af" font-size="18" font-weight="900">R</text>
+  <text x="455" y="205" fill="#0f172a" font-size="18" font-weight="900">T</text>
+  <text x="245" y="38" fill="#1e40af" font-size="18" font-weight="900">P</text>
+  <path d="M 170 180 A 20 20 0 0 0 160 165" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <path d="M 330 180 A 20 20 0 0 1 340 165" fill="none" stroke="#dc2626" stroke-width="3"/>
+
       </svg>
     </div>
 
@@ -770,6 +806,36 @@ window.MathJax = {
   <!-- Ex 6.1 Q4 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 4: आकृति में, यदि $x + y = w + z$ है, तो सिद्ध कीजिए कि $AOB$ एक रेखा है।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: बिंदु O के चारों ओर कोण x, y, w, z (x+y = w+z)</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line AOB -->
+  <line x1="50" y1="130" x2="450" y2="130" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <!-- Ray OC (top-right) -->
+  <line x1="250" y1="130" x2="350" y2="30" stroke="#16a34a" stroke-width="3.5" marker-end="url(#arr)"/>
+  <!-- Ray OD (bottom-left) -->
+  <line x1="250" y1="130" x2="170" y2="230" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arr-red)"/>
+  <circle cx="250" cy="130" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="35" y="135" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="460" y="135" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="355" y="28" fill="#16a34a" font-size="18" font-weight="900">C</text>
+  <text x="155" y="245" fill="#dc2626" font-size="18" font-weight="900">D</text>
+  <text x="245" y="155" fill="#0f172a" font-size="18" font-weight="900">O</text>
+  <!-- Angles x, y, w, z -->
+  <text x="320" y="115" fill="#ea580c" font-size="18" font-weight="bold">x</text>
+  <text x="210" y="110" fill="#ea580c" font-size="18" font-weight="bold">y</text>
+  <text x="200" y="165" fill="#ea580c" font-size="18" font-weight="bold">w</text>
+  <text x="310" y="175" fill="#ea580c" font-size="18" font-weight="bold">z</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-purple">
       <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
@@ -801,6 +867,33 @@ window.MathJax = {
   <!-- Ex 6.1 Q5 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 5: आकृति में, $POQ$ एक रेखा है। किरण $OR$ रेखा $PQ$ पर लम्ब है। किरणों $OP$ और $OR$ के बीच में $OS$ एक अन्य किरण है। सिद्ध कीजिए: $\angle ROS = \frac{1}{2}(\angle QOS - \angle POS)$</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: सरल रेखा POQ, लम्ब किरण OR तथा किरण OS</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line POQ -->
+  <line x1="40" y1="170" x2="460" y2="170" stroke="#0f172a" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <!-- Ray OR (Perpendicular at 90 deg) -->
+  <line x1="250" y1="170" x2="250" y2="40" stroke="#16a34a" stroke-width="4" marker-end="url(#arr)"/>
+  <!-- Ray OS (between OP and OR) -->
+  <line x1="250" y1="170" x2="140" y2="70" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arr-red)"/>
+  <polyline points="250,150 270,150 270,170" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="250" cy="170" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="35" y="195" fill="#0f172a" font-size="18" font-weight="900">P</text>
+  <text x="455" y="195" fill="#0f172a" font-size="18" font-weight="900">Q</text>
+  <text x="242" y="30" fill="#16a34a" font-size="18" font-weight="900">R</text>
+  <text x="125" y="65" fill="#dc2626" font-size="18" font-weight="900">S</text>
+  <text x="245" y="195" fill="#0f172a" font-size="18" font-weight="900">O</text>
+  <text x="280" y="130" fill="#16a34a" font-size="16" font-weight="bold">90°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-blue">
       <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>
@@ -841,6 +934,34 @@ window.MathJax = {
   <!-- Ex 6.1 Q6 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 6: यह दिया गया है कि $\angle XYZ = 64^\circ$ है और $XY$ को बिंदु $P$ तक बढ़ाया गया है। दी हुई सूचना से एक आकृति खींचिए। यदि किरण $YQ$, $\angle ZYP$ को समद्विभाजित करती है, तो $\angle XYQ$ और प्रतिवर्ती $\angle QYP$ के मान ज्ञात कीजिए।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: कोण XYZ = 64°, रेखा XYP तथा समद्विभाजक YQ</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <!-- Line XYP -->
+  <line x1="40" y1="170" x2="460" y2="170" stroke="#0f172a" stroke-width="4" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <!-- Ray YZ -->
+  <line x1="250" y1="170" x2="350" y2="60" stroke="#1e40af" stroke-width="4" marker-end="url(#arr-blue)"/>
+  <!-- Ray YQ -->
+  <line x1="250" y1="170" x2="140" y2="60" stroke="#dc2626" stroke-width="4" marker-end="url(#arr-red)"/>
+  <circle cx="250" cy="170" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="35" y="195" fill="#0f172a" font-size="18" font-weight="900">P</text>
+  <text x="245" y="195" fill="#0f172a" font-size="18" font-weight="900">Y</text>
+  <text x="455" y="195" fill="#0f172a" font-size="18" font-weight="900">X</text>
+  <text x="355" y="55" fill="#1e40af" font-size="18" font-weight="900">Z</text>
+  <text x="125" y="55" fill="#dc2626" font-size="18" font-weight="900">Q</text>
+  <text x="290" y="145" fill="#1e40af" font-size="16" font-weight="bold">64°</text>
+  <text x="175" y="130" fill="#dc2626" font-size="15" font-weight="bold">58°</text>
+  <text x="235" y="105" fill="#dc2626" font-size="15" font-weight="bold">58°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-orange">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -892,6 +1013,29 @@ window.MathJax = {
   <!-- Ex 6.2 Q1 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 1: आकृति में, $x$ और $y$ के मान ज्ञात कीजिए और फिर दर्शाइए कि $AB \parallel CD$ है।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समांतर रेखाएँ AB व CD, तिर्यक रेखा तथा कोण x व y</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="50" y1="80" x2="450" y2="80" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="170" x2="450" y2="170" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="140" y1="20" x2="360" y2="230" stroke="#dc2626" stroke-width="3.5" marker-start="url(#arr-red)" marker-end="url(#arr-red)"/>
+  <text x="45" y="70" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="445" y="70" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="45" y="160" fill="#1e40af" font-size="18" font-weight="900">C</text>
+  <text x="445" y="160" fill="#1e40af" font-size="18" font-weight="900">D</text>
+  <text x="220" y="65" fill="#ea580c" font-size="16" font-weight="bold">50°</text>
+  <text x="175" y="115" fill="#2563eb" font-size="18" font-weight="bold">x</text>
+  <text x="265" y="155" fill="#2563eb" font-size="18" font-weight="bold">y</text>
+  <text x="320" y="200" fill="#ea580c" font-size="16" font-weight="bold">130°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-blue">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -931,6 +1075,31 @@ window.MathJax = {
   <!-- Ex 6.2 Q2 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 2: आकृति में, यदि $AB \parallel CD$, $CD \parallel EF$ और $y : z = 3 : 7$ है, तो $x$ का मान ज्ञात कीजिए।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: तीन समांतर रेखाएँ AB ∥ CD ∥ EF तथा तिर्यक रेखा</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="50" y1="60" x2="450" y2="60" stroke="#1e40af" stroke-width="3.5" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="130" x2="450" y2="130" stroke="#1e40af" stroke-width="3.5" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#1e40af" stroke-width="3.5" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="160" y1="20" x2="340" y2="240" stroke="#dc2626" stroke-width="3.5" marker-start="url(#arr-red)" marker-end="url(#arr-red)"/>
+  <text x="45" y="55" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="445" y="55" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="45" y="125" fill="#1e40af" font-size="18" font-weight="900">C</text>
+  <text x="445" y="125" fill="#1e40af" font-size="18" font-weight="900">D</text>
+  <text x="45" y="195" fill="#1e40af" font-size="18" font-weight="900">E</text>
+  <text x="445" y="195" fill="#1e40af" font-size="18" font-weight="900">F</text>
+  <text x="175" y="90" fill="#2563eb" font-size="18" font-weight="bold">x</text>
+  <text x="245" y="120" fill="#ea580c" font-size="18" font-weight="bold">y</text>
+  <text x="270" y="225" fill="#16a34a" font-size="18" font-weight="bold">z</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-orange">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -981,6 +1150,33 @@ window.MathJax = {
   <!-- Ex 6.2 Q3 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 3: आकृति में, यदि $AB \parallel CD$, $EF \perp CD$ और $\angle GED = 126^\circ$ है, तो $\angle AGE, \angle GEF$ और $\angle FGE$ ज्ञात कीजिए।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समांतर रेखाएँ AB ∥ CD, लम्ब EF ⊥ CD व रेखा GE</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="50" y1="80" x2="450" y2="80" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="180" x2="450" y2="180" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="330" y1="80" x2="330" y2="180" stroke="#16a34a" stroke-width="3.5"/>
+  <polyline points="330,165 315,165 315,180" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="170" y1="80" x2="260" y2="180" stroke="#dc2626" stroke-width="3.5"/>
+  <circle cx="170" cy="80" r="5" fill="#0f172a"/>
+  <circle cx="260" cy="180" r="5" fill="#0f172a"/>
+  <text x="45" y="75" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="445" y="75" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="45" y="200" fill="#1e40af" font-size="18" font-weight="900">C</text>
+  <text x="445" y="200" fill="#1e40af" font-size="18" font-weight="900">D</text>
+  <text x="160" y="70" fill="#0f172a" font-size="18" font-weight="900">G</text>
+  <text x="255" y="205" fill="#0f172a" font-size="18" font-weight="900">E</text>
+  <text x="325" y="70" fill="#16a34a" font-size="18" font-weight="900">F</text>
+  <text x="285" y="160" fill="#dc2626" font-size="15" font-weight="bold">126°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-green">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -1019,6 +1215,35 @@ window.MathJax = {
   <!-- Ex 6.2 Q4 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 4: आकृति में, यदि $PQ \parallel ST$, $\angle PQR = 110^\circ$ और $\angle RST = 130^\circ$ है, तो $\angle QRS$ ज्ञात कीजिए। [संकेत: बिंदु $R$ से होकर $ST$ के समांतर एक रेखा खींचिए।]</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: PQ ∥ ST, ∠PQR = 110° तथा ∠RST = 130°</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="60" y1="70" x2="190" y2="70" stroke="#1e40af" stroke-width="4" marker-end="url(#arr-blue)"/>
+  <line x1="190" y1="70" x2="250" y2="180" stroke="#dc2626" stroke-width="4"/>
+  <line x1="250" y1="180" x2="330" y2="90" stroke="#dc2626" stroke-width="4"/>
+  <line x1="330" y1="90" x2="450" y2="90" stroke="#1e40af" stroke-width="4" marker-end="url(#arr-blue)"/>
+  <line x1="120" y1="180" x2="430" y2="180" stroke="#64748b" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <circle cx="190" cy="70" r="5" fill="#0f172a"/>
+  <circle cx="250" cy="180" r="5" fill="#0f172a"/>
+  <circle cx="330" cy="90" r="5" fill="#0f172a"/>
+  <text x="50" y="65" fill="#1e40af" font-size="18" font-weight="900">P</text>
+  <text x="180" y="58" fill="#0f172a" font-size="18" font-weight="900">Q</text>
+  <text x="245" y="205" fill="#0f172a" font-size="18" font-weight="900">R</text>
+  <text x="325" y="78" fill="#0f172a" font-size="18" font-weight="900">S</text>
+  <text x="445" y="85" fill="#1e40af" font-size="18" font-weight="900">T</text>
+  <text x="430" y="175" fill="#64748b" font-size="16" font-weight="bold">U</text>
+  <text x="145" y="105" fill="#ea580c" font-size="16" font-weight="bold">110°</text>
+  <text x="345" y="120" fill="#ea580c" font-size="16" font-weight="bold">130°</text>
+  <text x="235" y="165" fill="#2563eb" font-size="16" font-weight="bold">60°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-purple">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -1063,6 +1288,32 @@ window.MathJax = {
   <!-- Ex 6.2 Q5 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 5: आकृति में, यदि $AB \parallel CD$, $\angle APQ = 50^\circ$ और $\angle PRD = 127^\circ$ है, तो $x$ और $y$ ज्ञात कीजिए।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समांतर रेखाएँ AB ∥ CD तथा त्रिभुज PQR (x = 50°, y = 77°)</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="50" y1="70" x2="450" y2="70" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <line x1="50" y1="190" x2="450" y2="190" stroke="#1e40af" stroke-width="4" marker-start="url(#arr-blue)" marker-end="url(#arr-blue)"/>
+  <polygon points="210,70 140,190 320,190" fill="#eff6ff" stroke="#dc2626" stroke-width="4"/>
+  <text x="45" y="65" fill="#1e40af" font-size="18" font-weight="900">A</text>
+  <text x="445" y="65" fill="#1e40af" font-size="18" font-weight="900">B</text>
+  <text x="45" y="210" fill="#1e40af" font-size="18" font-weight="900">C</text>
+  <text x="445" y="210" fill="#1e40af" font-size="18" font-weight="900">D</text>
+  <text x="205" y="55" fill="#0f172a" font-size="18" font-weight="900">P</text>
+  <text x="130" y="212" fill="#0f172a" font-size="18" font-weight="900">Q</text>
+  <text x="325" y="212" fill="#0f172a" font-size="18" font-weight="900">R</text>
+  <text x="150" y="65" fill="#ea580c" font-size="16" font-weight="bold">50°</text>
+  <text x="155" y="180" fill="#2563eb" font-size="16" font-weight="bold">x</text>
+  <text x="210" y="110" fill="#2563eb" font-size="16" font-weight="bold">y</text>
+  <text x="330" y="175" fill="#ea580c" font-size="16" font-weight="bold">127°</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-blue">
       <p class="step-txt"><b>हल के क्रमबद्ध चरण:</b></p>
@@ -1093,6 +1344,43 @@ window.MathJax = {
   <!-- Ex 6.2 Q6 -->
   <div class="qa-block">
     <h3 class="question-heading">प्रश्न 6: आकृति में, $PQ$ और $RS$ दो दर्पण हैं जो एक दूसरे के समांतर रखे गए हैं। एक आपतन किरण (Incident ray) $AB$, दर्पण $PQ$ से $B$ पर टकराती है और परावर्तित किरण (Reflected ray) पथ $BC$ पर चलकर दर्पण $RS$ से $C$ पर टकराती है तथा पुनः $CD$ के अनुदिश परावर्तित हो जाती है। सिद्ध कीजिए कि $AB \parallel CD$ है।</h3>
+<div style="margin:20px auto; max-width:500px; text-align:center;">
+      <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समांतर दर्पण PQ व RS तथा प्रकाश किरण का परावर्तन पथ</div>
+      <svg width="100%" height="250" viewBox="0 0 500 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b"/></marker>
+          <marker id="arr-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#dc2626"/></marker>
+          <marker id="arr-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2563eb"/></marker>
+        </defs>
+        
+  <line x1="50" y1="60" x2="450" y2="60" stroke="#0f172a" stroke-width="5"/>
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="80" y1="50" x2="95" y2="60"/><line x1="140" y1="50" x2="155" y2="60"/><line x1="200" y1="50" x2="215" y2="60"/>
+    <line x1="260" y1="50" x2="275" y2="60"/><line x1="320" y1="50" x2="335" y2="60"/><line x1="380" y1="50" x2="395" y2="60"/>
+  </g>
+  <line x1="50" y1="190" x2="450" y2="190" stroke="#0f172a" stroke-width="5"/>
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="80" y1="190" x2="95" y2="200"/><line x1="140" y1="190" x2="155" y2="200"/><line x1="200" y1="190" x2="215" y2="200"/>
+    <line x1="260" y1="190" x2="275" y2="200"/><line x1="320" y1="190" x2="335" y2="200"/><line x1="380" y1="190" x2="395" y2="200"/>
+  </g>
+  <line x1="100" y1="160" x2="180" y2="60" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arr-red)"/>
+  <line x1="180" y1="60" x2="320" y2="190" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arr-red)"/>
+  <line x1="320" y1="190" x2="400" y2="90" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arr-red)"/>
+  <line x1="180" y1="60" x2="180" y2="140" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <line x1="320" y1="110" x2="320" y2="190" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <text x="40" y="55" fill="#0f172a" font-size="18" font-weight="900">P</text>
+  <text x="455" y="55" fill="#0f172a" font-size="18" font-weight="900">Q</text>
+  <text x="40" y="215" fill="#0f172a" font-size="18" font-weight="900">R</text>
+  <text x="455" y="215" fill="#0f172a" font-size="18" font-weight="900">S</text>
+  <text x="80" y="165" fill="#dc2626" font-size="18" font-weight="900">A</text>
+  <text x="175" y="50" fill="#dc2626" font-size="18" font-weight="900">B</text>
+  <text x="320" y="215" fill="#dc2626" font-size="18" font-weight="900">C</text>
+  <text x="410" y="90" fill="#dc2626" font-size="18" font-weight="900">D</text>
+  <text x="165" y="150" fill="#2563eb" font-size="16" font-weight="900">M</text>
+  <text x="325" y="115" fill="#2563eb" font-size="16" font-weight="900">N</text>
+
+      </svg>
+    </div>
 
     <div class="step-box-green">
       <p class="step-txt"><b>उपपत्ति के क्रमबद्ध चरण:</b></p>

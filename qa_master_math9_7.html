@@ -978,7 +978,33 @@ window.MathJax = {
 
     <!-- Q4 -->
     <div class="qa-block">
-      <h3 class="question-heading">प्रश्न 4: $ABC$ एक त्रिभुज है जिसमें भुजाओं $AC$ और $AB$ पर खींचे गए शीर्षलम्ब $BE$ और $CF$ बराबर हैं। दर्शाइए कि:<br>(i) $\Delta ABE \cong \Delta ACF$<br>(ii) $AB = AC$, अर्थात $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</h3>
+      <h3 class="question-heading">प्रश्न 4: $ABC$ एक त्रिभुज है जिसमें भुजाओं $AC$ और $AB$ पर खींचे गए शीर्षलम्ब $BE$ और $CF$ बराबर हैं। दर्शाइए कि:
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: त्रिभुज ABC में बराबर शीर्षलम्ब BE = CF (BE ⊥ AC, CF ⊥ AB)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,40 80,220 400,220" fill="#f8fafc" stroke="#1e40af" stroke-width="4"/>
+  <!-- Altitude BE: from (80,220) to AC (approx 320, 130) -->
+  <line x1="80" y1="220" x2="320" y2="130" stroke="#dc2626" stroke-width="3.5" stroke-dasharray="6,4"/>
+  <!-- Altitude CF: from (400,220) to AB (approx 160, 130) -->
+  <line x1="400" y1="220" x2="160" y2="130" stroke="#16a34a" stroke-width="3.5" stroke-dasharray="6,4"/>
+  <!-- Right angles at E and F -->
+  <polyline points="310,135 305,145 315,150" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <polyline points="170,135 175,145 165,150" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="240" cy="40" r="5" fill="#0f172a"/>
+  <circle cx="80" cy="220" r="5" fill="#0f172a"/>
+  <circle cx="400" cy="220" r="5" fill="#0f172a"/>
+  <circle cx="320" cy="130" r="5" fill="#dc2626"/>
+  <circle cx="160" cy="130" r="5" fill="#16a34a"/>
+  <!-- Labels -->
+  <text x="235" y="28" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="55" y="235" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="410" y="235" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="330" y="125" font-size="18" font-weight="bold" fill="#dc2626">E</text>
+  <text x="135" y="125" font-size="18" font-weight="bold" fill="#16a34a">F</text>
+
+  </svg>
+</div><br>(i) $\Delta ABE \cong \Delta ACF$<br>(ii) $AB = AC$, अर्थात $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</h3>
       <div class="step-box-blue">
         <p><b>(i) $\Delta ABE \cong \Delta ACF$:</b></p>
         <ul style="margin:10px 0 15px 30px; line-height:2.2;">
@@ -1076,6 +1102,24 @@ x + y &= 90^\circ
     <!-- Q7 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 7: $ABC$ एक समकोण त्रिभुज है जिसमें $\angle A = 90^\circ$ और $AB = AC$ है। $\angle B$ और $\angle C$ ज्ञात कीजिए।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समकोण समद्विबाहु त्रिभुज ABC (∠A = 90°, AB = AC)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="120,210 120,60 370,210" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <!-- Right angle box at A -->
+  <polyline points="120,185 145,185 145,210" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- Tick marks on AB and AC -->
+  <line x1="115" y1="135" x2="125" y2="135" stroke="#dc2626" stroke-width="3.5"/>
+  <line x1="245" y1="205" x2="245" y2="215" stroke="#dc2626" stroke-width="3.5"/>
+  <!-- Labels -->
+  <text x="90" y="225" font-size="20" font-weight="bold" fill="#000000">A (90°)</text>
+  <text x="95" y="55" font-size="20" font-weight="bold" fill="#000000">B (45°)</text>
+  <text x="380" y="220" font-size="20" font-weight="bold" fill="#000000">C (45°)</text>
+  <text x="260" y="120" font-size="16" font-weight="bold" fill="#64748b">कर्ण BC</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>हल:</b> दिया है $AB = AC \implies \angle B = \angle C$ (बराबर भुजाओं के सम्मुख कोण)।</p>
         <p>त्रिभुज $ABC$ में कोण योग गुण से:</p>
@@ -1099,6 +1143,25 @@ x + y &= 90^\circ
     <!-- Q8 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 8: दर्शाइए कि किसी समबाहु त्रिभुज का प्रत्येक कोण $60^\circ$ होता है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समबाहु त्रिभुज ABC (प्रत्येक कोण 60°)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,40 100,220 380,220" fill="#f0fdf4" stroke="#16a34a" stroke-width="4"/>
+  <!-- Tick marks on all 3 sides -->
+  <line x1="165" y1="125" x2="175" y2="135" stroke="#dc2626" stroke-width="3"/>
+  <line x1="305" y1="135" x2="315" y2="125" stroke="#dc2626" stroke-width="3"/>
+  <line x1="240" y1="215" x2="240" y2="225" stroke="#dc2626" stroke-width="3"/>
+  <!-- Labels -->
+  <text x="235" y="28" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="75" y="235" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="390" y="235" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="225" y="75" font-size="16" font-weight="bold" fill="#15803d">60°</text>
+  <text x="135" y="205" font-size="16" font-weight="bold" fill="#15803d">60°</text>
+  <text x="325" y="205" font-size="16" font-weight="bold" fill="#15803d">60°</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> मान लीजिए $ABC$ एक समबाहु त्रिभुज है जिसमें $AB = BC = CA$ है।</p>
         <div class="math-scroll">
@@ -1173,7 +1236,28 @@ x + y &= 90^\circ
 
     <!-- Ex 7.3 Q2 -->
     <div class="qa-block">
-      <h3 class="question-heading">प्रश्न 2: $AD$ एक समद्विबाहु त्रिभुज $ABC$ का एक शीर्षलम्ब है, जिसमें $AB = AC$ है। दर्शाइए कि:<br>(i) $AD$ रेखाखंड $BC$ को समद्विभाजित करता है।<br>(ii) $AD$ कोण $A$ को समद्विभाजित करता है।</h3>
+      <h3 class="question-heading">प्रश्न 2: $AD$ एक समद्विबाहु त्रिभुज $ABC$ का एक शीर्षलम्ब है, जिसमें $AB = AC$ है। दर्शाइए कि:
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समद्विबाहु त्रिभुज ABC में शीर्षलम्ब AD ⊥ BC (AB = AC)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,40 80,220 400,220" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <!-- Altitude AD -->
+  <line x1="240" y1="40" x2="240" y2="220" stroke="#dc2626" stroke-width="3.5"/>
+  <polyline points="240,200 220,200 220,220" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <polyline points="240,200 260,200 260,220" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- Ticks on AB and AC -->
+  <line x1="155" y1="125" x2="165" y2="135" stroke="#dc2626" stroke-width="3.5"/>
+  <line x1="315" y1="135" x2="325" y2="125" stroke="#dc2626" stroke-width="3.5"/>
+  <!-- Labels -->
+  <text x="235" y="28" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="55" y="235" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="410" y="235" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="235" y="245" font-size="20" font-weight="bold" fill="#dc2626">D</text>
+  <text x="140" y="242" font-size="15" font-weight="bold" fill="#1e40af">BD = CD</text>
+
+  </svg>
+</div><br>(i) $AD$ रेखाखंड $BC$ को समद्विभाजित करता है।<br>(ii) $AD$ कोण $A$ को समद्विभाजित करता है।</h3>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> समकोण $\Delta ABD$ और समकोण $\Delta ACD$ में:</p>
         <ul style="margin:10px 0 15px 30px; line-height:2.2;">
@@ -1234,6 +1318,24 @@ x + y &= 90^\circ
     <!-- Ex 7.3 Q4 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 4: $BE$ और $CF$ एक त्रिभुज $ABC$ के दो बराबर शीर्षलम्ब हैं। RHS सर्वांगसमता नियम का प्रयोग करके सिद्ध कीजिए कि $\Delta ABC$ एक समद्विबाहु त्रिभुज है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: त्रिभुज ABC में बराबर शीर्षलम्ब BE = CF (RHS नियम)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,40 80,220 400,220" fill="#f8fafc" stroke="#1e40af" stroke-width="4"/>
+  <line x1="80" y1="220" x2="320" y2="130" stroke="#dc2626" stroke-width="3.5"/>
+  <line x1="400" y1="220" x2="160" y2="130" stroke="#16a34a" stroke-width="3.5"/>
+  <polyline points="310,135 305,145 315,150" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <polyline points="170,135 175,145 165,150" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="235" y="28" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="55" y="235" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="410" y="235" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="330" y="125" font-size="18" font-weight="bold" fill="#dc2626">E</text>
+  <text x="135" y="125" font-size="18" font-weight="bold" fill="#16a34a">F</text>
+  <text x="190" y="180" font-size="15" font-weight="bold" fill="#dc2626">BE = CF</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> समकोण $\Delta BEC$ और समकोण $\Delta CFB$ में:</p>
         <ul style="margin:10px 0 15px 30px; line-height:2.2;">
@@ -1253,6 +1355,23 @@ x + y &= 90^\circ
     <!-- Ex 7.3 Q5 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 5: $ABC$ एक समद्विबाहु त्रिभुज है जिसमें $AB = AC$ है। $AP \perp BC$ खींच कर दर्शाइए कि $\angle B = \angle C$ है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: समद्विबाहु त्रिभुज ABC में लम्ब AP ⊥ BC (AB = AC)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,40 80,220 400,220" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <line x1="240" y1="40" x2="240" y2="220" stroke="#dc2626" stroke-width="3.5"/>
+  <polyline points="240,200 220,200 220,220" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="155" y1="125" x2="165" y2="135" stroke="#dc2626" stroke-width="3.5"/>
+  <line x1="315" y1="135" x2="325" y2="125" stroke="#dc2626" stroke-width="3.5"/>
+  <text x="235" y="28" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="55" y="235" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="410" y="235" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="235" y="245" font-size="20" font-weight="bold" fill="#dc2626">P</text>
+  <text x="110" y="205" font-size="16" font-weight="bold" fill="#1e40af">∠B = ∠C</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> समकोण $\Delta ABP$ और समकोण $\Delta ACP$ में:</p>
         <ul style="margin:10px 0 15px 30px; line-height:2.2;">
@@ -1309,6 +1428,30 @@ x + y &= 90^\circ
     <!-- Ex 7.4 Q2 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 2: दी गई आकृति में, $\Delta ABC$ की भुजाओं $AB$ और $AC$ को क्रमशः बिंदुओं $P$ और $Q$ तक बढ़ाया गया है। साथ ही, $\angle PBC < \angle QCB$ है। दर्शाइए कि $AC > AB$ है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: त्रिभुज ABC की भुजाओं AB व AC का विस्तार (NCERT आकृति 7.43)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="240,50 140,170 340,170" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <!-- Extension AB to P -->
+  <line x1="140" y1="170" x2="90" y2="230" stroke="#dc2626" stroke-width="3.5"/>
+  <!-- Extension AC to Q -->
+  <line x1="340" y1="170" x2="390" y2="230" stroke="#dc2626" stroke-width="3.5"/>
+  <circle cx="240" cy="50" r="5" fill="#0f172a"/>
+  <circle cx="140" cy="170" r="5" fill="#0f172a"/>
+  <circle cx="340" cy="170" r="5" fill="#0f172a"/>
+  <circle cx="90" cy="230" r="5" fill="#dc2626"/>
+  <circle cx="390" cy="230" r="5" fill="#dc2626"/>
+  <text x="235" y="38" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="120" y="165" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="350" y="165" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="70" y="245" font-size="20" font-weight="bold" fill="#dc2626">P</text>
+  <text x="400" y="245" font-size="20" font-weight="bold" fill="#dc2626">Q</text>
+  <text x="90" y="195" font-size="14" font-weight="bold" fill="#ea580c">∠PBC</text>
+  <text x="340" y="195" font-size="14" font-weight="bold" fill="#ea580c">∠QCB</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> सरल रेखा पर रैखिक युग्म से:</p>
         <div class="math-scroll">
@@ -1331,6 +1474,29 @@ x + y &= 90^\circ
     <!-- Ex 7.4 Q3 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 3: दी गई आकृति में, $\angle B < \angle A$ और $\angle C < \angle D$ है। दर्शाइए कि $AD < BC$ है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: प्रतिच्छेदी रेखाखंड AD व BC (NCERT आकृति 7.44: ∠B < ∠A, ∠C < ∠D)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <!-- Triangle AOB on left, COD on right with intersection at O -->
+  <line x1="80" y1="50" x2="400" y2="210" stroke="#1e40af" stroke-width="3.5"/>
+  <line x1="80" y1="210" x2="400" y2="50" stroke="#1e40af" stroke-width="3.5"/>
+  <line x1="80" y1="50" x2="80" y2="210" stroke="#dc2626" stroke-width="4"/>
+  <line x1="400" y1="50" x2="400" y2="210" stroke="#16a34a" stroke-width="4"/>
+  <circle cx="240" cy="130" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="55" y="55" font-size="20" font-weight="bold" fill="#000000">A</text>
+  <text x="55" y="225" font-size="20" font-weight="bold" fill="#000000">B</text>
+  <text x="415" y="225" font-size="20" font-weight="bold" fill="#000000">C</text>
+  <text x="415" y="55" font-size="20" font-weight="bold" fill="#000000">D</text>
+  <text x="235" y="115" font-size="20" font-weight="bold" fill="#0f172a">O</text>
+  <text x="95" y="70" font-size="15" font-weight="bold" fill="#ea580c">∠A</text>
+  <text x="95" y="200" font-size="15" font-weight="bold" fill="#ea580c">∠B</text>
+  <text x="365" y="70" font-size="15" font-weight="bold" fill="#ea580c">∠D</text>
+  <text x="365" y="200" font-size="15" font-weight="bold" fill="#ea580c">∠C</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> मान लीजिए रेखाएँ बिंदु $O$ पर प्रतिच्छेद करती हैं।</p>
         <p>$\Delta AOB$ में दिया है $\angle B < \angle A$:</p>
@@ -1382,6 +1548,27 @@ x + y &= 90^\circ
     <!-- Ex 7.4 Q5 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 5: दी गई आकृति में, $PR > PQ$ है और $PS$ कोण $\angle QPR$ को समद्विभाजित करता है। सिद्ध कीजिए कि $\angle PSR > \angle PSQ$ है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: त्रिभुज PQR में कोण समद्विभाजक PS (NCERT आकृति 7.47: PR > PQ)</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <polygon points="180,40 80,220 420,220" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/>
+  <!-- Angle bisector PS -->
+  <line x1="180" y1="40" x2="220" y2="220" stroke="#dc2626" stroke-width="3.5"/>
+  <circle cx="180" cy="40" r="5" fill="#0f172a"/>
+  <circle cx="80" cy="220" r="5" fill="#0f172a"/>
+  <circle cx="420" cy="220" r="5" fill="#0f172a"/>
+  <circle cx="220" cy="220" r="5" fill="#dc2626"/>
+  <!-- Labels -->
+  <text x="175" y="28" font-size="20" font-weight="bold" fill="#000000">P</text>
+  <text x="55" y="235" font-size="20" font-weight="bold" fill="#000000">Q</text>
+  <text x="430" y="235" font-size="20" font-weight="bold" fill="#000000">R</text>
+  <text x="215" y="245" font-size="20" font-weight="bold" fill="#dc2626">S</text>
+  <text x="160" y="80" font-size="15" font-weight="bold" fill="#dc2626">∠1 = ∠2</text>
+  <text x="300" y="120" font-size="16" font-weight="bold" fill="#1e40af">PR > PQ</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> $\Delta PQR$ में $PR > PQ \implies \angle PQR > \angle PRQ$ \quad ...(1)</p>
         <p>दिया है $PS$, कोण $\angle P$ का समद्विभाजक है: $\angle QPS = \angle RPS = x$ \quad ...(2)</p>
@@ -1405,6 +1592,31 @@ x + y &= 90^\circ
     <!-- Ex 7.4 Q6 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 6: दर्शाइए कि एक रेखा पर किसी दिए गए बिंदु से, जो उस रेखा पर स्थित नहीं है, खींचे गए सभी रेखाखंडों में लम्ब रेखाखंड सबसे छोटा होता है।</h3>
+<div style="margin:20px auto; max-width:480px; text-align:center;">
+  <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: रेखा l पर बाह्य बिंदु P से लम्ब रेखाखंड PM सबसे छोटा होता है</div>
+  <svg width="100%" height="260" viewBox="0 0 480 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+    
+  <!-- Line l -->
+  <line x1="40" y1="200" x2="440" y2="200" stroke="#0f172a" stroke-width="4"/>
+  <!-- External Point P -->
+  <circle cx="180" cy="60" r="6" fill="#dc2626"/>
+  <!-- Perpendicular PM -->
+  <line x1="180" y1="60" x2="180" y2="200" stroke="#dc2626" stroke-width="4"/>
+  <!-- Oblique line PN -->
+  <line x1="180" y1="60" x2="350" y2="200" stroke="#2563eb" stroke-width="3.5"/>
+  <!-- Right angle mark at M -->
+  <polyline points="180,180 200,180 200,200" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <circle cx="180" cy="200" r="5" fill="#0f172a"/>
+  <circle cx="350" cy="200" r="5" fill="#0f172a"/>
+  <!-- Labels -->
+  <text x="445" y="195" font-size="20" font-weight="bold" fill="#0f172a">l</text>
+  <text x="175" y="48" font-size="20" font-weight="bold" fill="#dc2626">P</text>
+  <text x="170" y="225" font-size="20" font-weight="bold" fill="#0f172a">M</text>
+  <text x="345" y="225" font-size="20" font-weight="bold" fill="#0f172a">N</text>
+  <text x="270" y="120" font-size="16" font-weight="bold" fill="#2563eb">कर्ण PN > PM</text>
+
+  </svg>
+</div>
       <div class="step-box-blue">
         <p><b>उपपत्ति:</b> मान लीजिए रेखा $l$ पर बिंदु $P$ स्थित नहीं है। $PM \perp l$ खींचा तथा रेखा $l$ पर $M$ के अतिरिक्त कोई अन्य बिंदु $N$ लिया।</p>
         <p>समकोण त्रिभुज $PMN$ में $\angle M = 90^\circ$ है।</p>

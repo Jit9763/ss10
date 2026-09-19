@@ -1559,6 +1559,50 @@ div>
       <div class="q-box" style="font-size: 26pt; font-weight: 800; color: #0f172a; margin-bottom: 20px;">
         <span class="q-tag" style="background: #1e3a8a; color: #ffffff; padding: 4px 14px; border-radius: 8px;">प्रश्न 18 (सर्पिल अर्धवृत्त समस्या)</span> केंद्र A से प्रारंभ करते हुए, बारी-बारी से केंद्रों A और B को लेते हुए, त्रिज्याओं $0.5\text{ cm}, 1.0\text{ cm}, 1.5\text{ cm}, 2.0\text{ cm}, \dots$ वाले उत्तरोत्तर अर्धवृत्तों को खींचकर एक सर्पिल (spiral) बनाया गया है। तेरह क्रमागत अर्धवृत्तों से बने इस सर्पिल की कुल लंबाई क्या है? ($\pi = \frac{22}{7}$ लीजिए)
       </div>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: 13 उत्तरोत्तर अर्धवृत्तों से बना सर्पिल (Theodorus Spiral Model)</div>
+    <svg width="100%" height="270" viewBox="0 0 560 270" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr5" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Baseline -->
+      <line x1="30" y1="140" x2="520" y2="140" stroke="#1e293b" stroke-width="2"/>
+
+      <!-- Centers A and B -->
+      <circle cx="250" cy="140" r="5" fill="#dc2626"/>
+      <text x="245" y="162" font-size="14" font-weight="900" fill="#dc2626">A</text>
+
+      <circle cx="270" cy="140" r="5" fill="#2563eb"/>
+      <text x="270" y="162" font-size="14" font-weight="900" fill="#2563eb">B</text>
+
+      <!-- Semicircle l1 (above): center A(250), R=20 -> from 270 to 230 -->
+      <path d="M 270 140 A 20 20 0 0 0 230 140" fill="none" stroke="#dc2626" stroke-width="3"/>
+      <text x="250" y="112" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">l₁ (R=0.5)</text>
+
+      <!-- Semicircle l2 (below): center B(270), R=40 -> from 230 to 310 -->
+      <path d="M 230 140 A 40 40 0 0 0 310 140" fill="none" stroke="#2563eb" stroke-width="3"/>
+      <text x="270" y="195" font-size="12" font-weight="900" fill="#2563eb" text-anchor="middle">l₂ (R=1.0)</text>
+
+      <!-- Semicircle l3 (above): center A(250), R=60 -> from 310 to 190 -->
+      <path d="M 310 140 A 60 60 0 0 0 190 140" fill="none" stroke="#059669" stroke-width="3"/>
+      <text x="250" y="70" font-size="12" font-weight="900" fill="#047857" text-anchor="middle">l₃ (R=1.5)</text>
+
+      <!-- Semicircle l4 (below): center B(270), R=80 -> from 190 to 350 -->
+      <path d="M 190 140 A 80 80 0 0 0 350 140" fill="none" stroke="#7c3aed" stroke-width="3"/>
+      <text x="270" y="235" font-size="12" font-weight="900" fill="#6d28d9" text-anchor="middle">l₄ (R=2.0)</text>
+
+      <!-- Summary Card Top-Right -->
+      <rect x="360" y="20" width="180" height="100" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="450" y="42" font-size="12" font-weight="900" fill="#1e3a8a" text-anchor="middle">13 अर्धवृत्तों का सर्पिल</text>
+      <text x="375" y="65" font-size="11" font-weight="bold" fill="#0f172a">• l_n = π × r_n</text>
+      <text x="375" y="85" font-size="11" font-weight="bold" fill="#0f172a">• AP: 0.5π, 1.0π, ...</text>
+      <text x="450" y="108" font-size="13" font-weight="900" fill="#16a34a" text-anchor="middle">कुल लंबाई = 143 cm</text>
+
+    </svg>
+  </div>
       <div class="ans-box">
         <div class="step-line"><span class="badge-blue">चरण 1: अर्धवृत्तों की लंबाइयों की श्रेढ़ी</span><br>
           अर्धवृत्त की परिधि $= \pi r$<br>
@@ -1583,6 +1627,59 @@ div>
       <div class="q-box" style="font-size: 26pt; font-weight: 800; color: #0f172a; margin-bottom: 20px;">
         <span class="q-tag" style="background: #1e3a8a; color: #ffffff; padding: 4px 14px; border-radius: 8px;">प्रश्न 19 (लट्ठों की ढेरी समस्या)</span> 200 लट्ठों (logs) को ढेरी के रूप में इस प्रकार रखा जाता है: सबसे नीचे वाली पंक्ति में 20 लट्ठे, अगली पंक्ति में 19 लट्ठे, उससे अगली पंक्ति में 18 लट्ठे इत्यादि। ये 200 लट्ठे कितनी पंक्तियों में रखे गए हैं तथा सबसे ऊपरी पंक्ति में कितने लट्ठे हैं?
       </div>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: 200 लट्ठों की ढेरी में पंक्तियों व शीर्ष लट्ठों की संख्या</div>
+    <svg width="100%" height="240" viewBox="0 0 560 240" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr5" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Stack of circular logs cross-section -->
+      <!-- Bottom row 1: 8 logs drawn for illustration. Center (260, 180). Radius = 12px -->
+      <!-- Bottom row: 7 logs -->
+      <g fill="#fed7aa" stroke="#c2410c" stroke-width="2">
+        <circle cx="150" cy="180" r="12"/><circle cx="174" cy="180" r="12"/><circle cx="198" cy="180" r="12"/>
+        <circle cx="222" cy="180" r="12"/><circle cx="246" cy="180" r="12"/><circle cx="270" cy="180" r="12"/>
+        <circle cx="294" cy="180" r="12"/><circle cx="318" cy="180" r="12"/><circle cx="342" cy="180" r="12"/>
+      </g>
+      <text x="370" y="185" font-size="12" font-weight="bold" fill="#9a3412">पंक्ति 1: 20 लट्ठे</text>
+
+      <!-- Row 2: 8 logs -->
+      <g fill="#fed7aa" stroke="#c2410c" stroke-width="2">
+        <circle cx="162" cy="159" r="12"/><circle cx="186" cy="159" r="12"/><circle cx="210" cy="159" r="12"/>
+        <circle cx="234" cy="159" r="12"/><circle cx="258" cy="159" r="12"/><circle cx="282" cy="159" r="12"/>
+        <circle cx="306" cy="159" r="12"/><circle cx="330" cy="159" r="12"/>
+      </g>
+      <text x="370" y="164" font-size="12" font-weight="bold" fill="#9a3412">पंक्ति 2: 19 लट्ठे</text>
+
+      <!-- Row 3: 7 logs -->
+      <g fill="#fed7aa" stroke="#c2410c" stroke-width="2">
+        <circle cx="174" cy="138" r="12"/><circle cx="198" cy="138" r="12"/><circle cx="222" cy="138" r="12"/>
+        <circle cx="246" cy="138" r="12"/><circle cx="270" cy="138" r="12"/><circle cx="294" cy="138" r="12"/>
+        <circle cx="318" cy="138" r="12"/>
+      </g>
+      <text x="370" y="143" font-size="12" font-weight="bold" fill="#9a3412">पंक्ति 3: 18 लट्ठे</text>
+
+      <!-- Dots up to top row -->
+      <text x="246" y="115" font-size="18" font-weight="900" fill="#9a3412" text-anchor="middle">⋮</text>
+
+      <!-- Top Row 16: 5 logs -->
+      <g fill="#fde68a" stroke="#d97706" stroke-width="2">
+        <circle cx="222" cy="80" r="12"/><circle cx="246" cy="80" r="12"/><circle cx="270" cy="80" r="12"/>
+      </g>
+      <text x="300" y="85" font-size="13" font-weight="900" fill="#b45309">शीर्ष पंक्ति 16: 5 लट्ठे</text>
+
+      <!-- Solution Card Left -->
+      <rect x="20" y="30" width="165" height="130" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="102" y="55" font-size="13" font-weight="900" fill="#1e3a8a" text-anchor="middle">AP: a = 20, d = -1</text>
+      <text x="102" y="80" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">S_n = 200</text>
+      <text x="102" y="110" font-size="14" font-weight="900" fill="#16a34a" text-anchor="middle">कुल पंक्तियाँ n = 16</text>
+      <text x="102" y="135" font-size="13" font-weight="900" fill="#dc2626" text-anchor="middle">शीर्ष पंक्ति में = 5 लट्ठे</text>
+
+    </svg>
+  </div>
       <div class="ans-box">
         <div class="step-line"><span class="badge-blue">चरण 1: श्रेढ़ी व पदों की संख्या</span><br>
           $a = 20, \quad d = -1, \quad S_n = 200$<br>
@@ -1646,7 +1743,52 @@ div>
     <!-- Ex 5.3 Q20 -->
     <div class="qa-card" style="border: 3px solid #cbd5e1; border-radius: 16px; padding: 25px; margin-bottom: 35px; background: #ffffff;">
       <div class="q-box" style="font-size: 26pt; font-weight: 800; color: #0f172a; margin-bottom: 20px;">
-        <span class="q-tag" style="background: #1e3a8a; color: #ffffff; padding: 4px 14px; border-radius: 8px;">प्रश्न 20 (आलू दौड़ - Potato Race)</span> एक आलू दौड़ (potato race) में, प्रारंभिक स्थान पर एक बाल्टी रखी हुई है, जो पहले आलू से $5\text{ m}$ की दूरी पर है, तथा अन्य आलुओं को एक सीधी रेखा में परस्पर $3\text{ m}$ की दूरियों पर रखा गया है। इस रेखा पर $10$ आलू रखे गए हैं। प्रत्येक प्रतियोगी बाल्टी से चलना प्रारंभ करता है, निकटतम आलू को उठाता है, उसे लेकर वापस दौड़कर बाल्टी में डालता है, दूसरा आलू उठाने के लिए वापस दौड़ता है, उसे उठाकर बाल्टी में डालता है, और वह ऐसा तब तक करता रहता है जब तक कि सभी आलू बाल्टी में न आ जाएँ। इसमें प्रतियोगी को कुल कितनी दूरी दौड़नी पड़ेगी?
+        <span class="q-tag" style="background: #1e3a8a; color: #ffffff; padding: 4px 14px; border-radius: 8px;">
+<div style="text-align: center; margin: 20px auto; max-width: 720px;">
+<svg viewBox="0 0 720 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" style="background:#0f172a; border-radius:12px; border:1px solid #334155; font-family:sans-serif;">
+  <defs>
+    <linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="720" height="180" fill="url(#trackGrad)" rx="12"/>
+  <text x="360" y="26" fill="#f59e0b" font-size="15" font-weight="bold" text-anchor="middle">आलू दौड़ मॉडल (Potato Race Track) : a = 10 m, d = 6 m, n = 10</text>
+  <!-- Track Ground Line -->
+  <line x1="40" y1="120" x2="680" y2="120" stroke="#64748b" stroke-width="3" stroke-dasharray="4,4"/>
+  <!-- Bucket -->
+  <path d="M 70 120 L 60 70 L 95 70 L 85 120 Z" fill="#ef4444" stroke="#fca5a5" stroke-width="2"/>
+  <text x="77" y="98" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">बाल्टी</text>
+  <text x="77" y="140" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">0 m</text>
+  <!-- First Potato -->
+  <circle cx="180" cy="116" r="8" fill="#eab308" stroke="#fef08a" stroke-width="2"/>
+  <text x="180" y="140" fill="#fef08a" font-size="12" font-weight="bold" text-anchor="middle">आलू 1 (5m)</text>
+  <text x="180" y="156" fill="#94a3b8" font-size="11" text-anchor="middle">दौड़ = 10m</text>
+  <!-- Second Potato -->
+  <circle cx="270" cy="116" r="8" fill="#eab308" stroke="#fef08a" stroke-width="2"/>
+  <text x="270" y="140" fill="#fef08a" font-size="12" font-weight="bold" text-anchor="middle">आलू 2 (8m)</text>
+  <text x="270" y="156" fill="#94a3b8" font-size="11" text-anchor="middle">दौड़ = 16m</text>
+  <!-- Third Potato -->
+  <circle cx="360" cy="116" r="8" fill="#eab308" stroke="#fef08a" stroke-width="2"/>
+  <text x="360" y="140" fill="#fef08a" font-size="12" font-weight="bold" text-anchor="middle">आलू 3 (11m)</text>
+  <text x="360" y="156" fill="#94a3b8" font-size="11" text-anchor="middle">दौड़ = 22m</text>
+  <!-- Ellipsis -->
+  <text x="450" y="120" fill="#38bdf8" font-size="22" font-weight="bold" text-anchor="middle">• • •</text>
+  <!-- 10th Potato -->
+  <circle cx="570" cy="116" r="8" fill="#eab308" stroke="#fef08a" stroke-width="2"/>
+  <text x="570" y="140" fill="#fef08a" font-size="12" font-weight="bold" text-anchor="middle">10वाँ आलू (32m)</text>
+  <text x="570" y="156" fill="#94a3b8" font-size="11" text-anchor="middle">दौड़ = 64m</text>
+  <!-- Curve showing return trip -->
+  <path d="M 77 60 C 130 35, 150 35, 178 60" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <text x="130" y="46" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">2 × 5 = 10 m</text>
+  <!-- Total Box -->
+  <rect x="595" y="45" width="110" height="45" rx="6" fill="#1e3a8a" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="650" y="64" fill="#93c5fd" font-size="11" text-anchor="middle">कुल दूरी S_10</text>
+  <text x="650" y="82" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">370 मीटर</text>
+</svg>
+</div>
+
+प्रश्न 20 (आलू दौड़ - Potato Race)</span> एक आलू दौड़ (potato race) में, प्रारंभिक स्थान पर एक बाल्टी रखी हुई है, जो पहले आलू से $5\text{ m}$ की दूरी पर है, तथा अन्य आलुओं को एक सीधी रेखा में परस्पर $3\text{ m}$ की दूरियों पर रखा गया है। इस रेखा पर $10$ आलू रखे गए हैं। प्रत्येक प्रतियोगी बाल्टी से चलना प्रारंभ करता है, निकटतम आलू को उठाता है, उसे लेकर वापस दौड़कर बाल्टी में डालता है, दूसरा आलू उठाने के लिए वापस दौड़ता है, उसे उठाकर बाल्टी में डालता है, और वह ऐसा तब तक करता रहता है जब तक कि सभी आलू बाल्टी में न आ जाएँ। इसमें प्रतियोगी को कुल कितनी दूरी दौड़नी पड़ेगी?
       </div>
       <div class="ans-box">
         <div class="step-line"><span class="badge-blue">हल:</span><br>

@@ -953,6 +953,44 @@
     <!-- Ex 2.2 Q4 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 4: निम्नलिखित स्थितियों में से प्रत्येक स्थिति में बहुपद का शून्यक ज्ञात कीजिए:</h3>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: बहुपद के शून्यक का ज्यामितीय अर्थ (Geometric Meaning of Zero)</div>
+    <svg width="100%" height="250" viewBox="0 0 560 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Coordinate Plane showing y = 2x + 5 cutting x-axis at (-2.5, 0) -->
+      <!-- Center at (250, 140), scale: 30px per unit -->
+      <line x1="40" y1="140" x2="460" y2="140" stroke="#1e293b" stroke-width="2.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+      <line x1="250" y1="230" x2="250" y2="20" stroke="#1e293b" stroke-width="2.5" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+      
+      <text x="475" y="145" font-size="14" font-weight="bold" fill="#0f172a">X</text>
+      <text x="25" y="145" font-size="14" font-weight="bold" fill="#0f172a">X'</text>
+      <text x="255" y="20" font-size="14" font-weight="bold" fill="#0f172a">Y</text>
+      <text x="235" y="155" font-size="12" font-weight="bold" fill="#64748b">O</text>
+
+      <!-- Line y = 2x + 5. Cuts X at x = -2.5 => px = 250 - 2.5*30 = 175, py = 140. Cuts Y at y = 5 => px = 250, py = 140 - 5*30 = -10 (too high). At x=-4, y=-3 => (130, 230). At x=-1, y=3 => (220, 50). At x=0, y=5 => (250, -10). -->
+      <line x1="120" y1="240" x2="235" y2="25" stroke="#2563eb" stroke-width="3.5"/>
+      <text x="145" y="60" font-size="13" font-weight="bold" fill="#1d4ed8">p(x) = 2x + 5</text>
+
+      <!-- Point of intersection with X-axis: (-2.5, 0) -> (175, 140) -->
+      <circle cx="175" cy="140" r="8" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="175" cy="140" r="14" fill="none" stroke="#fca5a5" stroke-width="2"/>
+      <text x="175" y="175" font-size="14" font-weight="900" fill="#b91c1c" text-anchor="middle">शून्यक: x = -5/2 (-2.5)</text>
+
+      <!-- Explanatory Box on Right -->
+      <rect x="290" y="45" width="235" height="150" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+      <text x="407" y="72" font-size="13" font-weight="900" fill="#1e3a8a" text-anchor="middle">ज्यामितीय अर्थ (Geometric Meaning)</text>
+      <text x="305" y="98" font-size="12" font-weight="bold" fill="#1e293b">• p(x) = 0 का अर्थ है y = 0</text>
+      <text x="305" y="122" font-size="12" font-weight="bold" fill="#1e293b">• रेखा X-अक्ष को जहाँ काटती है,</text>
+      <text x="305" y="142" font-size="12" font-weight="bold" fill="#1e293b">  वही x-मान बहुपद का 'शून्यक' है।</text>
+      <text x="407" y="175" font-size="13" font-weight="900" fill="#059669" text-anchor="middle">2x + 5 = 0 ⇒ x = -5/2</text>
+
+    </svg>
+  </div>
       <p>शून्यक ज्ञात करने हेतु हम $p(x) = 0$ रखते हैं:</p>
 
       <div class="step-box-blue">
@@ -1378,6 +1416,53 @@
     <!-- Ex 2.4 Q1 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 1: उपयुक्त सर्वसमिकाओं को प्रयोग करके निम्नलिखित गुणनफल ज्ञात कीजिए:</h3>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: सर्वसमिका (x+a)(x+b) का ज्यामितीय क्षेत्रफल मॉडल (Algebra Tiles)</div>
+    <svg width="100%" height="240" viewBox="0 0 560 240" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Main Rectangle: divided into 4 pieces -->
+      <!-- Origin at (110, 45). x_dim = 160, a_dim = 90. Total width = 250 -->
+      <!-- y_dim = 110, b_dim = 65. Total height = 175 -->
+      
+      <!-- Piece 1: x * x = x^2 (top-left) -->
+      <rect x="110" y="45" width="160" height="110" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="190" y="105" font-size="20" font-weight="900" fill="#1d4ed8" text-anchor="middle">x²</text>
+
+      <!-- Piece 2: a * x = ax (top-right) -->
+      <rect x="270" y="45" width="90" height="110" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+      <text x="315" y="105" font-size="18" font-weight="900" fill="#15803d" text-anchor="middle">ax</text>
+
+      <!-- Piece 3: x * b = bx (bottom-left) -->
+      <rect x="110" y="155" width="160" height="65" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+      <text x="190" y="195" font-size="18" font-weight="900" fill="#b45309" text-anchor="middle">bx</text>
+
+      <!-- Piece 4: a * b = ab (bottom-right) -->
+      <rect x="270" y="155" width="90" height="65" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+      <text x="315" y="195" font-size="18" font-weight="900" fill="#be185d" text-anchor="middle">ab</text>
+
+      <!-- Dimension Labels -->
+      <!-- Top dimensions -->
+      <text x="190" y="35" font-size="15" font-weight="bold" fill="#1d4ed8" text-anchor="middle">x</text>
+      <text x="315" y="35" font-size="15" font-weight="bold" fill="#15803d" text-anchor="middle">a</text>
+      <!-- Left dimensions -->
+      <text x="95" y="105" font-size="15" font-weight="bold" fill="#1d4ed8" text-anchor="end">x</text>
+      <text x="95" y="195" font-size="15" font-weight="bold" fill="#b45309" text-anchor="end">b</text>
+
+      <!-- Formula Card Right -->
+      <rect x="385" y="55" width="155" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="462" y="80" font-size="12" font-weight="900" fill="#1e3a8a" text-anchor="middle">कुल क्षेत्रफल:</text>
+      <text x="462" y="105" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">(x + a)(x + b)</text>
+      <text x="462" y="130" font-size="12" font-weight="900" fill="#1e3a8a" text-anchor="middle">= 4 भागों का योग:</text>
+      <text x="462" y="155" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">x² + ax + bx + ab</text>
+      <text x="462" y="185" font-size="13" font-weight="900" fill="#dc2626" text-anchor="middle">= x² + (a+b)x + ab</text>
+
+    </svg>
+  </div>
       
       <div class="step-box-blue">
         <p><b>(i) $(x + 4)(x + 10)$</b></p>
@@ -1920,6 +2005,38 @@
     <!-- Ex 2.4 Q15 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 15: नीचे दिए गए आयतों, जिनमें उनके क्षेत्रफल दिए गए हैं, में से प्रत्येक की लंबाई और चौड़ाई के लिए संभव व्यंजक दीजिए:</h3>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: आयतों का क्षेत्रफल एवं उनकी संभव विमाएँ (लंबाई व चौड़ाई)</div>
+    <svg width="100%" height="250" viewBox="0 0 560 250" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Divider -->
+      <line x1="275" y1="20" x2="275" y2="240" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Rectangle (i) -->
+      <text x="135" y="35" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">(i) प्रथम आयत</text>
+      <rect x="35" y="55" width="200" height="110" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5"/>
+      <text x="135" y="100" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">क्षेत्रफल = 25a² - 35a + 12</text>
+      <text x="135" y="125" font-size="13" font-weight="900" fill="#2563eb" text-anchor="middle">= (5a - 3)(5a - 4)</text>
+      <!-- Dimensions -->
+      <text x="135" y="185" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">संभव लंबाई = (5a - 3)</text>
+      <text x="135" y="205" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">संभव चौड़ाई = (5a - 4)</text>
+
+      <!-- Rectangle (ii) -->
+      <text x="415" y="35" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">(ii) द्वितीय आयत</text>
+      <rect x="315" y="55" width="200" height="110" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+      <text x="415" y="100" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">क्षेत्रफल = 35y² + 13y - 12</text>
+      <text x="415" y="125" font-size="13" font-weight="900" fill="#15803d" text-anchor="middle">= (5y + 4)(7y - 3)</text>
+      <!-- Dimensions -->
+      <text x="415" y="185" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">संभव लंबाई = (5y + 4)</text>
+      <text x="415" y="205" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">संभव चौड़ाई = (7y - 3)</text>
+
+    </svg>
+  </div>
       
       <div class="step-box-blue">
         <p><b>(i) क्षेत्रफल = $25a^2 - 35a + 12$</b></p>
@@ -1948,6 +2065,49 @@
     <!-- Ex 2.4 Q16 -->
     <div class="qa-block">
       <h3 class="question-heading">प्रश्न 16: घनाभों (Cuboids), जिनके आयतन नीचे दिए गए हैं, की विमाओं के लिए संभव व्यंजक क्या हैं?</h3>
+<div style="margin:20px auto; max-width:560px; text-align:center;">
+    <div style="font-size:18pt; font-weight:900; color:#1e3a8a; margin-bottom:8px;">📐 रेखाचित्र: घनाभों का आयतन एवं उनकी 3D विमाएँ (L × B × H)</div>
+    <svg width="100%" height="260" viewBox="0 0 560 260" style="background:#ffffff; border:3px solid #cbd5e1; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06); display:block; margin:0 auto;">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
+        </marker>
+      </defs>
+      
+      <!-- Divider -->
+      <line x1="275" y1="20" x2="275" y2="250" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Cuboid (i) Isometric: V = 3x(x - 4) -->
+      <!-- Front face at (50, 90), width 90, height 70. Depth offset dx=35, dy=-30 -->
+      <text x="135" y="32" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">(i) आयतन = 3x² - 12x</text>
+      <!-- Front face -->
+      <rect x="50" y="90" width="90" height="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <!-- Top face -->
+      <polygon points="50,90 85,60 175,60 140,90" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+      <!-- Right face -->
+      <polygon points="140,90 175,60 175,130 140,160" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+      <!-- Dimension labels -->
+      <text x="95" y="180" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">लंबाई = 3</text>
+      <text x="180" y="105" font-size="12" font-weight="bold" fill="#1e40af">चौड़ाई = x</text>
+      <text x="35" y="130" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="end">ऊँचाई = x - 4</text>
+      <rect x="40" y="195" width="195" height="42" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+      <text x="137" y="221" font-size="12" font-weight="900" fill="#1d4ed8" text-anchor="middle">विमाएँ: 3, x, (x - 4)</text>
+
+      <!-- Cuboid (ii) Isometric: V = 4k(y - 1)(3y + 5) -->
+      <text x="415" y="32" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="middle">(ii) आयतन = 12ky² + 8ky - 20k</text>
+      <!-- Front face at (330, 90), width 90, height 70. -->
+      <rect x="330" y="90" width="90" height="70" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+      <polygon points="330,90 365,60 455,60 420,90" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+      <polygon points="420,90 455,60 455,130 420,160" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
+      <!-- Dimension labels -->
+      <text x="375" y="180" font-size="12" font-weight="bold" fill="#b45309" text-anchor="middle">लंबाई = 4k</text>
+      <text x="460" y="105" font-size="12" font-weight="bold" fill="#b45309">चौड़ाई = y - 1</text>
+      <text x="315" y="130" font-size="12" font-weight="bold" fill="#b45309" text-anchor="end">ऊँचाई = 3y + 5</text>
+      <rect x="315" y="195" width="200" height="42" rx="6" fill="#fefce8" stroke="#eab308" stroke-width="1.2"/>
+      <text x="415" y="221" font-size="12" font-weight="900" fill="#a16207" text-anchor="middle">विमाएँ: 4k, (y - 1), (3y + 5)</text>
+
+    </svg>
+  </div>
       <p>घनाभ का आयतन $=$ लंबाई $\times$ चौड़ाई $\times$ ऊँचाई</p>
 
       <div class="step-box-blue">

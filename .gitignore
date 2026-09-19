@@ -17,3 +17,7 @@ node_modules/
 push_result.txt
 task_318_out.txt
 
+
+*.bak
+__pycache__/
+*.pyc

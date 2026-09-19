@@ -2225,18 +2225,7 @@
       if (res) res.innerHTML = txt;
     }
 
-    function calcSubstitution() {
-      var s = parseFloat(document.getElementById('sub_s').value) || 14;
-      var d = parseFloat(document.getElementById('sub_d').value) || 4;
-      var y = (s - d) / 2;
-      var x = s - y;
-      var res = document.getElementById('subResult');
-      if (res) {
-        res.innerHTML = 'चरण 1: समीकरण (1) से: x = ' + s + ' - y<br>' +
-          'चरण 2: मान (2) में प्रतिस्थापित करने पर: (' + s + ' - y) - y = ' + d + ' &implies; ' + s + ' - 2y = ' + d + ' &implies; <strong>y = ' + y.toFixed(1) + '</strong><br>' +
-          'चरण 3: x = ' + s + ' - ' + y.toFixed(1) + ' = <strong>' + x.toFixed(1) + '</strong> &implies; अभीष्ट हल: <strong>x = ' + x.toFixed(1) + ', y = ' + y.toFixed(1) + '</strong>';
-      }
-    }
+// calcSubstitution was replaced by updateSim4
 
     function calcElimination() {
       var a = parseFloat(document.getElementById('elim_a').value) || 5;
