@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 13: अध्याय 13: हमारा पर्यावरण (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci13.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 13</div>
+      <h1 class="qa-main-title">अध्याय 13: हमारा पर्यावरण — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Our Environment • पारितंत्र, 10% ऊर्जा नियम, खाद्य जाल, जैव आवर्धन, ओजोन परत एवं कचरा प्रबंधन • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 280</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> पोषी स्तर क्या हैं? एक आहार शृंखला का उदाहरण दीजिए तथा इसमें विभिन्न पोषी स्तर बताइए।</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> आहार शृंखला का प्रत्येक चरण या स्तर जहाँ भोजन (ऊर्जा) का स्थानांतरण होता है, <b>पोषी स्तर (Trophic Level)</b> कहलाता है।
+            <br><b>उदाहरण (घास का मैदान आहार शृंखला):</b>
+            <br>1. <b>प्रथम पोषी स्तर (उत्पादक):</b> घास (पौधे)।
+            <br>2. <b>द्वितीय पोषी स्तर (प्राथमिक उपभोक्ता):</b> टिड्डा / हिरण (शाकाहारी)।
+            <br>3. <b>तृतीय पोषी स्तर (द्वितीयक उपभोक्ता):</b> मेंढक (मांसाहारी)।
+            <br>4. <b>चतुर्थ पोषी स्तर (शीर्ष उपभोक्ता):</b> सांप / बाज (शीर्ष मांसाहारी)।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> पारितंत्र में अपघटकों की क्या भूमिका है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b>
+            <br>1. अपघटक (जीवाणु व कवक) मृत जैव अवशेषों व उत्सर्जित पदार्थों का अपघटन करके उन्हें सरल अकार्बनिक पदार्थों में बदलते हैं।
+            <br>2. ये पोषक तत्वों का मृदा व वायुमंडल में पुनः चक्रीकरण करते हैं जिससे मृदा की उर्वरता बनी रहती है।
+            <br>3. यदि अपघटक न हों, तो पृथ्वी मृत शरीरों व कचरे के ढेरों से पट जाएगी। अतः ये <b>पर्यावरण के प्राकृतिक सफाईकर्मी</b> हैं।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 285</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> ओजोन क्या है तथा यह किसी पारितंत्र को किस प्रकार प्रभावित करती है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> ओजोन (O₃) ऑक्सीजन के तीन परमाणुओं से बना एक अणु है। भूमि स्तर पर यह एक घातक विष है, परंतु वायुमंडल के उच्च स्तर (समताप मंडल) पर यह सूर्य से आने वाली हानिकारक <b>पराबैंगनी विकिरणों (UV rays)</b> को अवशोषित करके एक सुरक्षात्मक आवरण बनाती है। यदि ओजोन परत न हो, तो UV किरणें पृथ्वी पर पहुंचकर त्वचा कैंसर, मोतियाबिंद तथा फसलों को भारी नुकसान पहुंचाएंगी।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> निम्न में से कौन-से समूहों में केवल जैव निम्नीकरणीय पदार्थ हैं?</p>
+        <p style="padding-left:15px;">(a) घास, पुष्प तथा चमड़ा (b) घास, लकड़ी तथा प्लास्टिक (c) फलों के छिलके, केक एवं नींबू का रस (d) केक, लकड़ी एवं घास</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (a), (c) तथा (d) सभी सही हैं।</b> (केवल विकल्प (b) में प्लास्टिक अजैव निम्नीकरणीय है)।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2 (MCQ):</b> निम्न में से कौन आहार शृंखला का निर्माण करते हैं?</p>
+        <p style="padding-left:15px;">(a) घास, गेहूं तथा आम (b) घास, बकरी तथा मानव (c) बकरी, गाय तथा हाथी (d) घास, मछली तथा बकरी</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (b) घास ➔ बकरी ➔ मानव।</b> (घास उत्पादक है, बकरी प्राथमिक उपभोक्ता है, मानव द्वितीयक उपभोक्ता है)।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) जैव आवर्धन (Biological Magnification) क्या है? यह परिघटना मानव को सबसे अधिक प्रभावित क्यों करती है? (b) ओजोन परत के क्षरण के लिए मुख्य रूप से कौन-सा रसायन उत्तरदायी है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br><b>(a) जैव आवर्धन:</b> आहार शृंखला में प्रत्येक उच्च पोषी स्तर पर अजैव निम्नीकरणीय हानिकारक रसायनों (जैसे कीटनाशक DDT) की सांद्रता का उत्तरोत्तर बढ़ते जाना जैव आवर्धन कहलाता है। चूंकि मनुष्य आहार शृंखला के सर्वोच्च (शीर्ष) स्तर पर है, अतः ये रसायन सबसे अधिक मात्रा में मानव शरीर में ही जमा होते हैं।
+          <br><b>(b) उत्तरदायी रसायन:</b> <b>क्लोरोफ्लोरोकार्बन (CFCs)</b>।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          एक आहार शृंखला में केवल 3 या 4 पोषी स्तर ही क्यों हो सकते हैं? 10% ऊर्जा नियम के आधार पर समझाइए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> लिंडेमान के 10% नियम के अनुसार प्रत्येक पोषी स्तर पर केवल 10% ऊर्जा ही अगले स्तर को प्राप्त होती है, शेष 90% ऊर्जा पर्यावरण में ऊष्मा के रूप में नष्ट हो जाती है। 3 या 4 पोषी स्तरों के बाद उपलब्ध ऊर्जा की मात्रा इतनी कम हो जाती है कि वह किसी अगले पोषी स्तर के जीवों के जीवन को बनाए रखने के लिए अपर्याप्त होती है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          कचरा निपटान की किसी एक वैज्ञानिक विधि का उल्लेख कीजिए। कुल्हड़ के उपयोग से क्या समस्या उत्पन्न हुई थी?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>विधि: कम्पोस्टिंग (खाद बनाना)</b> - जैव निम्नीकरणीय कचरे को गड्ढे में दबाकर जैविक खाद तैयार करना।
+          <br>• <b>कुल्हड़ की समस्या:</b> बड़े पैमाने पर मिट्टी के कुल्हड़ बनाने से खेतों की <b>उपजाऊ ऊपरी मृदा (Top soil) का भारी नुकसान</b> होने लगा था, जिससे कृषि योग्य भूमि नष्ट होने का खतरा उत्पन्न हो गया था।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          ओजोन परत का निर्माण किस प्रकार होता है? रासायनिक समीकरण लिखिए। मॉन्ट्रियल समझौता क्या है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>समीकरण:</b> O₂ + UV ➔ O + O  तथा  O + O₂ ➔ O₃ (ओजोन)।
+          <br>• <b>मॉन्ट्रियल समझौता:</b> 1987 में संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP) द्वारा किया गया अंतर्राष्ट्रीय समझौता जिसके तहत ओजोन क्षयकारी CFCs के उत्पादन पर वैश्विक प्रतिबंध लगाया गया।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          पारितंत्र में ऊर्जा का प्रवाह एकदिशीय क्यों होता है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> सूर्य से प्राप्त ऊर्जा पौधों द्वारा ग्रहण की जाती है और वापस सूर्य को नहीं लौटती। इसी प्रकार शाकाहारियों द्वारा उपयोग की गई ऊर्जा पुनः पौधों को नहीं मिलती और उच्च पोषी स्तरों से निम्न पोषी स्तरों में ऊर्जा वापस कभी नहीं बहती। अतः ऊर्जा प्रवाह सदैव <b>एकदिशीय (Unidirectional)</b> होता है।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
