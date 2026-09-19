@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 9: अध्याय 9: प्रकाश – परावर्तन तथा अपवर्तन (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci9.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 9</div>
+      <h1 class="qa-main-title">अध्याय 9: प्रकाश – परावर्तन तथा अपवर्तन — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Light – Reflection and Refraction • गोलीय दर्पण, किरण आरेख, अपवर्तन, लेंस सूत्र व लेंस क्षमता • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 200</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> अवतल दर्पण के मुख्य फोकस की परिभाषा लिखिए।</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> अवतल दर्पण के मुख्य अक्ष के समानांतर आने वाली प्रकाश किरणें दर्पण से परावर्तन के पश्चात मुख्य अक्ष के जिस बिंदु पर परस्पर मिलती हैं (अभिसारित होती हैं), उस बिंदु को अवतल दर्पण का <b>मुख्य फोकस (F)</b> कहते हैं।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> हम वाहनों में उत्तल दर्पण को पश्च-दृश्य दर्पण (Rear-view mirror) के रूप में वरीयता क्यों देते हैं?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b>
+            <br>1. उत्तल दर्पण सदैव वस्तुओं का <b>सीधा (Erect) तथा छोटा</b> प्रतिबिंब बनाता है।
+            <br>2. बाहर की ओर वक्रित होने के कारण इसका <b>दृष्टि क्षेत्र (Field of view) बहुत विस्तृत</b> होता है, जिससे चालक अपने पीछे के बहुत बड़े यातायात क्षेत्र को देख पाता है और सुरक्षित वाहन चला सकता है।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 219</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> 1 डायऑप्टर (1 D) लेंस की क्षमता को परिभाषित कीजिए।</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> 1 डायऑप्टर उस लेंस की क्षमता है जिसकी फोकस दूरी <b>1 मीटर (1 m)</b> हो। (1 D = 1 m⁻¹)।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> कोई उत्तल लेंस किसी सुई का वास्तविक तथा उल्टा प्रतिबिंब उस लेंस से 50 cm दूर बनाता है। यदि प्रतिबिंब का आकार सुई के आकार के बराबर है, तो सुई लेंस के सामने कहाँ स्थित है? लेंस की क्षमता भी ज्ञात कीजिए।</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>हल:</b>
+            <br>चूंकि प्रतिबिंब वास्तविक, उल्टा एवं बिंब के समान आकार का है:
+            <br>अतः आवर्धन m = -1 = +v / u ➔ u = -v = -50 cm। (सुई लेंस के सामने <b>50 cm दूरी पर 2F₁ पर</b> रखी है)।
+            <br>फोकस दूरी हेतु: 2f = 50 cm ➔ f = +25 cm = +0.25 m।
+            <br>लेंस की क्षमता P = 1 / f = 1 / (+0.25) = <b>+4.0 D</b>।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> निम्न में से कौन-सा पदार्थ लेंस बनाने के लिए प्रयुक्त नहीं किया जा सकता?</p>
+        <p style="padding-left:15px;">(a) जल (b) कांच (c) प्लास्टिक (d) मिट्टी</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (d) मिट्टी (Clay)।</b> मिट्टी एक अपारदर्शी पदार्थ है, इससे प्रकाश का अपवर्तन नहीं हो सकता।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2 (MCQ):</b> किसी बिंब का अवतल दर्पण द्वारा बना प्रतिबिंब आभासी, सीधा तथा बिंब से बड़ा पाया गया। वस्तु की स्थिति कहाँ होनी चाहिए?</p>
+        <p style="padding-left:15px;">(a) मुख्य फोकस तथा वक्रता केंद्र के बीच (b) वक्रता केंद्र पर (c) वक्रता केंद्र से परे (d) दर्पण के ध्रुव तथा मुख्य फोकस के बीच</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (d) दर्पण के ध्रुव (P) तथा मुख्य फोकस (F) के बीच।</b>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 10:</b> 5 cm लंबा कोई बिंब 10 cm फोकस दूरी के किसी अभिसारी लेंस से 25 cm दूरी पर रखा जाता है। प्रकाश किरण-आरेख खींचकर प्रतिबिंब की स्थिति, साइज तथा प्रकृति ज्ञात कीजिए।</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+          <b>हल:</b>
+          <br>दिया है: h = +5 cm, f = +10 cm (अभिसारी/उत्तल लेंस), u = -25 cm।
+          <br>लेंस सूत्र से: 1/v - 1/u = 1/f ➔ 1/v = 1/f + 1/u = 1/10 + 1/(-25) = (5 - 2)/50 = 3/50
+          <br>➔ <b>v = +50/3 = +16.67 cm</b> (प्रतिबिंब लेंस के दूसरी ओर 16.67 cm पर बनेगा)।
+          <br>आवर्धन m = h'/h = v/u ➔ h' = h × (v/u) = 5 × [(50/3) / (-25)] = 5 × (-2/3) = <b>-3.33 cm</b>।
+          <br><b>प्रकृति:</b> प्रतिबिंब <b>वास्तविक, उल्टा तथा 3.3 cm छोटा</b> बनेगा।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (4 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) स्नेल का अपवर्तन नियम लिखिए। (b) किसी ऑटोमोबाइल में पीछे का दृश्य देखने के लिए उपयोग होने वाले उत्तल दर्पण की वक्रता त्रिज्या 3.00 m है। यदि एक बस इस दर्पण से 5.00 m की दूरी पर स्थित है, तो प्रतिबिंब की स्थिति, प्रकृति तथा साइज ज्ञात कीजिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल हल:</b>
+          <br><b>(a) स्नेल का नियम:</b> आपतन कोण की ज्या (sin i) तथा अपवर्तन कोण की ज्या (sin r) का अनुपात एक स्थिरांक होता है: sin i / sin r = n₂₁ (अपवर्तनांक)।
+          <br><b>(b) आंकिक प्रश्न:</b>
+          <br>वक्रता त्रिज्या R = +3.00 m ➔ फोकस दूरी f = R/2 = +1.50 m (उत्तल दर्पण)।
+          <br>बिंब दूरी u = -5.00 m।
+          <br>दर्पण सूत्र: 1/v + 1/u = 1/f ➔ 1/v = 1/f - 1/u = 1/1.50 - 1/(-5.00) = 1/1.5 + 1/5 = (5 + 1.5)/7.5 = 6.5/7.5
+          <br>➔ <b>v = +7.5 / 6.5 = +1.15 m</b>।
+          <br>प्रतिबिंब <b>दर्पण के पीछे 1.15 m</b> दूरी पर बनता है।
+          <br>आवर्धन m = -v/u = -(+1.15) / (-5.00) = <b>+0.23</b>।
+          <br>प्रकृति: <b>आभासी, सीधा तथा बिंब से 0.23 गुना छोटा</b>।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (i) अवतल दर्पण के ध्रुव एवं मुख्य फोकस के बीच रखी वस्तु के लिए किरण आरेख खींचिए। (ii) सौर कुकर में किस दर्पण का उपयोग होता है और क्यों?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>(i) किरण आरेख में प्रतिबिंब दर्पण के पीछे आभासी, सीधा एवं अत्यधिक बड़ा (विवर्धित) बनता है।
+          <br>(ii) सौर कुकर में <b>अवतल दर्पण</b> का उपयोग होता है, क्योंकि यह एक अभिसारी दर्पण है जो सूर्य की समानांतर प्रकाश किरणों को फोकस पर एक बिंदु पर केंद्रित कर अत्यधिक ऊष्मा उत्पन्न करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          एक डॉक्टर +1.5 D क्षमता का संशोधक लेंस निर्धारित करता है। लेंस की फोकस दूरी ज्ञात कीजिए। क्या यह लेंस अभिसारी है अथवा अपसारी?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल हल:</b>
+          <br>क्षमता P = +1.5 D।
+          <br>फोकस दूरी f = 1 / P = 1 / (+1.5) = +10 / 15 = <b>+0.67 m (+66.7 cm)</b>।
+          <br>चूंकि फोकस दूरी एवं क्षमता धनात्मक (+) हैं, अतः यह <b>उत्तल लेंस (अभिसारी लेंस / Converging Lens)</b> है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          कांच के आयताकार गुटके (स्लैब) से प्रकाश के अपवर्तन का नामांकित चित्र बनाकर 'पार्श्विक विस्थापन' (Lateral Displacement) को समझाइए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>कांच की स्लैब में आपतित किरण पहले वायु से कांच में (अभिलंब की ओर) झुकती है और फिर कांच से वायु में (अभिलंब से दूर) निकलती है।
+          <br>निर्गत किरण आपतित किरण के समानांतर होती है। आपतित किरण के मूल पथ तथा निर्गत किरण के मध्य की लंबवत दूरी को <b>पार्श्विक विस्थापन</b> कहते हैं।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          वास्तविक प्रतिबिंब तथा आभासी प्रतिबिंब में दो मुख्य अंतर लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>वास्तविक प्रतिबिंब:</b> प्रकाश किरणें वास्तव में प्रतिच्छेद करती हैं। इसे <b>पर्दे पर प्राप्त किया जा सकता है</b> तथा यह सदैव <b>उल्टा</b> होता है।
+          <br>• <b>आभासी प्रतिबिंब:</b> प्रकाश किरणें मिलती हुई प्रतीत होती हैं। इसे <b>पर्दे पर प्राप्त नहीं किया जा सकता</b> तथा यह सदैव <b>सीधा</b> होता है।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
