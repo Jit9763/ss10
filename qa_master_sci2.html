@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 2: अम्ल, क्षारक एवं लवण (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Home Button -->
+  <a href="science10.html" class="floating-home-btn" title="विज्ञान पोर्टल होम">🏠</a>
+
+  <header class="top-toolbar">
+          <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci2.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;" title="थ्योरी नोट्स"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+      </div>
+
+    <div class="toolbar-right">
+      <!-- Font Size Controls -->
+      <button class="tool-btn" onclick="adjustFontSize(1)" title="फ़ॉन्ट आकार बढ़ाएं">
+        <i class="fas fa-font"></i> A+
+      </button>
+      <button class="tool-btn" onclick="adjustFontSize(-1)" title="फ़ॉन्ट आकार घटाएं">
+        A-
+      </button>
+
+      <!-- Font Weight Controls -->
+      <button class="tool-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएं">
+        <strong>B+</strong>
+      </button>
+      <button class="tool-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएं">
+        B-
+      </button>
+
+      <!-- Page Width Controls -->
+      <button class="tool-btn" onclick="adjustWidth(60)" title="पृष्ठ चौड़ाई बढ़ाएं">
+        <i class="fas fa-arrows-alt-h"></i> W+
+      </button>
+      <button class="tool-btn" onclick="adjustWidth(-60)" title="पृष्ठ चौड़ाई घटाएं">
+        W-
+      </button>
+
+      <!-- Simulator Line Thickness Controls -->
+      <button class="tool-btn" onclick="adjustSimStroke(1)" title="सिमुलेटर रेखाएं मोटी करें">
+        <i class="fas fa-pen-nib"></i> रेखा +
+      </button>
+      <button class="tool-btn" onclick="adjustSimStroke(-1)" title="सिमुलेटर रेखाएं पतली करें">
+        रेखा -
+      </button>
+
+      <!-- Print Button -->
+      <button class="tool-btn primary" onclick="window.print()">
+        <i class="fas fa-print"></i> प्रिंट
+      </button>
+    </div>
+  </header>
+
+  <div class="doc-container" id="mainDocContainer">
+        <!-- Chapter Hero -->
+    
+    <!-- Chapter Hero -->
+    <div class="chapter-hero">
+      <span class="chapter-tag" style="background:#ecfdf5; color:#059669; border-color:#86efac;">NCERT कक्षा 10 विज्ञान | संपूर्ण प्रश्नोत्तर बैंक</span>
+      <h1 class="chapter-title">अध्याय 2: अम्ल, क्षारक एवं लवण</h1>
+      <p class="chapter-subtitle">पाठ्यपुस्तक आंतरिक प्रश्न + संपूर्ण अभ्यास हल + विगत 5 वर्षों के बोर्ड परीक्षा प्रश्न (Board Questions with Flags)</p>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 1: NCERT पाठ्यपुस्तक के आंतरिक प्रश्नोत्तर (In-text Questions)
+         =================================================================== -->
+    <h2 class="section-heading">
+      <i class="fas fa-book-open" style="color: #0284c7;"></i> 1. NCERT पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)
+    </h2>
+
+    <!-- Q1 (Page 20) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 20 • प्र. 1</span>
+        <span>आपको तीन परखनलियाँ दी गई हैं। इनमें से एक में आसुत जल एवं शेष दो में से एक में अम्लीय विलयन तथा दूसरे में क्षारकीय विलयन है। यदि आपको केवल लाल लिटमस पत्र दिया जाता है तो आप प्रत्येक परखनली में रखे पदार्थों की पहचान कैसे करेंगे?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        1. तीनों परखनलियों से एक-एक बूँद विलयन लाल लिटमस पत्र पर डालते हैं। जिस परखनली का विलयन <strong>लाल लिटमस को नीला</strong> कर देता है, वह निश्चित रूप से <strong>क्षारकीय विलयन (Base)</strong> है।<br>
+        2. अब इस नीले हो चुके लिटमस पत्र का उपयोग शेष दो परखनलियों के परीक्षण के लिए करेंगे।<br>
+        3. इस नीले लिटमस पत्र पर शेष दोनों परखनलियों से बारी-बारी बूँदें डालते हैं:<br>
+        &nbsp;&nbsp;• जो विलयन <strong>नीले लिटमस को पुनः लाल</strong> कर दे, वह <strong>अम्लीय विलयन (Acid)</strong> है।<br>
+        &nbsp;&nbsp;• जो विलयन लिटमस के रंग में कोई परिवर्तन न करे, वह <strong>आसुत जल (उदासीन द्रव)</strong> है।
+      </div>
+    </div>
+
+    <!-- Q2 (Page 24) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 24 • प्र. 1</span>
+        <span>पीतल एवं ताँबे के बर्तनों में दही एवं खट्टे पदार्थ क्यों नहीं रखने चाहिए?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> दही एवं खट्टे पदार्थों में प्राकृतिक अम्ल (जैसे लैक्टिक अम्ल आदि) पाए जाते हैं। अम्ल ताँबे व पीतल (कॉपर व जिंक की मिश्रधातु) जैसी धातुओं के साथ क्रिया करके <strong>विषाक्त (हानिकारक) धात्विक लवण</strong> बनाते हैं। यदि ऐसे दूषित भोजन का सेवन किया जाए, तो यह विषाक्तता (Food Poisoning) उत्पन्न कर स्वास्थ्य को गंभीर हानि पहुँचा सकता है। अतः पीतल व ताँबे के बर्तनों में खट्टे पदार्थ नहीं रखने चाहिए।
+      </div>
+    </div>
+
+    <!-- Q3 (Page 24) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 24 • प्र. 2</span>
+        <span>धातु के साथ अम्ल की अभिक्रिया होने पर सामान्यतः कौन-सी गैस निकलती है? एक उदाहरण के द्वारा समझाइए। इस गैस की उपस्थिति की जाँच आप कैसे करेंगे?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> धातु के साथ अम्ल की अभिक्रिया होने पर सामान्यतः <strong>हाइड्रोजन गैस (H₂)</strong> निकलती है।<br>
+        <strong>उदाहरण:</strong> Zn(s) [जिंक दाने] + H₂SO₄(aq) [तनु सल्फ्यूरिक अम्ल] ➔ ZnSO₄(aq) + H₂(g)↑<br>
+        <strong>जाँच (POP Test):</strong> परखनली के मुँह के पास एक जलती हुई मोमबत्ती ले जाने पर गैस <em>नीली ज्वाला के साथ तथा 'पॉप' (POP!) की ध्वनि</em> के साथ जलती है। यह हाइड्रोजन गैस का विशिष्ट प्रामाणिक परीक्षण है।
+      </div>
+    </div>
+
+    <!-- Q4 (Page 27) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 27 • प्र. 1</span>
+        <span>HCl, HNO₃ आदि जलीय विलयन में अम्लीय अभिलक्षण क्यों प्रदर्शित करते हैं, जबकि ऐल्कोहॉल एवं ग्लूकोज जैसे यौगिकों के विलयनों में अम्लीयता के अभिलक्षण प्रदर्शित नहीं होते?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> HCl तथा HNO₃ जलीय विलयन में पूर्णतः आयनित होकर <strong>मुक्त हाइड्रोजन आयन (H⁺/H₃O⁺)</strong> उत्पन्न करते हैं, जो अम्लीय गुणों के लिए उत्तरदायी होते हैं:<br>
+        <span style="display:inline-block; margin:6px 0; font-weight:800; color:#0284c7;">HCl + H₂O ➔ H₃O⁺ + Cl⁻</span><br>
+        इसके विपरीत, ऐल्कोहॉल (C₂H₅OH) तथा ग्लूकोज (C₆H₁₂O₆) सहसंयोजी यौगिक हैं। जल में इनका आयनीकरण नहीं होता (ये मुक्त H⁺ आयन नहीं देते)। अतः ये अम्लीय अभिलक्षण प्रदर्शित नहीं करते।
+      </div>
+    </div>
+
+    <!-- Q5 (Page 27) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 27 • प्र. 2</span>
+        <span>अम्ल का जलीय विलयन क्यों विद्युत का चालन करता है?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> अम्ल का जलीय विलयन में वियोजन होकर मुक्त आयन (जैसे H⁺ धन आयन तथा Cl⁻/SO₄²⁻ ऋण आयन) बनते हैं। विद्युत धारा का प्रवाह आवेशित आयनों की गतिशीलता द्वारा होता है। इन <strong>मुक्त गतिशील आयनों की उपस्थिति के कारण</strong> अम्ल का जलीय विलयन विद्युत का सुचालक होता है।
+      </div>
+    </div>
+
+    <!-- Q6 (Page 27) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 27 • प्र. 3</span>
+        <span>शुष्क हाइड्रोक्लोरिक गैस शुष्क लिटमस पत्र के रंग को क्यों नहीं बदलती?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> अम्लीय व्यवहार के लिए हाइड्रोजन आयनों (H⁺) का पृथक्करण आवश्यक है, जो केवल <strong>जल (नमी) की उपस्थिति में ही संभव</strong> है। शुष्क वातावरण में जल की अनुपस्थिति के कारण शुष्क HCl गैस से H⁺ आयन पृथक नहीं हो पाते। अतः यह शुष्क लिटमस पत्र का रंग नहीं बदलती। (किंतु आर्द्र लिटमस पत्र पर यह तुरंत लाल रंग देती है)।
+      </div>
+    </div>
+
+    <!-- Q7 (Page 27) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 27 • प्र. 4</span>
+        <span>अम्ल को तनुकृत करते समय यह क्यों अनुशंसित करते हैं कि अम्ल को जल में मिलाना चाहिए, न कि जल को अम्ल में?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> सांद्र अम्ल में जल मिलाने की प्रक्रिया <strong>अत्यधिक तीव्र ऊष्माक्षेपी (Exothermic)</strong> होती है। यदि सांद्र अम्ल में जल डाला जाए, तो एक साथ अत्यधिक मात्रा में ऊष्मा उत्पन्न होती है जिससे स्थानीय रूप से जल वाष्पीकृत होकर खौलने लगता है और अम्ल के छींटे उछलकर चेहरे व कपड़ों पर गिर सकते हैं (जिससे गंभीर जलन हो सकती है)। साथ ही अत्यधिक स्थानीय ताप से कांच का पात्र टूट सकता है।<br>
+        अतः सुरक्षित रहने के लिए <strong>जल की अधिक मात्रा में अम्ल को बूँद-बूँद लगातार हिलाते हुए</strong> मिलाना चाहिए ताकि उत्पन्न ऊष्मा जल द्वारा तुरंत अवशोषित हो जाए।
+      </div>
+    </div>
+
+    <!-- Q8 (Page 31) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 31 • प्र. 1</span>
+        <span>आपके पास दो विलयन 'A' एवं 'B' हैं। विलयन 'A' के pH का मान 6 है एवं विलयन 'B' के pH का मान 8 है। किस विलयन में हाइड्रोजन आयन की सांद्रता अधिक है? इनमें से कौन-सा अम्लीय है तथा कौन-सा क्षारकीय?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        1. pH मान हाइड्रोजन आयन सांद्रता के व्युत्क्रमानुपाती होता है (pH = -log[H⁺])। अतः जिस विलयन का pH कम होगा, उसमें H⁺ आयन सांद्रता अधिक होगी। इसलिए <strong>विलयन 'A' (pH = 6) में हाइड्रोजन आयन की सांद्रता अधिक है</strong>।<br>
+        2. <strong>विलयन 'A' (pH 6 < 7):</strong> अम्लीय प्रकृति का है।<br>
+        3. <strong>विलयन 'B' (pH 8 > 7):</strong> क्षारकीय प्रकृति का है।
+      </div>
+    </div>
+
+    <!-- Q9 (Page 36) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 36 • प्र. 1</span>
+        <span>CaOCl₂ यौगिक का प्रचलित नाम क्या है? उस पदार्थ का नाम बताइए जो क्लोरीन से क्रिया करके विरंजक चूर्ण बनाता है।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        1. CaOCl₂ का प्रचलित नाम <strong>विरंजक चूर्ण (Bleaching Powder)</strong> है (रासायनिक नाम: कैल्शियम ऑक्सीक्लोराइड)।<br>
+        2. <strong>शुष्क बुझा हुआ चूना [Ca(OH)₂]</strong> क्लोरीन गैस से क्रिया करके विरंजक चूर्ण बनाता है:<br>
+        <span style="font-weight:800; color:#047857;">Ca(OH)₂ + Cl₂ ➔ CaOCl₂ + H₂O</span>
+      </div>
+    </div>
+
+    <!-- Q10 (Page 36) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 36 • प्र. 2</span>
+        <span>कठोर जल को मृदु करने के लिए किस सोडियम यौगिक का उपयोग किया जाता है?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> जल की स्थायी कठोरता को दूर कर उसे मृदु बनाने के लिए <strong>धोने का सोडा (धावन सोडा - Na₂CO₃·10H₂O / सोडियम कार्बोनेट डेकाहाइड्रेट)</strong> का उपयोग किया जाता है।
+      </div>
+    </div>
+
+    <!-- Q11 (Page 36) -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge">पृष्ठ 36 • प्र. 3</span>
+        <span>प्लास्टर ऑफ पेरिस को आर्द्र-रोधी (Moisture-proof) बर्तन में क्यों रखा जाना चाहिए? इसकी व्याख्या कीजिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O) वायुमंडल की नमी (जलवाष्प) को तुरंत अवशोषित कर लेता है तथा रासायनिक क्रिया करके कठोर ठोस पदार्थ <strong>जिप्सम (CaSO₄·2H₂O)</strong> में बदल जाता है:<br>
+        <span style="display:inline-block; margin:6px 0; font-weight:800; color:#b91c1c;">CaSO₄·½H₂O + 1½H₂O ➔ CaSO₄·2H₂O [कठोर जिप्सम]</span><br>
+        कठोर हो जाने पर इसके जमने का विशिष्ट गुण नष्ट हो जाता है और यह अनुपयोगी हो जाता है। अतः इसे नमी से बचाने के लिए सदैव आर्द्र-रोधी बर्तन में रखना चाहिए।
+      </div>
+    </div>
+
+
+    <!-- ===================================================================
+         SECTION 2: NCERT पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)
+         =================================================================== -->
+    <h2 class="section-heading" style="border-bottom-color:#10b981; margin-top:40px;">
+      <i class="fas fa-pencil-alt" style="color: #10b981;"></i> 2. NCERT पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Complete Textbook Exercises)
+    </h2>
+
+    <!-- Ex Q1 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 1</span>
+        <span>कोई विलयन लाल लिटमस को नीला कर देता है, इसका pH संभवतः क्या होगा?<br>
+        (a) 1 &nbsp;&nbsp;&nbsp;&nbsp; (b) 4 &nbsp;&nbsp;&nbsp;&nbsp; (c) 5 &nbsp;&nbsp;&nbsp;&nbsp; (d) 10</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर: विकल्प (d) 10</strong><br>
+        <em>कारण:</em> लाल लिटमस को नीला केवल <strong>क्षारकीय विलयन</strong> करता है। क्षारकीय विलयन का pH मान सदैव 7 से अधिक (अर्थात 10) होता है, जबकि 1, 4 और 5 अम्लीय pH हैं।
+      </div>
+    </div>
+
+    <!-- Ex Q2 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 2</span>
+        <span>कोई विलयन अंडे के पिसे हुए कवच से अभिक्रिया करके एक गैस उत्पन्न करता है जो चूने के पानी को दूधिया कर देती है। इस विलयन में क्या होगा?<br>
+        (a) NaCl &nbsp;&nbsp;&nbsp;&nbsp; (b) HCl &nbsp;&nbsp;&nbsp;&nbsp; (c) LiCl &nbsp;&nbsp;&nbsp;&nbsp; (d) KCl</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर: विकल्प (b) HCl (हाइड्रोक्लोरिक अम्ल)</strong><br>
+        <em>कारण:</em> अंडे का कवच कैल्शियम कार्बोनेट (CaCO₃) का बना होता है। जब यह HCl अम्ल से क्रिया करता है, तो कार्बन डाइऑक्साइड (CO₂) गैस उत्पन्न होती है जो चूने के पानी को दूधिया कर देती है:<br>
+        <span style="font-weight:800; color:#047857;">CaCO₃ + 2HCl ➔ CaCl₂ + H₂O + CO₂↑</span>
+      </div>
+    </div>
+
+    <!-- Ex Q3 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 3</span>
+        <span>NaOH का 10 mL विलयन, HCl के 8 mL विलयन से पूर्णतः उदासीन हो जाता है। यदि हम NaOH के उसी विलयन का 20 mL लें, तो इसे उदासीन करने के लिए HCl के उसी विलयन की कितनी मात्रा की आवश्यकता होगी?<br>
+        (a) 4 mL &nbsp;&nbsp;&nbsp;&nbsp; (b) 8 mL &nbsp;&nbsp;&nbsp;&nbsp; (c) 12 mL &nbsp;&nbsp;&nbsp;&nbsp; (d) 16 mL</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर: विकल्प (d) 16 mL</strong><br>
+        <em>गणना:</em><br>
+        10 mL NaOH को उदासीन करने के लिए आवश्यक HCl = 8 mL<br>
+        अतः 1 mL NaOH के लिए = 8/10 mL<br>
+        अतः 20 mL NaOH के लिए = (8 / 10) × 20 = <strong>16 mL</strong>
+      </div>
+    </div>
+
+    <!-- Ex Q4 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 4</span>
+        <span>अपच का उपचार करने के लिए निम्न में से किस औषधि का उपयोग होता है?<br>
+        (a) एंटीबायोटिक (प्रतिजैविक)<br>
+        (b) एनालजेसिक (पीड़ाहारी)<br>
+        (c) ऐंटासिड (Antacid / प्रतिअम्ल)<br>
+        (d) एंटीसेप्टिक (रोगाणुरोधक)</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर: विकल्प (c) ऐंटासिड (Antacid)</strong><br>
+        <em>कारण:</em> अपच के समय पेट में अत्यधिक हाइड्रोक्लोरिक अम्ल बनता है। ऐंटासिड एक दुर्बल क्षारक (जैसे मिल्क ऑफ मैग्नीशिया या बेकिंग सोडा) होता है, जो पेट के अतिरिक्त अम्ल को उदासीन करके तुरंत राहत पहुँचाता है।
+      </div>
+    </div>
+
+    <!-- Ex Q5 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 5</span>
+        <span>निम्न अभिक्रियाओं के लिए पहले शब्द-समीकरण लिखिए तथा उसके बाद संतुलित समीकरण लिखिए:<br>
+        (a) तनु सल्फ्यूरिक अम्ल दानेदार जिंक के साथ अभिक्रिया करता है।<br>
+        (b) तनु हाइड्रोक्लोरिक अम्ल मैग्नीशियम पट्टी के साथ अभिक्रिया करता है।<br>
+        (c) तनु सल्फ्यूरिक अम्ल एल्युमिनियम चूर्ण के साथ अभिक्रिया करता है।<br>
+        (d) तनु हाइड्रोक्लोरिक अम्ल लौह-रेतन (आयरन छीलन) के साथ अभिक्रिया करता है।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(a)</strong> सल्फ्यूरिक अम्ल + जिंक ➔ जिंक सल्फेट + हाइड्रोजन गैस<br>
+        <span style="font-weight:800; color:#0284c7;">Zn(s) + H₂SO₄(aq) ➔ ZnSO₄(aq) + H₂(g)↑</span><br><br>
+        <strong>(b)</strong> हाइड्रोक्लोरिक अम्ल + मैग्नीशियम ➔ मैग्नीशियम क्लोराइड + हाइड्रोजन गैस<br>
+        <span style="font-weight:800; color:#0284c7;">Mg(s) + 2HCl(aq) ➔ MgCl₂(aq) + H₂(g)↑</span><br><br>
+        <strong>(c)</strong> सल्फ्यूरिक अम्ल + एल्युमिनियम ➔ एल्युमिनियम सल्फेट + हाइड्रोजन गैस<br>
+        <span style="font-weight:800; color:#0284c7;">2Al(s) + 3H₂SO₄(aq) ➔ Al₂(SO₄)₃(aq) + 3H₂(g)↑</span><br><br>
+        <strong>(d)</strong> हाइड्रोक्लोरिक अम्ल + आयरन ➔ आयरन(II) क्लोराइड (फेरस क्लोराइड) + हाइड्रोजन गैस<br>
+        <span style="font-weight:800; color:#0284c7;">Fe(s) + 2HCl(aq) ➔ FeCl₂(aq) + H₂(g)↑</span>
+      </div>
+    </div>
+
+    <!-- Ex Q6 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 6</span>
+        <span>आसुत जल विद्युत का चालक क्यों नहीं होता, जबकि वर्षा का जल होता है?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        1. <strong>आसुत जल (Distilled Water):</strong> यह जल का पूर्णतः शुद्ध रूप है। इसमें किसी भी प्रकार के घुले हुए लवण या खनिज नहीं होते। फलतः इसमें विद्युत चालन के लिए आवश्यक <em>मुक्त आयन अनुपस्थित</em> होते हैं। अतः यह विद्युत का कुचालक होता है।<br>
+        2. <strong>वर्षा का जल (Rainwater):</strong> वायुमंडल से गुजरते समय इसमें वायु में उपस्थित कार्बन डाइऑक्साइड (CO₂), सल्फर डाइऑक्साइड (SO₂) तथा नाइट्रोजन ऑक्साइड्स जैसी गैसें घुलकर अल्प मात्रा में अम्ल (जैसे कार्बोनिक अम्ल H₂CO₃, सल्फ्यूरस अम्ल) बना लेती हैं। ये अम्ल जल में आयनित होकर <strong>मुक्त H⁺ आयन</strong> उत्पन्न करते हैं। इन मुक्त आयनों की उपस्थिति के कारण वर्षा का जल विद्युत का चालन करता है।
+      </div>
+    </div>
+
+    <!-- Ex Q7 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 7</span>
+        <span>ताजे दूध के pH का मान 6 होता है। दही बन जाने पर इसके pH के मान में क्या परिवर्तन होगा? अपना उत्तर समझाइए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong> दूध के दही में परिवर्तित होने पर इसके pH का मान <strong>6 से कम (घट) जाएगा</strong>।<br>
+        <em>कारण:</em> किण्वन प्रक्रिया में लैक्टोबैसिलस बैक्टीरिया दूध की लैक्टोज शर्करा को <strong>लैक्टिक अम्ल</strong> में परिवर्तित कर देते हैं। लैक्टिक अम्ल बनने से H⁺ आयन सांद्रता बढ़ जाती है, जिससे विलयन अधिक अम्लीय हो जाता है और pH मान 6 से घटकर लगभग 4.5–5.0 के बीच आ जाता है।
+      </div>
+    </div>
+
+    <!-- Ex Q8 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 8</span>
+        <span>एक ग्वाला ताजे दूध में थोड़ा बेकिंग सोडा मिलाता है:<br>
+        (a) ताजे दूध के pH के मान को 6 से बदलकर थोड़ा क्षारीय क्यों बना देता है?<br>
+        (b) इस दूध को दही बनने में अधिक समय क्यों लगता है?</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(a)</strong> ताजे दूध में बेकिंग सोडा (NaHCO₃ - दुर्बल क्षारक) मिलाने पर उसका pH मान 6 से बढ़कर 7 से अधिक (क्षारीय) हो जाता है। ऐसा करने से दूध में लैक्टिक अम्ल बनने की प्रक्रिया धीमी हो जाती है और दूध <strong>जल्दी खट्टा होकर फटने (खराब होने) से बच जाता है</strong>।<br>
+        <strong>(b)</strong> दूध से दही बनने के लिए माध्यम का अम्लीय होना आवश्यक है। क्योंकि दूध पहले से क्षारीय कर दिया गया है, अतः बनने वाले लैक्टिक अम्ल को पहले उस क्षार को उदासीन करना पड़ता है और उसके बाद ही माध्यम अम्लीय होकर दूध को दही में जमा पाता है। इस दोहरी प्रक्रिया के कारण दूध को दही बनने में <strong>अपेक्षाकृत अधिक समय लगता है</strong>।
+      </div>
+    </div>
+
+    <!-- Ex Q9 -->
+    <div class="qa-box">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#10b981;">अभ्यास प्र. 9</span>
+        <span>धोने का सोडा एवं बेकिंग सोडा के दो-दो प्रमुख उपयोग बताइए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>धोने का सोडा (Na₂CO₃·10H₂O) के दो उपयोग:</strong><br>
+        1. जल की स्थायी कठोरता (Permanent Hardness) को दूर करने में।<br>
+        2. कांच, साबुन एवं कागज उद्योगों में तथा बोरेक्स जैसे सोडियम यौगिक के निर्माण में।<br><br>
+        <strong>बेकिंग सोडा (NaHCO₃) के दो उपयोग:</strong><br>
+        1. रसोईघर में स्वादिष्ट खस्ता पकौड़े व ब्रेड/केक को स्पंजी बनाने के लिए बेकिंग पाउडर के निर्माण में।<br>
+        2. उदर की अम्लता दूर करने के लिए ऐंटासिड के संघटक के रूप में तथा सोडा-अम्ल अग्निशामक में।
+      </div>
+    </div>
+
+
+    <!-- ===================================================================
+         SECTION 3: विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions)
+         =================================================================== -->
+    <h2 class="section-heading" style="border-bottom-color:#dc2626; margin-top:40px;">
+      <i class="fas fa-award" style="color: #dc2626;"></i> 3. विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (CBSE/RBSE Board Questions with Flags)
+    </h2>
+
+    <!-- Board 2024 -->
+    <div class="qa-box" style="border-left: 6px solid #dc2626;">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#dc2626;">🏛️ Board 2024 (3 अंक)</span>
+        <span>(i) क्लोर-क्षार प्रक्रिया किसे कहते हैं? इसका संतुलित रासायनिक समीकरण लिखिए।<br>
+        (ii) इस प्रक्रिया में एनोड तथा कैथोड पर मुक्त होने वाली गैसों के नाम तथा प्रत्येक का एक-एक उपयोग लिखिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(i) क्लोर-क्षार प्रक्रिया:</strong> सोडियम क्लोराइड के जलीय विलयन (ब्राइन) में विद्युत धारा प्रवाहित करने पर यह वियोजित होकर सोडियम हाइड्रॉक्साइड (NaOH), क्लोरीन (Cl₂) तथा हाइड्रोजन (H₂) उत्पन्न करता है। उत्पाद क्लोरीन ('क्लोर') तथा सोडियम हाइड्रॉक्साइड ('क्षार') होने के कारण इसे क्लोर-क्षार प्रक्रिया कहते हैं।<br>
+        <span style="font-weight:900; color:#065f46; display:inline-block; margin:6px 0;">संतुलित समीकरण: 2NaCl(aq) + 2H₂O(l) ➔ 2NaOH(aq) + Cl₂(g)↑ + H₂(g)↑</span><br><br>
+        <strong>(ii) इलेक्ट्रोड उत्पाद व उपयोग:</strong><br>
+        • <strong>एनोड (+) पर:</strong> क्लोरीन गैस (Cl₂) मुक्त होती है।<br>
+        &nbsp;&nbsp;<em>उपयोग:</em> जल को रोगाणुमुक्त करने (जल शोधन) तथा PVC निर्माण में।<br>
+        • <strong>कैथोड (-) पर:</strong> हाइड्रोजन गैस (H₂) मुक्त होती है।<br>
+        &nbsp;&nbsp;<em>उपयोग:</em> रॉकेट ईंधन के रूप में तथा खाद के लिए अमोनिया निर्माण में।
+      </div>
+    </div>
+
+    <!-- Board 2023 -->
+    <div class="qa-box" style="border-left: 6px solid #ea580c;">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#ea580c;">🏛️ Board 2023 (3 अंक)</span>
+        <span>(i) विरंजक चूर्ण का रासायनिक नाम, सूत्र तथा निर्माण का समीकरण लिखिए।<br>
+        (ii) पीने के पानी को रोगाणुमुक्त करने के लिए किस यौगिक का उपयोग किया जाता है? इसका एक अन्य उपयोग भी लिखिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(i) विरंजक चूर्ण:</strong><br>
+        • रासायनिक नाम: <strong>कैल्शियम ऑक्सीक्लोराइड (Calcium Oxychloride)</strong><br>
+        • रासायनिक सूत्र: <strong>CaOCl₂</strong><br>
+        • निर्माण समीकरण: शुष्क बुझे चूने पर क्लोरीन गैस प्रवाहित करने पर:<br>
+        <span style="font-weight:900; color:#0284c7;">Ca(OH)₂(s) + Cl₂(g) ➔ CaOCl₂(s) + H₂O(l)</span><br><br>
+        <strong>(ii) रोगाणुमुक्त करने वाला यौगिक:</strong> <strong>विरंजक चूर्ण (CaOCl₂)</strong>।<br>
+        • <em>अन्य उपयोग:</em> वस्त्र उद्योग में सूती एवं लिनेन कपड़ों के विरंजन में तथा रासायनिक उद्योगों में उपचायक के रूप में।
+      </div>
+    </div>
+
+    <!-- Board 2022 -->
+    <div class="qa-box" style="border-left: 6px solid #2563eb;">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#2563eb;">🏛️ Board 2022 (4 अंक)</span>
+        <span>(i) प्लास्टर ऑफ पेरिस का रासायनिक सूत्र लिखिए। इसे जिप्सम से कैसे प्राप्त किया जाता है? रासायनिक समीकरण दीजिए।<br>
+        (ii) जल मिलाने पर इसमें क्या परिवर्तन होता है? समीकरण लिखिए।<br>
+        (iii) इसके दो प्रमुख उपयोग लिखिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(i) रासायनिक सूत्र:</strong> <strong>CaSO₄·½H₂O</strong> (कैल्शियम सल्फेट हेमीहाइड्रेट)।<br>
+        • निर्माण: जिप्सम को 373 K (100°C) पर सावधानीपूर्वक गर्म करने पर:<br>
+        <span style="font-weight:900; color:#92400e;">CaSO₄·2H₂O + 373 K ➔ CaSO₄·½H₂O + 1½H₂O</span><br><br>
+        <strong>(ii) जल मिलाने पर परिवर्तन:</strong> प्लास्टर ऑफ पेरिस में जल मिलाने पर यह पुनः जल को अवशोषित करके तीव्र गति से जमकर अत्यंत कठोर ठोस पदार्थ <strong>जिप्सम</strong> में बदल जाता है:<br>
+        <span style="font-weight:900; color:#1e40af;">CaSO₄·½H₂O + 1½H₂O ➔ CaSO₄·2H₂O [कठोर जिप्सम]</span><br><br>
+        <strong>(iii) दो प्रमुख उपयोग:</strong><br>
+        1. टूटी हड्डियों को सही जगह पर स्थिर रखने हेतु डॉक्टरी प्लास्टर में।<br>
+        2. मूर्तियां, खिलौने, सजावटी वस्तुएं तथा दीवारों की सतह चिकनी बनाने में।
+      </div>
+    </div>
+
+    <!-- Board 2020 -->
+    <div class="qa-box" style="border-left: 6px solid #7c3aed;">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#7c3aed;">🏛️ Board 2020 (2 अंक)</span>
+        <span>दैनिक जीवन में pH के महत्व पर आधारित निम्नलिखित प्रश्नों के उत्तर दीजिए:<br>
+        (a) अम्लीय वर्षा किसे कहते हैं? इसका जलीय जीवन पर क्या प्रभाव पड़ता है?<br>
+        (b) मुँह का pH मान 5.5 से कम होने पर दाँत खराब क्यों होने लगते हैं? इसके बचाव का उपाय लिखिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        <strong>(a) अम्लीय वर्षा:</strong> जब वर्षा के जल का pH मान <strong>5.6 से कम</strong> हो जाता है, तो उसे अम्लीय वर्षा कहते हैं। जब यह अम्लीय जल नदियों व झीलों में बहता है, तो जलाशयों का pH घट जाता है जिससे जलीय जीवों (मछलियों आदि) का जीवित रहना अत्यंत कठिन हो जाता है।<br><br>
+        <strong>(b) दंत-क्षय:</strong> दाँतों का इनेमल कैल्शियम हाइड्रोक्सीएपैटाइट (कैल्शियम फॉस्फेट का क्रिस्टलीय रूप) का बना होता है जो शरीर का सबसे कठोर पदार्थ है। भोजन के बाद मुँह में उपस्थित बैक्टीरिया अवशिष्ट शर्करा का अपघटन कर अम्ल बनाते हैं। जब pH 5.5 से कम होता है, तो यह अम्ल इनेमल का संक्षारण (घिसना) प्रारंभ कर देता है।<br>
+        <em>बचाव का उपाय:</em> भोजन के पश्चात मुँह की अच्छी तरह सफाई तथा <strong>क्षारकीय दंतमंजन (Toothpaste)</strong> का नियमित प्रयोग, जो अतिरिक्त अम्ल को उदासीन कर देता है।
+      </div>
+    </div>
+
+    <!-- Board 2019 -->
+    <div class="qa-box" style="border-left: 6px solid #059669;">
+      <div class="q-title">
+        <span class="q-num-badge" style="background:#059669;">🏛️ Board 2019 (3 अंक)</span>
+        <span>बेकिंग सोडा (मीठा सोडा) का रासायनिक सूत्र लिखिए। इसे कैसे बनाया जाता है? इसे गर्म करने पर क्या होता है? ब्रेड या केक को फुलाने में इसकी भूमिका स्पष्ट कीजिए।</span>
+      </div>
+      <div class="ans-content">
+        <strong>उत्तर:</strong><br>
+        1. <strong>रासायनिक सूत्र:</strong> <strong>NaHCO₃</strong> (सोडियम हाइड्रोजनकार्बोनेट)।<br>
+        2. <strong>निर्माण (साल्वे विधि):</strong><br>
+        <span style="font-weight:900; color:#065f46;">NaCl + H₂O + CO₂ + NH₃ ➔ NH₄Cl + NaHCO₃</span><br>
+        3. <strong>गर्म करने पर प्रभाव:</strong> खाना पकाते समय गर्म करने पर यह वियोजित होकर सोडियम कार्बोनेट, जल तथा कार्बन डाइऑक्साइड गैस देता है:<br>
+        <span style="font-weight:900; color:#92400e;">2NaHCO₃ 🔥 ➔ Na₂CO₃ + H₂O + CO₂(g)↑</span><br>
+        4. <strong>ब्रेड/केक फुलाने में भूमिका:</strong> बेकिंग पाउडर बेकिंग सोडा व टार्टरिक अम्ल का मिश्रण होता है। गर्म करने पर निकलने वाली <strong>कार्बन डाइऑक्साइड (CO₂) गैस</strong> के बुलबुले आटे या मैदे में फंस जाते हैं और बाहर निकलते समय ब्रेड या केक को फुलाकर <strong>मुलायम एवं स्पंजी (Soft & Spongy)</strong> बना देते हैं।
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var currentContainerWidth = 1200;
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      var newSize = 17 + sizeOffset;
+      document.body.style.fontSize = newSize + 'px';
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      var newWeight = Math.max(400, Math.min(900, 600 + weightOffset));
+      document.body.style.fontWeight = newWeight;
+    }
+
+    function adjustWidth(amount) {
+      currentContainerWidth += amount;
+      var el = document.getElementById('mainDocContainer');
+      if (el) el.style.maxWidth = currentContainerWidth + 'px';
+    }
+
+    function adjustSimStroke() {}
+  </script>
+</body>
+</html>
