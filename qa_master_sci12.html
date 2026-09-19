@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 12: अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci12.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 12</div>
+      <h1 class="qa-main-title">अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Magnetic Effects of Electric Current • चुंबकीय क्षेत्र रेखाएं, दक्षिण-हस्त अंगुष्ठ नियम, परिनालिका, फ्लेमिंग का वाम-हस्त नियम व घरेलू परिपथ • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 256</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> दो चुंबकीय क्षेत्र रेखाएं एक-दूसरे को प्रतिच्छेद क्यों नहीं करतीं?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> यदि दो चुंबकीय क्षेत्र रेखाएं परस्पर प्रतिच्छेद करें, तो इसका अर्थ होगा कि प्रतिच्छेद बिंदु पर चुंबकीय क्षेत्र की <b>दो भिन्न दिशाएं</b> हैं। यदि उस बिंदु पर दिक्-सूचक सुई रखी जाए, तो उसकी सुई एक साथ दो दिशाओं की ओर संकेत नहीं कर सकती, जो कि असंभव है। अतः क्षेत्र रेखाएं कभी प्रतिच्छेद नहीं करतीं।
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2:</b> परिनालिका चुंबक की भांति कैसे व्यवहार करती है? क्या आप इसके उत्तरी व दक्षिणी ध्रुव का निर्धारण कर सकते हैं?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> जब परिनालिका में विद्युत धारा प्रवाहित की जाती है, तो उसके फेरों के चुंबकीय क्षेत्र परस्पर जुड़कर एक छड़ चुंबक जैसा शक्तिशाली चुंबकीय क्षेत्र बनाते हैं। इसका एक सिरा उत्तरी ध्रुव (N) तथा दूसरा सिरा दक्षिणी ध्रुव (S) बन जाता है।
+            <br><b>ध्रुव निर्धारण:</b> परिनालिका के एक सिरे के पास एक छड़ चुंबक का ज्ञात उत्तरी ध्रुव लाते हैं; यदि प्रतिकर्षण होता है तो वह सिरा उत्तरी ध्रुव है, और यदि आकर्षण होता है तो वह दक्षिणी ध्रुव है।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 265</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> भूसंपर्क तार (Earth Wire) का क्या कार्य है? धातु के आवरण वाले विद्युत साधित्रों को भूसंपर्कित करना क्यों आवश्यक है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> भूसंपर्क तार एक सुरक्षात्मक उपाय है जिसका प्रतिरोध बहुत कम होता है। जब धातु के आवरण वाले उपकरण (जैसे प्रेस, टोस्टर, रेफ्रिजरेटर) का विद्युन्मय तार किसी कारणवश उसके धातु के ढांचे को छू लेता है, तो भूसंपर्क तार उस क्षरण धारा को सीधे पृथ्वी में पहुंचा देता है। इससे उपकरण का विभव पृथ्वी के बराबर (शून्य) बना रहता है और उपकरण को छूने वाले व्यक्ति को <b>बिजली का जानलेवा झटका नहीं लगता</b>।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> किसी लंबी सीधी परिनालिका के भीतर सभी बिंदुओं पर चुंबकीय क्षेत्र:</p>
+        <p style="padding-left:15px;">(a) शून्य होता है (b) इसके सिरे की ओर जाने पर घटता है (c) इसके सिरे की ओर जाने पर बढ़ता है (d) सभी बिंदुओं पर समान होता है</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (d) सभी बिंदुओं पर समान (एकसमान / Uniform) होता है।</b>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 15:</b> विद्युत परिपथों तथा साधित्रों में सामान्यतः उपयोग होने वाले दो सुरक्षा उपायों के नाम लिखिए।</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+          <b>उत्तर:</b>
+          <br>1. <b>विद्युत फ्यूज (Electric Fuse):</b> अतिभारण एवं लघुपथन के समय पिघलकर परिपथ को भंग कर देता है।
+          <br>2. <b>भूसंपर्क तार (Earthing Wire):</b> धातु के ढांचे से विद्युत धारा के क्षरण पर उपयोगकर्ता को गंभीर झटके से बचाता है।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) फ्लेमिंग का वाम-हस्त नियम लिखिए। (b) चुंबकीय क्षेत्र में रखे धारावाही चालक पर बल कब अधिकतम तथा कब शून्य होता है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br><b>(a) फ्लेमिंग का वाम-हस्त नियम:</b> अपने बाएं हाथ की तर्जनी, मध्यमा तथा अंगूठे को परस्पर लंबवत फैलाने पर यदि तर्जनी चुंबकीय क्षेत्र (B) तथा मध्यमा विद्युत धारा (I) की दिशा बताए, तो अंगूठा चालक पर लगने वाले बल की दिशा को निरूपित करेगा।
+          <br><b>(b) बल का मान:</b>
+          <br>• <b>अधिकतम:</b> जब धारा की दिशा चुंबकीय क्षेत्र के <b>लंबवत (θ = 90°)</b> हो (F = I L B)।
+          <br>• <b>शून्य:</b> जब धारा की दिशा चुंबकीय क्षेत्र के <b>समानांतर (θ = 0° या 180°)</b> हो।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          लघुपथन (Short Circuit) तथा अतिभारण (Overloading) में क्या अंतर है? इनसे बचने के उपाय लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>लघुपथन:</b> जब विद्युन्मय तार तथा उदासीन तार सीधे संपर्क में आ जाते हैं, जिससे परिपथ का प्रतिरोध शून्य हो जाता है और बहुत बड़ी धारा बहती है।
+          <br>• <b>अतिभारण:</b> जब परिपथ में एक साथ बहुत अधिक क्षमता वाले उपकरण जोड़ दिए जाते हैं, जिससे कुल धारा सुरक्षित सीमा से अधिक हो जाती है।
+          <br><b>बचाव के उपाय:</b> परिपथ में उपयुक्त मान के <b>विद्युत फ्यूज (या MCB)</b> का उपयोग तथा एक ही सॉकेट से अत्यधिक उपकरण न जोड़ना।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          विद्युत चुंबक और स्थायी चुंबक में दो अंतर लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>विद्युत चुंबक:</b> यह अस्थायी चुंबक है (धारा बंद होते ही चुंबकत्व समाप्त)। इसकी प्रबलता धारा का मान बदलकर आसानी से बदली जा सकती है।
+          <br>• <b>स्थायी चुंबक:</b> इसका चुंबकत्व स्थायी होता है और इसे सरलता से समाप्त या बदला नहीं जा सकता।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          छड़ चुंबक के चारों ओर चुंबकीय क्षेत्र रेखाएं खींचिए। चुंबकीय क्षेत्र रेखाओं के तीन प्रमुख गुणधर्म लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>1. रेखाएं उत्तरी ध्रुव से निकलकर दक्षिणी ध्रुव पर विलीन होती हैं (बंद वक्र बनाती हैं)।
+          <br>2. ध्रुवों के समीप रेखाएं पास-पास होती हैं, जहाँ क्षेत्र अधिक प्रबल होता है।
+          <br>3. दो क्षेत्र रेखाएं कभी एक-दूसरे को प्रतिच्छेद नहीं करतीं।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          मैक्सवेल के दक्षिण-हस्त अंगुष्ठ नियम का उल्लेख कीजिए। इसका क्या उपयोग है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> यदि सीधे धारावाही चालक को दाहिने हाथ में इस प्रकार पकड़ें कि अंगूठा धारा की दिशा में हो, तो मुड़ी हुई अंगुलियां चुंबकीय क्षेत्र रेखाओं की दिशा बताएंगी।
+          <br><b>उपयोग:</b> सीधे धारावाही तार के चारों ओर चुंबकीय क्षेत्र की दिशा ज्ञात करने में।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
