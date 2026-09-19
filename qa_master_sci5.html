@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान - अध्याय 5: अध्याय 5: जैव प्रक्रम (संपूर्ण अभ्यास व विगत 5 वर्ष बोर्ड प्रश्नोत्तर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.75;
+      font-size: 17px;
+    }
+    .top-toolbar {
+      background: #ffffff;
+      border-bottom: 2px solid #e2e8f0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tool-btn, .portal-nav-btn {
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .tool-btn:hover, .portal-nav-btn:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0284c7;
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      background: #0369a1;
+    }
+    .doc-container {
+      max-width: 1040px;
+      margin: 25px auto;
+      padding: 0 20px 60px 20px;
+    }
+    .chapter-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .chapter-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .chapter-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .chapter-subtitle {
+      font-size: 16px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2.5px solid #0284c7;
+      padding-bottom: 8px;
+    }
+    .qa-box {
+      background: #ffffff;
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: border-color 0.2s;
+    }
+    .qa-box:hover {
+      border-color: #0284c7;
+    }
+    .q-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .q-num-badge {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .ans-content {
+      background: #f8fafc;
+      border-left: 4px solid #10b981;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="copy_master_sci5.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="qa-header-card">
+      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 5</div>
+      <h1 class="qa-main-title">अध्याय 5: जैव प्रक्रम — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="qa-sub-title">Life Processes • पोषण, पाचन, श्वसन, परिसंचरण तंत्र, जाइलम-फ्लोएम एवं उत्सर्जन तंत्र • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
+        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">पाठ्यपुस्तक आंतरिक प्रश्नोत्तर (In-Text Questions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 95</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> हमारे जैसे बहुकोशिकीय जीवों में ऑक्सीजन की आवश्यकता पूरी करने में विसरण (Diffusion) क्यों अपर्याप्त है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> बहुकोशिकीय जीवों का शारीरिक आकार बहुत बड़ा एवं जटिल होता है और सभी कोशिकाएं सीधे पर्यावरण के संपर्क में नहीं होतीं। साधारण विसरण की गति अत्यंत धीमी होती है (गणना के अनुसार विसरण द्वारा फेफड़ों से पैर के अंगूठे तक ऑक्सीजन पहुंचने में लगभग 3 वर्ष लगेंगे!)। अतः पूरे शरीर में तीव्रता से O₂ पहुंचाने हेतु विशेष श्वसन तंत्र एवं हीमोग्लोबिन युक्त परिसंचरण तंत्र आवश्यक है।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 101</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> श्वसन के लिए ऑक्सीजन प्राप्त करने की दिशा में एक जलीय जीव की अपेक्षा स्थलीय जीव किस प्रकार लाभप्रद है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> जल में घुली हुई ऑक्सीजन की मात्रा वायु में उपस्थित ऑक्सीजन (~21%) की तुलना में बहुत कम होती है। इसलिए जलीय जीवों (मछलियों) को पर्याप्त O₂ हेतु बहुत तेजी से सांस लेनी पड़ती है। इसके विपरीत, स्थलीय जीव वायुमंडल से सीधे प्रचुर मात्रा में ऑक्सीजन आसानी से प्राप्त कर लेते हैं।
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <span class="highlight-chip" style="background:#e0f2fe; color:#0369a1; font-weight:800;">पृष्ठ संख्या: 110</span>
+        <div style="margin-top:15px;">
+          <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1:</b> मानव में दोहरा परिसंचरण की व्याख्या कीजिए। यह क्यों आवश्यक है?</p>
+          <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+            <b>उत्तर:</b> मानव में रुधिर एक चक्र में हृदय से होकर दो बार गुजरता है—एक बार अशुद्ध रुधिर फेफड़ों में जाने हेतु (फुफ्फुसीय) तथा दूसरी बार शुद्ध रुधिर शरीर में जाने हेतु (दैहिक)। इसे दोहरा परिसंचरण कहते हैं।
+            <br><b>आवश्यकता:</b> यह ऑक्सीजनित तथा वि-ऑक्सीजनित रुधिर को आपस में मिलने से रोकता है, जिससे शरीर को उच्च दक्षता से ऑक्सीजन मिलती है और मानव अपने शरीर का निश्चित उच्च तापमान (37°C) बनाए रखने में सक्षम होता है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: पाठ्यपुस्तक अभ्यास प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">पाठ्यपुस्तक अभ्यास प्रश्नोत्तर (Exercise Solutions)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 1 (MCQ):</b> मनुष्य में वृक्क एक तंत्र का भाग है जो संबंधित है:</p>
+        <p style="padding-left:15px;">(a) पोषण (b) श्वसन (c) उत्सर्जन (d) परिवहन</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (c) उत्सर्जन (Excretion)।</b> वृक्क रक्त से यूरिया व अतिरिक्त लवणों को छानकर मूत्र का निर्माण करता है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 2 (MCQ):</b> पादप में जाइलम उत्तरदायी है:</p>
+        <p style="padding-left:15px;">(a) जल का वहन (b) भोजन का वहन (c) अमीनो अम्ल का वहन (d) ऑक्सीजन का वहन</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:4px;">
+          <b>उत्तर: (a) जल का वहन (Transport of Water and minerals)।</b>
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:20px;">
+        <p style="font-weight:900; color:#0f172a;"><b>प्रश्न 6:</b> हमारे शरीर में वसा का पाचन कैसे होता है? यह प्रक्रम कहां होता है?</p>
+        <div class="qa-answer" style="margin-top:10px; padding:15px; background:#f8fafc; border-left:4px solid #059669; border-radius:4px;">
+          <b>उत्तर:</b>
+          <br>1. वसा का पाचन मुख्य रूप से <b>क्षुद्रांत्र (छोटी आंत)</b> में होता है।
+          <br>2. यकृत से निकलने वाला <b>पित्त रस (Bile)</b> वसा की बड़ी गोलिकाओं को छोटी गोलिकाओं में तोड़ता है, जिसे <b>इमल्सीकरण (Emulsification)</b> कहते हैं।
+          <br>3. इसके पश्चात अग्न्याशयी रस में उपस्थित <b>लाइपेस (Lipase)</b> एंजाइम इमल्सीकृत वसा को वसीय अम्ल एवं ग्लिसरॉल में पाचित कर देता है।
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: विगत 5 वर्षों के बोर्ड प्रश्नोत्तर -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge" style="background:#b91c1c;">विगत 5 वर्ष</span>
+        <h2 class="section-heading">विगत 5 वर्षों के बोर्ड परीक्षा प्रश्नोत्तर (Board Questions Bank)</h2>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2024 (4 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          (a) वृक्काणु (नेफ्रॉन) में मूत्र निर्माण की प्रक्रिया के तीन मुख्य चरण लिखिए। (b) डायलिसिस (अपोहन) क्या है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br><b>(a) मूत्र निर्माण के तीन चरण:</b>
+          <br>1. <b>गुच्छीय परा-निस्यंदन:</b> ग्लोमेरुलस में उच्च रक्तदाब के कारण रुधिर से यूरिया, यूरिक अम्ल, ग्लूकोज, लवण बोमन संपुट में छन जाते हैं।
+          <br>2. <b>चयनात्मक पुनरावशोषण:</b> नलिका में उपयोगी पदार्थ (ग्लूकोज, अमीनो अम्ल, जल) रुधिर केशिकाओं द्वारा वापस अवशोषित हो जाते हैं।
+          <br>3. <b>स्रावण:</b> शेष बचा द्रव मूत्र के रूप में संग्रह वाहिनी में एकत्र होता है।
+          <br><b>(b) डायलिसिस:</b> वृक्क के काम न करने (फेल होने) पर कृत्रिम वृक्क (मशीन) द्वारा रोगी के रुधिर से नाइट्रोजनी अपशिष्टों को बाहर निकालने की कृत्रिम प्रक्रिया अपोहन कहलाती है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2023 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          वायवीय तथा अवायवीय श्वसन में तीन मुख्य अंतर लिखिए। ग्लूकोज के विखंडन का आरेख बनाइए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>1. <b>वायवीय:</b> O₂ की उपस्थिति में होता है; <b>अवायवीय:</b> O₂ की अनुपस्थिति में।
+          <br>2. <b>वायवीय:</b> माइटोकॉन्ड्रिया में संपन्न होता है; <b>अवायवीय:</b> केवल कोशिकाद्रव्य में।
+          <br>3. <b>वायवीय:</b> अंतिम उत्पाद CO₂ + H₂O और प्रचुर ऊर्जा (38 ATP); <b>अवायवीय:</b> एथेनॉल/लैक्टिक अम्ल और कम ऊर्जा (2 ATP)।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2022 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          धमनी एवं शिरा में तीन मुख्य अंतर लिखिए।
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>धमनी (Artery):</b> रुधिर को हृदय से शरीर के अंगों तक ले जाती है। दीवारें मोटी व लचीली होती हैं। इनमें कपाट (Valves) नहीं होते। (अपवाद: फुफ्फुस धमनी अशुद्ध रक्त ले जाती है)।
+          <br>• <b>शिरा (Vein):</b> रुधिर को अंगों से वापस हृदय में लाती है। दीवारें पतली होती हैं। रक्त के उल्टे प्रवाह को रोकने हेतु इनमें कपाट होते हैं। (अपवाद: फुफ्फुस शिरा शुद्ध रक्त लाती है)।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2020 (3 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          आमाशय में हाइड्रोक्लोरिक अम्ल तथा श्लेष्मा की क्या भूमिका है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b>
+          <br>• <b>HCl की भूमिका:</b> यह अम्लीय माध्यम बनाता है जो पेप्सिन एंजाइम की क्रिया के लिए आवश्यक है तथा भोजन के साथ आए हानिकारक बैक्टीरिया को नष्ट करता है।
+          <br>• <b>श्लेष्मा (Mucus) की भूमिका:</b> यह आमाशय की आंतरिक परत को सांद्र अम्ल तथा पेप्सिन के संक्षारक प्रभाव से सुरक्षित रखती है।
+        </div>
+      </div>
+
+      <div class="qa-card" style="background:#ffffff; border:2px solid #b91c1c; border-radius:12px; padding:22px; margin-bottom:22px;">
+        <span style="background:#fee2e2; color:#b91c1c; font-weight:900; padding:6px 14px; border-radius:6px; font-size:15px;">🏛️ Board 2019 (2 अंक)</span>
+        <p style="font-size:20px; font-weight:900; color:#0f172a; margin-top:12px;">
+          जाइलम तथा फ्लोएम में पदार्थों के वहन में क्या अंतर है?
+        </p>
+        <div class="qa-answer" style="margin-top:14px; padding:16px; background:#fffaf0; border-left:4px solid #b91c1c; border-radius:6px; line-height:1.9;">
+          <b>मॉडल उत्तर:</b> जाइलम केवल जल एवं खनिज लवणों का ऊपर की ओर एकदिशीय वहन करता है (वाष्पोत्सर्जन खिंचाव द्वारा, ATP खर्च नहीं)। फ्लोएम पत्तियों में बने भोजन का दोनों दिशाओं (ऊपर व नीचे) में स्थानांतरण करता है और इसमें ATP ऊर्जा का उपयोग होता है।
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+
+    function applyDynamicTypography() {
+      var b = 25 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .qa-answer, .ncert-card, .qa-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -8) sizeOffset = -8;
+      if (sizeOffset > 15) sizeOffset = 15;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    document.addEventListener('DOMContentLoaded', applyDynamicTypography);
+  </script>
+</body>
+</html>
