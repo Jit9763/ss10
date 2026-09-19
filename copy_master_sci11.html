@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCERT कक्षा 10 विज्ञान अध्याय 11: अध्याय 11: विद्युत (संपूर्ण डिजिटल नोट्स व 3D सिमुलेटर)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    /* =========================================================================
+       CLASS 10 SOCIAL SCIENCE MASTER PROJECTOR DESIGN SYSTEM (MATCHING CIV/GEO)
+       ========================================================================= */
+    body, p, li, td, th {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+    }
+
+    p, li, h1, h2, h3, h4, b, strong, td, th, div, span {
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000;
+      text-shadow: 0 0 0.5px #000;
+    }
+
+    /* Outer layout container */
+    .doc-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      font-family: 'Nirmala UI', 'Outfit', 'Segoe UI', -apple-system, sans-serif;
+    }
+
+    /* Chapter Title / Hero Matching SS10 Master */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px !important;
+      margin-bottom: 50px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.5) !important;
+    }
+
+    .chapter-tag {
+      display: inline-block !important;
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+      font-size: 22pt !important;
+      font-weight: 900 !important;
+      padding: 6px 20px !important;
+      border-radius: 20px !important;
+      margin-bottom: 15px !important;
+      border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .chapter-title {
+      font-size: 48pt !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4) !important;
+    }
+
+    .chapter-subtitle {
+      color: #93c5fd !important;
+      font-size: 28pt !important;
+      font-weight: 800 !important;
+      display: block;
+      margin-top: 15px;
+      line-height: 1.5 !important;
+    }
+
+    /* Part / Section Headers Matching SS10 Master */
+    .section-heading, h2.section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 24px 30px !important;
+      border-radius: 16px !important;
+      font-size: 40pt !important;
+      font-weight: 900 !important;
+      margin-top: 55px !important;
+      margin-bottom: 35px !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1) !important;
+      line-height: 1.4 !important;
+    }
+
+    /* Sub-Headers Matching SS10 Master */
+    .sub-header-red, h3.subsection-heading {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 18px 26px !important;
+      border-radius: 14px !important;
+      font-size: 32pt !important;
+      font-weight: 900 !important;
+      margin-top: 35px !important;
+      margin-bottom: 22px !important;
+      box-shadow: 0 4px 14px rgba(185, 28, 28, 0.15) !important;
+      line-height: 1.4 !important;
+    }
+
+    .topic-header {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 34pt !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 30px !important;
+    }
+
+    /* Concept & Fact Boxes */
+    .concept-box, .fact-box, .warn-box, .reaction-box {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      padding: 26px 32px !important;
+      border-radius: 18px !important;
+      margin: 30px 0 !important;
+    }
+
+    /* Bolds in notes matching SS10 red badge style */
+    .concept-box b, .concept-card b, .warn-box b, .fact-box b, .point-tag-red, p b, li b, .reaction-box b, strong {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 2px solid #fca5a5 !important;
+      padding: 4px 12px !important;
+      border-radius: 10px !important;
+      display: inline-block !important;
+      margin-right: 6px !important;
+      margin-top: 3px !important;
+      margin-bottom: 3px !important;
+      font-size: 26pt !important;
+    }
+
+    /* Tables */
+    table, .data-table {
+      font-size: 24pt !important;
+      line-height: 1.8 !important;
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin: 30px 0 !important;
+    }
+    th {
+      background: #1e3a8a !important;
+      color: #ffffff !important;
+      font-size: 26pt !important;
+      padding: 16px !important;
+    }
+    td {
+      font-size: 24pt !important;
+      padding: 14px !important;
+      border: 2px solid #cbd5e1 !important;
+    }
+
+        /* =========================================================================
+       ORIGINAL CLEAN SIMULATOR CARD & CONTROLS (RESTORED TO ORIGINAL)
+       ========================================================================= */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .sim-card, .sim-card *, svg, svg *, .top-toolbar, .top-toolbar *, .floating-home-btn {
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px !important;
+      font-weight: 900 !important;
+      color: #0f172a !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px !important;
+      font-weight: 900 !important;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .sim-card p, .sim-card li, .sim-card .sim-desc, .sim-card .sim-note {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+    }
+
+    .sim-card b, .sim-card strong {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      color: #0f172a !important;
+    }
+
+    .sim-card .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px !important;
+      font-weight: 900 !important;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-card .sim-btn-step {
+      font-size: 13.5px !important;
+      font-weight: 800 !important;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 15px !important;
+      line-height: 1.5 !important;
+      font-weight: 700 !important;
+    }
+
+    .sim-card select, .sim-card option {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+    }
+
+    .top-toolbar, .top-toolbar * {
+      font-size: 15px !important;
+      line-height: normal !important;
+    }
+
+.top-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 3px solid #cbd5e1;
+      padding: 12px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      width: 100%;
+    }
+
+    .toolbar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .portal-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      border-radius: 10px;
+      background: #f0fdf4;
+      color: #166534;
+      border: 2px solid #86efac;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .portal-nav-btn:hover {
+      background: #dcfce7;
+      border-color: #22c55e;
+      transform: translateY(-1px);
+    }
+
+    .tool-btn {
+      padding: 7px 13px;
+      font-size: 15px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .tool-btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .tool-btn.primary {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #1d4ed8;
+    }
+
+    /* Main Container - Exactly 1400px Matching Toolbar */
+    .doc-container {
+      max-width: 1400px;
+      width: calc(100% - 50px);
+      margin: 25px auto;
+      background: #ffffff;
+      padding: 45px 50px;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      border: 3px solid #cbd5e1;
+      transition: max-width 0.3s;
+    }
+
+    /* Class 10 SS Hero Title */
+    .chapter-hero {
+      text-align: center !important;
+      color: #ffffff !important;
+      background-color: #1e3a8a !important;
+      border: 6px solid #3b82f6 !important;
+      border-radius: 24px !important;
+      padding: 35px 30px !important;
+      margin-bottom: 45px !important;
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4) !important;
+    }
+
+    .chapter-hero h1 {
+      font-size: 40px !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      margin: 0 0 12px 0 !important;
+    }
+
+    .chapter-hero p {
+      color: #bfdbfe !important;
+      font-size: 20px !important;
+      font-weight: 800 !important;
+      margin: 0 !important;
+    }
+
+    /* Section Headings (Part Header Blue) */
+    .section-heading, h2.section-title {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+      padding: 20px 28px !important;
+      border-radius: 14px !important;
+      font-size: 28px !important;
+      font-weight: 900 !important;
+      margin-top: 45px !important;
+      margin-bottom: 25px !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12) !important;
+    }
+
+    /* Sub-Headings (Red Sub Header) */
+    .sub-heading-red, h3.topic-sub {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border-left: 16px solid #b91c1c !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.1) !important;
+    }
+
+    /* Topic Headings (Green Topic Header) */
+    .topic-heading-green {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 16px solid #059669 !important;
+      padding: 16px 24px !important;
+      border-radius: 12px !important;
+      font-size: 24px !important;
+      font-weight: 900 !important;
+      margin-top: 30px !important;
+      margin-bottom: 20px !important;
+    }
+
+    /* Highlight Tags & Keywords (Like Class 10 SS Red Pills) */
+    .point-tag-red, .concept-box b, .concept-card b, .reaction-box b, p b, li b {
+      color: #991b1b !important;
+      background-color: #fee2e2 !important;
+      border: 1.5px solid #fca5a5 !important;
+      padding: 2px 10px !important;
+      border-radius: 8px !important;
+      display: inline-block !important;
+      font-weight: 900 !important;
+    }
+
+    /* Concept & Fact Cards */
+    .concept-box, .concept-card {
+      background: #eff6ff !important;
+      border: 3px solid #93c5fd !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
+    }
+
+    .fact-box {
+      background: #fefce8 !important;
+      border: 3px solid #fde047 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    .warn-box {
+      background: #fef2f2 !important;
+      border: 3px solid #fca5a5 !important;
+      border-radius: 16px !important;
+      padding: 25px 30px !important;
+      margin: 25px 0 !important;
+      font-size: 19px !important;
+      font-weight: 800 !important;
+    }
+
+    /* Simulator Card Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 28px;
+      margin: 40px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 14px;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* Simulator 16:9 Projector Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Controls Grid */
+    .sim-controls-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sim-btn {
+      padding: 9px 16px;
+      font-size: 14.5px;
+      font-weight: 900;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      transition: all 0.15s;
+    }
+
+    .sim-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .sim-btn.secondary { background: #0284c7; }
+    .sim-btn.warning { background: #d97706; }
+    .sim-btn.danger { background: #dc2626; }
+    .sim-btn.success { background: #059669; }
+
+    /* Progress bar */
+    .sim-progress-wrap {
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #10b981);
+      transition: width 0.4s ease;
+    }
+
+    /* Floating ONLY Home button */
+    .floating-home-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .floating-home-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5);
+    }
+
+    /* Typography & Hierarchy */
+    /* Projector Title Banner matching Class 10 SS Hero */
+    .chapter-hero {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      border: 5px solid #3b82f6;
+      border-radius: 24px;
+      padding: 38px 25px;
+      margin-bottom: 45px;
+      box-shadow: 0 12px 35px rgba(30, 58, 138, 0.45);
+    }
+
+    .chapter-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-weight: 900;
+      font-size: 16px;
+      padding: 6px 20px;
+      border-radius: 999px;
+      border: 2px solid #93c5fd;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    h1.chapter-title {
+      font-size: 38px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    }
+
+    .chapter-subtitle {
+      font-size: 20px;
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    /* Section Headings matching Class 10 SS Part Headers */
+    h2.section-heading {
+      color: #1e3a8a;
+      background-color: #dbeafe;
+      border-left: 16px solid #2563eb;
+      padding: 18px 25px;
+      border-radius: 14px;
+      font-size: 27px;
+      font-weight: 900;
+      margin-top: 45px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3.subsection-heading {
+      color: #065f46;
+      background-color: #d1fae5;
+      border-left: 14px solid #059669;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 23px;
+      font-weight: 900;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
+    }
+
+    /* Notes Concept Box */
+    .concept-box {
+      background: #f8fafc;
+      border: 3px solid #cbd5e1;
+      border-left: 12px solid #2563eb;
+      border-radius: 16px;
+      padding: 26px;
+      margin: 30px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      font-size: 20px;
+      line-height: 1.9;
+    }
+    
+    .concept-box b, .concept-box strong, p b, p strong, li b, li strong {
+      color: #991b1b;
+      background-color: #fee2e2;
+      border: 1.5px solid #fca5a5;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+      font-size: 0.98em;
+    }
+
+    .concept-box.amber {
+      border-left-color: var(--accent);
+    }
+
+    .concept-box.green {
+      border-left-color: var(--secondary);
+    }
+
+    .concept-box.rose {
+      border-left-color: #f43f5e;
+    }
+
+    .concept-box.purple {
+      border-left-color: #8b5cf6;
+    }
+
+    .concept-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Reaction Equations Display Card */
+    .reaction-pill {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Simulators Styling */
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 2px solid #94a3b8;
+      border-radius: 14px;
+      padding: 22px;
+      margin: 28px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .sim-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .sim-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-badge {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 1px solid #a7f3d0;
+    }
+
+    .sim-controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .control-group {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .control-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .sim-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .sim-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .sim-btn.secondary {
+      background: #475569;
+    }
+    .sim-btn.secondary:hover {
+      background: #334155;
+    }
+
+    .sim-btn.danger {
+      background: var(--danger);
+    }
+    .sim-btn.danger:hover {
+      background: #dc2626;
+    }
+
+    .sim-btn.success {
+      background: var(--secondary);
+    }
+    .sim-btn.success:hover {
+      background: #047857;
+    }
+
+        /* Projector 16:9 Widescreen Simulator Stage */
+    .sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .sim-card {
+      scroll-margin-top: 80px;
+      background: #ffffff;
+      border: 3px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .sim-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sim-btn {
+      font-size: 15px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .sim-status-banner, [id$="_status"] {
+      font-size: 16px !important;
+      font-weight: 800 !important;
+      line-height: 1.7 !important;
+      padding: 15px 20px !important;
+      border-radius: 10px !important;
+      border-left-width: 8px !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 14px;
+      font-size: 15px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .sim-output-box {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Question & Answer Box */
+    .qa-box {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 22px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .q-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .q-num-badge {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ans-content {
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .ans-content strong {
+      color: #0f172a;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .doc-container {
+        padding: 20px 14px;
+        margin: 10px;
+      }
+      h1.chapter-title {
+        font-size: 24px;
+      }
+      .reaction-pill {
+        font-size: 14px;
+      }
+    }
+  
+
+/* Premium 3D Laboratory Simulation Styles & Smooth Animations */
+
+/* Glassware 3D specular shine & lighting */
+.lab-glass {
+  stroke: #0284c7;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* Fluid keyframe animations */
+@keyframes flameFlicker {
+  0% { transform: scale(1) translateY(0); opacity: 0.92; }
+  50% { transform: scale(1.04, 0.96) translateY(-1px); opacity: 1; }
+  100% { transform: scale(0.98, 1.02) translateY(0); opacity: 0.94; }
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { transform: translateY(-45px) scale(1.4); opacity: 0; }
+}
+
+@keyframes smokeRise {
+  0% { transform: translateY(0) scale(0.7); opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-55px) scale(1.6); opacity: 0; }
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50% { transform: translateY(-25px) translateX(3px); opacity: 0.9; }
+  100% { transform: translateY(-50px) translateX(-2px); opacity: 0; }
+}
+
+@keyframes precipitateFall {
+  0% { transform: translateY(0); opacity: 0.4; }
+  100% { transform: translateY(60px); opacity: 0.9; }
+}
+
+@keyframes wirePulse {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes scalePointerPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.anim-flame {
+  transform-origin: center bottom;
+  animation: flameFlicker 0.45s ease-in-out infinite alternate;
+}
+
+.anim-steam {
+  animation: steamRise 2s ease-out infinite;
+}
+
+.anim-bubble {
+  animation: bubbleFloat 1.8s ease-in-out infinite;
+}
+
+/* Compact, Screen-Fit Simulator Card & Stage */
+.sim-card {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 22px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sim-card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sim-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.sim-stage {
+      width: 100% !important;
+      aspect-ratio: 1200 / 540 !important;
+      height: auto !important;
+      min-height: 480px !important;
+      background: #ffffff !important;
+      border: 2.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.4s ease;
+    }
+    .sim-status-banner {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #1e293b;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sim-progress-wrap {
+      width: 100%;
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0 12px 0;
+    }
+    .sim-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s ease;
+    }
+
+.sim-stage svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+.sim-controls-grid {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.sim-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.18);
+}
+
+.sim-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+.sim-btn.secondary {
+  background: #475569;
+  box-shadow: 0 2px 4px rgba(71, 85, 105, 0.18);
+}
+.sim-btn.secondary:hover {
+  background: #334155;
+}
+
+.sim-btn.success {
+  background: #059669;
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.18);
+}
+.sim-btn.success:hover {
+  background: #047857;
+}
+
+.sim-btn.warning {
+  background: #d97706;
+  box-shadow: 0 2px 4px rgba(217, 119, 6, 0.18);
+}
+.sim-btn.warning:hover {
+  background: #b45309;
+}
+
+.sim-btn.danger {
+  background: #dc2626;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.18);
+}
+.sim-btn.danger:hover {
+  background: #b91c1c;
+}
+
+.sim-status-banner {
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1e293b;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.sim-output-box {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* Static SVGs Container-fit */
+.diagram-container svg, .qa-box svg {
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 250px !important;
+}
+
+
+    /* REALISTIC LIQUID STREAM & RIPPLE ANIMATIONS */
+    @keyframes liquidFlowAnim {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .liquid-flow-stream {
+      animation: liquidFlowAnim 0.6s linear infinite;
+    }
+    @keyframes rippleExpandAnim {
+      0% { r: 2; rx: 3; ry: 1; opacity: 1; }
+      100% { r: 18; rx: 20; ry: 6; opacity: 0; }
+    }
+    .splash-ripple-wave {
+      animation: rippleExpandAnim 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+      transform-origin: center;
+    }
+    .sim-status-banner, #sim4_status, [id$="_status"] {
+      display: block !important;
+      line-height: 1.6 !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+    }
+
+  
+    /* --- UNIVERSAL CONTINUOUS LOOPS (SIM 4, 5, 6, 7) --- */
+    @keyframes s4SteamBillow {
+      0% { transform: translateY(0px) scale(0.95); opacity: 0.92; }
+      50% { transform: translateY(-20px) scale(1.04); opacity: 1.0; }
+      100% { transform: translateY(-38px) scale(1.08); opacity: 0.88; }
+    }
+    #s4_steam_plumes {
+      display: none;
+    }
+    #s4_steam_plumes.active {
+      display: block !important;
+      animation: s4SteamBillow 2s infinite ease-in-out !important;
+      transform-origin: 330px 150px;
+    }
+
+    @keyframes s5FumesWaft {
+      0% { transform: translateY(0px) translateX(0px) scale(0.85); opacity: 0.2; }
+      50% { transform: translateY(-35px) translateX(15px) scale(1.1); opacity: 0.8; }
+      100% { transform: translateY(-70px) translateX(30px) scale(1.3); opacity: 0; }
+    }
+    .s5-fumes-loop {
+      animation: s5FumesWaft 2.5s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s6No2Billow {
+      0% { transform: translateY(0px) translateX(0px) scale(0.8); opacity: 0.25; }
+      50% { transform: translateY(-40px) translateX(12px) scale(1.15); opacity: 0.85; }
+      100% { transform: translateY(-80px) translateX(25px) scale(1.35); opacity: 0.1; }
+    }
+    .s6-no2-loop {
+      animation: s6No2Billow 2.6s infinite ease-out !important;
+      transform-origin: 480px 230px;
+    }
+
+    @keyframes s7H2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-h2-loop {
+      animation: s7H2Rise 1.4s infinite linear !important;
+    }
+
+    @keyframes s7O2Rise {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-75px); opacity: 0; }
+    }
+    .s7-o2-loop {
+      animation: s7O2Rise 2.1s infinite linear !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="top-toolbar">
+    <div class="toolbar-inner">
+      <div class="toolbar-left">
+        <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+        <a href="qa_master_sci11.html" class="portal-nav-btn" style="background:#0284c7; color:#ffffff; border-color:#0284c7; white-space: nowrap;" title="अभ्यास प्रश्नोत्तर"><i class="fas fa-question-circle"></i> ❓ प्रश्नोत्तर हल ➔</a>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <span class="group-label">टेक्स्ट आकार:</span>
+          <button class="tool-btn" onclick="adjustFontSize(1)" title="अक्षर बड़ा करें">A+</button>
+          <button class="tool-btn" onclick="adjustFontSize(-1)" title="अक्षर छोटा करें">A-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">बोल्ड स्तर:</span>
+          <button class="tool-btn" onclick="adjustFontWeight(100)" title="मोटा करें">B+</button>
+          <button class="tool-btn" onclick="adjustFontWeight(-100)" title="पतला करें">B-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">पेज चौड़ाई:</span>
+          <button class="tool-btn" onclick="adjustWidth(100)" title="पेज चौड़ा करें">W+</button>
+          <button class="tool-btn" onclick="adjustWidth(-100)" title="पेज संकरा करें">W-</button>
+        </div>
+        <div class="toolbar-group">
+          <span class="group-label">🧪 सिमुलेटर:</span>
+          <button class="tool-btn" onclick="adjustSimFontSize(1)" title="सिमुलेटर टेक्स्ट बड़ा">सिम A+</button>
+          <button class="tool-btn" onclick="adjustSimFontSize(-1)" title="सिमुलेटर टेक्स्ट छोटा">सिम A-</button>
+          <button class="tool-btn" onclick="adjustSimStroke(0.5)" title="रेखा मोटी करें">रेखा +</button>
+          <button class="tool-btn" onclick="adjustSimStroke(-0.5)" title="रेखा पतली करें">रेखा -</button>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <button class="tool-btn btn-print" onclick="window.print()" title="प्रिंट या PDF सेव करें"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container" id="mainDocContainer">
+    <div class="chapter-header-card">
+      <div class="chapter-badge">NCERT कक्षा 10 विज्ञान (Science) • अध्याय 11</div>
+      <h1 class="chapter-main-title">अध्याय 11: विद्युत</h1>
+      <p class="chapter-sub-title">Electricity • विद्युत धारा, विभवांतर, ओम का नियम, प्रतिरोधकों का संयोजन, जूल का तापन नियम व विद्युत शक्ति</p>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+        <span class="highlight-chip"><i class="fas fa-microscope"></i> 3D इंटरैक्टिव लैब सिमुलेटर</span>
+        <span class="highlight-chip"><i class="fas fa-book-open"></i> NCERT संपूर्ण पाठ्यक्रम नोट्स</span>
+        <span class="highlight-chip"><i class="fas fa-project-diagram"></i> उच्च कंट्रास्ट आरेख व फ्लोचार्ट</span>
+        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा अभ्यास व समाधान</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION 1: विद्युत धारा, विभवांतर एवं ओम का नियम -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 1</span>
+        <h2 class="section-heading">1. विद्युत आवेश, धारा, विभवांतर एवं ओम का नियम</h2>
+      </div>
+
+      <div class="ncert-card">
+        <h3 class="subsection-heading"><i class="fas fa-bolt"></i> (A) मूल विद्युत राशियां:</h3>
+        <ul class="concept-list" style="line-height:2.1;">
+          <li>• <b>विद्युत धारा (Electric Current - I):</b> प्रति इकाई समय में चालक से प्रवाहित विद्युत आवेश की दर:
+            <br><span class="reaction-box" style="display:inline-block; margin:6px 0;"><b>I = Q / t</b></span>
+            <br>• SI मात्रक: <b>ऐम्पियर (Ampere - A)</b> (1 A = 1 C / 1 s)। मापन यंत्र: <b>ऐमीटर (Ammeter)</b>, जिसे परिपथ में सदैव <b>श्रेणीक्रम</b> में जोड़ा जाता है।
+          </li>
+          <li>• <b>विद्युत विभवांतर (Potential Difference - V):</b> इकाई धन आवेश को एक बिंदु से दूसरे बिंदु तक लाने में किया गया कार्य:
+            <br><span class="reaction-box" style="display:inline-block; margin:6px 0;"><b>V = W / Q</b></span>
+            <br>• SI मात्रक: <b>वोल्ट (Volt - V)</b> (1 V = 1 J / 1 C)। मापन यंत्र: <b>वोल्टमीटर (Voltmeter)</b>, जिसे सदैव <b>समांतर क्रम (पार्श्वक्रम)</b> में जोड़ा जाता है।
+          </li>
+        </ul>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-microchip"></i> (B) ओम का नियम (Ohm's Law):</h3>
+        <div class="reaction-box">
+          <b>कथन:</b> निश्चित भौतिक परिस्थितियों (जैसे स्थिर तापमान) में किसी चालक तार के सिरों के बीच का विभवांतर (V), उसमें प्रवाहित होने वाली विद्युत धारा (I) के <b>समानुपाती</b> होता है:
+          <br><b>V ∝ I  ➔  V = I × R</b>
+          <br>जहाँ <b>R = चालक का प्रतिरोध (Resistance)</b> है।
+          <br>• प्रतिरोध का SI मात्रक <b>ओम (Ω)</b> है (1 Ω = 1 V / 1 A)।
+        </div>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-ruler-combined"></i> (C) प्रतिरोध को प्रभावित करने वाले कारक:</h3>
+        <ul class="concept-list">
+          <li>1. चालक की लंबाई के समानुपाती: <b>R ∝ l</b> (तार दोगुना लंबा करने पर प्रतिरोध दोगुना हो जाता है)।</li>
+          <li>2. अनुप्रस्थ काट के क्षेत्रफल के व्युत्क्रमानुपाती: <b>R ∝ 1/A</b> (तार मोटा करने पर प्रतिरोध घटता है)।</li>
+          <li>3. <b>R = ρ (l / A)</b>, जहाँ <b>ρ (रो) = विद्युत प्रतिरोधकता (Resistivity)</b> है (SI मात्रक: <b>ओम-मीटर / Ω·m</b>)।
+            <br>• धातुओं की प्रतिरोधकता बहुत कम (~10⁻⁸ से 10⁻⁶ Ω·m) होती है।
+            <br>• <b>मिश्रधातुओं (जैसे नाइक्रोम) की प्रतिरोधकता</b> उनकी घटक धातुओं से अधिक होती है तथा इनका उच्च ताप पर ऑक्सीकरण (दहन) नहीं होता, इसीलिए इनका उपयोग <b>विद्युत हीटर, टोस्टर व प्रेस के तापन अवयव</b> में किया जाता है।
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SIMULATOR 11.1: ओम का नियम परिपथ सिमुलेटर -->
+    <div class="sim-card" id="sim11_1">
+      <div class="sim-header">
+        <span class="sim-badge">प्रायोगिक 3D सिमुलेटर 11.1</span>
+        <h3 class="sim-title"><i class="fas fa-gauge-high"></i> ओम का नियम (V = IR) एवं परिपथ सत्यापन सिमुलेटर</h3>
+        <p class="sim-desc">
+          वोल्टेज (V) और प्रतिरोध (R) के मान बदलें और वोल्टमीटर, ऐमीटर की लाइव रीडिंग तथा I = V/R का प्रत्यक्ष सत्यापन देखें।
+        </p>
+      </div>
+
+      <div class="sim-controls">
+        <div style="display:flex; gap:15px; flex-wrap:wrap; align-items:center;">
+          <label style="font-weight:900; color:#0f172a;">
+            वोल्टेज (V): <span id="v_val" style="color:#0284c7;">6</span> V
+            <input type="range" id="v_slider" min="1" max="24" value="6" step="1" oninput="updateOhmSim()" style="margin-left:8px; vertical-align:middle;">
+          </label>
+          <label style="font-weight:900; color:#0f172a;">
+            प्रतिरोध (R): <span id="r_val" style="color:#16a34a;">3</span> Ω
+            <input type="range" id="r_slider" min="1" max="20" value="3" step="1" oninput="updateOhmSim()" style="margin-left:8px; vertical-align:middle;">
+          </label>
+          <button class="sim-btn" style="background:#64748b;" onclick="resetOhmSim()">🔄 रीसेट</button>
+        </div>
+      </div>
+
+      <div class="sim-stage-wrapper">
+        <div class="sim-stage" style="background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%); border: 3px solid #16a34a;">
+          <svg id="svg_sim111" viewBox="0 0 1000 500" width="100%" height="100%">
+            <!-- Circuit Wire Rectangle -->
+            <rect x="150" y="100" width="700" height="300" fill="none" stroke="#0f172a" stroke-width="5" rx="10"/>
+
+            <!-- Battery on Left Wire -->
+            <rect x="130" y="210" width="40" height="80" fill="#f8fafc" stroke="none"/>
+            <line x1="120" y1="230" x2="180" y2="230" stroke="#dc2626" stroke-width="6"/> <!-- Long positive -->
+            <line x1="135" y1="270" x2="165" y2="270" stroke="#0f172a" stroke-width="6"/> <!-- Short negative -->
+            <text x="80" y="255" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#dc2626">बैटरी V</text>
+
+            <!-- Ammeter on Bottom Wire -->
+            <rect x="460" y="380" width="80" height="40" fill="#f8fafc" stroke="none"/>
+            <circle cx="500" cy="400" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+            <text x="500" y="408" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#2563eb" text-anchor="middle">A</text>
+            <text x="500" y="455" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#1e40af" text-anchor="middle">ऐमीटर (श्रेणीक्रम)</text>
+
+            <!-- Resistor on Top Wire -->
+            <rect x="420" y="80" width="160" height="40" fill="#f8fafc" stroke="none"/>
+            <path d="M 420 100 L 440 80 L 460 120 L 480 80 L 500 120 L 520 80 L 540 120 L 560 100 L 580 100" fill="none" stroke="#16a34a" stroke-width="5"/>
+            <text x="500" y="60" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#15803d" text-anchor="middle">प्रतिरोधक R</text>
+
+            <!-- Voltmeter parallel to resistor -->
+            <path d="M 400 100 L 400 200 L 465 200 M 535 200 L 600 200 L 600 100" fill="none" stroke="#d97706" stroke-width="3" stroke-dasharray="6,4"/>
+            <circle cx="500" cy="200" r="28" fill="#ffffff" stroke="#d97706" stroke-width="4"/>
+            <text x="500" y="208" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#d97706" text-anchor="middle">V</text>
+            <text x="500" y="245" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#b45309" text-anchor="middle">वोल्टमीटर (समांतर क्रम)</text>
+
+            <!-- Live Readings Display Screen on Right -->
+            <rect x="680" y="140" width="280" height="220" rx="14" fill="#0f172a"/>
+            <text x="820" y="175" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" fill="#38bdf8" text-anchor="middle">📊 लाइव मापन मीटर</text>
+            <text id="disp_v" x="710" y="220" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="800" fill="#facc15">V = 6.0 V</text>
+            <text id="disp_r" x="710" y="260" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="800" fill="#4ade80">R = 3.0 Ω</text>
+            <line x1="710" y1="280" x2="930" y2="280" stroke="#334155" stroke-width="2"/>
+            <text id="disp_i" x="710" y="325" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="900" fill="#38bdf8">I = 2.00 A</text>
+          </svg>
+        </div>
+
+        <div class="sim-status-banner" id="sim111_status" style="background:#f8fafc; border:2px solid #cbd5e1; border-radius:10px; padding:15px; margin-top:15px; color:#0f172a;">
+          <i class="fas fa-info-circle" style="color:#0284c7;"></i> <b>गणना:</b> I = V / R = 6.0 V / 3.0 Ω = <b>2.00 ऐम्पियर (A)</b>। वोल्टेज बढ़ाने पर धारा समानुपातिक रूप से बढ़ती है।
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: प्रतिरोधकों का संयोजन, जूल का तापन नियम एवं विद्युत शक्ति -->
+    <section class="doc-section">
+      <div class="section-title-wrap">
+        <span class="section-badge">भाग 2</span>
+        <h2 class="section-heading">2. प्रतिरोधकों का संयोजन, जूल का तापन नियम एवं विद्युत शक्ति</h2>
+      </div>
+
+      <div class="ncert-card">
+        <h3 class="subsection-heading"><i class="fas fa-layer-group"></i> (A) प्रतिरोधकों का श्रेणीक्रम बनाम पार्श्वक्रम संयोजन:</h3>
+        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+          <thead>
+            <tr style="background:#0f172a; color:#ffffff;">
+              <th style="padding:10px; border:1px solid #334155;">लक्षण</th>
+              <th style="padding:10px; border:1px solid #334155;">श्रेणीक्रम संयोजन (Series)</th>
+              <th style="padding:10px; border:1px solid #334155;">पार्श्वक्रम / समांतर क्रम (Parallel)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px; border:1px solid #cbd5e1; font-weight:800;">1. तुल्य प्रतिरोध सूत्र</td>
+              <td style="padding:10px; border:1px solid #cbd5e1; font-weight:800; color:#dc2626;">R<sub>s</sub> = R₁ + R₂ + R₃</td>
+              <td style="padding:10px; border:1px solid #cbd5e1; font-weight:800; color:#15803d;">1/R<sub>p</sub> = 1/R₁ + 1/R₂ + 1/R₃</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border:1px solid #cbd5e1; font-weight:800;">2. धारा एवं विभवांतर</td>
+              <td style="padding:10px; border:1px solid #cbd5e1;">सभी में धारा <b>I समान</b>, विभवांतर बंटता है।</td>
+              <td style="padding:10px; border:1px solid #cbd5e1;">सभी सिरों पर विभवांतर <b>V समान</b>, धारा बंटती है।</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border:1px solid #cbd5e1; font-weight:800;">3. घरेलू परिपथ में उपयोग</td>
+              <td style="padding:10px; border:1px solid #cbd5e1;">अनुपयुक्त (एक उपकरण खराब होने पर पूरा परिपथ बंद हो जाता है)।</td>
+              <td style="padding:10px; border:1px solid #cbd5e1;"><b>अत्यंत उपयुक्त:</b> कुल प्रतिरोध न्यूनतम रहता है, सभी को 220V मिलता है और प्रत्येक उपकरण का पृथक स्विच होता है।</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-temperature-arrow-up"></i> (B) जूल का विद्युत धारा का तापीय प्रभाव:</h3>
+        <div class="reaction-box">
+          <b>जूल का नियम:</b> किसी प्रतिरोधक में उत्पन्न ऊष्मा (H):
+          <br>1. धारा के वर्ग के समानुपाती (H ∝ I²)
+          <br>2. प्रतिरोध के समानुपाती (H ∝ R)
+          <br>3. समय के समानुपाती (H ∝ t)
+          <br><br><b>H = I² R t = V I t = (V² / R) t (जूल / J)</b>
+          <br>• <b>फ्यूज तार (Electric Fuse):</b> परिपथ को अतिभारण (Overloading) व लघुपथन (Short Circuit) से बचाने वाली सुरक्षा युक्ति। यह सीसा-टिन मिश्रधातु का बना होता है जिसका <b>गलनांक बहुत कम</b> होता है।
+        </div>
+
+        <h3 class="subsection-heading" style="margin-top:25px;"><i class="fas fa-plug-circle-bolt"></i> (C) विद्युत शक्ति (Electric Power) एवं व्यापारिक मात्रक:</h3>
+        <ul class="concept-list" style="line-height:2.1;">
+          <li>• विद्युत ऊर्जा के उपभुक्त होने की दर <b>विद्युत शक्ति</b> कहलाती है:
+            <br><span class="reaction-box" style="display:inline-block; margin:6px 0;"><b>P = V × I = I²R = V² / R</b> (SI मात्रक: <b>वाट / W</b>)</span>
+          </li>
+          <li>• विद्युत ऊर्जा का व्यापारिक मात्रक <b>किलोवाट-घंटा (kWh / 1 यूनिट)</b> है:
+            <br><span class="reaction-box" style="display:inline-block; margin:6px 0;"><b>1 kWh = 1 यूनिट = 1000 W × 3600 s = 3.6 × 10⁶ जूल (J)</b></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    var sizeOffset = 0;
+    var weightOffset = 0;
+    var strokeOffset = 0;
+    var currentContainerWidth = 1400;
+
+    function applyDynamicTypography() {
+      var b = 26 + sizeOffset;
+      var w = Math.max(400, Math.min(900, 800 + weightOffset));
+      var s = Math.max(0, +(0.55 + strokeOffset).toFixed(2));
+
+      var elFs = document.getElementById('dyn-fs');
+      if (!elFs) {
+        elFs = document.createElement('style');
+        elFs.id = 'dyn-fs';
+        document.head.appendChild(elFs);
+      }
+
+      elFs.innerHTML = `
+        body, #mainDocContainer, .doc-container, p, li, td, th, label, dt, dd,
+        .concept-box, .fact-box, .warn-box, .reaction-box, .qa-answer, .ncert-card {
+          font-size: ${b}pt !important;
+          line-height: 2.0 !important;
+        }
+        b, strong, .strong-term {
+          font-weight: ${w} !important;
+          -webkit-text-stroke: ${s}px #000000;
+          text-shadow: 0 0 0.5px #000;
+        }
+        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+          font-size: ${Math.round(b * 1.05)}pt !important;
+          font-weight: 800 !important;
+        }
+      `;
+    }
+
+    function adjustFontSize(amount) {
+      sizeOffset += amount;
+      if (sizeOffset < -10) sizeOffset = -10;
+      if (sizeOffset > 18) sizeOffset = 18;
+      applyDynamicTypography();
+    }
+
+    function adjustFontWeight(amount) {
+      weightOffset += amount;
+      if (weightOffset < -300) weightOffset = -300;
+      if (weightOffset > 100) weightOffset = 100;
+      applyDynamicTypography();
+    }
+
+    function adjustWidth(amount) {
+      currentContainerWidth += amount;
+      if (currentContainerWidth < 900) currentContainerWidth = 900;
+      if (currentContainerWidth > 2200) currentContainerWidth = 2200;
+      var el = document.getElementById('mainDocContainer');
+      if (el) el.style.maxWidth = currentContainerWidth + 'px';
+    }
+
+    var simTextOffset = 0;
+    function applySimTypography() {
+      var baseDesc = 19 + simTextOffset;
+      var baseTitle = 26 + simTextOffset;
+      var baseBanner = 18 + simTextOffset;
+      var baseBtn = 15.5 + (simTextOffset > 0 ? Math.round(simTextOffset * 0.5) : simTextOffset * 0.5);
+
+      var elSim = document.getElementById('dyn-sim-fs');
+      if (!elSim) {
+        elSim = document.createElement('style');
+        elSim.id = 'dyn-sim-fs';
+        document.head.appendChild(elSim);
+      }
+
+      elSim.innerHTML = `
+        .sim-card {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.65 !important;
+        }
+        .sim-title, .sim-title span {
+          font-size: ${baseTitle}px !important;
+          font-weight: 900 !important;
+          color: #0f172a !important;
+        }
+        .sim-badge {
+          font-size: ${Math.max(13, baseDesc - 3)}px !important;
+          font-weight: 800 !important;
+        }
+        .sim-card p, .sim-card li, .sim-card .sim-desc {
+          font-size: ${baseDesc}px !important;
+          line-height: 1.7 !important;
+          font-weight: 700 !important;
+          color: #1e293b !important;
+        }
+        .sim-status-banner, [id$="_status"] {
+          font-size: ${baseBanner}px !important;
+          line-height: 1.6 !important;
+          font-weight: 800 !important;
+        }
+        .sim-card .sim-btn {
+          font-size: ${baseBtn}px !important;
+          font-weight: 900 !important;
+        }
+      `;
+    }
+
+    function adjustSimFontSize(amount) {
+      simTextOffset += amount;
+      if (simTextOffset < -6) simTextOffset = -6;
+      if (simTextOffset > 12) simTextOffset = 12;
+      applySimTypography();
+    }
+
+    function adjustSimStroke(delta) {
+      var svgs = document.querySelectorAll('.sim-stage svg');
+      svgs.forEach(function(svg) {
+        var lines = svg.querySelectorAll('path, line, rect, circle, ellipse, polygon');
+        lines.forEach(function(el) {
+          var sw = parseFloat(el.getAttribute('stroke-width'));
+          if (!isNaN(sw) && sw > 0) {
+            var nsw = Math.max(0.8, +(sw + delta * 0.35).toFixed(2));
+            el.setAttribute('stroke-width', nsw);
+          }
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      applyDynamicTypography();
+      applySimTypography();
+    });
+
+
+    function updateOhmSim() {
+      var v = parseFloat(document.getElementById('v_slider').value);
+      var r = parseFloat(document.getElementById('r_slider').value);
+      var i = v / r;
+
+      document.getElementById('v_val').textContent = v;
+      document.getElementById('r_val').textContent = r;
+      document.getElementById('disp_v').textContent = 'V = ' + v.toFixed(1) + ' V';
+      document.getElementById('disp_r').textContent = 'R = ' + r.toFixed(1) + ' Ω';
+      document.getElementById('disp_i').textContent = 'I = ' + i.toFixed(2) + ' A';
+
+      document.getElementById('sim111_status').innerHTML = '<i class="fas fa-calculator" style="color:#0284c7;"></i> <b>गणना:</b> I = V / R = ' + v.toFixed(1) + ' V / ' + r.toFixed(1) + ' Ω = <b>' + i.toFixed(2) + ' ऐम्पियर (A)</b>।';
+    }
+
+    function resetOhmSim() {
+      document.getElementById('v_slider').value = 6;
+      document.getElementById('r_slider').value = 3;
+      updateOhmSim();
+    }
+
+    document.addEventListener('DOMContentLoaded', updateOhmSim);
+
+  </script>
+</body>
+</html>
