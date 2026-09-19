@@ -1681,7 +1681,7 @@
       </div>
     </div>
 
-                    <div class="sim-card" id="sim2_box">
+                        <div class="sim-card" id="sim2_box">
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-flask" style="color: #eab308;"></i>
@@ -1719,134 +1719,172 @@
       <div class="sim-stage" id="sim2_stage">
         <svg id="sim2_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
-            <!-- Lab Bench Surface -->
+            <!-- 3D Lab Bench Surface -->
             <linearGradient id="s2_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
             </linearGradient>
             <linearGradient id="s2_benchFront" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
             </linearGradient>
-            <!-- Glass Body Gradients -->
-            <linearGradient id="s2_beakerGlass" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
-              <stop offset="15%" stop-color="#ffffff" stop-opacity="0.2"/>
-              <stop offset="85%" stop-color="#ffffff" stop-opacity="0.15"/>
-              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4"/>
+            <!-- 3D Cylindrical Glass Shading -->
+            <linearGradient id="s2_glass3D" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
+              <stop offset="8%" stop-color="#ffffff" stop-opacity="0.4"/>
+              <stop offset="25%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="75%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="92%" stop-color="#38bdf8" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.6"/>
             </linearGradient>
-            <!-- Clear Transparent Solution -->
+            <!-- Clear Transparent Aqueous Solution -->
             <linearGradient id="s2_clearLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.5"/>
-              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.8"/>
+              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.75"/>
             </linearGradient>
             <!-- Vivid Bright Yellow PbI2 Precipitate Bloom -->
-            <radialGradient id="s2_yellowBloom" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-              <stop offset="25%" stop-color="#fef08a" stop-opacity="0.98"/>
-              <stop offset="60%" stop-color="#facc15" stop-opacity="0.95"/>
-              <stop offset="85%" stop-color="#eab308" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#ca8a04" stop-opacity="0.85"/>
+            <radialGradient id="s2_yellowBloom" cx="50%" cy="38%" r="62%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+              <stop offset="20%" stop-color="#fef08a" stop-opacity="0.98"/>
+              <stop offset="55%" stop-color="#facc15" stop-opacity="0.96"/>
+              <stop offset="82%" stop-color="#eab308" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#ca8a04" stop-opacity="0.9"/>
             </radialGradient>
             <!-- Settled Precipitate Bed Gradient -->
             <linearGradient id="s2_settledYellow" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#facc15"/>
-              <stop offset="50%" stop-color="#eab308"/>
+              <stop offset="0%" stop-color="#fef08a"/>
+              <stop offset="35%" stop-color="#facc15"/>
+              <stop offset="75%" stop-color="#eab308"/>
               <stop offset="100%" stop-color="#ca8a04"/>
+            </linearGradient>
+            <!-- Pouring Stream Gradient -->
+            <linearGradient id="s2_streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.85"/>
             </linearGradient>
             <!-- Soft Glow and Blur Filters -->
             <filter id="s2_blur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
             <filter id="s2_softGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="6"/>
+              <feGaussianBlur stdDeviation="5"/>
             </filter>
           </defs>
 
-          <!-- WORKBENCH -->
-          <polygon points="20,380 880,380 840,430 60,430" fill="url(#s2_benchTop)"/>
-          <polygon points="60,430 840,430 840,436 60,436" fill="#94a3b8" opacity="0.8"/>
-          <polygon points="60,436 840,436 840,465 60,465" fill="url(#s2_benchFront)"/>
-          <ellipse cx="450" cy="468" rx="420" ry="10" fill="#000000" opacity="0.25" filter="url(#s2_blur)"/>
+          <!-- 3D WORKBENCH (FULL WIDESCREEN DEPTH) -->
+          <polygon points="10,380 900,380 850,432 50,432" fill="url(#s2_benchTop)"/>
+          <polygon points="50,432 850,432 850,438 50,438" fill="#94a3b8" opacity="0.85"/>
+          <polygon points="50,438 850,438 850,470 50,470" fill="url(#s2_benchFront)"/>
+          <ellipse cx="460" cy="473" rx="420" ry="12" fill="#000000" opacity="0.3" filter="url(#s2_blur)"/>
 
-          <!-- RECEIVING BEAKER: LEAD NITRATE (CENTER X: 330) -->
+          <!-- ================= 1. RECEIVING BOROSILICATE BEAKER (CENTER X: 330) ================= -->
           <g id="s2_beaker_assembly">
-            <ellipse cx="330" cy="402" rx="115" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s2_blur)"/>
-            <!-- Clear Liquid Inside (Meniscus at Y: 265, Base at Y: 385) -->
-            <path id="s2_beaker_liquid" d="M 228,265 Q 330,274 432,265 L 432,385 Q 330,398 228,385 Z" fill="url(#s2_clearLiquid)" stroke="#38bdf8" stroke-width="1"/>
-            <ellipse id="s2_beaker_meniscus" cx="330" cy="265" rx="102" ry="10" fill="#bae6fd" fill-opacity="0.85" stroke="#38bdf8" stroke-width="0.8"/>
+            <!-- Table Contact Shadow -->
+            <ellipse cx="330" cy="406" rx="125" ry="18" fill="#020617" opacity="0.45" filter="url(#s2_blur)"/>
+
+            <!-- Clear Liquid Inside (Meniscus at Y: 265, Base at Y: 388) -->
+            <path id="s2_beaker_liquid" d="M 222,265 Q 330,274 438,265 L 438,388 Q 330,404 222,388 Z" fill="url(#s2_clearLiquid)" stroke="#38bdf8" stroke-width="1.2"/>
+            <ellipse id="s2_beaker_meniscus" cx="330" cy="265" rx="108" ry="11" fill="#bae6fd" fill-opacity="0.85" stroke="#38bdf8" stroke-width="1"/>
 
             <!-- VIVID BRIGHT YELLOW PRECIPITATE CLOUD BLOOM (STEP 2) -->
             <g id="s2_yellow_bloom_group" opacity="0" style="transition: opacity 0.6s ease;">
               <!-- Main billowy cloud contour -->
-              <path d="M 330,265 C 260,285 240,320 255,355 C 270,385 305,392 330,394 C 355,392 390,385 405,355 C 420,320 400,285 330,265 Z" fill="url(#s2_yellowBloom)" filter="url(#s2_softGlow)"/>
-              <!-- Billowy cloud puffs -->
-              <circle cx="305" cy="305" r="38" fill="url(#s2_yellowBloom)" opacity="0.95"/>
-              <circle cx="360" cy="310" r="42" fill="url(#s2_yellowBloom)" opacity="0.95"/>
-              <circle cx="330" cy="350" r="45" fill="url(#s2_yellowBloom)" opacity="0.95"/>
-              <circle cx="280" cy="335" r="30" fill="url(#s2_yellowBloom)" opacity="0.9"/>
-              <circle cx="380" cy="340" r="32" fill="url(#s2_yellowBloom)" opacity="0.9"/>
-              <circle cx="330" cy="290" r="28" fill="#fef08a" opacity="0.95"/>
+              <path d="M 330,265 C 255,280 235,315 250,352 C 265,385 300,392 330,394 C 360,392 395,385 410,352 C 425,315 405,280 330,265 Z" fill="url(#s2_yellowBloom)" filter="url(#s2_softGlow)"/>
+              <!-- Multi-puff volumetric curd clouds -->
+              <circle cx="300" cy="305" r="40" fill="url(#s2_yellowBloom)" opacity="0.95"/>
+              <circle cx="360" cy="310" r="44" fill="url(#s2_yellowBloom)" opacity="0.95"/>
+              <circle cx="330" cy="350" r="48" fill="url(#s2_yellowBloom)" opacity="0.96"/>
+              <circle cx="275" cy="338" r="32" fill="url(#s2_yellowBloom)" opacity="0.92"/>
+              <circle cx="385" cy="342" r="34" fill="url(#s2_yellowBloom)" opacity="0.92"/>
+              <circle cx="330" cy="290" r="30" fill="#fef08a" opacity="0.98"/>
             </g>
 
             <!-- SETTLED DENSE YELLOW PRECIPITATE BED AT BOTTOM (STEP 3 & 4) -->
             <g id="s2_settled_bed_group" opacity="0" style="transition: opacity 1.2s ease;">
-              <path d="M 228,355 Q 330,350 432,355 L 432,385 Q 330,398 228,385 Z" fill="url(#s2_settledYellow)"/>
-              <ellipse cx="330" cy="355" rx="102" ry="8" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
-              <text x="330" y="376" font-size="12" font-weight="900" fill="#78350f" text-anchor="middle">
+              <!-- Settled dense layer matching video -->
+              <path d="M 222,352 Q 330,345 438,352 L 438,388 Q 330,404 222,388 Z" fill="url(#s2_settledYellow)"/>
+              <ellipse cx="330" cy="352" rx="108" ry="9" fill="#facc15" stroke="#ca8a04" stroke-width="1.8"/>
+              <!-- Delicate wispy plumes rising from bed -->
+              <path d="M 280,350 Q 285,320 290,300" stroke="#facc15" stroke-width="3" opacity="0.6" stroke-linecap="round" fill="none"/>
+              <path d="M 330,350 Q 325,310 335,285" stroke="#facc15" stroke-width="3.5" opacity="0.7" stroke-linecap="round" fill="none"/>
+              <path d="M 380,350 Q 375,325 370,305" stroke="#facc15" stroke-width="3" opacity="0.6" stroke-linecap="round" fill="none"/>
+              <text x="330" y="378" font-size="13" font-weight="900" fill="#78350f" text-anchor="middle">
                 लेड आयोडाइड (PbI₂↓) अवक्षेप पेंदे में जमा
               </text>
             </g>
 
-            <!-- Beaker Glass Body -->
-            <path d="M 215,185 L 225,187 L 225,380 Q 225,396 250,396 L 410,396 Q 435,396 435,380 L 435,187 L 430,185" fill="url(#s2_beakerGlass)" stroke="#cbd5e1" stroke-width="2.8"/>
-            <ellipse cx="330" cy="186" rx="105" ry="10" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
-            <path d="M 225,187 Q 210,183 205,180 Q 215,189 225,191 Z" fill="#ffffff" opacity="0.7"/>
+            <!-- REALISTIC 3D BOROSILICATE GLASS CYLINDER BODY -->
+            <path d="M 210,175 L 222,385 Q 225,402 250,402 L 410,402 Q 435,402 438,385 L 450,175" fill="url(#s2_glass3D)" stroke="#475569" stroke-width="3"/>
+            <!-- 3D Glass Rims (Outer & Inner) -->
+            <ellipse cx="330" cy="175" rx="120" ry="14" fill="none" stroke="#64748b" stroke-width="3.2"/>
+            <ellipse cx="330" cy="177" rx="114" ry="11" fill="none" stroke="#e2e8f0" stroke-width="1.8"/>
+            <!-- Spout on Left Rim -->
+            <path d="M 210,175 Q 192,168 198,182" fill="none" stroke="#64748b" stroke-width="3.2"/>
 
-            <!-- Volume Graduation Markings -->
-            <g opacity="0.9">
-              <line x1="232" y1="225" x2="260" y2="225" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="230" font-size="13" font-weight="900" fill="#ffffff">200 mL</text>
-              <line x1="232" y1="265" x2="260" y2="265" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="270" font-size="13" font-weight="900" fill="#ffffff">150 mL</text>
-              <line x1="232" y1="305" x2="260" y2="305" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="310" font-size="13" font-weight="900" fill="#ffffff">100 mL</text>
+            <!-- High-Gloss 3D Specular Reflection Stripes -->
+            <line x1="226" y1="185" x2="232" y2="388" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <line x1="238" y1="195" x2="242" y2="378" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <line x1="436" y1="185" x2="430" y2="388" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+
+            <!-- REAL BOROSILICATE WHITE MARKINGS (MATCHING EXPERIMENTAL VIDEO) -->
+            <!-- Frosted measurement square -->
+            <rect x="250" y="300" width="50" height="44" rx="5" fill="#ffffff" opacity="0.88"/>
+            <text x="275" y="292" font-size="11.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">120 ml</text>
+            <text x="275" y="325" font-size="8.5" font-weight="900" fill="#334155" text-anchor="middle">BOROSILICATE</text>
+            <!-- Volumetric Ladder Marks -->
+            <g opacity="0.95">
+              <line x1="375" y1="215" x2="415" y2="215" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="220" font-size="13" font-weight="900" fill="#ffffff">500 mL</text>
+              <line x1="385" y1="260" x2="415" y2="260" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="265" font-size="13" font-weight="900" fill="#ffffff">400 mL</text>
+              <line x1="375" y1="305" x2="415" y2="305" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="310" font-size="13" font-weight="900" fill="#ffffff">200 mL</text>
+              <line x1="385" y1="350" x2="415" y2="350" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="355" font-size="13" font-weight="900" fill="#ffffff">100 mL</text>
             </g>
 
-            <!-- Glass Reflection Highlight -->
-            <line x1="230" y1="192" x2="230" y2="385" stroke="#ffffff" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/>
-
             <!-- Beaker Content Badge -->
-            <g transform="translate(205, 412)">
-              <rect x="0" y="0" width="250" height="30" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
-              <text id="s2_beaker_badge_text" x="125" y="20" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">
+            <g transform="translate(195, 418)">
+              <rect x="0" y="0" width="270" height="32" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+              <text id="s2_beaker_badge_text" x="135" y="21" font-size="14.5" font-weight="900" fill="#38bdf8" text-anchor="middle">
                 लेड नाइट्रेट [Pb(NO₃)₂] विलयन
               </text>
             </g>
           </g>
 
-          <!-- POURING STREAM (CONNECTS SPOUT 350,155 TO LIQUID SURFACE 350,265) -->
+          <!-- ================= 2. POURING STREAM (FROM TILTED SPOUT 410,140 TO LIQUID SURFACE 330,265) ================= -->
+                    <!-- ================= 2. POURING STREAM (FROM TILTED SPOUT 415,160 TO LIQUID SURFACE 330,265) ================= -->
           <g id="s2_pouring_stream" opacity="0" style="transition: opacity 0.25s ease;">
-            <path d="M 350,155 L 350,265" stroke="rgba(56, 189, 248, 0.85)" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <path d="M 350,155 L 350,265" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
-            <ellipse cx="350" cy="265" rx="18" ry="6" fill="#fef08a" opacity="0.95"/>
+            <!-- Thick realistic curved liquid stream -->
+            <path d="M 415,160 Q 375,205 330,265" stroke="url(#s2_streamGrad)" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M 415,160 Q 375,205 330,265" stroke="#ffffff" stroke-width="3" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
+            <!-- Surface impact ripples -->
+            <ellipse cx="330" cy="265" rx="20" ry="7" fill="#fef08a" opacity="0.95"/>
           </g>
 
-          <!-- POURING VESSEL: POTASSIUM IODIDE (KI) -->
-          <!-- In Step 1: on bench at x: 560. In Step 2: elevated, rear high, front tilted 45° at (350, 155) -->
+          <!-- ================= 3. POURING BEAKER: POTASSIUM IODIDE (KI) ================= -->
+          <!-- In Step 1: Upright on bench at X: 570, Y: 250 -->
+          <!-- In Step 2: Mouth tilted DOWNWARDS at (410,140) and Base elevated UPWARDS into the air -->
           <g id="s2_pouring_vessel_group" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
             <g id="s2_vessel_inner">
-              <g transform="translate(560, 250)">
-                <ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s2_blur)"/>
-                <path d="M 8,50 L 8,135 Q 55,145 102,135 L 102,50 Z" fill="url(#s2_clearLiquid)"/>
-                <ellipse cx="55" cy="50" rx="47" ry="6" fill="#bae6fd" opacity="0.8"/>
-                <path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s2_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>
-                <ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>
-                <rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#eab308" stroke-width="1.5"/>
-                <text x="55" y="172" font-size="12" font-weight="900" fill="#fde047" text-anchor="middle">पोटैशियम आयोडाइड (KI)</text>
+              <g transform="translate(570, 250)">
+                <!-- Table Contact Shadow -->
+                <ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s2_blur)"/>
+                <!-- KI clear liquid -->
+                <path d="M 8,50 L 8,135 Q 55,146 102,135 L 102,50 Z" fill="url(#s2_clearLiquid)"/>
+                <ellipse cx="55" cy="50" rx="47" ry="7" fill="#bae6fd" opacity="0.85"/>
+                <!-- 3D Glass Body -->
+                <path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s2_glass3D)" stroke="#475569" stroke-width="2.5"/>
+                <ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>
+                <!-- Specular Highlight -->
+                <line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                <!-- Label Tag -->
+                <rect x="-10" y="155" width="130" height="28" rx="6" fill="#0f172a" stroke="#eab308" stroke-width="1.8"/>
+                <text x="55" y="174" font-size="12.5" font-weight="900" fill="#fde047" text-anchor="middle">पोटैशियम आयोडाइड (KI)</text>
               </g>
             </g>
           </g>
 
-          <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 775 to 1170) -->
+          <!-- ================= 4. DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 775 to 1170) ================= -->
           <g id="s2_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
             <rect x="0" y="0" width="395" height="350" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3" filter="drop-shadow(0 8px 24px rgba(0,0,0,0.08))"/>
             <rect x="0" y="0" width="395" height="46" rx="16" fill="#1e3a8a"/>
@@ -3523,7 +3561,7 @@
       </div>
     </div>
 
-    <div class="sim-card" id="sim10_box">
+        <div class="sim-card" id="sim10_box">
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-cubes-stacked" style="color: #6366f1;"></i>
@@ -3567,505 +3605,162 @@
             <linearGradient id="s10_benchFront" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
             </linearGradient>
-            <linearGradient id="s10_beakerGlass" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-              <stop offset="12%" stop-color="#e0f2fe" stop-opacity="0.3"/>
-              <stop offset="85%" stop-color="#bae6fd" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+            <linearGradient id="s10_glass3D" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
+              <stop offset="8%" stop-color="#ffffff" stop-opacity="0.4"/>
+              <stop offset="25%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="75%" stop-color="#f8fafc" stop-opacity="0.1"/>
+              <stop offset="92%" stop-color="#818cf8" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.6"/>
             </linearGradient>
             <linearGradient id="s10_clearLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.6"/>
-              <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.75"/>
-              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.9"/>
+              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.75"/>
             </linearGradient>
-            <radialGradient id="s10_whiteBloom" cx="50%" cy="30%" r="70%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
-              <stop offset="45%" stop-color="#f8fafc" stop-opacity="0.95"/>
-              <stop offset="80%" stop-color="#e2e8f0" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.75"/>
+            <radialGradient id="s10_whiteBloom" cx="50%" cy="38%" r="62%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+              <stop offset="35%" stop-color="#f8fafc" stop-opacity="0.98"/>
+              <stop offset="70%" stop-color="#e2e8f0" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.9"/>
             </radialGradient>
             <linearGradient id="s10_settledWhite" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="35%" stop-color="#f8fafc"/>
-              <stop offset="80%" stop-color="#e2e8f0"/>
+              <stop offset="50%" stop-color="#f1f5f9"/>
               <stop offset="100%" stop-color="#cbd5e1"/>
+            </linearGradient>
+            <linearGradient id="s10_streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+              <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.85"/>
             </linearGradient>
             <filter id="s10_blur" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4"/>
             </filter>
             <filter id="s10_softGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="6"/>
+              <feGaussianBlur stdDeviation="5"/>
             </filter>
           </defs>
 
           <!-- WORKBENCH -->
-          <polygon points="20,380 880,380 840,430 60,430" fill="url(#s10_benchTop)"/>
-          <polygon points="60,430 840,430 840,436 60,436" fill="#94a3b8" opacity="0.8"/>
-          <polygon points="60,436 840,436 840,465 60,465" fill="url(#s10_benchFront)"/>
-          <ellipse cx="450" cy="468" rx="420" ry="10" fill="#000000" opacity="0.25" filter="url(#s10_blur)"/>
+          <polygon points="10,380 900,380 850,432 50,432" fill="url(#s10_benchTop)"/>
+          <polygon points="50,432 850,432 850,438 50,438" fill="#94a3b8" opacity="0.85"/>
+          <polygon points="50,438 850,438 850,470 50,470" fill="url(#s10_benchFront)"/>
+          <ellipse cx="460" cy="473" rx="420" ry="12" fill="#000000" opacity="0.3" filter="url(#s10_blur)"/>
 
           <!-- RECEIVING BEAKER: SODIUM SULPHATE (CENTER X: 330) -->
           <g id="s10_beaker_assembly">
-            <ellipse cx="330" cy="402" rx="115" ry="16" fill="#0f172a" opacity="0.35" filter="url(#s10_blur)"/>
-            <path id="s10_beaker_liquid" d="M 228,265 Q 330,274 432,265 L 432,385 Q 330,398 228,385 Z" fill="url(#s10_clearLiquid)" stroke="#38bdf8" stroke-width="1"/>
-            <ellipse id="s10_beaker_meniscus" cx="330" cy="265" rx="102" ry="10" fill="#bae6fd" fill-opacity="0.85" stroke="#38bdf8" stroke-width="0.8"/>
+            <ellipse cx="330" cy="406" rx="125" ry="18" fill="#020617" opacity="0.45" filter="url(#s10_blur)"/>
+            <path id="s10_beaker_liquid" d="M 222,265 Q 330,274 438,265 L 438,388 Q 330,404 222,388 Z" fill="url(#s10_clearLiquid)" stroke="#818cf8" stroke-width="1.2"/>
+            <ellipse id="s10_beaker_meniscus" cx="330" cy="265" rx="108" ry="11" fill="#bae6fd" fill-opacity="0.85" stroke="#818cf8" stroke-width="1"/>
 
             <!-- WHITE PRECIPITATE BLOOM -->
-            <g id="s10_white_bloom_group" opacity="0" style="transition: opacity 0.5s ease;">
-              <path d="M 330,265 C 260,285 240,320 255,355 C 270,385 305,392 330,394 C 355,392 390,385 405,355 C 420,320 400,285 330,265 Z" fill="url(#s10_whiteBloom)" filter="url(#s10_softGlow)"/>
-              <circle cx="305" cy="305" r="38" fill="#ffffff" opacity="0.95"/>
-              <circle cx="360" cy="310" r="42" fill="#f8fafc" opacity="0.95"/>
-              <circle cx="330" cy="350" r="45" fill="#ffffff" opacity="0.95"/>
+            <g id="s10_white_bloom_group" opacity="0" style="transition: opacity 0.6s ease;">
+              <path d="M 330,265 C 255,280 235,315 250,352 C 265,385 300,392 330,394 C 360,392 395,385 410,352 C 425,315 405,280 330,265 Z" fill="url(#s10_whiteBloom)" filter="url(#s10_softGlow)"/>
+              <circle cx="300" cy="305" r="40" fill="#ffffff" opacity="0.96"/>
+              <circle cx="360" cy="310" r="44" fill="#f8fafc" opacity="0.96"/>
+              <circle cx="330" cy="350" r="48" fill="#ffffff" opacity="0.98"/>
             </g>
 
             <!-- SETTLED WHITE PRECIPITATE BED -->
             <g id="s10_settled_bed_group" opacity="0" style="transition: opacity 1.2s ease;">
-              <path d="M 228,355 Q 330,350 432,355 L 432,385 Q 330,398 228,385 Z" fill="url(#s10_settledWhite)"/>
-              <ellipse cx="330" cy="355" rx="102" ry="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+              <path d="M 222,352 Q 330,345 438,352 L 438,388 Q 330,404 222,388 Z" fill="url(#s10_settledWhite)"/>
+              <ellipse cx="330" cy="352" rx="108" ry="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="330" y="378" font-size="13" font-weight="900" fill="#1e293b" text-anchor="middle">
+                बेरियम सल्फेट (BaSO₄↓) अवक्षेप पेंदे में जमा
+              </text>
             </g>
 
-            <path d="M 215,185 L 225,187 L 225,380 Q 225,396 250,396 L 410,396 Q 435,396 435,380 L 435,187 L 430,185" fill="url(#s10_beakerGlass)" stroke="#cbd5e1" stroke-width="2.8"/>
-            <ellipse cx="330" cy="186" rx="105" ry="10" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
-            <path d="M 225,187 Q 210,183 205,180 Q 215,189 225,191 Z" fill="#ffffff" opacity="0.7"/>
+            <!-- 3D Glass Body -->
+            <path d="M 210,175 L 222,385 Q 225,402 250,402 L 410,402 Q 435,402 438,385 L 450,175" fill="url(#s10_glass3D)" stroke="#475569" stroke-width="3"/>
+            <ellipse cx="330" cy="175" rx="120" ry="14" fill="none" stroke="#64748b" stroke-width="3.2"/>
+            <ellipse cx="330" cy="177" rx="114" ry="11" fill="none" stroke="#e2e8f0" stroke-width="1.8"/>
+            <path d="M 210,175 Q 192,168 198,182" fill="none" stroke="#64748b" stroke-width="3.2"/>
 
-            <g opacity="0.9">
-              <line x1="232" y1="225" x2="260" y2="225" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="230" font-size="13" font-weight="900" fill="#ffffff">200 mL</text>
-              <line x1="232" y1="265" x2="260" y2="265" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="270" font-size="13" font-weight="900" fill="#ffffff">150 mL</text>
-              <line x1="232" y1="305" x2="260" y2="305" stroke="#ffffff" stroke-width="2.5"/>
-              <text x="268" y="310" font-size="13" font-weight="900" fill="#ffffff">100 mL</text>
+            <!-- Highlights -->
+            <line x1="226" y1="185" x2="232" y2="388" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+            <line x1="436" y1="185" x2="430" y2="388" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+
+            <!-- Markings -->
+            <g opacity="0.95">
+              <line x1="375" y1="215" x2="415" y2="215" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="220" font-size="13" font-weight="900" fill="#ffffff">500 mL</text>
+              <line x1="385" y1="260" x2="415" y2="260" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="265" font-size="13" font-weight="900" fill="#ffffff">400 mL</text>
+              <line x1="375" y1="305" x2="415" y2="305" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="310" font-size="13" font-weight="900" fill="#ffffff">200 mL</text>
+              <line x1="385" y1="350" x2="415" y2="350" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="422" y="355" font-size="13" font-weight="900" fill="#ffffff">100 mL</text>
             </g>
 
-            <line x1="230" y1="192" x2="230" y2="385" stroke="#ffffff" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/>
-
-            <g transform="translate(205, 412)">
-              <rect x="0" y="0" width="250" height="30" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
-              <text x="125" y="20" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">सोडियम सल्फेट [Na₂SO₄] विलयन</text>
+            <g transform="translate(195, 418)">
+              <rect x="0" y="0" width="270" height="32" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+              <text x="135" y="21" font-size="14.5" font-weight="900" fill="#a5b4fc" text-anchor="middle">सोडियम सल्फेट [Na₂SO₄] विलयन</text>
             </g>
           </g>
 
           <!-- POURING STREAM -->
+                    <!-- POURING STREAM -->
           <g id="s10_pouring_stream" opacity="0" style="transition: opacity 0.25s ease;">
-            <path d="M 350,155 L 350,265" stroke="rgba(56, 189, 248, 0.85)" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <path d="M 350,155 L 350,265" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
-            <ellipse cx="350" cy="265" rx="16" ry="5" fill="none" stroke="#ffffff" stroke-width="2.5" class="splash-ripple-wave"/>
+            <path d="M 415,160 Q 375,205 330,265" stroke="url(#s10_streamGrad)" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M 415,160 Q 375,205 330,265" stroke="#ffffff" stroke-width="3" stroke-dasharray="12 6" class="liquid-flow-stream" fill="none" stroke-linecap="round"/>
+            <ellipse cx="330" cy="265" rx="20" ry="7" fill="#ffffff" opacity="0.95"/>
           </g>
 
           <!-- POURING VESSEL: BARIUM CHLORIDE (BaCl2) -->
-          <!-- In Step 1: on bench at x: 560. In Step 2: elevated, rear high, front tilted 45° at (350, 155) -->
           <g id="s10_pouring_vessel_group" style="transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);">
             <g id="s10_vessel_inner">
-              <g transform="translate(560, 250)">
-                <ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s10_blur)"/>
-                <path d="M 8,50 L 8,135 Q 55,145 102,135 L 102,50 Z" fill="url(#s10_clearLiquid)"/>
-                <ellipse cx="55" cy="50" rx="47" ry="6" fill="#bae6fd" opacity="0.8"/>
-                <path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s10_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>
-                <ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>
-                <rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
-                <text x="55" y="172" font-size="12" font-weight="900" fill="#ddd6fe" text-anchor="middle">बेरियम क्लोराइड (BaCl₂)</text>
+              <g transform="translate(570, 250)">
+                <ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s10_blur)"/>
+                <path d="M 8,50 L 8,135 Q 55,146 102,135 L 102,50 Z" fill="url(#s10_clearLiquid)"/>
+                <ellipse cx="55" cy="50" rx="47" ry="7" fill="#bae6fd" opacity="0.85"/>
+                <path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s10_glass3D)" stroke="#475569" stroke-width="2.5"/>
+                <ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>
+                <line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                <rect x="-10" y="155" width="130" height="28" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.8"/>
+                <text x="55" y="174" font-size="12.5" font-weight="900" fill="#ddd6fe" text-anchor="middle">बेरियम क्लोराइड (BaCl₂)</text>
               </g>
             </g>
           </g>
 
-          <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 645 to 885) -->
+          <!-- DEDICATED PROJECTOR OBSERVATION PANEL (RIGHT X: 775 to 1170) -->
           <g id="s10_projector_panel" transform="translate(775, 45)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
-            <rect x="0" y="0" width="245" height="310" rx="14" fill="#0f172a" stroke="#6366f1" stroke-width="2.5" opacity="0.96"/>
-            <rect x="0" y="0" width="245" height="42" rx="14" fill="#4338ca"/>
-            <rect x="0" y="28" width="245" height="14" fill="#4338ca"/>
-            <text x="122" y="26" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">📊 लाइव प्रेक्षण (Live Data)</text>
+            <rect x="0" y="0" width="395" height="350" rx="16" fill="#ffffff" stroke="#6366f1" stroke-width="3" filter="drop-shadow(0 8px 24px rgba(0,0,0,0.08))"/>
+            <rect x="0" y="0" width="395" height="46" rx="16" fill="#4338ca"/>
+            <rect x="0" y="32" width="395" height="14" fill="#4338ca"/>
+            <text x="197" y="30" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle">📊 प्रायोगिक प्रेक्षण (Live Data)</text>
 
-            <g transform="translate(15, 60)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">अभिकारक:</text>
-              <text x="0" y="20" font-size="14" font-weight="900" fill="#a5b4fc">Na₂SO₄ + BaCl₂</text>
+            <g transform="translate(18, 62)">
+              <text x="0" y="0" font-size="12.5" font-weight="800" fill="#64748b">अभिकारक 1 व 2:</text>
+              <text x="0" y="20" font-size="14.5" font-weight="900" fill="#4338ca">Na₂SO₄ [रंगहीन] + BaCl₂ [रंगहीन]</text>
             </g>
 
-            <g transform="translate(15, 115)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">अवक्षेप (Precipitate):</text>
-              <text id="s10_panel_ppt" x="0" y="20" font-size="14" font-weight="900" fill="#ffffff">प्रारंभिक स्थिति</text>
+            <g transform="translate(18, 118)">
+              <text x="0" y="0" font-size="12.5" font-weight="800" fill="#64748b">अवक्षेप (Precipitate):</text>
+              <text id="s10_panel_ppt" x="0" y="22" font-size="15.5" font-weight="900" fill="#0f172a">श्वेत अवक्षेप (BaSO₄↓)</text>
+              <text id="s10_panel_sub" x="0" y="42" font-size="12" font-weight="800" fill="#4338ca">दूधिया रंग खिल उठा, पेंदे में जमाव</text>
             </g>
 
-            <g transform="translate(15, 170)">
-              <text x="0" y="0" font-size="12" font-weight="800" fill="#94a3b8">सुपरनेटेंट द्रव:</text>
-              <rect x="0" y="10" width="215" height="50" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
-              <text id="s10_panel_sup" x="107" y="32" font-size="13" font-weight="900" fill="#a5b4fc" text-anchor="middle">स्वच्छ पारदर्शी</text>
-              <text id="s10_panel_sub" x="107" y="50" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">चरण 2 दबाएं</text>
+            <g transform="translate(18, 188)">
+              <text x="0" y="0" font-size="12.5" font-weight="800" fill="#64748b">सुपरनेटेंट द्रव (ऊपरी पारदर्शी परत):</text>
+              <rect x="0" y="10" width="359" height="46" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+              <text id="s10_panel_sup" x="179" y="32" font-size="13.5" font-weight="900" fill="#166534" text-anchor="middle">NaCl (सोडियम क्लोराइड) पारदर्शी विलयन</text>
+              <text x="179" y="48" font-size="11" font-weight="800" fill="#15803d" text-anchor="middle">गुरुत्वाकर्षण से अवसादन पूर्ण</text>
             </g>
 
-            <g transform="translate(15, 255)">
-              <rect x="0" y="0" width="215" height="34" rx="8" fill="#4338ca" stroke="#818cf8" stroke-width="1.5"/>
-              <text x="107" y="22" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">द्विविस्थापन व अवक्षेपण</text>
+            <g transform="translate(18, 268)">
+              <rect x="0" y="0" width="359" height="60" rx="8" fill="#eff6ff" stroke="#6366f1" stroke-width="1.8"/>
+              <text x="179" y="24" font-size="13" font-weight="900" fill="#4338ca" text-anchor="middle">द्विविस्थापन एवं अवक्षेपण अभिक्रिया</text>
+              <text x="179" y="46" font-size="12.5" font-weight="900" fill="#047857" text-anchor="middle">Na₂SO₄ + BaCl₂ ➔ BaSO₄↓ (श्वेत) + 2NaCl</text>
             </g>
           </g>
         </svg>
       </div>
 
       <div id="sim10_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #6366f1; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
-        <strong>प्रारंभिक स्थिति:</strong> बड़े बीकर में सोडियम सल्फेट का रंगहीन विलयन तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
+        <strong>प्रारंभिक स्थिति:</strong> बड़े बीकर में 150 mL स्वच्छ पारदर्शी सोडियम सल्फेट विलयन तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
 
-    <div class="sim-card" id="sim13_box">
-      <div class="sim-header">
-        <div class="sim-title">
-          <i class="fas fa-shield-halved" style="color: #ea580c;"></i>
-          <span>क्रियाकलाप: लोहे में जंग लगने की आवश्यक परिस्थितियां — 3D परखनली A, B, C प्रायोगिक सिमुलेटर</span>
-        </div>
-        <span class="sim-badge" style="background:#ffedd5; color:#c2410c; border:1px solid #fed7aa;">16:9 प्रोजेक्टर स्क्रीन सिमुलेटर 🔬</span>
-      </div>
-      <p style="font-size: 15px; font-weight:700; color: #1e293b; margin-bottom: 10px; line-height: 1.6;">
-        <strong>एनसीईआरटी संक्षारण क्रियाकलाप:</strong> 3D प्रयोगशाला स्टैंड पर 3 परखनलियां: <strong>परखनली A</strong> (जल + वायु), <strong>परखनली B</strong> (उबला जल + तेल परत - वायु अनुपस्थित), <strong>परखनली C</strong> (शुष्क वायु + निर्जल CaCl₂ - नमी अनुपस्थित)। 3 दिन के टाइम-लैप्स में देखें कि जंग लगने के लिए <strong>वायु (O₂) एवं जल (नमी) दोनों अनिवार्य</strong> हैं:
-      </p>
-
-      <div class="sim-controls-grid">
-        <button class="sim-btn" id="sim13_play_btn" style="background:#059669;" onclick="sim13PlayAuto()">
-          <i class="fas fa-play"></i> ▶ संपूर्ण 3-दिवसीय टाइम-लैप्स एनिमेशन (ऑटो-प्ले)
-        </button>
-        <button class="sim-btn secondary" id="sim13_btn1" onclick="sim13Step(1)">
-          1. दिवस 1: परखनलियों की स्थापना
-        </button>
-        <button class="sim-btn warning" id="sim13_btn2" onclick="sim13Step(2)">
-          2. दिवस 2: 24 घंटे पश्चात आरंभिक प्रभाव
-        </button>
-        <button class="sim-btn danger" id="sim13_btn3" onclick="sim13Step(3)">
-          3. दिवस 3: 72 घंटे पश्चात स्पष्ट जंग (A में)
-        </button>
-        <button class="sim-btn success" id="sim13_btn4" style="background:#7c3aed;" onclick="sim13Step(4)">
-          4. संक्षारण निष्कर्ष एवं रासायनिक विश्लेषण
-        </button>
-        <button class="sim-btn" style="background:#64748b;" onclick="sim13Reset()">
-          <i class="fas fa-redo"></i> 🔄 रीसेट
-        </button>
-      </div>
-
-      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim13_pbar"></div></div>
-
-      <div class="sim-stage" id="sim13_stage">>
-        <svg id="sim13_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
-          <defs>
-            <!-- Lab Bench Surface -->
-            <linearGradient id="s13_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#1e293b"/>
-            </linearGradient>
-            <linearGradient id="s13_benchFront" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
-            </linearGradient>
-            <!-- Rack Wood/Acrylic -->
-            <linearGradient id="s13_rackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#cbd5e1"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#64748b"/>
-            </linearGradient>
-            <!-- Glass Body -->
-            <linearGradient id="s13_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
-              <stop offset="15%" stop-color="#ffffff" stop-opacity="0.12"/>
-              <stop offset="85%" stop-color="#ffffff" stop-opacity="0.08"/>
-              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"/>
-            </linearGradient>
-            <!-- Distilled Water -->
-            <linearGradient id="s13_waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
-              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.7"/>
-            </linearGradient>
-            <!-- Boiled Water -->
-            <linearGradient id="s13_boiledGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.4"/>
-              <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.65"/>
-            </linearGradient>
-            <!-- Oil Barrier -->
-            <linearGradient id="s13_oilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#fef08a" stop-opacity="0.85"/>
-              <stop offset="100%" stop-color="#eab308" stop-opacity="0.95"/>
-            </linearGradient>
-            <!-- Clean Iron Nail -->
-            <linearGradient id="s13_cleanNail" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#64748b"/><stop offset="35%" stop-color="#f8fafc"/><stop offset="70%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#334155"/>
-            </linearGradient>
-            <!-- Rusted Iron Nail -->
-            <linearGradient id="s13_rustNail" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#7c2d12"/><stop offset="30%" stop-color="#ea580c"/><stop offset="65%" stop-color="#b45309"/><stop offset="100%" stop-color="#451a03"/>
-            </linearGradient>
-            <!-- Rubber Cork -->
-            <linearGradient id="s13_corkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#78350f"/><stop offset="40%" stop-color="#b45309"/><stop offset="80%" stop-color="#9a3412"/><stop offset="100%" stop-color="#451a03"/>
-            </linearGradient>
-          </defs>
-
-          <!-- 3D Lab Bench Surface (Full Width: 0 to 1200) -->
-          <polygon points="0,440 1200,440 1200,495 0,495" fill="url(#s13_benchTop)"/>
-          <line x1="0" y1="440" x2="1200" y2="440" stroke="#475569" stroke-width="2.5"/>
-          <polygon points="0,495 1200,495 1200,540 0,540" fill="url(#s13_benchFront)"/>
-          <line x1="0" y1="495" x2="1200" y2="495" stroke="#020617" stroke-width="3"/>
-
-          <!-- Test Tube Stand / Rack (Holds A, B, C across x: 80 to 780) -->
-          <rect x="70" y="420" width="720" height="25" rx="5" fill="url(#s13_rackGrad)" stroke="#334155" stroke-width="2"/>
-          <rect x="75" y="190" width="18" height="235" fill="#475569" stroke="#1e293b" stroke-width="1.5"/>
-          <rect x="765" y="190" width="18" height="235" fill="#475569" stroke="#1e293b" stroke-width="1.5"/>
-          <rect x="70" y="190" width="720" height="20" rx="4" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
-
-          <!-- ================= TUBE A (जल + वायु) CENTER X: 200 ================= -->
-          <g id="s13_tube_A_group">
-            <ellipse cx="200" cy="432" rx="45" ry="14" fill="#0f172a" opacity="0.3"/>
-            <!-- Water in lower half (y: 280 to 415) -->
-            <path d="M 164 290 L 164 400 C 164 430 236 430 236 400 L 236 290 Z" fill="url(#s13_waterGrad)"/>
-            <ellipse cx="200" cy="290" rx="36" ry="8" fill="#38bdf8" opacity="0.8"/>
-
-            <!-- Rusty Flakes Sediment (Step 3) -->
-            <g id="s13_sediment_A" style="opacity: 0; transition: opacity 1s ease;">
-              <ellipse cx="200" cy="415" rx="32" ry="10" fill="#7c2d12"/>
-              <ellipse cx="200" cy="412" rx="26" ry="6" fill="#ea580c"/>
-              <circle cx="188" cy="410" r="3" fill="#b45309"/>
-              <circle cx="206" cy="411" r="3.5" fill="#9a3412"/>
-              <circle cx="218" cy="409" r="2.5" fill="#c2410c"/>
-            </g>
-
-            <!-- Iron Nails inside Tube A -->
-            <polygon points="184,230 194,230 190,395 186,395" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="189" cy="230" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-            <polygon points="208,240 218,240 214,400 210,400" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="213" cy="240" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-
-            <!-- Rusted Coat Overlay on Nails (Step 2 & 3) -->
-            <g id="s13_nailA_rust" style="opacity: 0; transition: opacity 1.2s ease;">
-              <polygon points="183,230 195,230 191,397 185,397" fill="url(#s13_rustNail)" stroke="#451a03" stroke-width="1.5"/>
-              <polygon points="207,240 219,240 215,402 209,402" fill="url(#s13_rustNail)" stroke="#451a03" stroke-width="1.5"/>
-              <circle cx="189" cy="285" r="5.5" fill="#ea580c" opacity="0.95"/>
-              <circle cx="213" cy="310" r="6" fill="#b45309" opacity="0.95"/>
-              <circle cx="190" cy="340" r="5" fill="#ea580c" opacity="0.95"/>
-              <circle cx="212" cy="365" r="6.5" fill="#7c2d12" opacity="0.95"/>
-            </g>
-
-            <!-- Outer Glass Body -->
-            <path d="M 162 110 L 162 400 C 162 438 238 438 238 400 L 238 110 Z" fill="url(#s13_glassGrad)" stroke="#1e293b" stroke-width="3"/>
-            <ellipse cx="200" cy="110" rx="38" ry="8" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-            <line x1="168" y1="115" x2="168" y2="395" stroke="#ffffff" stroke-width="2.5" opacity="0.6"/>
-
-            <!-- Cork A -->
-            <g id="s13_corkA" style="transform: translate(0, -35px); opacity: 0; transition: all 0.8s ease;">
-              <polygon points="170,110 230,110 225,82 175,82" fill="url(#s13_corkGrad)" stroke="#451a03" stroke-width="1.8"/>
-              <ellipse cx="200" cy="82" rx="25" ry="6" fill="#b45309"/>
-            </g>
-
-            <!-- Header Badge for Tube A -->
-            <rect x="135" y="25" width="130" height="40" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
-            <text x="200" y="50" font-size="17" font-weight="900" fill="#1e3a8a" text-anchor="middle">परखनली A</text>
-            <text x="200" y="78" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">जल + वायु (दोनों)</text>
-
-            <!-- Result Badge A -->
-            <g id="s13_resA" style="opacity: 0; transition: opacity 0.6s ease;">
-              <rect x="125" y="450" width="150" height="36" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
-              <text x="200" y="474" font-size="14.5" font-weight="900" fill="#991b1b" text-anchor="middle">⚠️ भारी जंग लगी!</text>
-            </g>
-          </g>
-
-          <!-- ================= TUBE B (उबला जल + तेल परत) CENTER X: 430 ================= -->
-          <g id="s13_tube_B_group">
-            <ellipse cx="430" cy="432" rx="45" ry="14" fill="#0f172a" opacity="0.3"/>
-            <!-- Boiled water in lower 2/3 (y: 250 to 415) -->
-            <path d="M 394 250 L 394 400 C 394 430 466 430 466 400 L 466 250 Z" fill="url(#s13_boiledGrad)"/>
-            <ellipse cx="430" cy="250" rx="36" ry="8" fill="#22d3ee" opacity="0.8"/>
-
-            <!-- Oil barrier layer on top (y: 225 to 250) -->
-            <path d="M 394 228 L 394 250 C 394 255 466 255 466 250 L 466 228 Z" fill="url(#s13_oilGrad)"/>
-            <ellipse cx="430" cy="228" rx="36" ry="7" fill="#fef08a" stroke="#ca8a04" stroke-width="1"/>
-            <text x="375" y="242" font-size="13" font-weight="900" fill="#854d0e" text-anchor="end">तेल परत ➔</text>
-
-            <!-- Clean Shiny Nails (ZERO RUST!) -->
-            <polygon points="414,260 424,260 420,395 416,395" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="419" cy="260" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-            <polygon points="438,270 448,270 444,400 440,400" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="443" cy="270" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-
-            <!-- Outer Glass Body -->
-            <path d="M 392 110 L 392 400 C 392 438 468 438 468 400 L 468 110 Z" fill="url(#s13_glassGrad)" stroke="#1e293b" stroke-width="3"/>
-            <ellipse cx="430" cy="110" rx="38" ry="8" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-            <line x1="398" y1="115" x2="398" y2="395" stroke="#ffffff" stroke-width="2.5" opacity="0.6"/>
-
-            <!-- Cork B -->
-            <g id="s13_corkB" style="transform: translate(0, -35px); opacity: 0; transition: all 0.8s ease;">
-              <polygon points="400,110 460,110 455,82 405,82" fill="url(#s13_corkGrad)" stroke="#451a03" stroke-width="1.8"/>
-              <ellipse cx="430" cy="82" rx="25" ry="6" fill="#b45309"/>
-            </g>
-
-            <!-- Header Badge for Tube B -->
-            <rect x="365" y="25" width="130" height="40" rx="10" fill="#fefce8" stroke="#eab308" stroke-width="2.5"/>
-            <text x="430" y="50" font-size="17" font-weight="900" fill="#a16207" text-anchor="middle">परखनली B</text>
-            <text x="430" y="78" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">उबला जल + तेल (वायु रहित)</text>
-
-            <!-- Result Badge B -->
-            <g id="s13_resB" style="opacity: 0; transition: opacity 0.6s ease;">
-              <rect x="355" y="450" width="150" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-              <text x="430" y="474" font-size="14.5" font-weight="900" fill="#15803d" text-anchor="middle">✓ जंग नहीं लगी!</text>
-            </g>
-          </g>
-
-          <!-- ================= TUBE C (शुष्क वायु + CaCl2) CENTER X: 660 ================= -->
-          <g id="s13_tube_C_group">
-            <ellipse cx="660" cy="432" rx="45" ry="14" fill="#0f172a" opacity="0.3"/>
-
-            <!-- Anhydrous CaCl2 Pellets at bottom (y: 380 to 415) -->
-            <g id="s13_cacl2_lumps">
-              <ellipse cx="660" cy="405" rx="34" ry="11" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
-              <circle cx="645" cy="400" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="658" cy="398" r="6.5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
-              <circle cx="674" cy="401" r="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
-              <text x="705" y="405" font-size="12" font-weight="900" fill="#0f172a">निर्जल CaCl₂</text>
-            </g>
-
-            <!-- Cotton Plug Separator -->
-            <ellipse cx="660" cy="370" rx="34" ry="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
-            <text x="705" y="368" font-size="12" font-weight="800" fill="#64748b">कपास (Cotton)</text>
-
-            <!-- Clean Shiny Nails in Dry Air (ZERO RUST!) -->
-            <polygon points="644,230 654,230 650,350 646,350" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="649" cy="230" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-            <polygon points="668,240 678,240 674,355 670,355" fill="url(#s13_cleanNail)" stroke="#334155" stroke-width="1.2"/>
-            <ellipse cx="673" cy="240" rx="8" ry="3.5" fill="#cbd5e1" stroke="#334155" stroke-width="1"/>
-
-            <!-- Outer Glass Body -->
-            <path d="M 622 110 L 622 400 C 622 438 698 438 698 400 L 698 110 Z" fill="url(#s13_glassGrad)" stroke="#1e293b" stroke-width="3"/>
-            <ellipse cx="660" cy="110" rx="38" ry="8" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-            <line x1="628" y1="115" x2="628" y2="395" stroke="#ffffff" stroke-width="2.5" opacity="0.6"/>
-
-            <!-- Cork C -->
-            <g id="s13_corkC" style="transform: translate(0, -35px); opacity: 0; transition: all 0.8s ease;">
-              <polygon points="630,110 690,110 685,82 635,82" fill="url(#s13_corkGrad)" stroke="#451a03" stroke-width="1.8"/>
-              <ellipse cx="660" cy="82" rx="25" ry="6" fill="#b45309"/>
-            </g>
-
-            <!-- Header Badge for Tube C -->
-            <rect x="595" y="25" width="130" height="40" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
-            <text x="660" y="50" font-size="17" font-weight="900" fill="#15803d" text-anchor="middle">परखनली C</text>
-            <text x="660" y="78" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">शुष्क वायु (नमी रहित)</text>
-
-            <!-- Result Badge C -->
-            <g id="s13_resC" style="opacity: 0; transition: opacity 0.6s ease;">
-              <rect x="585" y="450" width="150" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-              <text x="660" y="474" font-size="14.5" font-weight="900" fill="#15803d" text-anchor="middle">✓ जंग नहीं लगी!</text>
-            </g>
-          </g>
-
-          <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
-            <!-- Main Card Container -->
-            <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
-
-            <!-- Card Header -->
-            <rect x="0" y="0" width="390" height="56" rx="18" fill="#1e3a8a"/>
-            <rect x="0" y="38" width="390" height="18" fill="#1e3a8a"/>
-            <text x="195" y="36" font-size="18.5" font-weight="900" fill="#ffffff" text-anchor="middle">
-              🔬 संक्षारण विश्लेषण डेटा
-            </text>
-
-            <!-- Phase Status Badge -->
-            <rect id="s13_card_day_box" x="16" y="70" width="358" height="42" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
-            <text id="s13_card_day" x="195" y="97" font-size="16.5" font-weight="900" fill="#1e3a8a" text-anchor="middle">
-              दिवस 1: परखनलियां तैयार
-            </text>
-
-            <!-- Observation Rows -->
-            <g transform="translate(16, 124)">
-              <!-- Row 1 -->
-              <rect x="0" y="0" width="358" height="68" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="16" y="25" font-size="14" font-weight="800" fill="#64748b">परखनली A (जल + O₂):</text>
-              <text id="s13_card_obsA" x="16" y="52" font-size="17" font-weight="900" fill="#0f172a">स्वच्छ कीलें (शुरुआत)</text>
-
-              <!-- Row 2 -->
-              <rect x="0" y="80" width="358" height="68" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="16" y="105" font-size="14" font-weight="800" fill="#64748b">परखनली B (उबला जल + तेल):</text>
-              <text id="s13_card_obsB" x="16" y="132" font-size="17" font-weight="900" fill="#065f46">वायु विलीन नहीं (सुरक्षित)</text>
-
-              <!-- Row 3 -->
-              <rect x="0" y="160" width="358" height="92" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2.5"/>
-              <text x="16" y="185" font-size="14" font-weight="800" fill="#1e40af">समीकरण:</text>
-              <text id="s13_card_obsC" x="16" y="214" font-size="17" font-weight="900" fill="#1e3a8a">परखनली C (शुष्क वायु)</text>
-              <text id="s13_card_obsC_sub" x="16" y="238" font-size="14" font-weight="800" fill="#047857">नमी अवशोषित (सुरक्षित)</text>
-
-              <!-- Row 4 -->
-              <rect x="0" y="264" width="358" height="92" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
-              <text x="16" y="290" font-size="14" font-weight="900" fill="#9a3412">📌 संक्षारण निष्कर्ष:</text>
-              <text id="s13_card_rule" x="16" y="318" font-size="16" font-weight="900" fill="#78350f">जंग हेतु वायु (O₂) + जल दोनों अनिवार्य</text>
-              <text x="16" y="342" font-size="13.5" font-weight="800" fill="#047857">Fe₂O₃·xH₂O रासायनिक सूत्र</text>
-            </g>
-          </g>
-        </svg>
-      </div>
-
-      <div id="sim13_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #ea580c; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
-        <strong>प्रारंभिक स्थिति:</strong> तीन परखनलियां A, B, C तैयार हैं। "संपूर्ण 3-दिवसीय टाइम-लैप्स एनिमेशन" दबाएं।
-      </div>
-    </div>
-      <p>जब कोई धातु अपने आस-पास <strong>अम्ल, आर्द्रता (नमी), वायु या जल</strong> के संपर्क में आती है, तब इसकी ऊपरी परत धीरे-धीरे क्षय (नष्ट) होने लगती है। इस प्रक्रिया को <strong>संक्षारण</strong> कहते हैं।</p>
-      <ul style="padding-left: 20px; line-height: 1.8; margin-top: 8px;">
-        <li><strong>1. लोहे पर जंग लगना:</strong> लोहे पर लाल-भूरे रंग की पपड़ीदार परत चढ़ जाती है। रासायनिक सूत्र: <strong>जलयोजित फेरिक ऑक्साइड (\(Fe_2O_3 \cdot xH_2O\))</strong>।</li>
-        <li><strong>2. चांदी का काला पड़ना:</strong> वायु में उपस्थित सल्फर से क्रिया करके सिल्वर सल्फाइड (\(Ag_2S\)) की काली परत बनना।</li>
-        <li><strong>3. तांबे पर हरी परत:</strong> कॉपर कार्बोनेट व हाइड्रॉक्साइड [\(CuCO_3 \cdot Cu(OH)_2\)] की हरी परत चढ़ना।</li>
-      </ul>
-      <p style="margin-top: 8px; font-weight: 700; color: #047857;">
-        बचाव के उपाय: पेंट करना, तेल या ग्रीस लगाना, यशदलेपन (गैल्वेनीकरण / Galvanization - जस्ते की परत चढ़ाना), क्रोमियम लेपन, एनोडीकरण या मिश्रधातु (Alloy) बनाना।
-      </p>
-    </div>
-
-    <!-- SVG 8: Rusting Test Tubes Experiment -->
-    <div style="text-align: center; margin: 25px auto; max-width: 680px;">
-      <svg viewBox="0 0 680 270" width="100%" height="270" xmlns="http://www.w3.org/2000/svg" style="background: #ffffff; border-radius:12px; border:2px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.05); font-family:sans-serif;">
-        <!-- Header -->
-        <rect x="0" y="0" width="680" height="38" fill="#f8fafc" rx="12 12 0 0"/>
-        <line x1="0" y1="38" x2="680" y2="38" stroke="#e2e8f0" stroke-width="1.5"/>
-        <text x="340" y="25" fill="#0f172a" font-size="15" font-weight="bold" text-anchor="middle">लोहे में जंग लगने की आवश्यक परिस्थितियां (3 परखनली प्रयोग)</text>
-        
-        <!-- Tube A: Water + Air (RUST OCCURS) -->
-        <rect x="70" y="60" width="55" height="150" rx="6" fill="#e0f2fe" stroke="#ef4444" stroke-width="2.5"/>
-        <rect x="72" y="130" width="51" height="75" fill="#38bdf8" opacity="0.4"/>
-        <line x1="97" y1="100" x2="97" y2="190" stroke="#b45309" stroke-width="7" stroke-linecap="round"/>
-        <text x="97" y="230" fill="#dc2626" font-size="13" font-weight="bold" text-anchor="middle">परखनली A</text>
-        <text x="97" y="248" fill="#475569" font-size="11" text-anchor="middle">वायु + साधारण जल</text>
-        <rect x="62" y="135" width="70" height="22" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
-        <text x="97" y="150" fill="#dc2626" font-size="10" font-weight="bold" text-anchor="middle">जंग लगता है! ❌</text>
-
-        <!-- Tube B: Boiled water + oil (NO AIR) -->
-        <rect x="235" y="60" width="55" height="150" rx="6" fill="#e0f2fe" stroke="#10b981" stroke-width="2.5"/>
-        <rect x="237" y="125" width="51" height="80" fill="#38bdf8" opacity="0.4"/>
-        <rect x="237" y="115" width="51" height="12" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
-        <line x1="262" y1="95" x2="262" y2="185" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
-        <text x="262" y="230" fill="#16a34a" font-size="13" font-weight="bold" text-anchor="middle">परखनली B</text>
-        <text x="262" y="248" fill="#475569" font-size="11" text-anchor="middle">उबला जल + तेल परत</text>
-        <text x="262" y="105" fill="#854d0e" font-size="9" font-weight="bold" text-anchor="middle">वायु प्रवेश बंद</text>
-        <rect x="227" y="145" width="70" height="22" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="1"/>
-        <text x="262" y="160" fill="#16a34a" font-size="10" font-weight="bold" text-anchor="middle">जंग नहीं! ✅</text>
-
-        <!-- Tube C: Dry air + CaCl2 (NO WATER) -->
-        <rect x="400" y="60" width="55" height="150" rx="6" fill="#f8fafc" stroke="#10b981" stroke-width="2.5"/>
-        <circle cx="417" cy="195" r="4" fill="#cbd5e1"/>
-        <circle cx="427" cy="197" r="5" fill="#cbd5e1"/>
-        <circle cx="437" cy="195" r="4" fill="#cbd5e1"/>
-        <line x1="427" y1="95" x2="427" y2="180" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
-        <rect x="405" y="55" width="45" height="12" fill="#78350f" rx="2"/>
-        <text x="427" y="230" fill="#16a34a" font-size="13" font-weight="bold" text-anchor="middle">परखनली C</text>
-        <text x="427" y="248" fill="#475569" font-size="11" text-anchor="middle">शुष्क वायु + CaCl₂</text>
-        <text x="427" y="185" fill="#64748b" font-size="9" text-anchor="middle">निर्जल CaCl₂</text>
-        <rect x="392" y="125" width="70" height="22" rx="4" fill="#f0fdf4" stroke="#10b981" stroke-width="1"/>
-        <text x="427" y="140" fill="#16a34a" font-size="10" font-weight="bold" text-anchor="middle">जंग नहीं! ✅</text>
-
-        <!-- Conclusion summary card on right -->
-        <rect x="500" y="60" width="165" height="165" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-        <text x="582" y="85" fill="#0f172a" font-size="13" font-weight="bold" text-anchor="middle">निष्कर्ष (Conclusion)</text>
-        <line x1="515" y1="95" x2="650" y2="95" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="582" y="118" fill="#dc2626" font-size="11" font-weight="bold" text-anchor="middle">जंग की 2 अनिवार्य शर्तें:</text>
-        <text x="582" y="140" fill="#0f172a" font-size="12" font-weight="bold" text-anchor="middle">1. ऑक्सीजन (वायु)</text>
-        <text x="582" y="160" fill="#0284c7" font-size="12" font-weight="bold" text-anchor="middle">2. नमी (जल)</text>
-        <line x1="515" y1="172" x2="650" y2="172" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="582" y="192" fill="#16a34a" font-size="11" font-weight="bold" text-anchor="middle">दोनों उपस्थित होने पर ही</text>
-        <text x="582" y="210" fill="#16a34a" font-size="11" font-weight="bold" text-anchor="middle">जंग लगता है।</text>
-      </svg>
-    </div>
-
-    <!-- SIMULATOR 11: Corrosion, Rusting & Galvanization -->
-    <!-- SIMULATOR 11: CORROSION & GALVANIZATION -->
-    <!-- SIMULATOR 11: CORROSION & GALVANIZATION -->
-    <!-- SIMULATOR 11: CORROSION & RUSTING FACTORS (3 TEST TUBES + GALVANIZATION) -->
-    <!-- SIMULATOR 11: NCERT ACTIVITY 1.11 (REDOX - COPPER OXIDATION & REDUCTION) -->
-    <!-- SIMULATOR 11: NCERT ACTIVITY 1.11 (REDOX - COPPER OXIDATION & H2 REDUCTION) 3D 45-DEGREE VIEW -->
-    <!-- SIMULATOR 11: NCERT ACTIVITY 1.11 (REDOX - COPPER OXIDATION & H2 REDUCTION) 3D 45-DEGREE VIEW -->
     <div class="sim-card" id="sim11_box">
       <div class="sim-header">
         <div class="sim-title">
@@ -4806,7 +4501,7 @@
 
 
         
-                                    /* --- SIMULATOR 2: LEAD NITRATE + KI (DOUBLE DISPLACEMENT 16:9 MASTER) --- */
+                                        /* --- SIMULATOR 2: LEAD NITRATE + KI (3D MASTER GRAPHICS) --- */
     function sim2Reset() {
       var panel_2 = document.getElementById('s2_projector_panel');
       if (panel_2) { panel_2.style.opacity = '0'; panel_2.style.pointerEvents = 'none'; }
@@ -4819,14 +4514,15 @@
       var pv = document.getElementById('s2_pouring_vessel_group');
       if (pv) {
         var inner = document.getElementById('s2_vessel_inner');
-        if (inner) inner.innerHTML = '<g transform="translate(560, 250)">' +
-          '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s2_blur)"/>' +
-          '<path d="M 8,50 L 8,135 Q 55,145 102,135 L 102,50 Z" fill="url(#s2_clearLiquid)"/>' +
-          '<ellipse cx="55" cy="50" rx="47" ry="6" fill="#bae6fd" opacity="0.8"/>' +
-          '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s2_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
-          '<ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-          '<rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#eab308" stroke-width="1.5"/>' +
-          '<text x="55" y="172" font-size="12" font-weight="900" fill="#fde047" text-anchor="middle">पोटैशियम आयोडाइड (KI)</text>' +
+        if (inner) inner.innerHTML = '<g transform="translate(570, 250)">' +
+          '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s2_blur)"/>' +
+          '<path d="M 8,50 L 8,135 Q 55,146 102,135 L 102,50 Z" fill="url(#s2_clearLiquid)"/>' +
+          '<ellipse cx="55" cy="50" rx="47" ry="7" fill="#bae6fd" opacity="0.85"/>' +
+          '<path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s2_glass3D)" stroke="#475569" stroke-width="2.5"/>' +
+          '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
+          '<line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>' +
+          '<rect x="-10" y="155" width="130" height="28" rx="6" fill="#0f172a" stroke="#eab308" stroke-width="1.8"/>' +
+          '<text x="55" y="174" font-size="12.5" font-weight="900" fill="#fde047" text-anchor="middle">पोटैशियम आयोडाइड (KI)</text>' +
           '</g>';
       }
 
@@ -4835,7 +4531,7 @@
       var bed = document.getElementById('s2_settled_bed_group'); if (bed) bed.style.opacity = '0';
       var bLiq = document.getElementById('s2_beaker_liquid');
       if (bLiq) {
-        bLiq.setAttribute('d', 'M 228,265 Q 330,274 432,265 L 432,385 Q 330,398 228,385 Z');
+        bLiq.setAttribute('d', 'M 222,265 Q 330,274 438,265 L 438,388 Q 330,404 222,388 Z');
         bLiq.setAttribute('fill', 'url(#s2_clearLiquid)');
       }
       var bMen = document.getElementById('s2_beaker_meniscus');
@@ -4871,38 +4567,53 @@
         if (pPpt) pPpt.textContent = 'चटक चमकीला पीला अवक्षेप (PbI₂↓)';
         if (pPptSub) pPptSub.textContent = 'संपर्क होते ही बादलों की तरह खिला';
 
-        // Vessel elevates, rear raised, tilts 45° at (350, 155)
+        // 1. Vessel lifts up, rear elevated, mouth tilted DOWNWARDS at (410, 140)
         if (inner) {
-          inner.innerHTML = '<g transform="translate(350, 155) rotate(48)">' +
-            '<path d="M 8,-40 L 8,30 Q 55,40 102,30 L 102,-40 Z" fill="url(#s2_clearLiquid)"/>' +
-            '<path d="M 0,-60 L 5,-58 L 5,30 Q 5,45 25,45 L 85,45 Q 105,45 105,30 L 105,-60" fill="url(#s2_beakerGlass)" stroke="#cbd5e1" stroke-width="2.5"/>' +
-            '<ellipse cx="55" cy="-60" rx="50" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-            '</g>';
+          inner.innerHTML = `<g id="s2_tilted_pouring_vessel">
+  <!-- 3D Glass Body tilted 45° with mouth DOWN and base UP in the air -->
+  <polygon points="415,160 360,105 450,15 505,70" fill="url(#s2_glass3D)" stroke="#334155" stroke-width="2.5"/>
+  <!-- Beaker rounded base cap elevated in air -->
+  <path d="M 450,15 Q 477,42 505,70" fill="none" stroke="#334155" stroke-width="3.2"/>
+  <!-- Beaker mouth opening tilted downwards toward receiving beaker -->
+  <ellipse cx="387" cy="132" rx="39" ry="12" transform="rotate(-45 387 132)" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <!-- Spout Lip at lowest point -->
+  <path d="M 415,160 Q 425,165 422,154" fill="none" stroke="#334155" stroke-width="2.8"/>
+  <!-- Clear liquid flowing inside along lower wall -->
+  <polygon points="415,160 415,135 480,70 505,70" fill="url(#s2_clearLiquid)"/>
+  <!-- Glass specular highlight line -->
+  <line x1="375" y1="90" x2="435" y2="30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <!-- Label Tag on tilted beaker -->
+  <g transform="translate(440, 68) rotate(-45)">
+    <rect x="-35" y="-12" width="70" height="24" rx="5" fill="#0f172a" stroke="#eab308" stroke-width="1.8"/>
+    <text x="0" y="5" font-size="11" font-weight="900" fill="#fde047" text-anchor="middle">KI विलयन</text>
+  </g>
+</g>`;
         }
 
+        // 2. Stream pours from spout (410, 140) down into liquid surface
         addSimTimer(2, setTimeout(function() {
           if (stream) stream.style.opacity = '1';
           if (bloom) bloom.style.opacity = '1';
           var bLiq = document.getElementById('s2_beaker_liquid');
-          if (bLiq) bLiq.setAttribute('d', 'M 228,225 Q 330,234 432,225 L 432,385 Q 330,398 228,385 Z');
+          if (bLiq) bLiq.setAttribute('d', 'M 222,225 Q 330,234 438,225 L 438,388 Q 330,404 222,388 Z');
           var bMen = document.getElementById('s2_beaker_meniscus');
           if (bMen) bMen.setAttribute('cy', '225');
-        }, 300));
+        }, 250));
 
         if (st) st.innerHTML = '<span style="color:#b45309; font-size:16px;"><strong>चरण 2 (तीव्र अवक्षेपण):</strong> बीकर ऊपर उठकर 45° कोण पर झुका और KI विलयन डाला। संपर्क होते ही चटक चमकीला पीला <strong>लेड आयोडाइड (PbI₂) अवक्षेप</strong> बादलों की तरह खिल उठा!</span>';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        // Stream stops, beaker returns to right bench
+        // 1. Stream stops, beaker returns to right bench
         if (stream) stream.style.opacity = '0';
         if (inner) {
-          inner.innerHTML = '<g transform="translate(560, 250)" opacity="0.65">' +
-            '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.2" filter="url(#s2_blur)"/>' +
-            '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s2_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
-            '<ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
+          inner.innerHTML = '<g transform="translate(570, 250)" opacity="0.65">' +
+            '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.25" filter="url(#s2_blur)"/>' +
+            '<path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s2_glass3D)" stroke="#475569" stroke-width="2.5"/>' +
+            '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
             '</g>';
         }
 
-        // Bloom descends and settles to bottom bed
+        // 2. Yellow bloom settles to dense bottom bed, liquid clarifies
         if (bloom) bloom.style.opacity = '0';
         if (bed) bed.style.opacity = '1';
 
@@ -5907,7 +5618,7 @@
       }, 11500));
     }
 
-        /* --- SIMULATOR 10: Na2SO4 + BaCl2 DOUBLE DISPLACEMENT 16:9 PROJECTOR MASTER --- */
+            /* --- SIMULATOR 10: Na2SO4 + BaCl2 DOUBLE DISPLACEMENT 16:9 MASTER --- */
     function sim10Reset() {
       var panel_10 = document.getElementById('s10_projector_panel');
       if (panel_10) { panel_10.style.opacity = '0'; panel_10.style.pointerEvents = 'none'; }
@@ -5920,23 +5631,26 @@
       var pv = document.getElementById('s10_pouring_vessel_group');
       if (pv) {
         var inner = document.getElementById('s10_vessel_inner');
-        if (inner) inner.innerHTML = '<g transform="translate(560, 250)">' +
-          '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s10_blur)"/>' +
-          '<path d="M 8,50 L 8,135 Q 55,145 102,135 L 102,50 Z" fill="url(#s10_clearLiquid)"/>' +
-          '<ellipse cx="55" cy="50" rx="47" ry="6" fill="#bae6fd" opacity="0.8"/>' +
-          '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s10_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
-          '<ellipse cx="55" cy="16" rx="50" ry="6" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-          '<rect x="-10" y="155" width="130" height="26" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>' +
-          '<text x="55" y="172" font-size="12" font-weight="900" fill="#ddd6fe" text-anchor="middle">बेरियम क्लोराइड (BaCl₂)</text>' +
+        if (inner) inner.innerHTML = '<g transform="translate(570, 250)">' +
+          '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.3" filter="url(#s10_blur)"/>' +
+          '<path d="M 8,50 L 8,135 Q 55,146 102,135 L 102,50 Z" fill="url(#s10_clearLiquid)"/>' +
+          '<ellipse cx="55" cy="50" rx="47" ry="7" fill="#bae6fd" opacity="0.85"/>' +
+          '<path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s10_glass3D)" stroke="#475569" stroke-width="2.5"/>' +
+          '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
+          '<line x1="12" y1="25" x2="12" y2="135" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>' +
+          '<rect x="-10" y="155" width="130" height="28" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.8"/>' +
+          '<text x="55" y="174" font-size="12.5" font-weight="900" fill="#ddd6fe" text-anchor="middle">बेरियम क्लोराइड (BaCl₂)</text>' +
           '</g>';
       }
 
-      var stream = document.getElementById('s10_pouring_stream'); if (stream) stream.setAttribute('opacity', '0');
-      var bloom = document.getElementById('s10_white_bloom_group'); if (bloom) bloom.setAttribute('opacity', '0');
-      var bed = document.getElementById('s10_settled_bed_group'); if (bed) bed.setAttribute('opacity', '0');
-
+      var stream = document.getElementById('s10_pouring_stream'); if (stream) stream.style.opacity = '0';
+      var bloom = document.getElementById('s10_white_bloom_group'); if (bloom) bloom.style.opacity = '0';
+      var bed = document.getElementById('s10_settled_bed_group'); if (bed) bed.style.opacity = '0';
       var bLiq = document.getElementById('s10_beaker_liquid');
-      if (bLiq) bLiq.setAttribute('d', 'M 228,265 Q 330,274 432,265 L 432,385 Q 330,398 228,385 Z');
+      if (bLiq) {
+        bLiq.setAttribute('d', 'M 222,265 Q 330,274 438,265 L 438,388 Q 330,404 222,388 Z');
+        bLiq.setAttribute('fill', 'url(#s10_clearLiquid)');
+      }
       var bMen = document.getElementById('s10_beaker_meniscus');
       if (bMen) bMen.setAttribute('cy', '265');
 
@@ -5957,6 +5671,7 @@
       var pPpt = document.getElementById('s10_panel_ppt');
       var pSup = document.getElementById('s10_panel_sup');
       var pSub = document.getElementById('s10_panel_sub');
+      var panel = document.getElementById('s10_projector_panel');
 
       if (s === 1) {
         if (pbar) pbar.style.width = '25%';
@@ -5967,83 +5682,84 @@
         if (pPpt) pPpt.textContent = 'श्वेत अवक्षेप (BaSO₄↓)';
         if (pSub) pSub.textContent = 'दूधिया रंग खिल उठा';
 
-        // Vessel elevates, rear raised, tilts 45° at (350, 155)
+        // Vessel elevates, rear raised, mouth tilted DOWNWARDS at (410, 140)
         if (inner) {
-          inner.innerHTML = '<g transform="translate(350, 155) rotate(48)">' +
-            '<path d="M 8,-40 L 8,30 Q 55,40 102,30 L 102,-40 Z" fill="url(#s10_clearLiquid)"/>' +
-            '<path d="M 0,-60 L 5,-58 L 5,30 Q 5,45 25,45 L 85,45 Q 105,45 105,30 L 105,-60" fill="url(#s10_beakerGlass)" stroke="#cbd5e1" stroke-width="2.5"/>' +
-            '<ellipse cx="55" cy="-60" rx="50" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2"/>' +
-            '</g>';
+          inner.innerHTML = `<g id="s10_tilted_pouring_vessel">
+  <!-- 3D Glass Body tilted 45° with mouth DOWN and base UP in the air -->
+  <polygon points="415,160 360,105 450,15 505,70" fill="url(#s10_glass3D)" stroke="#334155" stroke-width="2.5"/>
+  <!-- Beaker rounded base cap elevated in air -->
+  <path d="M 450,15 Q 477,42 505,70" fill="none" stroke="#334155" stroke-width="3.2"/>
+  <!-- Beaker mouth opening tilted downwards toward receiving beaker -->
+  <ellipse cx="387" cy="132" rx="39" ry="12" transform="rotate(-45 387 132)" fill="none" stroke="#818cf8" stroke-width="2.5"/>
+  <!-- Spout Lip at lowest point -->
+  <path d="M 415,160 Q 425,165 422,154" fill="none" stroke="#334155" stroke-width="2.8"/>
+  <!-- Clear liquid flowing inside along lower wall -->
+  <polygon points="415,160 415,135 480,70 505,70" fill="url(#s10_clearLiquid)"/>
+  <!-- Glass specular highlight line -->
+  <line x1="375" y1="90" x2="435" y2="30" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <!-- Label Tag on tilted beaker -->
+  <g transform="translate(440, 68) rotate(-45)">
+    <rect x="-35" y="-12" width="70" height="24" rx="5" fill="#0f172a" stroke="#a78bfa" stroke-width="1.8"/>
+    <text x="0" y="5" font-size="11" font-weight="900" fill="#ddd6fe" text-anchor="middle">BaCl₂ विलयन</text>
+  </g>
+</g>`;
         }
 
         addSimTimer(10, setTimeout(function() {
-          if (stream) stream.setAttribute('opacity', '1');
-          if (bloom) bloom.setAttribute('opacity', '1');
+          if (stream) stream.style.opacity = '1';
+          if (bloom) bloom.style.opacity = '1';
           var bLiq = document.getElementById('s10_beaker_liquid');
-          if (bLiq) bLiq.setAttribute('d', 'M 228,225 Q 330,234 432,225 L 432,385 Q 330,398 228,385 Z');
+          if (bLiq) bLiq.setAttribute('d', 'M 222,225 Q 330,234 438,225 L 438,388 Q 330,404 222,388 Z');
           var bMen = document.getElementById('s10_beaker_meniscus');
           if (bMen) bMen.setAttribute('cy', '225');
-        }, 600));
+        }, 250));
 
-        if (st) st.innerHTML = '<strong>चरण 2 (BaCl₂ योग व दूधिया अवक्षेप):</strong> बीकर ऊपर उठकर 45° झुका और BaCl₂ विलयन डाला। संपर्क होते ही तीव्र द्विविस्थापन हुआ और दूधिया श्वेत रंग का अविलेय बेरियम सल्फेट (BaSO₄) पूरे विलयन में बादलों की तरह खिल उठा!';
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> बेरियम क्लोराइड विलयन को 45° झुकाकर सोडियम सल्फेट में मिलाया गया। दोनों के मिलते ही तत्काल <strong>सफेद दूधिया अवक्षेप (BaSO₄)</strong> निर्मित हुआ!';
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        if (stream) stream.setAttribute('opacity', '0');
+        if (stream) stream.style.opacity = '0';
         if (inner) {
-          inner.innerHTML = '<g transform="translate(680, 250)">' +
-            '<ellipse cx="55" cy="145" rx="50" ry="8" fill="#0f172a" opacity="0.25" filter="url(#s10_blur)"/>' +
-            '<path d="M 0,15 L 5,17 L 5,135 Q 5,145 25,145 L 85,145 Q 105,145 105,135 L 105,17 L 100,15" fill="url(#s10_beakerGlass)" stroke="#cbd5e1" stroke-width="2.2"/>' +
+          inner.innerHTML = '<g transform="translate(570, 250)" opacity="0.65">' +
+            '<ellipse cx="55" cy="145" rx="52" ry="9" fill="#0f172a" opacity="0.25" filter="url(#s10_blur)"/>' +
+            '<path d="M 0,15 L 5,17 L 5,135 Q 5,146 25,146 L 85,146 Q 105,146 105,135 L 105,17 L 100,15" fill="url(#s10_glass3D)" stroke="#475569" stroke-width="2.5"/>' +
+            '<ellipse cx="55" cy="16" rx="50" ry="6.5" fill="none" stroke="#e2e8f0" stroke-width="2.2"/>' +
             '</g>';
         }
 
-        if (bloom) {
-          bloom.style.transition = 'opacity 1.5s ease, transform 1.8s ease';
-          bloom.style.transform = 'translateY(40px) scale(0.95)';
-          bloom.setAttribute('opacity', '0.35');
+        if (bloom) bloom.style.opacity = '0';
+        if (bed) bed.style.opacity = '1';
+
+        var bLiq = document.getElementById('s10_beaker_liquid');
+        if (bLiq) bLiq.setAttribute('fill', 'url(#s10_clearLiquid)');
+
+        if (pSup) pSup.textContent = 'NaCl पारदर्शी विलयन';
+        if (pSub) pSub.textContent = 'भारी सफेद अवक्षेप पेंदे में जमा';
+
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> रासायनिक क्रिया पूर्ण होने पर भारी अघुलनशील बेरियम सल्फेट (BaSO₄) का श्वेत अवक्षेप पेंदे में बैठ गया और ऊपर सोडियम क्लोराइड (NaCl) का पारदर्शी विलयन बचा।';
+      } else if (s === 4) {
+        if (pbar) pbar.style.width = '100%';
+        if (panel) {
+          panel.style.opacity = '1';
+          panel.style.pointerEvents = 'auto';
         }
 
-        addSimTimer(10, setTimeout(function() {
-          if (bed) bed.setAttribute('opacity', '1');
-        }, 800));
-
-        if (pPpt) pPpt.textContent = 'अवसादन (Sedimentation)';
-        if (pSup) pSup.textContent = 'NaCl स्वच्छ विलयन';
-        if (pSub) pSub.textContent = 'सफेद कण पेंदे में जमा';
-
-        if (st) st.innerHTML = '<strong>चरण 3 (अवसादन):</strong> बीकर वापस हट गया। भारी श्वेत BaSO₄ अवक्षेप के कण गुरुत्वाकर्षण से बीकर के निचले पेंदे में बैठ गए तथा ऊपर का द्रव स्वच्छ पारदर्शी सोडियम क्लोराइड (NaCl) बन गया।';
-      } else if (s === 4) {
-        var panel_10 = document.getElementById('s10_projector_panel');
-        if (panel_10) { panel_10.style.opacity = '1'; panel_10.style.pointerEvents = 'auto'; }
-
-        if (pbar) pbar.style.width = '100%';
-        if (stream) stream.setAttribute('opacity', '0');
-        if (bloom) bloom.setAttribute('opacity', '0.2');
-        if (bed) bed.setAttribute('opacity', '1');
-
-        if (pPpt) pPpt.textContent = 'BaSO₄↓ (सफेद अवक्षेप)';
-        if (pSup) pSup.textContent = '2NaCl (सुपरनेटेंट)';
-
-        if (st) st.innerHTML = '<span style="color:#5b21b6; font-size:16px;"><strong>चरण 4 (द्विविस्थापन समीकरण व निष्कर्ष):</strong></span><br>' +
-          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#ede9fe; padding:6px 14px; border-radius:8px; border:2px solid #ddd6fe; color:#4c1d95; font-weight:900;">' +
-          'Na₂SO₄(aq) + BaCl₂(aq) ➔ <strong>BaSO₄↓ (श्वेत अवक्षेप)</strong> + 2NaCl(aq)' +
-          '</span><br>' +
-          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">यह <strong>द्विविस्थापन अभिक्रिया (Double Displacement)</strong> तथा <strong>अवक्षेपण अभिक्रिया (Precipitation)</strong> है, जिसमें Ba²⁺ और SO₄²⁻ आयनों के परस्पर संयोजन से जल में अविलेय श्वेत BaSO₄ बनता है।</span>';
+        if (st) st.innerHTML = '<strong>चरण 4 (निष्कर्ष):</strong> सोडियम सल्फेट एवं बेरियम क्लोराइड के बीच आयनों का आदान-प्रदान (Na⁺ एवं Ba²⁺ का विनिमय) हुआ, अतः यह <strong>द्विविस्थापन अभिक्रिया</strong> है। साथ ही जल में अविलेय श्वेत ठोस बनने से यह <strong>अवक्षेपण अभिक्रिया</strong> भी है।';
       }
     }
 
     function sim10PlayAuto() {
       sim10Reset();
       var btn = document.getElementById('sim10_play_btn'); if (btn) btn.disabled = true;
-      sim10Step(1);
-      addSimTimer(10, setTimeout(function() { sim10Step(2); }, 2200));
-      addSimTimer(10, setTimeout(function() { sim10Step(3); }, 7000));
+      addSimTimer(10, setTimeout(function() { sim10Step(1); }, 400));
+      addSimTimer(10, setTimeout(function() { sim10Step(2); }, 3000));
+      addSimTimer(10, setTimeout(function() { sim10Step(3); }, 6500));
       addSimTimer(10, setTimeout(function() {
         sim10Step(4);
         if (btn) btn.disabled = false;
-      }, 12000));
+      }, 11500));
     }
 
-        /* --- SIMULATOR 11: COPPER REDOX OXIDATION & REDUCTION (GOLD STANDARD) --- */
+    /* --- SIMULATOR 11: COPPER REDOX OXIDATION & REDUCTION (GOLD STANDARD) --- */
         /* ==========================================================
        SIMULATOR 11: COPPER REDOX 16:9 PROJECTOR MASTER SCRIPT
        ========================================================== */
