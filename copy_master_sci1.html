@@ -3524,15 +3524,15 @@
                 100% { transform: translateY(-165px) scale(1.15); opacity: 0; }
               }
               @keyframes s7_splint_glow {
-                0%, 100% { filter: drop-shadow(0 0 4px #ef4444); }
-                50% { filter: drop-shadow(0 0 12px #f97316); }
+                0%, 100% { filter: drop-shadow(0 0 3px #ef4444); }
+                50% { filter: drop-shadow(0 0 10px #f97316); }
               }
               @keyframes s7_flame_dance {
                 0%, 100% { transform: scale(0.95) rotate(-1.5deg); }
-                50% { transform: scale(1.2) rotate(2deg); }
+                50% { transform: scale(1.18) rotate(2deg); }
               }
               @keyframes s7_pop_pulse {
-                0%, 100% { transform: scale(0.94); }
+                0%, 100% { transform: scale(0.95); }
                 50% { transform: scale(1.15); }
               }
               .s7-bubble-h2-1 { animation: s7_bubble_rise 1.1s infinite ease-in; }
@@ -3630,7 +3630,26 @@
                SCENE A: SETUP APPARATUS (#s7_setup_scene)
                Visible in Steps 1, 2, 3 (Electrolysis in Wide Plastic Mug)
                ====================================================================== -->
-          <g id="s7_setup_scene" style="transition: opacity 0.8s ease;">
+          <g id="s7_setup_scene" style="display:inline;">
+            <!-- Setup Title Banner at Top (y = 30 to 66) -->
+            <g id="s7_setup_banner" transform="translate(320, 48)">
+              <rect x="-170" y="-18" width="340" height="36" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text id="s7_setup_banner_txt" x="0" y="5" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">💧 जल का विद्युत अपघटन (प्रारंभिक संयोजन)</text>
+            </g>
+
+            <!-- Electrode Badges Above Tubes (y = 96 to 138) -->
+            <g transform="translate(240, 117)">
+              <rect x="-65" y="-20" width="130" height="40" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text x="0" y="-2" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">कैथोड (-)</text>
+              <text x="0" y="14" font-size="11" font-weight="800" fill="#2563eb" text-anchor="middle">H₂ (दोगुना आयतन)</text>
+            </g>
+
+            <g transform="translate(400, 117)">
+              <rect x="-65" y="-20" width="130" height="40" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text x="0" y="-2" font-size="13" font-weight="900" fill="#991b1b" text-anchor="middle">एनोड (+)</text>
+              <text x="0" y="14" font-size="11" font-weight="800" fill="#dc2626" text-anchor="middle">O₂ (आधा आयतन)</text>
+            </g>
+
             <!-- Wide Mug Shadow -->
             <ellipse cx="320" cy="482" rx="175" ry="24" fill="#0f172a" opacity="0.22" filter="url(#s7_glow)"/>
 
@@ -3655,39 +3674,42 @@
                   fill="url(#s7_waterGrad)"/>
             <ellipse cx="320" cy="300" rx="152" ry="12" fill="#7dd3fc" fill-opacity="0.4" stroke="#0284c7" stroke-width="1.5"/>
 
-            <!-- Dilute H2SO4 Badge Inside Mug -->
-            <rect x="180" y="385" width="105" height="26" rx="6" fill="#eff6ff" stroke="#0284c7" stroke-width="1.5"/>
-            <text x="232" y="403" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">तनु H₂SO₄ युक्त जल</text>
+            <!-- Dilute H2SO4 Label (Placed clearly to the left with pointer - ZERO OVERLAP) -->
+            <g transform="translate(30, 245)">
+              <rect x="0" y="0" width="125" height="28" rx="6" fill="#eff6ff" stroke="#0284c7" stroke-width="1.6" filter="url(#s7_shadow)"/>
+              <text x="62" y="18" font-size="11.5" font-weight="900" fill="#0369a1" text-anchor="middle">तनु H₂SO₄ युक्त जल</text>
+              <path d="M 125 14 L 170 30" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3,2"/>
+              <circle cx="170" cy="30" r="3" fill="#0284c7"/>
+            </g>
 
             <!-- ================= INVERTED TEST TUBES OVER ELECTRODES ================= -->
             <!-- 1. LEFT TUBE: Cathode (-) Hydrogen (H2) Tube at cx = 240 -->
             <g id="s7_left_tube_group">
-              <!-- Glass Inverted Body (Closed Top Dome at y: 220, Open Rim at y: 474) -->
-              <path d="M 222 474 L 222 238 A 18 18 0 0 1 258 238 L 258 474 Z" 
+              <!-- Glass Inverted Body (Closed Top Dome at y: 175, Open Rim at y: 474) -->
+              <path d="M 222 474 L 222 193 A 18 18 0 0 1 258 193 L 258 474 Z" 
                     fill="url(#s7_tubeGlass)" stroke="#0284c7" stroke-width="2.2"/>
-              <!-- Open Rim in Water -->
               <ellipse cx="240" cy="474" rx="18" ry="5" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
 
-              <!-- Water Column Inside Left Tube (Displaced downwards by H2) -->
-              <path id="s7_water_col_h2" d="M 223 474 L 223 238 A 17 17 0 0 1 257 238 L 257 474 Z" 
+              <!-- Water Column Inside Left Tube -->
+              <path id="s7_water_col_h2" d="M 223 474 L 223 193 A 17 17 0 0 1 257 193 L 257 474 Z" 
                     fill="url(#s7_waterGrad)" style="transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);"/>
-              <ellipse id="s7_meniscus_h2" cx="240" cy="238" rx="17" ry="4" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2" opacity="0"/>
+              <ellipse id="s7_meniscus_h2" cx="240" cy="193" rx="17" ry="4" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2" opacity="0"/>
 
               <!-- Gas Pocket (H2 Accumulated at Top) -->
-              <path id="s7_gas_pocket_h2" d="M 223 238 A 17 17 0 0 1 257 238 L 257 238 L 223 238 Z" 
+              <path id="s7_gas_pocket_h2" d="M 223 193 A 17 17 0 0 1 257 193 L 257 193 L 223 193 Z" 
                     fill="url(#s7_h2Gas)" opacity="0" style="transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);"/>
 
               <!-- Left Tube Highlights & Graduations -->
-              <line x1="226" y1="245" x2="226" y2="465" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
-              <line x1="250" y1="340" x2="256" y2="340" stroke="#ffffff" stroke-width="2.5"/>
-              <line x1="252" y1="365" x2="256" y2="365" stroke="#ffffff" stroke-width="1.8"/>
-              <line x1="250" y1="390" x2="256" y2="390" stroke="#ffffff" stroke-width="2.5"/>
+              <line x1="226" y1="200" x2="226" y2="465" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+              <line x1="250" y1="320" x2="256" y2="320" stroke="#ffffff" stroke-width="2.5"/>
+              <line x1="252" y1="345" x2="256" y2="345" stroke="#ffffff" stroke-width="1.8"/>
+              <line x1="250" y1="370" x2="256" y2="370" stroke="#ffffff" stroke-width="2.5"/>
 
-              <!-- Left Tube Volume Indicator (20 mL at y=340) -->
-              <g id="s7_badge_h2_vol" transform="translate(205, 340)" opacity="0" style="transition: opacity 0.6s ease;">
-                <rect x="-44" y="-12" width="42" height="22" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
-                <text x="-23" y="3" font-size="11" font-weight="900" fill="#1e40af" text-anchor="middle">20 mL</text>
-                <line x1="-2" y1="0" x2="16" y2="0" stroke="#2563eb" stroke-width="2" stroke-dasharray="2,2"/>
+              <!-- Left Tube Volume Indicator (20 mL at y=320) -->
+              <g id="s7_badge_h2_vol" transform="translate(170, 310)" opacity="0" style="transition: opacity 0.6s ease;">
+                <rect x="0" y="0" width="46" height="22" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" filter="url(#s7_shadow)"/>
+                <text x="23" y="15" font-size="11" font-weight="900" fill="#1e40af" text-anchor="middle">20 mL</text>
+                <line x1="46" y1="11" x2="52" y2="11" stroke="#2563eb" stroke-width="2"/>
               </g>
 
               <!-- Cathode Bubble Stream (Vigorous 2x rate) -->
@@ -3703,30 +3725,30 @@
             <!-- 2. RIGHT TUBE: Anode (+) Oxygen (O2) Tube at cx = 400 -->
             <g id="s7_right_tube_group">
               <!-- Glass Inverted Body -->
-              <path d="M 382 474 L 382 238 A 18 18 0 0 1 418 238 L 418 474 Z" 
+              <path d="M 382 474 L 382 193 A 18 18 0 0 1 418 193 L 418 474 Z" 
                     fill="url(#s7_tubeGlass)" stroke="#0284c7" stroke-width="2.2"/>
               <ellipse cx="400" cy="474" rx="18" ry="5" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
 
               <!-- Water Column Inside Right Tube -->
-              <path id="s7_water_col_o2" d="M 383 474 L 383 238 A 17 17 0 0 1 417 238 L 417 474 Z" 
+              <path id="s7_water_col_o2" d="M 383 474 L 383 193 A 17 17 0 0 1 417 193 L 417 474 Z" 
                     fill="url(#s7_waterGrad)" style="transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);"/>
-              <ellipse id="s7_meniscus_o2" cx="400" cy="238" rx="17" ry="4" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2" opacity="0"/>
+              <ellipse id="s7_meniscus_o2" cx="400" cy="193" rx="17" ry="4" fill="#38bdf8" stroke="#0284c7" stroke-width="1.2" opacity="0"/>
 
               <!-- Gas Pocket (O2 Accumulated at Top, half the volume) -->
-              <path id="s7_gas_pocket_o2" d="M 383 238 A 17 17 0 0 1 417 238 L 417 238 L 383 238 Z" 
+              <path id="s7_gas_pocket_o2" d="M 383 193 A 17 17 0 0 1 417 193 L 417 193 L 383 193 Z" 
                     fill="url(#s7_o2Gas)" opacity="0" style="transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);"/>
 
               <!-- Right Tube Highlights & Graduations -->
-              <line x1="386" y1="245" x2="386" y2="465" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
-              <line x1="410" y1="290" x2="416" y2="290" stroke="#ffffff" stroke-width="2.5"/>
-              <line x1="412" y1="315" x2="416" y2="315" stroke="#ffffff" stroke-width="1.8"/>
-              <line x1="410" y1="340" x2="416" y2="340" stroke="#ffffff" stroke-width="2.5"/>
+              <line x1="386" y1="200" x2="386" y2="465" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+              <line x1="410" y1="260" x2="416" y2="260" stroke="#ffffff" stroke-width="2.5"/>
+              <line x1="412" y1="285" x2="416" y2="285" stroke="#ffffff" stroke-width="1.8"/>
+              <line x1="410" y1="310" x2="416" y2="310" stroke="#ffffff" stroke-width="2.5"/>
 
-              <!-- Right Tube Volume Indicator (10 mL at y=290) -->
-              <g id="s7_badge_o2_vol" transform="translate(435, 290)" opacity="0" style="transition: opacity 0.6s ease;">
-                <rect x="2" y="-12" width="42" height="22" rx="4" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
-                <text x="23" y="3" font-size="11" font-weight="900" fill="#991b1b" text-anchor="middle">10 mL</text>
-                <line x1="-16" y1="0" x2="2" y2="0" stroke="#dc2626" stroke-width="2" stroke-dasharray="2,2"/>
+              <!-- Right Tube Volume Indicator (10 mL at y=260) -->
+              <g id="s7_badge_o2_vol" transform="translate(424, 250)" opacity="0" style="transition: opacity 0.6s ease;">
+                <rect x="0" y="0" width="46" height="22" rx="4" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" filter="url(#s7_shadow)"/>
+                <text x="23" y="15" font-size="11" font-weight="900" fill="#991b1b" text-anchor="middle">10 mL</text>
+                <line x1="-6" y1="11" x2="0" y2="11" stroke="#dc2626" stroke-width="2"/>
               </g>
 
               <!-- Anode Bubble Stream (Slow 1x rate) -->
@@ -3738,29 +3760,19 @@
             </g>
 
             <!-- 2:1 Gas Volume Comparison Dimension Bracket (Between cx=240 and cx=400) -->
-            <g id="s7_ratio_bracket" transform="translate(320, 265)" opacity="0" style="transition: opacity 0.6s ease;">
-              <path d="M -60 75 L -45 75 L -45 -25 L -60 -25" fill="none" stroke="#2563eb" stroke-width="2.2"/>
-              <path d="M 60 25 L 45 25 L 45 -25 L 60 -25" fill="none" stroke="#dc2626" stroke-width="2.2"/>
-              <rect x="-42" y="0" width="84" height="28" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text x="0" y="19" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">2:1 अनुपात</text>
+            <g id="s7_ratio_bracket" transform="translate(320, 240)" opacity="0" style="transition: opacity 0.6s ease;">
+              <!-- Left Dimension Line from y=175 to y=320 (height=145) -->
+              <path d="M -55 80 L -42 80 L -42 -65 L -55 -65" fill="none" stroke="#2563eb" stroke-width="2"/>
+              <!-- Right Dimension Line from y=175 to y=260 (height=85) -->
+              <path d="M 55 20 L 42 20 L 42 -65 L 55 -65" fill="none" stroke="#dc2626" stroke-width="2"/>
+              <!-- Center Badge -->
+              <rect x="-44" y="-14" width="88" height="28" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text x="0" y="5" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">2:1 अनुपात</text>
             </g>
 
             <!-- Mug Top Front Rim -->
             <ellipse cx="320" cy="270" rx="155" ry="12" fill="none" stroke="#38bdf8" stroke-width="3"/>
             <ellipse cx="320" cy="270" rx="150" ry="9" fill="#ffffff" fill-opacity="0.45"/>
-
-            <!-- Electrode Badges Above Tubes -->
-            <g transform="translate(240, 195)">
-              <rect x="-65" y="0" width="130" height="42" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text x="0" y="18" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">कैथोड (-)</text>
-              <text x="0" y="33" font-size="11" font-weight="800" fill="#2563eb" text-anchor="middle">H₂ (दोगुना आयतन)</text>
-            </g>
-
-            <g transform="translate(400, 195)">
-              <rect x="-65" y="0" width="130" height="42" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text x="0" y="18" font-size="13" font-weight="900" fill="#991b1b" text-anchor="middle">एनोड (+)</text>
-              <text x="0" y="33" font-size="11" font-weight="800" fill="#dc2626" text-anchor="middle">O₂ (आधा आयतन)</text>
-            </g>
 
             <!-- Electrical Circuit: 6V Battery, Wires, Switch -->
             <!-- Black Wire: Cathode (-) at x=240 to Switch to Battery (-) -->
@@ -3772,7 +3784,6 @@
               <rect x="-22" y="-12" width="44" height="24" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#s7_shadow)"/>
               <circle cx="-12" cy="0" r="3.5" fill="#d97706"/>
               <circle cx="12" cy="0" r="3.5" fill="#d97706"/>
-              <!-- Switch Lever: Open at Step 1 (angle -35 deg), Closed at Step 2+ (horizontal) -->
               <line id="s7_switch_lever" x1="-12" y1="0" x2="10" y2="-16" stroke="#b45309" stroke-width="3.5" stroke-linecap="round" style="transition: all 0.4s ease;"/>
               <text x="0" y="24" font-size="11" font-weight="900" fill="#334155" text-anchor="middle">कुंजी (Switch)</text>
             </g>
@@ -3789,22 +3800,13 @@
               <rect x="-10" y="30" width="116" height="20" rx="6" fill="#020617" opacity="0.3" filter="url(#s7_glow)"/>
               <rect x="0" y="-30" width="96" height="70" rx="8" fill="url(#s7_battBody)" stroke="#475569" stroke-width="2.5" filter="url(#s7_shadow)"/>
               <rect x="5" y="-25" width="86" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-              <!-- Battery Terminals -->
               <rect x="15" y="-40" width="10" height="10" rx="2" fill="#ef4444" stroke="#991b1b" stroke-width="1"/>
               <rect x="71" y="-40" width="10" height="10" rx="2" fill="#334155" stroke="#0f172a" stroke-width="1"/>
               <text x="20" y="-44" font-size="14" font-weight="900" fill="#ef4444" text-anchor="middle">+</text>
               <text x="76" y="-44" font-size="16" font-weight="900" fill="#94a3b8" text-anchor="middle">−</text>
-              <!-- Battery Label -->
               <text x="48" y="-4" font-size="13" font-weight="900" fill="#facc15" text-anchor="middle">6V DC BATTERY</text>
               <text x="48" y="14" font-size="10" font-weight="800" fill="#93c5fd" text-anchor="middle">विद्युत धारा स्रोत</text>
-              <!-- Indicator LED -->
               <circle id="s7_batt_led" cx="48" cy="24" r="3.5" fill="#15803d" style="transition: all 0.3s ease;"/>
-            </g>
-
-            <!-- Setup Title Banner at Top -->
-            <g id="s7_setup_banner" transform="translate(320, 160)">
-              <rect x="-170" y="-22" width="340" height="34" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text id="s7_setup_banner_txt" x="0" y="1" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">💧 जल का विद्युत अपघटन (प्रारंभिक संयोजन)</text>
             </g>
           </g>
 
@@ -3812,136 +3814,141 @@
                SCENE B: GAS TESTING WITH BURNING / GLOWING SPLINT (#s7_test_scene)
                Visible only in Step 4 (Upright Test Tubes, Splint brought near mouth)
                All container, water mug, wires and battery completely disappear!
+               Zero overlaps: Mathematically segregated vertical and horizontal zones.
                ====================================================================== -->
-          <g id="s7_test_scene" opacity="0" style="pointer-events:none; transition: opacity 0.8s ease;">
-            <!-- Clean open space between test tubes -->
+          <g id="s7_test_scene" style="display:none;">
+            <!-- Scene Title at Top Center (x=315 to 485, y=20 to 54) -->
+            <rect x="315" y="20" width="170" height="34" rx="7" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#s7_shadow)"/>
+            <text x="400" y="42" font-size="12.5" font-weight="900" fill="#047857" text-anchor="middle">🔥 गैस दहन परीक्षण</text>
 
             <!-- ================= LEFT TUBE (UPRIGHT H2 TUBE IN STAND) at X=220 ================= -->
             <g transform="translate(220, 0)">
-              <!-- Wooden Lab Stand Base and Rod -->
-              <ellipse cx="0" cy="482" rx="70" ry="14" fill="#0f172a" opacity="0.2"/>
-              <rect x="-55" y="465" width="110" height="15" rx="3" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.5"/>
-              <rect x="42" y="240" width="12" height="225" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.2"/>
-              <!-- Metal Clamp Gripping the Tube -->
-              <path d="M 42 300 L 19 300" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
-              <path d="M -19 295 Q -22 300 -19 305 L 19 305 Q 22 300 19 295 Z" fill="#334155"/>
+              <!-- Top Identifier Badge (x=-80 to +80, y=20 to 54 -> absolute x=140 to 300 - ZERO OVERLAP) -->
+              <rect x="-80" y="20" width="160" height="34" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text x="0" y="42" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">कैथोड परखनली: H₂</text>
 
-              <!-- Upright Cylindrical Test Tube (Mouth at TOP: y: 190, Rounded Bottom at y: 440) -->
-              <path d="M -18 190 L -18 425 A 18 18 0 0 0 18 425 L 18 190 Z" 
+              <!-- Wooden Lab Stand Base and Rod -->
+              <ellipse cx="0" cy="482" rx="70" ry="12" fill="#0f172a" opacity="0.2"/>
+              <rect x="-55" y="465" width="110" height="15" rx="3" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.5"/>
+              <rect x="42" y="195" width="12" height="270" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.2"/>
+              <!-- Metal Clamp Gripping the Tube at y=235 -->
+              <path d="M 42 235 L 19 235" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+              <path d="M -19 230 Q -22 235 -19 240 L 19 240 Q 22 235 19 230 Z" fill="#334155"/>
+
+              <!-- Upright Cylindrical Test Tube (Mouth at TOP: y: 150, Rounded Bottom at y: 320) -->
+              <path d="M -18 150 L -18 304 A 18 18 0 0 0 18 304 L 18 150 Z" 
                     fill="url(#s7_tubeGlass)" stroke="#0284c7" stroke-width="2.4"/>
-              <!-- Open Flared Rim at Mouth -->
-              <ellipse cx="0" cy="190" rx="21" ry="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.2"/>
-              <ellipse cx="0" cy="190" rx="15" ry="4" fill="#0f172a" opacity="0.6"/>
-              <!-- Specular Glass Highlight -->
-              <line x1="-12" y1="200" x2="-12" y2="425" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+              <!-- Open Flared Rim at Mouth (y=150) -->
+              <ellipse cx="0" cy="150" rx="21" ry="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.2"/>
+              <ellipse cx="0" cy="150" rx="15" ry="4" fill="#0f172a" opacity="0.6"/>
+              <line x1="-12" y1="160" x2="-12" y2="304" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
 
               <!-- Hydrogen Gas Faint Glow Inside Tube -->
-              <path d="M -16 195 L -16 425 A 16 16 0 0 0 16 425 L 16 195 Z" fill="url(#s7_h2Gas)"/>
+              <path d="M -16 155 L -16 304 A 16 16 0 0 0 16 304 L 16 155 Z" fill="url(#s7_h2Gas)"/>
 
-              <!-- Top Label Badge -->
-              <rect x="-95" y="26" width="190" height="36" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text x="0" y="50" font-size="14" font-weight="900" fill="#1e40af" text-anchor="middle">कैथोड परखनली: H₂ गैस</text>
-
-              <!-- Burning Splint (जलती हुई तीली) Approaching the Mouth from Top-Left -->
+              <!-- Burning Splint (जलती हुई तीली) Approaching horizontally from left at y=150 -->
               <g id="s7_h2_splint_group">
-                <!-- Wooden Matchstick / Splint Body -->
-                <line x1="-135" y1="120" x2="-12" y2="188" stroke="#78350f" stroke-width="6" stroke-linecap="round" filter="url(#s7_shadow)"/>
-                <line x1="-135" y1="120" x2="-12" y2="188" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Charred Tip -->
-                <line x1="-28" y1="178" x2="-12" y2="188" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
-                <!-- Splint Label -->
-                <rect x="-185" y="95" width="115" height="24" rx="5" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
-                <text x="-128" y="112" font-size="11.5" font-weight="900" fill="#b45309" text-anchor="middle">जलती हुई तीली</text>
+                <!-- Splint Label (Positioned at x=-175 to -85, y=96 to 120 - 20px GAP from POP badge! ZERO OVERLAP) -->
+                <rect x="-175" y="96" width="90" height="24" rx="5" fill="#ffffff" stroke="#d97706" stroke-width="1.6" filter="url(#s7_shadow)"/>
+                <text x="-130" y="113" font-size="11.5" font-weight="900" fill="#b45309" text-anchor="middle">जलती तीली</text>
 
-                <!-- Flame on the Splint Tip with independent transform box -->
-                <g transform="translate(-14, 186)">
+                <!-- Wooden Matchstick / Splint Body (x from -165 to -18, y=150) -->
+                <line x1="-160" y1="150" x2="-18" y2="150" stroke="#78350f" stroke-width="5.5" stroke-linecap="round" filter="url(#s7_shadow)"/>
+                <line x1="-160" y1="150" x2="-18" y2="150" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+                <!-- Charred Tip -->
+                <line x1="-32" y1="150" x2="-18" y2="150" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+
+                <!-- Flame on the Splint Tip -->
+                <g transform="translate(-18, 150)">
                   <g style="transform-box: fill-box; transform-origin: 50% 100%; animation: s7_flame_dance 0.4s infinite ease-in-out;">
-                    <circle cx="0" cy="-14" r="14" fill="#ea580c" opacity="0.3" filter="url(#s7_glow)"/>
-                    <path d="M 0 0 C -7 -12 -7 -25 0 -35 C 7 -25 7 -12 0 0 Z" fill="url(#s7_flameGrad)" filter="url(#s7_glow)"/>
-                    <path d="M 0 0 C -4 -8 -4 -16 0 -24 C 4 -16 4 -8 0 0 Z" fill="#ffffff"/>
+                    <circle cx="0" cy="-12" r="12" fill="#ea580c" opacity="0.3" filter="url(#s7_glow)"/>
+                    <path d="M 0 0 C -6 -10 -6 -20 0 -30 C 6 -20 6 -10 0 0 Z" fill="url(#s7_flameGrad)" filter="url(#s7_glow)"/>
+                    <path d="M 0 0 C -3 -6 -3 -14 0 -20 C 3 -14 3 -6 0 0 Z" fill="#ffffff"/>
                   </g>
                 </g>
               </g>
 
-              <!-- Dynamic Explosive POP Sound Flash Centered at Mouth (0, 190) -->
-              <g id="s7_pop_flash" transform="translate(0, 190)">
+              <!-- Dynamic Explosive POP Sound Flash Centered at Mouth (0, 150) -->
+              <g id="s7_pop_flash" transform="translate(0, 150)">
                 <g style="transform-box: fill-box; transform-origin: center; animation: s7_pop_pulse 0.45s infinite ease-in-out;">
-                  <circle cx="0" cy="0" r="38" fill="#facc15" opacity="0.35" filter="url(#s7_glow)"/>
-                  <polygon points="0,-36 12,-12 36,-20 24,6 46,24 22,28 30,54 8,40 -8,58 -6,34 -28,28 -12,8 -26,-12 -2,-4" 
-                           fill="#fde047" stroke="#ea580c" stroke-width="2.5"/>
-                  <circle cx="0" cy="0" r="12" fill="#ffffff"/>
+                  <circle cx="0" cy="0" r="32" fill="#facc15" opacity="0.35" filter="url(#s7_glow)"/>
+                  <polygon points="0,-30 10,-10 30,-16 20,5 38,20 18,24 25,44 7,32 -6,46 -5,28 -24,24 -10,6 -22,-10 -2,-3" 
+                           fill="#fde047" stroke="#ea580c" stroke-width="2.2"/>
+                  <circle cx="0" cy="0" r="10" fill="#ffffff"/>
                 </g>
-                <!-- POP Sound Badge right above mouth -->
-                <rect x="-75" y="-68" width="150" height="28" rx="6" fill="#fef3c7" stroke="#ea580c" stroke-width="1.8" filter="url(#s7_shadow)"/>
-                <text x="0" y="-49" font-size="14.5" font-weight="900" fill="#c2410c" text-anchor="middle">💥 'पॉप' (POP) ध्वनि!</text>
+                <!-- POP Sound Badge (x=-65 to +65, y=-54, absolute y=96 to 120 - ZERO OVERLAP) -->
+                <rect x="-65" y="-54" width="130" height="25" rx="5" fill="#fef3c7" stroke="#ea580c" stroke-width="1.8" filter="url(#s7_shadow)"/>
+                <text x="0" y="-37" font-size="12.5" font-weight="900" fill="#c2410c" text-anchor="middle">💥 'पॉप' (POP) ध्वनि!</text>
               </g>
 
-              <!-- Observation Result Card Below Tube -->
-              <g transform="translate(-105, 348)">
-                <rect x="0" y="0" width="210" height="88" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
+              <!-- Observation Result Card Completely BELOW the Test Tube (y=345 to 435 - ZERO OVERLAP) -->
+              <g transform="translate(-105, 345)">
+                <rect x="0" y="0" width="210" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s7_shadow)"/>
                 <text x="105" y="24" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">🔥 हाइड्रोजन गैस परीक्षण</text>
                 <text x="105" y="47" font-size="11.5" font-weight="800" fill="#0369a1" text-anchor="middle">जलती तीली पास लाने पर</text>
-                <text x="105" y="68" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">तीव्र 'पॉप' ध्वनि के साथ दहन</text>
+                <text x="105" y="69" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">तीव्र 'पॉप' ध्वनि के साथ दहन</text>
               </g>
             </g>
 
             <!-- ================= RIGHT TUBE (UPRIGHT O2 TUBE IN STAND) at X=580 ================= -->
             <g transform="translate(580, 0)">
-              <!-- Wooden Lab Stand Base and Rod -->
-              <ellipse cx="0" cy="482" rx="70" ry="14" fill="#0f172a" opacity="0.2"/>
-              <rect x="-55" y="465" width="110" height="15" rx="3" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.5"/>
-              <rect x="-54" y="240" width="12" height="225" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.2"/>
-              <!-- Metal Clamp Gripping the Tube -->
-              <path d="M -42 300 L -19 300" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
-              <path d="M -19 295 Q -22 300 -19 305 L 19 305 Q 22 300 19 295 Z" fill="#334155"/>
+              <!-- Top Identifier Badge (x=-80 to +80, y=20 to 54 -> absolute x=500 to 660 - ZERO OVERLAP) -->
+              <rect x="-80" y="20" width="160" height="34" rx="7" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
+              <text x="0" y="42" font-size="13" font-weight="900" fill="#991b1b" text-anchor="middle">एनोड परखनली: O₂</text>
 
-              <!-- Upright Cylindrical Test Tube -->
-              <path d="M -18 190 L -18 425 A 18 18 0 0 0 18 425 L 18 190 Z" 
+              <!-- Wooden Lab Stand Base and Rod -->
+              <ellipse cx="0" cy="482" rx="70" ry="12" fill="#0f172a" opacity="0.2"/>
+              <rect x="-55" y="465" width="110" height="15" rx="3" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.5"/>
+              <rect x="-54" y="195" width="12" height="270" fill="url(#s7_woodRack)" stroke="#78350f" stroke-width="1.2"/>
+              <!-- Metal Clamp Gripping the Tube at y=235 -->
+              <path d="M -42 235 L -19 235" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+              <path d="M -19 230 Q -22 235 -19 240 L 19 240 Q 22 235 19 230 Z" fill="#334155"/>
+
+              <!-- Upright Cylindrical Test Tube (Mouth at TOP: y: 150, Rounded Bottom at y: 320) -->
+              <path d="M -18 150 L -18 304 A 18 18 0 0 0 18 304 L 18 150 Z" 
                     fill="url(#s7_tubeGlass)" stroke="#0284c7" stroke-width="2.4"/>
-              <ellipse cx="0" cy="190" rx="21" ry="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.2"/>
-              <ellipse cx="0" cy="190" rx="15" ry="4" fill="#0f172a" opacity="0.6"/>
-              <line x1="-12" y1="200" x2="-12" y2="425" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+              <!-- Open Flared Rim at Mouth (y=150) -->
+              <ellipse cx="0" cy="150" rx="21" ry="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.2"/>
+              <ellipse cx="0" cy="150" rx="15" ry="4" fill="#0f172a" opacity="0.6"/>
+              <line x1="-12" y1="160" x2="-12" y2="304" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
 
               <!-- Oxygen Gas Faint Glow Inside Tube -->
-              <path d="M -16 195 L -16 425 A 16 16 0 0 0 16 425 L 16 195 Z" fill="url(#s7_o2Gas)"/>
+              <path d="M -16 155 L -16 304 A 16 16 0 0 0 16 304 L 16 155 Z" fill="url(#s7_o2Gas)"/>
 
-              <!-- Top Label Badge -->
-              <rect x="-95" y="26" width="190" height="36" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
-              <text x="0" y="50" font-size="14" font-weight="900" fill="#991b1b" text-anchor="middle">एनोड परखनली: O₂ गैस</text>
-
-              <!-- Glowing Splint (सुलगती हुई तीली) Approaching the Mouth from Top-Right -->
+              <!-- Glowing Splint (सुलगती हुई तीली) Approaching horizontally from right at y=150 -->
               <g id="s7_o2_splint_group">
-                <!-- Wooden Matchstick / Splint Body -->
-                <line x1="135" y1="120" x2="0" y2="188" stroke="#78350f" stroke-width="6" stroke-linecap="round" filter="url(#s7_shadow)"/>
-                <line x1="135" y1="120" x2="0" y2="188" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Splint Label (Positioned at x=85 to 175, y=96 to 120 - 25px GAP from Rekindle badge! ZERO OVERLAP) -->
+                <rect x="85" y="96" width="90" height="24" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="1.6" filter="url(#s7_shadow)"/>
+                <text x="130" y="113" font-size="11.5" font-weight="900" fill="#991b1b" text-anchor="middle">सुलगती तीली</text>
+
+                <!-- Wooden Matchstick / Splint Body (x from 18 to 160, y=150) -->
+                <line x1="160" y1="150" x2="18" y2="150" stroke="#78350f" stroke-width="5.5" stroke-linecap="round" filter="url(#s7_shadow)"/>
+                <line x1="160" y1="150" x2="18" y2="150" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
                 <!-- Charred Tip -->
-                <line x1="16" y1="178" x2="0" y2="188" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
-                <!-- Splint Label -->
-                <rect x="70" y="95" width="120" height="24" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
-                <text x="130" y="112" font-size="11.5" font-weight="900" fill="#991b1b" text-anchor="middle">सुलगती हुई तीली</text>
+                <line x1="32" y1="150" x2="18" y2="150" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
 
                 <!-- Glowing Red Ember at tip -->
-                <circle cx="0" cy="188" r="5" fill="#ef4444" style="animation: s7_splint_glow 0.6s infinite alternate;"/>
+                <circle cx="18" cy="150" r="4.5" fill="#ef4444" style="animation: s7_splint_glow 0.6s infinite alternate;"/>
 
-                <!-- Bursting Rekindled Flame at Mouth with independent transform box -->
-                <g transform="translate(0, 185)">
+                <!-- Bursting Rekindled Flame at Mouth (0, 150) -->
+                <g transform="translate(0, 150)">
                   <g style="transform-box: fill-box; transform-origin: 50% 100%; animation: s7_flame_dance 0.4s infinite ease-in-out;">
-                    <circle cx="0" cy="-28" r="32" fill="#ea580c" opacity="0.3" filter="url(#s7_glow)"/>
-                    <path d="M 0 0 C -18 -22 -18 -48 0 -72 C 18 -48 18 -22 0 0 Z" fill="url(#s7_flameGrad)" filter="url(#s7_glow)"/>
-                    <path d="M 0 0 C -10 -15 -10 -35 0 -52 C 10 -35 10 -15 0 0 Z" fill="#ffffff"/>
+                    <circle cx="0" cy="-20" r="22" fill="#ea580c" opacity="0.3" filter="url(#s7_glow)"/>
+                    <path d="M 0 0 C -12 -14 -12 -32 0 -48 C 12 -32 12 -14 0 0 Z" fill="url(#s7_flameGrad)" filter="url(#s7_glow)"/>
+                    <path d="M 0 0 C -7 -10 -7 -22 0 -34 C 7 -22 7 -10 0 0 Z" fill="#ffffff"/>
                   </g>
-                  <!-- Rekindle text badge above flame -->
-                  <rect x="-70" y="-105" width="140" height="28" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" filter="url(#s7_shadow)"/>
-                  <text x="0" y="-86" font-size="14.5" font-weight="900" fill="#b91c1c" text-anchor="middle">🔥 तीव्र प्रज्वलन!</text>
+                  <!-- Rekindle text badge above flame (x=-60 to +60, y=-54, absolute y=96 to 120 - ZERO OVERLAP) -->
+                  <rect x="-60" y="-54" width="120" height="25" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" filter="url(#s7_shadow)"/>
+                  <text x="0" y="-37" font-size="12.5" font-weight="900" fill="#b91c1c" text-anchor="middle">🔥 तीव्र प्रज्वलन!</text>
                 </g>
               </g>
 
-              <!-- Observation Result Card Below Tube -->
-              <g transform="translate(-105, 348)">
-                <rect x="0" y="0" width="210" height="88" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
+              <!-- Observation Result Card Completely BELOW the Test Tube (y=345 to 435 - ZERO OVERLAP) -->
+              <g transform="translate(-105, 345)">
+                <rect x="0" y="0" width="210" height="90" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#s7_shadow)"/>
                 <text x="105" y="24" font-size="13" font-weight="900" fill="#991b1b" text-anchor="middle">✨ ऑक्सीजन गैस परीक्षण</text>
                 <text x="105" y="47" font-size="11.5" font-weight="800" fill="#b45309" text-anchor="middle">सुलगती तीली पास लाते ही</text>
-                <text x="105" y="68" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">ज्वाला भभक उठती है (दहन पोषक)</text>
+                <text x="105" y="69" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">ज्वाला भभक उठती है (दहन पोषक)</text>
               </g>
             </g>
           </g>
@@ -6357,9 +6364,9 @@ function sim4Reset() {
       var st = document.getElementById('sim7_status');
 
       if (step === 1) {
-        // Scene A: Setup
-        if (sceneSetup) { sceneSetup.style.opacity = '1'; sceneSetup.style.pointerEvents = 'all'; }
-        if (sceneTest) { sceneTest.style.opacity = '0'; sceneTest.style.pointerEvents = 'none'; }
+        // Scene A Visible, Scene B Completely Removed
+        if (sceneSetup) { sceneSetup.style.display = 'inline'; sceneSetup.setAttribute('visibility', 'visible'); }
+        if (sceneTest) { sceneTest.style.display = 'none'; sceneTest.setAttribute('visibility', 'hidden'); }
 
         // Switch Open
         if (lever) { lever.setAttribute('x2', '10'); lever.setAttribute('y2', '-16'); }
@@ -6370,8 +6377,8 @@ function sim4Reset() {
         if (bubO2) bubO2.style.opacity = '0';
 
         // Full water columns (no gas yet)
-        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 238 A 17 17 0 0 1 257 238 L 257 474 Z');
-        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 238 A 17 17 0 0 1 417 238 L 417 474 Z');
+        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 193 A 17 17 0 0 1 257 193 L 257 474 Z');
+        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 193 A 17 17 0 0 1 417 193 L 417 474 Z');
         if (meniscusH2) meniscusH2.style.opacity = '0';
         if (meniscusO2) meniscusO2.style.opacity = '0';
         if (gasH2) gasH2.style.opacity = '0';
@@ -6390,9 +6397,9 @@ function sim4Reset() {
 
         if (st) st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>चरण 1 (प्रारंभिक उपकरण संयोजन):</strong></span> प्लास्टिक के चौड़े मग की तली में दो छिद्र कर रबर डाट में कार्बन (ग्रेफाइट) इलेक्ट्रोड लगाए गए हैं। मग में जल भरकर उसमें कुछ बूंदें तनु सल्फ्यूरिक अम्ल (H₂SO₄) की मिलाई गई हैं ताकि जल की विद्युत चालकता बढ़ सके। दोनों इलेक्ट्रोडों पर जल से भरी परखनलियां उल्टी रखी गई हैं।';
       } else if (step === 2) {
-        // Scene A: Setup
-        if (sceneSetup) { sceneSetup.style.opacity = '1'; sceneSetup.style.pointerEvents = 'all'; }
-        if (sceneTest) { sceneTest.style.opacity = '0'; sceneTest.style.pointerEvents = 'none'; }
+        // Scene A Visible, Scene B Completely Removed
+        if (sceneSetup) { sceneSetup.style.display = 'inline'; sceneSetup.setAttribute('visibility', 'visible'); }
+        if (sceneTest) { sceneTest.style.display = 'none'; sceneTest.setAttribute('visibility', 'hidden'); }
 
         // Switch Closed
         if (lever) { lever.setAttribute('x2', '12'); lever.setAttribute('y2', '0'); }
@@ -6403,17 +6410,17 @@ function sim4Reset() {
         if (bubO2) bubO2.style.opacity = '1';
 
         // Beginning of gas displacement
-        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 275 L 257 275 L 257 474 Z');
-        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 255 L 417 255 L 417 474 Z');
-        if (meniscusH2) { meniscusH2.setAttribute('cy', '275'); meniscusH2.style.opacity = '0.9'; }
-        if (meniscusO2) { meniscusO2.setAttribute('cy', '255'); meniscusO2.style.opacity = '0.9'; }
+        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 255 L 257 255 L 257 474 Z');
+        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 230 L 417 230 L 417 474 Z');
+        if (meniscusH2) { meniscusH2.setAttribute('cy', '255'); meniscusH2.style.opacity = '0.9'; }
+        if (meniscusO2) { meniscusO2.setAttribute('cy', '230'); meniscusO2.style.opacity = '0.9'; }
 
         if (gasH2) {
-          gasH2.setAttribute('d', 'M 223 275 L 223 238 A 17 17 0 0 1 257 238 L 257 275 Z');
+          gasH2.setAttribute('d', 'M 223 255 L 223 193 A 17 17 0 0 1 257 193 L 257 255 Z');
           gasH2.style.opacity = '1';
         }
         if (gasO2) {
-          gasO2.setAttribute('d', 'M 383 255 L 383 238 A 17 17 0 0 1 417 238 L 417 255 Z');
+          gasO2.setAttribute('d', 'M 383 230 L 383 193 A 17 17 0 0 1 417 193 L 417 230 Z');
           gasO2.style.opacity = '1';
         }
 
@@ -6431,9 +6438,9 @@ function sim4Reset() {
 
         if (st) st.innerHTML = '<span style="color:#d97706; font-size:16px;"><strong>चरण 2 (विद्युत धारा प्रवाह व बुदबुदाहट):</strong></span> कुंजी बंद करते ही 6V बैटरी से विद्युत धारा प्रवाहित होने लगती है। दोनों इलेक्ट्रोडों पर तुरंत गैसों के बुलबुले बनने लगते हैं। ये बुलबुले परखनलियों में भरे जल को नीचे की ओर विस्थापित (Downward Displacement) कर शीर्ष भाग में एकत्रित होने लगते हैं। ध्यान दें कि कैथोड (−) पर बुलबुलों की संख्या एनोड (+) की तुलना में दोगुनी तेजी से बन रही है।';
       } else if (step === 3) {
-        // Scene A: Setup
-        if (sceneSetup) { sceneSetup.style.opacity = '1'; sceneSetup.style.pointerEvents = 'all'; }
-        if (sceneTest) { sceneTest.style.opacity = '0'; sceneTest.style.pointerEvents = 'none'; }
+        // Scene A Visible, Scene B Completely Removed
+        if (sceneSetup) { sceneSetup.style.display = 'inline'; sceneSetup.setAttribute('visibility', 'visible'); }
+        if (sceneTest) { sceneTest.style.display = 'none'; sceneTest.setAttribute('visibility', 'hidden'); }
 
         // Switch Closed
         if (lever) { lever.setAttribute('x2', '12'); lever.setAttribute('y2', '0'); }
@@ -6443,19 +6450,19 @@ function sim4Reset() {
         if (bubO2) bubO2.style.opacity = '1';
 
         // Full 2:1 volume reached!
-        // H2 tube: displaced down to y=340 (volume = 20 mL)
-        // O2 tube: displaced down to y=290 (volume = 10 mL)
-        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 340 L 257 340 L 257 474 Z');
-        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 290 L 417 290 L 417 474 Z');
-        if (meniscusH2) { meniscusH2.setAttribute('cy', '340'); meniscusH2.style.opacity = '0.9'; }
-        if (meniscusO2) { meniscusO2.setAttribute('cy', '290'); meniscusO2.style.opacity = '0.9'; }
+        // H2 tube: displaced down to y=320 (volume = 20 mL)
+        // O2 tube: displaced down to y=260 (volume = 10 mL)
+        if (waterH2) waterH2.setAttribute('d', 'M 223 474 L 223 320 L 257 320 L 257 474 Z');
+        if (waterO2) waterO2.setAttribute('d', 'M 383 474 L 383 260 L 417 260 L 417 474 Z');
+        if (meniscusH2) { meniscusH2.setAttribute('cy', '320'); meniscusH2.style.opacity = '0.9'; }
+        if (meniscusO2) { meniscusO2.setAttribute('cy', '260'); meniscusO2.style.opacity = '0.9'; }
 
         if (gasH2) {
-          gasH2.setAttribute('d', 'M 223 340 L 223 238 A 17 17 0 0 1 257 238 L 257 340 Z');
+          gasH2.setAttribute('d', 'M 223 320 L 223 193 A 17 17 0 0 1 257 193 L 257 320 Z');
           gasH2.style.opacity = '1';
         }
         if (gasO2) {
-          gasO2.setAttribute('d', 'M 383 290 L 383 238 A 17 17 0 0 1 417 238 L 417 290 Z');
+          gasO2.setAttribute('d', 'M 383 260 L 383 193 A 17 17 0 0 1 417 193 L 417 260 Z');
           gasO2.style.opacity = '1';
         }
 
@@ -6473,9 +6480,9 @@ function sim4Reset() {
 
         if (st) st.innerHTML = '<span style="color:#2563eb; font-size:16px;"><strong>चरण 3 (अधोमुखी जल विस्थापन व 2:1 आयतन अनुपात):</strong></span> कुछ समय पश्चात स्पष्ट दिखाई देता है कि दोनों परखनलियों में एकत्रित गैसों का आयतन एक समान नहीं है! <strong>कैथोड (−) पर एकत्रित हाइड्रोजन गैस का आयतन (20 mL), एनोड (+) पर एकत्रित ऑक्सीजन गैस के आयतन (10 mL) से ठीक दोगुना (2:1) है</strong>। इसका वैज्ञानिक कारण यह है कि जल (H₂O) के प्रत्येक अणु में दो भाग हाइड्रोजन और एक भाग ऑक्सीजन होती है (2H₂O ➔ 2H₂ + O₂)।';
       } else if (step === 4) {
-        // Scene Transition: Mug and battery disappear, Upright tubes appear!
-        if (sceneSetup) { sceneSetup.style.opacity = '0'; sceneSetup.style.pointerEvents = 'none'; }
-        if (sceneTest) { sceneTest.style.opacity = '1'; sceneTest.style.pointerEvents = 'all'; }
+        // Complete switch: Scene A is totally removed (display=none), Scene B appears (display=inline)
+        if (sceneSetup) { sceneSetup.style.display = 'none'; sceneSetup.setAttribute('visibility', 'hidden'); }
+        if (sceneTest) { sceneTest.style.display = 'inline'; sceneTest.setAttribute('visibility', 'visible'); }
 
         // Projector Panel
         if (cStage) cStage.textContent = 'चरण 4: सीधी परखनलियों के पास तीली लाना';
