@@ -5145,42 +5145,42 @@
 
             <!-- ================= LEFT PAN (REACTANTS) AT X=240 ================= -->
             <g id="s12_left_pan_group">
-              <!-- Golden Suspension Chains (Wider Span for Large Pan) -->
-              <line x1="240" y1="140" x2="130" y2="275" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
-              <line x1="240" y1="140" x2="240" y2="268" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
-              <line x1="240" y1="140" x2="350" y2="275" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
+              <!-- Golden Suspension Chains (Broad Span for Extra-Large Pan) -->
+              <line x1="240" y1="140" x2="105" y2="282" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
+              <line x1="240" y1="140" x2="240" y2="274" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
+              <line x1="240" y1="140" x2="375" y2="282" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
 
-              <!-- Enriched Large Left Pan Dish (rx=125, ry=28) -->
-              <ellipse cx="240" cy="280" rx="125" ry="28" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="3"/>
-              <ellipse cx="240" cy="277" rx="112" ry="20" fill="#fef08a" opacity="0.45"/>
+              <!-- Extra-Large Left Pan Dish (rx=152, ry=33) -->
+              <ellipse cx="240" cy="286" rx="152" ry="33" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="3.5"/>
+              <ellipse cx="240" cy="282" rx="136" ry="24" fill="#fef08a" opacity="0.45"/>
 
               <!-- Left Pan Atom Container (Injected dynamically) -->
               <g id="s12_left_atoms"></g>
 
               <!-- Left Pan Title Badge -->
-              <rect x="130" y="318" width="220" height="36" rx="8" fill="#1e3a8a" fill-opacity="0.95" stroke="#3b82f6" stroke-width="2"/>
-              <text x="240" y="342" font-size="16" font-weight="900" fill="#93c5fd" text-anchor="middle">
+              <rect x="110" y="328" width="260" height="38" rx="10" fill="#1e3a8a" fill-opacity="0.95" stroke="#3b82f6" stroke-width="2"/>
+              <text x="240" y="353" font-size="17" font-weight="900" fill="#93c5fd" text-anchor="middle">
                 अभिकारक (Reactants)
               </text>
             </g>
 
             <!-- ================= RIGHT PAN (PRODUCTS) AT X=960 ================= -->
             <g id="s12_right_pan_group">
-              <!-- Golden Suspension Chains (Wider Span for Large Pan) -->
-              <line x1="960" y1="140" x2="850" y2="275" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
-              <line x1="960" y1="140" x2="960" y2="268" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
-              <line x1="960" y1="140" x2="1070" y2="275" stroke="#fde047" stroke-width="2.5" stroke-dasharray="5,3"/>
+              <!-- Golden Suspension Chains (Broad Span for Extra-Large Pan) -->
+              <line x1="960" y1="140" x2="825" y2="282" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
+              <line x1="960" y1="140" x2="960" y2="274" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
+              <line x1="960" y1="140" x2="1095" y2="282" stroke="#fde047" stroke-width="2.8" stroke-dasharray="5,3"/>
 
-              <!-- Enriched Large Right Pan Dish (rx=125, ry=28) -->
-              <ellipse cx="960" cy="280" rx="125" ry="28" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="3"/>
-              <ellipse cx="960" cy="277" rx="112" ry="20" fill="#fef08a" opacity="0.45"/>
+              <!-- Extra-Large Right Pan Dish (rx=152, ry=33) -->
+              <ellipse cx="960" cy="286" rx="152" ry="33" fill="url(#s12_panGrad)" stroke="#854d0e" stroke-width="3.5"/>
+              <ellipse cx="960" cy="282" rx="136" ry="24" fill="#fef08a" opacity="0.45"/>
 
               <!-- Right Pan Atom Container (Injected dynamically) -->
               <g id="s12_right_atoms"></g>
 
               <!-- Right Pan Title Badge -->
-              <rect x="850" y="318" width="220" height="36" rx="8" fill="#065f46" fill-opacity="0.95" stroke="#10b981" stroke-width="2"/>
-              <text x="960" y="342" font-size="16" font-weight="900" fill="#6ee7b7" text-anchor="middle">
+              <rect x="830" y="328" width="260" height="38" rx="10" fill="#065f46" fill-opacity="0.95" stroke="#10b981" stroke-width="2"/>
+              <text x="960" y="353" font-size="17" font-weight="900" fill="#6ee7b7" text-anchor="middle">
                 उत्पाद (Products)
               </text>
             </g>
@@ -7359,7 +7359,7 @@ function sim4Reset() {
         if (l !== r) allBalanced = false;
       }
 
-      // Render 3D Large Atom Spheres in Pans (Radius: 13.5px, Font: 11.5px bold)
+      // Render 3D Extra-Large Atom Spheres in Pans (Radius: 17px, Font: 14px bold)
       if (leftAtoms) {
         var lHtml = '';
         var col = 0;
@@ -7370,10 +7370,10 @@ function sim4Reset() {
           for (var i = 0; i < count; i++) {
             var colIdx = col % rowLimit;
             var rowIdx = Math.floor(col / rowLimit);
-            var ax = 240 - ((rowLimit - 1) * 14.5) + (colIdx * 29);
-            var ay = 268 - (rowIdx * 25);
-            lHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="13.5" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.6" filter="drop-shadow(0 3px 4px rgba(0,0,0,0.45))"/>';
-            lHtml += '<text x="' + ax + '" y="' + (ay + 4.5) + '" font-size="11.5" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none; text-shadow:0 1px 2px rgba(0,0,0,0.8);">' + el + '</text>';
+            var ax = 240 - ((rowLimit - 1) * 18) + (colIdx * 36);
+            var ay = 270 - (rowIdx * 30);
+            lHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="17" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.8" filter="drop-shadow(0 3.5px 5px rgba(0,0,0,0.5))"/>';
+            lHtml += '<text x="' + ax + '" y="' + (ay + 5.5) + '" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none; text-shadow:0 1px 3px rgba(0,0,0,0.9);">' + el + '</text>';
             col++;
           }
         }
@@ -7390,10 +7390,10 @@ function sim4Reset() {
           for (var i = 0; i < count; i++) {
             var colIdx = col % rowLimit;
             var rowIdx = Math.floor(col / rowLimit);
-            var ax = 960 - ((rowLimit - 1) * 14.5) + (colIdx * 29);
-            var ay = 268 - (rowIdx * 25);
-            rHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="13.5" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.6" filter="drop-shadow(0 3px 4px rgba(0,0,0,0.45))"/>';
-            rHtml += '<text x="' + ax + '" y="' + (ay + 4.5) + '" font-size="11.5" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none; text-shadow:0 1px 2px rgba(0,0,0,0.8);">' + el + '</text>';
+            var ax = 960 - ((rowLimit - 1) * 18) + (colIdx * 36);
+            var ay = 270 - (rowIdx * 30);
+            rHtml += '<circle cx="' + ax + '" cy="' + ay + '" r="17" fill="' + gradId + '" stroke="#0f172a" stroke-width="1.8" filter="drop-shadow(0 3.5px 5px rgba(0,0,0,0.5))"/>';
+            rHtml += '<text x="' + ax + '" y="' + (ay + 5.5) + '" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" style="pointer-events:none; text-shadow:0 1px 3px rgba(0,0,0,0.9);">' + el + '</text>';
             col++;
           }
         }
