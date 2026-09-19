@@ -4648,222 +4648,361 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim11_pbar"></div></div>
 
-      <div class="sim-stage" id="sim11_stage">>
-        <svg id="sim11_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+      <div class="sim-stage" id="sim11_stage">
+        <!-- ================= SIMULATOR 11: REDOX REACTIONS - COPPER OXIDATION & REDUCTION (NCERT 1.11) ================= -->
+        <svg id="sim11_svg" viewBox="0 0 1200 580" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
-            <!-- Bench Surface -->
+            <style>
+              @keyframes s11_flame_anim {
+                0%, 100% { transform: scaleY(1) scaleX(1) rotate(-0.5deg); }
+                50% { transform: scaleY(1.08) scaleX(0.95) rotate(0.8deg); }
+              }
+              @keyframes s11_gas_flow {
+                0% { stroke-dashoffset: 40; }
+                100% { stroke-dashoffset: 0; }
+              }
+              @keyframes s11_steam_rise {
+                0% { transform: translateY(0px) scale(0.8); opacity: 0.8; }
+                100% { transform: translateY(-70px) scale(1.3); opacity: 0; }
+              }
+              .s11-flame { transform-origin: 400px 380px; animation: s11_flame_anim 0.35s infinite ease-in-out; }
+              .s11-steam-1 { animation: s11_steam_rise 1.5s infinite ease-out; }
+              .s11-steam-2 { animation: s11_steam_rise 1.7s infinite ease-out 0.4s; }
+              .s11-steam-3 { animation: s11_steam_rise 1.4s infinite ease-out 0.8s; }
+            </style>
+
+            <!-- Mint-Green Projector Background -->
+            <linearGradient id="s11_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f0fdf4"/><stop offset="100%" stop-color="#dcfce7"/>
+            </linearGradient>
+
+            <!-- 3D Lab Bench Gradients -->
             <linearGradient id="s11_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#1e293b"/>
+              <stop offset="0%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#cbd5e1"/>
             </linearGradient>
             <linearGradient id="s11_benchFront" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
+              <stop offset="0%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#64748b"/>
             </linearGradient>
-            <!-- Chrome Tripod Legs -->
-            <linearGradient id="s11_chrome" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#94a3b8"/><stop offset="35%" stop-color="#ffffff"/>
-              <stop offset="70%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#475569"/>
+
+            <!-- Burner Gradients -->
+            <linearGradient id="s11_burnerBody" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="35%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#1e293b"/>
             </linearGradient>
-            <linearGradient id="s11_tripodRing" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#64748b"/><stop offset="50%" stop-color="#cbd5e1"/><stop offset="100%" stop-color="#334155"/>
+            <linearGradient id="s11_brassCollar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#b45309"/><stop offset="40%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#78350f"/>
             </linearGradient>
-            <!-- Burner Brass -->
-            <linearGradient id="s11_burnerBrass" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#b45309"/><stop offset="40%" stop-color="#fde047"/><stop offset="80%" stop-color="#d97706"/><stop offset="100%" stop-color="#78350f"/>
+            <linearGradient id="s11_burnerBase" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#0f172a"/>
             </linearGradient>
+
             <!-- Flame Gradients -->
             <linearGradient id="s11_flameOuter" x1="0%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stop-color="#2563eb" stop-opacity="0.95"/>
-              <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.9"/>
-              <stop offset="75%" stop-color="#fb923c" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#ea580c" stop-opacity="0.1"/>
+              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+              <stop offset="30%" stop-color="#f97316"/>
+              <stop offset="70%" stop-color="#facc15"/>
+              <stop offset="100%" stop-color="#fef08a"/>
             </linearGradient>
             <linearGradient id="s11_flameInner" x1="0%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.9"/>
-              <stop offset="60%" stop-color="#e0f2fe" stop-opacity="0.95"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+              <stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#67e8f9"/>
             </linearGradient>
-            <!-- China Dish Porcelain -->
-            <linearGradient id="s11_dishGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#ffffff"/><stop offset="70%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#94a3b8"/>
+
+            <!-- Tripod Cast Iron -->
+            <linearGradient id="s11_tripodMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#334155"/><stop offset="45%" stop-color="#64748b"/><stop offset="100%" stop-color="#1e293b"/>
             </linearGradient>
-            <!-- Brown Copper Powder -->
-            <radialGradient id="s11_brownCu" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#f97316"/><stop offset="40%" stop-color="#c2410c"/><stop offset="85%" stop-color="#9a3412"/><stop offset="100%" stop-color="#7c2d12"/>
+
+            <!-- China Dish Porcelain Ceramic -->
+            <linearGradient id="s11_dishOuter" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#f1f5f9"/><stop offset="100%" stop-color="#cbd5e1"/>
+            </linearGradient>
+            <linearGradient id="s11_dishInner" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#94a3b8"/><stop offset="35%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#ffffff"/>
+            </linearGradient>
+
+            <!-- Copper Powder Colors -->
+            <!-- 1. Metallic Brown Copper (Cu) -->
+            <radialGradient id="s11_copperBrown" cx="50%" cy="40%" r="55%">
+              <stop offset="0%" stop-color="#f59e0b"/>
+              <stop offset="35%" stop-color="#d97706"/>
+              <stop offset="70%" stop-color="#b45309"/>
+              <stop offset="100%" stop-color="#78350f"/>
             </radialGradient>
-            <!-- Jet Black Copper Oxide (CuO) -->
-            <radialGradient id="s11_blackCuO" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="#475569"/><stop offset="35%" stop-color="#1e293b"/><stop offset="75%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/>
+
+            <!-- 2. Jet Black Copper(II) Oxide (CuO) -->
+            <radialGradient id="s11_blackCuO" cx="50%" cy="40%" r="55%">
+              <stop offset="0%" stop-color="#334155"/>
+              <stop offset="40%" stop-color="#1e293b"/>
+              <stop offset="85%" stop-color="#0f172a"/>
+              <stop offset="100%" stop-color="#020617"/>
             </radialGradient>
-            <!-- Wire Gauze Pattern -->
-            <pattern id="s11_gauzePat" width="8" height="8" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="8" y2="0" stroke="#475569" stroke-width="1.5"/>
-              <line x1="0" y1="0" x2="0" y2="8" stroke="#475569" stroke-width="1.5"/>
-            </pattern>
+
+            <filter id="s11_glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+            <filter id="s11_shadow" x="-8%" y="-8%" width="125%" height="125%">
+              <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+            </filter>
           </defs>
 
-          <!-- 3D Lab Bench Surface (Full Width: 0 to 1200) -->
-          <polygon points="0,440 1200,440 1200,495 0,495" fill="url(#s11_benchTop)"/>
-          <line x1="0" y1="440" x2="1200" y2="440" stroke="#475569" stroke-width="2.5"/>
-          <polygon points="0,495 1200,495 1200,540 0,540" fill="url(#s11_benchFront)"/>
-          <line x1="0" y1="495" x2="1200" y2="495" stroke="#020617" stroke-width="3"/>
+          <!-- 1. Background -->
+          <rect width="1200" height="580" fill="url(#s11_labBg)"/>
+          <g stroke="#86efac" stroke-width="1" stroke-dasharray="3,3" opacity="0.35">
+            <line x1="0" y1="120" x2="1200" y2="120"/>
+            <line x1="0" y1="240" x2="1200" y2="240"/>
+            <line x1="0" y1="360" x2="1200" y2="360"/>
+            <line x1="0" y1="480" x2="1200" y2="480"/>
+          </g>
 
-          <!-- Perspective Lines on Table -->
-          <line x1="220" y1="440" x2="170" y2="495" stroke="#475569" stroke-width="1.5" opacity="0.6"/>
-          <line x1="550" y1="440" x2="500" y2="495" stroke="#475569" stroke-width="1.5" opacity="0.6"/>
-          <line x1="820" y1="440" x2="770" y2="495" stroke="#475569" stroke-width="1.5" opacity="0.6"/>
+          <!-- 2. 3D Lab Bench -->
+          <polygon points="0,480 800,480 800,535 0,535" fill="url(#s11_benchTop)"/>
+          <line x1="0" y1="480" x2="800" y2="480" stroke="#94a3b8" stroke-width="2.5"/>
+          <polygon points="0,535 800,535 800,580 0,580" fill="url(#s11_benchFront)"/>
+          <line x1="0" y1="535" x2="800" y2="535" stroke="#475569" stroke-width="3"/>
 
-          <!-- ================= APPARATUS: CENTERED AT X=480 ================= -->
+          <!-- ======================================================================
+               LAB APPARATUS STAGE (Centered at X = 400)
+               ====================================================================== -->
+          <!-- Top Activity Title Banner (y = 22 to 58) -->
+          <g transform="translate(400, 40)">
+            <rect x="-240" y="-18" width="480" height="38" rx="8" fill="#ffffff" stroke="#c2410c" stroke-width="2.2" filter="url(#s11_shadow)"/>
+            <text id="s11_stage_title_banner" x="0" y="6" font-size="14.5" font-weight="900" fill="#c2410c" text-anchor="middle">
+              🔥 कॉपर का उपचयन एवं अपचयन (चाइना डिश तापन)
+            </text>
+          </g>
 
-          <!-- Tripod Stand Back Leg -->
-          <line x1="480" y1="260" x2="480" y2="442" stroke="#334155" stroke-width="9" stroke-linecap="round"/>
-          <line x1="480" y1="260" x2="480" y2="442" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+          <!-- Tripod Cast Iron Back Leg (Leg 2: rear center) -->
+          <line x1="400" y1="330" x2="400" y2="495" stroke="url(#s11_tripodMetal)" stroke-width="9" stroke-linecap="round"/>
+          <ellipse cx="400" cy="495" rx="14" ry="4" fill="#0f172a"/>
 
-          <!-- Bunsen Burner on Lab Bench -->
+          <!-- ================= BUNSEN BURNER ASSEMBLY ================= -->
           <g id="s11_burner_group">
-            <!-- Cast Iron Base on Bench -->
-            <ellipse cx="480" cy="442" rx="60" ry="16" fill="#0f172a" stroke="#475569" stroke-width="2"/>
-            <ellipse cx="480" cy="440" rx="46" ry="11" fill="#1e293b"/>
-            <!-- Air Collar & Gas Hose -->
-            <path d="M 450 440 Q 380 455 310 465" fill="none" stroke="#e11d48" stroke-width="6" stroke-linecap="round"/>
-            <rect x="468" y="415" width="24" height="20" rx="3" fill="#64748b" stroke="#334155" stroke-width="1.5"/>
-            <circle cx="480" cy="425" r="4" fill="#0f172a"/>
-            <!-- Brass Burner Tube (Nozzle at y: 310) -->
-            <rect x="472" y="310" width="16" height="110" fill="url(#s11_burnerBrass)" stroke="#78350f" stroke-width="1.5"/>
-            <ellipse cx="480" cy="310" rx="8" ry="3" fill="#fde047" stroke="#b45309" stroke-width="1"/>
-            <text x="480" y="470" font-size="14" font-weight="900" fill="#cbd5e1" text-anchor="middle">बर्नर (Bunsen Burner)</text>
+            <!-- Rubber Gas Tubing running left to gas tap -->
+            <path d="M 400 470 C 350 490 280 480 200 480" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round"/>
+            <path d="M 400 470 C 350 490 280 480 200 480" fill="none" stroke="#fca5a5" stroke-width="2" stroke-linecap="round"/>
+            <text x="235" y="472" font-size="10" font-weight="900" fill="#991b1b">गैस नली</text>
+
+            <!-- Burner Cast Iron Base -->
+            <ellipse cx="400" cy="482" rx="44" ry="12" fill="#020617" opacity="0.3" filter="url(#s11_glow)"/>
+            <polygon points="365,475 435,475 442,482 358,482" fill="url(#s11_burnerBase)" stroke="#0f172a" stroke-width="1.5"/>
+            <rect x="382" y="460" width="36" height="15" rx="3" fill="url(#s11_burnerBase)" stroke="#0f172a" stroke-width="1.2"/>
+
+            <!-- Brass Air Collar & Regulating Hole -->
+            <rect x="388" y="445" width="24" height="15" rx="2" fill="url(#s11_brassCollar)" stroke="#78350f" stroke-width="1"/>
+            <circle cx="400" cy="452" r="3.5" fill="#0f172a"/>
+
+            <!-- Vertical Chrome/Steel Barrel Pipe -->
+            <rect x="391" y="380" width="18" height="65" fill="url(#s11_burnerBody)" stroke="#1e293b" stroke-width="1.5"/>
+            <ellipse cx="400" cy="380" rx="9" ry="3" fill="#64748b" stroke="#1e293b" stroke-width="1.2"/>
+
+            <text x="400" y="505" font-size="12" font-weight="900" fill="#475569" text-anchor="middle">बर्नर (Bunsen Burner)</text>
+
+            <!-- Realistic Dynamic Bunsen Flame (Mouth at y: 380, Reaches up to y: 325) -->
+            <g id="s11_flame" class="s11-flame" opacity="0" style="transition: opacity 0.5s ease;">
+              <!-- Outer Yellow-Orange Flame -->
+              <path d="M 391 380 C 375 355 380 320 400 310 C 420 320 425 355 409 380 Z" 
+                    fill="url(#s11_flameOuter)" filter="url(#s11_glow)" opacity="0.9"/>
+              <!-- Inner Hot Blue Cone -->
+              <path d="M 394 380 C 388 365 392 342 400 335 C 408 342 412 365 406 380 Z" 
+                    fill="url(#s11_flameInner)"/>
+              <ellipse cx="400" cy="380" rx="9" ry="3" fill="#67e8f9"/>
+            </g>
           </g>
 
-          <!-- Upright Flame (Reaching directly to underside of wire gauze & dish) -->
-          <g id="s11_flame" style="opacity: 0; transition: opacity 0.6s ease;">
-            <!-- Outer Heat Glow -->
-            <ellipse cx="480" cy="255" rx="55" ry="30" fill="#f59e0b" opacity="0.25"/>
-            <!-- Outer Flame Cone (Licks under wire gauze at y: 255) -->
-            <path d="M 470 310 Q 455 270 480 235 Q 505 270 490 310 Z" fill="url(#s11_flameOuter)"/>
-            <!-- Inner Hot Blue Cone -->
-            <path d="M 474 310 Q 465 280 480 250 Q 495 280 486 310 Z" fill="url(#s11_flameInner)"/>
-            <ellipse cx="480" cy="245" rx="14" ry="7" fill="#ffffff" opacity="0.7"/>
-          </g>
-
-          <!-- Tripod Front Two Legs -->
+          <!-- Tripod Cast Iron Front Legs (Leg 1: left front; Leg 3: right front) -->
           <g id="s11_tripod_front">
             <!-- Left Front Leg -->
-            <line x1="375" y1="260" x2="330" y2="442" stroke="url(#s11_chrome)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="375" y1="260" x2="330" y2="442" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
+            <line x1="315" y1="330" x2="250" y2="495" stroke="url(#s11_tripodMetal)" stroke-width="10" stroke-linecap="round"/>
+            <ellipse cx="250" cy="495" rx="15" ry="5" fill="#0f172a"/>
             <!-- Right Front Leg -->
-            <line x1="585" y1="260" x2="630" y2="442" stroke="url(#s11_chrome)" stroke-width="10" stroke-linecap="round"/>
-            <line x1="585" y1="260" x2="630" y2="442" stroke="#1e293b" stroke-width="2" stroke-linecap="round"/>
-            <!-- Tripod Ring (Top Platform at y: 260) -->
-            <ellipse cx="480" cy="260" rx="120" ry="26" fill="none" stroke="url(#s11_tripodRing)" stroke-width="14"/>
-            <ellipse cx="480" cy="260" rx="120" ry="26" fill="none" stroke="#1e293b" stroke-width="2.5"/>
+            <line x1="485" y1="330" x2="550" y2="495" stroke="url(#s11_tripodMetal)" stroke-width="10" stroke-linecap="round"/>
+            <ellipse cx="550" cy="495" rx="15" ry="5" fill="#0f172a"/>
+
+            <!-- Tripod Heavy Top Ring -->
+            <ellipse cx="400" cy="330" rx="100" ry="16" fill="none" stroke="url(#s11_tripodMetal)" stroke-width="12"/>
+            <ellipse cx="400" cy="330" rx="100" ry="16" fill="none" stroke="#0f172a" stroke-width="2"/>
+            <text x="210" y="440" font-size="12" font-weight="900" fill="#334155">तिपाई स्टैंड (Tripod)</text>
+            <path d="M 270 435 L 290 410" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,2"/>
           </g>
 
-          <!-- Wire Gauze with Ceramic Center -->
+          <!-- ================= WIRE GAUZE WITH ASBESTOS CENTER ================= -->
           <g id="s11_wire_gauze">
-            <!-- Gauze Base Mesh at y: 255 -->
-            <polygon points="360,260 480,235 600,260 480,285" fill="url(#s11_gauzePat)" stroke="#334155" stroke-width="2.5"/>
-            <!-- Ceramic Center Disc -->
-            <ellipse cx="480" cy="258" rx="60" ry="15" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2" opacity="0.95"/>
-            <!-- Thermal Heat Glow when burning -->
-            <ellipse id="s11_gauze_glow" cx="480" cy="258" rx="48" ry="12" fill="#ea580c" opacity="0" style="transition: opacity 0.8s ease;"/>
-            <text x="310" y="255" font-size="14" font-weight="900" fill="#0f172a" text-anchor="end">तार की जाली (Wire Gauze)</text>
-            <line x1="315" y1="252" x2="370" y2="258" stroke="#1e293b" stroke-width="1.8"/>
+            <!-- Wire Mesh Oval -->
+            <ellipse cx="400" cy="326" rx="95" ry="14" fill="#64748b" fill-opacity="0.3" stroke="#475569" stroke-width="2"/>
+            <!-- Mesh Grid Lines -->
+            <path d="M 330 326 L 470 326 M 340 322 L 460 322 M 340 330 L 460 330 M 350 318 L 450 318 M 350 334 L 450 334" 
+                  stroke="#334155" stroke-width="1.2" opacity="0.6"/>
+            <path d="M 380 314 L 380 338 M 390 313 L 390 339 M 400 312 L 400 340 M 410 313 L 410 339 M 420 314 L 420 338" 
+                  stroke="#334155" stroke-width="1.2" opacity="0.6"/>
+
+            <!-- Asbestos Center Circle (Glows cherry-red during heating) -->
+            <ellipse id="s11_asbestos_center" cx="400" cy="326" rx="55" ry="9" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" style="transition: all 0.8s ease;"/>
+
+            <text x="590" y="440" font-size="12" font-weight="900" fill="#334155">तार की जाली (Wire Gauze)</text>
+            <path d="M 585 435 L 485 332" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,2"/>
           </g>
 
-          <!-- China Dish (Porcelain Evaporating Basin) at y: 242 -->
-          <g id="s11_china_dish_group">
-            <ellipse cx="480" cy="252" rx="88" ry="24" fill="#94a3b8" opacity="0.5"/>
-            <!-- Porcelain Bowl Exterior -->
-            <path d="M 390 238 C 390 270 570 270 570 238 Z" fill="url(#s11_dishGrad)" stroke="#334155" stroke-width="2.5"/>
-            <!-- Porcelain Dish Rim Opening -->
-            <ellipse cx="480" cy="238" rx="90" ry="22" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
-            <ellipse cx="480" cy="239" rx="84" ry="18" fill="#f1f5f9"/>
+          <!-- ================= CHINA DISH & COPPER POWDER ================= -->
+          <g id="s11_dish_group">
+            <!-- China Dish Shadow on Wire Gauze -->
+            <ellipse cx="400" cy="326" rx="80" ry="10" fill="#0f172a" opacity="0.3" filter="url(#s11_glow)"/>
 
-            <!-- Powder Bed Inside China Dish -->
-            <ellipse id="s11_cu_powder" cx="480" cy="242" rx="74" ry="15" fill="url(#s11_brownCu)" stroke="#9a3412" stroke-width="2" style="transition: all 1.2s ease;"/>
+            <!-- China Dish Porcelain Body (Ceramic Bowl) -->
+            <path d="M 315 305 Q 320 328 400 330 Q 480 328 485 305 Q 400 318 315 305 Z" 
+                  fill="url(#s11_dishOuter)" stroke="#cbd5e1" stroke-width="1.5" filter="url(#s11_shadow)"/>
+            <!-- China Dish Rim -->
+            <ellipse cx="400" cy="305" rx="86" ry="15" fill="url(#s11_dishInner)" stroke="#94a3b8" stroke-width="1.8"/>
 
-            <!-- China Dish Label -->
-            <text x="290" y="210" font-size="14" font-weight="900" fill="#0f172a" text-anchor="end">चाइना डिश (China Dish)</text>
-            <line x1="295" y1="210" x2="395" y2="236" stroke="#1e293b" stroke-width="1.8"/>
+            <!-- COPPER POWDER BED (Changes Color: Brown Cu ➔ Black CuO ➔ Brown Cu) -->
+            <ellipse id="s11_powder_bed" cx="400" cy="306" rx="72" ry="11" 
+                     fill="url(#s11_copperBrown)" style="transition: fill 1.2s cubic-bezier(0.4, 0, 0.2, 1);"/>
+
+            <!-- Powder Surface Granules / Sparkle Highlights -->
+            <g id="s11_powder_granules" opacity="0.7">
+              <circle cx="370" cy="305" r="1.8" fill="#fef08a"/>
+              <circle cx="430" cy="307" r="1.6" fill="#fef08a"/>
+              <circle cx="395" cy="303" r="2.0" fill="#fef08a"/>
+              <circle cx="415" cy="308" r="1.5" fill="#fde047"/>
+              <circle cx="385" cy="308" r="1.7" fill="#fde047"/>
+            </g>
+
+            <!-- Porcelain Dish Gloss Highlight Curve -->
+            <path d="M 324 306 Q 400 318 476 306" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.85" stroke-linecap="round"/>
+
+            <!-- Pointer Label to China Dish -->
+            <g transform="translate(140, 290)">
+              <rect x="0" y="0" width="130" height="26" rx="5" fill="#ffffff" stroke="#64748b" stroke-width="1.5" filter="url(#s11_shadow)"/>
+              <text x="65" y="17" font-size="11.5" font-weight="900" fill="#334155" text-anchor="middle">चाइना डिश (China Dish)</text>
+              <path d="M 130 13 L 315 305" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,2"/>
+            </g>
           </g>
 
-          <!-- Oxygen Intake Stream (Step 2) -->
-          <g id="s11_o2_flow" style="opacity: 0; transition: opacity 0.8s ease;">
-            <path d="M 320 150 Q 410 190 455 235" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-dasharray="7,4"/>
-            <path d="M 640 150 Q 550 190 505 235" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-dasharray="7,4"/>
-            <rect x="290" y="125" width="95" height="30" rx="8" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
-            <text x="337" y="146" font-size="14" font-weight="900" fill="#0284c7" text-anchor="middle">+ वायु (O₂)</text>
-            <rect x="580" y="125" width="95" height="30" rx="8" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
-            <text x="627" y="146" font-size="14" font-weight="900" fill="#0284c7" text-anchor="middle">+ वायु (O₂)</text>
-          </g>
-
-          <!-- H2 Delivery Tube & Gas Flow (Step 3) -->
-          <g id="s11_h2_tube" style="opacity: 0; transform: translate(-140px, 0); transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);">
-            <path d="M 180 120 L 360 120 Q 430 120 440 180 L 445 225" fill="none" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" opacity="0.35"/>
-            <path d="M 180 120 L 360 120 Q 430 120 440 180 L 445 225" fill="none" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
-            <path d="M 180 120 L 360 120 Q 430 120 440 180 L 445 225" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-            <!-- Gas Nozzle Jet blowing H2 -->
-            <path d="M 445 225 Q 475 235 505 240" fill="none" stroke="#0284c7" stroke-width="4.5" stroke-dasharray="5,3" stroke-linecap="round"/>
-            <!-- Label Badge -->
-            <rect x="170" y="75" width="180" height="34" rx="8" fill="#eff6ff" stroke="#0284c7" stroke-width="2"/>
-            <text x="260" y="98" font-size="14.5" font-weight="900" fill="#0284c7" text-anchor="middle">H₂ गैस प्रवाह (प्रवेश द्वार)</text>
-          </g>
-
-          <!-- Water Vapor / Steam Droplets Escaping (Step 3) -->
-          <g id="s11_water_vapors" style="opacity: 0; transition: opacity 0.8s ease;">
-            <path d="M 510 220 Q 535 180 520 140 Q 540 105 525 70" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round" opacity="0.8" stroke-dasharray="6,4"/>
-            <rect x="500" y="35" width="145" height="32" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-            <text x="572" y="56" font-size="14" font-weight="900" fill="#15803d" text-anchor="middle">+ H₂O वाष्प (Steam)</text>
-          </g>
-
-          <!-- Stage Dynamic Active Indicator Badge -->
-          <g id="s11_stage_badge" transform="translate(350, 25)">
-            <rect id="s11_label_box" x="0" y="0" width="260" height="40" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
-            <text id="s11_powder_label" x="130" y="26" font-size="15.5" font-weight="900" fill="#9a3412" text-anchor="middle">
-              भूरा कॉपर चूर्ण [Cu]
+          <!-- ================= INTERACTIVE OVERLAY LABELS & PROCESS EFFECTS ================= -->
+          <!-- State Label Badge right above China Dish (y = 80 to 116 - completely clear of all gas streams) -->
+          <g id="s11_powder_badge" transform="translate(400, 98)">
+            <rect id="s11_badge_rect" x="-140" y="-18" width="280" height="36" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2.2" filter="url(#s11_shadow)"/>
+            <text id="s11_badge_txt" x="0" y="5" font-size="13.5" font-weight="900" fill="#c2410c" text-anchor="middle">
+              भूरा कॉपर चूर्ण [Cu धातु]
             </text>
           </g>
 
-          <!-- ================= MASSIVE LIGHT PROJECTOR OBSERVATION PANEL (X: 770 to 1160, WIDTH: 390) ================= -->
-          <g id="s5_projector_panel" transform="translate(775, 25)" opacity="0" style="pointer-events:none; transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);">
-            <!-- Main Card Container -->
-            <rect x="0" y="0" width="390" height="495" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3.5" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.09))"/>
+          <!-- STEP 2 EFFECT: Atmospheric Oxygen (O2) Inflow Arrows -->
+          <g id="s11_o2_flow" opacity="0" style="transition: opacity 0.6s ease;">
+            <!-- Left O2 stream -->
+            <path d="M 260 170 Q 310 220 360 290" fill="none" stroke="#0284c7" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" style="animation: s11_gas_flow 1s linear infinite;"/>
+            <polygon points="360,290 350,280 365,278" fill="#0284c7"/>
+            <rect x="220" y="145" width="80" height="24" rx="4" fill="#eff6ff" stroke="#0284c7" stroke-width="1.5" filter="url(#s11_shadow)"/>
+            <text x="260" y="162" font-size="11.5" font-weight="900" fill="#0369a1" text-anchor="middle">+ O₂ (वायु)</text>
 
-            <!-- Card Header -->
-            <rect x="0" y="0" width="390" height="56" rx="18" fill="#1e3a8a"/>
-            <rect x="0" y="38" width="390" height="18" fill="#1e3a8a"/>
-            <text x="195" y="36" font-size="18.5" font-weight="900" fill="#ffffff" text-anchor="middle">
-              📊 रेडॉक्स प्रायोगिक प्रेक्षण
+            <!-- Right O2 stream -->
+            <path d="M 540 170 Q 490 220 440 290" fill="none" stroke="#0284c7" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" style="animation: s11_gas_flow 1s linear infinite;"/>
+            <polygon points="440,290 435,278 450,280" fill="#0284c7"/>
+            <rect x="500" y="145" width="80" height="24" rx="4" fill="#eff6ff" stroke="#0284c7" stroke-width="1.5" filter="url(#s11_shadow)"/>
+            <text x="540" y="162" font-size="11.5" font-weight="900" fill="#0369a1" text-anchor="middle">+ O₂ (वायु)</text>
+          </g>
+
+          <!-- STEP 3 EFFECT: Hydrogen (H2) Gas Delivery Tube & Water Vapors -->
+          <g id="s11_h2_assembly" opacity="0" style="transition: opacity 0.6s ease;">
+            <!-- Glass Delivery Tube delivering pure H2 gas -->
+            <path d="M 120 180 L 240 180 Q 285 180 310 220 L 345 295" 
+                  fill="none" stroke="#bae6fd" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+            <path d="M 120 180 L 240 180 Q 285 180 310 220 L 345 295" 
+                  fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 120 180 L 240 180 Q 285 180 310 220 L 345 295" 
+                  fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="8,6" stroke-linecap="round" style="animation: s11_gas_flow 0.8s linear infinite;"/>
+
+            <!-- H2 Gas Cylinder Source Badge (Positioned at x=70 to 180, y=142 to 170 - ZERO OVERLAP) -->
+            <rect x="70" y="142" width="115" height="28" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#s11_shadow)"/>
+            <text x="127" y="161" font-size="12" font-weight="900" fill="#1e40af" text-anchor="middle">H₂ गैस प्रवाह ➔</text>
+
+            <!-- Rising Steam / Water Vapors (H2O vapor clouds positioned to right at x=450 - ZERO OVERLAP) -->
+            <g id="s11_steam_group" transform="translate(450, 265)">
+              <g class="s11-steam-1">
+                <circle cx="0" cy="0" r="14" fill="#93c5fd" opacity="0.5" filter="url(#s11_glow)"/>
+                <circle cx="8" cy="-5" r="11" fill="#bae6fd" opacity="0.6"/>
+              </g>
+              <g class="s11-steam-2">
+                <circle cx="-15" cy="-8" r="16" fill="#93c5fd" opacity="0.45" filter="url(#s11_glow)"/>
+                <circle cx="-10" cy="-14" r="12" fill="#bae6fd" opacity="0.6"/>
+              </g>
+              <g class="s11-steam-3">
+                <circle cx="15" cy="-10" r="15" fill="#93c5fd" opacity="0.4" filter="url(#s11_glow)"/>
+              </g>
+              <!-- Steam Badge (Positioned at x=10 to 125, y=-75 to -50 -> absolute x=460 to 575, y=190 to 215 - ZERO OVERLAP) -->
+              <rect x="10" y="-75" width="115" height="25" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" filter="url(#s11_shadow)"/>
+              <text x="67" y="-58" font-size="11.5" font-weight="900" fill="#15803d" text-anchor="middle">H₂O भाप (वाष्प) ↑</text>
+            </g>
+          </g>
+
+          <!-- ======================================================================
+               LIVE PROJECTOR OBSERVATION BOARD (Fixed on Right: x=800 to 1180)
+               ====================================================================== -->
+          <g id="s11_projector_panel" transform="translate(800, 20)">
+            <rect x="0" y="0" width="380" height="540" rx="14" fill="#ffffff" stroke="#c2410c" stroke-width="3" filter="url(#s11_shadow)"/>
+            <rect x="0" y="0" width="380" height="46" rx="14" fill="#c2410c"/>
+            <text x="190" y="30" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+              📊 RedOx (उपचयन-अपचयन) प्रायोगिक डेटा
             </text>
 
-            <!-- Phase Status Badge -->
-            <rect id="s11_card_phase_box" x="16" y="70" width="358" height="42" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
-            <text id="s11_card_phase" x="195" y="97" font-size="16.5" font-weight="900" fill="#1e3a8a" text-anchor="middle">
-              चरण 1: कॉपर धातु (भूरा)
+            <!-- Card 1: Active Stage Header -->
+            <rect x="12" y="58" width="356" height="42" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.8"/>
+            <text id="s11_card_stage_title" x="190" y="85" font-size="14" font-weight="900" fill="#c2410c" text-anchor="middle">
+              चरण 1: शुद्ध चमकदार भूरा कॉपर चूर्ण
             </text>
 
-            <!-- Observation Rows -->
-            <g transform="translate(16, 124)">
-              <!-- Row 1 -->
-              <rect x="0" y="0" width="358" height="68" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="16" y="25" font-size="14" font-weight="800" fill="#64748b">पदार्थ का रंग एवं संघटन:</text>
-              <text id="s11_card_obs1" x="16" y="52" font-size="17" font-weight="900" fill="#0f172a">भूरा चमकदार कॉपर (Cu)</text>
+            <!-- Card 2: Color and State Observation -->
+            <g transform="translate(12, 110)">
+              <rect x="0" y="0" width="356" height="66" rx="8" fill="#f8fafc" stroke="#fed7aa" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="12.5" font-weight="800" fill="#475569">पदार्थ का रंग व भौतिक अवस्था:</text>
+              <text id="s11_card_color_text" x="14" y="48" font-size="15" font-weight="900" fill="#b45309">
+                चमकदार लाल-भूरा चूर्ण [Cu धातु]
+              </text>
+            </g>
 
-              <!-- Row 2 -->
-              <rect x="0" y="80" width="358" height="68" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="16" y="105" font-size="14" font-weight="800" fill="#64748b">अभिक्रिया का प्रकार:</text>
-              <text id="s11_card_obs2" x="16" y="132" font-size="17" font-weight="900" fill="#065f46">प्रारंभिक अवस्था (No Reaction)</text>
+            <!-- Card 3: Chemical Equation & Reaction Type -->
+            <g transform="translate(12, 186)">
+              <rect x="0" y="0" width="356" height="80" rx="8" fill="#f8fafc" stroke="#93c5fd" stroke-width="1.5"/>
+              <text x="14" y="22" font-size="12" font-weight="800" fill="#475569">रासायनिक अभिक्रिया व प्रकार:</text>
+              <text id="s11_card_eq_text" x="14" y="46" font-size="14.5" font-weight="900" fill="#0f172a">
+                बर्नर बंद (कोई अभिक्रिया नहीं)
+              </text>
+              <text id="s11_card_type_text" x="14" y="68" font-size="12" font-weight="800" fill="#2563eb">
+                प्रारंभिक अभिकर्मक: शुद्ध कॉपर धातु
+              </text>
+            </g>
 
-              <!-- Row 3 -->
-              <rect x="0" y="160" width="358" height="92" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2.5"/>
-              <text x="16" y="185" font-size="14" font-weight="800" fill="#1e40af">समीकरण:</text>
-              <text id="s11_card_eq" x="16" y="214" font-size="17" font-weight="900" fill="#1e3a8a">2Cu + O₂ ➔ 2CuO</text>
-              <text id="s11_card_eq_sub" x="16" y="238" font-size="14" font-weight="800" fill="#047857">चमकदार से काला CuO लेप</text>
+            <!-- Card 4: RedOx Detailed Analysis Table (Step 4 Prominent) -->
+            <g id="s11_card_redox_box" transform="translate(12, 276)">
+              <rect x="0" y="0" width="356" height="175" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+              <text x="14" y="24" font-size="13" font-weight="900" fill="#166534">🧪 रेडॉक्स (RedOx) अभिक्रिया विश्लेषण:</text>
+              
+              <!-- Row 1: Oxidized -->
+              <rect x="12" y="36" width="332" height="30" rx="5" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+              <text x="22" y="56" font-size="11.5" font-weight="800" fill="#1e40af">उपचयित पदार्थ:</text>
+              <text id="s11_card_ox_sub" x="330" y="56" font-size="12" font-weight="900" fill="#2563eb" text-anchor="end">H₂ ➔ H₂O (O का योग)</text>
 
-              <!-- Row 4 -->
-              <rect x="0" y="264" width="358" height="92" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
-              <text x="16" y="290" font-size="14" font-weight="900" fill="#9a3412">📌 रेडॉक्स (RedOx) नियम:</text>
-              <text id="s11_card_rule" x="16" y="318" font-size="16" font-weight="900" fill="#78350f">ऑक्सीजन जुड़ना = उपचयन</text>
-              <text x="16" y="342" font-size="13.5" font-weight="800" fill="#047857">ऑक्सीजन हटना = अपचयन</text>
+              <!-- Row 2: Reduced -->
+              <rect x="12" y="70" width="332" height="30" rx="5" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2"/>
+              <text x="22" y="90" font-size="11.5" font-weight="800" fill="#9a3412">अपचयित पदार्थ:</text>
+              <text id="s11_card_red_sub" x="330" y="90" font-size="12" font-weight="900" fill="#ea580c" text-anchor="end">CuO ➔ Cu (O का ह्रास)</text>
+
+              <!-- Row 3: Oxidizing Agent -->
+              <rect x="12" y="104" width="332" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+              <text x="22" y="124" font-size="11.5" font-weight="800" fill="#334155">ऑक्सीकारक (दाता):</text>
+              <text id="s11_card_ox_agent" x="330" y="124" font-size="12" font-weight="900" fill="#0f172a" text-anchor="end">CuO (ऑक्सीजन दाता)</text>
+
+              <!-- Row 4: Reducing Agent -->
+              <rect x="12" y="138" width="332" height="30" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+              <text x="22" y="158" font-size="11.5" font-weight="800" fill="#334155">अपचायक (ग्राही):</text>
+              <text id="s11_card_red_agent" x="330" y="158" font-size="12" font-weight="900" fill="#059669" text-anchor="end">H₂ (ऑक्सीजन ग्राही)</text>
+            </g>
+
+            <!-- Card 5: Bottom Rule Badge -->
+            <g transform="translate(12, 462)">
+              <rect x="0" y="0" width="356" height="42" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+              <text id="s11_card_rule" x="178" y="26" font-size="12.5" font-weight="900" fill="#15803d" text-anchor="middle">
+                📌 O का योग = उपचयन | O का हटना = अपचयन
+              </text>
             </g>
           </g>
         </svg>
@@ -6847,124 +6986,175 @@ function sim4Reset() {
     }
 
     /* --- SIMULATOR 11: COPPER REDOX OXIDATION & REDUCTION (GOLD STANDARD) --- */
-        /* ==========================================================
-       SIMULATOR 11: COPPER REDOX 16:9 PROJECTOR MASTER SCRIPT
-       ========================================================== */
+        /* --- SIMULATOR 11: REDOX REACTIONS (NCERT 1.11 GOLD STANDARD) --- */
     function sim11Reset() {
       clearSimTimers(11);
-      var pbar = document.getElementById('sim11_pbar'); if (pbar) pbar.style.width = '0%';
-      var st = document.getElementById('sim11_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> तिपाई स्टैंड पर चाइना डिश में चमकदार भूरा कॉपर चूर्ण तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
-
-      if (window.gsap) {
-        gsap.to('#s11_flame', { opacity: 0, duration: 0.4 });
-        gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 0.6 });
-        gsap.to('#s11_o2_flow', { opacity: 0, duration: 0.4 });
-        gsap.to('#s11_h2_tube', { opacity: 0, duration: 0.4 });
-        gsap.to('#s11_water_vapors', { opacity: 0, duration: 0.4 });
-        gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
-      } else {
-        var flame = document.getElementById('s11_flame'); if (flame) flame.style.opacity = '0';
-        var powder = document.getElementById('s11_china_dish_powder'); if (powder) powder.setAttribute('fill', 'url(#s11_copperBrown)');
-        var o2 = document.getElementById('s11_o2_flow'); if (o2) o2.style.opacity = '0';
-        var h2 = document.getElementById('s11_h2_tube'); if (h2) h2.style.opacity = '0';
-        var vap = document.getElementById('s11_water_vapors'); if (vap) vap.style.opacity = '0';
-        var panel = document.getElementById('s11_projector_panel'); if (panel) { panel.style.opacity = '0'; panel.style.pointerEvents = 'none'; }
-      }
-
-      var lBox = document.getElementById('s11_label_box'); if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
-      var lTxt = document.getElementById('s11_powder_label'); if (lTxt) { lTxt.textContent = 'भूरा कॉपर चूर्ण [Cu]'; lTxt.setAttribute('fill', '#9a3412'); }
-
       var btn = document.getElementById('sim11_play_btn'); if (btn) btn.disabled = false;
+      sim11Step(1);
     }
 
-    function sim11Step(s) {
+    function sim11Step(step) {
+      clearSimTimers(11);
+      for (var i = 1; i <= 4; i++) {
+        var b = document.getElementById('sim11_btn' + i);
+        if (b) {
+          b.style.opacity = (i === step) ? '1' : '0.65';
+          b.style.transform = (i === step) ? 'scale(1.03)' : 'scale(1)';
+        }
+      }
+
+      var flame = document.getElementById('s11_flame');
+      var asbestos = document.getElementById('s11_asbestos_center');
+      var powder = document.getElementById('s11_powder_bed');
+      var granules = document.getElementById('s11_powder_granules');
+      var badgeRect = document.getElementById('s11_badge_rect');
+      var badgeTxt = document.getElementById('s11_badge_txt');
+      var o2Flow = document.getElementById('s11_o2_flow');
+      var h2Assembly = document.getElementById('s11_h2_assembly');
+      var bannerTxt = document.getElementById('s11_stage_title_banner');
+
+      // Projector Board Elements
+      var cStage = document.getElementById('s11_card_stage_title');
+      var cColor = document.getElementById('s11_card_color_text');
+      var cEq = document.getElementById('s11_card_eq_text');
+      var cType = document.getElementById('s11_card_type_text');
+      var cOxSub = document.getElementById('s11_card_ox_sub');
+      var cRedSub = document.getElementById('s11_card_red_sub');
+      var cOxAgent = document.getElementById('s11_card_ox_agent');
+      var cRedAgent = document.getElementById('s11_card_red_agent');
+      var cRule = document.getElementById('s11_card_rule');
       var st = document.getElementById('sim11_status');
-      var pbar = document.getElementById('sim11_pbar');
-      var lBox = document.getElementById('s11_label_box');
-      var lTxt = document.getElementById('s11_powder_label');
-      var ph = document.getElementById('s11_card_phase');
-      var obs1 = document.getElementById('s11_card_obs1');
-      var obs2 = document.getElementById('s11_card_obs2');
 
-      if (s === 1) {
-        if (pbar) pbar.style.width = '25%';
-        sim11Reset();
-        if (st) st.innerHTML = '<strong>चरण 1 (प्रारंभिक अवस्था):</strong> चाइना डिश में शुद्ध लाल-भूरे रंग का कॉपर चूर्ण (Cu) लिया गया है। बर्नर बंद है।';
-      } else if (s === 2) {
-        if (pbar) pbar.style.width = '50%';
-        if (window.gsap) {
-          gsap.to('#s11_flame', { opacity: 1, duration: 0.6 });
-          gsap.to('#s11_o2_flow', { opacity: 1, duration: 0.8 });
-          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_blackCuO)', duration: 1.5 });
-          gsap.to('#s11_h2_tube', { opacity: 0, duration: 0.4 });
-          gsap.to('#s11_water_vapors', { opacity: 0, duration: 0.4 });
-          gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
-        }
+      if (step === 1) {
+        // Step 1: Initial state (Unheated brown copper powder)
+        if (flame) flame.style.opacity = '0';
+        if (asbestos) { asbestos.setAttribute('fill', '#e2e8f0'); asbestos.setAttribute('stroke', '#94a3b8'); }
+        if (powder) powder.setAttribute('fill', 'url(#s11_copperBrown)');
+        if (granules) granules.style.opacity = '0.75';
+        if (o2Flow) o2Flow.style.opacity = '0';
+        if (h2Assembly) h2Assembly.style.opacity = '0';
 
-        if (lBox) { lBox.setAttribute('fill', '#f1f5f9'); lBox.setAttribute('stroke', '#0f172a'); }
-        if (lTxt) { lTxt.textContent = 'काला कॉपर(II) ऑक्साइड [CuO] - उपचयन'; lTxt.setAttribute('fill', '#0f172a'); }
-        if (ph) ph.textContent = 'चरण 2: वायु में तापन व उपचयन (काला CuO)';
-        if (obs1) obs1.textContent = 'काला कॉपर(II) ऑक्साइड [CuO]';
-        if (obs2) obs2.textContent = 'उपचयन (ऑक्सीजन का योग)';
+        if (badgeRect) { badgeRect.setAttribute('fill', '#fff7ed'); badgeRect.setAttribute('stroke', '#ea580c'); }
+        if (badgeTxt) { badgeTxt.textContent = 'भूरा कॉपर चूर्ण [Cu धातु]'; badgeTxt.setAttribute('fill', '#c2410c'); }
+        if (bannerTxt) bannerTxt.textContent = '1. चाइना डिश में भूरा कॉपर चूर्ण (प्रारंभिक अवस्था)';
 
-        if (st) st.innerHTML = '<strong>चरण 2 (उपचयन अभिक्रिया - काला CuO बनना):</strong> कॉपर चूर्ण को वायु में गर्म करने पर कॉपर ऑक्सीजन से क्रिया करके काले रंग के <strong>कॉपर(II) ऑक्साइड (CuO)</strong> की परत में बदल जाता है (2Cu + O₂ ➔ 2CuO)। इसमें कॉपर का <strong>उपचयन (Oxidation)</strong> हुआ है।';
-      } else if (s === 3) {
-        if (pbar) pbar.style.width = '75%';
-        if (window.gsap) {
-          gsap.to('#s11_flame', { opacity: 0.6, duration: 0.6 });
-          gsap.to('#s11_o2_flow', { opacity: 0, duration: 0.4 });
-          gsap.to('#s11_h2_tube', { opacity: 1, duration: 0.8 });
-          gsap.to('#s11_water_vapors', { opacity: 1, duration: 0.8, delay: 0.4 });
-          // Restoring back to reddish-brown copper!
-          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 2, delay: 0.6 });
-          gsap.to('#s11_projector_panel', { opacity: 0, pointerEvents: 'none', duration: 0.4 });
-        }
+        // Projector Data
+        if (cStage) cStage.textContent = 'चरण 1: शुद्ध चमकदार भूरा कॉपर चूर्ण';
+        if (cColor) { cColor.textContent = 'चमकदार लाल-भूरा चूर्ण [Cu धातु]'; cColor.setAttribute('fill', '#b45309'); }
+        if (cEq) cEq.textContent = 'बर्नर बंद (कोई रासायनिक अभिक्रिया नहीं)';
+        if (cType) cType.textContent = 'प्रारंभिक अभिकर्मक: शुद्ध कॉपर धातु';
+        if (cOxSub) cOxSub.textContent = 'प्रतीक्षारत...';
+        if (cRedSub) cRedSub.textContent = 'प्रतीक्षारत...';
+        if (cOxAgent) cOxAgent.textContent = 'प्रतीक्षारत...';
+        if (cRedAgent) cRedAgent.textContent = 'प्रतीक्षारत...';
+        if (cRule) cRule.textContent = '📌 चरण 2 दबाकर बर्नर की लौ पर गर्म करें';
 
-        if (lBox) { lBox.setAttribute('fill', '#fff7ed'); lBox.setAttribute('stroke', '#ea580c'); }
-        if (lTxt) { lTxt.textContent = 'H₂ गैस प्रवाह: पुनः भूरा कॉपर [Cu] - अपचयन'; lTxt.setAttribute('fill', '#9a3412'); }
-        if (ph) ph.textContent = 'चरण 3: H₂ गैस प्रवाह व अपचयन';
-        if (obs1) obs1.textContent = 'पुनः चमकदार भूरा कॉपर (Cu) + H₂O भाप';
-        if (obs2) obs2.textContent = 'अपचयन (CuO से ऑक्सीजन हटी)';
+        if (st) st.innerHTML = '<span style="color:#c2410c; font-size:16px;"><strong>चरण 1 (प्रारंभिक अवस्था):</strong></span> चाइना डिश में लगभग 1 ग्राम शुद्ध चमकदार लाल-भूरे रंग का <strong>कॉपर चूर्ण (Cu Powder)</strong> लिया गया है। इसे तिपाई स्टैंड पर रखी तार की जाली के ऊपर रखा गया है। अभी बर्नर बंद है।';
+      } else if (step === 2) {
+        // Step 2: Heating in air -> Oxidation (Copper turns black CuO)
+        if (flame) flame.style.opacity = '1';
+        if (asbestos) { asbestos.setAttribute('fill', '#f97316'); asbestos.setAttribute('stroke', '#ea580c'); }
+        if (powder) powder.setAttribute('fill', 'url(#s11_blackCuO)');
+        if (granules) granules.style.opacity = '0.2';
+        if (o2Flow) o2Flow.style.opacity = '1';
+        if (h2Assembly) h2Assembly.style.opacity = '0';
 
-        if (st) st.innerHTML = '<strong>चरण 3 (अपचयन अभिक्रिया - पुनः भूरा कॉपर):</strong> गर्म काले CuO के ऊपर हाइड्रोजन (H₂) गैस प्रवाहित करने पर काली सतह पुनः चमकदार <strong>भूरे रंग के कॉपर (Cu)</strong> में बदल जाती है तथा जलवाष्प बनती है (CuO + H₂ ➔ Cu + H₂O)। इसमें CuO का <strong>अपचयन (Reduction)</strong> हुआ है।';
-      } else if (s === 4) {
-        if (pbar) pbar.style.width = '100%';
-        if (window.gsap) {
-          gsap.to('#s11_flame', { opacity: 0, duration: 0.4 });
-          gsap.to('#s11_h2_tube', { opacity: 0.4, duration: 0.5 });
-          gsap.to('#s11_water_vapors', { opacity: 0.4, duration: 0.5 });
-          gsap.to('#s11_china_dish_powder', { fill: 'url(#s11_copperBrown)', duration: 0.6 });
-          // Live Data observation panel smoothly appears in Step 4!
-          gsap.to('#s11_projector_panel', { opacity: 1, pointerEvents: 'auto', duration: 0.8, delay: 0.5 });
-        }
+        if (badgeRect) { badgeRect.setAttribute('fill', '#f1f5f9'); badgeRect.setAttribute('stroke', '#0f172a'); }
+        if (badgeTxt) { badgeTxt.textContent = 'काला कॉपर(II) ऑक्साइड [CuO] - उपचयन'; badgeTxt.setAttribute('fill', '#0f172a'); }
+        if (bannerTxt) bannerTxt.textContent = '2. लौ पर तापन: O₂ से उपचयन ➔ काला CuO';
 
-        if (lBox) { lBox.setAttribute('fill', '#eff6ff'); lBox.setAttribute('stroke', '#2563eb'); }
-        if (lTxt) { lTxt.textContent = 'रेडॉक्स (RedOx) निष्कर्ष व रासायनिक समीकरण'; lTxt.setAttribute('fill', '#1e3a8a'); }
-        if (ph) ph.textContent = 'चरण 4: रेडॉक्स अभिक्रिया निष्कर्ष';
+        // Projector Data
+        if (cStage) cStage.textContent = 'चरण 2: वायु में तापन व उपचयन (Oxidation)';
+        if (cColor) { cColor.textContent = 'जेट काला लेप [कॉपर(II) ऑक्साइड, CuO]'; cColor.setAttribute('fill', '#0f172a'); }
+        if (cEq) cEq.textContent = '2Cu(s) + O₂(g) ➔ 2CuO(s) [काला]';
+        if (cType) cType.textContent = 'उपचयन अभिक्रिया (Cu में ऑक्सीजन का योग)';
+        if (cOxSub) cOxSub.textContent = 'Cu ➔ CuO (ऑक्सीजन का योग हुआ)';
+        if (cRedSub) cRedSub.textContent = 'O₂ ➔ CuO (इलेक्ट्रॉन ग्रहण)';
+        if (cOxAgent) cOxAgent.textContent = 'O₂ गैस (ऑक्सीकारक)';
+        if (cRedAgent) cRedAgent.textContent = 'Cu धातु (अपचायक)';
+        if (cRule) cRule.textContent = '✓ ऑक्सीजन का जुड़ना = उपचयन (Oxidation)';
 
-        if (st) st.innerHTML = '<span style="color:#1d4ed8; font-size:16px;"><strong>चरण 4 (रेडॉक्स अभिक्रिया निष्कर्ष व संतुलित रासायनिक समीकरण):</strong></span><br>' +
-          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#eff6ff; padding:6px 14px; border-radius:8px; border:2px solid #93c5fd; color:#1e40af; font-weight:900;">' +
-          'CuO(s) + H₂(g) ➔ <strong>Cu(s) (अपचयित, भूरा)</strong> + <strong>H₂O(l) (उपचयित)</strong>' +
+        if (st) st.innerHTML = '<span style="color:#d97706; font-size:16px;"><strong>चरण 2 (उपचयन अभिक्रिया - काला CuO बनना):</strong></span> बर्नर जलाकर चाइना डिश को तेज गर्म किया जाता है। कॉपर चूर्ण वायुमंडल की ऑक्सीजन से अभिक्रिया करता है और उसकी सतह पर <strong>काले रंग के कॉपर(II) ऑक्साइड (CuO)</strong> की परत जम जाती है:<br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#eff6ff; padding:5px 12px; border-radius:6px; border:2px solid #bfdbfe; color:#1e40af; font-weight:900;">' +
+          '2Cu(s) + O₂(g) ➔ 2CuO(s) (काला पदार्थ)' +
           '</span><br>' +
-          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">इस अभिक्रिया में CuO से ऑक्सीजन हटी (अतः CuO का <strong>अपचयन</strong> हुआ), जबकि H₂ में ऑक्सीजन जुड़ी (अतः H₂ का <strong>उपचयन</strong> हुआ)। चूंकि उपचयन व अपचयन दोनों साथ-साथ होते हैं, अतः इसे <strong>रेडॉक्स अभिक्रिया (RedOx Reaction)</strong> कहते हैं।</span>';
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">चूंकि इस अभिक्रिया में कॉपर में ऑक्सीजन का योग (जुड़ना) हुआ है, अतः कॉपर का <strong>उपचयन (Oxidation)</strong> हुआ है।</span>';
+      } else if (step === 3) {
+        // Step 3: Passing H2 gas -> Reduction (Turns back to brown Copper)
+        if (flame) flame.style.opacity = '0.7';
+        if (asbestos) { asbestos.setAttribute('fill', '#ea580c'); asbestos.setAttribute('stroke', '#c2410c'); }
+        if (powder) powder.setAttribute('fill', 'url(#s11_copperBrown)');
+        if (granules) granules.style.opacity = '0.8';
+        if (o2Flow) o2Flow.style.opacity = '0';
+        if (h2Assembly) h2Assembly.style.opacity = '1';
+
+        if (badgeRect) { badgeRect.setAttribute('fill', '#eff6ff'); badgeRect.setAttribute('stroke', '#2563eb'); }
+        if (badgeTxt) { badgeTxt.textContent = 'H₂ प्रवाह: पुनः भूरा कॉपर [Cu धातु] - अपचयन'; badgeTxt.setAttribute('fill', '#1d4ed8'); }
+        if (bannerTxt) bannerTxt.textContent = '3. H₂ गैस प्रवाह: अपचयन ➔ पुनः चमकदार भूरा Cu';
+
+        // Projector Data
+        if (cStage) cStage.textContent = 'चरण 3: H₂ प्रवाह व अपचयन (Reduction)';
+        if (cColor) { cColor.textContent = 'पुनः चमकदार लाल-भूरा [Cu] + H₂O भाप'; cColor.setAttribute('fill', '#b45309'); }
+        if (cEq) cEq.textContent = 'CuO(s) + H₂(g) ➔ Cu(s) + H₂O(g)↑';
+        if (cType) cType.textContent = 'अपचयन अभिक्रिया (CuO से ऑक्सीजन का हटना)';
+        if (cOxSub) cOxSub.textContent = 'H₂ ➔ H₂O (ऑक्सीजन का योग ➔ उपचयन)';
+        if (cRedSub) cRedSub.textContent = 'CuO ➔ Cu (ऑक्सीजन का हटना ➔ अपचयन)';
+        if (cOxAgent) cOxAgent.textContent = 'CuO (ऑक्सीजन दाता ➔ उपचायक)';
+        if (cRedAgent) cRedAgent.textContent = 'H₂ (ऑक्सीजन ग्राही ➔ अपचायक)';
+        if (cRule) cRule.textContent = '✓ ऑक्सीजन का ह्रास = अपचयन (Reduction)';
+
+        if (st) st.innerHTML = '<span style="color:#2563eb; font-size:16px;"><strong>चरण 3 (अपचयन अभिक्रिया - पुनः भूरा कॉपर):</strong></span> इस गर्म काले पदार्थ (CuO) के ऊपर जब हाइड्रोजन (H₂) गैस प्रवाहित की जाती है, तो काली सतह पुनः <strong>चमकदार भूरे रंग के कॉपर (Cu)</strong> में बदल जाती है तथा जलवाष्प (H₂O) निकलती है:<br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#f0fdf4; padding:5px 12px; border-radius:6px; border:2px solid #86efac; color:#166534; font-weight:900;">' +
+          'CuO(s) [काला] + H₂(g) ➔ Cu(s) [भूरा] + H₂O(g)↑' +
+          '</span><br>' +
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;">चूंकि CuO से ऑक्सीजन हट गई है, अतः CuO का <strong>अपचयन (Reduction)</strong> हुआ है और H₂ में ऑक्सीजन जुड़कर जल बना है, अतः H₂ का <strong>उपचयन (Oxidation)</strong> हुआ है।</span>';
+      } else if (step === 4) {
+        // Step 4: RedOx Comprehensive Analysis
+        if (flame) flame.style.opacity = '0.7';
+        if (asbestos) { asbestos.setAttribute('fill', '#ea580c'); }
+        if (powder) powder.setAttribute('fill', 'url(#s11_copperBrown)');
+        if (granules) granules.style.opacity = '0.8';
+        if (o2Flow) o2Flow.style.opacity = '0';
+        if (h2Assembly) h2Assembly.style.opacity = '1';
+
+        if (badgeRect) { badgeRect.setAttribute('fill', '#f5f3ff'); badgeRect.setAttribute('stroke', '#7c3aed'); }
+        if (badgeTxt) { badgeTxt.textContent = 'रेडॉक्स (RedOx): उपचयन + अपचयन साथ-साथ'; badgeTxt.setAttribute('fill', '#6d28d9'); }
+        if (bannerTxt) bannerTxt.textContent = '4. संपूर्ण रेडॉक्स (RedOx) अभिक्रिया विश्लेषण';
+
+        // Projector Data
+        if (cStage) cStage.textContent = 'चरण 4: रेडॉक्स (RedOx) अभिक्रिया निष्कर्ष';
+        if (cColor) { cColor.textContent = 'Cu ➔ CuO (उपचयन) | CuO ➔ Cu (अपचयन)'; cColor.setAttribute('fill', '#7c3aed'); }
+        if (cEq) cEq.textContent = 'CuO + H₂ ➔ Cu [अपचयित] + H₂O [उपचयित]';
+        if (cType) cType.textContent = 'रेडॉक्स अभिक्रिया (RedOx Reaction)';
+        if (cOxSub) cOxSub.textContent = 'H₂ (उपचयित होकर H₂O बना)';
+        if (cRedSub) cRedSub.textContent = 'CuO (अपचयित होकर Cu बना)';
+        if (cOxAgent) cOxAgent.textContent = 'CuO (ऑक्सीकारक / उपचायक)';
+        if (cRedAgent) cRedAgent.textContent = 'H₂ (अपचायक / Reducing Agent)';
+        if (cRule) cRule.textContent = '✓ उपचयन + अपचयन = रेडॉक्स अभिक्रिया (RedOx)';
+
+        if (st) st.innerHTML = '<span style="color:#7c3aed; font-size:16px;"><strong>चरण 4 (रेडॉक्स अभिक्रिया निष्कर्ष व परीक्षा दृष्टि):</strong></span><br>' +
+          '<span style="display:inline-block; margin-top:6px; font-size:15px; background:#f5f3ff; padding:6px 14px; border-radius:8px; border:2px solid #ddd6fe; color:#5b21b6; font-weight:900;">' +
+          'CuO(s) + H₂(g) ➔ Cu(s) + H₂O(l)' +
+          '</span><br>' +
+          '<span style="font-size:14px; color:#334155; margin-top:4px; display:inline-block;"><strong>रेडॉक्स परिभाषा:</strong> किसी अभिक्रिया में एक अभिकारक उपचयित (Oxidized) तथा दूसरा अभिकारक अपचयित (Reduced) होता है, तो ऐसी अभिक्रिया को <strong>उपचयन-अपचयन अथवा रेडॉक्स (RedOx) अभिक्रिया</strong> कहते हैं।<br>' +
+          '• <strong>उपचयित पदार्थ:</strong> H₂ (ऑक्सीजन ग्रहण की)<br>' +
+          '• <strong>अपचयित पदार्थ:</strong> CuO (ऑक्सीजन त्यागी)<br>' +
+          '• <strong>ऑक्सीकारक (उपचायक):</strong> CuO (जिसने ऑक्सीजन दी)<br>' +
+          '• <strong>अपचायक:</strong> H₂ (जिसने ऑक्सीजन ग्रहण की)</span>';
       }
     }
 
-        function sim11PlayAuto() {
+    function sim11PlayAuto() {
       sim11Reset();
       var btn = document.getElementById('sim11_play_btn'); if (btn) btn.disabled = true;
       sim11Step(1);
-      addSimTimer(11, setTimeout(function() { sim11Step(2); }, 2200));
-      addSimTimer(11, setTimeout(function() { sim11Step(3); }, 7000));
+      addSimTimer(11, setTimeout(function() { sim11Step(2); }, 2500));
+      addSimTimer(11, setTimeout(function() { sim11Step(3); }, 7500));
       addSimTimer(11, setTimeout(function() {
         sim11Step(4);
         if (btn) btn.disabled = false;
-      }, 12500));
+      }, 13000));
     }
-    
-  
-
   </script>
 </body>
 </html>
