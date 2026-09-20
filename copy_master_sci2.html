@@ -4463,131 +4463,237 @@
 
       <div class="sim-stage" id="sim2_nonmetal_ox_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
         <svg id="sim2_nonmetal_ox_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
-        <defs>
-          <!-- 3D Glass Specular Reflection Gradient -->
-          <linearGradient id="ch2_glass3D" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
-            <stop offset="12%" stop-color="#e0f2fe" stop-opacity="0.25"/>
-            <stop offset="78%" stop-color="#bae6fd" stop-opacity="0.25"/>
-            <stop offset="90%" stop-color="#38bdf8" stop-opacity="0.45"/>
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
-          </linearGradient>
+          <defs>
+            <!-- 3D Workbench Gradient -->
+            <linearGradient id="snm_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
 
-          <!-- 3D Iridescent Gas Bubble Radial Gradient -->
-          <radialGradient id="ch2_bubbleGrad" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-            <stop offset="45%" stop-color="#e0f2fe" stop-opacity="0.8"/>
-            <stop offset="85%" stop-color="#38bdf8" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
-          </radialGradient>
+            <!-- Bright Iridescent Neon Gas Bubble Radial Gradient -->
+            <radialGradient id="snm_brightBubble" cx="30%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+              <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+              <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95"/>
+            </radialGradient>
 
-          <!-- Pouring Liquid Stream Gradient -->
-          <linearGradient id="ch2_streamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9"/>
-            <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.95"/>
-            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95"/>
-          </linearGradient>
+            <!-- Glass Specular Gradient -->
+            <linearGradient id="snm_glassSpecular" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+              <stop offset="15%" stop-color="#ffffff" stop-opacity="0.2"/>
+              <stop offset="85%" stop-color="#ffffff" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+            </linearGradient>
 
-          <!-- Acid Stream Gradient (HCl Red/Pink) -->
-          <linearGradient id="ch2_acidStreamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#fca5a5" stop-opacity="0.9"/>
-            <stop offset="50%" stop-color="#ef4444" stop-opacity="0.95"/>
-            <stop offset="100%" stop-color="#dc2626" stop-opacity="0.95"/>
-          </linearGradient>
+            <!-- Cylinder Metallic Shading Gradient -->
+            <linearGradient id="snm_cylGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#1e293b"/>
+              <stop offset="30%" stop-color="#475569"/>
+              <stop offset="70%" stop-color="#334155"/>
+              <stop offset="100%" stop-color="#0f172a"/>
+            </linearGradient>
+          </defs>
 
-          <!-- Realistic Bunsen Flame 3D Filter -->
-          <filter id="ch2_flameGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-          </filter>
-        </defs>
+          <!-- 3D WORKBENCH (Table) -->
+          <polygon points="20,405 705,405 680,490 20,490" fill="url(#snm_benchTop)"/>
+          <rect x="20" y="490" width="660" height="38" fill="#0f172a"/>
 
-          <!-- 3D WORKBENCH -->
-          <polygon points="20,410 710,410 680,490 20,490" fill="#334155"/>
-          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+          <!-- REAGENT MAT / STAND FOR CYLINDER -->
+          <rect x="75" y="375" width="110" height="32" rx="5" fill="#334155" stroke="#1e293b" stroke-width="1.8"/>
 
-          <!-- TEST TUBE STAND HOLDING TUBE (X: 260, Y: 140) -->
-          <g transform="translate(260, 140)">
-            <!-- Glass Body -->
-            <rect x="15" y="20" width="70" height="220" rx="14" fill="#e0f2fe" opacity="0.3" stroke="#0284c7" stroke-width="2.2"/>
-            <!-- Liquid in Tube: Clear initially (#e0f2fe), turns milky white (#ffffff) -->
-            <rect id="snm_liquid" x="18" y="100" width="64" height="135" rx="8" fill="#e0f2fe" opacity="0.8" style="transition: fill 0.6s ease;"/>
-            <!-- Meniscus -->
-            <ellipse id="snm_meniscus" cx="50" cy="100" rx="32" ry="6" fill="#bae6fd" style="transition: fill 0.6s ease;"/>
-
-            <!-- Gas delivery tube dipping into liquid -->
-            <path d="M50,-30 L50,180" fill="none" stroke="#0284c7" stroke-width="4.5" stroke-linecap="round"/>
-            <path d="M50,-30 L50,180" fill="none" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round"/>
-
-            <!-- Bubbles from tube (Step 2) -->
-            <g id="snm_bubbles" opacity="0">
-              <circle class="anim-bubble-1" cx="45" cy="170" r="4" fill="url(#ch2_bubbleGrad)"/>
-              <circle class="anim-bubble-2" cx="55" cy="150" r="5" fill="url(#ch2_bubbleGrad)"/>
-              <circle class="anim-bubble-3" cx="42" cy="130" r="4.5" fill="url(#ch2_bubbleGrad)"/>
-              <circle cx="58" cy="115" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+          <!-- ================= CO2 GAS CYLINDER (Left, X: 90, Y: 135) ================= -->
+          <g id="snm_co2_cylinder" transform="translate(90, 135)">
+            <!-- Cylinder Shadow -->
+            <ellipse cx="40" cy="245" rx="38" ry="8" fill="#000000" opacity="0.3"/>
+            <!-- Cylinder Main Steel Tank -->
+            <rect x="0" y="25" width="80" height="215" rx="14" fill="url(#snm_cylGrad)" stroke="#0f172a" stroke-width="2.5"/>
+            <!-- Domed Top Shoulder -->
+            <path d="M0,35 Q40,5 80,35 Z" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+            <!-- Brass Valve & Neck -->
+            <rect x="32" y="5" width="16" height="20" rx="3" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+            <circle cx="40" cy="5" r="7" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+            <!-- Pressure Gauge Dial -->
+            <g transform="translate(40, -10)">
+              <circle cx="0" cy="0" r="10" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))"/>
+              <line x1="0" y1="0" x2="5" y2="-5" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="0" cy="0" r="2" fill="#000000"/>
             </g>
-
-            <!-- White Precipitate CaCO3 clouds (Step 3) -->
-            <g id="snm_precipitate" opacity="0" style="transition: opacity 0.5s ease;">
-              <ellipse cx="50" cy="160" rx="26" ry="16" fill="#ffffff" opacity="0.95"/>
-              <ellipse cx="50" cy="190" rx="28" ry="14" fill="#ffffff" opacity="0.95"/>
-              <text x="50" y="215" font-size="11" font-weight="900" fill="#0f172a" text-anchor="middle">CaCO₃ अवक्षेप</text>
+            <!-- Highlight Reflection -->
+            <line x1="12" y1="35" x2="12" y2="235" stroke="#ffffff" stroke-width="2.5" opacity="0.4" stroke-linecap="round"/>
+            <!-- Cylinder Reagent Label (High Contrast) -->
+            <g transform="translate(6, 60)">
+              <rect x="0" y="0" width="68" height="60" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.3))"/>
+              <text x="34" y="22" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">CO₂ गैस</text>
+              <text x="34" y="38" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">कार्बन डाइऑक्साइड</text>
+              <text x="34" y="52" font-size="9" font-weight="900" fill="#94a3b8" text-anchor="middle">[अधातु ऑक्साइड]</text>
             </g>
-
-            <rect x="-15" y="255" width="130" height="32" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="snm_tube_title" x="50" y="272" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">Ca(OH)₂ विलयन</text>
-            <text id="snm_tube_sub" x="50" y="284" font-size="10" font-weight="800" fill="#334155" text-anchor="middle">(चूने का पानी)</text>
           </g>
 
-          <!-- CO2 GAS CYLINDER / SOURCE ON LEFT (X: 100, Y: 180) -->
-          <g transform="translate(100, 180)">
-            <rect x="0" y="20" width="70" height="180" rx="12" fill="#475569" stroke="#1e293b" stroke-width="2"/>
-            <text x="35" y="90" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">CO₂ गैस</text>
-            <text x="35" y="106" font-size="9" font-weight="800" fill="#334155" text-anchor="middle">(अधातु ऑक्साइड)</text>
-            <!-- Pipe connecting to tube -->
-            <path d="M35,20 L35,-70 Q35,-90 55,-90 L190,-90 Q210,-90 210,-70 L210,110" fill="none" stroke="#475569" stroke-width="4.5"/>
+          <!-- ================= RETORT STAND & CLAMP HOLDING BOILING TUBE ================= -->
+          <g id="snm_retort_stand">
+            <!-- Stand Base on Table -->
+            <rect x="275" y="382" width="180" height="23" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <!-- Vertical Iron Rod -->
+            <rect x="295" y="70" width="9" height="315" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+            <!-- Clamp Bosshead & Collar at Y=160 -->
+            <rect x="291" y="155" width="17" height="18" rx="3" fill="#334155" stroke="#0f172a" stroke-width="1.5"/>
+            <!-- Clamp Arm holding tube -->
+            <path d="M308,164 L335,164" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+            <path d="M335,152 Q342,164 335,176" fill="none" stroke="#1e293b" stroke-width="4.5"/>
+          </g>
+
+          <!-- ================= BOILING TUBE / REACTION TUBE (Center-Right, X: 335, Y: 110) ================= -->
+          <g id="snm_tube_assembly">
+            <!-- Tube Shadow on Table -->
+            <ellipse cx="382.5" cy="390" rx="42" ry="7" fill="#000000" opacity="0.25"/>
+
+            <!-- Tube Liquid: Clear Ca(OH)2 -> Turns Milky White in Step 3 -->
+            <path id="snm_liquid" d="M338,180 L338,325 Q338,356 382.5,356 Q427,356 427,325 L427,180 Z" fill="#e0f2fe" opacity="0.85" style="transition: fill 0.8s ease;"/>
+            <!-- Liquid Meniscus Ellipse -->
+            <ellipse id="snm_meniscus" cx="382.5" cy="180" rx="44" ry="7" fill="#bae6fd" opacity="0.9" style="transition: fill 0.8s ease;"/>
+
+            <!-- BRIGHT GLOWING IRIDESCENT BUBBLES (Step 2 Active Effervescence) -->
+            <g id="snm_bubbles" opacity="0">
+              <!-- Stream of 10 Bright Neon Bubbles -->
+              <g id="snm_b1" transform="translate(378, 320)">
+                <circle cx="0" cy="0" r="8" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-2.5" cy="-2.5" r="2.5" fill="#ffffff"/>
+              </g>
+              <g id="snm_b2" transform="translate(388, 305)">
+                <circle cx="0" cy="0" r="9" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-3" cy="-3" r="2.8" fill="#ffffff"/>
+              </g>
+              <g id="snm_b3" transform="translate(372, 290)">
+                <circle cx="0" cy="0" r="8.5" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-2.5" cy="-2.5" r="2.5" fill="#ffffff"/>
+              </g>
+              <g id="snm_b4" transform="translate(390, 270)">
+                <circle cx="0" cy="0" r="9.5" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 0 9px rgba(14, 165, 233, 1))"/>
+                <circle cx="-3" cy="-3" r="3" fill="#ffffff"/>
+              </g>
+              <g id="snm_b5" transform="translate(374, 250)">
+                <circle cx="0" cy="0" r="8" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-2.5" cy="-2.5" r="2.5" fill="#ffffff"/>
+              </g>
+              <g id="snm_b6" transform="translate(386, 235)">
+                <circle cx="0" cy="0" r="9" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-3" cy="-3" r="2.8" fill="#ffffff"/>
+              </g>
+              <g id="snm_b7" transform="translate(370, 215)">
+                <circle cx="0" cy="0" r="8.5" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 0 8px rgba(14, 165, 233, 1))"/>
+                <circle cx="-2.5" cy="-2.5" r="2.5" fill="#ffffff"/>
+              </g>
+              <g id="snm_b8" transform="translate(392, 200)">
+                <circle cx="0" cy="0" r="9.5" fill="url(#snm_brightBubble)" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 0 9px rgba(14, 165, 233, 1))"/>
+                <circle cx="-3" cy="-3" r="3" fill="#ffffff"/>
+              </g>
+              <!-- Surface Froth & Popping Bubbles -->
+              <ellipse cx="382.5" cy="180" rx="28" ry="4" fill="#38bdf8" opacity="0.6"/>
+              <circle cx="376" cy="178" r="5" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+              <circle cx="388" cy="179" r="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+            </g>
+
+            <!-- WHITE PRECIPITATE CLOUDS (Step 3 Dense Milky CaCO3) -->
+            <g id="snm_precipitate" opacity="0" style="transition: opacity 0.8s ease;">
+              <!-- Dense Chalky Milky White Body Filling the Tube -->
+              <path d="M338,180 L338,325 Q338,356 382.5,356 Q427,356 427,325 L427,180 Z" fill="#ffffff" opacity="0.95"/>
+              <!-- Chalky Precipitate Swirls -->
+              <ellipse cx="382.5" cy="215" rx="38" ry="16" fill="#f1f5f9" opacity="0.95"/>
+              <ellipse cx="375" cy="255" rx="42" ry="20" fill="#e2e8f0" opacity="0.95"/>
+              <ellipse cx="390" cy="295" rx="40" ry="22" fill="#cbd5e1" opacity="0.95"/>
+              <!-- Settled Heavy CaCO3 Sediment at Bottom -->
+              <path d="M340,320 Q340,356 382.5,356 Q425,356 425,320 Q400,335 382.5,335 Q365,335 340,320 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+              <!-- High-Contrast Precipitate Badge -->
+              <g transform="translate(382.5, 305)">
+                <rect x="-70" y="-13" width="140" height="26" rx="6" fill="#0f172a" stroke="#ffffff" stroke-width="2" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.35))"/>
+                <text x="0" y="5" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">CaCO₃ अवक्षेप (दूधिया लवण)</text>
+              </g>
+            </g>
+
+            <!-- GLASS DELIVERY TUBE (Dipping from cylinder into liquid) -->
+            <path d="M130,125 L130,65 Q130,50 145,50 L365,50 Q380,50 380,65 L380,325" fill="none" stroke="#0284c7" stroke-width="7" stroke-linecap="round"/>
+            <path d="M130,125 L130,65 Q130,50 145,50 L365,50 Q380,50 380,65 L380,325" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+            <!-- Pyrex Glass Body of Boiling Tube -->
+            <path d="M335,110 L335,325 Q335,360 382.5,360 Q430,360 430,325 L430,110" fill="none" stroke="#0284c7" stroke-width="2.8"/>
+            <!-- Top Rim Flange -->
+            <rect x="330" y="105" width="105" height="10" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" opacity="0.85"/>
+            <!-- Specular Highlights on Tube Body -->
+            <line x1="341" y1="115" x2="341" y2="325" stroke="#ffffff" stroke-width="2.5" opacity="0.7"/>
+            <line x1="424" y1="115" x2="424" y2="325" stroke="#ffffff" stroke-width="2.5" opacity="0.7"/>
+
+            <!-- Pyrex Label & Graduation Marks on Tube -->
+            <text x="420" y="135" font-size="10" font-weight="900" fill="#0284c7" text-anchor="end">PYREX®</text>
+            <line x1="405" y1="200" x2="423" y2="200" stroke="#334155" stroke-width="1.8"/>
+            <text x="400" y="204" font-size="9" font-weight="900" fill="#334155" text-anchor="end">150 mL</text>
+            <line x1="410" y1="250" x2="423" y2="250" stroke="#334155" stroke-width="1.8"/>
+            <text x="405" y="254" font-size="9" font-weight="900" fill="#334155" text-anchor="end">100 mL</text>
+            <line x1="410" y1="300" x2="423" y2="300" stroke="#334155" stroke-width="1.8"/>
+            <text x="405" y="304" font-size="9" font-weight="900" fill="#334155" text-anchor="end">50 mL</text>
           </g>
 
           <!-- TOP BANNER LAB TITLE -->
-          <g transform="translate(60, 15)">
-            <rect x="0" y="0" width="650" height="36" rx="8" fill="#ffffff" opacity="0.9" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text x="325" y="23" font-size="14" font-weight="900" fill="#166534" text-anchor="middle">☁️ अधात्विक ऑक्साइड (CO₂) + क्षारक ➔ लवण + जल (अम्लीय प्रकृति)</text>
+          <g transform="translate(60, 14)">
+            <rect x="0" y="0" width="640" height="38" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2.2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.08))"/>
+            <text id="snm_lab_title" x="320" y="25" font-size="15.5" font-weight="900" fill="#166534" text-anchor="middle">☁️ अधात्विक ऑक्साइड (CO₂) + क्षारक ➔ लवण (CaCO₃) + जल (अम्लीय प्रकृति)</text>
           </g>
 
-          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
-          <g transform="translate(725, 20)">
-            <rect x="0" y="0" width="455" height="495" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
-            <rect x="0" y="0" width="455" height="46" rx="14" fill="#16a34a"/>
-            <text x="227" y="30" font-size="16.5" font-weight="900" fill="#ffffff" text-anchor="middle">📋 अधातु ऑक्साइड रासायनिक प्रकृति निष्कर्ष</text>
+          <!-- ================= WIDE TABLE DISPLAY BANNER (Full Table Width under Apparatus) ================= -->
+          <g transform="translate(30, 418)">
+            <rect x="0" y="0" width="655" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.12))"/>
+            <!-- Left Accent Strip -->
+            <rect x="0" y="0" width="10" height="70" rx="4" fill="#16a34a"/>
+            <!-- Microscope Icon Circle -->
+            <circle cx="34" cy="35" r="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <text x="34" y="42" font-size="18" text-anchor="middle">🔬</text>
+            <!-- Primary Title Text (Bold & Large) -->
+            <text id="snm_table_title" x="64" y="29" font-size="17.5" font-weight="900" fill="#000000">परखनली: स्वच्छ चूने का पानी [Ca(OH)₂] + कार्बन डाइऑक्साइड (CO₂ गैस)</text>
+            <!-- Dynamic Status Subtitle Text (Bold & Large) -->
+            <text id="snm_table_sub" x="64" y="55" font-size="15" font-weight="900" fill="#000000">▶ अवस्था: स्वच्छ पारदर्शी चूने का पानी उपस्थित है (CO₂ गैस प्रवाहित करने पर लवण CaCO₃ बनेगा)।</text>
+          </g>
 
-            <g transform="translate(16, 56)">
-              <rect id="snm_c1_bg" x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="22" font-size="13.5" font-weight="900" fill="#000000">1. रासायनिक अभिक्रिया (Chemical Reaction):</text>
-              <text x="14" y="46" font-size="14.5" font-weight="900" fill="#000000">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃(s)↓ + H₂O(l)</text>
-              <text x="14" y="68" font-size="12" font-weight="800" fill="#000000">क्षारक [बुझा चूना] + अधातु ऑक्साइड ➔ लवण [कैल्शियम कार्बोनेट] + जल</text>
+          <!-- ================= RIGHT OBSERVATION PANEL (Zero Overflow, Large & Bold Text) ================= -->
+          <g transform="translate(710, 16)">
+            <rect x="0" y="0" width="475" height="510" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.08))"/>
+
+            <!-- Panel Header -->
+            <rect x="0" y="0" width="475" height="46" rx="14" fill="#16a34a"/>
+            <text x="237" y="30" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">📋 अधातु ऑक्साइड रासायनिक प्रकृति निष्कर्ष</text>
+
+            <!-- Card 1: Balanced Reaction Equation -->
+            <g transform="translate(15, 56)">
+              <rect id="snm_c1_bg" x="0" y="0" width="445" height="100" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="2"/>
+              <text x="14" y="24" font-size="15.5" font-weight="900" fill="#000000">1. संतुलित रासायनिक अभिक्रिया (Reaction Equation):</text>
+              <text id="snm_panel_eq" x="14" y="52" font-size="17" font-weight="900" fill="#000000">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃(s)↓ + H₂O(l)</text>
+              <text x="14" y="74" font-size="14" font-weight="900" fill="#000000">कैल्शियम हाइड्रॉक्साइड [क्षारक] + CO₂ [अधातु ऑक्साइड]</text>
+              <text x="14" y="93" font-size="14" font-weight="900" fill="#000000">➔ कैल्शियम कार्बोनेट [सफ़ेद अवक्षेप/लवण] + जल</text>
             </g>
 
-            <g transform="translate(16, 148)">
-              <rect id="snm_c2_bg" x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="22" font-size="13.5" font-weight="900" fill="#000000">2. उदासीनीकरण से तुलना (Analogy with Neutralization):</text>
-              <text x="14" y="46" font-size="14.5" font-weight="900" fill="#000000">क्षारक + अम्ल ➔ लवण + जल (समान प्रारूप)</text>
-              <text x="14" y="68" font-size="12" font-weight="800" fill="#000000">चूँकि यह क्षारक से क्रिया कर लवण व जल देता है, अतः यह अम्ल सदृश है।</text>
+            <!-- Card 2: Neutralization Analogy -->
+            <g transform="translate(15, 166)">
+              <rect id="snm_c2_bg" x="0" y="0" width="445" height="105" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+              <text x="14" y="24" font-size="15.5" font-weight="900" fill="#000000">2. उदासीनीकरण से तुलना (Analogy with Neutralization):</text>
+              <text x="14" y="50" font-size="16.5" font-weight="900" fill="#000000">क्षारक + अम्ल ➔ लवण + जल (समान प्रारूप)</text>
+              <text x="14" y="73" font-size="14" font-weight="900" fill="#000000">• अधातु ऑक्साइड क्षारक से क्रिया करके लवण व जल देता है।</text>
+              <text x="14" y="95" font-size="14" font-weight="900" fill="#000000">• अतः अधात्विक ऑक्साइड अम्ल (Acid) के सदृश व्यवहार करते हैं।</text>
             </g>
 
-            <g transform="translate(16, 240)">
-              <rect id="snm_c3_bg" x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="22" font-size="13.5" font-weight="900" fill="#000000">3. वैज्ञानिक निष्कर्ष (Scientific Conclusion):</text>
-              <text id="snm_panel_concl" x="14" y="46" font-size="15" font-weight="900" fill="#000000">अधात्विक ऑक्साइड अम्लीय (Acidic) प्रकृति के होते हैं</text>
-              <text x="14" y="68" font-size="12" font-weight="800" fill="#000000">उदाहरण: CO₂, SO₂, NO₂ जल में घुलकर अम्ल बनाते हैं।</text>
+            <!-- Card 3: Scientific Conclusion -->
+            <g transform="translate(15, 281)">
+              <rect id="snm_c3_bg" x="0" y="0" width="445" height="90" rx="8" fill="#fefce8" stroke="#fde047" stroke-width="2"/>
+              <text x="14" y="24" font-size="15.5" font-weight="900" fill="#000000">3. वैज्ञानिक निष्कर्ष (Scientific Conclusion):</text>
+              <text id="snm_panel_concl" x="14" y="50" font-size="17" font-weight="900" fill="#000000">अधात्विक ऑक्साइड = अम्लीय (Acidic) प्रकृति</text>
+              <text x="14" y="74" font-size="14" font-weight="900" fill="#000000">उदाहरण: CO₂, SO₂, NO₂ जल में घुलकर अम्ल बनाते हैं।</text>
             </g>
 
-            <g transform="translate(16, 332)">
-              <rect x="0" y="0" width="423" height="145" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
-              <text x="211" y="24" font-size="14.5" font-weight="900" fill="#000000" text-anchor="middle">⭐ बोर्ड परीक्षा क्विक तुलना नियम (Exam Rule):</text>
-              <text x="211" y="52" font-size="13" font-weight="800" fill="#000000" text-anchor="middle">• धात्विक ऑक्साइड (CuO, MgO, CaO) ➔ क्षारकीय (Basic)</text>
-              <text x="211" y="74" font-size="12.5" font-weight="800" fill="#000000" text-anchor="middle">धातु ऑक्साइड + अम्ल ➔ लवण + जल</text>
-              <text x="211" y="100" font-size="13" font-weight="800" fill="#000000" text-anchor="middle">• अधात्विक ऑक्साइड (CO₂, SO₂, NO₂) ➔ अम्लीय (Acidic)</text>
-              <text x="211" y="122" font-size="12.5" font-weight="800" fill="#000000" text-anchor="middle">अधातु ऑक्साइड + क्षारक ➔ लवण + जल</text>
+            <!-- Card 4: Board Exam Quick Rule -->
+            <g transform="translate(15, 381)">
+              <rect x="0" y="0" width="445" height="118" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2.2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.08))"/>
+              <text x="14" y="24" font-size="15.5" font-weight="900" fill="#000000">⭐ NCERT मुख्य नियम तुलना (Key Principle):</text>
+              <text x="14" y="48" font-size="14" font-weight="900" fill="#000000">• धात्विक ऑक्साइड (CuO, MgO) ➔ क्षारकीय (Basic)</text>
+              <text x="14" y="70" font-size="14" font-weight="900" fill="#000000">• अधात्विक ऑक्साइड (CO₂, SO₂) ➔ अम्लीय (Acidic)</text>
+              <text x="14" y="92" font-size="13.5" font-weight="900" fill="#000000">अधातु ऑक्साइड + क्षारक ➔ लवण + जल</text>
+              <text x="14" y="110" font-size="13.5" font-weight="900" fill="#000000">[Ca(OH)₂ + CO₂ ➔ CaCO₃ + H₂O]</text>
             </g>
           </g>
         </svg>
@@ -9606,17 +9712,49 @@
     /* ==========================================================
        SIMULATOR 2.4C: NON-METALLIC OXIDE CO2 + Ca(OH)2
        ========================================================== */
-    function simNmReset() {
+        /* ==========================================================
+       SIMULATOR 2.4C: NON-METALLIC OXIDE CO2 + Ca(OH)2
+       ========================================================== */
+    var snmTimers = [];
+    function clearNmTimers() {
+      snmTimers.forEach(function(t) { clearTimeout(t); });
+      snmTimers = [];
       clearSimTimers('nm');
+    }
+
+    function simNmReset() {
+      clearNmTimers();
       var pbar = document.getElementById('snm_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('snm_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली में स्वच्छ चूने का पानी तैयार है। "संपूर्ण ऑटो-प्ले" या चरण 2 दबाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली में स्वच्छ चूने का पानी [Ca(OH)₂] तैयार है। "संपूर्ण ऑटो-प्ले" या चरण 2 दबाकर CO₂ गैस प्रवाहित करें।';
 
-      var liq = document.getElementById('snm_liquid'); if (liq) liq.setAttribute('fill', '#e0f2fe');
-      var men = document.getElementById('snm_meniscus'); if (men) men.setAttribute('fill', '#bae6fd');
-      var bub = document.getElementById('snm_bubbles'); if (bub) bub.style.opacity = '0';
-      var prec = document.getElementById('snm_precipitate'); if (prec) prec.style.opacity = '0';
-      var sub = document.getElementById('snm_tube_sub'); if (sub) sub.textContent = '(चूने का पानी - पारदर्शी)';
+      var liq = document.getElementById('snm_liquid');
+      if (liq && window.gsap) {
+        gsap.killTweensOf(liq);
+        liq.setAttribute('fill', '#e0f2fe');
+      }
+      var men = document.getElementById('snm_meniscus');
+      if (men && window.gsap) {
+        gsap.killTweensOf(men);
+        men.setAttribute('fill', '#bae6fd');
+      }
+
+      var bub = document.getElementById('snm_bubbles');
+      if (bub && window.gsap) {
+        gsap.killTweensOf(['#snm_b1', '#snm_b2', '#snm_b3', '#snm_b4', '#snm_b5', '#snm_b6', '#snm_b7', '#snm_b8']);
+        bub.style.opacity = '0';
+      }
+
+      var prec = document.getElementById('snm_precipitate');
+      if (prec && window.gsap) {
+        gsap.killTweensOf(prec);
+        prec.style.opacity = '0';
+      }
+
+      var tblTitle = document.getElementById('snm_table_title');
+      if (tblTitle) tblTitle.textContent = 'परखनली: स्वच्छ चूने का पानी [Ca(OH)₂] + कार्बन डाइऑक्साइड (CO₂ गैस)';
+      var tblSub = document.getElementById('snm_table_sub');
+      if (tblSub) tblSub.textContent = '▶ अवस्था: स्वच्छ पारदर्शी चूने का पानी उपस्थित है (CO₂ गैस प्रवाहित करने पर लवण CaCO₃ बनेगा)।';
 
       ['snm_c1_bg', 'snm_c2_bg', 'snm_c3_bg'].forEach(function(id) {
         var el = document.getElementById(id);
@@ -9625,44 +9763,81 @@
     }
 
     function simNmStep(s) {
+      clearNmTimers();
       var pbar = document.getElementById('snm_pbar');
       var st = document.getElementById('snm_status');
       var liq = document.getElementById('snm_liquid');
       var men = document.getElementById('snm_meniscus');
       var bub = document.getElementById('snm_bubbles');
       var prec = document.getElementById('snm_precipitate');
-      var sub = document.getElementById('snm_tube_sub');
+      var tblTitle = document.getElementById('snm_table_title');
+      var tblSub = document.getElementById('snm_table_sub');
 
       if (s === 1) {
         simNmReset();
         if (pbar) pbar.style.width = '33%';
         if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली में स्वच्छ पारदर्शी चूने का पानी [Ca(OH)₂ विलयन] उपस्थित है।';
-        var c1 = document.getElementById('snm_c1_bg'); if (c1) { c1.setAttribute('fill', '#f0fdf4'); c1.setAttribute('stroke', '#86efac'); }
+        if (tblTitle) tblTitle.textContent = 'परखनली: स्वच्छ चूने का पानी [Ca(OH)₂] (प्रारंभिक अवस्था)';
+        if (tblSub) tblSub.textContent = '▶ अवस्था: स्वच्छ पारदर्शी चूने का पानी तैयार है (CO₂ गैस प्रवाहित करने हेतु तैयार)।';
+        var c1 = document.getElementById('snm_c1_bg'); if (c1) { c1.setAttribute('fill', '#f0fdfa'); c1.setAttribute('stroke', '#14b8a6'); }
 
       } else if (s === 2) {
         if (pbar) pbar.style.width = '66%';
-        if (bub) bub.style.opacity = '1';
-        if (sub) sub.textContent = 'CO₂ गैस प्रवाहित हो रही है...';
-        if (st) st.innerHTML = '<strong>चरण 2:</strong> निकास नली से अधात्विक ऑक्साइड कार्बन डाइऑक्साइड (CO₂) गैस चूने के पानी में बुदबुदाहट के साथ प्रवाहित की जा रही है।';
+        if (tblTitle) tblTitle.textContent = 'परखनली: CO₂ गैस प्रवाहित की जा रही है (तीव्र बुदबुदाहट...)';
+        if (tblSub) tblSub.textContent = '▶ अवस्था: निकास नली द्वारा चमकदार CO₂ गैस के बुलबुले चूने के पानी में प्रवाहित हो रहे हैं।';
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> निकास नली से अधात्विक ऑक्साइड कार्बन डाइऑक्साइड (CO₂) गैस चूने के पानी में चमकदार बुलबुलों के साथ प्रवाहित की जा रही है।';
+
+        // Animate Bright Bubbles continuously rising (Staggered continuous flow)
+        if (bub && window.gsap) {
+          bub.style.opacity = '1';
+          if (typeof playCuoAudio === 'function') {
+            playCuoAudio('pour');
+          }
+          var bIds = ['#snm_b1', '#snm_b2', '#snm_b3', '#snm_b4', '#snm_b5', '#snm_b6', '#snm_b7', '#snm_b8'];
+          bIds.forEach(function(sel, idx) {
+            gsap.killTweensOf(sel);
+            gsap.fromTo(sel, 
+              { y: 325, opacity: 1, scale: 0.85 },
+              { y: 185, opacity: 1, scale: 1.25, duration: 1.05 + (idx % 3) * 0.15, repeat: -1, ease: "linear", delay: idx * 0.13 }
+            );
+          });
+        }
+
         var c1 = document.getElementById('snm_c1_bg'); if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#38bdf8'); }
 
       } else if (s === 3) {
         if (pbar) pbar.style.width = '100%';
-        if (liq) liq.setAttribute('fill', '#f8fafc');
-        if (men) men.setAttribute('fill', '#e2e8f0');
-        if (prec) prec.style.opacity = '1';
-        if (sub) sub.textContent = 'दूधिया CaCO₃ अवक्षेप (लवण)';
-        if (st) st.innerHTML = '<strong>चरण 3:</strong> अघुलनशील कैल्शियम कार्बोनेट (CaCO₃ लवण) बनने से विलयन <strong>दूधिया (Milky)</strong> हो गया! यह सिद्ध करता है कि अधातु ऑक्साइड <strong>अम्लीय</strong> होते हैं।';
-        var c2 = document.getElementById('snm_c2_bg'); if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
-        var c3 = document.getElementById('snm_c3_bg'); if (c3) { c3.setAttribute('fill', '#f0fdf4'); c3.setAttribute('stroke', '#16a34a'); }
+
+        // Stop bubbles gracefully
+        if (bub && window.gsap) {
+          gsap.killTweensOf(['#snm_b1', '#snm_b2', '#snm_b3', '#snm_b4', '#snm_b5', '#snm_b6', '#snm_b7', '#snm_b8']);
+          gsap.to(bub, { opacity: 0, duration: 0.4 });
+        }
+
+        // Morph liquid from clear to intense milky white
+        if (liq) liq.setAttribute('fill', '#ffffff');
+        if (men) men.setAttribute('fill', '#f1f5f9');
+        if (prec && window.gsap) {
+          gsap.to(prec, { opacity: 1, duration: 0.8, ease: "power2.out" });
+        }
+        if (typeof playCuoAudio === 'function') {
+          playCuoAudio('chime');
+        }
+
+        if (tblTitle) tblTitle.textContent = 'परखनली: दूधिया कैल्शियम कार्बोनेट [CaCO₃ लवण] अवक्षेप बन गया';
+        if (tblSub) tblSub.textContent = '▶ परिणाम: अघुलनशील CaCO₃ बनने से विलयन दूधिया हो गया (अम्लीय प्रकृति सिद्ध)!';
+        if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> अघुलनशील कैल्शियम कार्बोनेट (CaCO₃ सफ़ेद लवण) बनने से विलयन <strong>दूधिया (Milky)</strong> हो गया!<br><span style="color:#000000; font-size:18.5px; font-weight:900;">Ca(OH)₂(aq) [क्षारक] + CO₂(g) [अधातु ऑक्साइड] ➔ CaCO₃(s)↓ [सफ़ेद लवण] + H₂O(l)</span>';
+
+        var c2 = document.getElementById('snm_c2_bg'); if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#0284c7'); }
+        var c3 = document.getElementById('snm_c3_bg'); if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
       }
     }
 
     function simNmPlayAuto() {
       simNmReset();
       simNmStep(1);
-      addSimTimer('nm', setTimeout(function() { simNmStep(2); }, 2000));
-      addSimTimer('nm', setTimeout(function() { simNmStep(3); }, 4500));
+      snmTimers.push(setTimeout(function() { simNmStep(2); }, 1500));
+      snmTimers.push(setTimeout(function() { simNmStep(3); }, 5000));
     }
 
     /* ==========================================================
