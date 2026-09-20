@@ -8567,12 +8567,12 @@
       if (s === 1) {
         simNeutReset();
         if (pbar) pbar.style.width = '33%';
-        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली में 2 mL तनु NaOH + 2 बूंद फिनॉल्फथलीन है। OH⁻ आयनों के कारण विलयन <strong>गहरा गुलाबी</strong> है।';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली/फ्लास्क में 2 mL तनु NaOH + 2 बूंद फिनॉल्फथलीन है। OH⁻ आयनों के कारण विलयन <strong>गहरा गुलाबी</strong> है।';
         var c1 = document.getElementById('sneut_c1_bg');
         if (c1) { c1.setAttribute('fill', '#fdf2f8'); c1.setAttribute('stroke', '#f472b6'); }
 
       } else if (s === 2) {
-        if (pbar) pbar.style.width = '45%';
+        if (pbar) pbar.style.width = '40%';
         if (window.gsap) {
           gsap.to(d1, { x: 335, y: 55, opacity: 1, duration: 0.4 });
           gsap.to(d2, { x: 480, y: 20, opacity: 0, duration: 0.4 });
@@ -8580,7 +8580,7 @@
 
         if (st) st.innerHTML = '<strong>चरण 2:</strong> तनु HCl ड्रॉपर से बूंद-बूंद अम्ल मिलाना प्रारंभ करते हैं...';
 
-        // DROP 1 OF HCl
+        // --- DROP 1 OF HCl (Deep Pink -> Medium Pink) ---
         sneutTimers.push(setTimeout(function() {
           if (window.gsap) {
             gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
@@ -8591,11 +8591,11 @@
             if (fSub) fSub.textContent = 'रंग: मध्यम गुलाबी (HCl बूंद 1)';
             if (st) st.innerHTML = '<strong>चरण 2 (बूंद 1):</strong> HCl की पहली बूंद गिरी ➔ H⁺ ने कुछ OH⁻ को उदासीन किया, गुलाबी रंग हल्का हुआ।';
             if (pColor) pColor.textContent = 'HCl बूंद 1: गुलाबी रंग धीमा/हल्का हुआ';
-            if (pbar) pbar.style.width = '55%';
+            if (pbar) pbar.style.width = '52%';
           });
         }, 300));
 
-        // DROP 2 OF HCl
+        // --- DROP 2 OF HCl (Medium Pink -> Very Pale Pink) ---
         sneutTimers.push(setTimeout(function() {
           if (window.gsap) {
             gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
@@ -8606,11 +8606,11 @@
             if (fSub) fSub.textContent = 'रंग: अत्यंत हल्का गुलाबी (HCl बूंद 2)';
             if (st) st.innerHTML = '<strong>चरण 2 (बूंद 2):</strong> HCl की दूसरी बूंद गिरी ➔ अधिकांश OH⁻ समाप्त, रंग अत्यंत फीका हो गया।';
             if (pColor) pColor.textContent = 'HCl बूंद 2: रंग अत्यंत फीका (उदासीन बिंदु के करीब)';
-            if (pbar) pbar.style.width = '68%';
+            if (pbar) pbar.style.width = '64%';
           });
         }, 1700));
 
-        // DROP 3 OF HCl (Complete Neutralization Point)
+        // --- DROP 3 OF HCl (Very Pale Pink -> Crystal Colorless) ---
         sneutTimers.push(setTimeout(function() {
           if (window.gsap) {
             gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
@@ -8629,7 +8629,7 @@
             var c2 = document.getElementById('sneut_c2_bg');
             if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#3b82f6'); }
 
-            // Dropper 1 gently ascends and exits
+            // Dropper 1 gently ascends and exits to the left
             if (window.gsap && d1) {
               gsap.to(d1, { y: -70, opacity: 0, duration: 0.7, delay: 0.5, ease: "power1.in" });
             }
@@ -8637,7 +8637,8 @@
         }, 3100));
 
       } else if (s === 3) {
-        if (pbar) pbar.style.width = '82%';
+        if (pbar) pbar.style.width = '78%';
+        // Ensure starting from colorless state if direct click
         if (liq) liq.setAttribute('fill', '#f1f5f9');
         if (men) men.setAttribute('fill', '#e2e8f0');
         if (ionR) ionR.textContent = 'Cl⁻';
@@ -8646,7 +8647,7 @@
 
         if (st) st.innerHTML = '<strong>चरण 3:</strong> अब दूसरा ड्रॉपर (तनु NaOH ड्रॉपर) आ रहा है...';
 
-        // Dropper 2 ("तनु NaOH ड्रॉपर") smoothly descends into position
+        // Dropper 2 ("तनु NaOH ड्रॉपर") smoothly descends into position above flask
         if (window.gsap && d2) {
           gsap.fromTo(d2, 
             { x: 460, y: 0, opacity: 0 }, 
@@ -8654,9 +8655,9 @@
           );
         }
 
-        // Dispense NaOH drop after dropper 2 settles
+        // --- DROP 1 OF NaOH (Colorless -> Faint Light Pink) ---
         sneutTimers.push(setTimeout(function() {
-          if (st) st.innerHTML = '<strong>चरण 3:</strong> तनु NaOH ड्रॉपर से 1 बूंद क्षारक गिराई जा रही है...';
+          if (st) st.innerHTML = '<strong>चरण 3 (बूंद 1):</strong> तनु NaOH की पहली बूंद गिरी ➔ माध्यम में OH⁻ आने लगा, हल्का गुलाबी रंग प्रकट हुआ।';
           if (window.gsap) {
             gsap.fromTo('#sneut_bulb_naoh', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
           }
@@ -8664,19 +8665,62 @@
           animNeutDrop('#2563eb', function() {
             var plume = document.getElementById('sneut_color_plume');
             if (plume && window.gsap) {
-              gsap.set(plume, { attr: { rx: 8, ry: 4 }, opacity: 0.9 });
-              gsap.to(plume, { attr: { rx: 42, ry: 20 }, opacity: 0, duration: 0.8 });
+              gsap.set(plume, { attr: { rx: 6, ry: 3 }, opacity: 0.8 });
+              gsap.to(plume, { attr: { rx: 25, ry: 10 }, opacity: 0, duration: 0.7 });
             }
 
-            if (liq) liq.setAttribute('fill', '#db2777');
+            if (liq) liq.setAttribute('fill', '#fbcfe8'); // Faint light pink
+            if (men) men.setAttribute('fill', '#f472b6');
+            if (fSub) fSub.textContent = 'रंग: हल्का गुलाबी (NaOH बूंद 1)';
+            if (pColor) pColor.textContent = 'NaOH बूंद 1: हल्का गुलाबी रंग प्रकट हुआ';
+            if (pbar) pbar.style.width = '85%';
+          });
+        }, 900));
+
+        // --- DROP 2 OF NaOH (Faint Pink -> Medium Pink) ---
+        sneutTimers.push(setTimeout(function() {
+          if (st) st.innerHTML = '<strong>चरण 3 (बूंद 2):</strong> तनु NaOH की दूसरी बूंद गिरी ➔ माध्यम और अधिक क्षारकीय हुआ, गुलाबी रंग गहराने लगा।';
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_naoh', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+
+          animNeutDrop('#2563eb', function() {
+            var plume = document.getElementById('sneut_color_plume');
+            if (plume && window.gsap) {
+              gsap.set(plume, { attr: { rx: 8, ry: 4 }, opacity: 0.85 });
+              gsap.to(plume, { attr: { rx: 35, ry: 15 }, opacity: 0, duration: 0.7 });
+            }
+
+            if (liq) liq.setAttribute('fill', '#ec4899'); // Medium rose pink
+            if (men) men.setAttribute('fill', '#db2777');
+            if (fSub) fSub.textContent = 'रंग: मध्यम गुलाबी (NaOH बूंद 2)';
+            if (pColor) pColor.textContent = 'NaOH बूंद 2: गुलाबी रंग और गहरा हुआ';
+            if (pbar) pbar.style.width = '93%';
+          });
+        }, 2300));
+
+        // --- DROP 3 OF NaOH (Medium Pink -> Deep Vibrant Pink) ---
+        sneutTimers.push(setTimeout(function() {
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_naoh', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+
+          animNeutDrop('#2563eb', function() {
+            var plume = document.getElementById('sneut_color_plume');
+            if (plume && window.gsap) {
+              gsap.set(plume, { attr: { rx: 10, ry: 5 }, opacity: 0.9 });
+              gsap.to(plume, { attr: { rx: 45, ry: 22 }, opacity: 0, duration: 0.8 });
+            }
+
+            if (liq) liq.setAttribute('fill', '#db2777'); // Intense deep pink!
             if (men) men.setAttribute('fill', '#be185d');
             if (ionR) ionR.textContent = 'OH⁻';
             if (fSub) fSub.textContent = 'रंग: पुनः गहरा गुलाबी (क्षारकीय)';
             if (pbar) pbar.style.width = '100%';
 
-            if (pColor) pColor.textContent = 'पुनः NaOH मिलाने पर: गहरा गुलाबी रंग पुनः लौट आया!';
-            if (pColorSub) pColorSub.textContent = 'विलयन पुनः क्षारकीय होने से फिनॉल्फथलीन गुलाबी हो गया।';
-            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> पुनः 1 बूंद NaOH मिलाते ही माध्यम फिर से क्षारकीय हो गया और <strong>गहरा गुलाबी रंग तुरंत वापस लौट आया</strong>!';
+            if (pColor) pColor.textContent = 'पुनः NaOH मिलाने पर: गहरा गुलाबी रंग पूर्णतः लौट आया!';
+            if (pColorSub) pColorSub.textContent = 'विलयन पुनः क्षारकीय होने से फिनॉल्फथलीन गहरा गुलाबी हो गया।';
+            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> तनु NaOH की तीसरी बूंद गिरते ही माध्यम पूर्णतः क्षारकीय हो गया और <strong>गहरा गुलाबी रंग पूरी तरह वापस लौट आया</strong>!';
 
             var c3 = document.getElementById('sneut_c3_bg');
             if (c3) { c3.setAttribute('fill', '#fdf2f8'); c3.setAttribute('stroke', '#db2777'); }
@@ -8685,7 +8729,7 @@
               gsap.to(d2, { y: 35, duration: 0.5, delay: 0.4, ease: "power1.out" });
             }
           });
-        }, 1100));
+        }, 3700));
       }
     }
 
