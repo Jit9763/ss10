@@ -1859,18 +1859,9 @@
           </g>
 
           <!-- DROPPERS ANIMATION GROUP -->
-          <g id="sind_dropper_group" style="display: none !important; opacity: 0; transition: all 0.4s ease;" transform="translate(425, 90)">
-            <rect x="12" y="0" width="16" height="55" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
-            <polygon points="12,55 28,55 20,75" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
-            <path d="M10,0 Q20,-18 30,0 Z" fill="#ef4444"/>
-            <circle id="sind_drop" cx="20" cy="90" r="5" fill="#ef4444"/>
-          </g>
+          
 
-          <!-- TOP BANNER LAB TITLE -->
-          <g transform="translate(70, 45)">
-            <rect x="0" y="0" width="580" height="42" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
-            <text id="sind_lab_title" x="290" y="27" font-size="16" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.1: सूचक रंग परीक्षण लैब — कोई सूचक चुनें</text>
-          </g>
+          
 
           <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
           <g transform="translate(725, 25)">
@@ -6692,7 +6683,7 @@
         if (el) el.style.opacity = '0';
       });
 
-      var dropGrp = document.getElementById('sind_dropper_group');
+      var dropGrp = null;
       if (dropGrp) dropGrp.style.opacity = '0';
 
       var dTitle = document.getElementById('sind_detail_title');
@@ -6711,7 +6702,7 @@
 
     function simIndTest(type) {
       simIndReset();
-      var dropGrp = document.getElementById('sind_dropper_group');
+      var dropGrp = null;
       var st = document.getElementById('sind_status');
       var dTitle = document.getElementById('sind_detail_title');
       var dDesc1 = document.getElementById('sind_detail_desc1');
@@ -6802,7 +6793,7 @@
 
         // Move dropper over Tube 3 and Tube 4 with GSAP
         if (window.gsap) {
-          gsap.set('#sind_dropper_group', { transform: 'translate(440, 50)' });
+          
           setTimeout(function() {
             var r3 = document.getElementById('sind_ripple3'); if (r3) { r3.setAttribute('stroke', '#db2777'); r3.style.opacity = '0.9'; }
             var l3 = document.getElementById('sind_liq3'); if (l3) l3.setAttribute('fill', '#f472b6');
@@ -6810,7 +6801,7 @@
           }, 400);
 
           setTimeout(function() {
-            gsap.to('#sind_dropper_group', { transform: 'translate(580, 50)', duration: 0.5 });
+            
           }, 900);
 
           setTimeout(function() {
@@ -6840,14 +6831,14 @@
         }
 
         if (window.gsap) {
-          gsap.set('#sind_dropper_group', { transform: 'translate(160, 50)' });
+          
           setTimeout(function() {
             var r1 = document.getElementById('sind_ripple1'); if (r1) { r1.setAttribute('stroke', '#ef4444'); r1.style.opacity = '0.9'; }
             var l1 = document.getElementById('sind_liq1'); if (l1) l1.setAttribute('fill', '#fca5a5');
           }, 300);
 
           setTimeout(function() {
-            gsap.to('#sind_dropper_group', { transform: 'translate(300, 50)', duration: 0.4 });
+            
           }, 700);
           setTimeout(function() {
             var r2 = document.getElementById('sind_ripple2'); if (r2) { r2.setAttribute('stroke', '#ef4444'); r2.style.opacity = '0.9'; }
@@ -6855,7 +6846,7 @@
           }, 1150);
 
           setTimeout(function() {
-            gsap.to('#sind_dropper_group', { transform: 'translate(440, 50)', duration: 0.4 });
+            
           }, 1550);
           setTimeout(function() {
             var r3 = document.getElementById('sind_ripple3'); if (r3) { r3.setAttribute('stroke', '#eab308'); r3.style.opacity = '0.9'; }
@@ -6863,7 +6854,7 @@
           }, 2000);
 
           setTimeout(function() {
-            gsap.to('#sind_dropper_group', { transform: 'translate(580, 50)', duration: 0.4 });
+            
           }, 2400);
           setTimeout(function() {
             var r4 = document.getElementById('sind_ripple4'); if (r4) { r4.setAttribute('stroke', '#eab308'); r4.style.opacity = '0.9'; }
