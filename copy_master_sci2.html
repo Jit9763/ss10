@@ -3981,10 +3981,13 @@
 
           <!-- CONICAL FLASK / LARGE TEST TUBE (X:300, Y:180) -->
           <g transform="translate(300, 180)">
-            <!-- Flask Liquid: Pink (Initial), Colorless (Step 2), Pink again (Step 3) -->
-            <polygon id="sneut_liquid" points="15,130 85,130 95,200 5,200" fill="#f472b6" opacity="0.85" style="transition: fill 0.6s ease;"/>
+            <!-- Flask Liquid: Deep Pink (Initial), Colorless (Step 2), Deep Pink again (Step 3) -->
+            <polygon id="sneut_liquid" points="15,130 85,130 95,200 5,200" fill="#db2777" opacity="0.85" style="transition: fill 0.8s ease;"/>
             <!-- Meniscus -->
-            <ellipse id="sneut_meniscus" cx="50" cy="130" rx="35" ry="6" fill="#ec4899" style="transition: fill 0.6s ease;"/>
+            <ellipse id="sneut_meniscus" cx="50" cy="130" rx="35" ry="6" fill="#be185d" style="transition: fill 0.8s ease;"/>
+
+            <!-- Blooming Plume when NaOH drop returns -->
+            <ellipse id="sneut_color_plume" cx="50" cy="132" rx="10" ry="4" fill="#db2777" opacity="0"/>
 
             <!-- Glass Conical Body -->
             <polygon points="35,10 65,10 65,50 100,200 0,200 35,50" fill="url(#sneut_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
@@ -3993,24 +3996,69 @@
             <!-- Dynamic Ion Particles floating inside liquid -->
             <g id="sneut_ions">
               <circle cx="35" cy="160" r="8" fill="#6366f1"/><text x="35" y="163" font-size="8" font-weight="900" fill="#fff" text-anchor="middle">Na⁺</text>
-              <circle cx="65" cy="175" r="8" fill="#ec4899"/><text id="sneut_ion_right" x="65" y="178" font-size="7.5" font-weight="900" fill="#fff" text-anchor="middle">OH⁻</text>
+              <circle cx="65" cy="175" r="8" fill="#db2777"/><text id="sneut_ion_right" x="65" y="178" font-size="7.5" font-weight="900" fill="#fff" text-anchor="middle">OH⁻</text>
             </g>
 
             <!-- Label -->
-            <rect x="0" y="215" width="100" height="34" rx="6" fill="#ffffff" stroke="#db2777" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="sneut_flask_label" x="50" y="232" font-size="13" font-weight="900" fill="#f472b6" text-anchor="middle">NaOH + सूचक</text>
-            <text id="sneut_flask_sub" x="50" y="245" font-size="10.5" font-weight="800" fill="#334155" text-anchor="middle">रंग: गहरा गुलाबी</text>
+            <rect x="-37" y="212" width="174" height="44" rx="8" fill="#ffffff" stroke="#db2777" stroke-width="2.2" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.1))"/>
+            <text id="sneut_flask_label" x="50" y="228" font-size="13.5" font-weight="900" fill="#000000" text-anchor="middle">NaOH + फिनॉल्फथलीन</text>
+            <text id="sneut_flask_sub" x="50" y="246" font-size="11.5" font-weight="900" fill="#000000" text-anchor="middle">रंग: गहरा गुलाबी (क्षारकीय)</text>
           </g>
 
-          <!-- BURETTE / DROPPER DISPENSING HCl (Step 2) / NaOH (Step 3) -->
-          <g id="sneut_dropper" transform="translate(335, 60)">
-            <rect x="8" y="0" width="14" height="70" rx="2" fill="#e0f2fe" stroke="#475569" stroke-width="1.5"/>
-            <polygon points="8,70 22,70 15,90" fill="#e0f2fe" stroke="#475569" stroke-width="1.5"/>
-            <path id="sneut_bulb_top" d="M6,0 Q15,-15 24,0 Z" fill="#ef4444"/>
+          <!-- LIQUID SURFACE RIPPLE (Global X: 350, Y: 310) -->
+          <ellipse id="sneut_ripple" cx="350" cy="310" rx="4" ry="1.5" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0"/>
 
-            <!-- Falling Drop -->
-            <circle id="sneut_drop" cx="15" cy="115" r="4.5" fill="#ef4444" opacity="0"/>
-            <text id="sneut_dropper_text" x="75" y="45" font-size="13" font-weight="900" fill="#dc2626">तनु HCl ड्रॉपर</text>
+          <!-- FALLING TEARDROP DROPLET -->
+          <path id="sneut_falling_drop" d="M0,-8 C4,-3 5,3 0,8 C-5,3 -4,-3 0,-8 Z" fill="#ef4444" opacity="0"/>
+
+          <!-- ================= DROPPER 1: DILUTE HCl (STEP 2) ================= -->
+          <g id="sneut_dropper_hcl" transform="translate(335, 55)" style="transition: transform 0.6s ease, opacity 0.4s ease;">
+            <!-- Rubber Bulb (Red/Acid) -->
+            <path id="sneut_bulb_hcl" d="M5,0 Q15,-18 25,0 Q27,10 23,14 L7,14 Q3,10 5,0 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+            <!-- Glass Pipette Barrel -->
+            <rect x="7" y="14" width="16" height="72" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+            <rect x="9" y="30" width="12" height="54" fill="#fee2e2" opacity="0.8"/>
+            <!-- Tapered Glass Tip -->
+            <polygon points="7,86 23,86 16.5,108 13.5,108" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+            <polygon points="9,86 21,86 16,104 14,104" fill="#fee2e2" opacity="0.8"/>
+            <!-- Graduations -->
+            <line x1="18" y1="35" x2="23" y2="35" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="16" y1="45" x2="23" y2="45" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="18" y1="55" x2="23" y2="55" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="16" y1="65" x2="23" y2="65" stroke="#94a3b8" stroke-width="1"/>
+            <!-- Specular Highlight -->
+            <line x1="10" y1="16" x2="10" y2="84" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+            <!-- Dropper 1 Badge Label -->
+            <g transform="translate(35, 30)">
+              <rect x="0" y="0" width="150" height="28" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
+              <circle cx="12" cy="14" r="5" fill="#ef4444"/>
+              <text x="24" y="19" font-size="12.5" font-weight="900" fill="#000000">1. तनु HCl ड्रॉपर (अम्ल)</text>
+            </g>
+          </g>
+
+          <!-- ================= DROPPER 2: DILUTE NaOH (STEP 3) ================= -->
+          <g id="sneut_dropper_naoh" transform="translate(480, 20)" opacity="0" style="transition: transform 0.6s ease, opacity 0.4s ease;">
+            <!-- Rubber Bulb (Royal Blue/Base) -->
+            <path id="sneut_bulb_naoh" d="M5,0 Q15,-18 25,0 Q27,10 23,14 L7,14 Q3,10 5,0 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.5"/>
+            <!-- Glass Pipette Barrel -->
+            <rect x="7" y="14" width="16" height="72" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+            <rect x="9" y="30" width="12" height="54" fill="#dbeafe" opacity="0.8"/>
+            <!-- Tapered Glass Tip -->
+            <polygon points="7,86 23,86 16.5,108 13.5,108" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+            <polygon points="9,86 21,86 16,104 14,104" fill="#dbeafe" opacity="0.8"/>
+            <!-- Graduations -->
+            <line x1="18" y1="35" x2="23" y2="35" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="16" y1="45" x2="23" y2="45" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="18" y1="55" x2="23" y2="55" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="16" y1="65" x2="23" y2="65" stroke="#94a3b8" stroke-width="1"/>
+            <!-- Specular Highlight -->
+            <line x1="10" y1="16" x2="10" y2="84" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+            <!-- Dropper 2 Badge Label -->
+            <g transform="translate(35, 30)">
+              <rect x="0" y="0" width="160" height="28" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
+              <circle cx="12" cy="14" r="5" fill="#2563eb"/>
+              <text x="24" y="19" font-size="12.5" font-weight="900" fill="#000000">2. तनु NaOH ड्रॉपर (क्षारक)</text>
+            </g>
           </g>
 
           <!-- TOP BANNER LAB TITLE -->
@@ -8397,19 +8445,100 @@
     /* ==========================================================
        SIMULATOR 2.4A: NEUTRALIZATION TITRATION (Activity 2.6)
        ========================================================== */
+    /* ==========================================================
+       SIMULATOR 2.4: ACID-BASE NEUTRALIZATION (Activity 2.6)
+       ========================================================== */
+    var sneutTimers = [];
+    function clearNeutTimers() {
+      sneutTimers.forEach(function(t) { clearTimeout(t); });
+      sneutTimers = [];
+      if (window.gsap) {
+        gsap.killTweensOf('#sneut_dropper_hcl');
+        gsap.killTweensOf('#sneut_dropper_naoh');
+        gsap.killTweensOf('#sneut_falling_drop');
+        gsap.killTweensOf('#sneut_ripple');
+        gsap.killTweensOf('#sneut_liquid');
+        gsap.killTweensOf('#sneut_meniscus');
+        gsap.killTweensOf('#sneut_color_plume');
+        gsap.killTweensOf('#sneut_bulb_hcl');
+        gsap.killTweensOf('#sneut_bulb_naoh');
+      }
+    }
+
+    function playNeutDripSound(freq) {
+      try {
+        var AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        if (!window.sneutAudioCtx) window.sneutAudioCtx = new AudioCtx();
+        var ctx = window.sneutAudioCtx;
+        if (ctx.state === 'suspended') ctx.resume();
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = 'sine';
+        var f0 = freq || 650;
+        osc.frequency.setValueAtTime(f0, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(f0 * 1.5, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.22, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.12);
+      } catch(e) {}
+    }
+
+    function animNeutDrop(color, onImpact) {
+      var drop = document.getElementById('sneut_falling_drop');
+      var ripple = document.getElementById('sneut_ripple');
+      if (!drop || !window.gsap) {
+        if (onImpact) onImpact();
+        return;
+      }
+      drop.setAttribute('fill', color);
+      gsap.killTweensOf(drop);
+      gsap.killTweensOf(ripple);
+
+      // Start from tip of dropper (Global X: 350, Y: 163)
+      gsap.set(drop, { x: 350, y: 163, scaleX: 0.35, scaleY: 0.35, opacity: 0 });
+
+      var tl = gsap.timeline();
+      tl.to(drop, { opacity: 0.95, scaleX: 1, scaleY: 1.15, duration: 0.22, ease: "power1.out" })
+        .to(drop, { y: 310, duration: 0.38, ease: "power2.in" })
+        .to(drop, { opacity: 0, scaleY: 0.25, scaleX: 1.6, duration: 0.04, onComplete: function() {
+            playNeutDripSound(color === '#ef4444' ? 620 : 740);
+            if (ripple) {
+              gsap.set(ripple, { attr: { rx: 4, ry: 1.5 }, opacity: 0.9 });
+              gsap.to(ripple, { attr: { rx: 34, ry: 7 }, opacity: 0, duration: 0.55, ease: "power1.out" });
+            }
+            if (onImpact) onImpact();
+        }});
+    }
+
     function simNeutReset() {
       clearSimTimers('neut');
+      clearNeutTimers();
       var pbar = document.getElementById('sneut_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('sneut_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली में NaOH + फिनॉल्फथलीन से गहरा गुलाबी रंग है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर HCl मिलाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली/फ्लास्क में 2 mL तनु NaOH + 2 बूंद फिनॉल्फथलीन है (विलयन गहरा गुलाबी)। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।';
 
-      var liq = document.getElementById('sneut_liquid'); if (liq) liq.setAttribute('fill', '#f472b6');
-      var stm = document.getElementById('sneut_stream'); if (stm) stm.style.opacity = '0';
+      var liq = document.getElementById('sneut_liquid'); if (liq) liq.setAttribute('fill', '#db2777');
+      var men = document.getElementById('sneut_meniscus'); if (men) men.setAttribute('fill', '#be185d');
+      var drop = document.getElementById('sneut_falling_drop'); if (drop) drop.style.opacity = '0';
       var rpl = document.getElementById('sneut_ripple'); if (rpl) rpl.style.opacity = '0';
-      var men = document.getElementById('sneut_meniscus'); if (men) men.setAttribute('fill', '#ec4899');
-      var drop = document.getElementById('sneut_drop'); if (drop) drop.style.opacity = '0';
-      var fSub = document.getElementById('sneut_flask_sub'); if (fSub) fSub.textContent = 'रंग: गहरा गुलाबी';
+      var plume = document.getElementById('sneut_color_plume'); if (plume) plume.style.opacity = '0';
+
+      var fLabel = document.getElementById('sneut_flask_label'); if (fLabel) fLabel.textContent = 'NaOH + सूचक';
+      var fSub = document.getElementById('sneut_flask_sub'); if (fSub) fSub.textContent = 'रंग: गहरा गुलाबी (क्षारकीय)';
       var ionR = document.getElementById('sneut_ion_right'); if (ionR) { ionR.textContent = 'OH⁻'; ionR.setAttribute('fill', '#fff'); }
+
+      var d1 = document.getElementById('sneut_dropper_hcl');
+      if (d1 && window.gsap) {
+        gsap.set(d1, { x: 335, y: 55, opacity: 1 });
+      }
+      var d2 = document.getElementById('sneut_dropper_naoh');
+      if (d2 && window.gsap) {
+        gsap.set(d2, { x: 480, y: 20, opacity: 0 });
+      }
 
       var pColor = document.getElementById('sneut_panel_color');
       if (pColor) pColor.textContent = 'प्रारंभ में: गहरा गुलाबी (क्षारकीय NaOH के कारण)';
@@ -8423,20 +8552,17 @@
     }
 
     function simNeutStep(s) {
-      if (s === 2 && window.gsap) {
-        gsap.to('#sneut_stream', { opacity: 1, duration: 0.2 });
-        gsap.to('#sneut_ripple', { opacity: 0.9, duration: 0.2 });
-        setTimeout(function() { gsap.to('#sneut_stream', { opacity: 0, duration: 0.4 }); gsap.to('#sneut_ripple', { opacity: 0, duration: 0.4 }); }, 1300);
-      }
+      clearNeutTimers();
       var pbar = document.getElementById('sneut_pbar');
       var st = document.getElementById('sneut_status');
       var liq = document.getElementById('sneut_liquid');
       var men = document.getElementById('sneut_meniscus');
-      var drop = document.getElementById('sneut_drop');
       var fSub = document.getElementById('sneut_flask_sub');
       var ionR = document.getElementById('sneut_ion_right');
       var pColor = document.getElementById('sneut_panel_color');
       var pColorSub = document.getElementById('sneut_panel_color_sub');
+      var d1 = document.getElementById('sneut_dropper_hcl');
+      var d2 = document.getElementById('sneut_dropper_naoh');
 
       if (s === 1) {
         simNeutReset();
@@ -8446,40 +8572,128 @@
         if (c1) { c1.setAttribute('fill', '#fdf2f8'); c1.setAttribute('stroke', '#f472b6'); }
 
       } else if (s === 2) {
-        if (pbar) pbar.style.width = '66%';
-        if (drop) { drop.setAttribute('fill', '#ef4444'); drop.style.opacity = '1'; }
-        if (liq) liq.setAttribute('fill', '#f1f5f9');
-        if (men) men.setAttribute('fill', '#e2e8f0');
-        if (fSub) fSub.textContent = 'रंग: रंगहीन (उदासीन/अम्लीय)';
-        if (ionR) { ionR.textContent = 'Cl⁻'; }
+        if (pbar) pbar.style.width = '45%';
+        if (window.gsap) {
+          gsap.to(d1, { x: 335, y: 55, opacity: 1, duration: 0.4 });
+          gsap.to(d2, { x: 480, y: 20, opacity: 0, duration: 0.4 });
+        }
 
-        if (pColor) pColor.textContent = 'HCl मिलाने पर: पूर्णतः रंगहीन (Colorless) ➔ उदासीन बिंदु';
-        if (pColorSub) pColorSub.textContent = 'अम्ल के H⁺ ने क्षारक के OH⁻ को उदासीन कर H₂O बना दिया।';
-        if (st) st.innerHTML = '<strong>चरण 2:</strong> ड्रॉपर से तनु HCl मिलाते ही H⁺ और OH⁻ मिलकर जल (H₂O) बना लेते हैं। गुलाबी रंग <strong>पूर्णतः गायब (रंगहीन)</strong> हो जाता है — यह <strong>उदासीनीकरण</strong> है!';
-        var c2 = document.getElementById('sneut_c2_bg');
-        if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#3b82f6'); }
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> तनु HCl ड्रॉपर से बूंद-बूंद अम्ल मिलाना प्रारंभ करते हैं...';
+
+        // DROP 1 OF HCl
+        sneutTimers.push(setTimeout(function() {
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+          animNeutDrop('#ef4444', function() {
+            if (liq) liq.setAttribute('fill', '#f472b6');
+            if (men) men.setAttribute('fill', '#db2777');
+            if (fSub) fSub.textContent = 'रंग: मध्यम गुलाबी (HCl बूंद 1)';
+            if (st) st.innerHTML = '<strong>चरण 2 (बूंद 1):</strong> HCl की पहली बूंद गिरी ➔ H⁺ ने कुछ OH⁻ को उदासीन किया, गुलाबी रंग हल्का हुआ।';
+            if (pColor) pColor.textContent = 'HCl बूंद 1: गुलाबी रंग धीमा/हल्का हुआ';
+            if (pbar) pbar.style.width = '55%';
+          });
+        }, 300));
+
+        // DROP 2 OF HCl
+        sneutTimers.push(setTimeout(function() {
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+          animNeutDrop('#ef4444', function() {
+            if (liq) liq.setAttribute('fill', '#fbcfe8');
+            if (men) men.setAttribute('fill', '#f472b6');
+            if (fSub) fSub.textContent = 'रंग: अत्यंत हल्का गुलाबी (HCl बूंद 2)';
+            if (st) st.innerHTML = '<strong>चरण 2 (बूंद 2):</strong> HCl की दूसरी बूंद गिरी ➔ अधिकांश OH⁻ समाप्त, रंग अत्यंत फीका हो गया।';
+            if (pColor) pColor.textContent = 'HCl बूंद 2: रंग अत्यंत फीका (उदासीन बिंदु के करीब)';
+            if (pbar) pbar.style.width = '68%';
+          });
+        }, 1700));
+
+        // DROP 3 OF HCl (Complete Neutralization Point)
+        sneutTimers.push(setTimeout(function() {
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_hcl', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+          animNeutDrop('#ef4444', function() {
+            if (liq) liq.setAttribute('fill', '#f1f5f9');
+            if (men) men.setAttribute('fill', '#e2e8f0');
+            if (ionR) ionR.textContent = 'Cl⁻';
+            if (fSub) fSub.textContent = 'रंग: पूर्णतः रंगहीन (उदासीन)';
+            if (pbar) pbar.style.width = '75%';
+
+            if (st) st.innerHTML = '<strong>चरण 2 संपन्न (उदासीन बिंदु):</strong> HCl की तीसरी बूंद गिरते ही संपूर्ण OH⁻ उदासीन होकर जल बन गया। गुलाबी रंग <strong>पूर्णतः गायब होकर विलयन रंगहीन (Colorless)</strong> हो गया!';
+            if (pColor) pColor.textContent = 'HCl मिलाने पर: पूर्णतः रंगहीन (Colorless) ➔ उदासीन बिंदु';
+            if (pColorSub) pColorSub.textContent = 'अम्ल के H⁺ ने क्षारक के OH⁻ को उदासीन कर H₂O बना दिया।';
+
+            var c2 = document.getElementById('sneut_c2_bg');
+            if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#3b82f6'); }
+
+            // Dropper 1 gently ascends and exits
+            if (window.gsap && d1) {
+              gsap.to(d1, { y: -70, opacity: 0, duration: 0.7, delay: 0.5, ease: "power1.in" });
+            }
+          });
+        }, 3100));
 
       } else if (s === 3) {
-        if (pbar) pbar.style.width = '100%';
-        if (drop) { drop.setAttribute('fill', '#3b82f6'); drop.style.opacity = '1'; }
-        if (liq) liq.setAttribute('fill', '#f472b6');
-        if (men) men.setAttribute('fill', '#ec4899');
-        if (fSub) fSub.textContent = 'रंग: पुनः गहरा गुलाबी';
-        if (ionR) { ionR.textContent = 'OH⁻'; }
+        if (pbar) pbar.style.width = '82%';
+        if (liq) liq.setAttribute('fill', '#f1f5f9');
+        if (men) men.setAttribute('fill', '#e2e8f0');
+        if (ionR) ionR.textContent = 'Cl⁻';
 
-        if (pColor) pColor.textContent = 'पुनः NaOH मिलाने पर: गुलाबी रंग पुनः लौट आया!';
-        if (pColorSub) pColorSub.textContent = 'विलयन पुनः क्षारकीय होने से फिनॉल्फथलीन गुलाबी हो गया।';
-        if (st) st.innerHTML = '<strong>चरण 3:</strong> पुनः 1 बूंद NaOH मिलाने पर माध्यम फिर से क्षारकीय हो जाता है और <strong>गुलाबी रंग तुरंत वापस लौट आता है</strong>!';
-        var c3 = document.getElementById('sneut_c3_bg');
-        if (c3) { c3.setAttribute('fill', '#fdf2f8'); c3.setAttribute('stroke', '#db2777'); }
+        if (d1 && window.gsap) gsap.to(d1, { y: -70, opacity: 0, duration: 0.3 });
+
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> अब दूसरा ड्रॉपर (तनु NaOH ड्रॉपर) आ रहा है...';
+
+        // Dropper 2 ("तनु NaOH ड्रॉपर") smoothly descends into position
+        if (window.gsap && d2) {
+          gsap.fromTo(d2, 
+            { x: 460, y: 0, opacity: 0 }, 
+            { x: 335, y: 55, opacity: 1, duration: 0.75, ease: "power2.out" }
+          );
+        }
+
+        // Dispense NaOH drop after dropper 2 settles
+        sneutTimers.push(setTimeout(function() {
+          if (st) st.innerHTML = '<strong>चरण 3:</strong> तनु NaOH ड्रॉपर से 1 बूंद क्षारक गिराई जा रही है...';
+          if (window.gsap) {
+            gsap.fromTo('#sneut_bulb_naoh', { scaleY: 1 }, { scaleY: 0.85, yoyo: true, repeat: 1, duration: 0.2 });
+          }
+
+          animNeutDrop('#2563eb', function() {
+            var plume = document.getElementById('sneut_color_plume');
+            if (plume && window.gsap) {
+              gsap.set(plume, { attr: { rx: 8, ry: 4 }, opacity: 0.9 });
+              gsap.to(plume, { attr: { rx: 42, ry: 20 }, opacity: 0, duration: 0.8 });
+            }
+
+            if (liq) liq.setAttribute('fill', '#db2777');
+            if (men) men.setAttribute('fill', '#be185d');
+            if (ionR) ionR.textContent = 'OH⁻';
+            if (fSub) fSub.textContent = 'रंग: पुनः गहरा गुलाबी (क्षारकीय)';
+            if (pbar) pbar.style.width = '100%';
+
+            if (pColor) pColor.textContent = 'पुनः NaOH मिलाने पर: गहरा गुलाबी रंग पुनः लौट आया!';
+            if (pColorSub) pColorSub.textContent = 'विलयन पुनः क्षारकीय होने से फिनॉल्फथलीन गुलाबी हो गया।';
+            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> पुनः 1 बूंद NaOH मिलाते ही माध्यम फिर से क्षारकीय हो गया और <strong>गहरा गुलाबी रंग तुरंत वापस लौट आया</strong>!';
+
+            var c3 = document.getElementById('sneut_c3_bg');
+            if (c3) { c3.setAttribute('fill', '#fdf2f8'); c3.setAttribute('stroke', '#db2777'); }
+
+            if (d2 && window.gsap) {
+              gsap.to(d2, { y: 35, duration: 0.5, delay: 0.4, ease: "power1.out" });
+            }
+          });
+        }, 1100));
       }
     }
 
     function simNeutPlayAuto() {
       simNeutReset();
       simNeutStep(1);
-      addSimTimer('neut', setTimeout(function() { simNeutStep(2); }, 2000));
-      addSimTimer('neut', setTimeout(function() { simNeutStep(3); }, 5000));
+      addSimTimer('neut', setTimeout(function() { simNeutStep(2); }, 1600));
+      addSimTimer('neut', setTimeout(function() { simNeutStep(3); }, 6200));
     }
 
     /* ==========================================================
