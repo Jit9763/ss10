@@ -8685,6 +8685,211 @@
       addSimTimer('pop', setTimeout(function() { simPopStep(2); }, 2000));
       addSimTimer('pop', setTimeout(function() { simPopStep(3); }, 4800));
     }
+
+    /* ==========================================================
+       SIMULATOR 2.2: UNIVERSAL INDICATOR & pH SCALE (Activity 2.11)
+       ========================================================== */
+    var s22Data = {
+      1: {
+        name: "तनु HCl (जठर रस)",
+        ph: "pH ~1.2",
+        valNum: 1.2,
+        color: "#dc2626",
+        liquidFill: "#dc2626",
+        sampleText: "तनु हाइड्रोक्लोरिक अम्ल / जठर रस",
+        valText: "pH = 1.2 (तीव्र लाल रंग — Strong Acid)",
+        natureText: "प्रकृति: प्रबल अम्लीय विलयन (Strongly Acidic)",
+        ionsText: "[H⁺] >> [OH⁻]  (~10⁻¹·² mol/L)",
+        ionsSub: "विलयन में H⁺ (H₃O⁺) आयनों की अत्यधिक उच्च सांद्रता",
+        contextText: "आमाशय में भोजन पाचन एवं रोगाणु नाश हेतु आवश्यक",
+        badge: "🔴 तीव्र लाल रंग | pH ~1.2"
+      },
+      2: {
+        name: "नींबू का रस (Citric Acid)",
+        ph: "pH ~2.2",
+        valNum: 2.2,
+        color: "#ea580c",
+        liquidFill: "#ea580c",
+        sampleText: "नींबू का रस (सिट्रिक अम्ल युक्त)",
+        valText: "pH = 2.2 (नारंगी-लाल रंग — Acidic)",
+        natureText: "प्रकृति: मध्यम अम्लीय कार्बनिक विलयन",
+        ionsText: "[H⁺] > [OH⁻]  (~10⁻²·² mol/L)",
+        ionsSub: "H⁺ आयन उपस्थित; स्वाद में अत्यधिक खट्टा",
+        contextText: "विटामिन C (एस्कॉर्बिक एसिड) का समृद्ध प्राकृतिक स्रोत",
+        badge: "🟠 नारंगी रंग | pH ~2.2"
+      },
+      3: {
+        name: "शुद्ध आसुत जल (उदासीन)",
+        ph: "pH 7.0",
+        valNum: 7.0,
+        color: "#22c55e",
+        liquidFill: "#22c55e",
+        sampleText: "शुद्ध आसुत जल (Pure Distilled Water)",
+        valText: "pH = 7.0 (हरा रंग — Neutral Green)",
+        natureText: "प्रकृति: पूर्णतः उदासीन विलयन (Neither Acid nor Base)",
+        ionsText: "[H⁺] = [OH⁻] = 10⁻⁷ mol/L",
+        ionsSub: "दोनों आयनों की सांद्रता पूर्णतः समान व संतुलित",
+        contextText: "पीने योग्य सुरक्षित जल; pH 6.5 से 8.5 के मध्य श्रेष्ठ",
+        badge: "🟢 हरा रंग | pH 7.0 (उदासीन)"
+      },
+      4: {
+        name: "मानव रक्त / लार (खाने के बाद)",
+        ph: "pH ~7.4",
+        valNum: 7.4,
+        color: "#0284c7",
+        liquidFill: "#0284c7",
+        sampleText: "मानव रक्त / लार (Human Blood / Saliva)",
+        valText: "pH = 7.4 (हल्का नीला — Slightly Alkaline)",
+        natureText: "प्रकृति: दुर्बल क्षारीय (Slightly Basic)",
+        ionsText: "[OH⁻] > [H⁺]  (अल्प क्षारीय बफर)",
+        ionsSub: "मानव शरीर 7.0 से 7.8 pH परास के बीच कार्य करता है",
+        contextText: "रक्त pH 7.0 से कम या 7.8 से अधिक होना प्राणघातक है",
+        badge: "🔵 हल्का नीला रंग | pH ~7.4"
+      },
+      5: {
+        name: "मिल्क ऑफ मैग्नीशिया Mg(OH)₂",
+        ph: "pH ~10.0",
+        valNum: 10.0,
+        color: "#6366f1",
+        liquidFill: "#6366f1",
+        sampleText: "मिल्क ऑफ मैग्नीशिया [Mg(OH)₂ निलंबन]",
+        valText: "pH = 10.0 (गहरा नीला / जामुनी — Basic)",
+        natureText: "प्रकृति: दुर्बल क्षारक (प्रति-अम्ल / Antacid)",
+        ionsText: "[OH⁻] >> [H⁺]  (~10⁻⁴ mol/L OH⁻)",
+        ionsSub: "विलयन में हाइड्रॉक्साइड आयन (OH⁻) अधिक",
+        contextText: "पेट की अम्लता/एसिडिटी दूर करने हेतु दुर्बल क्षारक",
+        badge: "🟣 जामुनी रंग | pH ~10.0 (एंटासिड)"
+      },
+      6: {
+        name: "सोडियम हाइड्रॉक्साइड NaOH",
+        ph: "pH 14.0",
+        valNum: 14.0,
+        color: "#7c3aed",
+        liquidFill: "#7c3aed",
+        sampleText: "सोडियम हाइड्रॉक्साइड विलयन (तनु NaOH)",
+        valText: "pH = 14.0 (गहरा बैंगनी रंग — Strongly Alkaline)",
+        natureText: "प्रकृति: अत्यधिक प्रबल क्षारक (Caustic Alkali)",
+        ionsText: "[OH⁻] = 1 mol/L  >>  [H⁺] = 10⁻¹⁴ mol/L",
+        ionsSub: "OH⁻ आयनों की अधिकतम सांद्रता; स्पर्श में साबुन जैसा",
+        contextText: "साबुन, अपमार्जक व कागज उद्योग का प्रमुख क्षारक",
+        badge: "🟣 गहरा बैंगनी | pH 14.0 (प्रबल क्षार)"
+      }
+    };
+
+    function sim22Select(id) {
+      var d = s22Data[id];
+      if (!d) return;
+
+      var dispVal = document.getElementById('s22_disp_val');
+      if (dispVal) { dispVal.textContent = d.ph; dispVal.setAttribute('fill', d.color); }
+      
+      var dispName = document.getElementById('s22_disp_name');
+      if (dispName) dispName.textContent = d.name;
+
+      var needle = document.getElementById('s22_needle');
+      if (needle) {
+        // scale 0 to 14 maps to X coordinates: ~20 at pH 0, 190 at pH 7, 360 at pH 14
+        var nx = 20 + (d.valNum / 14.0) * 340;
+        needle.setAttribute('cx', nx);
+      }
+
+      var liq = document.getElementById('s22_liquid');
+      if (liq) {
+        liq.setAttribute('fill', d.liquidFill);
+        liq.setAttribute('stroke', d.color);
+      }
+      var men = document.getElementById('s22_meniscus');
+      if (men) {
+        men.setAttribute('fill', d.liquidFill);
+        men.setAttribute('stroke', d.color);
+      }
+
+      var strip = document.getElementById('s22_dipped_strip');
+      if (strip) strip.setAttribute('fill', d.color);
+
+      var bBox = document.getElementById('s22_badge_box');
+      if (bBox) bBox.setAttribute('stroke', d.color);
+
+      var bTxt = document.getElementById('s22_badge_text');
+      if (bTxt) {
+        bTxt.textContent = d.badge;
+        bTxt.setAttribute('fill', d.color);
+      }
+
+      var pSample = document.getElementById('s22_panel_sample');
+      if (pSample) pSample.textContent = d.sampleText;
+
+      var pVal = document.getElementById('s22_panel_val');
+      if (pVal) { pVal.textContent = d.valText; pVal.setAttribute('fill', d.color); }
+
+      var pNature = document.getElementById('s22_panel_nature');
+      if (pNature) { pNature.textContent = d.natureText; pNature.setAttribute('fill', d.color); }
+
+      var pIons = document.getElementById('s22_panel_ions');
+      if (pIons) pIons.textContent = d.ionsText;
+
+      var pIonsSub = document.getElementById('s22_panel_ions_sub');
+      if (pIonsSub) pIonsSub.textContent = d.ionsSub;
+
+      var pCtx = document.getElementById('s22_panel_context');
+      if (pCtx) pCtx.textContent = d.contextText;
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.3: CHLOR-ALKALI ELECTROLYSIS (Activity 2.14)
+       ========================================================== */
+    function sim23Reset() {
+      clearSimTimers('s23');
+      var pbar = document.getElementById('s23_pbar'); if (pbar) pbar.style.width = '0%';
+      var cl2Bubbles = document.getElementById('s23_cl2_bubbles'); if (cl2Bubbles) cl2Bubbles.style.opacity = '0';
+      var h2Bubbles = document.getElementById('s23_h2_bubbles'); if (h2Bubbles) h2Bubbles.style.opacity = '0';
+      var naohZone = document.getElementById('s23_naoh_zone'); if (naohZone) naohZone.style.opacity = '0';
+
+      var pCl2 = document.getElementById('s23_panel_cl2');
+      if (pCl2) pCl2.textContent = 'उपयोग: जल शोधन, स्विमिंग पूल, PVC, रोगाणुनाशक';
+
+      var pH2 = document.getElementById('s23_panel_h2');
+      if (pH2) pH2.textContent = 'उपयोग: स्वच्छ ईंधन, मार्गरीन, अमोनिया (उर्वरक)';
+
+      var pNaoh = document.getElementById('s23_panel_naoh');
+      if (pNaoh) pNaoh.textContent = 'उपयोग: साबुन, अपमार्जक, कागज निर्माण, वस्त्र उद्योग';
+    }
+
+    function sim23Step(step) {
+      var pbar = document.getElementById('s23_pbar');
+      var cl2Bubbles = document.getElementById('s23_cl2_bubbles');
+      var h2Bubbles = document.getElementById('s23_h2_bubbles');
+      var naohZone = document.getElementById('s23_naoh_zone');
+
+      if (step === 1) {
+        sim23Reset();
+        if (pbar) pbar.style.width = '25%';
+      } else if (step === 2) {
+        if (pbar) pbar.style.width = '50%';
+        if (cl2Bubbles) cl2Bubbles.style.opacity = '1';
+        if (h2Bubbles) h2Bubbles.style.opacity = '0';
+        if (naohZone) naohZone.style.opacity = '0';
+      } else if (step === 3) {
+        if (pbar) pbar.style.width = '75%';
+        if (cl2Bubbles) cl2Bubbles.style.opacity = '1';
+        if (h2Bubbles) h2Bubbles.style.opacity = '1';
+        if (naohZone) naohZone.style.opacity = '0.75';
+      } else if (step === 4) {
+        if (pbar) pbar.style.width = '100%';
+        if (cl2Bubbles) cl2Bubbles.style.opacity = '1';
+        if (h2Bubbles) h2Bubbles.style.opacity = '1';
+        if (naohZone) naohZone.style.opacity = '1';
+      }
+    }
+
+    function sim23PlayAuto() {
+      sim23Reset();
+      sim23Step(1);
+      addSimTimer('s23', setTimeout(function() { sim23Step(2); }, 1500));
+      addSimTimer('s23', setTimeout(function() { sim23Step(3); }, 3500));
+      addSimTimer('s23', setTimeout(function() { sim23Step(4); }, 5500));
+    }
+
 </script>
 </body>
 </html>

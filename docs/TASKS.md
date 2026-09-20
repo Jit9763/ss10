@@ -1,11 +1,33 @@
 # 📋 Tasks & Chapter Roadmap Tracker (TASKS.md)
 
+## 🧰 Approved Libraries, Repositories & Search Keywords
+> [!IMPORTANT]
+> **Code Reuse & Template Hub**: Repeated logic should be reused from standard libraries and proven open-source models rather than re-invented from scratch.
+
+### 1. Core Visual, 3D & Animation Libraries
+- `three`
+- `@react-three/fiber`
+- `@react-three/dreigsap`
+- `gsap` (GreenSock Animation Platform)
+- `framer-motion`
+- `3Dmol`
+- `ngl`
+
+### 2. GitHub Search Keywords & Target Repositories
+Direct copy-paste keywords for searching pre-built science and 3D simulation templates:
+- `tseijp/react-mol` (Molecular structure and bond visualization)
+- `conc2304/3D-Atomic-Visualizer` (Atomic orbital and ionic visualization)
+- `phetsims/acid-base-solutions` (PhET Interactive acid-base, pH scale, ionic equilibrium)
+- `sufyanaslam44/Virtua-Chem-Sim` (Interactive virtual chemistry laboratory apparatus & reactions)
+
+---
+
 ## 📊 1. 13-Chapter Comprehensive Status Board
 
 | अध्याय | नाम | संपूर्ण नोट्स | सिमुलेटर संख्या | 5-वर्षीय बोर्ड QA | ऑडिट व सत्यापन स्थिति |
 |---|---|:---:|:---:|:---:|:---:|
 | **Ch 1** | रासायनिक अभिक्रियाएं एवं समीकरण | ✅ तैयार | **16 सिमुलेटर** | ✅ पूर्ण (2019-2024) | 🟢 **पूर्ण व सत्यापित** |
-| **Ch 2** | अम्ल, क्षारक एवं लवण | ✅ तैयार | **21 सिमुलेटर + 1 इन्फोग्राफिक** | ✅ पूर्ण (2019-2024) | 🟢 **पूर्ण व सत्यापित** |
+| **Ch 2** | अम्ल, क्षारक एवं लवण | ✅ तैयार | **21 सिमुलेटर + 1 इन्फोग्राफिक** | ✅ पूर्ण (2019-2024) | 🟡 **प्रोजेक्टर फॉन्ट/विजिबिलिटी अपग्रेड जारी** |
 | **Ch 3** | धातु एवं अधातु | ✅ तैयार | रिव्यू बाकी | ✅ पूर्ण (2019-2024) | 🟡 **सिमुलेटर ऑडिट बाकी** |
 | **Ch 4** | कार्बन एवं उसके यौगिक | ✅ तैयार | रिव्यू बाकी | ✅ पूर्ण (2019-2024) | 🟡 **सिमुलेटर ऑडिट बाकी** |
 | **Ch 5** | जैव प्रक्रम | ✅ तैयार | रिव्यू बाकी | ✅ पूर्ण (2019-2024) | 🟡 **सिमुलेटर ऑडिट बाकी** |
@@ -20,52 +42,35 @@
 
 ---
 
-## 🔬 2. Chapter 2 Verified Simulator Suite (21 Simulators)
-1. `sim2_ind_box`: क्रियाकलाप 2.1 — अम्ल व क्षारक सूचक रंग परीक्षण लैब
-2. `sim2_olf_box`: क्रियाकलाप 2.2 — प्राकृतिक (हल्दी, पत्तागोभी) व गंधीय सूचक (वैनिला, प्याज)
-3. `sim2_1_box`: क्रियाकलाप 2.3 — दानेदार जस्ते पर तनु H₂SO₄ की क्रिया व H₂ POP परीक्षण
-4. `sim2_zinc_base_box`: क्रियाकलाप 2.4 — क्षारक (NaOH) की जिंक से क्रिया व सोडियम जिंकेट
-5. `sim2_metal_react_box`: क्रियाकलाप 2.3/2.4 विस्तार — विभिन्न धातुओं (Mg, Zn, Fe, Cu) की अम्ल से क्रियाशीलता
-6. `sim2_carb_box`: क्रियाकलाप 2.5 — धातु कार्बोनेट + अम्ल व चूने का पानी दूधिया होना
-7. `sim2_fire_ext_box`: टॉपिक 3 अनुप्रयोग — सोडा-अम्ल अग्निशामक (NaHCO₃ + H₂SO₄) कार्यप्रणाली
-8. `sim2_neut_box`: क्रियाकलाप 2.6 — उदासीनीकरण टाइट्रेशन (NaOH + Phenolphthalein + HCl)
-9. `sim2_cuo_box`: क्रियाकलाप 2.7 — धात्विक ऑक्साइड काला CuO + HCl ➔ नीला-हरा CuCl₂
-10. `sim2_nonmetal_ox_box`: टॉपिक 4 विस्तार — अधात्विक ऑक्साइड (CO₂) + क्षारक ➔ लवण + जल (अम्लीय प्रकृति)
-11. `sim2_cond_box`: क्रियाकलाप 2.8 — जलीय विलयन में विद्युत चालकता (HCl vs Glucose bulb test)
-12. `sim2_dryhcl_box`: क्रियाकलाप 2.9 व 2.10 — शुष्क HCl गैस बनाम आर्द्र लिटमस व सुरक्षित तनुकरण
-13. `sim2_strong_weak_box`: टॉपिक 5 विस्तार — प्रबल अम्ल (HCl) बनाम दुर्बल अम्ल (CH₃COOH) आयनन व बल्ब चमक
-14. `sim2_2_box`: क्रियाकलाप 2.11 — सार्वत्रिक सूचक एवं 0-14 pH रंग पैमाना
-15. `sim2_soil_ph_box`: क्रियाकलाप 2.12 — विभिन्न स्थानों की मृदा (Soil) का pH परीक्षण व चूने से उपचार
-16. `sim2_phtruth_box`: दैनिक जीवन में pH — उदर अम्लता, दंत क्षय, डंक व अम्लीय वर्षा
-17. `sim2_3_box`: क्रियाकलाप 2.14 — क्लोर-क्षार प्रक्रिया (Chlor-Alkali Electrolysis Cell)
-18. `sim2_saltfam_box`: क्रियाकलाप 2.13 — लवण परिवार की pH प्रकृति एवं जल-अपघटन
-19. `sim2_bleach_box`: टॉपिक 7 अनुप्रयोग — विरंजक चूर्ण (CaOCl₂) निर्माण व वस्त्र विरंजन
-20. `sim2_cryst_box`: क्रियाकलाप 2.15 — क्रिस्टलन का जल (CuSO₄·5H₂O तापन व पुनःजलयोजन)
-21. `sim2_pop_setting_box`: टॉपिक 7 अनुप्रयोग — POP (CaSO₄·½H₂O) 373 K निर्माण व कठोर जिप्सम सेटिंग
-22. `image-placeholder-card`: साधारण नमक से निर्मित 5 उपयोगी पदार्थ (16:9 रंगीन हिंदी इन्फोग्राफिक)
-1. `sim2_ind_box`: क्रियाकलाप 2.1 — अम्ल व क्षारक सूचक रंग परीक्षण लैब
-2. `sim2_olf_box`: क्रियाकलाप 2.2 — प्राकृतिक (हल्दी, पत्तागोभी) व गंधीय सूचक (वैनिला, प्याज)
-3. `sim2_1_box`: क्रियाकलाप 2.3 — दानेदार जस्ते पर तनु H₂SO₄ की क्रिया व H₂ POP परीक्षण
-4. `sim2_zinc_base_box`: क्रियाकलाप 2.4 — क्षारक (NaOH) की जिंक से क्रिया व सोडियम जिंकेट
-5. `sim2_carb_box`: क्रियाकलाप 2.5 — धातु कार्बोनेट + अम्ल व चूने का पानी दूधिया होना
-6. `sim2_neut_box`: क्रियाकलाप 2.6 — उदासीनीकरण टाइट्रेशन (NaOH + Phenolphthalein + HCl)
-7. `sim2_cuo_box`: क्रियाकलाप 2.7 — धात्विक ऑक्साइड काला CuO + HCl ➔ नीला-हरा CuCl₂
-8. `sim2_cond_box`: क्रियाकलाप 2.8 — जलीय विलयन में विद्युत चालकता (HCl vs Glucose bulb test)
-9. `sim2_dryhcl_box`: क्रियाकलाप 2.9 व 2.10 — शुष्क HCl गैस बनाम आर्द्र लिटमस व सुरक्षित तनुकरण
-10. `sim2_2_box`: क्रियाकलाप 2.11 — सार्वत्रिक सूचक एवं 0-14 pH रंग पैमाना
-11. `sim2_phtruth_box`: दैनिक जीवन में pH — उदर अम्लता, दंत क्षय, डंक व अम्लीय वर्षा
-12. `sim2_3_box`: क्रियाकलाप 2.14 — क्लोर-क्षार प्रक्रिया (Chlor-Alkali Electrolysis Cell)
-13. `sim2_saltfam_box`: क्रियाकलाप 2.13 — लवण परिवार की pH प्रकृति एवं जल-अपघटन
-14. `sim2_cryst_box`: क्रियाकलाप 2.15 — क्रिस्टलन का जल (CuSO₄·5H₂O तापन व पुनःजलयोजन)
-15. `image-placeholder-card`: साधारण नमक से निर्मित 5 उपयोगी पदार्थ (16:9 रंगीन हिंदी इन्फोग्राफिक)
+## 🔬 2. Chapter 2 Simulator Suite - Projector Visibility Upgrade Checklist
+Target: High Contrast Bold Text (`font-weight: 700-900`, `font-size: 16px-22px`, Dark `#0f172a` / `#166534` on pure white `#ffffff`)
+
+- [x] **Sim 2.3 (`sim2_1_box`)**: क्रियाकलाप 2.3 — दानेदार जस्ते पर तनु H₂SO₄ व H₂ POP परीक्षण (PhET Bubbles, Delivery Pulse, Acoustic POP, Projector Bold Typography)
+- [ ] **Sim 2.4 (`sim2_zinc_base_box`)**: क्रियाकलाप 2.4 — क्षारक (NaOH) की जिंक से क्रिया व सोडियम जिंकेट
+- [ ] **Sim 2.1 (`sim2_ind_box`)**: क्रियाकलाप 2.1 — अम्ल व क्षारक सूचक रंग परीक्षण लैब
+- [ ] **Sim 2.2 (`sim2_olf_box`)**: क्रियाकलाप 2.2 — प्राकृतिक व गंधीय सूचक
+- [ ] **Sim 2.5 (`sim2_metal_react_box`)**: क्रियाकलाप 2.3/2.4 विस्तार — धातु क्रियाशीलता
+- [ ] **Sim 2.6 (`sim2_carb_box`)**: क्रियाकलाप 2.5 — धातु कार्बोनेट + अम्ल व चूने का पानी दूधिया होना
+- [ ] **Sim 2.7 (`sim2_fire_ext_box`)**: टॉपिक 3 — सोडा-अम्ल अग्निशामक
+- [ ] **Sim 2.8 (`sim2_neut_box`)**: क्रियाकलाप 2.6 — उदासीनीकरण टाइट्रेशन
+- [ ] **Sim 2.9 (`sim2_cuo_box`)**: क्रियाकलाप 2.7 — धात्विक ऑक्साइड काला CuO + HCl ➔ CuCl₂
+- [ ] **Sim 2.10 (`sim2_nonmetal_ox_box`)**: टॉपिक 4 — अधात्विक ऑक्साइड (CO₂) + क्षारक
+- [ ] **Sim 2.11 (`sim2_cond_box`)**: क्रियाकलाप 2.8 — जलीय विलयन में विद्युत चालकता (HCl vs Glucose)
+- [ ] **Sim 2.12 (`sim2_dryhcl_box`)**: क्रियाकलाप 2.9/2.10 — शुष्क HCl गैस बनाम आर्द्र लिटमस व सुरक्षित तनुकरण
+- [ ] **Sim 2.13 (`sim2_strong_weak_box`)**: टॉपिक 5 — प्रबल अम्ल बनाम दुर्बल अम्ल आयनन व बल्ब चमक
+- [ ] **Sim 2.14 (`sim2_2_box`)**: क्रियाकलाप 2.11 — सार्वत्रिक सूचक एवं 0-14 pH रंग पैमाना
+- [ ] **Sim 2.15 (`sim2_soil_ph_box`)**: क्रियाकलाप 2.12 — मृदा (Soil) pH परीक्षण
+- [ ] **Sim 2.16 (`sim2_phtruth_box`)**: दैनिक जीवन में pH अनुप्रयोग
+- [ ] **Sim 2.17 (`sim2_3_box`)**: क्रियाकलाप 2.14 — क्लोर-क्षार प्रक्रिया (Chlor-Alkali Electrolysis)
+- [ ] **Sim 2.18 (`sim2_saltfam_box`)**: क्रियाकलाप 2.13 — लवण परिवार pH प्रकृति
+- [ ] **Sim 2.19 (`sim2_bleach_box`)**: टॉपिक 7 — विरंजक चूर्ण निर्माण व विरंजन
+- [ ] **Sim 2.20 (`sim2_cryst_box`)**: क्रियाकलाप 2.15 — क्रिस्टलन का जल (CuSO₄·5H₂O तापन व पुनःजलयोजन)
+- [ ] **Sim 2.21 (`sim2_pop_setting_box`)**: टॉपिक 7 — प्लास्टर ऑफ पेरिस व जिप्सम सेटिंग
 
 ---
 
-## ✅ 3. Standard Chapter Audit Checklist
-प्रत्येक अध्याय का सत्यापन करते समय निम्नलिखित चेकलिस्ट पूरी करें:
-- [ ] क्या अध्याय के सभी NCERT क्रियाकलापों के सिमुलेटर बन चुके हैं?
-- [ ] क्या सभी सिमुलेटर 16:9 आस्पेक्ट रेशियो (`1200x540`) और लाइट ग्रीन लैब थीम में हैं?
-- [ ] क्या जावास्क्रिप्ट में कोई सिंटैक्स एरर नहीं है (`node -c` पास)?
-- [ ] क्या सभी बटनों के `onclick` फंक्शन सही से डिफाइंड हैं?
-- [ ] क्या अलग `qa_master_sci*.html` फाइल में पिछले 5 वर्षों के बोर्ड प्रश्न (2019-2024) मौजूद हैं?
-- [ ] क्या स्थिर चित्र के लिए सिमुलेटर न लगाने का कारण व प्रॉम्प्ट दिया गया है?
+## ⚡ 3. Repetitive Automation Helper Scripts
+To save tokens and enforce standardized execution, use standalone Python scripts:
+1. `validate_all_sims.py` — Verifies all simulators for DOM presence, onclick handlers, and Projector CSS rules.
+2. `check_syntax.py` — Runs `node -c` on extracted script blocks to guarantee zero console syntax errors.
+3. `test_playwright_batch.py` — Captures step snapshots to verify visual layout and projector legibility.
