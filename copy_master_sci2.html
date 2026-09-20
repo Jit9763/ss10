@@ -2057,9 +2057,9 @@
               <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <path d="M8,0 Q16,-12 24,0 Z" fill="#ef4444"/>
               <text x="16" y="-12" font-size="14.5" font-weight="900" fill="#b91c1c" text-anchor="middle">+ तनु HCl (अम्ल)</text>
-              <!-- Animated falling teardrop -->
-              <circle id="solf_drop_acid" cx="16" cy="35" r="4.5" fill="#ef4444" opacity="0"/>
             </g>
+            <!-- Animated falling teardrop directly in dish coords (Tip at 101,30 -> Hits plate at 101,175) -->
+            <circle id="solf_drop_acid" cx="101" cy="32" r="5" fill="#ef4444" opacity="0"/>
 
             <!-- Splash ripple on acid dish surface -->
             <ellipse id="solf_ripple_acid" class="splash-ripple-wave" cx="100" cy="178" rx="14" ry="4.5" fill="none" stroke="#ef4444" opacity="0"/>
@@ -2094,9 +2094,9 @@
               <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <path d="M8,0 Q16,-12 24,0 Z" fill="#3b82f6"/>
               <text x="16" y="-12" font-size="14.5" font-weight="900" fill="#1d4ed8" text-anchor="middle">+ तनु NaOH (क्षारक)</text>
-              <!-- Animated falling teardrop -->
-              <circle id="solf_drop_base" cx="16" cy="35" r="4.5" fill="#3b82f6" opacity="0"/>
             </g>
+            <!-- Animated falling teardrop directly in dish coords (Tip at 101,30 -> Hits plate at 101,175) -->
+            <circle id="solf_drop_base" cx="101" cy="32" r="5" fill="#3b82f6" opacity="0"/>
 
             <!-- Splash ripple on base dish surface -->
             <ellipse id="solf_ripple_base" class="splash-ripple-wave" cx="100" cy="178" rx="14" ry="4.5" fill="none" stroke="#3b82f6" opacity="0"/>
@@ -7584,8 +7584,8 @@
       var smellAcid = document.getElementById('solf_smell_acid'); if (smellAcid) smellAcid.style.opacity = '0';
       var smellBaseCross = document.getElementById('solf_smell_base_cross'); if (smellBaseCross) smellBaseCross.style.opacity = '0';
 
-      var dropA = document.getElementById('solf_drop_acid'); if (dropA) { dropA.style.opacity = '0'; dropA.setAttribute('cy', '35'); }
-      var dropB = document.getElementById('solf_drop_base'); if (dropB) { dropB.style.opacity = '0'; dropB.setAttribute('cy', '35'); }
+      var dropA = document.getElementById('solf_drop_acid'); if (dropA) { dropA.style.opacity = '0'; dropA.setAttribute('cy', '32'); }
+      var dropB = document.getElementById('solf_drop_base'); if (dropB) { dropB.style.opacity = '0'; dropB.setAttribute('cy', '32'); }
       var ripA = document.getElementById('solf_ripple_acid'); if (ripA) ripA.style.opacity = '0';
       var ripB = document.getElementById('solf_ripple_base'); if (ripB) ripB.style.opacity = '0';
     }
@@ -7682,31 +7682,66 @@
 
       if (st) st.innerHTML = '<strong>ड्रॉपर क्रियाशील:</strong> दोनों वॉच ग्लास पर तनु अम्ल व तनु क्षारक की बूंदें धीरे-धीरे गिर रही हैं...';
 
-      // Phase 1: Slow falling drops from droppers (taking 1.0s)
+      // Phase 1: Realistic gravity fall from dropper nozzle (cy: 32) onto plate surface (cy: 176)
       if (window.gsap) {
+        gsap.killTweensOf('#solf_drop_acid');
+        gsap.killTweensOf('#solf_drop_base');
+        if (ripA) gsap.killTweensOf(ripA);
+        if (ripB) gsap.killTweensOf(ripB);
+
+        var dropA = document.getElementById('solf_drop_acid');
+        var dropB = document.getElementById('solf_drop_base');
+        if (dropA) { dropA.setAttribute('cy', '32'); dropA.setAttribute('r', '5'); dropA.style.opacity = '1'; }
+        if (dropB) { dropB.setAttribute('cy', '32'); dropB.setAttribute('r', '5'); dropB.style.opacity = '1'; }
+
         gsap.fromTo('#solf_drop_acid',
-          { attr: { cy: 35 }, opacity: 1 },
-          { attr: { cy: 160 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
+          { attr: { cy: 32, r: 5 }, opacity: 1 },
+          {
+            attr: { cy: 176, r: 5.5 },
+            duration: 1.1,
+            ease: 'power1.in',
+            onComplete: function() {
+              // Flatten & merge onto plate surface
+              gsap.to('#solf_drop_acid', { attr: { cy: 178, r: 9 }, opacity: 0, duration: 0.2 });
+              // Expansive ripple on plate
+              if (ripA) {
+                gsap.fromTo(ripA,
+                  { attr: { rx: 6, ry: 2 }, opacity: 0.95 },
+                  { attr: { rx: 42, ry: 13 }, opacity: 0, duration: 0.85, ease: 'power1.out' }
+                );
+              }
+            }
+          }
         );
+
         gsap.fromTo('#solf_drop_base',
-          { attr: { cy: 35 }, opacity: 1 },
-          { attr: { cy: 160 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
+          { attr: { cy: 32, r: 5 }, opacity: 1 },
+          {
+            attr: { cy: 176, r: 5.5 },
+            duration: 1.1,
+            ease: 'power1.in',
+            onComplete: function() {
+              // Flatten & merge onto plate surface
+              gsap.to('#solf_drop_base', { attr: { cy: 178, r: 9 }, opacity: 0, duration: 0.2 });
+              // Expansive ripple on plate
+              if (ripB) {
+                gsap.fromTo(ripB,
+                  { attr: { rx: 6, ry: 2 }, opacity: 0.95 },
+                  { attr: { rx: 42, ry: 13 }, opacity: 0, duration: 0.85, ease: 'power1.out' }
+                );
+              }
+            }
+          }
         );
       } else {
-        if (dropA) { dropA.style.opacity = '1'; dropA.setAttribute('cy', '155'); }
-        if (dropB) { dropB.style.opacity = '1'; dropB.setAttribute('cy', '155'); }
+        if (dropA) { dropA.style.opacity = '1'; dropA.setAttribute('cy', '176'); }
+        if (dropB) { dropB.style.opacity = '1'; dropB.setAttribute('cy', '176'); }
       }
 
-      // Phase 2: Drops hit surface at 1000ms -> ripples expand -> gradual slow color change
+      // Phase 2: Right after drop hits plate at 1150ms -> gradual slow color change begins!
       addSimTimer('olf', setTimeout(function() {
         if (dropA) dropA.style.opacity = '0';
         if (dropB) dropB.style.opacity = '0';
-
-        // Ripple expansion
-        if (window.gsap) {
-          if (ripA) { gsap.fromTo(ripA, { attr: { rx: 8, ry: 2.5 }, opacity: 0.9 }, { attr: { rx: 32, ry: 9 }, opacity: 0, duration: 0.7 }); }
-          if (ripB) { gsap.fromTo(ripB, { attr: { rx: 8, ry: 2.5 }, opacity: 0.9 }, { attr: { rx: 32, ry: 9 }, opacity: 0, duration: 0.7 }); }
-        }
 
         // Phase 3: Gradual slow color transition (via CSS transition 2.0s)
         if (type === 'turmeric') {
@@ -7749,7 +7784,7 @@
           if (smellBaseCross) smellBaseCross.style.opacity = '1';
           if (st) st.innerHTML = '<span style="color:#be123c;">✔ प्याज की पट्टी:</span> अम्ल में तीखी गंध <strong>यथावत</strong> रही, परंतु क्षारक (NaOH) पड़ते ही गंध <strong>पूरी तरह नष्ट</strong> हो गई!';
         }
-      }, 1000));
+      }, 1150));
     }
 
     /* ==========================================================
