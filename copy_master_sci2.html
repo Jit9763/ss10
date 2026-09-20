@@ -2050,29 +2050,35 @@
             <ellipse id="solf_dish_acid" cx="100" cy="178" rx="80" ry="24" fill="#fef08a" stroke="#d97706" stroke-width="1.5" style="transition: fill 2.0s ease, stroke 2.0s ease;"/>
             <!-- Cloth strip / liquid sample -->
             <rect id="solf_sample_acid" x="50" y="165" width="100" height="26" rx="6" fill="#facc15" stroke="#b45309" stroke-width="1.2" style="transition: all 2.0s ease;"/>
-            <!-- Animated Dropper Acid -->
-            <g id="solf_dropper_acid" transform="translate(85, 20)">
+
+            <!-- Animated Dropper Acid (Positioned at y=-30 so tip is at y=30, leaving 35px clearance!) -->
+            <g id="solf_dropper_acid" transform="translate(85, -30)">
               <rect x="10" y="0" width="12" height="45" rx="2" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <path d="M8,0 Q16,-12 24,0 Z" fill="#ef4444"/>
-              <text x="16" y="-12" font-size="13" font-weight="900" fill="#dc2626" text-anchor="middle">+ तनु HCl (अम्ल)</text>
+              <text x="16" y="-12" font-size="14.5" font-weight="900" fill="#b91c1c" text-anchor="middle">+ तनु HCl (अम्ल)</text>
               <!-- Animated falling teardrop -->
-              <circle id="solf_drop_acid" cx="16" cy="65" r="4.5" fill="#ef4444" opacity="0"/>
+              <circle id="solf_drop_acid" cx="16" cy="35" r="4.5" fill="#ef4444" opacity="0"/>
             </g>
+
             <!-- Splash ripple on acid dish surface -->
             <ellipse id="solf_ripple_acid" class="splash-ripple-wave" cx="100" cy="178" rx="14" ry="4.5" fill="none" stroke="#ef4444" opacity="0"/>
 
-            <!-- Smell Waves for Acid (Active on vanilla/onion) -->
+            <!-- Smell Waves & Pill Badge for Acid (Active on vanilla/onion) -->
             <g id="solf_smell_acid" opacity="0" style="transition: opacity 1.5s ease;">
-              <path d="M70,140 Q60,115 70,90" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M100,135 Q90,110 100,85" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M130,140 Q120,115 130,90" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-              <text x="100" y="70" font-size="12" font-weight="900" fill="#b45309" text-anchor="middle">👃 गंध सुरक्षित रहती है</text>
+              <!-- High-contrast White Pill Badge (y=62 to y=90, zero overlap with dropper!) -->
+              <rect x="12" y="62" width="176" height="28" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.12))"/>
+              <text x="100" y="81" font-size="14" font-weight="900" fill="#15803d" text-anchor="middle">👃 गंध सुरक्षित रहती है</text>
+              <!-- Smell waves rising from dish to badge -->
+              <path d="M70,155 Q60,132 70,105" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M100,150 Q90,127 100,100" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M130,155 Q120,132 130,105" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
             </g>
-            <!-- Label -->
-            <rect x="25" y="225" width="150" height="34" rx="6" fill="#0f172a" stroke="#dc2626" stroke-width="1.5"/>
-            <text x="100" y="242" font-size="14" font-weight="900" fill="#f87171" text-anchor="middle">अम्लीय माध्यम (Acid)</text>
-            <text id="solf_lbl_acid" x="100" y="255" font-size="11" font-weight="800" fill="#fef08a" text-anchor="middle">रंग: पीला (यथावत)</text>
+
+            <!-- Label Card Below Dish -->
+            <rect x="10" y="225" width="180" height="42" rx="8" fill="#0f172a" stroke="#dc2626" stroke-width="2"/>
+            <text x="100" y="244" font-size="14.5" font-weight="900" fill="#fca5a5" text-anchor="middle">अम्लीय माध्यम (Acid)</text>
+            <text id="solf_lbl_acid" x="100" y="260" font-size="12.5" font-weight="800" fill="#fef08a" text-anchor="middle">रंग: पीला (यथावत)</text>
           </g>
 
           <!-- RIGHT DISH / STRIP: BASE TEST -->
@@ -2081,32 +2087,38 @@
             <ellipse id="solf_dish_base" cx="100" cy="178" rx="80" ry="24" fill="#fef08a" stroke="#d97706" stroke-width="1.5" style="transition: fill 2.0s ease, stroke 2.0s ease;"/>
             <!-- Cloth strip / sample -->
             <rect id="solf_sample_base" x="50" y="165" width="100" height="26" rx="6" fill="#facc15" stroke="#b45309" stroke-width="1.2" style="transition: all 2.0s ease;"/>
-            <!-- Animated Dropper Base -->
-            <g id="solf_dropper_base" transform="translate(85, 20)">
+
+            <!-- Animated Dropper Base (Positioned at y=-30 so tip is at y=30, leaving 35px clearance!) -->
+            <g id="solf_dropper_base" transform="translate(85, -30)">
               <rect x="10" y="0" width="12" height="45" rx="2" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
               <path d="M8,0 Q16,-12 24,0 Z" fill="#3b82f6"/>
-              <text x="16" y="-12" font-size="13" font-weight="900" fill="#2563eb" text-anchor="middle">+ तनु NaOH (क्षारक)</text>
+              <text x="16" y="-12" font-size="14.5" font-weight="900" fill="#1d4ed8" text-anchor="middle">+ तनु NaOH (क्षारक)</text>
               <!-- Animated falling teardrop -->
-              <circle id="solf_drop_base" cx="16" cy="65" r="4.5" fill="#3b82f6" opacity="0"/>
+              <circle id="solf_drop_base" cx="16" cy="35" r="4.5" fill="#3b82f6" opacity="0"/>
             </g>
+
             <!-- Splash ripple on base dish surface -->
             <ellipse id="solf_ripple_base" class="splash-ripple-wave" cx="100" cy="178" rx="14" ry="4.5" fill="none" stroke="#3b82f6" opacity="0"/>
 
             <!-- Smell Destroyed Tag for Base -->
             <g id="solf_smell_base_cross" opacity="0" style="transition: opacity 1.5s ease;">
-              <circle cx="100" cy="110" r="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
-              <line x1="90" y1="100" x2="110" y2="120" stroke="#dc2626" stroke-width="3"/>
-              <line x1="110" y1="100" x2="90" y2="120" stroke="#dc2626" stroke-width="3"/>
-              <text x="100" y="70" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">👃 गंध समाप्त हो जाती है!</text>
+              <!-- High-contrast White Pill Badge (y=62 to y=90, zero overlap with dropper!) -->
+              <rect x="12" y="62" width="176" height="28" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.12))"/>
+              <text x="100" y="81" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">❌ गंध समाप्त हो गई!</text>
+              <!-- Circular Cross Sign cleanly positioned at y=125 -->
+              <circle cx="100" cy="125" r="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2.5"/>
+              <line x1="88" y1="113" x2="112" y2="137" stroke="#dc2626" stroke-width="3"/>
+              <line x1="112" y1="113" x2="88" y2="137" stroke="#dc2626" stroke-width="3"/>
             </g>
-            <!-- Label -->
-            <rect x="25" y="225" width="150" height="34" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
-            <text x="100" y="242" font-size="14" font-weight="900" fill="#93c5fd" text-anchor="middle">क्षारकीय माध्यम (Base)</text>
-            <text id="solf_lbl_base" x="100" y="255" font-size="11" font-weight="800" fill="#fca5a5" text-anchor="middle">रंग: पीला (प्रारंभिक)</text>
+
+            <!-- Label Card Below Dish -->
+            <rect x="10" y="225" width="180" height="42" rx="8" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+            <text x="100" y="244" font-size="14.5" font-weight="900" fill="#93c5fd" text-anchor="middle">क्षारकीय माध्यम (Base)</text>
+            <text id="solf_lbl_base" x="100" y="260" font-size="12.5" font-weight="800" fill="#fca5a5" text-anchor="middle">रंग: पीला (प्रारंभिक)</text>
           </g>
 
-          <!-- ================= RIGHT OBSERVATION PANEL============= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <!-- ================= RIGHT OBSERVATION PANEL============= RIGHT OBSERVATION PANEL============= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
           <g transform="translate(725, 20)">
             <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
 
@@ -7572,8 +7584,8 @@
       var smellAcid = document.getElementById('solf_smell_acid'); if (smellAcid) smellAcid.style.opacity = '0';
       var smellBaseCross = document.getElementById('solf_smell_base_cross'); if (smellBaseCross) smellBaseCross.style.opacity = '0';
 
-      var dropA = document.getElementById('solf_drop_acid'); if (dropA) { dropA.style.opacity = '0'; dropA.setAttribute('cy', '65'); }
-      var dropB = document.getElementById('solf_drop_base'); if (dropB) { dropB.style.opacity = '0'; dropB.setAttribute('cy', '65'); }
+      var dropA = document.getElementById('solf_drop_acid'); if (dropA) { dropA.style.opacity = '0'; dropA.setAttribute('cy', '35'); }
+      var dropB = document.getElementById('solf_drop_base'); if (dropB) { dropB.style.opacity = '0'; dropB.setAttribute('cy', '35'); }
       var ripA = document.getElementById('solf_ripple_acid'); if (ripA) ripA.style.opacity = '0';
       var ripB = document.getElementById('solf_ripple_base'); if (ripB) ripB.style.opacity = '0';
     }
@@ -7673,12 +7685,12 @@
       // Phase 1: Slow falling drops from droppers (taking 1.0s)
       if (window.gsap) {
         gsap.fromTo('#solf_drop_acid',
-          { attr: { cy: 65 }, opacity: 1 },
-          { attr: { cy: 155 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
+          { attr: { cy: 35 }, opacity: 1 },
+          { attr: { cy: 160 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
         );
         gsap.fromTo('#solf_drop_base',
-          { attr: { cy: 65 }, opacity: 1 },
-          { attr: { cy: 155 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
+          { attr: { cy: 35 }, opacity: 1 },
+          { attr: { cy: 160 }, opacity: 1, duration: 1.0, ease: 'power1.in' }
         );
       } else {
         if (dropA) { dropA.style.opacity = '1'; dropA.setAttribute('cy', '155'); }
