@@ -1640,6 +1640,48 @@
       text-shadow: 0 0 0.5px #000 !important;
     }
 
+  
+    /* =========================================================================
+       UNIVERSAL CODE & FORMULA SIZE STANDARDIZATION (DIFFERENT COLOR, SAME SIZE)
+       ========================================================================= */
+    code, kbd, samp {
+      font-family: inherit !important;
+      font-size: 1em !important;
+      font-weight: 800 !important;
+      color: #1d4ed8 !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 4px !important;
+    }
+
+    [id$="_status"] code, .sim-status-banner code,
+    [id$="_status"] span code, .sim-status-banner span code {
+      font-size: 26pt !important;
+      font-family: inherit !important;
+      font-weight: 800 !important;
+      color: #1d4ed8 !important;
+      display: inline !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    [id$="_status"] span, .sim-status-banner span {
+      font-size: 26pt !important;
+      font-family: inherit !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    [id$="_status"] strong, .sim-status-banner strong,
+    [id$="_status"] b, .sim-status-banner b {
+      font-size: 26pt !important;
+      font-family: inherit !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
   </style>
   <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -8254,7 +8296,7 @@
         }
         .chem-eq, .reaction-box, .formula-box-projector, [class*="formula"], .math-symbol,
         .video-card-container p, .video-card-container span, .video-card-container code,
-        .sim-card > p, [id$="_status"], [id$="_status"] *, .sim-status-banner, .sim-status-banner * {
+        .sim-card > p, [id$="_status"], [id$="_status"] *, .sim-status-banner, .sim-status-banner *, [id$="_status"] code, .sim-status-banner code {
           font-size: ${Math.round(b * 1.05)}pt !important;
           font-weight: 800 !important;
           line-height: 1.8 !important;
@@ -8659,7 +8701,7 @@
           }
         }
 
-        if (st) st.innerHTML = '<strong>चरण 2 (तनु HCl मिलाना व CO₂ निर्माण):</strong> थिसिल कीप से तनु HCl डालते ही तीव्र बुदबुदाहट (Effervescence) के साथ कार्बन डाइऑक्साइड (CO₂) गैस बनती है:<br><span style="color:#15803d; font-size:20px; font-weight:900;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl(aq) + H₂O(l) + CO₂(g)↑</span>';
+        if (st) st.innerHTML = '<strong>चरण 2 (तनु HCl मिलाना व CO₂ निर्माण):</strong> थिसिल कीप से तनु HCl डालते ही तीव्र बुदबुदाहट (Effervescence) के साथ कार्बन डाइऑक्साइड (CO₂) गैस बनती है:<br><span style="color:#15803d;  font-weight:900;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl(aq) + H₂O(l) + CO₂(g)↑</span>';
         var c1 = document.getElementById('scarb_card1'); if (c1) c1.style.background = '#dcfce7';
 
       } else if (s === 3) {
@@ -8678,7 +8720,7 @@
           gsap.to('#olabs_lime_milky', { opacity: 0.95, duration: 2.0, ease: "power1.inOut" });
         }
 
-        if (st) st.innerHTML = '<strong>चरण 3 (चूने का पानी दूधिया होना):</strong> CO₂ गैस चूने के पानी में प्रवाहित होने पर अघुलनशील कैल्शियम कार्बोनेट (CaCO₃) का श्वेत अवक्षेप बनता है, जिससे पानी दूधिया हो जाता है:<br><span style="color:#b45309; font-size:20px; font-weight:900;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃(s)↓ [श्वेत अवक्षेप, दूधिया] + H₂O(l)</span>';
+        if (st) st.innerHTML = '<strong>चरण 3 (चूने का पानी दूधिया होना):</strong> CO₂ गैस चूने के पानी में प्रवाहित होने पर अघुलनशील कैल्शियम कार्बोनेट (CaCO₃) का श्वेत अवक्षेप बनता है, जिससे पानी दूधिया हो जाता है:<br><span style="color:#b45309;  font-weight:900;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃(s)↓ [श्वेत अवक्षेप, दूधिया] + H₂O(l)</span>';
         var c2 = document.getElementById('scarb_card2'); if (c2) c2.style.background = '#fef3c7';
 
       } else if (s === 4) {
@@ -8688,7 +8730,7 @@
           gsap.to('#olabs_lime_milky', { opacity: 0, duration: 2.5, ease: "power1.out" });
         }
 
-        if (st) st.innerHTML = '<strong>चरण 4 (अत्यधिक CO₂ प्रवाहित करना):</strong> लगातार अधिक मात्रा में CO₂ प्रवाहित करने पर अघुलनशील CaCO₃ जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट [Ca(HCO₃)₂] में बदल जाता है और <strong>दूधियापन पूरी तरह गायब</strong> हो जाता है:<br><span style="color:#1d4ed8; font-size:20px; font-weight:900;">CaCO₃(s) + H₂O(l) + CO₂(g) ➔ Ca(HCO₃)₂(aq) [जल में विलेय, पारदर्शी]</span>';
+        if (st) st.innerHTML = '<strong>चरण 4 (अत्यधिक CO₂ प्रवाहित करना):</strong> लगातार अधिक मात्रा में CO₂ प्रवाहित करने पर अघुलनशील CaCO₃ जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट [Ca(HCO₃)₂] में बदल जाता है और <strong>दूधियापन पूरी तरह गायब</strong> हो जाता है:<br><span style="color:#1d4ed8;  font-weight:900;">CaCO₃(s) + H₂O(l) + CO₂(g) ➔ Ca(HCO₃)₂(aq) [जल में विलेय, पारदर्शी]</span>';
         var c3 = document.getElementById('scarb_card3'); if (c3) c3.style.background = '#dbeafe';
       }
     }
@@ -8802,7 +8844,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त H⁺ व Cl⁻ आयनों के प्रवाह से परिपथ पूर्ण होता है।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु HCl:</span> <strong>बल्ब चमकता है 💡</strong> क्योंकि HCl जलीय विलयन में H⁺ तथा Cl⁻ आयनों में टूटकर विद्युत का चालन करता है।';
+        if (st) st.innerHTML = '<span style="color:#15803d;  font-weight:900;">✔ तनु HCl:</span> <strong>बल्ब चमकता है 💡</strong> क्योंकि HCl जलीय विलयन में H⁺ तथा Cl⁻ आयनों में टूटकर विद्युत का चालन करता है।';
 
       } else if (type === 'h2so4') {
         if (bGlow) bGlow.style.opacity = '1';
@@ -8833,7 +8875,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब अत्यंत तीव्र जलता है 💡';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन धारा को तेजी से प्रवाहित करते हैं।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु H₂SO₄:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि यह जल में 2H⁺ तथा SO₄²⁻ आयनों में वियोजित होता है।';
+        if (st) st.innerHTML = '<span style="color:#15803d;  font-weight:900;">✔ तनु H₂SO₄:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि यह जल में 2H⁺ तथा SO₄²⁻ आयनों में वियोजित होता है।';
 
       } else if (type === 'glucose') {
         if (bGlow) bGlow.style.opacity = '0';
@@ -8867,7 +8909,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, परिपथ अधूरा है।';
         if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
-        if (st) st.innerHTML = '<span style="color:#dc2626; font-size:17px; font-weight:900;">❌ ग्लूकोज:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ग्लूकोज में हाइड्रोजन परमाणु होते हुए भी यह जल में H⁺ आयन नहीं बनाता। अतः यह अम्ल नहीं है!';
+        if (st) st.innerHTML = '<span style="color:#dc2626;  font-weight:900;">❌ ग्लूकोज:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ग्लूकोज में हाइड्रोजन परमाणु होते हुए भी यह जल में H⁺ आयन नहीं बनाता। अतः यह अम्ल नहीं है!';
 
       } else if (type === 'alcohol') {
         if (bGlow) bGlow.style.opacity = '0';
@@ -8901,7 +8943,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, विद्युत चालन असंभव।';
         if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
-        if (st) st.innerHTML = '<span style="color:#dc2626; font-size:17px; font-weight:900;">❌ ऐल्कोहॉल:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ऐल्कोहॉल का जलीय विलयन आयनित नहीं होता। अतः यह अम्लीय व्यवहार नहीं दर्शाता!';
+        if (st) st.innerHTML = '<span style="color:#dc2626;  font-weight:900;">❌ ऐल्कोहॉल:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ऐल्कोहॉल का जलीय विलयन आयनित नहीं होता। अतः यह अम्लीय व्यवहार नहीं दर्शाता!';
 
       } else if (type === 'naoh') {
         if (bGlow) bGlow.style.opacity = '1';
@@ -8932,7 +8974,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त Na⁺ व OH⁻ आयन परिपथ को पूर्ण करते हैं।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु NaOH:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि क्षारक भी जलीय विलयन में हाइड्रॉक्साइड आयन (OH⁻) देते हैं, जो विद्युत धारा का चालन करते हैं।';
+        if (st) st.innerHTML = '<span style="color:#15803d;  font-weight:900;">✔ तनु NaOH:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि क्षारक भी जलीय विलयन में हाइड्रॉक्साइड आयन (OH⁻) देते हैं, जो विद्युत धारा का चालन करते हैं।';
       }
     }
 
@@ -9648,7 +9690,7 @@
           }
         }
 
-        if (st) st.innerHTML = '<strong>चरण 2 (बर्नर से तापन व H₂ निर्माण):</strong> बर्नर की ज्वाला पर गर्म करते ही जिंक और NaOH की तीव्र अभिक्रिया से <strong>सोडियम जिंकेट (Na₂ZnO₂)</strong> बनता है तथा <strong>H₂ गैस</strong> निकलती है:<br><span style="color:#15803d; font-size:20px; font-weight:900;">2NaOH(aq) + Zn(s) 🔥 ➔ Na₂ZnO₂(aq) + H₂(g)↑</span>';
+        if (st) st.innerHTML = '<strong>चरण 2 (बर्नर से तापन व H₂ निर्माण):</strong> बर्नर की ज्वाला पर गर्म करते ही जिंक और NaOH की तीव्र अभिक्रिया से <strong>सोडियम जिंकेट (Na₂ZnO₂)</strong> बनता है तथा <strong>H₂ गैस</strong> निकलती है:<br><span style="color:#15803d;  font-weight:900;">2NaOH(aq) + Zn(s) 🔥 ➔ Na₂ZnO₂(aq) + H₂(g)↑</span>';
         var c1 = document.getElementById('szb_card1'); if (c1) c1.style.background = '#dcfce7';
 
       } else if (s === 3) {
@@ -9710,7 +9752,7 @@
           }
         }
 
-        if (st) st.innerHTML = '<strong>चरण 4 (मोमबत्ती से POP! परीक्षण):</strong> जलती मोमबत्ती को बुलबुले के पास लाते ही हाइड्रोजन गैस नीली ज्वाला व 💥 <strong>तीव्र "पॉप" (POP!) ध्वनि</strong> के साथ फटकर जलती है:<br><span style="color:#b45309; font-size:20px; font-weight:900;">2H₂(g) + O₂(g) 🔥 ➔ 2H₂O(g) + ऊर्जा [POP! ध्वनि]</span>';
+        if (st) st.innerHTML = '<strong>चरण 4 (मोमबत्ती से POP! परीक्षण):</strong> जलती मोमबत्ती को बुलबुले के पास लाते ही हाइड्रोजन गैस नीली ज्वाला व 💥 <strong>तीव्र "पॉप" (POP!) ध्वनि</strong> के साथ फटकर जलती है:<br><span style="color:#b45309;  font-weight:900;">2H₂(g) + O₂(g) 🔥 ➔ 2H₂O(g) + ऊर्जा [POP! ध्वनि]</span>';
         var c2 = document.getElementById('szb_card2'); if (c2) c2.style.background = '#fef3c7';
         var c4 = document.getElementById('szb_card4'); if (c4) c4.style.background = '#dcfce7';
       }
@@ -10314,7 +10356,7 @@
             }
             if (tblTitle) tblTitle.textContent = 'बीकर: कॉपर(II) क्लोराइड [CuCl₂] नीला-हरा विलयन (अभिक्रिया पूर्ण)';
             if (tblSub) tblSub.textContent = '▶ परिणाम: काला CuO चूर्ण पूरी तरह विलीन हो गया! विलयन का रंग खूबसूरत नीला-हरा हो गया।';
-            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> काला CuO चूर्ण पूरी तरह घुलकर विलीन हो गया और <strong>खूबसूरत नीले-हरे (Blue-Green) रंग का कॉपर क्लोराइड [CuCl₂]</strong> विलयन बन गया!<br><span style="color:#000000; font-size:18.5px; font-weight:900;">CuO(s) [काला ठोस] + 2HCl(aq) [तनु अम्ल] ➔ CuCl₂(aq) [नीला-हरा विलयन] + H₂O(l)</span>';
+            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> काला CuO चूर्ण पूरी तरह घुलकर विलीन हो गया और <strong>खूबसूरत नीले-हरे (Blue-Green) रंग का कॉपर क्लोराइड [CuCl₂]</strong> विलयन बन गया!<br><span style="color:#000000;  font-weight:900;">CuO(s) [काला ठोस] + 2HCl(aq) [तनु अम्ल] ➔ CuCl₂(aq) [नीला-हरा विलयन] + H₂O(l)</span>';
           }, 2000));
 
         } else {
@@ -10918,7 +10960,7 @@
 
           if (tblTitle) tblTitle.textContent = 'परखनली: दूधिया कैल्शियम कार्बोनेट [CaCO₃ लवण] अवक्षेप बन गया';
           if (tblSub) tblSub.textContent = '▶ परिणाम: अघुलनशील CaCO₃ बनने से विलयन दूधिया हो गया (अम्लीय प्रकृति सिद्ध)!';
-          if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> अघुलनशील कैल्शियम कार्बोनेट (CaCO₃ सफ़ेद लवण) बनने से विलयन <strong>दूधिया (Milky)</strong> हो गया!<br><span style="color:#000000; font-size:18.5px; font-weight:900;">Ca(OH)₂(aq) [क्षारक] + CO₂(g) [अधातु ऑक्साइड] ➔ CaCO₃(s)↓ [सफ़ेद लवण] + H₂O(l)</span>';
+          if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> अघुलनशील कैल्शियम कार्बोनेट (CaCO₃ सफ़ेद लवण) बनने से विलयन <strong>दूधिया (Milky)</strong> हो गया!<br><span style="color:#000000;  font-weight:900;">Ca(OH)₂(aq) [क्षारक] + CO₂(g) [अधातु ऑक्साइड] ➔ CaCO₃(s)↓ [सफ़ेद लवण] + H₂O(l)</span>';
 
           var c2 = document.getElementById('snm_c2_bg'); if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#0284c7'); }
           var c3 = document.getElementById('snm_c3_bg'); if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
