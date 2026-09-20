@@ -265,9 +265,9 @@
     }
 
 .top-toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: relative !important;
+      top: auto !important;
+      z-index: 10;
       background: #ffffff;
       border-bottom: 3px solid #cbd5e1;
       padding: 12px 0;
@@ -1770,12 +1770,22 @@
             <rect id="sind_liq1" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
             <!-- Meniscus curve -->
             <ellipse id="sind_meniscus1" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <circle id="sind_drop1" cx="35" cy="40" r="4" fill="#db2777" opacity="0"/>
+            <ellipse id="sind_ripple1" class="splash-ripple-wave" cx="35" cy="90" rx="16" ry="5" fill="none" stroke="#db2777" opacity="0"/>
             <!-- Glass Body -->
             <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
             <!-- Rim lip -->
             <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
             <!-- Indicator test strip dipped -->
-            <rect id="sind_strip1" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <!-- Litmus Paper Strip: Dry top half (in air) + Dipped bottom half (in liquid) -->
+            <g id="sind_strip1" opacity="0" style="transition: all 0.4s ease;">
+              <!-- Dry upper part in air (stays original color!) -->
+              <rect id="sind_strip1_top" x="29" y="32" width="12" height="58" rx="2" fill="#2563eb"/>
+              <!-- Submerged lower part dipped in liquid (changes color only where submerged!) -->
+              <rect id="sind_strip1_bot" x="29" y="90" width="12" height="70" rx="2" fill="#2563eb" style="transition: fill 0.5s ease;"/>
+              <!-- Demarcation line where liquid touches paper -->
+              <line x1="28" y1="90" x2="42" y2="90" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+            </g>
             <!-- Label Badge -->
             <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
             <text x="35" y="262" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">तनु HCl</text>
@@ -1786,9 +1796,19 @@
           <g id="sind_tube2_group" transform="translate(270, 160)">
             <rect id="sind_liq2" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
             <ellipse id="sind_meniscus2" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <circle id="sind_drop2" cx="35" cy="40" r="4" fill="#db2777" opacity="0"/>
+            <ellipse id="sind_ripple2" class="splash-ripple-wave" cx="35" cy="90" rx="16" ry="5" fill="none" stroke="#db2777" opacity="0"/>
             <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
             <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
-            <rect id="sind_strip2" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <!-- Litmus Paper Strip: Dry top half (in air) + Dipped bottom half (in liquid) -->
+            <g id="sind_strip2" opacity="0" style="transition: all 0.4s ease;">
+              <!-- Dry upper part in air (stays original color!) -->
+              <rect id="sind_strip2_top" x="29" y="32" width="12" height="58" rx="2" fill="#2563eb"/>
+              <!-- Submerged lower part dipped in liquid (changes color only where submerged!) -->
+              <rect id="sind_strip2_bot" x="29" y="90" width="12" height="70" rx="2" fill="#2563eb" style="transition: fill 0.5s ease;"/>
+              <!-- Demarcation line where liquid touches paper -->
+              <line x1="28" y1="90" x2="42" y2="90" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+            </g>
             <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
             <text x="35" y="262" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">तनु H₂SO₄</text>
             <text x="35" y="275" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">(सल्फ्यूरिक अम्ल)</text>
@@ -1798,9 +1818,19 @@
           <g id="sind_tube3_group" transform="translate(410, 160)">
             <rect id="sind_liq3" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
             <ellipse id="sind_meniscus3" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <circle id="sind_drop3" cx="35" cy="40" r="4" fill="#db2777" opacity="0"/>
+            <ellipse id="sind_ripple3" class="splash-ripple-wave" cx="35" cy="90" rx="16" ry="5" fill="none" stroke="#db2777" opacity="0"/>
             <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
             <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
-            <rect id="sind_strip3" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <!-- Litmus Paper Strip: Dry top half (in air) + Dipped bottom half (in liquid) -->
+            <g id="sind_strip3" opacity="0" style="transition: all 0.4s ease;">
+              <!-- Dry upper part in air (stays original color!) -->
+              <rect id="sind_strip3_top" x="29" y="32" width="12" height="58" rx="2" fill="#2563eb"/>
+              <!-- Submerged lower part dipped in liquid (changes color only where submerged!) -->
+              <rect id="sind_strip3_bot" x="29" y="90" width="12" height="70" rx="2" fill="#2563eb" style="transition: fill 0.5s ease;"/>
+              <!-- Demarcation line where liquid touches paper -->
+              <line x1="28" y1="90" x2="42" y2="90" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+            </g>
             <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
             <text x="35" y="262" font-size="14" font-weight="900" fill="#a78bfa" text-anchor="middle">तनु NaOH</text>
             <text x="35" y="275" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">(प्रबल क्षारक)</text>
@@ -1810,9 +1840,19 @@
           <g id="sind_tube4_group" transform="translate(550, 160)">
             <rect id="sind_liq4" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
             <ellipse id="sind_meniscus4" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <circle id="sind_drop4" cx="35" cy="40" r="4" fill="#db2777" opacity="0"/>
+            <ellipse id="sind_ripple4" class="splash-ripple-wave" cx="35" cy="90" rx="16" ry="5" fill="none" stroke="#db2777" opacity="0"/>
             <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
             <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
-            <rect id="sind_strip4" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <!-- Litmus Paper Strip: Dry top half (in air) + Dipped bottom half (in liquid) -->
+            <g id="sind_strip4" opacity="0" style="transition: all 0.4s ease;">
+              <!-- Dry upper part in air (stays original color!) -->
+              <rect id="sind_strip4_top" x="29" y="32" width="12" height="58" rx="2" fill="#2563eb"/>
+              <!-- Submerged lower part dipped in liquid (changes color only where submerged!) -->
+              <rect id="sind_strip4_bot" x="29" y="90" width="12" height="70" rx="2" fill="#2563eb" style="transition: fill 0.5s ease;"/>
+              <!-- Demarcation line where liquid touches paper -->
+              <line x1="28" y1="90" x2="42" y2="90" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+            </g>
             <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
             <text x="35" y="262" font-size="13" font-weight="900" fill="#a78bfa" text-anchor="middle">Ca(OH)₂</text>
             <text x="35" y="275" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">(चूने का पानी)</text>
@@ -6672,104 +6712,176 @@
     function simIndTest(type) {
       simIndReset();
       var dropGrp = document.getElementById('sind_dropper_group');
-      if (dropGrp) dropGrp.style.opacity = '1';
-
       var st = document.getElementById('sind_status');
       var dTitle = document.getElementById('sind_detail_title');
       var dDesc1 = document.getElementById('sind_detail_desc1');
       var dDesc2 = document.getElementById('sind_detail_desc2');
-      var drop = document.getElementById('sind_drop');
 
       if (type === 'blue') {
-        if (drop) drop.setAttribute('fill', '#2563eb');
-        // HCl & H2SO4 turn red, NaOH & Ca(OH)2 remain blue
-        document.getElementById('sind_liq1').setAttribute('fill', '#fecaca');
-        document.getElementById('sind_meniscus1').setAttribute('fill', '#f87171');
-        document.getElementById('sind_liq2').setAttribute('fill', '#fecaca');
-        document.getElementById('sind_meniscus2').setAttribute('fill', '#f87171');
-        document.getElementById('sind_liq3').setAttribute('fill', '#bfdbfe');
-        document.getElementById('sind_meniscus3').setAttribute('fill', '#60a5fa');
-        document.getElementById('sind_liq4').setAttribute('fill', '#bfdbfe');
-        document.getElementById('sind_meniscus4').setAttribute('fill', '#60a5fa');
+        // 1. BLUE LITMUS PAPER TEST (PAPER STRIPS DIPPED, NO DROPPER)
+        if (dropGrp) { dropGrp.style.display = 'none'; dropGrp.style.opacity = '0'; }
 
-        // Strips
-        ['sind_strip1', 'sind_strip2'].forEach(function(id) {
-          var el = document.getElementById(id);
-          if (el) { el.setAttribute('fill', '#ef4444'); el.style.opacity = '1'; }
-        });
-        ['sind_strip3', 'sind_strip4'].forEach(function(id) {
-          var el = document.getElementById(id);
-          if (el) { el.setAttribute('fill', '#3b82f6'); el.style.opacity = '1'; }
-        });
+        // Tube 1 (HCl - Acid): Top dry part stays BLUE (#2563eb), Dipped bottom turns RED (#dc2626)!
+        var s1 = document.getElementById('sind_strip1'); if (s1) s1.style.opacity = '1';
+        var s1_top = document.getElementById('sind_strip1_top'); if (s1_top) s1_top.setAttribute('fill', '#2563eb');
+        var s1_bot = document.getElementById('sind_strip1_bot'); if (s1_bot) s1_bot.setAttribute('fill', '#dc2626');
 
-        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: नीला लिटमस (Blue Litmus)';
-        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): नीला लिटमस लाल हो जाता है!';
-        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: नीले लिटमस पर कोई प्रभाव नहीं (नीला ही रहता है)।';
-        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ नीला लिटमस परीक्षण:</span> अम्ल में डालने पर नीला लिटमस <strong>लाल</strong> हो जाता है। क्षारक में कोई परिवर्तन नहीं होता।';
+        // Tube 2 (H2SO4 - Acid): Top dry part stays BLUE, Dipped bottom turns RED!
+        var s2 = document.getElementById('sind_strip2'); if (s2) s2.style.opacity = '1';
+        var s2_top = document.getElementById('sind_strip2_top'); if (s2_top) s2_top.setAttribute('fill', '#2563eb');
+        var s2_bot = document.getElementById('sind_strip2_bot'); if (s2_bot) s2_bot.setAttribute('fill', '#dc2626');
+
+        // Tube 3 (NaOH - Base): Entire strip stays BLUE (Base has NO effect on blue litmus!)
+        var s3 = document.getElementById('sind_strip3'); if (s3) s3.style.opacity = '1';
+        var s3_top = document.getElementById('sind_strip3_top'); if (s3_top) s3_top.setAttribute('fill', '#2563eb');
+        var s3_bot = document.getElementById('sind_strip3_bot'); if (s3_bot) s3_bot.setAttribute('fill', '#2563eb');
+
+        // Tube 4 (Ca(OH)2 - Base): Entire strip stays BLUE
+        var s4 = document.getElementById('sind_strip4'); if (s4) s4.style.opacity = '1';
+        var s4_top = document.getElementById('sind_strip4_top'); if (s4_top) s4_top.setAttribute('fill', '#2563eb');
+        var s4_bot = document.getElementById('sind_strip4_bot'); if (s4_bot) s4_bot.setAttribute('fill', '#2563eb');
+
+        // Clear solutions remain naturally clear
+        for (var i = 1; i <= 4; i++) {
+          var l = document.getElementById('sind_liq' + i); if (l) l.setAttribute('fill', '#e2e8f0');
+          var m = document.getElementById('sind_meniscus' + i); if (m) m.setAttribute('fill', '#cbd5e1');
+        }
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: नीला लिटमस (Blue Litmus Paper)';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): डूबा हुआ सिरा लाल हुआ, सूखा सिरा नीला रहा!';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: नीले लिटमस पर कोई प्रभाव नहीं (नीला रहता है)।';
+        if (st) st.innerHTML = '<span style="color:#2563eb;">✔ नीला लिटमस पत्र परीक्षण:</span> अम्ल में परखनली में डूबा हुआ सिरा <strong>लाल</strong> हो जाता है (ऊपर सूखा सिरा <strong>नीला</strong> ही रहता है)। क्षारक में कोई परिवर्तन नहीं होता।';
 
       } else if (type === 'red') {
-        if (drop) drop.setAttribute('fill', '#dc2626');
-        // HCl & H2SO4 stay red, NaOH & Ca(OH)2 turn blue
-        document.getElementById('sind_liq1').setAttribute('fill', '#fecaca');
-        document.getElementById('sind_meniscus1').setAttribute('fill', '#f87171');
-        document.getElementById('sind_liq2').setAttribute('fill', '#fecaca');
-        document.getElementById('sind_meniscus2').setAttribute('fill', '#f87171');
-        document.getElementById('sind_liq3').setAttribute('fill', '#bfdbfe');
-        document.getElementById('sind_meniscus3').setAttribute('fill', '#60a5fa');
-        document.getElementById('sind_liq4').setAttribute('fill', '#bfdbfe');
-        document.getElementById('sind_meniscus4').setAttribute('fill', '#60a5fa');
+        // 2. RED LITMUS PAPER TEST (PAPER STRIPS DIPPED, NO DROPPER)
+        if (dropGrp) { dropGrp.style.display = 'none'; dropGrp.style.opacity = '0'; }
 
-        // Strips
-        ['sind_strip1', 'sind_strip2'].forEach(function(id) {
-          var el = document.getElementById(id);
-          if (el) { el.setAttribute('fill', '#ef4444'); el.style.opacity = '1'; }
-        });
-        ['sind_strip3', 'sind_strip4'].forEach(function(id) {
-          var el = document.getElementById(id);
-          if (el) { el.setAttribute('fill', '#3b82f6'); el.style.opacity = '1'; }
-        });
+        // Tube 1 & 2 (Acids): Entire strip stays RED (Acid has NO effect on red litmus!)
+        var s1 = document.getElementById('sind_strip1'); if (s1) s1.style.opacity = '1';
+        var s1_top = document.getElementById('sind_strip1_top'); if (s1_top) s1_top.setAttribute('fill', '#dc2626');
+        var s1_bot = document.getElementById('sind_strip1_bot'); if (s1_bot) s1_bot.setAttribute('fill', '#dc2626');
 
-        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: लाल लिटमस (Red Litmus)';
-        if (dDesc1) dDesc1.textContent = 'क्षारक [NaOH, Ca(OH)₂]: लाल लिटमस नीला हो जाता है!';
-        if (dDesc2) dDesc2.textContent = 'अम्ल (HCl, H₂SO₄): लाल लिटमस पर कोई प्रभाव नहीं (लाल ही रहता है)।';
-        if (st) st.innerHTML = '<span style="color:#2563eb;">✔ लाल लिटमस परीक्षण:</span> क्षारक में डालने पर लाल लिटमस <strong>नीला</strong> हो जाता है। अम्ल में कोई परिवर्तन नहीं होता।';
+        var s2 = document.getElementById('sind_strip2'); if (s2) s2.style.opacity = '1';
+        var s2_top = document.getElementById('sind_strip2_top'); if (s2_top) s2_top.setAttribute('fill', '#dc2626');
+        var s2_bot = document.getElementById('sind_strip2_bot'); if (s2_bot) s2_bot.setAttribute('fill', '#dc2626');
+
+        // Tube 3 (NaOH - Base): Top dry part stays RED (#dc2626), Dipped bottom turns BLUE (#2563eb)!
+        var s3 = document.getElementById('sind_strip3'); if (s3) s3.style.opacity = '1';
+        var s3_top = document.getElementById('sind_strip3_top'); if (s3_top) s3_top.setAttribute('fill', '#dc2626');
+        var s3_bot = document.getElementById('sind_strip3_bot'); if (s3_bot) s3_bot.setAttribute('fill', '#2563eb');
+
+        // Tube 4 (Ca(OH)2 - Base): Top dry part stays RED, Dipped bottom turns BLUE!
+        var s4 = document.getElementById('sind_strip4'); if (s4) s4.style.opacity = '1';
+        var s4_top = document.getElementById('sind_strip4_top'); if (s4_top) s4_top.setAttribute('fill', '#dc2626');
+        var s4_bot = document.getElementById('sind_strip4_bot'); if (s4_bot) s4_bot.setAttribute('fill', '#2563eb');
+
+        for (var i = 1; i <= 4; i++) {
+          var l = document.getElementById('sind_liq' + i); if (l) l.setAttribute('fill', '#e2e8f0');
+          var m = document.getElementById('sind_meniscus' + i); if (m) m.setAttribute('fill', '#cbd5e1');
+        }
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: लाल लिटमस (Red Litmus Paper)';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): लाल लिटमस पर कोई प्रभाव नहीं (लाल ही रहता है)।';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: डूबा हुआ सिरा नीला हुआ, सूखा सिरा लाल रहा!';
+        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ लाल लिटमस पत्र परीक्षण:</span> क्षारक में परखनली में डूबा हुआ सिरा <strong>नीला</strong> हो जाता है (ऊपर सूखा सिरा <strong>लाल</strong> ही रहता है)। अम्ल में कोई परिवर्तन नहीं होता।';
 
       } else if (type === 'phen') {
-        if (drop) drop.setAttribute('fill', '#db2777');
-        // Phenolphthalein: Acid -> Colorless (#f1f5f9), Base -> Vibrant Pink (#fbcfe8 / #ec4899)
-        document.getElementById('sind_liq1').setAttribute('fill', '#f1f5f9');
-        document.getElementById('sind_meniscus1').setAttribute('fill', '#e2e8f0');
-        document.getElementById('sind_liq2').setAttribute('fill', '#f1f5f9');
-        document.getElementById('sind_meniscus2').setAttribute('fill', '#e2e8f0');
-        document.getElementById('sind_liq3').setAttribute('fill', '#f472b6');
-        document.getElementById('sind_meniscus3').setAttribute('fill', '#db2777');
-        document.getElementById('sind_liq4').setAttribute('fill', '#f472b6');
-        document.getElementById('sind_meniscus4').setAttribute('fill', '#db2777');
+        // 3. PHENOLPHTHALEIN DROPPER TEST (PAPER STRIPS HIDDEN)
+        for (var i = 1; i <= 4; i++) {
+          var s = document.getElementById('sind_strip' + i); if (s) s.style.opacity = '0';
+        }
 
-        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: फिनॉल्फथलीन (Phenolphthalein)';
+        if (dropGrp) {
+          dropGrp.style.display = 'block';
+          dropGrp.style.opacity = '1';
+        }
+
+        // Tubes 1 and 2 remain colorless
+        var l1 = document.getElementById('sind_liq1'); if (l1) l1.setAttribute('fill', '#f8fafc');
+        var l2 = document.getElementById('sind_liq2'); if (l2) l2.setAttribute('fill', '#f8fafc');
+
+        // Move dropper over Tube 3 and Tube 4 with GSAP
+        if (window.gsap) {
+          gsap.set('#sind_dropper_group', { transform: 'translate(440, 50)' });
+          setTimeout(function() {
+            var r3 = document.getElementById('sind_ripple3'); if (r3) { r3.setAttribute('stroke', '#db2777'); r3.style.opacity = '0.9'; }
+            var l3 = document.getElementById('sind_liq3'); if (l3) l3.setAttribute('fill', '#f472b6');
+            var m3 = document.getElementById('sind_meniscus3'); if (m3) m3.setAttribute('fill', '#db2777');
+          }, 400);
+
+          setTimeout(function() {
+            gsap.to('#sind_dropper_group', { transform: 'translate(580, 50)', duration: 0.5 });
+          }, 900);
+
+          setTimeout(function() {
+            var r4 = document.getElementById('sind_ripple4'); if (r4) { r4.setAttribute('stroke', '#db2777'); r4.style.opacity = '0.9'; }
+            var l4 = document.getElementById('sind_liq4'); if (l4) l4.setAttribute('fill', '#f472b6');
+            var m4 = document.getElementById('sind_meniscus4'); if (m4) m4.setAttribute('fill', '#db2777');
+          }, 1500);
+        } else {
+          var l3 = document.getElementById('sind_liq3'); if (l3) l3.setAttribute('fill', '#f472b6');
+          var l4 = document.getElementById('sind_liq4'); if (l4) l4.setAttribute('fill', '#f472b6');
+        }
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: फिनॉल्फथलीन ड्रॉपर परीक्षण';
         if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): पूर्णतः रंगहीन (Colorless) रहता है।';
         if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: गहरा गुलाबी (Vibrant Pink) रंग देता है!';
-        if (st) st.innerHTML = '<span style="color:#db2777;">✔ फिनॉल्फथलीन परीक्षण:</span> क्षारक में <strong>गहरा गुलाबी रंग</strong> देता है, जबकि अम्ल में यह <strong>रंगहीन</strong> रहता है।';
+        if (st) st.innerHTML = '<span style="color:#db2777;">✔ फिनॉल्फथलीन परीक्षण:</span> ड्रॉपर से बूंद डालने पर क्षारक [NaOH व Ca(OH)₂] <strong>गहरा गुलाबी</strong> हो जाता है, जबकि अम्ल में <strong>रंगहीन</strong> रहता है।';
 
       } else if (type === 'meth') {
-        if (drop) drop.setAttribute('fill', '#ea580c');
-        // Methyl Orange: Acid -> Red/Orange (#fca5a5 / #ef4444), Base -> Bright Yellow (#fef08a / #eab308)
-        document.getElementById('sind_liq1').setAttribute('fill', '#f87171');
-        document.getElementById('sind_meniscus1').setAttribute('fill', '#dc2626');
-        document.getElementById('sind_liq2').setAttribute('fill', '#f87171');
-        document.getElementById('sind_meniscus2').setAttribute('fill', '#dc2626');
-        document.getElementById('sind_liq3').setAttribute('fill', '#fde047');
-        document.getElementById('sind_meniscus3').setAttribute('fill', '#eab308');
-        document.getElementById('sind_liq4').setAttribute('fill', '#fde047');
-        document.getElementById('sind_meniscus4').setAttribute('fill', '#eab308');
+        // 4. METHYL ORANGE DROPPER TEST
+        for (var i = 1; i <= 4; i++) {
+          var s = document.getElementById('sind_strip' + i); if (s) s.style.opacity = '0';
+        }
 
-        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: मेथिल ऑरेंज (Methyl Orange)';
-        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): लाल / नारंगी (Red) रंग प्राप्त होता है।';
-        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: चमकीला पीला (Yellow) रंग प्राप्त होता है।';
-        if (st) st.innerHTML = '<span style="color:#ea580c;">✔ मेथिल ऑरेंज परीक्षण:</span> अम्ल में <strong>लाल/नारंगी</strong> तथा क्षारक में <strong>पीला</strong> रंग देता है।';
+        if (dropGrp) {
+          dropGrp.style.display = 'block';
+          dropGrp.style.opacity = '1';
+        }
+
+        if (window.gsap) {
+          gsap.set('#sind_dropper_group', { transform: 'translate(160, 50)' });
+          setTimeout(function() {
+            var r1 = document.getElementById('sind_ripple1'); if (r1) { r1.setAttribute('stroke', '#ef4444'); r1.style.opacity = '0.9'; }
+            var l1 = document.getElementById('sind_liq1'); if (l1) l1.setAttribute('fill', '#fca5a5');
+          }, 300);
+
+          setTimeout(function() {
+            gsap.to('#sind_dropper_group', { transform: 'translate(300, 50)', duration: 0.4 });
+          }, 700);
+          setTimeout(function() {
+            var r2 = document.getElementById('sind_ripple2'); if (r2) { r2.setAttribute('stroke', '#ef4444'); r2.style.opacity = '0.9'; }
+            var l2 = document.getElementById('sind_liq2'); if (l2) l2.setAttribute('fill', '#fca5a5');
+          }, 1150);
+
+          setTimeout(function() {
+            gsap.to('#sind_dropper_group', { transform: 'translate(440, 50)', duration: 0.4 });
+          }, 1550);
+          setTimeout(function() {
+            var r3 = document.getElementById('sind_ripple3'); if (r3) { r3.setAttribute('stroke', '#eab308'); r3.style.opacity = '0.9'; }
+            var l3 = document.getElementById('sind_liq3'); if (l3) l3.setAttribute('fill', '#fef08a');
+          }, 2000);
+
+          setTimeout(function() {
+            gsap.to('#sind_dropper_group', { transform: 'translate(580, 50)', duration: 0.4 });
+          }, 2400);
+          setTimeout(function() {
+            var r4 = document.getElementById('sind_ripple4'); if (r4) { r4.setAttribute('stroke', '#eab308'); r4.style.opacity = '0.9'; }
+            var l4 = document.getElementById('sind_liq4'); if (l4) l4.setAttribute('fill', '#fef08a');
+          }, 2850);
+        } else {
+          var l1 = document.getElementById('sind_liq1'); if (l1) l1.setAttribute('fill', '#fca5a5');
+          var l2 = document.getElementById('sind_liq2'); if (l2) l2.setAttribute('fill', '#fca5a5');
+          var l3 = document.getElementById('sind_liq3'); if (l3) l3.setAttribute('fill', '#fef08a');
+          var l4 = document.getElementById('sind_liq4'); if (l4) l4.setAttribute('fill', '#fef08a');
+        }
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: मेथिल ऑरेंज ड्रॉपर परीक्षण';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): लाल / नारंगी (Red / Orange) रंग देता है।';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: पीला (Yellow) रंग देता है!';
+        if (st) st.innerHTML = '<span style="color:#ea580c;">✔ मेथिल ऑरेंज परीक्षण:</span> ड्रॉपर से डालने पर अम्ल में <strong>लाल/नारंगी</strong> रंग तथा क्षारक में <strong>पीला</strong> रंग आता है।';
       }
 
-      // Highlight all table rows
       ['sind_row1', 'sind_row2', 'sind_row3', 'sind_row4'].forEach(function(id) {
         var el = document.getElementById(id);
         if (el) { el.setAttribute('fill', '#ecfdf5'); el.setAttribute('stroke', '#10b981'); }
@@ -6777,6 +6889,7 @@
     }
 
     /* ==========================================================
+       SIMULATOR 2.3:===========================
        SIMULATOR 2.3: METAL CARBONATE + HCl -> CO2 LIME WATER (Activity 2.5)
        ========================================================== */
     function simCarbReset() {
