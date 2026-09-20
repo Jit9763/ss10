@@ -1550,6 +1550,76 @@
       line-height: normal !important;
     }
 
+  
+    /* =========================================================================
+       PROJECTOR MASTER TOPIC HEADINGS, SUBHEADINGS & SIMULATOR STATUS BANNERS
+       ========================================================================= */
+    .topic-heading-green, .topic-heading-blue, .topic-heading-purple {
+      padding: 22px 28px !important;
+      border-radius: 14px !important;
+      font-size: 34pt !important;
+      font-weight: 900 !important;
+      line-height: 1.4 !important;
+      margin-top: 50px !important;
+      margin-bottom: 28px !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+    }
+
+    .topic-heading-green {
+      color: #065f46 !important;
+      background-color: #d1fae5 !important;
+      border-left: 18px solid #059669 !important;
+    }
+
+    .topic-heading-blue {
+      color: #1e3a8a !important;
+      background-color: #dbeafe !important;
+      border-left: 18px solid #2563eb !important;
+    }
+
+    .topic-heading-purple {
+      color: #581c87 !important;
+      background-color: #f3e8ff !important;
+      border-left: 18px solid #7c3aed !important;
+    }
+
+    /* Subheadings: (क) अम्ल की धातु से क्रिया, etc. */
+    .concept-box h3, .concept-box h4, .concept-box h5,
+    .definition-box h3, .definition-box h4, .definition-box h5,
+    h4[style*="font-size"], h3[style*="font-size"] {
+      font-size: 30pt !important;
+      font-weight: 900 !important;
+      line-height: 1.4 !important;
+      margin-top: 25px !important;
+      margin-bottom: 14px !important;
+    }
+
+    /* Simulator Status Banners Underneath Simulators */
+    [id$="_status"], .sim-status-banner {
+      font-size: 26pt !important;
+      line-height: 1.8 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+      padding: 20px 26px !important;
+      border-radius: 12px !important;
+      margin-top: 16px !important;
+    }
+
+    [id$="_status"] *, .sim-status-banner * {
+      font-size: 26pt !important;
+      line-height: 1.8 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    [id$="_status"] strong, .sim-status-banner strong,
+    [id$="_status"] b, .sim-status-banner b {
+      font-weight: 900 !important;
+      color: #000000 !important;
+    }
+
   </style>
   <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1631,7 +1701,7 @@
 
     <!-- Quick Overview Box -->
     <div class="concept-box" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-left: 8px solid #16a34a; margin-bottom: 30px;">
-      <h3 style="color: #166534; font-size:22px; margin-bottom: 8px;"><i class="fas fa-bookmark"></i> अध्याय अवलोकन (Chapter at a Glance):</h3>
+      <h3 style="color: #166534; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom: 8px;"><i class="fas fa-bookmark"></i> अध्याय अवलोकन (Chapter at a Glance):</h3>
       <p style="font-size:19px; color: #1e293b; line-height: 1.8;">
         इस अध्याय में हम अम्लों एवं क्षारकों के भौतिक व रासायनिक गुणों, सूचकों द्वारा उनकी पहचान, जलीय विलयन में आयनीकरण (H⁺ एवं OH⁻ आयन), उदासीनीकरण अभिक्रिया, 0 से 14 तक विस्तृत <strong>pH पैमाना</strong>, दैनिक जीवन में pH के असाधारण महत्व तथा साधारण नमक (NaCl) से निर्मित होने वाले महत्वपूर्ण औद्योगिक लवणों—<strong>कास्टिक सोडा (NaOH), विरंजक चूर्ण (CaOCl₂), बेकिंग सोडा (NaHCO₃), धावन सोडा (Na₂CO₃·10H₂O)</strong> एवं <strong>प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O)</strong> का विस्तारपूर्वक अध्ययन करेंगे।
       </p>
@@ -1645,7 +1715,7 @@
     </div>
 
     <div class="definition-box" style="border-left: 6px solid #2563eb; background: #f8fafc; padding: 18px 22px; margin-bottom: 20px; border-radius: 0 12px 12px 0;">
-      <h4 style="color: #1e40af; font-size:22px; margin-bottom: 6px;">अम्ल (Acids) की मौलिक पहचान:</h4>
+      <h4 style="color: #1e40af; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom: 6px;">अम्ल (Acids) की मौलिक पहचान:</h4>
       <ul style="padding-left: 24px; font-size:19px; line-height: 1.8; color: #1e293b;">
         <li>अम्ल स्वाद में <strong>खट्टे (Sour)</strong> होते हैं।</li>
         <li>ये नीले लिटमस पत्र को <strong>लाल</strong> कर देते हैं (ट्रिक: <em>'अनिल'</em> — अ से अम्ल, नि से नीले को, ल से लाल करता है)।</li>
@@ -1656,7 +1726,7 @@
     </div>
 
     <div class="definition-box" style="border-left: 6px solid #d97706; background: #fffbeb; padding: 18px 22px; margin-bottom: 25px; border-radius: 0 12px 12px 0;">
-      <h4 style="color: #b45309; font-size:22px; margin-bottom: 6px;">क्षारक (Bases) एवं क्षार (Alkalis):</h4>
+      <h4 style="color: #b45309; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom: 6px;">क्षारक (Bases) एवं क्षार (Alkalis):</h4>
       <ul style="padding-left: 24px; font-size:19px; line-height: 1.8; color: #1e293b;">
         <li>क्षारक स्वाद में <strong>कड़वे (Bitter)</strong> होते हैं तथा स्पर्श करने पर <strong>साबुन जैसे चिकने</strong> लगते हैं।</li>
         <li>ये लाल लिटमस पत्र को <strong>नीला</strong> कर देते हैं (ट्रिक: <em>'छलनी'</em> — क्षा से क्षारक, ल से लाल को, नी से नीला करता है)।</li>
@@ -1669,7 +1739,7 @@
 
     <!-- Indicator Summary Table -->
     <div class="concept-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:28px;">
-      <h4 style="color:#0f172a; font-size:22px; margin-bottom:12px; border-bottom:2px solid #e2e8f0; padding-bottom:6px;">
+      <h4 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:12px; border-bottom:2px solid #e2e8f0; padding-bottom:6px;">
         <i class="fas fa-palette" style="color:#6366f1;"></i> सूचक (Indicators) एवं उनके रंग/गंध में परिवर्तन तालिका:
       </h4>
       <table style="width:100%; border-collapse:collapse; font-size:19px; text-align:left;">
@@ -1971,7 +2041,7 @@
         </svg>
       </div>
 
-      <div id="sind_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="sind_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> 4 परखनलियों में अम्ल (HCl, H₂SO₄) तथा क्षारक [NaOH, Ca(OH)₂] रखे हैं। ऊपर से कोई भी सूचक बटन दबाएं।
       </div>
     </div>
@@ -2184,7 +2254,7 @@
         </svg>
       </div>
 
-      <div id="solf_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="solf_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> हल्दी का पेस्ट चयनित है। क्षारक (साबुन) डालने पर यह लाल-भूरा हो जाता है। ऊपर से वैनिला या प्याज चुनकर गंध परिवर्तन देखें।
       </div>
     </div>
@@ -2194,7 +2264,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #059669; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#065f46; font-size:22px; margin-bottom:10px;">(क) अम्ल की धातु के साथ अभिक्रिया:</h4>
+      <h4 style="color:#065f46; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">(क) अम्ल की धातु के साथ अभिक्रिया:</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         जब किसी सक्रिय धातु (जैसे जिंक, मैग्नीशियम, आयरन आदि) की अभिक्रिया तनु अम्ल से कराई जाती है, तो धातु अम्ल से हाइड्रोजन को विस्थापित कर देती है तथा <strong>लवण</strong> व <strong>हाइड्रोजन गैस (H₂)</strong> का निर्माण होता है:
       </p>
@@ -2210,7 +2280,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #d97706; padding:20px; border-radius:0 12px 12px 0; margin-bottom:28px;">
-      <h4 style="color:#b45309; font-size:22px; margin-bottom:10px;">(ख) क्षारक की धातु के साथ अभिक्रिया (विशिष्ट रासायनिक क्रिया):</h4>
+      <h4 style="color:#b45309; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">(ख) क्षारक की धातु के साथ अभिक्रिया (विशिष्ट रासायनिक क्रिया):</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सभी धातुएं क्षारकों से क्रिया नहीं करतीं, किंतु कुछ उभयधर्मी धातुएं (जैसे Zn, Al) प्रबल क्षारकों के साथ गर्म करने पर लवण व हाइड्रोजन गैस देती हैं:
       </p>
@@ -2501,7 +2571,7 @@
         </svg>
       </div>
 
-      <div id="s21_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="s21_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> परखनली में जिंक दाने व तनु H₂SO₄ अम्ल तथा साबुन का घोल तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
@@ -2866,7 +2936,7 @@
       </div>
 
       <!-- High-Contrast Live Classroom Projector Observation Panel -->
-      <div id="szb_status" style="margin-top:14px; padding:18px 22px; background:#ffffff; border-left:8px solid #16a34a; border-radius:12px; font-weight:800; color:#0f172a; font-size:18.5px; line-height:1.7; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+      <div id="szb_status" style="margin-top:14px; padding:18px 22px; background:#ffffff; border-left:8px solid #16a34a; border-radius:12px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; line-height:1.7; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
         <strong>प्रारंभिक स्थिति:</strong> परखनली में जिंक दाने व 2 mL NaOH विलयन उपस्थित है। बर्नर नीचे व्यवस्थित है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर बर्नर तापन शुरू करें।
       </div>
 
@@ -3218,7 +3288,7 @@
         </svg>
       </div>
 
-      <div id="smr_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="smr_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> चारों परखनलियों में धातुएं तैयार हैं। "चारों परखनलियों में एक साथ अम्ल परीक्षण" बटन दबाएं।
       </div>
     </div>
@@ -3228,7 +3298,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #0284c7; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#0369a1; font-size:22px; margin-bottom:10px;">रासायनिक सिद्धांत एवं कार्बन डाइऑक्साइड (CO₂) का निर्माण:</h4>
+      <h4 style="color:#0369a1; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">रासायनिक सिद्धांत एवं कार्बन डाइऑक्साइड (CO₂) का निर्माण:</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सभी धातु कार्बोनेट एवं धातु हाइड्रोजनकार्बोनेट अम्लों के साथ तीव्रता से अभिक्रिया करके <strong>संगत लवण, जल तथा कार्बन डाइऑक्साइड गैस (CO₂)</strong> उत्पन्न करते हैं:
       </p>
@@ -3236,7 +3306,7 @@
         धातु कार्बोनेट / धातु हाइड्रोजनकार्बोनेट + अम्ल ➔ लवण + CO₂↑ + H₂O
       </div>
 
-      <h5 style="color:#0f172a; font-size:19px; margin-top:16px; margin-bottom:8px;">संतुलित रासायनिक अभिक्रियाएं:</h5>
+      <h5 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-top:16px; margin-bottom:8px;">संतुलित रासायनिक अभिक्रियाएं:</h5>
       <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px; font-size:19px; font-weight:800; color:#0f172a;">
         परखनली (A): Na₂CO₃(s) [सोडियम कार्बोनेट] + 2HCl(aq) ➔ 2NaCl(aq) + H₂O(l) + CO₂(g)↑
       </div>
@@ -3244,7 +3314,7 @@
         परखनली (B): NaHCO₃(s) [सोडियम हाइड्रोजनकार्बोनेट] + HCl(aq) ➔ NaCl(aq) + H₂O(l) + CO₂(g)↑
       </div>
 
-      <h4 style="color:#b45309; font-size:22px; margin-top:18px; margin-bottom:10px;">
+      <h4 style="color:#b45309; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-top:18px; margin-bottom:10px;">
         <i class="fas fa-check-circle" style="color:#d97706;"></i> चूने के पानी द्वारा CO₂ गैस की जांच (महत्वपूर्ण NCERT परीक्षण):
       </h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
@@ -3663,7 +3733,7 @@
       </div>
 
       <!-- High-Contrast Live Classroom Projector Observation Panel -->
-      <div id="scarb_status" style="margin-top:14px; padding:18px 22px; background:#ffffff; border-left:8px solid #16a34a; border-radius:12px; font-weight:800; color:#0f172a; font-size:18.5px; line-height:1.7; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+      <div id="scarb_status" style="margin-top:14px; padding:18px 22px; background:#ffffff; border-left:8px solid #16a34a; border-radius:12px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; line-height:1.7; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
         <strong>प्रारंभिक स्थिति:</strong> गोल पेंदे के फ्लास्क में ठोस Na₂CO₃ तथा थिसिल कीप व्यवस्थित है। लकड़ी के 3D ब्लॉक पर स्वच्छ पारदर्शी चूने का पानी [Ca(OH)₂] तैयार है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।
       </div>
 
@@ -3890,7 +3960,7 @@
         </svg>
       </div>
 
-      <div id="sfe_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="sfe_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> अग्निशामक यंत्र में NaHCO₃ विलयन व अम्ल शीशी तैयार है। "संपूर्ण ऑटो-प्ले" या चरण 2 दबाएं।
       </div>
     </div>
@@ -3904,7 +3974,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #7c3aed; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#5b21b6; font-size:22px; margin-bottom:10px;">उदासीनीकरण अभिक्रिया (Neutralization Reaction):</h4>
+      <h4 style="color:#5b21b6; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">उदासीनीकरण अभिक्रिया (Neutralization Reaction):</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         अम्ल एवं क्षारक परस्पर क्रिया करके एक-दूसरे के प्रभाव को समाप्त कर देते हैं तथा <strong>लवण एवं जल</strong> का निर्माण करते हैं। इस अभिक्रिया को <strong>उदासीनीकरण अभिक्रिया</strong> कहते हैं:
       </p>
@@ -4153,13 +4223,13 @@
         </svg>
       </div>
 
-      <div id="sneut_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="sneut_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> परखनली में NaOH + फिनॉल्फथलीन से गहरा गुलाबी रंग है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर HCl मिलाएं।
       </div>
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #ea580c; padding:20px; border-radius:0 12px 12px 0; margin-bottom:28px;">
-      <h4 style="color:#c2410c; font-size:22px; margin-bottom:10px;">धात्विक एवं अधात्विक ऑक्साइडों की रासायनिक प्रकृति:</h4>
+      <h4 style="color:#c2410c; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">धात्विक एवं अधात्विक ऑक्साइडों की रासायनिक प्रकृति:</h4>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
         <li>
           <strong>1. धात्विक ऑक्साइड क्षारकीय प्रकृति के होते हैं:</strong><br>
@@ -4459,7 +4529,7 @@
         </svg>
       </div>
 
-      <div id="scuo_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="scuo_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> बीकर में काला कॉपर ऑक्साइड (CuO) उपस्थित है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर तनु HCl मिलाएं।
       </div>
     </div><!-- ===================================================================
@@ -4728,7 +4798,7 @@
         </svg>
       </div>
 
-      <div id="snm_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="snm_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> परखनली में स्वच्छ चूने का पानी तैयार है। "संपूर्ण ऑटो-प्ले" या चरण 2 दबाएं।
       </div>
     </div>
@@ -4738,7 +4808,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #10b981; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#047857; font-size:22px; margin-bottom:10px;">(क) अम्लों के जलीय विलयन में विद्युत का चालन (क्रियाकलाप 2.9):</h4>
+      <h4 style="color:#047857; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">(क) अम्लों के जलीय विलयन में विद्युत का चालन (क्रियाकलाप 2.9):</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         जब बीकर में तनु HCl अथवा H₂SO₄ का विलयन लेकर दो कीलों के माध्यम से 6V बैटरी, स्विच तथा बल्ब जोड़ते हैं, तो <strong>बल्ब जलने लगता है</strong>। यह सिद्ध करता है कि अम्लों के जलीय विलयन में <strong>मुक्त आयन (H⁺)</strong> उपस्थित होते हैं जो विद्युत धारा का प्रवाह करते हैं।
       </p>
@@ -4748,7 +4818,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #0284c7; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#0369a1; font-size:22px; margin-bottom:10px;">(ख) शुष्क HCl गैस बनाम आर्द्र लिटमस पत्र (क्रियाकलाप 2.10):</h4>
+      <h4 style="color:#0369a1; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">(ख) शुष्क HCl गैस बनाम आर्द्र लिटमस पत्र (क्रियाकलाप 2.10):</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सोडियम क्लोराइड (NaCl) पर सांद्र H₂SO₄ की क्रिया कराने से निकलने वाली शुष्क HCl गैस जब शुष्क नीले लिटमस पत्र के संपर्क में आती है, तो <strong>रंग नहीं बदलता</strong>। किंतु जब <strong>आर्द्र (गीला) नीला लिटमस पत्र</strong> पास लाते हैं, तो वह तुरंत <strong>लाल</strong> हो जाता है।
       </p>
@@ -4761,7 +4831,7 @@
     </div>
 
     <div class="warn-box" style="background:#fef2f2; border:2.5px solid #ef4444; border-radius:12px; padding:20px; margin-bottom:28px;">
-      <h4 style="color:#b91c1c; font-size:22px; margin-bottom:8px;">
+      <h4 style="color:#b91c1c; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:8px;">
         <i class="fas fa-exclamation-triangle"></i> प्रयोगशाला सुरक्षा नियम: सांद्र अम्ल का तनुकरण (Dilution of Acid):
       </h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
@@ -5071,7 +5141,7 @@
         </svg>
       </div>
 
-      <div id="scond_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="scond_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> बीकर में तनु HCl विलयन भरा है तथा परिपथ पूर्ण होने से बल्ब जल रहा है। ऊपर से ग्लूकोज, ऐल्कोहॉल या अन्य विलयन चुनकर अंतर देखें।
       </div>
     </div>
@@ -5297,7 +5367,7 @@
         </svg>
       </div>
 
-      <div id="sdry_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="sdry_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> जनरेटर में ठोस NaCl व H₂SO₄ से शुष्क HCl गैस बन रही है। बटन 1 व 2 दबाकर शुष्क बनाम आर्द्र लिटमस पत्र का अंतर देखें।
       </div>
     </div>
@@ -5464,7 +5534,7 @@
         </svg>
       </div>
 
-      <div id="ssw_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="ssw_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>तनु HCl चयनित:</strong> प्रबल खनिज अम्ल है, जल में पूर्णतः आयनित होकर प्रचुर मात्रा में H⁺ आयन देता है जिससे बल्ब अत्यंत तीव्र जलता है।
       </div>
     </div>
@@ -5474,7 +5544,7 @@
     </div>
 
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #0284c7; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#0369a1; font-size:22px; margin-bottom:10px;">pH स्केल की संकल्पना (Sørensen, 1909):</h4>
+      <h4 style="color:#0369a1; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">pH स्केल की संकल्पना (Sørensen, 1909):</h4>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         किसी विलयन में उपस्थित हाइड्रोजन आयन (H⁺) की सांद्रता ज्ञात करने के लिए एक पैमाना विकसित किया गया जिसे <strong>pH पैमाना</strong> कहते हैं।
       </p>
@@ -5698,14 +5768,14 @@
         </svg>
       </div>
 
-      <div id="s22_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="s22_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>वर्तमान स्थिति:</strong> शुद्ध जल (pH 7.0) चुना गया है। ऊपर दिए गए 6 बटनों में से किसी भी पदार्थ को दबाकर लाइव pH रंग परिवर्तन देखें।
       </div>
     </div>
 
     <!-- Daily Life pH Significance Points -->
     <div class="concept-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:22px; margin-top:28px; margin-bottom:28px;">
-      <h4 style="color:#0f172a; font-size:22px; margin-bottom:14px; border-bottom:2px solid #e2e8f0; padding-bottom:6px;">
+      <h4 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:14px; border-bottom:2px solid #e2e8f0; padding-bottom:6px;">
         <i class="fas fa-heartbeat" style="color:#dc2626;"></i> दैनिक जीवन में pH का महत्व (NCERT अति महत्वपूर्ण बिंदु):
       </h4>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -5729,7 +5799,7 @@
 
     <!-- Natural Acids Table -->
     <div class="concept-box" style="background:#f8fafc; border-left:6px solid #f59e0b; padding:18px 22px; margin-bottom:28px; border-radius:0 12px 12px 0;">
-      <h4 style="color:#b45309; font-size:22px; margin-bottom:10px;">
+      <h4 style="color:#b45309; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         <i class="fas fa-lemon"></i> प्राकृतिक स्रोत एवं उनमें उपस्थित अम्ल (बोर्ड परीक्षा वस्तुनिष्ठ सारणी):
       </h4>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; font-size:19px;">
@@ -5911,7 +5981,7 @@
         </svg>
       </div>
 
-      <div id="spht_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="spht_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>उदर अम्लता चयनित:</strong> अपच में अत्यधिक HCl बनता है। ऐंटासिड [मिल्क ऑफ मैग्नीशिया - Mg(OH)₂] इसे उदासीन करता है। ऊपर से अन्य बटन दबाएं।
       </div>
     </div>
@@ -6073,7 +6143,7 @@
         </svg>
       </div>
 
-      <div id="ssoil_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="ssoil_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>अम्लीय मृदा चयनित:</strong> pH = 4.8 है। किसान मिट्टी में चूना [CaO / Ca(OH)₂] मिलाकर इसे उदासीन बनाएगा। ऊपर से अन्य स्थितियां चुनें।
       </div>
     </div>
@@ -6084,7 +6154,7 @@
 
     <!-- Salt Family Classification -->
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #16a34a; padding:20px; border-radius:0 12px 12px 0; margin-bottom:24px;">
-      <h4 style="color:#166534; font-size:22px; margin-bottom:8px;">लवणों का वर्गीकरण एवं उनका pH:</h4>
+      <h4 style="color:#166534; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:8px;">लवणों का वर्गीकरण एवं उनका pH:</h4>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
         <li><strong>प्रबल अम्ल + प्रबल क्षारक ➔ उदासीन लवण (pH = 7)</strong> (उदा: NaCl, K₂SO₄)</li>
         <li><strong>प्रबल अम्ल + दुर्बल क्षारक ➔ अम्लीय लवण (pH < 7)</strong> (उदा: NH₄Cl, CuSO₄)</li>
@@ -6276,13 +6346,13 @@
         </svg>
       </div>
 
-      <div id="ssalt_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+      <div id="ssalt_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>NaCl चयनित:</strong> प्रबल अम्ल (HCl) व प्रबल क्षारक (NaOH) का लवण है, अतः pH = 7 (उदासीन)। ऊपर से NH₄Cl या Na₂CO₃ चुनकर अंतर देखें।
       </div>
     </div>
 
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:24px;">
-      <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
+      <h3 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         1. सोडियम हाइड्रॉक्साइड (कास्टिक सोडा - NaOH) — क्लोर-क्षार प्रक्रिया (Chlor-Alkali Process)
       </h3>
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
@@ -6548,14 +6618,14 @@
         </svg>
       </div>
 
-      <div id="s23_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="s23_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> ब्राइन सेल तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
 
     <!-- OTHER CHEMICALS: BLEACHING POWDER, BAKING SODA, WASHING SODA, POP -->
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-top:28px; margin-bottom:24px;">
-      <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
+      <h3 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         2. विरंजक चूर्ण (Bleaching Powder — CaOCl₂)
       </h3>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7091,14 +7161,14 @@
         </svg>
       </div>
 
-      <div id="sbl_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="sbl_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> रिएक्टर में शुष्क Ca(OH)₂ चूर्ण तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
     </div>
 
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:24px;">
-      <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
+      <h3 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         3. बेकिंग सोडा (मीठा सोडा / खाने का सोडा — NaHCO₃)
       </h3>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7127,7 +7197,7 @@
     </div>
 
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:24px;">
-      <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
+      <h3 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         4. धोने का सोडा (धावन सोडा — Na₂CO₃·10H₂O)
       </h3>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7150,7 +7220,7 @@
     </div>
 
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:28px;">
-      <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
+      <h3 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:10px;">
         5. क्रिस्टलन का जल एवं प्लास्टर ऑफ पेरिस (POP — CaSO₄·½H₂O)
       </h3>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7597,7 +7667,7 @@
         </svg>
       </div>
 
-      <div id="scryst_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
+      <div id="scryst_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center;">
         <strong>प्रारंभिक स्थिति:</strong> शुष्क क्वथन नली में नीले कॉपर सल्फेट के क्रिस्टल तैयार हैं। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।
       </div>
     </div>
@@ -8037,7 +8107,7 @@
         </svg>
       </div>
 
-      <div id="spop_status" style="margin-top:14px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#000000; font-size:18px; min-height:50px; display:flex; align-items:center; line-height:1.7;">
+      <div id="spop_status" style="margin-top:14px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#000000; font-size:26pt; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; min-height:50px; display:flex; align-items:center; line-height:1.7;">
         <strong>प्रारंभिक स्थिति:</strong> प्रयोगशाला डिजिटल हॉट प्लेट पर जिप्सम (CaSO₄·2H₂O) उपस्थित है। "संपूर्ण ऑटो-प्ले" या चरण 2 दबाकर 373 K तापन देखें।
       </div>
     </div>
@@ -8101,7 +8171,7 @@
          QUICK REVISION CHECKLIST & EXAM FORMULA SHEET
          =================================================================== -->
     <div class="concept-box" style="background:#0f172a; color:#ffffff; border-radius:14px; padding:24px; margin-top:35px; margin-bottom:40px;">
-      <h3 style="color:#38bdf8; font-size:22px; margin-bottom:12px; border-bottom:1.5px solid #334155; padding-bottom:8px;">
+      <h3 style="color:#38bdf8; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-bottom:12px; border-bottom:1.5px solid #334155; padding-bottom:8px;">
         <i class="fas fa-graduation-cap"></i> अध्याय 2: त्वरित परीक्षा पुनरावलोकन सूत्र-शीट (Exam Quick Formula Sheet)
       </h3>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:14px; font-size:19px;">
@@ -8164,11 +8234,21 @@
         }
         .chem-eq, .reaction-box, .formula-box-projector, [class*="formula"], .math-symbol,
         .video-card-container p, .video-card-container span, .video-card-container code,
-        .sim-card > p {
+        .sim-card > p, [id$="_status"], [id$="_status"] *, .sim-status-banner, .sim-status-banner * {
           font-size: ${Math.round(b * 1.05)}pt !important;
           font-weight: 800 !important;
+          line-height: 1.8 !important;
           -webkit-text-stroke: ${s}px #000000 !important;
           text-shadow: 0 0 0.5px #000 !important;
+        }
+        .topic-heading-green, .topic-heading-blue, .topic-heading-purple {
+          font-size: ${Math.round(b * 1.3)}pt !important;
+          font-weight: 900 !important;
+        }
+        .concept-box h3, .concept-box h4, .concept-box h5,
+        .definition-box h3, .definition-box h4, .definition-box h5 {
+          font-size: ${Math.round(b * 1.15)}pt !important;
+          font-weight: 900 !important;
         }
       `;
     }
