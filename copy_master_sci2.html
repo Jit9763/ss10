@@ -1886,65 +1886,45 @@
 
           
 
-          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
-          <g transform="translate(725, 25)">
-            <!-- Outer Box -->
-            <rect x="0" y="0" width="455" height="490" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 690 to 1185, Width: 495px) ================= -->
+          <g transform="translate(690, 18)">
+            <rect x="0" y="0" width="495" height="504" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.08))"/>
 
-            <!-- Header -->
-            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
-            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 NCERT 2.1 प्रेक्षण तालिका (Observation Table)</text>
+            <!-- Panel Header -->
+            <rect x="0" y="0" width="495" height="48" rx="14" fill="#16a34a"/>
+            <text x="247" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 विभिन्न धातुओं की अम्ल से क्रियाशीलता तुलना</text>
 
-            <!-- Table Header -->
-            <rect x="14" y="60" width="427" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
-            <text x="80" y="80" font-size="13" font-weight="900" fill="#1e40af" text-anchor="middle">विलयन नमूना</text>
-            <text x="185" y="80" font-size="13" font-weight="900" fill="#92400e" text-anchor="middle">लिटमस</text>
-            <text x="290" y="80" font-size="13" font-weight="900" fill="#f472b6" text-anchor="middle">फिनॉल्फथलीन</text>
-            <text x="385" y="80" font-size="13" font-weight="900" fill="#fb923c" text-anchor="middle">मेथिल ऑरेंज</text>
-
-            <!-- Table Row 1: HCl -->
-            <rect id="sind_row1" x="14" y="95" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
-            <text x="80" y="119" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">1. तनु HCl</text>
-            <text id="sind_t1_lit" x="185" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">नीला ➔ लाल</text>
-            <text id="sind_t1_ph" x="290" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">रंगहीन</text>
-            <text id="sind_t1_mo" x="385" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल / नारंगी</text>
-
-            <!-- Table Row 2: H2SO4 -->
-            <rect id="sind_row2" x="14" y="138" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
-            <text x="80" y="162" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">2. तनु H₂SO₄</text>
-            <text id="sind_t2_lit" x="185" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">नीला ➔ लाल</text>
-            <text id="sind_t2_ph" x="290" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">रंगहीन</text>
-            <text id="sind_t2_mo" x="385" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल / नारंगी</text>
-
-            <!-- Table Row 3: NaOH -->
-            <rect id="sind_row3" x="14" y="181" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
-            <text x="80" y="205" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">3. तनु NaOH</text>
-            <text id="sind_t3_lit" x="185" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल ➔ नीला</text>
-            <text id="sind_t3_ph" x="290" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">गहरा गुलाबी</text>
-            <text id="sind_t3_mo" x="385" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">पीला</text>
-
-            <!-- Table Row 4: Ca(OH)2 -->
-            <rect id="sind_row4" x="14" y="224" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
-            <text x="80" y="248" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">4. Ca(OH)₂</text>
-            <text id="sind_t4_lit" x="185" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल ➔ नीला</text>
-            <text id="sind_t4_ph" x="290" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">गहरा गुलाबी</text>
-            <text id="sind_t4_mo" x="385" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">पीला</text>
-
-            <!-- Active Indicator Detail Box -->
-            <g transform="translate(14, 272)">
-              <rect id="sind_detail_bg" x="0" y="0" width="427" height="110" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
-              <text id="sind_detail_title" x="14" y="26" font-size="15" font-weight="900" fill="#15803d">सक्रिय सूचक: कोई सूचक चुनें</text>
-              <text id="sind_detail_desc1" x="14" y="52" font-size="13.5" font-weight="800" fill="#1e293b">ऊपर दिए गए 4 सूचक बटनों में से किसी एक पर क्लिक करें।</text>
-              <text id="sind_detail_desc2" x="14" y="76" font-size="13" font-weight="800" fill="#475569">अम्ल व क्षारक के साथ सूचक के विशिष्ट रंग परिवर्तन का अध्ययन करें।</text>
-              <text id="sind_detail_desc3" x="14" y="98" font-size="12.5" font-weight="900" fill="#0369a1">प्रकृति: अम्ल (H⁺ आयन) | क्षारक (OH⁻ आयन)</text>
+            <!-- Card 1: Magnesium -->
+            <g transform="translate(14, 56)">
+              <rect id="smr_c1_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#0369a1">1. मैग्नीशियम (Mg) — सबसे तीव्र अभिक्रिया (ऊष्माक्षेपी):</text>
+              <text x="16" y="52" font-size="15" font-weight="900" fill="#15803d">Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा 🔥</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#0f172a">परखनली अत्यधिक गर्म होती है व तीव्रतम बुदबुदाहट से H₂ निकलती है।</text>
             </g>
 
-            <!-- Bottom Scientific Rule Pill -->
-            <g transform="translate(14, 394)">
-              <rect x="0" y="0" width="427" height="82" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-              <text x="213" y="26" font-size="14" font-weight="900" fill="#166534" text-anchor="middle">⭐ बोर्ड परीक्षा स्मृति सूत्र (Memory Trick):</text>
-              <text x="213" y="48" font-size="13" font-weight="800" fill="#92400e" text-anchor="middle">"अम्ल नीले को लाल करता है (अनिल: अ = अम्ल, नि = नीला, ल = लाल)"</text>
-              <text x="213" y="70" font-size="13" font-weight="800" fill="#f472b6" text-anchor="middle">"क्षारक लाल को नीला व फिनॉल्फथलीन को गहरा गुलाबी करता है।"</text>
+            <!-- Card 2: Zinc & Iron -->
+            <g transform="translate(14, 160)">
+              <rect id="smr_c2_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#3730a3">2. जिंक (Zn) व 3. आयरन (Fe) — मध्यम व धीमी गति:</text>
+              <text x="16" y="52" font-size="13.5" font-weight="900" fill="#1e40af">• Zn: Zn + 2HCl ➔ ZnCl₂ + H₂↑ (मध्यम गति से बुलबुले)</text>
+              <text x="16" y="78" font-size="13.5" font-weight="900" fill="#b45309">• Fe: Fe + 2HCl ➔ FeCl₂ + H₂↑ (अत्यंत धीमी गति से H₂)</text>
+            </g>
+
+            <!-- Card 3: Copper -->
+            <g transform="translate(14, 264)">
+              <rect id="smr_c3_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#991b1b">4. कॉपर (तांबा - Cu) — शून्य अभिक्रिया (कोई गैस नहीं) ❌:</text>
+              <text x="16" y="52" font-size="15" font-weight="900" fill="#b91c1c">Cu + तनु HCl ➔ कोई अभिक्रिया नहीं (No Reaction ❌)</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#7f1d1d">कॉपर सक्रियता श्रेणी में H₂ से नीचे है, अतः विस्थापन संभव नहीं।</text>
+            </g>
+
+            <!-- Card 4: Reactivity Summary & Temperature Order -->
+            <g transform="translate(14, 368)">
+              <rect id="smr_c4_bg" x="0" y="0" width="467" height="124" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.06))"/>
+              <text x="233" y="25" font-size="16" font-weight="900" fill="#92400e" text-anchor="middle">⭐ NCERT धातु सक्रियता का घटता क्रम:</text>
+              <text x="233" y="56" font-size="24" font-weight="900" fill="#b45309" text-anchor="middle">Mg &gt; Zn &gt; Fe &gt; Cu</text>
+              <text x="233" y="84" font-size="13" font-weight="800" fill="#0f172a" text-anchor="middle">• हाइड्रोजन से ऊपर की धातुएं ही अम्लों से H₂ विस्थापित करती हैं।</text>
+              <text x="233" y="108" font-size="13.5" font-weight="900" fill="#15803d" text-anchor="middle">तापमान वृद्धि क्रम: Mg (सर्वाधिक) &gt; Zn &gt; Fe &gt; Cu (शून्य)</text>
             </g>
           </g>
         </svg>
@@ -2961,8 +2941,8 @@
           </defs>
 
           <!-- 3D WORKBENCH (TABLE) -->
-          <polygon points="15,400 705,400 665,455 35,455" fill="url(#smr_benchTop)"/>
-          <polygon points="35,455 665,455 665,482 35,482" fill="url(#smr_benchFront)"/>
+          <polygon points="15,400 680,400 655,455 35,455" fill="url(#smr_benchTop)"/>
+          <polygon points="35,455 655,455 655,482 35,482" fill="url(#smr_benchFront)"/>
           <ellipse cx="350" cy="484" rx="310" ry="12" fill="#000000" opacity="0.3" filter="url(#smr_shadowBlur)"/>
 
           <!-- 3D WOODEN TEST TUBE RACK (X: 45 to 665, Width: 620px) -->
@@ -3153,45 +3133,45 @@
             <text x="0" y="6" font-size="15" font-weight="900" fill="#991b1b" text-anchor="middle">4. Cu छीलन</text>
           </g>
 
-          <!-- ================= RIGHT OBSERVATION PANEL (X: 720 to 1180, Width: 460px) ================= -->
-          <g transform="translate(720, 20)">
-            <rect x="0" y="0" width="460" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.08))"/>
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 705 to 1185, Width: 480px) ================= -->
+          <g transform="translate(690, 18)">
+            <rect x="0" y="0" width="495" height="504" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.08))"/>
 
             <!-- Panel Header -->
-            <rect x="0" y="0" width="460" height="48" rx="14" fill="#16a34a"/>
-            <text x="230" y="31" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">📋 विभिन्न धातुओं की अम्ल से क्रियाशीलता तुलना</text>
+            <rect x="0" y="0" width="495" height="48" rx="14" fill="#16a34a"/>
+            <text x="247" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 विभिन्न धातुओं की अम्ल से क्रियाशीलता तुलना</text>
 
             <!-- Card 1: Magnesium -->
-            <g transform="translate(16, 56)">
-              <rect id="smr_c1_bg" x="0" y="0" width="428" height="96" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
-              <text x="14" y="24" font-size="16" font-weight="900" fill="#0369a1">1. मैग्नीशियम (Mg) — सबसे तीव्र अभिक्रिया (ऊष्माक्षेपी):</text>
-              <text x="14" y="52" font-size="18.5" font-weight="900" fill="#15803d">Mg(s) + 2HCl(aq) ➔ MgCl₂(aq) + H₂(g)↑ + ऊष्मा🔥</text>
-              <text x="14" y="78" font-size="14.5" font-weight="800" fill="#0f172a">परखनली अत्यधिक गर्म होती है व तीव्रतम बुदबुदाहट से H₂ निकलती है।</text>
+            <g transform="translate(14, 56)">
+              <rect id="smr_c1_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#0369a1">1. मैग्नीशियम (Mg) — सबसे तीव्र अभिक्रिया (ऊष्माक्षेपी):</text>
+              <text x="16" y="52" font-size="15.5" font-weight="900" fill="#15803d">Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा 🔥</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#0f172a">परखनली अत्यधिक गर्म होती है व तीव्रतम बुदबुदाहट से H₂ निकलती है।</text>
             </g>
 
             <!-- Card 2: Zinc & Iron -->
-            <g transform="translate(16, 160)">
-              <rect id="smr_c2_bg" x="0" y="0" width="428" height="96" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
-              <text x="14" y="24" font-size="16" font-weight="900" fill="#3730a3">2. जिंक (Zn) व 3. आयरन (Fe) — मध्यम व धीमी गति:</text>
-              <text x="14" y="52" font-size="17.5" font-weight="900" fill="#1e40af">Zn + 2HCl ➔ ZnCl₂ + H₂↑  |  Fe + 2HCl ➔ FeCl₂ + H₂↑</text>
-              <text x="14" y="78" font-size="14.5" font-weight="800" fill="#0f172a">जिंक में मध्यम गति से तथा लोहे में अत्यंत धीमी गति से गैस निकलती है।</text>
+            <g transform="translate(14, 160)">
+              <rect id="smr_c2_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#3730a3">2. जिंक (Zn) व 3. आयरन (Fe) — मध्यम व धीमी गति:</text>
+              <text x="16" y="52" font-size="13.5" font-weight="900" fill="#1e40af">• Zn: Zn + 2HCl ➔ ZnCl₂ + H₂↑ (मध्यम गति से बुलबुले)</text>
+              <text x="16" y="78" font-size="13.5" font-weight="900" fill="#b45309">• Fe: Fe + 2HCl ➔ FeCl₂ + H₂↑ (अत्यंत धीमी गति से H₂)</text>
             </g>
 
             <!-- Card 3: Copper -->
-            <g transform="translate(16, 264)">
-              <rect id="smr_c3_bg" x="0" y="0" width="428" height="96" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
-              <text x="14" y="24" font-size="16" font-weight="900" fill="#991b1b">4. कॉपर (तांबा - Cu) — शून्य अभिक्रिया (कोई गैस नहीं) ❌:</text>
-              <text x="14" y="52" font-size="18.5" font-weight="900" fill="#b91c1c">Cu(s) + तनु HCl ➔ कोई अभिक्रिया नहीं (No Reaction)</text>
-              <text x="14" y="78" font-size="14.5" font-weight="800" fill="#7f1d1d">कॉपर सक्रियता श्रेणी में हाइड्रोजन से नीचे है, अतः विस्थापन असंभव है।</text>
+            <g transform="translate(14, 264)">
+              <rect id="smr_c3_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#991b1b">4. कॉपर (तांबा - Cu) — शून्य अभिक्रिया (कोई गैस नहीं) ❌:</text>
+              <text x="16" y="52" font-size="15" font-weight="900" fill="#b91c1c">Cu + तनु HCl ➔ कोई अभिक्रिया नहीं (No Reaction ❌)</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#7f1d1d">कॉपर सक्रियता श्रेणी में H₂ से नीचे है, अतः विस्थापन संभव नहीं।</text>
             </g>
 
             <!-- Card 4: Reactivity Summary & Temperature Order -->
-            <g transform="translate(16, 368)">
-              <rect id="smr_c4_bg" x="0" y="0" width="428" height="124" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.06))"/>
-              <text x="214" y="25" font-size="16.5" font-weight="900" fill="#92400e" text-anchor="middle">⭐ NCERT धातु सक्रियता का घटता क्रम:</text>
-              <text x="214" y="56" font-size="24" font-weight="900" fill="#b45309" text-anchor="middle">Mg > Zn > Fe > Cu</text>
-              <text x="214" y="84" font-size="14.5" font-weight="800" fill="#0f172a" text-anchor="middle">• हाइड्रोजन से ऊपर की धातुएं ही अम्लों से H₂ विस्थापित करती हैं।</text>
-              <text x="214" y="108" font-size="15" font-weight="900" fill="#15803d" text-anchor="middle">तापमान वृद्धि क्रम: Mg (सर्वाधिक) > Zn > Fe > Cu (शून्य)</text>
+            <g transform="translate(14, 368)">
+              <rect id="smr_c4_bg" x="0" y="0" width="467" height="124" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.06))"/>
+              <text x="233" y="25" font-size="16" font-weight="900" fill="#92400e" text-anchor="middle">⭐ NCERT धातु सक्रियता का घटता क्रम:</text>
+              <text x="233" y="56" font-size="24" font-weight="900" fill="#b45309" text-anchor="middle">Mg &gt; Zn &gt; Fe &gt; Cu</text>
+              <text x="233" y="84" font-size="13" font-weight="800" fill="#0f172a" text-anchor="middle">• हाइड्रोजन से ऊपर की धातुएं ही अम्लों से H₂ विस्थापित करती हैं।</text>
+              <text x="233" y="108" font-size="13.5" font-weight="900" fill="#15803d" text-anchor="middle">तापमान वृद्धि क्रम: Mg (सर्वाधिक) &gt; Zn &gt; Fe &gt; Cu (शून्य)</text>
             </g>
           </g>
         </svg>
@@ -9596,4 +9576,45 @@
 
 </script>
 </body>
-</html>
+</html><!-- ================= RIGHT OBSERVATION & COMPARISON PANEL ================= -->
+          <g transform="translate(690, 18)">
+            <rect x="0" y="0" width="495" height="504" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.08))"/>
+
+            <!-- Panel Header -->
+            <rect x="0" y="0" width="495" height="48" rx="14" fill="#16a34a"/>
+            <text x="247" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 विभिन्न धातुओं की अम्ल से क्रियाशीलता तुलना</text>
+
+            <!-- Card 1: Magnesium -->
+            <g transform="translate(14, 56)">
+              <rect id="smr_c1_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#0369a1">1. मैग्नीशियम (Mg) — सबसे तीव्र अभिक्रिया (ऊष्माक्षेपी):</text>
+              <text x="16" y="52" font-size="15.5" font-weight="900" fill="#15803d">Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा 🔥</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#0f172a">परखनली अत्यधिक गर्म होती है व तीव्रतम बुदबुदाहट से H₂ निकलती है।</text>
+            </g>
+
+            <!-- Card 2: Zinc & Iron -->
+            <g transform="translate(14, 160)">
+              <rect id="smr_c2_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#3730a3">2. जिंक (Zn) व 3. आयरन (Fe) — मध्यम व धीमी गति:</text>
+              <text x="16" y="52" font-size="13.5" font-weight="900" fill="#1e40af">• Zn: Zn + 2HCl ➔ ZnCl₂ + H₂↑ (मध्यम गति से बुलबुले)</text>
+              <text x="16" y="78" font-size="13.5" font-weight="900" fill="#b45309">• Fe: Fe + 2HCl ➔ FeCl₂ + H₂↑ (अत्यंत धीमी गति से H₂)</text>
+            </g>
+
+            <!-- Card 3: Copper -->
+            <g transform="translate(14, 264)">
+              <rect id="smr_c3_bg" x="0" y="0" width="467" height="96" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.05))"/>
+              <text x="16" y="24" font-size="15" font-weight="900" fill="#991b1b">4. कॉपर (तांबा - Cu) — शून्य अभिक्रिया (कोई गैस नहीं) ❌:</text>
+              <text x="16" y="52" font-size="15" font-weight="900" fill="#b91c1c">Cu + तनु HCl ➔ कोई अभिक्रिया नहीं (No Reaction ❌)</text>
+              <text x="16" y="78" font-size="13" font-weight="800" fill="#7f1d1d">कॉपर सक्रियता श्रेणी में H₂ से नीचे है, अतः विस्थापन संभव नहीं।</text>
+            </g>
+
+            <!-- Card 4: Reactivity Summary & Temperature Order -->
+            <g transform="translate(14, 368)">
+              <rect id="smr_c4_bg" x="0" y="0" width="467" height="124" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.06))"/>
+              <text x="233" y="25" font-size="16" font-weight="900" fill="#92400e" text-anchor="middle">⭐ NCERT धातु सक्रियता का घटता क्रम:</text>
+              <text x="233" y="56" font-size="24" font-weight="900" fill="#b45309" text-anchor="middle">Mg &gt; Zn &gt; Fe &gt; Cu</text>
+              <text x="233" y="84" font-size="13" font-weight="800" fill="#0f172a" text-anchor="middle">• हाइड्रोजन से ऊपर की धातुएं ही अम्लों से H₂ विस्थापित करती हैं।</text>
+              <text x="233" y="108" font-size="13.5" font-weight="900" fill="#15803d" text-anchor="middle">तापमान वृद्धि क्रम: Mg (सर्वाधिक) &gt; Zn &gt; Fe &gt; Cu (शून्य)</text>
+            </g>
+          </g>
+
