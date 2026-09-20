@@ -428,7 +428,8 @@
       border-radius: 16px !important;
       padding: 25px 30px !important;
       margin: 25px 0 !important;
-      font-size:19px !important;
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
       font-weight: 800 !important;
       box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important;
     }
@@ -439,7 +440,8 @@
       border-radius: 16px !important;
       padding: 25px 30px !important;
       margin: 25px 0 !important;
-      font-size:19px !important;
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
       font-weight: 800 !important;
     }
 
@@ -449,7 +451,8 @@
       border-radius: 16px !important;
       padding: 25px 30px !important;
       margin: 25px 0 !important;
-      font-size:19px !important;
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
       font-weight: 800 !important;
     }
 
@@ -1620,6 +1623,23 @@
       color: #000000 !important;
     }
 
+  
+    /* HIGH SPECIFICITY PROJECTOR FORMULA & EXAMPLE BOX TYPOGRAPHY */
+    .formula-box-projector,
+    .formula-box-projector *,
+    .concept-box .formula-box-projector,
+    .concept-box .formula-box-projector *,
+    .definition-box .formula-box-projector,
+    .definition-box .formula-box-projector *,
+    div[class*="formula-box"],
+    div[class*="formula-box"] * {
+      font-size: 26pt !important;
+      line-height: 1.8 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
   </style>
   <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -2271,10 +2291,10 @@
       <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #a7f3d0; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         सामान्य रूप: धातु + तनु अम्ल ➔ लवण + हाइड्रोजन गैस (H₂↑)
       </div>
-      <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px; font-size:19px; font-weight:800; color:#0f172a;">
+      <div class="formula-box-projector" style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px;   color:#0f172a; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         उदाहरण 1: Zn(s) [जिंक दाने] + H₂SO₄(aq) [तनु सल्फ्यूरिक अम्ल] ➔ ZnSO₄(aq) [जिंक सल्फेट] + H₂(g)↑ [हाइड्रोजन गैस]
       </div>
-      <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; font-size:19px; font-weight:800; color:#0f172a;">
+      <div class="formula-box-projector" style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px;   color:#0f172a; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         उदाहरण 2: Zn(s) + 2HCl(aq) [तनु हाइड्रोक्लोरिक अम्ल] ➔ ZnCl₂(aq) [जिंक क्लोराइड] + H₂(g)↑
       </div>
     </div>
@@ -2943,24 +2963,24 @@
       <!-- Classroom Summary Cards Grid (High-Contrast White Background) -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 14px;">
         <div id="szb_card1" style="background:#ffffff; border:2.5px solid #0284c7; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#0369a1; margin-bottom:4px;">1. संतुलित रासायनिक अभिक्रिया (तापन):</div>
-          <div style="font-size:16px; font-weight:900; color:#15803d; margin-bottom:4px;">2NaOH(aq) + Zn(s) 🔥 ➔ Na₂ZnO₂(aq) + H₂(g)↑</div>
-          <div style="font-size:14px; font-weight:700; color:#334155;">सोडियम हाइड्रॉक्साइड + जिंक ➔ सोडियम जिंकेट (लवण) + हाइड्रोजन गैस</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">1. संतुलित रासायनिक अभिक्रिया (तापन):</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">2NaOH(aq) + Zn(s) 🔥 ➔ Na₂ZnO₂(aq) + H₂(g)↑</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">सोडियम हाइड्रॉक्साइड + जिंक ➔ सोडियम जिंकेट (लवण) + हाइड्रोजन गैस</div>
         </div>
         <div id="szb_card2" style="background:#ffffff; border:2.5px solid #d97706; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#b45309; margin-bottom:4px;">2. H₂ गैस का 'POP!' ध्वनि परीक्षण:</div>
-          <div style="font-size:16px; font-weight:900; color:#b45309; margin-bottom:4px;">2H₂(g) + O₂(g) ➔ 2H₂O(g) + ऊर्जा 💥</div>
-          <div style="font-size:14px; font-weight:700; color:#451a03;">साबुन के बुलबुले हाइड्रोजन से भरकर हल्के होकर हवा में तैरते हैं। मोमबत्ती लाने पर 'पॉप' ध्वनि से जलते हैं।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">2. H₂ गैस का 'POP!' ध्वनि परीक्षण:</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">2H₂(g) + O₂(g) ➔ 2H₂O(g) + ऊर्जा 💥</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">साबुन के बुलबुले हाइड्रोजन से भरकर हल्के होकर हवा में तैरते हैं। मोमबत्ती लाने पर 'पॉप' ध्वनि से जलते हैं।</div>
         </div>
         <div id="szb_card3" style="background:#ffffff; border:2.5px solid #2563eb; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#1d4ed8; margin-bottom:4px;">3. अम्ल एवं क्षारक अभिक्रिया में मुख्य अंतर:</div>
-          <div style="font-size:15px; font-weight:800; color:#1e40af; margin-bottom:4px;">• अम्ल सामान्य ताप पर तीव्रता से क्रिया करते हैं।</div>
-          <div style="font-size:14px; font-weight:700; color:#1e293b;">• क्षारक को धातु से क्रिया करने हेतु <strong>बाहरी तापन (Heating)</strong> की अनिवार्य आवश्यकता होती है।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">3. अम्ल एवं क्षारक अभिक्रिया में मुख्य अंतर:</div>
+          <div style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000;">• अम्ल सामान्य ताप पर तीव्रता से क्रिया करते हैं।</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">• क्षारक को धातु से क्रिया करने हेतु <strong>बाहरी तापन (Heating)</strong> की अनिवार्य आवश्यकता होती है।</div>
         </div>
         <div id="szb_card4" style="background:#ffffff; border:2.5px solid #16a34a; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#166534; margin-bottom:4px;">⭐ NCERT बोर्ड परीक्षा विशेष चेतावनी:</div>
-          <div style="font-size:14.5px; font-weight:800; color:#92400e; margin-bottom:4px;">"किंतु ऐसी अभिक्रियाएं सभी धातुओं के साथ संभव नहीं हैं।"</div>
-          <div style="font-size:14px; font-weight:700; color:#15803d;">केवल उभयधर्मी धातुएं (Zn, Al) ही प्रबल क्षारकों से क्रिया कर H₂ व जटिल लवण (जिंकेट) बनाती हैं।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">⭐ NCERT बोर्ड परीक्षा विशेष चेतावनी:</div>
+          <div style="font-size:24pt; font-weight:800; line-height:1.7; margin:6px 0; color:#92400e;">"किंतु ऐसी अभिक्रियाएं सभी धातुओं के साथ संभव नहीं हैं।"</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">केवल उभयधर्मी धातुएं (Zn, Al) ही प्रबल क्षारकों से क्रिया कर H₂ व जटिल लवण (जिंकेट) बनाती हैं।</div>
         </div>
       </div>
     </div>
@@ -3307,10 +3327,10 @@
       </div>
 
       <h5 style="color:#0f172a; font-size:30pt; font-weight:900; line-height:1.4; margin-top:24px; margin-bottom:14px; margin-top:16px; margin-bottom:8px;">संतुलित रासायनिक अभिक्रियाएं:</h5>
-      <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px; font-size:19px; font-weight:800; color:#0f172a;">
+      <div class="formula-box-projector" style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px;   color:#0f172a; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         परखनली (A): Na₂CO₃(s) [सोडियम कार्बोनेट] + 2HCl(aq) ➔ 2NaCl(aq) + H₂O(l) + CO₂(g)↑
       </div>
-      <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:18px; font-size:19px; font-weight:800; color:#0f172a;">
+      <div class="formula-box-projector" style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:18px;   color:#0f172a; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         परखनली (B): NaHCO₃(s) [सोडियम हाइड्रोजनकार्बोनेट] + HCl(aq) ➔ NaCl(aq) + H₂O(l) + CO₂(g)↑
       </div>
 
@@ -3740,24 +3760,24 @@
       <!-- Classroom Summary Cards Grid (High-Contrast White Background) -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 14px;">
         <div id="scarb_card1" style="background:#ffffff; border:2.5px solid #0284c7; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#0369a1; margin-bottom:4px;">1. फ्लास्क में अभिक्रिया (CO₂ निर्माण):</div>
-          <div style="font-size:16px; font-weight:900; color:#15803d; margin-bottom:4px;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl + H₂O + CO₂↑</div>
-          <div style="font-size:14px; font-weight:700; color:#334155;">तनु अम्ल मिलते ही तीव्र बुदबुदाहट (Effervescence) से CO₂ गैस बनती है।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">1. फ्लास्क में अभिक्रिया (CO₂ निर्माण):</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl + H₂O + CO₂↑</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">तनु अम्ल मिलते ही तीव्र बुदबुदाहट (Effervescence) से CO₂ गैस बनती है।</div>
         </div>
         <div id="scarb_card2" style="background:#ffffff; border:2.5px solid #d97706; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#b45309; margin-bottom:4px;">2. चूने के पानी का दूधिया होना:</div>
-          <div style="font-size:16px; font-weight:900; color:#b45309; margin-bottom:4px;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃↓ + H₂O</div>
-          <div style="font-size:14px; font-weight:700; color:#451a03;">अघुलनशील श्वेत अवक्षेप CaCO₃ बनने से विलयन दूधिया (Milky) हो जाता है।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">2. चूने के पानी का दूधिया होना:</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃↓ + H₂O</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">अघुलनशील श्वेत अवक्षेप CaCO₃ बनने से विलयन दूधिया (Milky) हो जाता है।</div>
         </div>
         <div id="scarb_card3" style="background:#ffffff; border:2.5px solid #2563eb; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#1d4ed8; margin-bottom:4px;">3. अत्यधिक CO₂ (दूधियापन गायब):</div>
-          <div style="font-size:16px; font-weight:900; color:#1e40af; margin-bottom:4px;">CaCO₃ + H₂O + CO₂ ➔ Ca(HCO₃)₂(aq)</div>
-          <div style="font-size:14px; font-weight:700; color:#1e293b;">जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट बनने से घोल पुनः पारदर्शी हो जाता है!</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">3. अत्यधिक CO₂ (दूधियापन गायब):</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">CaCO₃ + H₂O + CO₂ ➔ Ca(HCO₃)₂(aq)</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट बनने से घोल पुनः पारदर्शी हो जाता है!</div>
         </div>
         <div id="scarb_card4" style="background:#ffffff; border:2.5px solid #16a34a; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
-          <div style="font-size:15px; font-weight:900; color:#166534; margin-bottom:4px;">⭐ NCERT वैज्ञानिक निष्कर्ष:</div>
-          <div style="font-size:15px; font-weight:800; color:#0f172a; margin-bottom:4px;">धातु कार्बोनेट + अम्ल ➔ लवण + जल + CO₂↑</div>
-          <div style="font-size:14px; font-weight:700; color:#15803d;">संगमरमर, चूना-पत्थर और खड़िया (Chalk) सभी CaCO₃ के विभिन्न रूप हैं।</div>
+          <div class="formula-box-projector" style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">⭐ NCERT वैज्ञानिक निष्कर्ष:</div>
+          <div style="font-size:26pt; font-weight:800; line-height:1.8; margin:8px 0; -webkit-text-stroke:0.55px #000000;">धातु कार्बोनेट + अम्ल ➔ लवण + जल + CO₂↑</div>
+          <div style="font-size:24pt; font-weight:700; line-height:1.7; margin:6px 0; color:#334155;">संगमरमर, चूना-पत्थर और खड़िया (Chalk) सभी CaCO₃ के विभिन्न रूप हैं।</div>
         </div>
       </div>
     </div>
@@ -3978,10 +3998,10 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         अम्ल एवं क्षारक परस्पर क्रिया करके एक-दूसरे के प्रभाव को समाप्त कर देते हैं तथा <strong>लवण एवं जल</strong> का निर्माण करते हैं। इस अभिक्रिया को <strong>उदासीनीकरण अभिक्रिया</strong> कहते हैं:
       </p>
-      <div style="background:#f5f3ff; border:2px solid #ddd6fe; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:19px; font-weight:900; color:#5b21b6;">
+      <div class="formula-box-projector" style="background:#f5f3ff; border:2px solid #ddd6fe; border-radius:10px; padding:12px 20px; margin:14px 0;   color:#5b21b6; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         अम्ल (Acid) + क्षारक (Base) ➔ लवण (Salt) + जल (Water)
       </div>
-      <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; font-size:19px; font-weight:800; color:#0f172a; margin-bottom:14px;">
+      <div class="formula-box-projector" style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px;   color:#0f172a; margin-bottom:14px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000;">
         HCl(aq) [हाइड्रोक्लोरिक अम्ल] + NaOH(aq) [सोडियम हाइड्रॉक्साइड] ➔ NaCl(aq) [सोडियम क्लोराइड] + H₂O(l) [जल]
       </div>
       <p style="font-size:19px; color:#334155; line-height:1.7;">
