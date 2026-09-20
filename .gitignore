@@ -19,5 +19,18 @@ task_318_out.txt
 
 
 *.bak
+*.bak*
 __pycache__/
 *.pyc
+
+# Scratch & temporary scripts
+scratch/
+temp/
+_*.js
+check_*.js
+patch_*.py
+verify_*.py
+fix_*.py
+apply_*.py
+tweak_*.py
+test_*.py
