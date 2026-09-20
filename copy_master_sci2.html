@@ -1509,6 +1509,47 @@
       display: inline !important;
     }
 
+  
+    /* =========================================================================
+       UNIVERSAL PROJECTOR FORMULA & VIDEO CARD TYPOGRAPHY (MATCHING NORMAL NOTES)
+       ========================================================================= */
+    .formula-box-projector, .reaction-box, .chem-formula {
+      font-size: 26pt !important;
+      line-height: 1.9 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    .video-card-container p, .video-card-container span, .video-card-container code {
+      font-size: 26pt !important;
+      line-height: 1.9 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    .video-card-container h3 {
+      font-size: 32pt !important;
+      font-weight: 900 !important;
+      line-height: 1.4 !important;
+    }
+
+    .sim-card > p, .sim-card > p strong {
+      font-size: 26pt !important;
+      line-height: 2.0 !important;
+      font-weight: 800 !important;
+      -webkit-text-stroke: 0.55px #000000 !important;
+      text-shadow: 0 0 0.5px #000 !important;
+    }
+
+    /* PRESERVE SIMULATOR INTERNAL TEXT 100% UNTOUCHED */
+    svg text, svg tspan, .sim-stage svg *, [id^="sim2_"] svg text {
+      -webkit-text-stroke: 0px !important;
+      text-shadow: none !important;
+      line-height: normal !important;
+    }
+
   </style>
   <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -1693,7 +1734,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.1:</strong> विज्ञान प्रयोगशाला में 4 परखनलियों में अम्ल व क्षारक के नमूने [तनु HCl, तनु H₂SO₄, तनु NaOH, तनु Ca(OH)₂] रखे गए हैं। नीचे दिए गए विभिन्न सूचकों के बटन दबाकर देखें कि विलयनों के रंग में क्या परिवर्तन होता है:
       </p>
 
@@ -1951,7 +1992,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.2:</strong> कुछ पदार्थ ऐसे होते हैं जिनकी गंध या रंग अम्लीय या क्षारकीय माध्यम में बदल जाते हैं। नीचे हल्दी, लाल पत्तागोभी, वैनिला तथा प्याज की गंधयुक्त पट्टी पर अम्ल व क्षारक डालकर देखें कि क्या प्रभाव पड़ता है:
       </p>
 
@@ -2157,7 +2198,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         जब किसी सक्रिय धातु (जैसे जिंक, मैग्नीशियम, आयरन आदि) की अभिक्रिया तनु अम्ल से कराई जाती है, तो धातु अम्ल से हाइड्रोजन को विस्थापित कर देती है तथा <strong>लवण</strong> व <strong>हाइड्रोजन गैस (H₂)</strong> का निर्माण होता है:
       </p>
-      <div style="background:#ecfdf5; border:2px solid #a7f3d0; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:19px; font-weight:900; color:#065f46;">
+      <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #a7f3d0; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         सामान्य रूप: धातु + तनु अम्ल ➔ लवण + हाइड्रोजन गैस (H₂↑)
       </div>
       <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin-bottom:12px; font-size:19px; font-weight:800; color:#0f172a;">
@@ -2173,7 +2214,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सभी धातुएं क्षारकों से क्रिया नहीं करतीं, किंतु कुछ उभयधर्मी धातुएं (जैसे Zn, Al) प्रबल क्षारकों के साथ गर्म करने पर लवण व हाइड्रोजन गैस देती हैं:
       </p>
-      <div style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:19px; font-weight:900; color:#92400e;">
+      <div class="formula-box-projector" style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#92400e;">
         2NaOH(aq) [सोडियम हाइड्रॉक्साइड] + Zn(s) [जिंक] ➔ Na₂ZnO₂(aq) [सोडियम जिंकेट] + H₂(g)↑
       </div>
       <p style="font-size:19px; color:#64748b; font-style:italic;">
@@ -2193,7 +2234,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.3:</strong> एक परखनली में 5 mL तनु H₂SO₄ लेकर उसमें दानेदार जस्ता (Zn) मिलाते हैं। निकास नली से निकलने वाली गैस को साबुन के घोल में प्रवाहित करने पर हाइड्रोजन के बुलबुले बनते हैं। पास जलती मोमबत्ती लाने पर गैस <strong>'पॉप' (POP!)</strong> ध्वनि के साथ जलती है:
       </p>
 
@@ -2481,7 +2522,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.4:</strong> एक दानेदार जिंक युक्त परखनली में 2 mL सोडियम हाइड्रॉक्साइड (NaOH) विलयन लेकर बर्नर पर गर्म किया जाता है। उत्पन्न गैस को निकास नली द्वारा साबुन के घोल में प्रवाहित करने पर बुलबुले बनते हैं, जो जलती मोमबत्ती लाने पर <strong>'पॉप' (POP!)</strong> ध्वनि के साथ जलते हैं:
       </p>
 
@@ -2867,7 +2908,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT क्रियाशीलता परीक्षण:</strong> 4 परखनलियों में समान मात्रा में तनु HCl लेकर क्रमशः मैग्नीशियम (Mg), जस्ता (Zn), लोहा (Fe) और तांबा (Cu) डालते हैं। देखें कि किस धातु में H₂ गैस के बुलबुले सबसे तीव्र गति से बनते हैं और किसमें बिल्कुल नहीं बनते:
       </p>
 
@@ -3191,7 +3232,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सभी धातु कार्बोनेट एवं धातु हाइड्रोजनकार्बोनेट अम्लों के साथ तीव्रता से अभिक्रिया करके <strong>संगत लवण, जल तथा कार्बन डाइऑक्साइड गैस (CO₂)</strong> उत्पन्न करते हैं:
       </p>
-      <div style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:19px; font-weight:900; color:#1e40af;">
+      <div class="formula-box-projector" style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#1e40af;">
         धातु कार्बोनेट / धातु हाइड्रोजनकार्बोनेट + अम्ल ➔ लवण + CO₂↑ + H₂O
       </div>
 
@@ -3209,13 +3250,13 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         उत्पन्न CO₂ गैस को जब स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित किया जाता है, तो अघुलनशील कैल्शियम कार्बोनेट (CaCO₃) बनने के कारण चूने का पानी <strong>दूधिया (Milky)</strong> हो जाता है:
       </p>
-      <div style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0; font-size:19px; font-weight:900; color:#92400e;">
+      <div class="formula-box-projector" style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#92400e;">
         Ca(OH)₂(aq) [चूने का पानी] + CO₂(g) ➔ CaCO₃(s)↓ [सफेद अवक्षेप (दूधिया घोल)] + H₂O(l)
       </div>
       <p style="font-size:19px; color:#1e293b; line-height:1.8; margin-top:12px;">
         <strong>अत्यधिक मात्रा में CO₂ प्रवाहित करने पर:</strong> जब चूने के पानी में लगातार देर तक CO₂ गैस प्रवाहित की जाती है, तो दूधियापन समाप्त हो जाता है क्योंकि जल में घुलनशील कैल्शियम हाइड्रोजनकार्बोनेट बनता है:
       </p>
-      <div style="background:#f1f5f9; border:2px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin:10px 0; font-size:19px; font-weight:900; color:#0f172a;">
+      <div class="formula-box-projector" style="background:#f1f5f9; border:2px solid #cbd5e1; border-radius:10px; padding:12px 20px; margin:10px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#0f172a;">
         CaCO₃(s) + H₂O(l) + CO₂(g) ➔ Ca(HCO₃)₂(aq) [जल में विलेय पारदर्शी विलयन]
       </div>
       <p style="font-size:19px; color:#475569; margin-top:10px;">
@@ -3235,7 +3276,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.5:</strong> गोल पेंदे के फ्लास्क में ठोस सोडियम कार्बोनेट (Na₂CO₃) लेकर थिसिल कीप से तनु HCl मिलाते हैं। उत्पन्न कार्बन डाइऑक्साइड (CO₂) गैस को निकास नली द्वारा बीकर में रखे स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित करते हैं। देखें कि चूने का पानी दूधिया क्यों होता है और अत्यधिक CO₂ प्रवाहित करने पर दूधियापन क्यों गायब हो जाता है:
       </p>
 
@@ -3665,7 +3706,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT व्यावहारिक अनुप्रयोग:</strong> धातु हाइड्रोजनकार्बोनेट (NaHCO₃) और सांद्र H₂SO₄ का उपयोग अग्निशामक यंत्र में होता है। घुंडी (Knob) दबाते ही अम्ल की शीशी टूटती है, CO₂ गैस का तीव्र झाग निकलता है और आग तुरंत बुझ जाती है:
       </p>
 
@@ -3890,7 +3931,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.6:</strong> एक परखनली में 2 mL तनु NaOH लेकर 2 बूंद फिनॉल्फथलीन मिलाते हैं (विलयन गहरा गुलाबी हो जाता है)। फिर ड्रॉपर से बूंद-बूंद तनु HCl मिलाते हैं (गुलाबी रंग गायब होकर रंगहीन हो जाता है)। पुनः NaOH मिलाने पर गुलाबी रंग लौट आता है:
       </p>
 
@@ -4151,7 +4192,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.7:</strong> एक बीकर में थोड़ा काला कॉपर ऑक्साइड (CuO) लेकर धीरे-धीरे तनु हाइड्रोक्लोरिक अम्ल मिलाते हुए हिलाते हैं। काला चूर्ण घुलकर विलीन हो जाता है और विलयन का रंग खूबसूरत <strong>नीला-हरा (Blue-Green)</strong> हो जाता है:
       </p>
 
@@ -4433,7 +4474,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT सिद्धांत:</strong> जब अधातु ऑक्साइड जैसे कार्बन डाइऑक्साइड (CO₂) को क्षारक कैल्शियम हाइड्रॉक्साइड [Ca(OH)₂] में प्रवाहित करते हैं, तो लवण (CaCO₃) और जल बनता है। यह ठीक अम्ल-क्षारक अभिक्रिया जैसा है, जिससे सिद्ध होता है कि अधात्विक ऑक्साइड <strong>अम्लीय प्रकृति</strong> के होते हैं:
       </p>
 
@@ -4701,7 +4742,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         जब बीकर में तनु HCl अथवा H₂SO₄ का विलयन लेकर दो कीलों के माध्यम से 6V बैटरी, स्विच तथा बल्ब जोड़ते हैं, तो <strong>बल्ब जलने लगता है</strong>। यह सिद्ध करता है कि अम्लों के जलीय विलयन में <strong>मुक्त आयन (H⁺)</strong> उपस्थित होते हैं जो विद्युत धारा का प्रवाह करते हैं।
       </p>
-      <div style="background:#f0fdf4; border:1.5px solid #86efac; border-radius:10px; padding:12px 20px; margin:12px 0; font-size:19px; color:#065f46;">
+      <div class="formula-box-projector" style="background:#f0fdf4; border:1.5px solid #86efac; border-radius:10px; padding:12px 20px; margin:12px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; color:#065f46;">
         <strong>ग्लूकोज एवं ऐल्कोहॉल का अपवाद:</strong> ग्लूकोज (C₆H₁₂O₆) तथा ऐल्कोहॉल (C₂H₅OH) में यद्यपि हाइड्रोजन उपस्थित होता है, किंतु जल में इनका आयनीकरण नहीं होता (ये मुक्त H⁺ आयन नहीं देते)। अतः इनके विलयन में <strong>विद्युत धारा प्रवाहित नहीं होती तथा बल्ब नहीं जलता</strong>। इसलिए इन्हें अम्ल नहीं माना जाता।
       </div>
     </div>
@@ -4711,7 +4752,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सोडियम क्लोराइड (NaCl) पर सांद्र H₂SO₄ की क्रिया कराने से निकलने वाली शुष्क HCl गैस जब शुष्क नीले लिटमस पत्र के संपर्क में आती है, तो <strong>रंग नहीं बदलता</strong>। किंतु जब <strong>आर्द्र (गीला) नीला लिटमस पत्र</strong> पास लाते हैं, तो वह तुरंत <strong>लाल</strong> हो जाता है।
       </p>
-      <div style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:12px 0; font-size:19px; font-weight:900; color:#1e40af;">
+      <div class="formula-box-projector" style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:12px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#1e40af;">
         HCl + H₂O ➔ H₃O⁺ [हाइड्रोनियम आयन] + Cl⁻
       </div>
       <p style="font-size:19px; color:#334155; line-height:1.7;">
@@ -4743,7 +4784,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.8:</strong> 100 mL के बीकर में रबर कॉर्क पर दो लोहे की कीलें लगाकर उन्हें 6V बैटरी, स्विच तथा एक बल्ब से जोड़ते हैं। बीकर में विभिन्न विलयन डालकर स्विच ऑन करके देखें कि किस विलयन में बल्ब जलता है और क्यों:
       </p>
 
@@ -5051,7 +5092,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.9 व 2.10:</strong> ठोस NaCl पर सांद्र H₂SO₄ डालने से शुष्क HCl गैस बनती है। शुष्क नीले लिटमस पत्र पर इसका कोई प्रभाव नहीं होता, परंतु आर्द्र (गीले) नीले लिटमस को यह तुरंत लाल कर देती है। साथ ही अम्ल के सुरक्षित तनुकरण का नियम भी देखें:
       </p>
 
@@ -5273,7 +5314,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT सिद्धांत:</strong> अम्ल की प्रबलता इस बात पर निर्भर करती है कि वह जल में कितने H⁺ आयन देता है। नीचे प्रबल खनिज अम्ल (HCl) और दुर्बल कार्बनिक अम्ल (CH₃COOH - एसिटिक अम्ल) चुनकर आयनों की संख्या और बल्ब की चमक की तुलना करें:
       </p>
 
@@ -5459,7 +5500,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🧪</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>इंटरैक्टिव pH मीटर:</strong> नीचे दिए गए 6 विभिन्न पदार्थों के बीकरों में से किसी भी पदार्थ को चुनें। ऑटोमैटिक ड्रॉपर सार्वत्रिक सूचक pH पेपर को उस विलयन में डुबोएगा। पेपर का रंग तुरंत बदलकर डिजिटल pH रीडिंग व प्रकृति दर्शाएगा:
       </p>
 
@@ -5717,7 +5758,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>दैनिक जीवन में pH का महत्व (NCERT Core):</strong> हमारा शरीर 7.0 से 7.8 pH परास के बीच कार्य करता है। नीचे 4 प्रमुख वास्तविक जीवन स्थितियों (उदर में अम्लता, दंत क्षय, मधुमक्खी डंक व अम्लीय वर्षा) पर क्लिक करके देखें कि pH असंतुलन से क्या होता है और क्षारक से उपचार कैसे होता है:
       </p>
 
@@ -5887,7 +5928,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT क्रियाकलाप 2.12:</strong> एक परखनली में 2g मिट्टी लेकर 5 mL जल मिलाते हैं, हिलाकर छानते हैं और निष्पादित द्रव का सार्वत्रिक सूचक द्वारा pH जांचते हैं। यदि मृदा अत्यधिक अम्लीय या क्षारीय हो, तो पौधों की इष्टतम वृद्धि (pH 6.5–7.5) हेतु किसान क्या उपचार करते हैं:
       </p>
 
@@ -6064,7 +6105,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>एनसीईआरटी क्रियाकलाप 2.13:</strong> सभी लवण उदासीन (pH 7) नहीं होते! लवण किस प्रकार के अम्ल और क्षारक से बना है, इस पर उसके जलीय विलयन का pH निर्भर करता है। नीचे दिए गए 4 लवणों के नमूने चुनकर उनका pH और प्रकृति देखें:
       </p>
 
@@ -6247,7 +6288,7 @@
       <p style="font-size:19px; color:#1e293b; line-height:1.8;">
         सोडियम क्लोराइड के जलीय विलयन (जिसे <strong>ब्राइन / Brine</strong> कहते हैं) में विद्युत धारा प्रवाहित करने पर यह वियोजित होकर सोडियम हाइड्रॉक्साइड उत्पन्न करता है। इस प्रक्रिया को <strong>क्लोर-क्षार प्रक्रिया</strong> कहते हैं क्योंकि इसमें निर्मित उत्पाद क्लोरीन ('क्लोर') एवं सोडियम हाइड्रॉक्साइड ('क्षार') होते हैं:
       </p>
-      <div style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:19px; font-weight:900; color:#065f46;">
+      <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         2NaCl(aq) [ब्राइन] + 2H₂O(l) ➔ 2NaOH(aq) + Cl₂(g)↑ [एनोड पर] + H₂(g)↑ [कैथोड पर]
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -6310,7 +6351,7 @@
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू ⚡</span>
       </div>
 
-      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>विद्युत-अपघटनी सेल सिमुलेटर:</strong> ब्राइन (NaCl विलयन) में विद्युत धारा प्रवाहित करने पर एनोड पर Cl₂ गैस, कैथोड पर H₂ गैस तथा कैथोड के समीप सोडियम हाइड्रॉक्साइड (NaOH) का निर्माण लाइव देखें:
       </p>
 
@@ -6520,7 +6561,7 @@
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
         <li><strong>निर्माण:</strong> शुष्क बुझे हुए चूने [Ca(OH)₂] पर क्लोरीन गैस (Cl₂) प्रवाहित करके विरंजक चूर्ण का उत्पादन किया जाता है:</li>
       </ul>
-      <div style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#065f46;">
+      <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         Ca(OH)₂(s) [शुष्क बुझा चूना] + Cl₂(g) ➔ CaOCl₂(s) [विरंजक चूर्ण] + H₂O(l)
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -6547,10 +6588,10 @@
             <i class="fas fa-video"></i>
           </div>
           <div>
-            <h3 style="margin:0; font-size:20px; font-weight:900; color:#000000;">
+            <h3 style="margin:0; font-size:32pt; font-weight:900; line-height:1.4; color:#000000;">
               🎥 16:9 NCERT वीडियो लैब: विरंजक चूर्ण (CaOCl₂) संश्लेषण एवं वस्त्र विरंजन क्रिया
             </h3>
-            <span style="font-size:14px; color:#15803d; font-weight:800;">
+            <span style="font-size:22pt; color:#15803d; font-weight:800; line-height:1.6; display:block; margin-top:8px;">
               NCERT Class 10 Chemistry • शुष्क बुझे चूने [Ca(OH)₂] पर Cl₂ गैस की क्रिया एवं नवजात ऑक्सीजन [O] द्वारा रंगीन वस्त्र का स्थायी विरंजन
             </span>
           </div>
@@ -7064,13 +7105,13 @@
         <li><strong>रासायनिक नाम:</strong> सोडियम हाइड्रोजनकार्बोनेट (Sodium Hydrogen Carbonate) अथवा सोडियम बाइकार्बोनेट।</li>
         <li><strong>निर्माण (साल्वे विधि):</strong> सोडियम क्लोराइड, जल, कार्बन डाइऑक्साइड तथा अमोनिया की परस्पर क्रिया से:</li>
       </ul>
-      <div style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#065f46;">
+      <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         NaCl + H₂O + CO₂ + NH₃ ➔ NH₄Cl [अमोनियम क्लोराइड] + NaHCO₃ [सोडियम हाइड्रोजनकार्बोनेट]
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
         <li><strong>ऊष्मा का प्रभाव (खाना पकाते समय गर्म करने पर):</strong></li>
       </ul>
-      <div style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#92400e;">
+      <div class="formula-box-projector" style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#92400e;">
         2NaHCO₃(s) [ऊष्मा 🔥] ➔ Na₂CO₃(s) [सोडियम कार्बोनेट] + H₂O(l) + CO₂(g)↑
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7093,7 +7134,7 @@
         <li><strong>रासायनिक नाम:</strong> सोडियम कार्बोनेट डेकाहाइड्रेट (Sodium Carbonate Decahydrate)।</li>
         <li><strong>निर्माण:</strong> बेकिंग सोडा को गर्म करके सोडियम कार्बोनेट प्राप्त किया जाता है। सोडियम कार्बोनेट के पुनः क्रिस्टलीकरण से धावन सोडा बनता है:</li>
       </ul>
-      <div style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#065f46;">
+      <div class="formula-box-projector" style="background:#ecfdf5; border:2px solid #86efac; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#065f46;">
         Na₂CO₃ + 10H₂O ➔ Na₂CO₃·10H₂O [धोने का सोडा]
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7121,13 +7162,13 @@
           <strong>प्लास्टर ऑफ पेरिस (POP):</strong> जब <strong>जिप्सम [CaSO₄·2H₂O]</strong> को <strong>373 K (100°C)</strong> पर सावधानीपूर्वक गर्म किया जाता है, तो यह जल के अणुओं का त्याग कर <strong>कैल्शियम सल्फेट अर्धहाइड्रेट / हेमीहाइड्रेट (CaSO₄·½H₂O)</strong> बनाता है:
         </li>
       </ul>
-      <div style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#92400e;">
+      <div class="formula-box-projector" style="background:#fffbeb; border:2px solid #fde68a; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#92400e;">
         CaSO₄·2H₂O [जिप्सम] + 373 K 🔥 ➔ CaSO₄·½H₂O [प्लास्टर ऑफ पेरिस] + 1½H₂O
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
         <li><strong>जल से पुनः जिप्सम बनना (सेटिंग):</strong> POP एक सफेद चूर्ण है, जो जल मिलाने पर पुनः तीव्र गति से कठोर होकर जिप्सम में बदल जाता है:</li>
       </ul>
-      <div style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:19px; font-weight:900; color:#1e40af;">
+      <div class="formula-box-projector" style="background:#eff6ff; border:2px solid #93c5fd; border-radius:10px; padding:12px 20px; margin:10px 0 14px 20px; font-size:26pt; font-weight:800; line-height:1.8; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; font-weight:900; color:#1e40af;">
         CaSO₄·½H₂O [सफेद चूर्ण POP] + 1½H₂O ➔ CaSO₄·2H₂O [कठोर ठोस पदार्थ (जिप्सम)]
       </div>
       <ul style="padding-left:24px; font-size:19px; line-height:1.8; color:#1e293b;">
@@ -7156,10 +7197,10 @@
             <i class="fas fa-video"></i>
           </div>
           <div>
-            <h3 style="margin:0; font-size:20px; font-weight:900; color:#000000;">
+            <h3 style="margin:0; font-size:32pt; font-weight:900; line-height:1.4; color:#000000;">
               🎥 16:9 NCERT वीडियो लैब: क्रिस्टलन का जल — कॉपर सल्फेट तापन व पुनःजलयोजन
             </h3>
-            <span style="font-size:14px; color:#15803d; font-weight:800;">
+            <span style="font-size:22pt; color:#15803d; font-weight:800; line-height:1.6; display:block; margin-top:8px;">
               NCERT Class 10 Chemistry • क्रियाकलाप 2.15 (चित्र 2.9): नीले कॉपर सल्फेट (CuSO₄·5H₂O) का निर्जलीकरण एवं ड्रॉपर से जल मिलाने पर पुनःजलयोजन
             </span>
           </div>
@@ -7575,10 +7616,10 @@
             <i class="fas fa-video"></i>
           </div>
           <div>
-            <h3 style="margin:0; font-size:20px; font-weight:900; color:#000000;">
+            <h3 style="margin:0; font-size:32pt; font-weight:900; line-height:1.4; color:#000000;">
               🎥 16:9 NCERT वीडियो लैब: प्लास्टर ऑफ पेरिस (POP) निर्माण (373 K) एवं जल से कठोर जिप्सम बनना
             </h3>
-            <span style="font-size:14px; color:#15803d; font-weight:800;">
+            <span style="font-size:22pt; color:#15803d; font-weight:800; line-height:1.6; display:block; margin-top:8px;">
               NCERT Class 10 Chemistry • क्रिस्टलन का जल एवं प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O): 373 K पर तापन व पुनःजलयोजन सेटिंग
             </span>
           </div>
@@ -7633,7 +7674,7 @@
         </span>
       </div>
 
-      <p style="font-size: 18px; color: #000000; margin-bottom: 14px; line-height: 1.8; font-weight:700;">
+      <p style="font-size:26pt; line-height:2.0; color:#1e293b; font-weight:800; -webkit-text-stroke:0.55px #000000; text-shadow:0 0 0.5px #000; margin-bottom:16px;">
         <strong>NCERT निर्माण एवं सेटिंग क्रिया:</strong> जिप्सम को 373 K (100°C) पर गर्म करने पर यह डेढ़ अणु जल त्यागकर POP (CaSO₄·½H₂O) बनता है। POP में जल मिलाने पर यह पुनः जमकर अत्यंत कठोर जिप्सम में बदल जाता है (डॉक्टर टूटी हड्डियों को सही जगह स्थिर रखने हेतु यही करते हैं):
       </p>
 
@@ -8121,9 +8162,13 @@
           -webkit-text-stroke: ${s}px #000000;
           text-shadow: 0 0 0.5px #000;
         }
-        .chem-eq, .reaction-box, [class*="formula"], .math-symbol {
+        .chem-eq, .reaction-box, .formula-box-projector, [class*="formula"], .math-symbol,
+        .video-card-container p, .video-card-container span, .video-card-container code,
+        .sim-card > p {
           font-size: ${Math.round(b * 1.05)}pt !important;
           font-weight: 800 !important;
+          -webkit-text-stroke: ${s}px #000000 !important;
+          text-shadow: 0 0 0.5px #000 !important;
         }
       `;
     }
