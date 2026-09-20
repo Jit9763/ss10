@@ -4295,15 +4295,10 @@
               <line x1="0" y1="-25" x2="-35" y2="225" stroke="#cbd5e1" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
               <line x1="2" y1="-25" x2="-33" y2="225" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.95"/>
               <circle cx="-35" cy="225" r="5.5" fill="#94a3b8" stroke="#cbd5e1" stroke-width="1.5"/>
-              <!-- Stirrer Label Badge -->
-              <g transform="translate(10, 5)">
-                <rect x="0" y="0" width="135" height="26" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.8" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.15))"/>
-                <text x="68" y="18" font-size="12" font-weight="900" fill="#000000" text-anchor="middle">कांच की छड़ (Stirrer)</text>
-              </g>
             </g>
 
             <!-- Pyrex Beaker Glass Body & Graduation Lines -->
-            <rect x="5" y="10" width="220" height="235" rx="14" fill="url(#scuo_glassGrad)" stroke="#0284c7" stroke-width="2.8"/>
+            <rect x="5" y="10" width="220" height="235" rx="14" fill="none" stroke="#0284c7" stroke-width="2.8"/>
             <!-- Beaker Spout Lip on Left -->
             <path d="M5,16 L-10,8 L5,32" fill="none" stroke="#0284c7" stroke-width="2.8" stroke-linejoin="round"/>
             <!-- Top Rim Highlight -->
@@ -4325,22 +4320,33 @@
             <text x="35" y="48" font-size="12.5" font-weight="900" fill="#0284c7">PYREX® 250 mL</text>
           </g>
 
+          <!-- ================= FIXED LABEL FOR GLASS STIRRING ROD (Above Beaker Rim) ================= -->
+          <g id="scuo_rod_fixed_label" transform="translate(375, 88)">
+            <rect x="0" y="0" width="160" height="28" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.12))"/>
+            <circle cx="14" cy="14" r="5" fill="#0284c7"/>
+            <text x="85" y="19" font-size="12.5" font-weight="900" fill="#000000" text-anchor="middle">काँच की छड़ (Stirrer)</text>
+            <!-- Pointer line down towards glass rod handle -->
+            <path d="M22,28 L22,46" stroke="#0284c7" stroke-width="1.6" stroke-dasharray="3 2"/>
+            <circle cx="22" cy="47" r="2.5" fill="#0284c7"/>
+          </g>
+
           <!-- ================= REAGENT BOTTLE: DILUTE HCl (Tilts to 105° directly over beaker) ================= -->
-          <g id="scuo_acid_bottle" transform="translate(75, 275)">
+          <g id="scuo_acid_bottle" transform="translate(70, 275)">
             <!-- Bottle Body -->
-            <rect x="0" y="25" width="65" height="95" rx="7" fill="#f8fafc" stroke="#334155" stroke-width="2.2"/>
+            <rect x="0" y="25" width="76" height="96" rx="7" fill="#f8fafc" stroke="#334155" stroke-width="2.2"/>
             <!-- Liquid inside bottle (Shrinks towards neck during pouring) -->
-            <rect id="scuo_bottle_liquid" x="4" y="45" width="57" height="70" rx="4" fill="#fee2e2" opacity="0.85"/>
+            <rect id="scuo_bottle_liquid" x="4" y="45" width="68" height="72" rx="4" fill="#fee2e2" opacity="0.85"/>
             <!-- Shoulder and Neck -->
-            <path d="M0,25 Q14,10 22,8 L22,0 L43,0 L43,8 Q51,10 65,25 Z" fill="#f8fafc" stroke="#334155" stroke-width="2.2"/>
+            <path d="M0,25 Q16,10 26,8 L26,0 L50,0 L50,8 Q60,10 76,25 Z" fill="#f8fafc" stroke="#334155" stroke-width="2.2"/>
             <!-- Glass Specular Highlight -->
-            <line x1="8" y1="28" x2="8" y2="115" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- Bold Reagent Label -->
-            <rect x="4" y="48" width="57" height="42" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
-            <text x="32.5" y="66" font-size="11.5" font-weight="900" fill="#dc2626" text-anchor="middle">तनु HCl अम्ल</text>
-            <text x="32.5" y="82" font-size="9.5" font-weight="900" fill="#000000" text-anchor="middle">Dil. HCl (120mL)</text>
+            <line x1="8" y1="28" x2="8" y2="116" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Bold Reagent Label (Spacious width=68, ZERO overflow) -->
+            <rect x="4" y="46" width="68" height="46" rx="5" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+            <text x="38" y="62" font-size="12.5" font-weight="900" fill="#dc2626" text-anchor="middle">तनु HCl</text>
+            <text x="38" y="76" font-size="10" font-weight="900" fill="#000000" text-anchor="middle">Dilute HCl</text>
+            <text x="38" y="88" font-size="9.5" font-weight="900" fill="#475569" text-anchor="middle">(120 mL)</text>
             <!-- Top Stopper Neck Rim -->
-            <line x1="20" y1="0" x2="45" y2="0" stroke="#334155" stroke-width="2.5"/>
+            <line x1="24" y1="0" x2="52" y2="0" stroke="#334155" stroke-width="2.5"/>
           </g>
 
           <!-- POURING ACID LIQUID STREAM (Connects bottle mouth at 269,155 to beaker liquid) -->
@@ -8906,12 +8912,12 @@
       var btl = document.getElementById('scuo_acid_bottle');
       if (btl && window.gsap) {
         gsap.killTweensOf(btl);
-        gsap.set(btl, { x: 75, y: 275, rotation: 0, opacity: 1 });
+        gsap.set(btl, { x: 70, y: 275, rotation: 0, opacity: 1 });
       }
       var btlLiq = document.getElementById('scuo_bottle_liquid');
       if (btlLiq && window.gsap) {
         gsap.killTweensOf(btlLiq);
-        gsap.set(btlLiq, { attr: { y: 45, height: 70 } });
+        gsap.set(btlLiq, { attr: { y: 45, height: 72 } });
       }
 
       // Reset Beaker Liquid (Empty dry state)
@@ -9008,8 +9014,8 @@
           gsap.killTweensOf([btl, btlLiq, stm, liq, men]);
           var tl = gsap.timeline();
           // 1. Move bottle up to beaker mouth (X: 225, Y: 140) and tilt 105° so mouth aims down into beaker
-          tl.to(btl, { x: 225, y: 140, duration: 0.6, ease: "power2.out" })
-            .to(btl, { rotation: 105, transformOrigin: "32.5px 12px", duration: 0.45, ease: "power1.inOut", onStart: function() {
+          tl.to(btl, { x: 220, y: 140, duration: 0.6, ease: "power2.out" })
+            .to(btl, { rotation: 105, transformOrigin: "38px 12px", duration: 0.45, ease: "power1.inOut", onStart: function() {
                 playCuoAudio('pour');
             }})
             // 2. Liquid stream starts flowing from bottle mouth into beaker
@@ -9025,7 +9031,7 @@
             // 5. Bottle tilts back upright (0°)
             .to(btl, { rotation: 0, duration: 0.4, ease: "power1.out" })
             // 6. Bottle returns to rest mat on bench
-            .to(btl, { x: 75, y: 275, duration: 0.55, ease: "power2.out", onComplete: function() {
+            .to(btl, { x: 70, y: 275, duration: 0.55, ease: "power2.out", onComplete: function() {
                 if (st) st.innerHTML = '<strong>चरण 2 संपन्न:</strong> बीकर में 120 mL तनु HCl अम्ल मिल चुका है। अब काला चूर्ण अम्ल में उपस्थित है। चरण 3 दबाकर काँच की छड़ से हिलाएं!';
                 if (tblTitle) tblTitle.textContent = 'बीकर: काला CuO चूर्ण + तनु HCl अम्ल का मिश्रण';
                 if (tblSub) tblSub.textContent = '▶ अवस्था: 120 mL तनु HCl अम्ल मिल चुका है। अब विलोडक छड़ से हिलाने पर क्रिया तीव्र होगी!';
@@ -9045,7 +9051,7 @@
         // Ensure bottle is securely back at rest mat if step 3 clicked early
         if (btl && window.gsap) {
           gsap.killTweensOf(btl);
-          gsap.to(btl, { x: 75, y: 275, rotation: 0, duration: 0.4 });
+          gsap.to(btl, { x: 70, y: 275, rotation: 0, duration: 0.4 });
         }
         if (stm) stm.style.opacity = '0';
 
@@ -9096,25 +9102,32 @@
             });
           }
 
-          // Progressive Color Morphing: Clear Water -> Light Aqua -> Deep Blue-Green (CuCl2)
-          var colorTL = gsap.timeline({ delay: 0.3 });
-          colorTL
-            .to([liq, men], { attr: { fill: "#5eead4" }, duration: 0.9 }) // light turquoise
-            .to([liq, men], { attr: { fill: "#0d9488" }, duration: 0.9 }) // emerald cyan
-            .to([liq, men], { attr: { fill: "#0891b2" }, duration: 0.9, onComplete: function() {
-                playCuoAudio('chime');
-                // Display floating ions with floating animation
-                if (ions) {
-                  gsap.to(ions, { opacity: 1, duration: 0.6 });
-                  // Gentle floating bounce for each ion
-                  ['#scuo_ion1', '#scuo_ion2', '#scuo_ion3', '#scuo_ion4', '#scuo_ion5', '#scuo_ion6'].forEach(function(sel, idx) {
-                    gsap.to(sel, { y: "+=9", duration: 1.1 + idx * 0.18, repeat: -1, yoyo: true, ease: "sine.inOut" });
-                  });
-                }
-                if (tblTitle) tblTitle.textContent = 'बीकर: कॉपर(II) क्लोराइड [CuCl₂] नीला-हरा विलयन (अभिक्रिया पूर्ण)';
-                if (tblSub) tblSub.textContent = '▶ परिणाम: काला CuO चूर्ण पूरी तरह विलीन हो गया! विलयन का रंग खूबसूरत नीला-हरा हो गया।';
-                if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> काला CuO चूर्ण पूरी तरह घुलकर विलीन हो गया और <strong>खूबसूरत नीले-हरे (Blue-Green) रंग का कॉपर क्लोराइड [CuCl₂]</strong> विलयन बन गया!<br><span style="color:#000000; font-size:18.5px; font-weight:900;">CuO(s) [काला ठोस] + 2HCl(aq) [तनु अम्ल] ➔ CuCl₂(aq) [नीला-हरा विलयन] + H₂O(l)</span>';
-            }});
+          // Progressive Color Morphing: Clear Water -> Light Turquoise -> Deep Blue-Green (CuCl2)
+          scuoTimers.push(setTimeout(function() {
+            if (liq) liq.setAttribute('fill', '#5eead4');
+            if (men) men.setAttribute('fill', '#2dd4bf');
+          }, 400));
+
+          scuoTimers.push(setTimeout(function() {
+            if (liq) liq.setAttribute('fill', '#0d9488');
+            if (men) men.setAttribute('fill', '#0f766e');
+          }, 1200));
+
+          scuoTimers.push(setTimeout(function() {
+            if (liq) liq.setAttribute('fill', '#0891b2');
+            if (men) men.setAttribute('fill', '#0e7490');
+            playCuoAudio('chime');
+            // Display floating ions with floating animation
+            if (ions && window.gsap) {
+              gsap.to(ions, { opacity: 1, duration: 0.5 });
+              ['#scuo_ion1', '#scuo_ion2', '#scuo_ion3', '#scuo_ion4', '#scuo_ion5', '#scuo_ion6'].forEach(function(sel, idx) {
+                gsap.to(sel, { y: "+=9", duration: 1.1 + idx * 0.18, repeat: -1, yoyo: true, ease: "sine.inOut" });
+              });
+            }
+            if (tblTitle) tblTitle.textContent = 'बीकर: कॉपर(II) क्लोराइड [CuCl₂] नीला-हरा विलयन (अभिक्रिया पूर्ण)';
+            if (tblSub) tblSub.textContent = '▶ परिणाम: काला CuO चूर्ण पूरी तरह विलीन हो गया! विलयन का रंग खूबसूरत नीला-हरा हो गया।';
+            if (st) st.innerHTML = '<strong>चरण 3 संपन्न:</strong> काला CuO चूर्ण पूरी तरह घुलकर विलीन हो गया और <strong>खूबसूरत नीले-हरे (Blue-Green) रंग का कॉपर क्लोराइड [CuCl₂]</strong> विलयन बन गया!<br><span style="color:#000000; font-size:18.5px; font-weight:900;">CuO(s) [काला ठोस] + 2HCl(aq) [तनु अम्ल] ➔ CuCl₂(aq) [नीला-हरा विलयन] + H₂O(l)</span>';
+          }, 2000));
 
         } else {
           // Fallback
