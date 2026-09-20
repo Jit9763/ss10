@@ -1421,6 +1421,29 @@
       animation: s7O2Rise 2.1s infinite linear !important;
     }
 
+  
+    /* Fixed Simulator Status Typography across all elements */
+    [id$="_status"], .sim-status-banner {
+      font-size: 19px !important;
+      line-height: 1.6 !important;
+    }
+    [id$="_status"] *, .sim-status-banner * {
+      font-size: 19px !important;
+      line-height: 1.6 !important;
+    }
+    .sim-card b, .sim-card strong,
+    [id$="_status"] b, [id$="_status"] strong,
+    .sim-status-banner b, .sim-status-banner strong {
+      font-size: 19px !important;
+      font-weight: 900 !important;
+      color: #0f172a !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: inline !important;
+    }
+
   </style>
   <!-- PROFESSIONAL SIMULATOR LIBRARIES: GSAP (SMOOTH ANIMATIONS), MATTER.JS (2D PHYSICS & LIQUIDS), THREE.JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
