@@ -1859,7 +1859,7 @@
           </g>
 
           <!-- DROPPERS ANIMATION GROUP -->
-          <g id="sind_dropper_group" transform="translate(340, 50)" opacity="0" style="transition: all 0.4s ease;">
+          <g id="sind_dropper_group" style="display: none !important; opacity: 0; transition: all 0.4s ease;" transform="translate(425, 90)">
             <rect x="12" y="0" width="16" height="55" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
             <polygon points="12,55 28,55 20,75" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
             <path d="M10,0 Q20,-18 30,0 Z" fill="#ef4444"/>
@@ -6719,7 +6719,7 @@
 
       if (type === 'blue') {
         // 1. BLUE LITMUS PAPER TEST (PAPER STRIPS DIPPED, NO DROPPER)
-        if (dropGrp) { dropGrp.style.display = 'none'; dropGrp.style.opacity = '0'; }
+        if (dropGrp) { dropGrp.style.setProperty('display', 'none', 'important'); dropGrp.style.opacity = '0'; dropGrp.style.opacity = '0'; }
 
         // Tube 1 (HCl - Acid): Top dry part stays BLUE (#2563eb), Dipped bottom turns RED (#dc2626)!
         var s1 = document.getElementById('sind_strip1'); if (s1) s1.style.opacity = '1';
@@ -6754,7 +6754,7 @@
 
       } else if (type === 'red') {
         // 2. RED LITMUS PAPER TEST (PAPER STRIPS DIPPED, NO DROPPER)
-        if (dropGrp) { dropGrp.style.display = 'none'; dropGrp.style.opacity = '0'; }
+        if (dropGrp) { dropGrp.style.setProperty('display', 'none', 'important'); dropGrp.style.opacity = '0'; dropGrp.style.opacity = '0'; }
 
         // Tube 1 & 2 (Acids): Entire strip stays RED (Acid has NO effect on red litmus!)
         var s1 = document.getElementById('sind_strip1'); if (s1) s1.style.opacity = '1';
