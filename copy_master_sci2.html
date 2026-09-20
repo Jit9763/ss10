@@ -2990,13 +2990,13 @@
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-flask" style="color: #16a34a;"></i>
-          <span>क्रियाकलाप 2.5: धातु कार्बोनेट पर अम्ल की क्रिया एवं चूने के पानी का दूधिया होना — 16:9 लैब सिमुलेटर</span>
+          <span>क्रियाकलाप 2.5: धातु कार्बोनेट पर अम्ल की क्रिया एवं चूने के पानी का दूधिया होना — 16:9 वर्चुअल केमिस्ट्री लैब (OLabs मॉडल)</span>
         </div>
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
 
       <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
-        <strong>एनसीईआरटी क्रियाकलाप 2.5:</strong> क्वथन नली A में सोडियम कार्बोनेट (Na₂CO₃) लेकर थिसिल कीप से तनु HCl मिलाते हैं। उत्पन्न गैस को निकास नली द्वारा परखनली B में रखे स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित करते हैं। देखें कि चूने का पानी दूधिया क्यों होता है और अधिक CO₂ डालने पर क्या होता है:
+        <strong>एनसीईआरटी क्रियाकलाप 2.5:</strong> गोल पेंदे के फ्लास्क में ठोस सोडियम कार्बोनेट (Na₂CO₃) लेकर थिसिल कीप से तनु HCl मिलाते हैं। उत्पन्न कार्बन डाइऑक्साइड (CO₂) गैस को निकास नली द्वारा बीकर में रखे स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित करते हैं। देखें कि चूने का पानी दूधिया क्यों होता है और अत्यधिक CO₂ प्रवाहित करने पर दूधियापन क्यों गायब हो जाता है:
       </p>
 
       <div class="sim-controls-grid">
@@ -3022,217 +3022,396 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="scarb_pbar"></div></div>
 
-      <div class="sim-stage" id="sim2_carb_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
-        <svg id="sim2_carb_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
-        <defs>
-          <!-- 3D Glass Specular Reflection Gradient -->
-          <linearGradient id="ch2_glass3D" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
-            <stop offset="12%" stop-color="#e0f2fe" stop-opacity="0.25"/>
-            <stop offset="78%" stop-color="#bae6fd" stop-opacity="0.25"/>
-            <stop offset="90%" stop-color="#38bdf8" stop-opacity="0.45"/>
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
-          </linearGradient>
-
-          <!-- 3D Iridescent Gas Bubble Radial Gradient -->
-          <radialGradient id="ch2_bubbleGrad" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-            <stop offset="45%" stop-color="#e0f2fe" stop-opacity="0.8"/>
-            <stop offset="85%" stop-color="#38bdf8" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
-          </radialGradient>
-
-          <!-- Pouring Liquid Stream Gradient -->
-          <linearGradient id="ch2_streamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9"/>
-            <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.95"/>
-            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95"/>
-          </linearGradient>
-
-          <!-- Acid Stream Gradient (HCl Red/Pink) -->
-          <linearGradient id="ch2_acidStreamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#fca5a5" stop-opacity="0.9"/>
-            <stop offset="50%" stop-color="#ef4444" stop-opacity="0.95"/>
-            <stop offset="100%" stop-color="#dc2626" stop-opacity="0.95"/>
-          </linearGradient>
-
-          <!-- Realistic Bunsen Flame 3D Filter -->
-          <filter id="ch2_flameGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-          </filter>
-        </defs>
-
+      <div class="sim-stage" id="sim2_carb_stage" style="aspect-ratio: 16 / 9 !important; min-height: 480px !important; background: #3b4720 !important; border: 4px solid #166534 !important; border-radius: 16px; position:relative; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+<svg id="sim2_carb_svg" viewBox="0 0 1100 520" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <linearGradient id="scarb_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            <!-- Room Wall Gradient (Olive Green OLabs / Virtua-Chem-Sim authentic) -->
+            <linearGradient id="olabs_wall" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#556434" />
+              <stop offset="70%" stop-color="#465427" />
+              <stop offset="100%" stop-color="#3b4720" />
             </linearGradient>
-            <linearGradient id="scarb_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
-              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
-              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+
+            <!-- Tabletop Perspective Gradient (Slate/Charcoal) -->
+            <linearGradient id="olabs_table" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2d3b46" />
+              <stop offset="25%" stop-color="#222e37" />
+              <stop offset="100%" stop-color="#161f26" />
             </linearGradient>
-            <filter id="scarb_blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+            <linearGradient id="olabs_table_edge" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0f171d" />
+              <stop offset="100%" stop-color="#080c10" />
+            </linearGradient>
+
+            <!-- Chrome Metal Rod Gradient -->
+            <linearGradient id="olabs_chrome" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#94a3b8" />
+              <stop offset="30%" stop-color="#f8fafc" />
+              <stop offset="60%" stop-color="#cbd5e1" />
+              <stop offset="85%" stop-color="#64748b" />
+              <stop offset="100%" stop-color="#334155" />
+            </linearGradient>
+
+            <!-- Cast Iron Stand Base Gradient -->
+            <linearGradient id="olabs_iron" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#334155" />
+              <stop offset="50%" stop-color="#1e293b" />
+              <stop offset="100%" stop-color="#0f172a" />
+            </linearGradient>
+
+            <!-- Wooden Pedestal Block Gradient -->
+            <linearGradient id="olabs_wood_top" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4a301a" />
+              <stop offset="50%" stop-color="#362010" />
+              <stop offset="100%" stop-color="#241408" />
+            </linearGradient>
+            <linearGradient id="olabs_wood_front" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2a180b" />
+              <stop offset="100%" stop-color="#120803" />
+            </linearGradient>
+
+            <!-- Parchment Paper Banner Gradient -->
+            <linearGradient id="olabs_parchment" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fffff7" />
+              <stop offset="40%" stop-color="#fdfde3" />
+              <stop offset="80%" stop-color="#f8f5c8" />
+              <stop offset="100%" stop-color="#eee9ae" />
+            </linearGradient>
+
+            <!-- Glass Reflection & Liquid Gradients -->
+            <linearGradient id="olabs_glass" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.65" />
+              <stop offset="20%" stop-color="#ffffff" stop-opacity="0.1" />
+              <stop offset="80%" stop-color="#ffffff" stop-opacity="0.05" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+            </linearGradient>
+
+            <linearGradient id="olabs_flask_liquid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f0f9ff" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.85" />
+            </linearGradient>
+
+            <linearGradient id="olabs_milky_grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.97" />
+              <stop offset="50%" stop-color="#f8fafc" stop-opacity="0.95" />
+              <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.92" />
+            </linearGradient>
+
+            <!-- Drop Shadows & Filters -->
+            <filter id="olabs_shadow" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.45" />
+            </filter>
+            <filter id="olabs_banner_shadow" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.35" />
+            </filter>
+
+            <!-- Clip Paths -->
+            <clipPath id="flask_liquid_clip">
+              <circle cx="280" cy="355" r="66" />
+            </clipPath>
+            <clipPath id="lime_beaker_clip">
+              <rect x="496" y="270" width="152" height="130" rx="6" />
+            </clipPath>
+            <clipPath id="sample1_beaker_clip">
+              <rect x="766" y="260" width="176" height="155" rx="6" />
+            </clipPath>
           </defs>
 
-          <!-- 3D WORKBENCH -->
-          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scarb_benchTop)"/>
-          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+          <!-- 1. BACKGROUND LAB ROOM WALL (Olive Green) -->
+          <rect x="0" y="0" width="1100" height="375" fill="url(#olabs_wall)" />
 
-          <!-- STAND 1 (LEFT for Boiling Tube A) -->
-          <g transform="translate(60, 110)">
-            <rect x="20" y="320" width="160" height="24" rx="4" fill="#334155"/>
-            <rect x="95" y="20" width="10" height="300" fill="#64748b"/>
-            <rect x="90" y="100" width="80" height="8" fill="#475569"/>
-            <path d="M165,85 L180,85 L180,125 L165,125" fill="none" stroke="#334155" stroke-width="4"/>
+          <!-- Certificate Frame on Top Left Wall -->
+          <g transform="translate(0, -5)" filter="url(#olabs_shadow)">
+            <!-- Outer Golden-Wood Frame -->
+            <rect x="-10" y="0" width="140" height="120" rx="3" fill="#a17524" stroke="#52390a" stroke-width="4" />
+            <rect x="-6" y="4" width="132" height="112" rx="2" fill="#cca043" stroke="#875d15" stroke-width="2" />
+            <!-- Certificate Paper -->
+            <rect x="4" y="14" width="112" height="92" fill="#fdfbf5" stroke="#d5c8a4" stroke-width="1" />
+            <!-- Script Marks -->
+            <path d="M 12,32 Q 25,28 40,32 T 70,30 T 100,32" stroke="#6b7280" stroke-width="2.5" fill="none" stroke-linecap="round" />
+            <path d="M 12,48 Q 30,45 50,48 T 90,46" stroke="#9ca3af" stroke-width="2" fill="none" />
+            <path d="M 12,62 Q 25,60 45,63 T 80,61" stroke="#9ca3af" stroke-width="2" fill="none" />
+            <!-- Gold Seal -->
+            <circle cx="85" cy="82" r="10" fill="#eab308" stroke="#ca8a04" stroke-width="1.5" />
+            <polygon points="85,88 81,100 85,96 89,100" fill="#ca8a04" />
           </g>
 
-          <!-- BOILING TUBE A (Na2CO3 + HCl) -->
-          <g transform="translate(230, 150)">
-            <!-- Liquid in Tube A -->
-            <rect id="scarb_liq_a" x="6" y="110" width="68" height="110" rx="8" fill="#e0f2fe" opacity="0.8"/>
-            <!-- Solid Na2CO3 crystals at bottom -->
-            <ellipse cx="40" cy="210" rx="30" ry="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-            <text x="40" y="208" font-size="11" font-weight="900" fill="#475569" text-anchor="middle">Na₂CO₃ ठोस</text>
+          <!-- 2. FOREGROUND TABLETOP (Perspective Lab Bench) -->
+          <polygon points="0,375 1100,375 1100,520 0,520" fill="url(#olabs_table)" />
+          <!-- Front Lip Highlight Line -->
+          <line x1="0" y1="375" x2="1100" y2="375" stroke="#475569" stroke-width="2.5" opacity="0.8" />
+          <polygon points="0,500 1100,500 1100,520 0,520" fill="url(#olabs_table_edge)" />
 
-            <!-- Effervescence Bubbles in Tube A -->
-            <g id="scarb_bubbles_a" opacity="0">
-              <circle cx="25" cy="190" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <circle cx="50" cy="180" r="4.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <circle cx="35" cy="160" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <circle cx="55" cy="145" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <circle cx="30" cy="130" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <circle cx="45" cy="120" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
-              <text x="40" y="150" font-size="12" font-weight="900" fill="#0284c7" text-anchor="middle">CO₂ बुदबुदाहट</text>
-            </g>
+          <!-- ================= APPARATUS 1: RETORT STAND ================= -->
+          <g id="olabs_retort_stand">
+            <!-- Stand Base Shadow -->
+            <ellipse cx="190" cy="412" rx="160" ry="12" fill="#000000" opacity="0.4" filter="url(#olabs_shadow)" />
+            <!-- Cast Iron Base (3D Trapezoid) -->
+            <polygon points="45,416 335,416 355,400 65,400" fill="url(#olabs_iron)" stroke="#090d13" stroke-width="2.5" />
+            <polygon points="65,400 355,400 345,392 75,392" fill="#475569" stroke="#1e293b" stroke-width="1.5" />
+            <polygon points="45,416 65,400 75,392 45,408" fill="#1e293b" />
 
-            <!-- Glass Body -->
-            <rect x="5" y="10" width="70" height="210" rx="14" fill="url(#scarb_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
-            <!-- Cork with two holes -->
-            <polygon points="5,10 75,10 70,-15 10,-15" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+            <!-- Vertical Chrome Rod -->
+            <rect x="134" y="105" width="14" height="290" rx="4" fill="url(#olabs_chrome)" stroke="#334155" stroke-width="1.2" />
+            <ellipse cx="141" cy="105" rx="7" ry="3.5" fill="#f8fafc" stroke="#64748b" stroke-width="1" />
 
-            <!-- THISTLE FUNNEL (थिसिल कीप) Dipping into bottom -->
-            <path d="M22,-15 L22,190" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-            <!-- Thistle Top cup -->
-            <polygon points="12,-45 32,-45 25,-15 19,-15" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-            <!-- Acid drops falling down funnel -->
-            <g id="scarb_acid_drops" opacity="0">
-              <circle cx="22" cy="-25" r="2.5" fill="#38bdf8"/>
-              <circle cx="22" cy="50" r="2.5" fill="#38bdf8"/>
-              <circle cx="22" cy="130" r="2.5" fill="#38bdf8"/>
-            </g>
+            <!-- Bosshead Clamp Body -->
+            <g transform="translate(131, 260)">
+              <!-- Clamp Collar around Rod -->
+              <rect x="-3" y="0" width="20" height="22" rx="3" fill="#1e293b" stroke="#0f172a" stroke-width="1.5" />
+              <!-- Brass Adjusting Screw Left -->
+              <line x1="-3" y1="11" x2="-24" y2="15" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" />
+              <ellipse cx="-26" cy="16" rx="8" ry="4.5" fill="#eab308" stroke="#a16207" stroke-width="1.5" transform="rotate(-15, -26, 16)" />
 
-            <!-- Label -->
-            <rect x="-10" y="235" width="100" height="34" rx="6" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text x="40" y="252" font-size="14" font-weight="900" fill="#1e40af" text-anchor="middle">परखनली (A)</text>
-            <text x="40" y="265" font-size="11" font-weight="800" fill="#334155" text-anchor="middle">Na₂CO₃ + HCl</text>
-          </g>
+              <!-- Clamp Extension Arm to Right -->
+              <rect x="17" y="6" width="95" height="9" rx="2" fill="url(#olabs_chrome)" stroke="#334155" stroke-width="1" />
+              <!-- Brass Thumbscrew on Extension -->
+              <circle cx="75" cy="4" r="5" fill="#0284c7" stroke="#0369a1" stroke-width="1.5" />
 
-          <!-- BENT DELIVERY TUBE (कांच की निकास नली) -->
-          <g id="scarb_delivery_tube">
-            <path d="M280,135 L280,75 Q280,60 295,60 L500,60 Q515,60 515,75 L515,280" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
-            <path d="M280,135 L280,75 Q280,60 295,60 L500,60 Q515,60 515,75 L515,280" fill="none" stroke="#e0f2fe" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- Gas Flow pulse dots -->
-            <g id="scarb_gas_flow" opacity="0">
-              <circle cx="280" cy="100" r="3" fill="#ffffff"/>
-              <circle cx="350" cy="60" r="3" fill="#ffffff"/>
-              <circle cx="430" cy="60" r="3" fill="#ffffff"/>
-              <circle cx="515" cy="150" r="3" fill="#ffffff"/>
-              <circle cx="515" cy="220" r="3" fill="#ffffff"/>
+              <!-- Clamp Jaws with Red Rubber Padding holding Flask Neck -->
+              <path d="M 112,0 L 126,5 L 126,17 L 112,22 Z" fill="#334155" stroke="#0f172a" stroke-width="1.5" />
+              <rect x="124" y="2" width="6" height="18" rx="2" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1" />
+              <rect x="186" y="2" width="6" height="18" rx="2" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1" />
+              <path d="M 186,0 L 196,5 L 196,17 L 186,22 Z" fill="#334155" stroke="#0f172a" stroke-width="1.5" />
             </g>
           </g>
 
-          <!-- STAND 2 (RIGHT for Test Tube B) -->
-          <g transform="translate(420, 160)">
-            <rect x="20" y="270" width="140" height="20" rx="4" fill="#334155"/>
-            <rect x="85" y="10" width="8" height="260" fill="#64748b"/>
-            <rect x="80" y="90" width="65" height="7" fill="#475569"/>
-            <path d="M140,78 L152,78 L152,112 L140,112" fill="none" stroke="#334155" stroke-width="3"/>
+          <!-- ================= APPARATUS 2: ROUND BOTTOM FLASK & LIQUID ================= -->
+          <g id="olabs_flask_group">
+            <!-- Flask Cast Shadow on Table -->
+            <ellipse cx="280" cy="418" rx="60" ry="10" fill="#000000" opacity="0.35" filter="url(#olabs_shadow)" />
+
+            <!-- Liquid in Flask (Clipped to spherical body) -->
+            <g clip-path="url(#flask_liquid_clip)">
+              <!-- Liquid Body -->
+              <rect x="200" y="340" width="160" height="90" fill="url(#olabs_flask_liquid)" />
+              <!-- Liquid Meniscus Surface -->
+              <ellipse cx="280" cy="340" rx="64" ry="9" fill="#bae6fd" stroke="#38bdf8" stroke-width="1.5" />
+
+              <!-- Solid Na2CO3 Powder / Granules at Bottom -->
+              <g id="olabs_solid_na2co3">
+                <ellipse cx="280" cy="406" rx="42" ry="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+                <circle cx="260" cy="404" r="3.5" fill="#f8fafc" stroke="#94a3b8" stroke-width="0.8" />
+                <circle cx="272" cy="407" r="3.2" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+                <circle cx="285" cy="403" r="3.8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="0.8" />
+                <circle cx="298" cy="406" r="3.0" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8" />
+                <circle cx="267" cy="401" r="2.8" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+                <circle cx="280" cy="400" r="3.2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+                <circle cx="292" cy="402" r="2.9" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+              </g>
+
+              <!-- Effervescence Bubbles (Rising when HCl added) -->
+              <g id="olabs_flask_bubbles" opacity="0">
+                <circle id="ofb1" cx="265" cy="390" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                <circle id="ofb2" cx="280" cy="380" r="3.8" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                <circle id="ofb3" cx="295" cy="375" r="4.8" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                <circle id="ofb4" cx="270" cy="360" r="4.2" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                <circle id="ofb5" cx="288" cy="352" r="5.0" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+              </g>
+            </g>
+
+            <!-- Transparent Spherical Glass Body -->
+            <circle cx="280" cy="355" r="66" fill="url(#olabs_glass)" stroke="#94a3b8" stroke-width="2.5" />
+            <!-- Flask Cylindrical Neck -->
+            <path d="M 258,252 L 258,300 M 302,252 L 302,300" stroke="#94a3b8" stroke-width="2.5" fill="none" />
+            <!-- Flask Mouth Flared Glass Rim -->
+            <ellipse cx="280" cy="252" rx="26" ry="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5" />
+
+            <!-- Rubber Stopper (Two Holes) -->
+            <polygon points="260,254 300,254 297,272 263,272" fill="#cbd5e1" stroke="#64748b" stroke-width="1.8" />
+            <!-- Left Hole for Thistle Funnel, Right Hole for Delivery Tube -->
+            <ellipse cx="268" cy="254" rx="4" ry="2" fill="#475569" />
+            <ellipse cx="292" cy="254" rx="4" ry="2" fill="#475569" />
+
+            <!-- 3D Glass Surface Reflections -->
+            <!-- Curved Left Edge Highlight -->
+            <path d="M 230,330 A 58 58 0 0 1 270,298" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.8" />
+            <ellipse cx="236" cy="342" rx="5" ry="12" fill="#ffffff" opacity="0.75" transform="rotate(-25, 236, 342)" />
+            <!-- Right Edge Subtle Reflection -->
+            <path d="M 330,335 A 58 58 0 0 0 300,305" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.5" />
           </g>
 
-          <!-- TEST TUBE B (Lime Water) -->
-          <g transform="translate(560, 200)">
-            <!-- Liquid in Tube B (Lime water) -->
-            <rect id="scarb_lime_liq" x="6" y="50" width="58" height="130" rx="8" fill="#e0f2fe" opacity="0.6" style="transition: all 0.6s ease;"/>
-            <!-- Milky cloudiness overlay -->
-            <rect id="scarb_milky_cloud" x="6" y="50" width="58" height="130" rx="8" fill="#ffffff" opacity="0" filter="url(#scarb_blur)" style="transition: all 0.7s ease;"/>
-            <!-- Bubbles in Lime water -->
-            <g id="scarb_bubbles_b" opacity="0">
-              <circle cx="25" cy="140" r="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
-              <circle cx="45" cy="120" r="3.5" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
-              <circle cx="28" cy="95" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
-              <circle cx="42" cy="70" r="3.5" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
-            </g>
+          <!-- ================= APPARATUS 3: THISTLE FUNNEL ================= -->
+          <g id="olabs_thistle_funnel">
+            <!-- Long Glass Tube (Dips near bottom of flask) -->
+            <rect x="265" y="152" width="6" height="246" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.85" />
+            <line x1="267" y1="155" x2="267" y2="395" stroke="#ffffff" stroke-width="2" opacity="0.9" />
 
-            <!-- Glass Body -->
-            <rect x="5" y="10" width="60" height="175" rx="12" fill="url(#scarb_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
-            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Funnel Cup & Bulb Top (Double-flared thistle glass) -->
+            <!-- Spherical Bulb -->
+            <ellipse cx="268" cy="142" rx="16" ry="14" fill="url(#olabs_glass)" stroke="#94a3b8" stroke-width="2" />
+            <circle cx="263" cy="138" r="4" fill="#ffffff" opacity="0.85" />
+            <!-- Flared Top Funnel Cup -->
+            <path d="M 248,118 Q 248,135 260,140 L 276,140 Q 288,135 288,118 Z" fill="url(#olabs_glass)" stroke="#94a3b8" stroke-width="2" />
+            <ellipse cx="268" cy="118" rx="20" ry="5.5" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" />
+            <!-- Glass Specular Highlight on Funnel -->
+            <path d="M 252,122 Q 254,132 262,136" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85" />
 
-            <!-- Status Tag above Tube B -->
-            <rect id="scarb_b_tag" x="-20" y="-35" width="110" height="28" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="scarb_b_text" x="35" y="-17" font-size="12" font-weight="900" fill="#1e40af" text-anchor="middle">स्वच्छ चूने का पानी</text>
-
-            <!-- Label -->
-            <rect x="-15" y="195" width="100" height="34" rx="6" fill="#ffffff" stroke="#facc15" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text x="35" y="212" font-size="14" font-weight="900" fill="#92400e" text-anchor="middle">परखनली (B)</text>
-            <text x="35" y="225" font-size="11" font-weight="800" fill="#334155" text-anchor="middle">Ca(OH)₂ विलयन</text>
+            <!-- Acid Pouring Stream inside Funnel (Animated on Step 2) -->
+            <rect id="olabs_acid_stream" x="266.5" y="120" width="3" height="275" fill="#38bdf8" opacity="0" />
           </g>
 
-          <!-- TOP BANNER LAB TITLE -->
-          <g transform="translate(60, 25)">
-            <rect x="0" y="0" width="600" height="42" rx="8" fill="#ffffff" opacity="0.9" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="scarb_lab_title" x="300" y="27" font-size="15.5" font-weight="900" fill="#166534" text-anchor="middle">🔬 NCERT 2.5: CO₂ गैस व चूने के पानी का परीक्षण</text>
+          <!-- ================= APPARATUS 4: DELIVERY TUBE ================= -->
+          <g id="olabs_delivery_tube">
+            <!-- Glass Double-Bent Tube Path:
+                 Starts at (292, 268) inside flask headspace
+                 Up to (292, 160)
+                 Curve right to (310, 150)
+                 Horizontal to (560, 150)
+                 Curve down to (572, 165)
+                 Down into lime water beaker to (572, 385)
+            -->
+            <!-- Outer Glass Wall Outline -->
+            <path d="M 292,268 L 292,165 Q 292,150 307,150 L 560,150 Q 575,150 575,165 L 575,385"
+                  fill="none" stroke="#64748b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+            <!-- Clear Glass Core -->
+            <path d="M 292,268 L 292,165 Q 292,150 307,150 L 560,150 Q 575,150 575,165 L 575,385"
+                  fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            <!-- Specular Light Sheen along tube -->
+            <path d="M 290.5,260 L 290.5,165 Q 290.5,152 305,152 L 560,152 Q 573,152 573,165 L 573,380"
+                  fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+
+            <!-- CO2 Gas Traveling Pulse inside Delivery Tube (Animated) -->
+            <path id="olabs_gas_pulse" d="M 292,268 L 292,165 Q 292,150 307,150 L 560,150 Q 575,150 575,165 L 575,385"
+                  fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="14 18" stroke-linecap="round" opacity="0" />
           </g>
 
-          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
-          <g transform="translate(725, 20)">
-            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
-
-            <!-- Header -->
-            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
-            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 लाइव प्रेक्षण एवं रासायनिक समीकरण</text>
-
-            <!-- Card 1: Reaction in Tube A -->
-            <g transform="translate(16, 60)">
-              <rect id="scarb_card1_bg" x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">1. परखनली (A) में रासायनिक अभिक्रिया:</text>
-              <text x="14" y="48" font-size="15" font-weight="900" fill="#0369a1">Na₂CO₃ + 2HCl ➔ 2NaCl + H₂O + CO₂↑</text>
-              <text id="scarb_c1_sub" x="14" y="70" font-size="12.5" font-weight="800" fill="#64748b">सोडियम कार्बोनेट पर अम्ल डालने पर तीव्र बुदबुदाहट के साथ CO₂ बनती है।</text>
+          <!-- ================= APPARATUS 5: LIME WATER BEAKER ON WOODEN BLOCK ================= -->
+          <g id="olabs_lime_water_group">
+            <!-- 3D Elevated Wooden Block / Pedestal -->
+            <g id="olabs_wooden_block" filter="url(#olabs_shadow)">
+              <!-- Block Shadow on Table -->
+              <polygon points="425,446 690,446 715,426 450,426" fill="#000000" opacity="0.4" />
+              <!-- Top Beveled Face -->
+              <polygon points="450,410 670,410 690,424 430,424" fill="url(#olabs_wood_top)" stroke="#1a0e06" stroke-width="2" />
+              <!-- Front Face -->
+              <polygon points="430,424 690,424 680,446 440,446" fill="url(#olabs_wood_front)" stroke="#120803" stroke-width="2" />
+              <!-- Left Beveled Corner -->
+              <polygon points="450,410 430,424 440,446 455,442" fill="#1e1008" />
+              <!-- Right Beveled Corner -->
+              <polygon points="670,410 690,424 680,446 665,442" fill="#120803" />
             </g>
 
-            <!-- Card 2: Lime Water Turning Milky -->
-            <g transform="translate(16, 155)">
-              <rect id="scarb_card2_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="24" font-size="14" font-weight="900" fill="#854d0e">2. चूने का पानी दूधिया होना (Milky Appearance):</text>
-              <text x="14" y="48" font-size="15" font-weight="900" fill="#b45309">Ca(OH)₂ + CO₂ ➔ CaCO₃↓ (श्वेत अवक्षेप) + H₂O</text>
-              <text id="scarb_c2_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">अघुलनशील कैल्शियम कार्बोनेट बनने से चूने का पानी दूधिया हो जाता है।</text>
+            <!-- Glass Beaker on Wooden Block -->
+            <g transform="translate(0, -6)">
+              <!-- Beaker Bottom Contact Shadow -->
+              <ellipse cx="572" cy="416" rx="65" ry="8" fill="#000000" opacity="0.3" filter="url(#olabs_shadow)" />
+
+              <!-- Liquid inside Beaker (Clipped to beaker shape) -->
+              <g clip-path="url(#lime_beaker_clip)">
+                <!-- Clear Lime Water Initial State -->
+                <rect id="olabs_lime_clear" x="496" y="335" width="152" height="85" fill="#f0f9ff" opacity="0.75" />
+                <ellipse cx="572" cy="335" rx="74" ry="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.2" />
+
+                <!-- Milky Lime Water (Turns opaque white CaCO3 on CO2 bubbling) -->
+                <rect id="olabs_lime_milky" x="496" y="335" width="152" height="85" fill="url(#olabs_milky_grad)" opacity="0" />
+
+                <!-- Bubbles from Delivery Tube bubbling through Lime Water -->
+                <g id="olabs_lime_bubbles" opacity="0">
+                  <circle id="olb1" cx="575" cy="375" r="4.0" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                  <circle id="olb2" cx="566" cy="360" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                  <circle id="olb3" cx="584" cy="346" r="4.2" fill="#ffffff" stroke="#0284c7" stroke-width="1.2" />
+                </g>
+              </g>
+
+              <!-- Beaker Glass Walls -->
+              <path d="M 496,265 L 496,406 Q 496,416 510,416 L 634,416 Q 648,416 648,406 L 648,265"
+                    fill="url(#olabs_glass)" stroke="#94a3b8" stroke-width="2.8" />
+              <!-- Flared Beaker Rim with Pouring Spout -->
+              <ellipse cx="572" cy="265" rx="76" ry="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.8" />
+              <!-- Left Pour Spout Lip -->
+              <path d="M 496,265 Q 482,260 488,272" fill="none" stroke="#94a3b8" stroke-width="2.8" />
+
+              <!-- Specular White Reflection Streaks on Beaker -->
+              <path d="M 505,280 L 505,395" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
+              <path d="M 515,285 L 515,370" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+              <path d="M 640,280 L 640,395" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.4" />
+            </g>
+          </g>
+
+          <!-- ================= APPARATUS 6: SAMPLE 1 BEAKER (ON RIGHT) ================= -->
+          <g id="olabs_sample1_group">
+            <!-- Beaker Shadow on Table -->
+            <ellipse cx="854" cy="425" rx="80" ry="11" fill="#000000" opacity="0.35" filter="url(#olabs_shadow)" />
+
+            <!-- Liquid inside Sample 1 (HCl acid solution) -->
+            <g clip-path="url(#sample1_beaker_clip)">
+              <rect x="766" y="345" width="176" height="85" fill="#f0f9ff" opacity="0.65" />
+              <ellipse cx="854" cy="345" rx="86" ry="9" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.2" />
             </g>
 
-            <!-- Card 3: Excess CO2 Effect -->
-            <g transform="translate(16, 257)">
-              <rect id="scarb_card3_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">3. अत्यधिक CO₂ प्रवाहित करने पर (Excess CO₂):</text>
-              <text x="14" y="48" font-size="14.5" font-weight="900" fill="#2563eb">CaCO₃ + H₂O + CO₂ ➔ Ca(HCO₃)₂(aq) [विलेय]</text>
-              <text id="scarb_c3_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट बनने से दूधियापन गायब हो जाता है।</text>
-            </g>
+            <!-- Beaker Glass Walls -->
+            <path d="M 766,252 L 766,412 Q 766,424 780,424 L 928,424 Q 942,424 942,412 L 942,252"
+                  fill="url(#olabs_glass)" stroke="#94a3b8" stroke-width="3" />
+            <!-- Flared Rim with Spout -->
+            <ellipse cx="854" cy="252" rx="88" ry="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="3" />
+            <path d="M 766,252 Q 750,246 756,260" fill="none" stroke="#94a3b8" stroke-width="3" />
 
-            <!-- Summary Classification Box -->
-            <g transform="translate(16, 360)">
-              <rect x="0" y="0" width="423" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
-              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#166534" text-anchor="middle">✔ कार्बन डाइऑक्साइड (CO₂) गैस का मानक परीक्षण</text>
-              <text x="211" y="50" font-size="13" font-weight="800" fill="#92400e" text-anchor="middle">धातु कार्बोनेट / हाइड्रोजनकार्बोनेट + अम्ल ➔ लवण + जल + CO₂↑</text>
-              <text x="211" y="74" font-size="12.5" font-weight="800" fill="#1e40af" text-anchor="middle">चूने के पानी को दूधिया करना केवल CO₂ की विशिष्ट पहचान है।</text>
-              <text x="211" y="98" font-size="12" font-weight="800" fill="#e2e8f0" text-anchor="middle">संगमरमर, चूना-पत्थर, खड़िया (Chalk) = CaCO₃ के विविध रूप</text>
-            </g>
+            <!-- Glass Reflection Streaks -->
+            <path d="M 776,270 L 776,405" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.8" />
+            <path d="M 788,275 L 788,380" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.6" />
+            <path d="M 932,270 L 932,405" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" opacity="0.4" />
+          </g>
+
+          <!-- ================= 3 AUTHENTIC PARCHMENT LABELS (MATCHING USER IMAGE) ================= -->
+          <!-- Label 1: Solid Na2CO3 & Distilled Water (Under Flask) -->
+          <g transform="translate(160, 430)" filter="url(#olabs_banner_shadow)">
+            <!-- Parchment Banner with Wavy Scroll Ends -->
+            <path d="M 12,0 C 2,0 -4,12 4,24 C -4,36 2,48 12,48 L 228,48 C 238,48 244,36 236,24 C 244,12 238,0 228,0 Z"
+                  fill="url(#olabs_parchment)" stroke="#5c4033" stroke-width="2" />
+            <text x="120" y="21" font-family="'Outfit', -apple-system, sans-serif" font-size="18.5" font-weight="900" fill="#0f172a" text-anchor="middle">Solid Na₂CO₃</text>
+            <text x="120" y="41" font-family="'Outfit', -apple-system, sans-serif" font-size="16.5" font-weight="900" fill="#0f172a" text-anchor="middle">&amp; Distilled Water</text>
+          </g>
+
+          <!-- Label 2: Lime water (Under Beaker on Pedestal) -->
+          <g transform="translate(485, 438)" filter="url(#olabs_banner_shadow)">
+            <!-- Parchment Banner -->
+            <path d="M 12,0 C 2,0 -4,11 4,22 C -4,33 2,44 12,44 L 162,44 C 172,44 178,33 170,22 C 178,11 172,0 162,0 Z"
+                  fill="url(#olabs_parchment)" stroke="#5c4033" stroke-width="2" />
+            <text x="87" y="28" font-family="'Outfit', -apple-system, sans-serif" font-size="20" font-weight="900" fill="#0f172a" text-anchor="middle">Lime water</text>
+          </g>
+
+          <!-- Label 3: Sample 1 (Under Right Beaker) -->
+          <g transform="translate(775, 434)" filter="url(#olabs_banner_shadow)">
+            <!-- Parchment Banner -->
+            <path d="M 12,0 C 2,0 -4,11 4,22 C -4,33 2,44 12,44 L 148,44 C 158,44 164,33 156,22 C 164,11 158,0 148,0 Z"
+                  fill="url(#olabs_parchment)" stroke="#5c4033" stroke-width="2" />
+            <text x="80" y="28" font-family="'Outfit', -apple-system, sans-serif" font-size="20" font-weight="900" fill="#0f172a" text-anchor="middle">Sample 1</text>
           </g>
         </svg>
       </div>
 
-      <div id="scarb_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:19px; min-height:50px; display:flex; align-items:center;">
-        <strong>प्रारंभिक स्थिति:</strong> परखनली (A) में ठोस Na₂CO₃ व परखनली (B) में स्वच्छ चूने का पानी तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
+      <!-- High-Contrast Live Classroom Projector Observation Panel -->
+      <div id="scarb_status" style="margin-top:14px; padding:18px 22px; background:#ffffff; border-left:8px solid #16a34a; border-radius:12px; font-weight:800; color:#0f172a; font-size:18.5px; line-height:1.7; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+        <strong>प्रारंभिक स्थिति:</strong> गोल पेंदे के फ्लास्क में ठोस Na₂CO₃ तथा थिसिल कीप व्यवस्थित है। लकड़ी के 3D ब्लॉक पर स्वच्छ पारदर्शी चूने का पानी [Ca(OH)₂] तैयार है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।
+      </div>
+
+      <!-- Classroom Summary Cards Grid (High-Contrast White Background) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 14px;">
+        <div id="scarb_card1" style="background:#ffffff; border:2.5px solid #0284c7; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
+          <div style="font-size:15px; font-weight:900; color:#0369a1; margin-bottom:4px;">1. फ्लास्क में अभिक्रिया (CO₂ निर्माण):</div>
+          <div style="font-size:16px; font-weight:900; color:#15803d; margin-bottom:4px;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl + H₂O + CO₂↑</div>
+          <div style="font-size:14px; font-weight:700; color:#334155;">तनु अम्ल मिलते ही तीव्र बुदबुदाहट (Effervescence) से CO₂ गैस बनती है।</div>
+        </div>
+        <div id="scarb_card2" style="background:#ffffff; border:2.5px solid #d97706; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
+          <div style="font-size:15px; font-weight:900; color:#b45309; margin-bottom:4px;">2. चूने के पानी का दूधिया होना:</div>
+          <div style="font-size:16px; font-weight:900; color:#b45309; margin-bottom:4px;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃↓ + H₂O</div>
+          <div style="font-size:14px; font-weight:700; color:#451a03;">अघुलनशील श्वेत अवक्षेप CaCO₃ बनने से विलयन दूधिया (Milky) हो जाता है।</div>
+        </div>
+        <div id="scarb_card3" style="background:#ffffff; border:2.5px solid #2563eb; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
+          <div style="font-size:15px; font-weight:900; color:#1d4ed8; margin-bottom:4px;">3. अत्यधिक CO₂ (दूधियापन गायब):</div>
+          <div style="font-size:16px; font-weight:900; color:#1e40af; margin-bottom:4px;">CaCO₃ + H₂O + CO₂ ➔ Ca(HCO₃)₂(aq)</div>
+          <div style="font-size:14px; font-weight:700; color:#1e293b;">जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट बनने से घोल पुनः पारदर्शी हो जाता है!</div>
+        </div>
+        <div id="scarb_card4" style="background:#ffffff; border:2.5px solid #16a34a; border-radius:10px; padding:12px 14px; box-shadow:0 2px 5px rgba(0,0,0,0.04);">
+          <div style="font-size:15px; font-weight:900; color:#166534; margin-bottom:4px;">⭐ NCERT वैज्ञानिक निष्कर्ष:</div>
+          <div style="font-size:15px; font-weight:800; color:#0f172a; margin-bottom:4px;">धातु कार्बोनेट + अम्ल ➔ लवण + जल + CO₂↑</div>
+          <div style="font-size:14px; font-weight:700; color:#15803d;">संगमरमर, चूना-पत्थर और खड़िया (Chalk) सभी CaCO₃ के विभिन्न रूप हैं।</div>
+        </div>
       </div>
     </div>
+
+    
 
 <!-- ===================================================================
          SIMULATOR 2.3B: सोडा-अम्ल अग्निशामक (Soda-Acid Fire Extinguisher)
@@ -6938,21 +7117,27 @@
        ========================================================== */
     function simCarbReset() {
       clearSimTimers('carb');
+      if (window.gsap) {
+        gsap.killTweensOf([
+          '#olabs_gas_pulse', '#olabs_acid_stream',
+          '#ofb1', '#ofb2', '#ofb3', '#ofb4', '#ofb5',
+          '#olb1', '#olb2', '#olb3',
+          '#olabs_lime_milky'
+        ]);
+      }
       var pbar = document.getElementById('scarb_pbar'); if (pbar) pbar.style.width = '0%';
       var st = document.getElementById('scarb_status');
-      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली (A) में ठोस Na₂CO₃ व परखनली (B) में स्वच्छ चूने का पानी तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> गोल पेंदे के फ्लास्क में ठोस Na₂CO₃ तथा थिसिल कीप व्यवस्थित है। लकड़ी के 3D ब्लॉक पर स्वच्छ पारदर्शी चूने का पानी [Ca(OH)₂] तैयार है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।';
 
-      var bubA = document.getElementById('scarb_bubbles_a'); if (bubA) bubA.style.opacity = '0';
-      var drops = document.getElementById('scarb_acid_drops'); if (drops) drops.style.opacity = '0';
-      var gasFlow = document.getElementById('scarb_gas_flow'); if (gasFlow) gasFlow.style.opacity = '0';
-      var bubB = document.getElementById('scarb_bubbles_b'); if (bubB) bubB.style.opacity = '0';
-      var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0';
-      var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#e0f2fe');
-      var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'स्वच्छ चूने का पानी';
+      var acid = document.getElementById('olabs_acid_stream'); if (acid) acid.style.opacity = '0';
+      var bubA = document.getElementById('olabs_flask_bubbles'); if (bubA) bubA.style.opacity = '0';
+      var pulse = document.getElementById('olabs_gas_pulse'); if (pulse) pulse.style.opacity = '0';
+      var milky = document.getElementById('olabs_lime_milky'); if (milky) milky.style.opacity = '0';
+      var bubB = document.getElementById('olabs_lime_bubbles'); if (bubB) bubB.style.opacity = '0';
 
-      ['scarb_card1_bg', 'scarb_card2_bg', 'scarb_card3_bg'].forEach(function(id) {
+      ['scarb_card1', 'scarb_card2', 'scarb_card3', 'scarb_card4'].forEach(function(id) {
         var el = document.getElementById(id);
-        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+        if (el) el.style.background = '#ffffff';
       });
     }
 
@@ -6963,50 +7148,74 @@
       if (s === 1) {
         simCarbReset();
         if (pbar) pbar.style.width = '25%';
-        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली A में 0.5g सोडियम कार्बोनेट (Na₂CO₃) रखा है। परखनली B में स्वच्छ चूने का पानी [Ca(OH)₂] तैयार है।';
-        var c1 = document.getElementById('scarb_card1_bg');
-        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#3b82f6'); }
+        if (st) st.innerHTML = '<strong>चरण 1 (उपकरण व्यवस्था):</strong> गोल पेंदे के फ्लास्क में ठोस Na₂CO₃ तथा थिसिल कीप लगी है। दाईं ओर लकड़ी के ब्लॉक पर बीकर में स्वच्छ पारदर्शी चूने का पानी [Ca(OH)₂] है।';
+        var c1 = document.getElementById('scarb_card1'); if (c1) c1.style.background = '#f0fdf4';
 
       } else if (s === 2) {
         if (pbar) pbar.style.width = '50%';
-        var drops = document.getElementById('scarb_acid_drops'); if (drops) drops.style.opacity = '1';
-        var bubA = document.getElementById('scarb_bubbles_a'); if (bubA) bubA.style.opacity = '1';
-        var gasFlow = document.getElementById('scarb_gas_flow'); if (gasFlow) gasFlow.style.opacity = '1';
-        var bubB = document.getElementById('scarb_bubbles_b'); if (bubB) bubB.style.opacity = '1';
+        var acid = document.getElementById('olabs_acid_stream'); if (acid) acid.style.opacity = '1';
+        var bubA = document.getElementById('olabs_flask_bubbles'); if (bubA) bubA.style.opacity = '1';
+        var pulse = document.getElementById('olabs_gas_pulse');
 
-        if (st) st.innerHTML = '<strong>चरण 2:</strong> थिसिल कीप से तनु HCl डालते ही तीव्र बुदबुदाहट (Effervescence) के साथ <strong>CO₂ गैस</strong> बनती है और निकास नली से परखनली B में प्रवाहित होती है!';
-        var c1 = document.getElementById('scarb_card1_bg');
-        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#3b82f6'); }
+        if (window.gsap) {
+          // Bubbles rising in flask
+          ['#ofb1', '#ofb2', '#ofb3', '#ofb4', '#ofb5'].forEach(function(sel, idx) {
+            gsap.fromTo(sel,
+              { y: 0, opacity: 0.95 },
+              { y: -35, x: "random(-4, 4)", opacity: 0.2, duration: 0.7 + idx * 0.1, repeat: -1, ease: "none", delay: idx * 0.1 }
+            );
+          });
+
+          // Gas traveling through delivery tube
+          if (pulse) {
+            pulse.style.opacity = '1';
+            gsap.fromTo(pulse,
+              { strokeDashoffset: 64 },
+              { strokeDashoffset: 0, duration: 1.0, repeat: -1, ease: "none" }
+            );
+          }
+        }
+
+        if (st) st.innerHTML = '<strong>चरण 2 (तनु HCl मिलाना व CO₂ निर्माण):</strong> थिसिल कीप से तनु HCl डालते ही तीव्र बुदबुदाहट (Effervescence) के साथ कार्बन डाइऑक्साइड (CO₂) गैस बनती है:<br><span style="color:#15803d; font-size:20px; font-weight:900;">Na₂CO₃(s) + 2HCl(aq) ➔ 2NaCl(aq) + H₂O(l) + CO₂(g)↑</span>';
+        var c1 = document.getElementById('scarb_card1'); if (c1) c1.style.background = '#dcfce7';
 
       } else if (s === 3) {
         if (pbar) pbar.style.width = '75%';
-        var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0.95';
-        var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#ffffff');
-        var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'दूधिया चूने का पानी (CaCO₃)';
+        var bubB = document.getElementById('olabs_lime_bubbles'); if (bubB) bubB.style.opacity = '1';
+        if (window.gsap) {
+          ['#olb1', '#olb2', '#olb3'].forEach(function(sel, idx) {
+            gsap.fromTo(sel,
+              { y: 0, opacity: 0.9 },
+              { y: -30, x: "random(-3, 3)", opacity: 0.1, duration: 0.6 + idx * 0.15, repeat: -1, ease: "none", delay: idx * 0.15 }
+            );
+          });
+          // Lime water turns milky white CaCO3
+          gsap.to('#olabs_lime_milky', { opacity: 0.95, duration: 2.0, ease: "power1.inOut" });
+        }
 
-        if (st) st.innerHTML = '<strong>चरण 3:</strong> CO₂ गैस चूने के पानी से क्रिया करके <strong>अघुलनशील कैल्शियम कार्बोनेट (CaCO₃)</strong> का सफेद अवक्षेप बनाती है, जिससे चूने का पानी <strong>दूधिया (Milky)</strong> हो जाता है!';
-        var c2 = document.getElementById('scarb_card2_bg');
-        if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
+        if (st) st.innerHTML = '<strong>चरण 3 (चूने का पानी दूधिया होना):</strong> CO₂ गैस चूने के पानी में प्रवाहित होने पर अघुलनशील कैल्शियम कार्बोनेट (CaCO₃) का श्वेत अवक्षेप बनता है, जिससे पानी दूधिया हो जाता है:<br><span style="color:#b45309; font-size:20px; font-weight:900;">Ca(OH)₂(aq) + CO₂(g) ➔ CaCO₃(s)↓ [श्वेत अवक्षेप, दूधिया] + H₂O(l)</span>';
+        var c2 = document.getElementById('scarb_card2'); if (c2) c2.style.background = '#fef3c7';
 
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
-        var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0';
-        var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#f0fdf4');
-        var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'पुनः पारदर्शी [Ca(HCO₃)₂]';
+        if (window.gsap) {
+          // Excess CO2 dissolves CaCO3 into soluble Ca(HCO3)2 -> clear again!
+          gsap.to('#olabs_lime_milky', { opacity: 0, duration: 2.5, ease: "power1.out" });
+        }
 
-        if (st) st.innerHTML = '<strong>चरण 4:</strong> अत्यधिक मात्रा में CO₂ प्रवाहित करने पर जल में <strong>विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट [Ca(HCO₃)₂]</strong> बनता है, जिससे दूधियापन पूर्णतः समाप्त होकर विलयन पुनः स्वच्छ व पारदर्शी हो जाता है!';
-        var c3 = document.getElementById('scarb_card3_bg');
-        if (c3) { c3.setAttribute('fill', '#ecfdf5'); c3.setAttribute('stroke', '#10b981'); }
+        if (st) st.innerHTML = '<strong>चरण 4 (अत्यधिक CO₂ प्रवाहित करना):</strong> लगातार अधिक मात्रा में CO₂ प्रवाहित करने पर अघुलनशील CaCO₃ जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट [Ca(HCO₃)₂] में बदल जाता है और <strong>दूधियापन पूरी तरह गायब</strong> हो जाता है:<br><span style="color:#1d4ed8; font-size:20px; font-weight:900;">CaCO₃(s) + H₂O(l) + CO₂(g) ➔ Ca(HCO₃)₂(aq) [जल में विलेय, पारदर्शी]</span>';
+        var c3 = document.getElementById('scarb_card3'); if (c3) c3.style.background = '#dbeafe';
       }
     }
 
     function simCarbPlayAuto() {
       simCarbReset();
       simCarbStep(1);
-      addSimTimer('carb', setTimeout(function() { simCarbStep(2); }, 1800));
-      addSimTimer('carb', setTimeout(function() { simCarbStep(3); }, 4000));
-      addSimTimer('carb', setTimeout(function() { simCarbStep(4); }, 6500));
+      addSimTimer('carb', setTimeout(function() { simCarbStep(2); }, 2200));
+      addSimTimer('carb', setTimeout(function() { simCarbStep(3); }, 5500));
+      addSimTimer('carb', setTimeout(function() { simCarbStep(4); }, 9000));
     }
+
 
     /* ==========================================================
        SIMULATOR 2.4: ELECTRICAL CONDUCTIVITY OF SOLUTIONS (Activity 2.8)
