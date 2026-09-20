@@ -1801,6 +1801,162 @@
     <!-- ===================================================================
          TOPIC 2: अम्ल एवं क्षारक की धातुओं के साथ रासायनिक अभिक्रिया
          =================================================================== -->
+    <!-- ===================================================================
+         SIMULATOR 2.1B: प्राकृतिक व गंधीय सूचक सिमुलेटर (Activity 2.2)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_olf_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-seedling" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.2: प्राकृतिक (हल्दी) एवं गंधीय सूचक (वैनिला, प्याज) — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.2:</strong> कुछ पदार्थ ऐसे होते हैं जिनकी गंध या रंग अम्लीय या क्षारकीय माध्यम में बदल जाते हैं। नीचे हल्दी, लाल पत्तागोभी, वैनिला तथा प्याज की गंधयुक्त पट्टी पर अम्ल व क्षारक डालकर देखें कि क्या प्रभाव पड़ता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="solf_btn_turm" style="background:#d97706; color:#fff;" onclick="simOlfSelect('turmeric')">
+          <i class="fas fa-paint-brush"></i> 1. हल्दी का पेस्ट (प्राकृतिक)
+        </button>
+        <button class="sim-btn" id="solf_btn_cabb" style="background:#7c3aed; color:#fff;" onclick="simOlfSelect('cabbage')">
+          <i class="fas fa-leaf"></i> 2. लाल पत्तागोभी रस
+        </button>
+        <button class="sim-btn" id="solf_btn_van" style="background:#0284c7; color:#fff;" onclick="simOlfSelect('vanilla')">
+          <i class="fas fa-wind"></i> 3. वैनिला एसेंस (गंधीय)
+        </button>
+        <button class="sim-btn" id="solf_btn_oni" style="background:#be123c; color:#fff;" onclick="simOlfSelect('onion')">
+          <i class="fas fa-smog"></i> 4. प्याज की पट्टी (गंधीय)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simOlfReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_olf_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_olf_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="solf_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#solf_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- LEFT DISH / STRIP: ACID TEST -->
+          <g transform="translate(100, 160)">
+            <ellipse cx="100" cy="180" rx="90" ry="30" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+            <ellipse id="solf_dish_acid" cx="100" cy="178" rx="80" ry="24" fill="#fef08a" stroke="#d97706" stroke-width="1.5" style="transition: fill 0.5s ease;"/>
+            <!-- Cloth strip / liquid sample -->
+            <rect id="solf_sample_acid" x="50" y="165" width="100" height="26" rx="6" fill="#facc15" stroke="#b45309" stroke-width="1.2" style="transition: all 0.5s ease;"/>
+            <!-- Dropper Acid -->
+            <g transform="translate(85, 20)">
+              <rect x="10" y="0" width="12" height="45" rx="2" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+              <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+              <path d="M8,0 Q16,-12 24,0 Z" fill="#ef4444"/>
+              <circle cx="16" cy="72" r="3.5" fill="#ef4444"/>
+              <text x="16" y="-15" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">+ तनु HCl (अम्ल)</text>
+            </g>
+            <!-- Smell Waves for Acid (Active on vanilla/onion) -->
+            <g id="solf_smell_acid" opacity="0" style="transition: opacity 0.4s ease;">
+              <path d="M70,140 Q60,115 70,90" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M100,135 Q90,110 100,85" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M130,140 Q120,115 130,90" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="100" y="70" font-size="12" font-weight="900" fill="#b45309" text-anchor="middle">👃 गंध सुरक्षित रहती है</text>
+            </g>
+            <!-- Label -->
+            <rect x="25" y="225" width="150" height="34" rx="6" fill="#0f172a" stroke="#dc2626" stroke-width="1.5"/>
+            <text x="100" y="242" font-size="14" font-weight="900" fill="#f87171" text-anchor="middle">अम्लीय माध्यम (Acid)</text>
+            <text id="solf_lbl_acid" x="100" y="255" font-size="11" font-weight="800" fill="#fef08a" text-anchor="middle">रंग: पीला (यथावत)</text>
+          </g>
+
+          <!-- RIGHT DISH / STRIP: BASE TEST -->
+          <g transform="translate(420, 160)">
+            <ellipse cx="100" cy="180" rx="90" ry="30" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+            <ellipse id="solf_dish_base" cx="100" cy="178" rx="80" ry="24" fill="#991b1b" stroke="#7f1d1d" stroke-width="1.5" style="transition: fill 0.5s ease;"/>
+            <!-- Cloth strip / sample -->
+            <rect id="solf_sample_base" x="50" y="165" width="100" height="26" rx="6" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1.2" style="transition: all 0.5s ease;"/>
+            <!-- Dropper Base -->
+            <g transform="translate(85, 20)">
+              <rect x="10" y="0" width="12" height="45" rx="2" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+              <polygon points="10,45 22,45 16,60" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+              <path d="M8,0 Q16,-12 24,0 Z" fill="#3b82f6"/>
+              <circle cx="16" cy="72" r="3.5" fill="#3b82f6"/>
+              <text x="16" y="-15" font-size="12" font-weight="900" fill="#2563eb" text-anchor="middle">+ तनु NaOH (क्षारक)</text>
+            </g>
+            <!-- Smell Destroyed Tag for Base -->
+            <g id="solf_smell_base_cross" opacity="0" style="transition: opacity 0.4s ease;">
+              <circle cx="100" cy="110" r="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+              <line x1="90" y1="100" x2="110" y2="120" stroke="#dc2626" stroke-width="3"/>
+              <line x1="110" y1="100" x2="90" y2="120" stroke="#dc2626" stroke-width="3"/>
+              <text x="100" y="70" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">👃 गंध समाप्त हो जाती है!</text>
+            </g>
+            <!-- Label -->
+            <rect x="25" y="225" width="150" height="34" rx="6" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+            <text x="100" y="242" font-size="14" font-weight="900" fill="#93c5fd" text-anchor="middle">क्षारकीय माध्यम (Base)</text>
+            <text id="solf_lbl_base" x="100" y="255" font-size="11" font-weight="800" fill="#fca5a5" text-anchor="middle">रंग: लाल-भूरा (परिवर्तन)</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 20)">
+            <rect x="0" y="0" width="600" height="38" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="solf_lab_title" x="300" y="25" font-size="15.5" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.2: प्राकृतिक व गंधीय सूचक परीक्षण लैब</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 प्राकृतिक व गंधीय सूचक निष्कर्ष</text>
+
+            <!-- Card 1: Active Indicator -->
+            <g transform="translate(16, 60)">
+              <rect id="solf_c1_bg" x="0" y="0" width="423" height="85" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#92400e">परीक्षण सूचक (Tested Indicator):</text>
+              <text id="solf_panel_name" x="14" y="50" font-size="17" font-weight="900" fill="#b45309">हल्दी का पेस्ट (Turmeric - प्राकृतिक सूचक)</text>
+              <text id="solf_panel_sub" x="14" y="72" font-size="13" font-weight="800" fill="#78350f">घरेलू रसोई में प्रयुक्त प्राकृतिक रंजक।</text>
+            </g>
+
+            <!-- Card 2: Acid Action -->
+            <g transform="translate(16, 155)">
+              <rect id="solf_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#991b1b">अम्ल में प्रभाव (Effect in Acid - HCl):</text>
+              <text id="solf_panel_acid" x="14" y="50" font-size="16" font-weight="900" fill="#dc2626">पीला रंग बना रहता है (कोई परिवर्तन नहीं)</text>
+              <text id="solf_panel_acid_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#7f1d1d">अम्लीय माध्यम हल्दी के पीले करक्यूमिन को नहीं बदलता।</text>
+            </g>
+
+            <!-- Card 3: Base Action -->
+            <g transform="translate(16, 253)">
+              <rect id="solf_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">क्षारक में प्रभाव (Effect in Base - NaOH/साबुन):</text>
+              <text id="solf_panel_base" x="14" y="50" font-size="16" font-weight="900" fill="#2563eb">गहरा लाल-भूरा (Reddish-Brown) हो जाता है!</text>
+              <text id="solf_panel_base_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#1e3a8a">साबुन क्षारीय होने से सफेद कपड़े पर हल्दी का दाग लाल-भूरा होता है।</text>
+            </g>
+
+            <!-- Summary Box -->
+            <g transform="translate(16, 351)">
+              <rect x="0" y="0" width="423" height="135" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="24" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">⭐ गंधीय सूचक (Olfactory Indicators) नियम:</text>
+              <text x="211" y="46" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"अम्ल में गंध नष्ट नहीं होती (सुरक्षित रहती है)"</text>
+              <text x="211" y="68" font-size="13" font-weight="800" fill="#f87171" text-anchor="middle">"क्षारक (NaOH) डालने पर वैनिला व प्याज की गंध समाप्त हो जाती है!"</text>
+              <text x="211" y="94" font-size="12.5" font-weight="800" fill="#38bdf8" text-anchor="middle">दृष्टिबाधित विद्यार्थियों के लिए गंधीय सूचक वरदान हैं।</text>
+              <text x="211" y="118" font-size="12" font-weight="800" fill="#cbd5e1" text-anchor="middle">हल्दी: क्षारक में लाल-भूरा | पत्तागोभी: अम्ल में लाल, क्षारक में हरा</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="solf_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> हल्दी का पेस्ट चयनित है। क्षारक (साबुन) डालने पर यह लाल-भूरा हो जाता है। ऊपर से वैनिला या प्याज चुनकर गंध परिवर्तन देखें।
+      </div>
+    </div>
+
     <div class="topic-heading-green">
       <i class="fas fa-atom"></i> 2. अम्ल एवं क्षारक की धातुओं के साथ अभिक्रिया (हाइड्रोजन गैस का निर्माण)
     </div>
@@ -2071,6 +2227,205 @@
     <!-- ===================================================================
          TOPIC 3: धातु कार्बोनेट व हाइड्रोजनकार्बोनेट की अम्ल के साथ अभिक्रिया
          =================================================================== -->
+    <!-- ===================================================================
+         SIMULATOR 2.2B: क्षारक की धातु से अभिक्रिया एवं सोडियम जिंकेट (Activity 2.4)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_zinc_base_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-fire" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.4: क्षारक (NaOH) की धातु (Zn) से क्रिया व सोडियम जिंकेट निर्माण — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.4:</strong> एक परखनली में दानेदार जस्ता (Zn) लेकर 2 mL सांद्र सोडियम हाइड्रॉक्साइड (NaOH) मिलाते हैं और बर्नर पर गर्म करते हैं। निकास नली से निकलने वाली गैस को साबुन के घोल में प्रवाहित करके जलती मोमबत्ती से 'POP!' परीक्षण करते हैं:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="szb_play_btn" style="background:#16a34a; color:#fff;" onclick="simZbPlayAuto()">
+          <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
+        </button>
+        <button class="sim-btn secondary" id="szb_btn1" onclick="simZbStep(1)">
+          1. प्रारंभिक उपकरण (Zn + NaOH)
+        </button>
+        <button class="sim-btn warning" id="szb_btn2" onclick="simZbStep(2)">
+          2. बर्नर तापन व H₂ गैस बुदबुदाहट
+        </button>
+        <button class="sim-btn" id="szb_btn3" style="background:#2563eb; color:#fff;" onclick="simZbStep(3)">
+          3. साबुन घोल से H₂ बुलबुले उठना
+        </button>
+        <button class="sim-btn success" id="szb_btn4" style="background:#7c3aed; color:#fff;" onclick="simZbStep(4)">
+          4. जलती मोमबत्ती से 'POP!' विस्फोट
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simZbReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="szb_pbar"></div></div>
+
+      <div class="sim-stage" id="sim2_zinc_base_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_zinc_base_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="szb_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="szb_flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="40%" stop-color="#f59e0b"/>
+              <stop offset="100%" stop-color="#ef4444"/>
+            </linearGradient>
+            <radialGradient id="szb_popBlast" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="35%" stop-color="#fde047"/>
+              <stop offset="70%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#szb_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- STAND WITH CLAMP (HOLDING BOILING TUBE) -->
+          <g transform="translate(60, 100)">
+            <rect x="20" y="330" width="160" height="24" rx="4" fill="#334155"/>
+            <rect x="95" y="20" width="10" height="310" fill="#64748b"/>
+            <rect x="90" y="110" width="85" height="8" fill="#475569"/>
+            <path d="M170,95 L182,95 L182,135 L170,135" fill="none" stroke="#334155" stroke-width="4"/>
+          </g>
+
+          <!-- BUNSEN BURNER UNDER TUBE -->
+          <g transform="translate(215, 330)">
+            <polygon points="10,85 60,85 55,70 15,70" fill="#334155"/>
+            <rect x="30" y="20" width="10" height="50" fill="#94a3b8"/>
+            <g id="szb_flame" opacity="0" style="transition: opacity 0.4s ease;">
+              <path d="M35,20 Q22,-20 35,-40 Q48,-20 35,20 Z" fill="url(#szb_flameGrad)"/>
+              <text x="35" y="-48" font-size="11" font-weight="900" fill="#ef4444" text-anchor="middle">🔥 तापन अनिवार्य</text>
+            </g>
+          </g>
+
+          <!-- BOILING TUBE WITH Zn + NaOH -->
+          <g transform="translate(210, 140)">
+            <!-- Glass Body -->
+            <rect x="10" y="10" width="60" height="190" rx="12" fill="#e0f2fe" opacity="0.3" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Liquid NaOH -->
+            <rect id="szb_liq" x="12" y="90" width="56" height="105" rx="8" fill="#c7d2fe" opacity="0.75"/>
+            <!-- Zn Granules at bottom -->
+            <ellipse cx="40" cy="185" rx="22" ry="8" fill="#64748b" stroke="#334155" stroke-width="1.5"/>
+            <text x="40" y="187" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">Zn दाने</text>
+
+            <!-- Bubbles when heated (Step 2) -->
+            <g id="szb_bubbles" opacity="0">
+              <circle cx="28" cy="165" r="3" fill="#ffffff" stroke="#6366f1" stroke-width="0.8"/>
+              <circle cx="48" cy="150" r="3.5" fill="#ffffff" stroke="#6366f1" stroke-width="0.8"/>
+              <circle cx="35" cy="130" r="3" fill="#ffffff" stroke="#6366f1" stroke-width="0.8"/>
+              <circle cx="50" cy="110" r="3.5" fill="#ffffff" stroke="#6366f1" stroke-width="0.8"/>
+              <text x="40" y="140" font-size="11" font-weight="900" fill="#4338ca" text-anchor="middle">H₂↑</text>
+            </g>
+
+            <!-- Cork with Delivery Tube -->
+            <polygon points="10,10 70,10 65,-12 15,-12" fill="#78350f"/>
+            <!-- Label -->
+            <rect x="-10" y="215" width="100" height="34" rx="6" fill="#0f172a" stroke="#6366f1" stroke-width="1.5"/>
+            <text x="40" y="232" font-size="13.5" font-weight="900" fill="#a5b4fc" text-anchor="middle">Zn + NaOH</text>
+            <text x="40" y="245" font-size="10.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">(सोडियम जिंकेट)</text>
+          </g>
+
+          <!-- DELIVERY TUBE TO SOAP TROUGH -->
+          <path d="M250,128 L250,70 Q250,55 265,55 L450,55 Q465,55 465,70 L465,340" fill="none" stroke="#0284c7" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M250,128 L250,70 Q250,55 265,55 L450,55 Q465,55 465,70 L465,340" fill="none" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- SOAP SOLUTION TROUGH (साबुन का घोल) -->
+          <g transform="translate(420, 310)">
+            <ellipse cx="60" cy="80" rx="55" ry="18" fill="#94a3b8"/>
+            <rect x="5" y="45" width="110" height="40" rx="6" fill="#e0f2fe" opacity="0.6" stroke="#0284c7" stroke-width="2"/>
+            <text x="60" y="70" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">साबुन का घोल</text>
+
+            <!-- Rising H2 Soap Bubbles (Step 3) -->
+            <g id="szb_rising_bubbles" opacity="0" style="transition: opacity 0.4s ease;">
+              <circle cx="50" cy="25" r="9" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="50" y="28" font-size="8" font-weight="900" fill="#0284c7" text-anchor="middle">H₂</text>
+              <circle cx="70" cy="-10" r="11" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="70" y="-7" font-size="9" font-weight="900" fill="#0284c7" text-anchor="middle">H₂</text>
+              <circle cx="55" cy="-45" r="13" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="55" y="-41" font-size="10" font-weight="900" fill="#0284c7" text-anchor="middle">H₂</text>
+            </g>
+          </g>
+
+          <!-- BURNING CANDLE & POP BURST (Step 4) -->
+          <g id="szb_candle" transform="translate(440, 160)" opacity="0" style="transition: opacity 0.4s ease;">
+            <!-- Candle -->
+            <rect x="90" y="70" width="16" height="60" rx="2" fill="#fef08a" stroke="#ca8a04" stroke-width="1"/>
+            <line x1="98" y1="70" x2="98" y2="60" stroke="#0f172a" stroke-width="1.5"/>
+            <!-- Flame -->
+            <path d="M98,60 Q92,45 98,35 Q104,45 98,60 Z" fill="#f97316"/>
+            <!-- POP BLAST -->
+            <g id="szb_pop" opacity="0" style="transition: opacity 0.3s ease;">
+              <circle cx="98" cy="20" r="45" fill="url(#szb_popBlast)"/>
+              <text x="98" y="26" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">💥 POP!</text>
+            </g>
+            <text x="98" y="145" font-size="12" font-weight="900" fill="#713f12" text-anchor="middle">जलती मोमबत्ती</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="szb_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.4: क्षारक + धातु ➔ सोडियम जिंकेट + H₂↑</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 संतुलित समीकरण एवं वैज्ञानिक निष्कर्ष</text>
+
+            <!-- Card 1: Balanced Reaction -->
+            <g transform="translate(16, 60)">
+              <rect id="szb_c1_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">संतुलित रासायनिक अभिक्रिया (NCERT क्रियाकलाप 2.4):</text>
+              <text x="14" y="52" font-size="16" font-weight="900" fill="#4338ca">2NaOH(aq) + Zn(s) 🔥 ➔ Na₂ZnO₂(aq) + H₂(g)↑</text>
+              <text x="14" y="76" font-size="13" font-weight="800" fill="#64748b">सोडियम हाइड्रॉक्साइड + जिंक ➔ सोडियम जिंकेट + हाइड्रोजन</text>
+            </g>
+
+            <!-- Card 2: POP Test -->
+            <g transform="translate(16, 162)">
+              <rect id="szb_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#854d0e">H₂ गैस का ध्वनि परीक्षण (POP Test):</text>
+              <text id="szb_panel_pop" x="14" y="50" font-size="16" font-weight="900" fill="#b45309">गैस साबुन के बुलबुलों में बंद होकर ऊपर उठती है</text>
+              <text x="14" y="74" font-size="12.5" font-weight="800" fill="#713f12">जलती मोमबत्ती पास लाने पर 'पॉप' (POP) ध्वनि के साथ जलती है।</text>
+            </g>
+
+            <!-- Card 3: Key Distinction (Acid vs Base) -->
+            <g transform="translate(16, 260)">
+              <rect id="szb_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">अम्ल एवं क्षारक अभिक्रिया में मुख्य अंतर:</text>
+              <text x="14" y="50" font-size="15" font-weight="900" fill="#2563eb">अम्ल सामान्य ताप पर क्रिया करते हैं, क्षारक को तापन (Heating) चाहिए।</text>
+              <text x="14" y="74" font-size="12.5" font-weight="800" fill="#0369a1">इसके अलावा सभी धातुएं क्षारक के साथ क्रिया करके H₂ नहीं बनातीं।</text>
+            </g>
+
+            <!-- Core Board Exam Rule -->
+            <g transform="translate(16, 358)">
+              <rect x="0" y="0" width="423" height="128" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">⭐ बोर्ड परीक्षा विशेष चेतावनी (NCERT Caution):</text>
+              <text x="211" y="52" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"किंतु ऐसी अभिक्रियाएं सभी धातुओं के साथ संभव नहीं हैं।"</text>
+              <text x="211" y="76" font-size="12.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">• केवल उभयधर्मी (Amphoteric) धातुएं (जैसे Zn, Al) ही प्रबल क्षारकों से</text>
+              <text x="211" y="98" font-size="12.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">क्रिया करके हाइड्रोजन गैस और जटिल लवण (जिंकेट, एल्युमिनेट) बनाती हैं।</text>
+              <text x="211" y="118" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">लवण का नाम: सोडियम जिंकेट (Na₂ZnO₂)</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="szb_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> परखनली में जिंक दाने व सांद्र NaOH विलयन तैयार है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर बर्नर तापन शुरू करें।
+      </div>
+    </div>
+
     <div class="topic-heading-blue">
       <i class="fas fa-flask-vial"></i> 3. धातु कार्बोनेट एवं धातु हाइड्रोजनकार्बोनेट की अम्ल के साथ अभिक्रिया
     </div>
@@ -2348,6 +2703,158 @@
       </p>
     </div>
 
+    <!-- ===================================================================
+         SIMULATOR 2.4A: उदासीनीकरण अभिक्रिया एवं टाइट्रेशन लैब (Activity 2.6)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_neut_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-balance-scale" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.6: अम्ल-क्षारक उदासीनीकरण एवं फिनॉल्फथलीन रंग परिवर्तन — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.6:</strong> एक परखनली में 2 mL तनु NaOH लेकर 2 बूंद फिनॉल्फथलीन मिलाते हैं (विलयन गहरा गुलाबी हो जाता है)। फिर ड्रॉपर से बूंद-बूंद तनु HCl मिलाते हैं (गुलाबी रंग गायब होकर रंगहीन हो जाता है)। पुनः NaOH मिलाने पर गुलाबी रंग लौट आता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="sneut_play_btn" style="background:#16a34a; color:#fff;" onclick="simNeutPlayAuto()">
+          <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
+        </button>
+        <button class="sim-btn secondary" id="sneut_btn1" onclick="simNeutStep(1)">
+          1. NaOH + फिनॉल्फथलीन (गहरा गुलाबी)
+        </button>
+        <button class="sim-btn warning" id="sneut_btn2" onclick="simNeutStep(2)">
+          2. बूंद-बूंद HCl मिलाना (उदासीनीकरण - रंगहीन)
+        </button>
+        <button class="sim-btn" id="sneut_btn3" style="background:#db2777; color:#fff;" onclick="simNeutStep(3)">
+          3. पुनः NaOH मिलाना (गुलाबी रंग की वापसी)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simNeutReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sneut_pbar"></div></div>
+
+      <div class="sim-stage" id="sim2_neut_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_neut_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="sneut_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="sneut_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#sneut_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- STAND & CLAMP HOLDING CONICAL FLASK / TEST TUBE -->
+          <g transform="translate(120, 90)">
+            <rect x="20" y="340" width="160" height="24" rx="4" fill="#334155"/>
+            <rect x="95" y="20" width="10" height="320" fill="#64748b"/>
+            <rect x="90" y="150" width="120" height="8" fill="#475569"/>
+            <path d="M200,135 L215,135 L215,175 L200,175" fill="none" stroke="#334155" stroke-width="4"/>
+          </g>
+
+          <!-- CONICAL FLASK / LARGE TEST TUBE (X:300, Y:180) -->
+          <g transform="translate(300, 180)">
+            <!-- Flask Liquid: Pink (Initial), Colorless (Step 2), Pink again (Step 3) -->
+            <polygon id="sneut_liquid" points="15,130 85,130 95,200 5,200" fill="#f472b6" opacity="0.85" style="transition: fill 0.6s ease;"/>
+            <!-- Meniscus -->
+            <ellipse id="sneut_meniscus" cx="50" cy="130" rx="35" ry="6" fill="#ec4899" style="transition: fill 0.6s ease;"/>
+
+            <!-- Glass Conical Body -->
+            <polygon points="35,10 65,10 65,50 100,200 0,200 35,50" fill="url(#sneut_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+            <ellipse cx="50" cy="10" rx="16" ry="4" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+
+            <!-- Dynamic Ion Particles floating inside liquid -->
+            <g id="sneut_ions">
+              <circle cx="35" cy="160" r="8" fill="#6366f1"/><text x="35" y="163" font-size="8" font-weight="900" fill="#fff" text-anchor="middle">Na⁺</text>
+              <circle cx="65" cy="175" r="8" fill="#ec4899"/><text id="sneut_ion_right" x="65" y="178" font-size="7.5" font-weight="900" fill="#fff" text-anchor="middle">OH⁻</text>
+            </g>
+
+            <!-- Label -->
+            <rect x="0" y="215" width="100" height="34" rx="6" fill="#0f172a" stroke="#db2777" stroke-width="1.5"/>
+            <text id="sneut_flask_label" x="50" y="232" font-size="13" font-weight="900" fill="#f472b6" text-anchor="middle">NaOH + सूचक</text>
+            <text id="sneut_flask_sub" x="50" y="245" font-size="10.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">रंग: गहरा गुलाबी</text>
+          </g>
+
+          <!-- BURETTE / DROPPER DISPENSING HCl (Step 2) / NaOH (Step 3) -->
+          <g id="sneut_dropper" transform="translate(335, 60)">
+            <rect x="8" y="0" width="14" height="70" rx="2" fill="#e0f2fe" stroke="#475569" stroke-width="1.5"/>
+            <polygon points="8,70 22,70 15,90" fill="#e0f2fe" stroke="#475569" stroke-width="1.5"/>
+            <path id="sneut_bulb_top" d="M6,0 Q15,-15 24,0 Z" fill="#ef4444"/>
+
+            <!-- Falling Drop -->
+            <circle id="sneut_drop" cx="15" cy="115" r="4.5" fill="#ef4444" opacity="0"/>
+            <text id="sneut_dropper_text" x="75" y="45" font-size="13" font-weight="900" fill="#dc2626">तनु HCl ड्रॉपर</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="sneut_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">⚖️ NCERT 2.6: उदासीनीकरण अभिक्रिया एवं सूचक रंग परिवर्तन</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 उदासीनीकरण रासायनिक प्रेक्षण</text>
+
+            <!-- Card 1: Neutralization Equation -->
+            <g transform="translate(16, 60)">
+              <rect id="sneut_c1_bg" x="0" y="0" width="423" height="90" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#9d174d">उदासीनीकरण अभिक्रिया (Neutralization Reaction):</text>
+              <text x="14" y="50" font-size="16" font-weight="900" fill="#be185d">HCl(aq) + NaOH(aq) ➔ NaCl(aq) + H₂O(l)</text>
+              <text x="14" y="74" font-size="13" font-weight="800" fill="#701a75">अम्ल + क्षारक ➔ लवण + जल [ऊष्माक्षेपी अभिक्रिया]</text>
+            </g>
+
+            <!-- Card 2: Ionic Mechanism -->
+            <g transform="translate(16, 160)">
+              <rect id="sneut_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">आयनिक स्तर पर वास्तविक क्रिया:</text>
+              <text x="14" y="50" font-size="17" font-weight="900" fill="#2563eb">H⁺(aq) + OH⁻(aq) ➔ H₂O(l)</text>
+              <text x="14" y="74" font-size="12.5" font-weight="800" fill="#0369a1">अम्ल के H⁺ और क्षारक के OH⁻ मिलकर उदासीन जल अणु बनाते हैं।</text>
+            </g>
+
+            <!-- Card 3: Color Change Log -->
+            <g transform="translate(16, 258)">
+              <rect id="sneut_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">फिनॉल्फथलीन रंग परिवर्तन स्थिति:</text>
+              <text id="sneut_panel_color" x="14" y="50" font-size="16" font-weight="900" fill="#db2777">प्रारंभ में: गहरा गुलाबी (क्षारकीय NaOH के कारण)</text>
+              <text id="sneut_panel_color_sub" x="14" y="74" font-size="12.5" font-weight="800" fill="#64748b">HCl डालने पर उदासीन होकर रंगहीन हो जाता है।</text>
+            </g>
+
+            <!-- Scientific Conclusion -->
+            <g transform="translate(16, 356)">
+              <rect x="0" y="0" width="423" height="130" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">✔ उदासीनीकरण का मूल वैज्ञानिक निष्कर्ष:</text>
+              <text x="211" y="52" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"अम्ल एवं क्षारक एक-दूसरे के प्रभाव को पूर्णतः समाप्त कर देते हैं।"</text>
+              <text x="211" y="76" font-size="12.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">• जब अम्ल अधिक होता है ➔ विलयन अम्लीय (रंगहीन)।</text>
+              <text x="211" y="98" font-size="12.5" font-weight="800" fill="#f472b6" text-anchor="middle">• जब क्षारक अधिक होता है ➔ विलयन क्षारकीय (गहरा गुलाबी)।</text>
+              <text x="211" y="120" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">दैनिक अनुप्रयोग: पेट की एसिडिटी में ऐंटासिड (क्षारक) लेना।</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="sneut_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> परखनली में NaOH + फिनॉल्फथलीन से गहरा गुलाबी रंग है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर HCl मिलाएं।
+      </div>
+    </div>
+
     <div class="concept-box" style="background:#ffffff; border-left:6px solid #ea580c; padding:20px; border-radius:0 12px 12px 0; margin-bottom:28px;">
       <h4 style="color:#c2410c; font-size:20px; margin-bottom:10px;">धात्विक एवं अधात्विक ऑक्साइडों की रासायनिक प्रकृति:</h4>
       <ul style="padding-left:24px; font-size:18px; line-height:1.8; color:#1e293b;">
@@ -2370,6 +2877,158 @@
     <!-- ===================================================================
          TOPIC 5: जलीय विलयन में अम्ल व क्षारक (विद्युत चालन एवं आयनीकरण)
          =================================================================== -->
+    <!-- ===================================================================
+         SIMULATOR 2.4B: धात्विक ऑक्साइड की अम्ल से क्रिया (Activity 2.7)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_cuo_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-mortar-pestle" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.7: धात्विक ऑक्साइड (काला CuO) पर तनु HCl की क्रिया व नीला-हरा रंग — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.7:</strong> एक बीकर में थोड़ा काला कॉपर ऑक्साइड (CuO) लेकर धीरे-धीरे तनु हाइड्रोक्लोरिक अम्ल मिलाते हुए हिलाते हैं। काला चूर्ण घुलकर विलीन हो जाता है और विलयन का रंग खूबसूरत <strong>नीला-हरा (Blue-Green)</strong> हो जाता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="scuo_play_btn" style="background:#16a34a; color:#fff;" onclick="simCuoPlayAuto()">
+          <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
+        </button>
+        <button class="sim-btn secondary" id="scuo_btn1" onclick="simCuoStep(1)">
+          1. बीकर में काला CuO चूर्ण
+        </button>
+        <button class="sim-btn warning" id="scuo_btn2" onclick="simCuoStep(2)">
+          2. तनु HCl मिलाना व हिलाना
+        </button>
+        <button class="sim-btn success" id="scuo_btn3" style="background:#0284c7; color:#fff;" onclick="simCuoStep(3)">
+          3. नीला-हरा CuCl₂ विलयन बनना
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simCuoReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="scuo_pbar"></div></div>
+
+      <div class="sim-stage" id="sim2_cuo_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_cuo_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="scuo_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="scuo_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scuo_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- 250 mL BEAKER -->
+          <g transform="translate(240, 160)">
+            <!-- Beaker Liquid: initial colorless, then turns rich blue-green (#0d9488 / #06b6d4) -->
+            <rect id="scuo_liquid" x="8" y="90" width="204" height="135" rx="8" fill="#e0f2fe" opacity="0.6" style="transition: fill 0.7s ease;"/>
+
+            <!-- Black CuO powder at bottom (dissolves on step 3) -->
+            <g id="scuo_powder_group">
+              <ellipse id="scuo_powder_ellipse" cx="110" cy="210" rx="60" ry="12" fill="#0f172a" style="transition: all 0.6s ease;"/>
+              <circle cx="80" cy="208" r="4" fill="#1e293b"/>
+              <circle cx="130" cy="212" r="5" fill="#1e293b"/>
+              <circle cx="105" cy="205" r="4.5" fill="#1e293b"/>
+              <text id="scuo_powder_txt" x="110" y="213" font-size="11" font-weight="900" fill="#cbd5e1" text-anchor="middle">काला CuO चूर्ण</text>
+            </g>
+
+            <!-- Glass Stirring Rod -->
+            <g id="scuo_rod" transform="translate(140, 30) rotate(15)">
+              <rect x="0" y="0" width="8" height="180" rx="4" fill="#cbd5e1" stroke="#64748b" stroke-width="1.2"/>
+              <text x="15" y="40" font-size="11" font-weight="900" fill="#475569">कांच की छड़ (Stirrer)</text>
+            </g>
+
+            <!-- Glass Beaker Body -->
+            <rect x="5" y="10" width="210" height="215" rx="14" fill="url(#scuo_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+            <!-- Beaker Lip -->
+            <path d="M5,15 L-5,10 L5,25" fill="none" stroke="#0284c7" stroke-width="2"/>
+            <line x1="5" y1="10" x2="215" y2="10" stroke="#0284c7" stroke-width="2.5"/>
+
+            <!-- Label -->
+            <rect x="35" y="235" width="150" height="34" rx="6" fill="#0f172a" stroke="#0d9488" stroke-width="1.5"/>
+            <text id="scuo_beaker_label" x="110" y="252" font-size="13.5" font-weight="900" fill="#2dd4bf" text-anchor="middle">CuO + HCl मिश्रण</text>
+            <text id="scuo_beaker_sub" x="110" y="265" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">प्रारंभिक अवस्था</text>
+          </g>
+
+          <!-- DROPPER / FLASK POURING DILUTE HCl (Step 2) -->
+          <g id="scuo_acid_source" transform="translate(130, 80)" opacity="0" style="transition: opacity 0.4s ease;">
+            <!-- Acid Bottle tilted -->
+            <rect x="0" y="0" width="70" height="100" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" transform="rotate(-30)"/>
+            <text x="10" y="40" font-size="12" font-weight="900" fill="#0369a1" transform="rotate(-30)">तनु HCl</text>
+            <!-- Falling acid stream -->
+            <path d="M80,30 Q120,60 140,150" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+            <text x="120" y="25" font-size="13" font-weight="900" fill="#0284c7">+ तनु HCl मिलाना</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="scuo_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.7: धात्विक ऑक्साइड + अम्ल ➔ लवण (CuCl₂) + जल</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 धात्विक ऑक्साइड रासायनिक प्रेक्षण</text>
+
+            <!-- Card 1: Reaction Equation -->
+            <g transform="translate(16, 60)">
+              <rect id="scuo_c1_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f766e">संतुलित रासायनिक समीकरण (NCERT क्रियाकलाप 2.7):</text>
+              <text x="14" y="52" font-size="16" font-weight="900" fill="#0d9488">CuO(s) [काला] + 2HCl(aq) ➔ CuCl₂(aq) [नीला-हरा] + H₂O(l)</text>
+              <text x="14" y="76" font-size="13" font-weight="800" fill="#115e59">कॉपर ऑक्साइड + हाइड्रोक्लोरिक अम्ल ➔ कॉपर क्लोराइड + जल</text>
+            </g>
+
+            <!-- Card 2: Color Change Reason -->
+            <g transform="translate(16, 162)">
+              <rect id="scuo_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">रंग परिवर्तन का कारण (Color Reason):</text>
+              <text id="scuo_panel_color" x="14" y="50" font-size="16" font-weight="900" fill="#0284c7">विलयन का नीला-हरा रंग CuCl₂ के बनने के कारण होता है</text>
+              <text x="14" y="74" font-size="12.5" font-weight="800" fill="#64748b">काला कॉपर ऑक्साइड पूरी तरह घुलकर आयनिक विलयन बना लेता है।</text>
+            </g>
+
+            <!-- Card 3: Metallic Oxide Nature -->
+            <g transform="translate(16, 260)">
+              <rect id="scuo_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">धात्विक ऑक्साइड की प्रकृति (Nature of Metallic Oxide):</text>
+              <text x="14" y="50" font-size="16" font-weight="900" fill="#2563eb">धात्विक ऑक्साइड क्षारकीय (Basic) प्रकृति के होते हैं</text>
+              <text x="14" y="74" font-size="12.5" font-weight="800" fill="#0369a1">क्योंकि ये अम्ल से क्रिया करके लवण तथा जल बनाते हैं।</text>
+            </g>
+
+            <!-- Rule Comparison Box -->
+            <g transform="translate(16, 358)">
+              <rect x="0" y="0" width="423" height="128" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">⭐ धात्विक बनाम अधात्विक ऑक्साइड नियम:</text>
+              <text x="211" y="52" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">• धात्विक ऑक्साइड (CuO, MgO, CaO) = क्षारकीय प्रकृति (Basic)</text>
+              <text x="211" y="76" font-size="12.5" font-weight="800" fill="#38bdf8" text-anchor="middle">धातु ऑक्साइड + अम्ल ➔ लवण + जल (उदासीनीकरण सदृश)</text>
+              <text x="211" y="100" font-size="12.5" font-weight="800" fill="#f472b6" text-anchor="middle">• अधात्विक ऑक्साइड (CO₂, SO₂) = अम्लीय प्रकृति (Acidic)</text>
+              <text x="211" y="120" font-size="12" font-weight="800" fill="#cbd5e1" text-anchor="middle">अधातु ऑक्साइड + क्षारक ➔ लवण + जल [उदा: Ca(OH)₂ + CO₂ ➔ CaCO₃ + H₂O]</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="scuo_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> बीकर में काला कॉपर ऑक्साइड (CuO) उपस्थित है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर तनु HCl मिलाएं।
+      </div>
+    </div>
+
     <div class="topic-heading-green">
       <i class="fas fa-bolt"></i> 5. सभी अम्लों एवं क्षारकों में क्या समानताएँ हैं? (जलीय विलयन में आयनीकरण)
     </div>
@@ -2652,6 +3311,189 @@
     <!-- ===================================================================
          TOPIC 6: pH पैमाना (pH Scale) एवं दैनिक जीवन में pH का महत्व
          =================================================================== -->
+    <!-- ===================================================================
+         SIMULATOR 2.5B: शुष्क HCl गैस बनाम आर्द्र लिटमस पत्र (Activities 2.9 & 2.10)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_dryhcl_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-shield-halved" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.9 व 2.10: शुष्क HCl गैस बनाम आर्द्र लिटमस परीक्षण एवं अम्ल तनुकरण — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.9 व 2.10:</strong> ठोस NaCl पर सांद्र H₂SO₄ डालने से शुष्क HCl गैस बनती है। शुष्क नीले लिटमस पत्र पर इसका कोई प्रभाव नहीं होता, परंतु आर्द्र (गीले) नीले लिटमस को यह तुरंत लाल कर देती है। साथ ही अम्ल के सुरक्षित तनुकरण का नियम भी देखें:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="sdry_btn1" style="background:#2563eb; color:#fff;" onclick="simDryHclStep(1)">
+          1. शुष्क नीला लिटमस पत्र (कोई प्रभाव नहीं ❌)
+        </button>
+        <button class="sim-btn" id="sdry_btn2" style="background:#dc2626; color:#fff;" onclick="simDryHclStep(2)">
+          2. आर्द्र (गीला) नीला लिटमस पत्र (लाल हो जाता है! ✔)
+        </button>
+        <button class="sim-btn success" id="sdry_btn3" style="background:#059669; color:#fff;" onclick="simDryHclStep(3)">
+          3. सुरक्षित तनुकरण: जल में बूंद-बूंद अम्ल मिलाना
+        </button>
+        <button class="sim-btn danger" id="sdry_btn4" style="background:#b91c1c; color:#fff;" onclick="simDryHclStep(4)">
+          4. खतरनाक गलती: अम्ल में जल डालना (धमाका / छलकना ⚠️)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simDryHclReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_dryhcl_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_dryhcl_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="sdry_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="sdry_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#sdry_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- TEST TUBE GENERATING HCl (NaCl + H2SO4) -->
+          <g transform="translate(140, 160)">
+            <!-- Glass Body -->
+            <rect x="10" y="10" width="60" height="200" rx="12" fill="url(#sdry_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Liquid Acid + NaCl at bottom -->
+            <rect x="12" y="130" width="56" height="75" rx="8" fill="#fef3c7" opacity="0.8"/>
+            <ellipse cx="40" cy="195" rx="22" ry="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <text x="40" y="198" font-size="10" font-weight="900" fill="#475569" text-anchor="middle">ठोस NaCl</text>
+            <!-- Bubbles of HCl gas -->
+            <circle cx="30" cy="165" r="3" fill="#ffffff" stroke="#d97706" stroke-width="0.8"/>
+            <circle cx="50" cy="150" r="3.5" fill="#ffffff" stroke="#d97706" stroke-width="0.8"/>
+            <!-- Cork -->
+            <polygon points="10,10 70,10 65,-12 15,-12" fill="#78350f"/>
+            <!-- Delivery Tube with Guard Tube (रक्षक नली जिसमें CaCl2 है) -->
+            <path d="M40,-12 L40,-50 Q40,-65 55,-65 L160,-65" fill="none" stroke="#0284c7" stroke-width="3.5"/>
+            <!-- Guard Tube bulge -->
+            <rect x="90" y="-76" width="45" height="22" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+            <text x="112" y="-62" font-size="9" font-weight="900" fill="#0369a1" text-anchor="middle">शुष्क CaCl₂</text>
+            <text x="112" y="-82" font-size="10" font-weight="900" fill="#0284c7" text-anchor="middle">गार्ड ट्यूब (नमी शोषक)</text>
+            <!-- Label -->
+            <rect x="-10" y="225" width="100" height="34" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+            <text x="40" y="242" font-size="13" font-weight="900" fill="#fbbf24" text-anchor="middle">NaCl + H₂SO₄</text>
+            <text x="40" y="255" font-size="10" font-weight="800" fill="#cbd5e1" text-anchor="middle">HCl गैस जनरेटर</text>
+          </g>
+
+          <!-- DRY / MOIST LITMUS TEST ZONE (X:360, Y:90) -->
+          <g id="sdry_litmus_zone" transform="translate(360, 95)">
+            <!-- Gas emerging fumes -->
+            <g id="sdry_fumes">
+              <path d="M-60,0 Q-40,-15 -20,-5" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="3,3"/>
+              <text x="-30" y="-20" font-size="12" font-weight="900" fill="#475569">शुष्क HCl गैस ➔</text>
+            </g>
+
+            <!-- Forceps / Tongs holding Litmus paper -->
+            <rect x="80" y="10" width="100" height="8" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+            <rect x="70" y="18" width="110" height="8" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+
+            <!-- Litmus Paper Strip: Blue initially, turns RED on moist -->
+            <rect id="sdry_paper" x="0" y="12" width="80" height="14" rx="2" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.2" style="transition: all 0.5s ease;"/>
+            <text id="sdry_paper_lbl" x="40" y="23" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">शुष्क नीला लिटमस</text>
+
+            <!-- Water droplets on paper (Active when moist) -->
+            <g id="sdry_moist_drops" opacity="0">
+              <circle cx="20" cy="8" r="2.5" fill="#38bdf8"/>
+              <circle cx="50" cy="7" r="2.5" fill="#38bdf8"/>
+              <text x="40" y="-5" font-size="11" font-weight="900" fill="#0284c7" text-anchor="middle">💧 आर्द्र (भीगा) पत्र</text>
+            </g>
+
+            <!-- Result Tag -->
+            <rect id="sdry_res_tag" x="-20" y="50" width="160" height="30" rx="6" fill="#0f172a" stroke="#cbd5e1" stroke-width="1.2"/>
+            <text id="sdry_res_txt" x="60" y="70" font-size="12.5" font-weight="900" fill="#38bdf8" text-anchor="middle">कोई रंग परिवर्तन नहीं ❌</text>
+          </g>
+
+          <!-- DILUTION APPARATUS GRAPHIC (Shown on Steps 3 & 4) -->
+          <g id="sdry_dilution_graphic" transform="translate(490, 200)" opacity="0" style="transition: opacity 0.5s ease;">
+            <!-- Beaker with water -->
+            <rect x="10" y="40" width="120" height="130" rx="8" fill="url(#sdry_glassGrad)" stroke="#0284c7" stroke-width="2"/>
+            <rect id="sdry_dil_liq" x="12" y="85" width="116" height="80" rx="6" fill="#bae6fd" opacity="0.8"/>
+            <!-- Thermometer dipping in -->
+            <rect x="90" y="20" width="8" height="130" rx="4" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+            <rect id="sdry_thermo_red" x="92" y="110" width="4" height="35" rx="2" fill="#ef4444"/>
+            <text id="sdry_temp_txt" x="94" y="10" font-size="12" font-weight="900" fill="#ef4444" text-anchor="middle">25°C</text>
+
+            <!-- Acid dropper over water -->
+            <rect id="sdry_dil_dropper" x="40" y="0" width="10" height="50" rx="2" fill="#ef4444"/>
+            <!-- Danger splash (Step 4) -->
+            <g id="sdry_splash" opacity="0">
+              <path d="M30,70 L10,50 M45,65 L45,40 M60,70 L80,50" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+              <text x="50" y="30" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">💥 छलकना!</text>
+            </g>
+
+            <rect x="5" y="180" width="130" height="30" rx="6" fill="#0f172a" stroke="#16a34a" stroke-width="1.2"/>
+            <text id="sdry_dil_lbl" x="70" y="200" font-size="12" font-weight="900" fill="#86efac" text-anchor="middle">जल में अम्ल (सुरक्षित)</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="sdry_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.9 व 2.10: शुष्क HCl गैस परीक्षण एवं सुरक्षित तनुकरण</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 वैज्ञानिक कारण एवं सुरक्षा प्रोटोकॉल</text>
+
+            <!-- Card 1: Hydronium Ion Equation -->
+            <g transform="translate(16, 60)">
+              <rect id="sdry_c1_bg" x="0" y="0" width="423" height="92" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">जल की उपस्थिति में ही H⁺ आयन विमुक्ति:</text>
+              <text x="14" y="52" font-size="16" font-weight="900" fill="#2563eb">HCl + H₂O ➔ H₃O⁺ [हाइड्रोनियम आयन] + Cl⁻</text>
+              <text x="14" y="76" font-size="12.5" font-weight="800" fill="#0369a1">शुष्क HCl में जल नहीं होता, अतः H⁺ आयन न बनने से लिटमस नहीं बदलता।</text>
+            </g>
+
+            <!-- Card 2: Litmus Result -->
+            <g transform="translate(16, 162)">
+              <rect id="sdry_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">लिटमस परीक्षण तुलना (Activity 2.9):</text>
+              <text id="sdry_panel_litmus" x="14" y="50" font-size="16" font-weight="900" fill="#b45309">शुष्क नीला लिटमस: कोई परिवर्तन नहीं (नीला)</text>
+              <text id="sdry_panel_litmus_sub" x="14" y="74" font-size="12.5" font-weight="800" fill="#713f12">आर्द्र नीला लिटमस: नमी में HCl आयनित होकर लाल कर देता है।</text>
+            </g>
+
+            <!-- Card 3: Dilution Rule -->
+            <g transform="translate(16, 260)">
+              <rect id="sdry_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#15803d">तनुकरण का स्वर्णिम नियम (Activity 2.10):</text>
+              <text id="sdry_panel_dil" x="14" y="50" font-size="16" font-weight="900" fill="#16a34a">जल में सदैव बूंद-बूंद अम्ल मिलाना चाहिए (हिलाते हुए)</text>
+              <text id="sdry_panel_dil_sub" x="14" y="74" font-size="12.5" font-weight="800" fill="#334155">अम्ल में जल कभी नहीं डालना चाहिए (अति ऊष्माक्षेपी / छलकने का खतरा)।</text>
+            </g>
+
+            <!-- Caution Rule Box -->
+            <g transform="translate(16, 358)">
+              <rect x="0" y="0" width="423" height="128" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">⚠️ प्रयोगशाला सुरक्षा चेतावनी (Golden Rule):</text>
+              <text x="211" y="52" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"Add Acid to Water, NOT Water to Acid!"</text>
+              <text x="211" y="76" font-size="12.5" font-weight="800" fill="#ef4444" text-anchor="middle">कारण: यदि सांद्र अम्ल में जल डालेंगे, तो उत्पन्न तीव्र ऊष्मा से मिश्रण</text>
+              <text x="211" y="98" font-size="12.5" font-weight="800" fill="#ef4444" text-anchor="middle">बाहर छलक (Splash) सकता है और कांच का पात्र टूट सकता है!</text>
+              <text x="211" y="118" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">तनुकरण से प्रति इकाई आयतन H₃O⁺ सांद्रता घटती है।</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="sdry_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> जनरेटर में ठोस NaCl व H₂SO₄ से शुष्क HCl गैस बन रही है। बटन 1 व 2 दबाकर शुष्क बनाम आर्द्र लिटमस पत्र का अंतर देखें।
+      </div>
+    </div>
+
     <div class="topic-heading-blue">
       <i class="fas fa-chart-line"></i> 6. pH पैमाना (pH Scale) एवं दैनिक जीवन में pH का महत्व
     </div>
@@ -2890,6 +3732,137 @@
     <!-- ===================================================================
          TOPIC 7: लवण परिवार एवं साधारण नमक से प्राप्त रसायन
          =================================================================== -->
+    <!-- ===================================================================
+         SIMULATOR 2.6B: दैनिक जीवन में pH का महत्व सिमुलेटर
+         =================================================================== -->
+    <div class="sim-card" id="sim2_phtruth_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-heartbeat" style="color: #16a34a;"></i>
+          <span>दैनिक जीवन में pH का महत्व एवं वैज्ञानिक उपचार — 16:9 इंटरैक्टिव सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>दैनिक जीवन में pH का महत्व (NCERT Core):</strong> हमारा शरीर 7.0 से 7.8 pH परास के बीच कार्य करता है। नीचे 4 प्रमुख वास्तविक जीवन स्थितियों (उदर में अम्लता, दंत क्षय, मधुमक्खी डंक व अम्लीय वर्षा) पर क्लिक करके देखें कि pH असंतुलन से क्या होता है और क्षारक से उपचार कैसे होता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="spht_btn1" style="background:#dc2626; color:#fff;" onclick="simPhTruthSelect('stomach')">
+          <i class="fas fa-capsules"></i> 1. उदर में अम्लता (Acidity) व ऐंटासिड
+        </button>
+        <button class="sim-btn" id="spht_btn2" style="background:#ea580c; color:#fff;" onclick="simPhTruthSelect('teeth')">
+          <i class="fas fa-tooth"></i> 2. दंत क्षय (pH < 5.5) व टूथपेस्ट
+        </button>
+        <button class="sim-btn" id="spht_btn3" style="background:#7c3aed; color:#fff;" onclick="simPhTruthSelect('sting')">
+          <i class="fas fa-bug"></i> 3. मधुमक्खी डंक व बेकिंग सोडा
+        </button>
+        <button class="sim-btn" id="spht_btn4" style="background:#0284c7; color:#fff;" onclick="simPhTruthSelect('rain')">
+          <i class="fas fa-cloud-showers-heavy"></i> 4. अम्लीय वर्षा (pH < 5.6) व उपचार
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simPhTruthReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_phtruth_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_phtruth_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <!-- 3D WORKBENCH / STAGE -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="#1e293b"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- CENTRAL INTERACTIVE GRAPHIC DISPLAY (X:100 to 650, Y:60 to 390) -->
+          <g id="spht_display_group" transform="translate(100, 60)">
+            <!-- Outer Stage Frame -->
+            <rect x="0" y="0" width="550" height="330" rx="16" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Sub-graphic: Stomach Acidity (Default) -->
+            <g id="spht_gfx_stomach">
+              <!-- Stomach Silhouette -->
+              <path d="M220,50 Q310,40 330,120 Q350,220 250,240 Q180,250 160,180 Q140,90 220,50 Z" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+              <!-- Acid Liquid in stomach -->
+              <path id="spht_stom_liq" d="M165,160 Q200,240 270,230 Q330,220 325,160 Z" fill="#ef4444" opacity="0.8" style="transition: fill 0.6s ease;"/>
+              <text id="spht_stom_ph_tag" x="250" y="195" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">HCl (pH ~ 1.4)</text>
+
+              <!-- Antacid Tablet coming in -->
+              <g id="spht_antacid_tab" transform="translate(170, 70)">
+                <ellipse cx="20" cy="20" rx="18" ry="12" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+                <text x="20" y="24" font-size="10" font-weight="900" fill="#059669" text-anchor="middle">Mg(OH)₂</text>
+                <text x="80" y="15" font-size="12" font-weight="900" fill="#15803d">ऐंटासिड (मिल्क ऑफ मैग्नीशिया)</text>
+                <text x="80" y="32" font-size="11" font-weight="800" fill="#475569">क्षारकीय दुर्बल लवण ➔ अम्ल उदासीन</text>
+              </g>
+            </g>
+
+            <!-- Graphic Title inside box -->
+            <rect x="20" y="15" width="510" height="34" rx="8" fill="#0f172a"/>
+            <text id="spht_gfx_title" x="275" y="38" font-size="15" font-weight="900" fill="#38bdf8" text-anchor="middle">स्थिति 1: उदर में अम्लता (Acidity) एवं ऐंटासिड द्वारा उदासीनीकरण</text>
+
+            <!-- Bottom Indicator Dial -->
+            <g transform="translate(40, 270)">
+              <rect x="0" y="0" width="470" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="70" y="26" font-size="13" font-weight="900" fill="#64748b">pH स्थिति:</text>
+              <rect id="spht_meter_bar" x="140" y="12" width="220" height="18" rx="6" fill="#ef4444" style="transition: all 0.5s ease;"/>
+              <text id="spht_meter_val" x="400" y="27" font-size="15" font-weight="900" fill="#dc2626">अत्यधिक अम्लीय (pH 1.4)</text>
+            </g>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="spht_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">🌟 दैनिक जीवन में pH का महत्व एवं वैज्ञानिक समाधान</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 NCERT बोर्ड परीक्षा मुख्य बिंदु</text>
+
+            <!-- Card 1: Scenario Details -->
+            <g transform="translate(16, 60)">
+              <rect id="spht_c1_bg" x="0" y="0" width="423" height="88" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#991b1b">चयनित स्थिति (Problem Scenario):</text>
+              <text id="spht_panel_prob" x="14" y="50" font-size="16" font-weight="900" fill="#b91c1c">अपच की स्थिति में पेट में अत्यधिक HCl बनना</text>
+              <text id="spht_panel_prob_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#7f1d1d">उदर में जलन तथा तीव्र दर्द का अनुभव होता है।</text>
+            </g>
+
+            <!-- Card 2: Treatment & Remedy -->
+            <g transform="translate(16, 158)">
+              <rect id="spht_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#15803d">वैज्ञानिक उपचार (Remedy / Solution):</text>
+              <text id="spht_panel_rem" x="14" y="50" font-size="16" font-weight="900" fill="#16a34a">ऐंटासिड: मिल्क ऑफ मैग्नीशिया [Mg(OH)₂] लेना</text>
+              <text id="spht_panel_rem_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#334155">दुर्बल क्षारक अतिरिक्त अम्ल को उदासीन करके राहत देता है।</text>
+            </g>
+
+            <!-- Card 3: Chemical Reaction -->
+            <g transform="translate(16, 256)">
+              <rect id="spht_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">उदासीनीकरण अभिक्रिया (Neutralization):</text>
+              <text id="spht_panel_rxn" x="14" y="50" font-size="15.5" font-weight="900" fill="#2563eb">Mg(OH)₂ + 2HCl ➔ MgCl₂ + 2H₂O</text>
+              <text id="spht_panel_rxn_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#0369a1">अम्ल + क्षारक ➔ उदासीन लवण + जल (pH संतुलन)</text>
+            </g>
+
+            <!-- 4 Facts Rule Box -->
+            <g transform="translate(16, 354)">
+              <rect x="0" y="0" width="423" height="132" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="24" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">⭐ 4 प्रमुख बोर्ड परीक्षा वस्तुनिष्ठ तथ्य (Must Know):</text>
+              <text x="211" y="48" font-size="12.5" font-weight="800" fill="#fde047" text-anchor="middle">1. मानव शरीर का सामान्य pH: 7.0 से 7.8 (संकीर्ण परास)</text>
+              <text x="211" y="70" font-size="12.5" font-weight="800" fill="#38bdf8" text-anchor="middle">2. दंत क्षय प्रारंभ: मुख का pH 5.5 से कम होने पर (इनेमल संक्षारण)</text>
+              <text x="211" y="92" font-size="12.5" font-weight="800" fill="#f472b6" text-anchor="middle">3. मधुमक्खी / चींटी डंक: मेथेनॉइक अम्ल ➔ बेकिंग सोडा (NaHCO₃) से राहत</text>
+              <text x="211" y="114" font-size="12.5" font-weight="800" fill="#e2e8f0" text-anchor="middle">4. अम्लीय वर्षा: वर्षा जल का pH < 5.6 ➔ जलीय जीव संकट</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="spht_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>उदर अम्लता चयनित:</strong> अपच में अत्यधिक HCl बनता है। ऐंटासिड [मिल्क ऑफ मैग्नीशिया - Mg(OH)₂] इसे उदासीन करता है। ऊपर से अन्य बटन दबाएं।
+      </div>
+    </div>
+
     <div class="topic-heading-green">
       <i class="fas fa-cubes"></i> 7. लवण परिवार एवं साधारण नमक (NaCl) से निर्मित महत्वपूर्ण औद्योगिक रसायन
     </div>
@@ -2905,6 +3878,155 @@
     </div>
 
     <!-- CHEMICAL 1: NaOH & CHLOR-ALKALI SIMULATOR -->
+    <!-- ===================================================================
+         SIMULATOR 2.7B: लवण परिवार की pH प्रकृति एवं जल-अपघटन (Activity 2.13)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_saltfam_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-cubes" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.13: विभिन्न लवण परिवारों के जलीय विलयनों का pH एवं जल-अपघटन — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
+      </div>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.13:</strong> सभी लवण उदासीन (pH 7) नहीं होते! लवण किस प्रकार के अम्ल और क्षारक से बना है, इस पर उसके जलीय विलयन का pH निर्भर करता है। नीचे दिए गए 4 लवणों के नमूने चुनकर उनका pH और प्रकृति देखें:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="ssalt_btn1" style="background:#10b981; color:#fff;" onclick="simSaltSelect('nacl')">
+          <i class="fas fa-vial"></i> 1. NaCl (सोडियम क्लोराइड — उदासीन pH 7)
+        </button>
+        <button class="sim-btn" id="ssalt_btn2" style="background:#dc2626; color:#fff;" onclick="simSaltSelect('nh4cl')">
+          <i class="fas fa-vial"></i> 2. NH₄Cl (अमोनियम क्लोराइड — अम्लीय pH 5)
+        </button>
+        <button class="sim-btn" id="ssalt_btn3" style="background:#7c3aed; color:#fff;" onclick="simSaltSelect('na2co3')">
+          <i class="fas fa-vial"></i> 3. Na₂CO₃ (सोडियम कार्बोनेट — क्षारकीय pH 9)
+        </button>
+        <button class="sim-btn" id="ssalt_btn4" style="background:#0284c7; color:#fff;" onclick="simSaltSelect('cuso4')">
+          <i class="fas fa-vial"></i> 4. CuSO₄ (कॉपर सल्फेट — अम्लीय pH 5.5)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simSaltReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_saltfam_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_saltfam_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="ssalt_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="ssalt_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#ssalt_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- 100 mL BEAKER WITH DISSOLVED SALT (X:140, Y:170) -->
+          <g transform="translate(140, 170)">
+            <rect id="ssalt_liquid" x="8" y="70" width="184" height="135" rx="8" fill="#dcfce7" opacity="0.8" style="transition: fill 0.6s ease;"/>
+            <!-- Glass Body -->
+            <rect x="5" y="10" width="190" height="200" rx="14" fill="url(#ssalt_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+            <line x1="5" y1="10" x2="195" y2="10" stroke="#0284c7" stroke-width="2.5"/>
+
+            <!-- Dipped pH Strip inside liquid -->
+            <g transform="translate(90, 30)">
+              <rect x="0" y="0" width="16" height="150" rx="3" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+              <!-- Active Indicator color pad at bottom of strip -->
+              <rect id="ssalt_strip_pad" x="0" y="100" width="16" height="50" rx="2" fill="#22c55e" style="transition: fill 0.5s ease;"/>
+            </g>
+
+            <!-- Beaker Label Badge -->
+            <rect x="20" y="220" width="160" height="34" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5" id="ssalt_beaker_badge"/>
+            <text id="ssalt_beaker_title" x="100" y="238" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">NaCl जलीय विलयन</text>
+            <text id="ssalt_beaker_sub" x="100" y="250" font-size="10.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">प्रबल अम्ल + प्रबल क्षारक</text>
+          </g>
+
+          <!-- DIGITAL pH METER & SCALE (X:390, Y:130) -->
+          <g transform="translate(390, 130)">
+            <!-- Outer Meter Box -->
+            <rect x="0" y="0" width="260" height="240" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="15" y="15" width="230" height="70" rx="8" fill="#020617" stroke="#1e293b" stroke-width="1.5"/>
+            <text x="30" y="40" font-size="12" font-weight="800" fill="#94a3b8">DIGITAL pH METER</text>
+            <text id="ssalt_digi_ph" x="130" y="70" font-size="34" font-weight="900" fill="#4ade80" text-anchor="middle">pH: 7.0</text>
+
+            <!-- Nature Pill -->
+            <rect id="ssalt_nature_pill" x="30" y="100" width="200" height="34" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="1.5"/>
+            <text id="ssalt_nature_txt" x="130" y="122" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">उदासीन लवण (Neutral)</text>
+
+            <!-- Parent Acid & Base Indicators -->
+            <rect x="15" y="150" width="230" height="75" rx="8" fill="#1e293b"/>
+            <text x="25" y="172" font-size="11" font-weight="800" fill="#94a3b8">जनक अम्ल (Parent Acid):</text>
+            <text id="ssalt_parent_acid" x="25" y="190" font-size="13" font-weight="900" fill="#f87171">HCl [प्रबल अम्ल]</text>
+
+            <text x="25" y="206" font-size="11" font-weight="800" fill="#94a3b8">जनक क्षारक (Parent Base):</text>
+            <text id="ssalt_parent_base" x="25" y="222" font-size="13" font-weight="900" fill="#60a5fa">NaOH [प्रबल क्षारक]</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="ssalt_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.13: लवणों की pH प्रकृति एवं जनक अम्ल/क्षारक</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 लवण वर्गीकरण एवं pH नियम तालिका</text>
+
+            <!-- Card 1: Active Salt Profile -->
+            <g transform="translate(16, 60)">
+              <rect id="ssalt_c1_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#15803d">परीक्षण लवण (Tested Salt):</text>
+              <text id="ssalt_panel_salt" x="14" y="50" font-size="17" font-weight="900" fill="#16a34a">NaCl (सोडियम क्लोराइड — साधारण नमक)</text>
+              <text id="ssalt_panel_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#334155">प्रबल अम्ल + प्रबल क्षारक के उदासीनीकरण से निर्मित।</text>
+            </g>
+
+            <!-- Card 2: Hydrolysis Equation -->
+            <g transform="translate(16, 158)">
+              <rect id="ssalt_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">निर्माण समीकरण (Synthesis):</text>
+              <text id="ssalt_panel_rxn" x="14" y="50" font-size="16" font-weight="900" fill="#2563eb">HCl(प्रबल) + NaOH(प्रबल) ➔ NaCl + H₂O</text>
+              <text id="ssalt_panel_rxn_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#0369a1">दोनों प्रबल होने के कारण विलयन पूर्णतः उदासीन (pH = 7) रहता है।</text>
+            </g>
+
+            <!-- Card 3: pH & Litmus Result -->
+            <g transform="translate(16, 256)">
+              <rect id="ssalt_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">pH मान एवं लिटमस पत्र प्रभाव:</text>
+              <text id="ssalt_panel_eff" x="14" y="50" font-size="16" font-weight="900" fill="#15803d">pH = 7 (उदासीन) — लिटमस पर कोई प्रभाव नहीं</text>
+              <text id="ssalt_panel_eff_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">सार्वत्रिक सूचक में हरा (Green) रंग प्रदर्शित करता है।</text>
+            </g>
+
+            <!-- Salt Family 4-Rule Summary Box -->
+            <g transform="translate(16, 354)">
+              <rect x="0" y="0" width="423" height="132" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="24" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">⭐ NCERT लवण pH वर्गीकरण के 4 अचूक नियम:</text>
+              <text x="211" y="48" font-size="12.5" font-weight="800" fill="#fde047" text-anchor="middle">1. प्रबल अम्ल + प्रबल क्षारक ➔ उदासीन लवण (pH = 7) [NaCl, KNO₃]</text>
+              <text x="211" y="70" font-size="12.5" font-weight="800" fill="#f87171" text-anchor="middle">2. प्रबल अम्ल + दुर्बल क्षारक ➔ अम्लीय लवण (pH < 7) [NH₄Cl, CuSO₄]</text>
+              <text x="211" y="92" font-size="12.5" font-weight="800" fill="#60a5fa" text-anchor="middle">3. दुर्बल अम्ल + प्रबल क्षारक ➔ क्षारकीय लवण (pH > 7) [Na₂CO₃, CH₃COONa]</text>
+              <text x="211" y="114" font-size="12.5" font-weight="800" fill="#c084fc" text-anchor="middle">4. दुर्बल अम्ल + दुर्बल क्षारक ➔ लगभग उदासीन (pH ~ 7) [CH₃COONH₄]</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="ssalt_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>NaCl चयनित:</strong> प्रबल अम्ल (HCl) व प्रबल क्षारक (NaOH) का लवण है, अतः pH = 7 (उदासीन)। ऊपर से NH₄Cl या Na₂CO₃ चुनकर अंतर देखें।
+      </div>
+    </div>
+
     <div class="definition-box" style="background:#ffffff; border:2px solid #cbd5e1; border-radius:12px; padding:20px; margin-bottom:24px;">
       <h3 style="color:#0f172a; font-size:22px; margin-bottom:10px;">
         1. सोडियम हाइड्रॉक्साइड (कास्टिक सोडा - NaOH) — क्लोर-क्षार प्रक्रिया (Chlor-Alkali Process)
@@ -4078,6 +5200,13 @@
 
       if (s === 1) {
         simCrystReset();
+      simOlfReset();
+      simZbReset();
+      simNeutReset();
+      simCuoReset();
+      simDryHclReset();
+      simPhTruthReset();
+      simSaltReset();
         if (pbar) pbar.style.width = '33%';
         if (st) st.innerHTML = '<strong>चरण 1:</strong> शुष्क क्वथन नली में नीले कॉपर सल्फेट के क्रिस्टल (CuSO₄·5H₂O) उपस्थित हैं। इसमें 5 अणु क्रिस्टलन का जल जुड़ा है।';
         var c1 = document.getElementById('scryst_c1_bg');
@@ -4389,6 +5518,585 @@
       simCondReset();
       simCrystReset();
     });
+
+
+/* ==========================================================
+       SIMULATOR 2.1B: NATURAL & OLFACTORY INDICATORS (Activity 2.2)
+       ========================================================== */
+    function simOlfReset() {
+      clearSimTimers('olf');
+      var st = document.getElementById('solf_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> हल्दी का पेस्ट चयनित है। क्षारक (साबुन) डालने पर यह लाल-भूरा हो जाता है। ऊपर से वैनिला या प्याज चुनकर गंध परिवर्तन देखें।';
+
+      simOlfSelect('turmeric');
+    }
+
+    function simOlfSelect(type) {
+      var dishA = document.getElementById('solf_dish_acid');
+      var dishB = document.getElementById('solf_dish_base');
+      var sampA = document.getElementById('solf_sample_acid');
+      var sampB = document.getElementById('solf_sample_base');
+      var lblA = document.getElementById('solf_lbl_acid');
+      var lblB = document.getElementById('solf_lbl_base');
+
+      var smellAcid = document.getElementById('solf_smell_acid');
+      var smellBaseCross = document.getElementById('solf_smell_base_cross');
+
+      var pName = document.getElementById('solf_panel_name');
+      var pSub = document.getElementById('solf_panel_sub');
+      var pAcid = document.getElementById('solf_panel_acid');
+      var pAcidSub = document.getElementById('solf_panel_acid_sub');
+      var pBase = document.getElementById('solf_panel_base');
+      var pBaseSub = document.getElementById('solf_panel_base_sub');
+      var st = document.getElementById('solf_status');
+
+      if (type === 'turmeric') {
+        if (dishA) dishA.setAttribute('fill', '#fef08a');
+        if (dishB) dishB.setAttribute('fill', '#991b1b');
+        if (sampA) sampA.setAttribute('fill', '#facc15');
+        if (sampB) sampB.setAttribute('fill', '#b91c1c');
+        if (lblA) lblA.textContent = 'रंग: पीला (यथावत)';
+        if (lblB) lblB.textContent = 'रंग: लाल-भूरा (परिवर्तन)';
+
+        if (smellAcid) smellAcid.style.opacity = '0';
+        if (smellBaseCross) smellBaseCross.style.opacity = '0';
+
+        if (pName) pName.textContent = 'हल्दी का पेस्ट (Turmeric - प्राकृतिक सूचक)';
+        if (pSub) pSub.textContent = 'घरेलू रसोई में प्रयुक्त प्राकृतिक रंजक।';
+        if (pAcid) pAcid.textContent = 'पीला रंग बना रहता है (कोई परिवर्तन नहीं)';
+        if (pAcidSub) pAcidSub.textContent = 'अम्लीय माध्यम हल्दी के पीले करक्यूमिन को नहीं बदलता।';
+        if (pBase) pBase.textContent = 'गहरा लाल-भूरा (Reddish-Brown) हो जाता है!';
+        if (pBaseSub) pBaseSub.textContent = 'साबुन क्षारीय होने से सफेद कपड़े पर हल्दी का दाग लाल-भूरा होता है।';
+        if (st) st.innerHTML = '<span style="color:#b45309;">✔ हल्दी:</span> अम्ल में पीली रहती है, क्षारक (साबुन घोल) डालने पर <strong>गहरा लाल-भूरा</strong> हो जाती है। पुनः नींबू (अम्ल) लगाने पर वापस पीली हो जाती है।';
+
+      } else if (type === 'cabbage') {
+        if (dishA) dishA.setAttribute('fill', '#fca5a5');
+        if (dishB) dishB.setAttribute('fill', '#86efac');
+        if (sampA) sampA.setAttribute('fill', '#ef4444');
+        if (sampB) sampB.setAttribute('fill', '#22c55e');
+        if (lblA) lblA.textContent = 'रंग: लाल / गुलाबी';
+        if (lblB) lblB.textContent = 'रंग: हरा / पीला';
+
+        if (smellAcid) smellAcid.style.opacity = '0';
+        if (smellBaseCross) smellBaseCross.style.opacity = '0';
+
+        if (pName) pName.textContent = 'लाल पत्तागोभी का रस (Red Cabbage - प्राकृतिक सूचक)';
+        if (pSub) pSub.textContent = 'एंथोसायनिन युक्त बैंगनी प्राकृतिक अर्क।';
+        if (pAcid) pAcid.textContent = 'लाल / गुलाबी (Red/Pink) रंग में बदलता है';
+        if (pAcidSub) pAcidSub.textContent = 'H⁺ आयन सांद्रता में यह लाल-गुलाबी रंग देता है।';
+        if (pBase) pBase.textContent = 'हरा / पीला (Green/Yellow) रंग देता है!';
+        if (pBaseSub) pBaseSub.textContent = 'OH⁻ आयनों की उपस्थिति में यह हरा हो जाता है।';
+        if (st) st.innerHTML = '<span style="color:#7c3aed;">✔ लाल पत्तागोभी रस:</span> अम्ल में <strong>लाल/गुलाबी</strong> तथा क्षारक में <strong>हरा</strong> रंग प्रदर्शित करता है।';
+
+      } else if (type === 'vanilla') {
+        if (dishA) dishA.setAttribute('fill', '#fef9c3');
+        if (dishB) dishB.setAttribute('fill', '#f1f5f9');
+        if (sampA) sampA.setAttribute('fill', '#fde047');
+        if (sampB) sampB.setAttribute('fill', '#cbd5e1');
+        if (lblA) lblA.textContent = 'गंध: मधुर वैनिला गंध सुरक्षित';
+        if (lblB) lblB.textContent = 'गंध: कोई गंध नहीं (नष्ट)';
+
+        if (smellAcid) smellAcid.style.opacity = '1';
+        if (smellBaseCross) smellBaseCross.style.opacity = '1';
+
+        if (pName) pName.textContent = 'वैनिला एसेंस (Vanilla - गंधीय सूचक)';
+        if (pSub) pSub.textContent = 'दृष्टिबाधित विद्यार्थियों के लिए गंधीय सूचक।';
+        if (pAcid) pAcid.textContent = 'वैनिला की सुवास बनी रहती है (सुरक्षित)';
+        if (pAcidSub) pAcidSub.textContent = 'तनु अम्ल वैनिला के गंध अणुओं को नष्ट नहीं करता।';
+        if (pBase) pBase.textContent = 'गंध पूर्णतः समाप्त (Destroyed) हो जाती है!';
+        if (pBaseSub) pBaseSub.textContent = 'NaOH क्षारक गंध यौगिक को अपघटित कर देता है।';
+        if (st) st.innerHTML = '<span style="color:#0284c7;">✔ वैनिला एसेंस (गंधीय सूचक):</span> अम्ल में इसकी <strong>मधुर गंध बनी रहती है</strong>, परंतु क्षारक (NaOH) मिलाने पर इसकी गंध <strong>पूरी तरह समाप्त</strong> हो जाती है!';
+
+      } else if (type === 'onion') {
+        if (dishA) dishA.setAttribute('fill', '#fce7f3');
+        if (dishB) dishB.setAttribute('fill', '#f1f5f9');
+        if (sampA) sampA.setAttribute('fill', '#f472b6');
+        if (sampB) sampB.setAttribute('fill', '#cbd5e1');
+        if (lblA) lblA.textContent = 'गंध: तीव्र प्याज गंध बनी रहती है';
+        if (lblB) lblB.textContent = 'गंध: प्याज की गंध गायब';
+
+        if (smellAcid) smellAcid.style.opacity = '1';
+        if (smellBaseCross) smellBaseCross.style.opacity = '1';
+
+        if (pName) pName.textContent = 'बारीक कटी प्याज की पट्टी (Onion Strip - गंधीय सूचक)';
+        if (pSub) pSub.textContent = 'सल्फर युक्त वाष्पशील गंध यौगिक।';
+        if (pAcid) pAcid.textContent = 'प्याज की तीखी गंध यथावत रहती है';
+        if (pAcidSub) pAcidSub.textContent = 'तनु HCl प्याज की गंध पर कोई प्रभाव नहीं डालता।';
+        if (pBase) pBase.textContent = 'प्याज की गंध नष्ट हो जाती है (कोई गंध नहीं)';
+        if (pBaseSub) pBaseSub.textContent = 'क्षारक के प्रभाव से सल्फर यौगिक उदासीन हो जाते हैं।';
+        if (st) st.innerHTML = '<span style="color:#be123c;">✔ प्याज की पट्टी (गंधीय सूचक):</span> अम्ल में <strong>तीव्र गंध बनी रहती है</strong>, जबकि क्षारक में <strong>गंध नष्ट हो जाती है</strong>!';
+      }
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.2B: BASE WITH METAL (Zn + NaOH -> Na2ZnO2 + H2) (Activity 2.4)
+       ========================================================== */
+    function simZbReset() {
+      clearSimTimers('zb');
+      var pbar = document.getElementById('szb_pbar'); if (pbar) pbar.style.width = '0%';
+      var st = document.getElementById('szb_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली में जिंक दाने व सांद्र NaOH विलयन तैयार है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर बर्नर तापन शुरू करें।';
+
+      var flame = document.getElementById('szb_flame'); if (flame) flame.style.opacity = '0';
+      var bub = document.getElementById('szb_bubbles'); if (bub) bub.style.opacity = '0';
+      var ris = document.getElementById('szb_rising_bubbles'); if (ris) ris.style.opacity = '0';
+      var candle = document.getElementById('szb_candle'); if (candle) candle.style.opacity = '0';
+      var pop = document.getElementById('szb_pop'); if (pop) pop.style.opacity = '0';
+
+      ['szb_c1_bg', 'szb_c2_bg', 'szb_c3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simZbStep(s) {
+      var pbar = document.getElementById('szb_pbar');
+      var st = document.getElementById('szb_status');
+
+      if (s === 1) {
+        simZbReset();
+        if (pbar) pbar.style.width = '25%';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली में दानेदार जस्ता (Zn) और 2 mL सांद्र NaOH विलयन उपस्थित है।';
+        var c1 = document.getElementById('szb_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#6366f1'); }
+
+      } else if (s === 2) {
+        if (pbar) pbar.style.width = '50%';
+        var flame = document.getElementById('szb_flame'); if (flame) flame.style.opacity = '1';
+        var bub = document.getElementById('szb_bubbles'); if (bub) bub.style.opacity = '1';
+
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> बर्नर की ज्वाला पर गर्म करते ही जिंक और NaOH की तीव्र अभिक्रिया से <strong>सोडियम जिंकेट (Na₂ZnO₂)</strong> बनता है तथा <strong>H₂ गैस</strong> निकलती है!';
+        var c1 = document.getElementById('szb_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#6366f1'); }
+
+      } else if (s === 3) {
+        if (pbar) pbar.style.width = '75%';
+        var ris = document.getElementById('szb_rising_bubbles'); if (ris) ris.style.opacity = '1';
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> H₂ गैस निकास नली द्वारा साबुन के घोल में प्रवाहित होकर <strong>साबुन के बुलबुलों</strong> के रूप में ऊपर उठती है (क्योंकि H₂ वायु से हल्की है)।';
+        var c2 = document.getElementById('szb_c2_bg');
+        if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
+
+      } else if (s === 4) {
+        if (pbar) pbar.style.width = '100%';
+        var candle = document.getElementById('szb_candle'); if (candle) candle.style.opacity = '1';
+        var pop = document.getElementById('szb_pop'); if (pop) pop.style.opacity = '1';
+
+        if (st) st.innerHTML = '<strong>चरण 4:</strong> जलती मोमबत्ती पास लाने पर H₂ गैस <strong>नीली ज्वाला व 💥 'पॉप' (POP) ध्वनि</strong> के साथ फटकर जलती है! यह सिद्ध करता है कि क्षारक भी धातु से H₂ गैस बनाते हैं।';
+        var c3 = document.getElementById('szb_c3_bg');
+        if (c3) { c3.setAttribute('fill', '#ecfdf5'); c3.setAttribute('stroke', '#10b981'); }
+      }
+    }
+
+    function simZbPlayAuto() {
+      simZbReset();
+      simZbStep(1);
+      addSimTimer('zb', setTimeout(function() { simZbStep(2); }, 1800));
+      addSimTimer('zb', setTimeout(function() { simZbStep(3); }, 4000));
+      addSimTimer('zb', setTimeout(function() { simZbStep(4); }, 6500));
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.4A: NEUTRALIZATION TITRATION (Activity 2.6)
+       ========================================================== */
+    function simNeutReset() {
+      clearSimTimers('neut');
+      var pbar = document.getElementById('sneut_pbar'); if (pbar) pbar.style.width = '0%';
+      var st = document.getElementById('sneut_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली में NaOH + फिनॉल्फथलीन से गहरा गुलाबी रंग है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर HCl मिलाएं।';
+
+      var liq = document.getElementById('sneut_liquid'); if (liq) liq.setAttribute('fill', '#f472b6');
+      var men = document.getElementById('sneut_meniscus'); if (men) men.setAttribute('fill', '#ec4899');
+      var drop = document.getElementById('sneut_drop'); if (drop) drop.style.opacity = '0';
+      var fSub = document.getElementById('sneut_flask_sub'); if (fSub) fSub.textContent = 'रंग: गहरा गुलाबी';
+      var ionR = document.getElementById('sneut_ion_right'); if (ionR) { ionR.textContent = 'OH⁻'; ionR.setAttribute('fill', '#fff'); }
+
+      var pColor = document.getElementById('sneut_panel_color');
+      if (pColor) pColor.textContent = 'प्रारंभ में: गहरा गुलाबी (क्षारकीय NaOH के कारण)';
+      var pColorSub = document.getElementById('sneut_panel_color_sub');
+      if (pColorSub) pColorSub.textContent = 'HCl डालने पर उदासीन होकर रंगहीन हो जाता है।';
+
+      ['sneut_c1_bg', 'sneut_c2_bg', 'sneut_c3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simNeutStep(s) {
+      var pbar = document.getElementById('sneut_pbar');
+      var st = document.getElementById('sneut_status');
+      var liq = document.getElementById('sneut_liquid');
+      var men = document.getElementById('sneut_meniscus');
+      var drop = document.getElementById('sneut_drop');
+      var fSub = document.getElementById('sneut_flask_sub');
+      var ionR = document.getElementById('sneut_ion_right');
+      var pColor = document.getElementById('sneut_panel_color');
+      var pColorSub = document.getElementById('sneut_panel_color_sub');
+
+      if (s === 1) {
+        simNeutReset();
+        if (pbar) pbar.style.width = '33%';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली में 2 mL तनु NaOH + 2 बूंद फिनॉल्फथलीन है। OH⁻ आयनों के कारण विलयन <strong>गहरा गुलाबी</strong> है।';
+        var c1 = document.getElementById('sneut_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#fdf2f8'); c1.setAttribute('stroke', '#f472b6'); }
+
+      } else if (s === 2) {
+        if (pbar) pbar.style.width = '66%';
+        if (drop) { drop.setAttribute('fill', '#ef4444'); drop.style.opacity = '1'; }
+        if (liq) liq.setAttribute('fill', '#f1f5f9');
+        if (men) men.setAttribute('fill', '#e2e8f0');
+        if (fSub) fSub.textContent = 'रंग: रंगहीन (उदासीन/अम्लीय)';
+        if (ionR) { ionR.textContent = 'Cl⁻'; }
+
+        if (pColor) pColor.textContent = 'HCl मिलाने पर: पूर्णतः रंगहीन (Colorless) ➔ उदासीन बिंदु';
+        if (pColorSub) pColorSub.textContent = 'अम्ल के H⁺ ने क्षारक के OH⁻ को उदासीन कर H₂O बना दिया।';
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> ड्रॉपर से तनु HCl मिलाते ही H⁺ और OH⁻ मिलकर जल (H₂O) बना लेते हैं। गुलाबी रंग <strong>पूर्णतः गायब (रंगहीन)</strong> हो जाता है — यह <strong>उदासीनीकरण</strong> है!';
+        var c2 = document.getElementById('sneut_c2_bg');
+        if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#3b82f6'); }
+
+      } else if (s === 3) {
+        if (pbar) pbar.style.width = '100%';
+        if (drop) { drop.setAttribute('fill', '#3b82f6'); drop.style.opacity = '1'; }
+        if (liq) liq.setAttribute('fill', '#f472b6');
+        if (men) men.setAttribute('fill', '#ec4899');
+        if (fSub) fSub.textContent = 'रंग: पुनः गहरा गुलाबी';
+        if (ionR) { ionR.textContent = 'OH⁻'; }
+
+        if (pColor) pColor.textContent = 'पुनः NaOH मिलाने पर: गुलाबी रंग पुनः लौट आया!';
+        if (pColorSub) pColorSub.textContent = 'विलयन पुनः क्षारकीय होने से फिनॉल्फथलीन गुलाबी हो गया।';
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> पुनः 1 बूंद NaOH मिलाने पर माध्यम फिर से क्षारकीय हो जाता है और <strong>गुलाबी रंग तुरंत वापस लौट आता है</strong>!';
+        var c3 = document.getElementById('sneut_c3_bg');
+        if (c3) { c3.setAttribute('fill', '#fdf2f8'); c3.setAttribute('stroke', '#db2777'); }
+      }
+    }
+
+    function simNeutPlayAuto() {
+      simNeutReset();
+      simNeutStep(1);
+      addSimTimer('neut', setTimeout(function() { simNeutStep(2); }, 2000));
+      addSimTimer('neut', setTimeout(function() { simNeutStep(3); }, 5000));
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.4B: METALLIC OXIDE + ACID (Activity 2.7)
+       ========================================================== */
+    function simCuoReset() {
+      clearSimTimers('cuo');
+      var pbar = document.getElementById('scuo_pbar'); if (pbar) pbar.style.width = '0%';
+      var st = document.getElementById('scuo_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> बीकर में काला कॉपर ऑक्साइड (CuO) उपस्थित है। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाकर तनु HCl मिलाएं।';
+
+      var liq = document.getElementById('scuo_liquid'); if (liq) liq.setAttribute('fill', '#e0f2fe');
+      var pow = document.getElementById('scuo_powder_group'); if (pow) pow.style.opacity = '1';
+      var acidSrc = document.getElementById('scuo_acid_source'); if (acidSrc) acidSrc.style.opacity = '0';
+      var bSub = document.getElementById('scuo_beaker_sub'); if (bSub) bSub.textContent = 'प्रारंभिक अवस्था (काला ठोस)';
+
+      ['scuo_c1_bg', 'scuo_c2_bg', 'scuo_c3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simCuoStep(s) {
+      var pbar = document.getElementById('scuo_pbar');
+      var st = document.getElementById('scuo_status');
+      var liq = document.getElementById('scuo_liquid');
+      var pow = document.getElementById('scuo_powder_group');
+      var acidSrc = document.getElementById('scuo_acid_source');
+      var bSub = document.getElementById('scuo_beaker_sub');
+
+      if (s === 1) {
+        simCuoReset();
+        if (pbar) pbar.style.width = '33%';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> बीकर में ठोस काला कॉपर ऑक्साइड (CuO) उपस्थित है।';
+        var c1 = document.getElementById('scuo_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#f0fdfa'); c1.setAttribute('stroke', '#14b8a6'); }
+
+      } else if (s === 2) {
+        if (pbar) pbar.style.width = '66%';
+        if (acidSrc) acidSrc.style.opacity = '1';
+        if (bSub) bSub.textContent = 'तनु HCl मिलाया जा रहा है...';
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> बीकर में धीरे-धीरे तनु HCl मिलाते हुए कांच की छड़ से हिलाया जा रहा है। अम्ल कॉपर ऑक्साइड से क्रिया प्रारंभ करता है।';
+        var c1 = document.getElementById('scuo_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#f0fdfa'); c1.setAttribute('stroke', '#14b8a6'); }
+
+      } else if (s === 3) {
+        if (pbar) pbar.style.width = '100%';
+        if (acidSrc) acidSrc.style.opacity = '0';
+        if (pow) pow.style.opacity = '0';
+        if (liq) liq.setAttribute('fill', '#06b6d4');
+        if (bSub) bSub.textContent = 'नीला-हरा CuCl₂ विलयन';
+
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> काला CuO पूरी तरह घुलकर विलीन हो जाता है और <strong>नीले-हरे (Blue-Green) रंग का कॉपर क्लोराइड [CuCl₂]</strong> विलयन बन जाता है! यह सिद्ध करता है कि धात्विक ऑक्साइड क्षारकीय होते हैं।';
+        var c2 = document.getElementById('scuo_c2_bg');
+        if (c2) { c2.setAttribute('fill', '#eff6ff'); c2.setAttribute('stroke', '#0284c7'); }
+      }
+    }
+
+    function simCuoPlayAuto() {
+      simCuoReset();
+      simCuoStep(1);
+      addSimTimer('cuo', setTimeout(function() { simCuoStep(2); }, 1800));
+      addSimTimer('cuo', setTimeout(function() { simCuoStep(3); }, 4500));
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.5B: DRY HCl GAS VS MOIST LITMUS & DILUTION (Activities 2.9 & 2.10)
+       ========================================================== */
+    function simDryHclReset() {
+      clearSimTimers('dry');
+      var st = document.getElementById('sdry_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> जनरेटर में ठोस NaCl व H₂SO₄ से शुष्क HCl गैस बन रही है। बटन 1 व 2 दबाकर शुष्क बनाम आर्द्र लिटमस पत्र का अंतर देखें।';
+
+      var paper = document.getElementById('sdry_paper'); if (paper) paper.setAttribute('fill', '#3b82f6');
+      var paperLbl = document.getElementById('sdry_paper_lbl'); if (paperLbl) paperLbl.textContent = 'शुष्क नीला लिटमस';
+      var moistDrops = document.getElementById('sdry_moist_drops'); if (moistDrops) moistDrops.style.opacity = '0';
+      var resTag = document.getElementById('sdry_res_txt'); if (resTag) resTag.textContent = 'कोई रंग परिवर्तन नहीं ❌';
+
+      var dilGfx = document.getElementById('sdry_dilution_graphic'); if (dilGfx) dilGfx.style.opacity = '0';
+      var splash = document.getElementById('sdry_splash'); if (splash) splash.style.opacity = '0';
+
+      ['sdry_c1_bg', 'sdry_c2_bg', 'sdry_c3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simDryHclStep(s) {
+      var st = document.getElementById('sdry_status');
+      var paper = document.getElementById('sdry_paper');
+      var paperLbl = document.getElementById('sdry_paper_lbl');
+      var moistDrops = document.getElementById('sdry_moist_drops');
+      var resTag = document.getElementById('sdry_res_txt');
+      var dilGfx = document.getElementById('sdry_dilution_graphic');
+      var splash = document.getElementById('sdry_splash');
+      var temp = document.getElementById('sdry_temp_txt');
+      var dilLbl = document.getElementById('sdry_dil_lbl');
+
+      if (s === 1) {
+        simDryHclReset();
+        if (paper) paper.setAttribute('fill', '#3b82f6');
+        if (paperLbl) paperLbl.textContent = 'शुष्क नीला लिटमस';
+        if (moistDrops) moistDrops.style.opacity = '0';
+        if (resTag) resTag.textContent = 'कोई रंग परिवर्तन नहीं ❌';
+
+        if (st) st.innerHTML = '<span style="color:#2563eb;">❌ शुष्क नीला लिटमस पत्र:</span> शुष्क HCl गैस के संपर्क में आने पर <strong>नीला ही रहता है</strong>, क्योंकि जल की अनुपस्थिति में HCl से H⁺/H₃O⁺ आयन नहीं बनते!';
+        var c2 = document.getElementById('sdry_c2_bg');
+        if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
+
+      } else if (s === 2) {
+        if (paper) paper.setAttribute('fill', '#ef4444');
+        if (paperLbl) paperLbl.textContent = 'आर्द्र नीला ➔ लाल!';
+        if (moistDrops) moistDrops.style.opacity = '1';
+        if (resTag) resTag.textContent = 'तुरंत लाल हो गया! ✔';
+
+        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ आर्द्र (गीला) नीला लिटमस पत्र:</span> जैसे ही गीले लिटमस को गैस के सामने लाते हैं, वह <strong>तत्काल लाल</strong> हो जाता है! नमी (H₂O) पाकर HCl टूटकर H₃O⁺ आयन देता है।';
+        var c1 = document.getElementById('sdry_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#2563eb'); }
+
+      } else if (s === 3) {
+        if (dilGfx) dilGfx.style.opacity = '1';
+        if (splash) splash.style.opacity = '0';
+        if (temp) temp.textContent = '45°C';
+        if (dilLbl) { dilLbl.textContent = 'जल में अम्ल (सुरक्षित)'; dilLbl.setAttribute('fill', '#86efac'); }
+
+        if (st) st.innerHTML = '<span style="color:#059669;">✔ सुरक्षित तनुकरण:</span> बीकर में लिए गए जल में <strong>बूंद-बूंद अम्ल</strong> मिलाते हुए लगातार हिलाते हैं। उत्पन्न ऊष्मा जल द्वारा धीरे-धीरे अवशोषित हो जाती है।';
+        var c3 = document.getElementById('sdry_c3_bg');
+        if (c3) { c3.setAttribute('fill', '#f0fdf4'); c3.setAttribute('stroke', '#16a34a'); }
+
+      } else if (s === 4) {
+        if (dilGfx) dilGfx.style.opacity = '1';
+        if (splash) splash.style.opacity = '1';
+        if (temp) temp.textContent = '95°C 🔥';
+        if (dilLbl) { dilLbl.textContent = '⚠️ अम्ल में जल (घातक!)'; dilLbl.setAttribute('fill', '#f87171'); }
+
+        if (st) st.innerHTML = '<span style="color:#b91c1c;">⚠️ घातक गलती (अम्ल में जल):</span> सांद्र अम्ल में जल डालने पर स्थानीय स्तर पर अत्यधिक ऊष्मा उत्पन्न होती है, जिससे मिश्रण <strong>उबलकर बाहर छलक (Splash)</strong> सकता है और त्वचा जल सकती है!';
+        var c3 = document.getElementById('sdry_c3_bg');
+        if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
+      }
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.6B: pH IN EVERYDAY LIFE
+       ========================================================== */
+    function simPhTruthReset() {
+      clearSimTimers('phtruth');
+      var st = document.getElementById('spht_status');
+      if (st) st.innerHTML = '<strong>उदर अम्लता चयनित:</strong> अपच में अत्यधिक HCl बनता है। ऐंटासिड [मिल्क ऑफ मैग्नीशिया - Mg(OH)₂] इसे उदासीन करता है। ऊपर से अन्य बटन दबाएं।';
+      simPhTruthSelect('stomach');
+    }
+
+    function simPhTruthSelect(type) {
+      var gTitle = document.getElementById('spht_gfx_title');
+      var mBar = document.getElementById('spht_meter_bar');
+      var mVal = document.getElementById('spht_meter_val');
+      var pProb = document.getElementById('spht_panel_prob');
+      var pProbSub = document.getElementById('spht_panel_prob_sub');
+      var pRem = document.getElementById('spht_panel_rem');
+      var pRemSub = document.getElementById('spht_panel_rem_sub');
+      var pRxn = document.getElementById('spht_panel_rxn');
+      var pRxnSub = document.getElementById('spht_panel_rxn_sub');
+      var st = document.getElementById('spht_status');
+
+      if (type === 'stomach') {
+        if (gTitle) gTitle.textContent = 'स्थिति 1: उदर में अम्लता (Acidity) एवं ऐंटासिड द्वारा उदासीनीकरण';
+        if (mBar) { mBar.setAttribute('fill', '#ef4444'); mBar.setAttribute('width', '180'); }
+        if (mVal) { mVal.textContent = 'अत्यधिक अम्लीय (pH 1.4)'; mVal.setAttribute('fill', '#dc2626'); }
+
+        if (pProb) pProb.textContent = 'अपच की स्थिति में पेट में अत्यधिक HCl बनना';
+        if (pProbSub) pProbSub.textContent = 'उदर में जलन तथा तीव्र दर्द का अनुभव होता है।';
+        if (pRem) pRem.textContent = 'ऐंटासिड: मिल्क ऑफ मैग्नीशिया [Mg(OH)₂] लेना';
+        if (pRemSub) pRemSub.textContent = 'दुर्बल क्षारक अतिरिक्त अम्ल को उदासीन करके राहत देता है।';
+        if (pRxn) pRxn.textContent = 'Mg(OH)₂ + 2HCl ➔ MgCl₂ + 2H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'अम्ल + क्षारक ➔ उदासीन लवण + जल (pH संतुलन)';
+        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ उदर अम्लता:</span> अपच में पेट में अत्यधिक HCl बनने से जलन होती है। दुर्बल क्षारक <strong>मिल्क ऑफ मैग्नीशिया [Mg(OH)₂]</strong> अतिरिक्त अम्ल को उदासीन कर तुरंत राहत देता है।';
+
+      } else if (type === 'teeth') {
+        if (gTitle) gTitle.textContent = 'स्थिति 2: दंत क्षय (Tooth Decay) — मुख का pH < 5.5 होना व टूथपेस्ट';
+        if (mBar) { mBar.setAttribute('fill', '#f97316'); mBar.setAttribute('width', '120'); }
+        if (mVal) { mVal.textContent = 'संक्षारक अम्लीय (pH 5.2)'; mVal.setAttribute('fill', '#ea580c'); }
+
+        if (pProb) pProb.textContent = 'मुख का pH 5.5 से कम होने पर दांतों का इनेमल गलना';
+        if (pProbSub) pProbSub.textContent = 'इनेमल (कैल्शियम हाइड्रॉक्सीएपैटाइट) शरीर का सबसे कठोर पदार्थ है।';
+        if (pRem) pRem.textContent = 'क्षारकीय दंतमंजन (Toothpaste) द्वारा ब्रशिंग';
+        if (pRemSub) pRemSub.textContent = 'टूथपेस्ट क्षारकीय (pH ~8.0) होता है जो अम्ल को उदासीन करता है।';
+        if (pRxn) pRxn.textContent = 'Acid(मुख जीवाणु) + Base(टूथपेस्ट) ➔ उदासीन';
+        if (pRxnSub) pRxnSub.textContent = 'भोजन के बाद कुल्ला व ब्रश करने से दंत क्षय रुक जाता है।';
+        if (st) st.innerHTML = '<span style="color:#ea580c;">✔ दंत क्षय:</span> मुख में उपस्थित बैक्टीरिया शर्करा को अम्ल में बदलते हैं। जब pH <strong>5.5 से कम</strong> होता है, तो इनेमल संक्षारित होने लगता है। <strong>क्षारकीय टूथपेस्ट</strong> इसे रोकता है।';
+
+      } else if (type === 'sting') {
+        if (gTitle) gTitle.textContent = 'स्थिति 3: मधुमक्खी / चींटी का डंक — मेथेनॉइक अम्ल व बेकिंग सोडा';
+        if (mBar) { mBar.setAttribute('fill', '#a855f7'); mBar.setAttribute('width', '140'); }
+        if (mVal) { mVal.textContent = 'डंक का विषैला अम्ल (pH 3.5)'; mVal.setAttribute('fill', '#7c3aed'); }
+
+        if (pProb) pProb.textContent = 'मधुमक्खी/चींटी के डंक में मेथेनॉइक अम्ल (फॉर्मिक अम्ल)';
+        if (pProbSub) pProbSub.textContent = 'त्वचा में प्रवेश करने पर तीव्र जलन और सूजन होती है।';
+        if (pRem) pRem.textContent = 'दुर्बल क्षारक: बेकिंग सोडा (NaHCO₃) या डाक की पत्ती';
+        if (pRemSub) pRemSub.textContent = 'क्षारक लगाने पर अम्ल उदासीन होकर दर्द में राहत मिलती है।';
+        if (pRxn) pRxn.textContent = 'HCOOH (मेथेनॉइक) + NaHCO₃ ➔ HCOONa + H₂O + CO₂';
+        if (pRxnSub) pRxnSub.textContent = 'नेटल (Nettle) पौधे के डंक वाले बालों में भी मेथेनॉइक अम्ल होता है।';
+        if (st) st.innerHTML = '<span style="color:#7c3aed;">✔ मधुमक्खी का डंक:</span> डंक में <strong>मेथेनॉइक अम्ल</strong> होता है। डंक मारे गए स्थान पर <strong>बेकिंग सोडा (NaHCO₃)</strong> का पेस्ट लगाने से तुरंत राहत मिलती है।';
+
+      } else if (type === 'rain') {
+        if (gTitle) gTitle.textContent = 'स्थिति 4: अम्लीय वर्षा (Acid Rain) — pH < 5.6 व चूने द्वारा उपचार';
+        if (mBar) { mBar.setAttribute('fill', '#0284c7'); mBar.setAttribute('width', '110'); }
+        if (mVal) { mVal.textContent = 'अम्लीय वर्षा (pH 5.4)'; mVal.setAttribute('fill', '#0369a1'); }
+
+        if (pProb) pProb.textContent = 'वर्षा जल का pH 5.6 से कम होना (SO₂ व NO₂ के कारण)';
+        if (pProbSub) pProbSub.textContent = 'नदी-तालाबों में मिलने पर जलीय जीवों का जीवन कठिन हो जाता है।';
+        if (pRem) pRem.textContent = 'जलाशयों में बुझा चूना [Ca(OH)₂] या चूना पत्थर मिलाना';
+        if (pRemSub) pRemSub.textContent = 'क्षारकीय चूना जल की अतिरिक्त अम्लता को उदासीन करता है।';
+        if (pRxn) pRxn.textContent = 'H₂SO₄(अम्लीय वर्षा) + Ca(OH)₂ ➔ CaSO₄ + 2H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'मृदा में अम्लता बढ़ने पर किसान खेत में बिना बुझा चूना (CaO) डालते हैं।';
+        if (st) st.innerHTML = '<span style="color:#0284c7;">✔ अम्लीय वर्षा:</span> जब वर्षा जल का pH <strong>5.6 से कम</strong> होता है, तो उसे अम्लीय वर्षा कहते हैं। इसके दुष्प्रभाव से जलीय जीवों व फसलों को बचाने हेतु <strong>चूना [Ca(OH)₂]</strong> मिलाया जाता है।';
+      }
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.7B: SALT FAMILY pH & HYDROLYSIS (Activity 2.13)
+       ========================================================== */
+    function simSaltReset() {
+      clearSimTimers('salt');
+      var st = document.getElementById('ssalt_status');
+      if (st) st.innerHTML = '<strong>NaCl चयनित:</strong> प्रबल अम्ल (HCl) व प्रबल क्षारक (NaOH) का लवण है, अतः pH = 7 (उदासीन)। ऊपर से NH₄Cl या Na₂CO₃ चुनकर अंतर देखें।';
+      simSaltSelect('nacl');
+    }
+
+    function simSaltSelect(type) {
+      var liq = document.getElementById('ssalt_liquid');
+      var pad = document.getElementById('ssalt_strip_pad');
+      var digiPh = document.getElementById('ssalt_digi_ph');
+      var nPill = document.getElementById('ssalt_nature_pill');
+      var nTxt = document.getElementById('ssalt_nature_txt');
+      var pAcid = document.getElementById('ssalt_parent_acid');
+      var pBase = document.getElementById('ssalt_parent_base');
+      var bTitle = document.getElementById('ssalt_beaker_title');
+      var bSub = document.getElementById('ssalt_beaker_sub');
+
+      var pSalt = document.getElementById('ssalt_panel_salt');
+      var pSub = document.getElementById('ssalt_panel_sub');
+      var pRxn = document.getElementById('ssalt_panel_rxn');
+      var pRxnSub = document.getElementById('ssalt_panel_rxn_sub');
+      var pEff = document.getElementById('ssalt_panel_eff');
+      var pEffSub = document.getElementById('ssalt_panel_eff_sub');
+      var st = document.getElementById('ssalt_status');
+
+      if (type === 'nacl') {
+        if (liq) liq.setAttribute('fill', '#dcfce7');
+        if (pad) pad.setAttribute('fill', '#22c55e');
+        if (digiPh) { digiPh.textContent = 'pH: 7.0'; digiPh.setAttribute('fill', '#4ade80'); }
+        if (nPill) { nPill.setAttribute('fill', '#14532d'); nPill.setAttribute('stroke', '#22c55e'); }
+        if (nTxt) { nTxt.textContent = 'उदासीन लवण (Neutral)'; nTxt.setAttribute('fill', '#86efac'); }
+        if (pAcid) pAcid.textContent = 'HCl [प्रबल अम्ल]';
+        if (pBase) pBase.textContent = 'NaOH [प्रबल क्षारक]';
+        if (bTitle) bTitle.textContent = 'NaCl जलीय विलयन';
+        if (bSub) bSub.textContent = 'प्रबल अम्ल + प्रबल क्षारक';
+
+        if (pSalt) pSalt.textContent = 'NaCl (सोडियम क्लोराइड — साधारण नमक)';
+        if (pSub) pSub.textContent = 'प्रबल अम्ल + प्रबल क्षारक के उदासीनीकरण से निर्मित।';
+        if (pRxn) pRxn.textContent = 'HCl(प्रबल) + NaOH(प्रबल) ➔ NaCl + H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'दोनों प्रबल होने के कारण विलयन पूर्णतः उदासीन (pH = 7) रहता है।';
+        if (pEff) pEff.textContent = 'pH = 7 (उदासीन) — लिटमस पर कोई प्रभाव नहीं';
+        if (pEffSub) pEffSub.textContent = 'सार्वत्रिक सूचक में हरा (Green) रंग प्रदर्शित करता है।';
+        if (st) st.innerHTML = '<span style="color:#15803d;">✔ NaCl (साधारण नमक):</span> <strong>pH = 7 (उदासीन)</strong> क्योंकि यह प्रबल अम्ल (HCl) और प्रबल क्षारक (NaOH) से बना है।';
+
+      } else if (type === 'nh4cl') {
+        if (liq) liq.setAttribute('fill', '#fee2e2');
+        if (pad) pad.setAttribute('fill', '#f87171');
+        if (digiPh) { digiPh.textContent = 'pH: 5.2'; digiPh.setAttribute('fill', '#f87171'); }
+        if (nPill) { nPill.setAttribute('fill', '#7f1d1d'); nPill.setAttribute('stroke', '#ef4444'); }
+        if (nTxt) { nTxt.textContent = 'अम्लीय लवण (Acidic Salt)'; nTxt.setAttribute('fill', '#fca5a5'); }
+        if (pAcid) pAcid.textContent = 'HCl [प्रबल अम्ल]';
+        if (pBase) pBase.textContent = 'NH₄OH [दुर्बल क्षारक]';
+        if (bTitle) bTitle.textContent = 'NH₄Cl जलीय विलयन';
+        if (bSub) bSub.textContent = 'प्रबल अम्ल + दुर्बल क्षारक';
+
+        if (pSalt) pSalt.textContent = 'NH₄Cl (अमोनियम क्लोराइड — नौसादर)';
+        if (pSub) pSub.textContent = 'प्रबल अम्ल (HCl) + दुर्बल क्षारक (NH₄OH) से निर्मित।';
+        if (pRxn) pRxn.textContent = 'HCl(प्रबल) + NH₄OH(दुर्बल) ➔ NH₄Cl + H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'प्रबल अम्ल का प्रभाव हावी रहने से जलीय विलयन अम्लीय (pH < 7) होता है।';
+        if (pEff) pEff.textContent = 'pH = 5.2 (अम्लीय) — नीला लिटमस लाल हो जाता है';
+        if (pEffSub) pEffSub.textContent = 'सार्वत्रिक सूचक में नारंगी/पीला रंग देता है।';
+        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ NH₄Cl (अमोनियम क्लोराइड):</span> <strong>pH = 5.2 (अम्लीय लवण)</strong> क्योंकि यह प्रबल अम्ल (HCl) और दुर्बल क्षारक (NH₄OH) से बना है। नीला लिटमस लाल हो जाता है!';
+
+      } else if (type === 'na2co3') {
+        if (liq) liq.setAttribute('fill', '#ede9fe');
+        if (pad) pad.setAttribute('fill', '#a855f7');
+        if (digiPh) { digiPh.textContent = 'pH: 9.0'; digiPh.setAttribute('fill', '#c084fc'); }
+        if (nPill) { nPill.setAttribute('fill', '#581c87'); nPill.setAttribute('stroke', '#a855f7'); }
+        if (nTxt) { nTxt.textContent = 'क्षारकीय लवण (Basic Salt)'; nTxt.setAttribute('fill', '#e9d5ff'); }
+        if (pAcid) pAcid.textContent = 'H₂CO₃ [दुर्बल कार्बोनिक अम्ल]';
+        if (pBase) pBase.textContent = 'NaOH [प्रबल क्षारक]';
+        if (bTitle) bTitle.textContent = 'Na₂CO₃ जलीय विलयन';
+        if (bSub) bSub.textContent = 'दुर्बल अम्ल + प्रबल क्षारक';
+
+        if (pSalt) pSalt.textContent = 'Na₂CO₃ (सोडियम कार्बोनेट / धावन सोडा)';
+        if (pSub) pSub.textContent = 'दुर्बल अम्ल (H₂CO₃) + प्रबल क्षारक (NaOH) से निर्मित।';
+        if (pRxn) pRxn.textContent = 'H₂CO₃(दुर्बल) + 2NaOH(प्रबल) ➔ Na₂CO₃ + 2H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'प्रबल क्षारक का प्रभाव हावी रहने से जलीय विलयन क्षारकीय (pH > 7) होता है।';
+        if (pEff) pEff.textContent = 'pH = 9.0 (क्षारकीय) — लाल लिटमस नीला हो जाता है';
+        if (pEffSub) pEffSub.textContent = 'फिनॉल्फथलीन में हल्का गुलाबी रंग प्रदर्शित करता है।';
+        if (st) st.innerHTML = '<span style="color:#7c3aed;">✔ Na₂CO₃ (सोडियम कार्बोनेट):</span> <strong>pH = 9.0 (क्षारकीय लवण)</strong> क्योंकि यह दुर्बल अम्ल (H₂CO₃) और प्रबल क्षारक (NaOH) से बना है। लाल लिटमस को नीला करता है!';
+
+      } else if (type === 'cuso4') {
+        if (liq) liq.setAttribute('fill', '#e0f2fe');
+        if (pad) pad.setAttribute('fill', '#38bdf8');
+        if (digiPh) { digiPh.textContent = 'pH: 5.5'; digiPh.setAttribute('fill', '#38bdf8'); }
+        if (nPill) { nPill.setAttribute('fill', '#0c4a6e'); nPill.setAttribute('stroke', '#0284c7'); }
+        if (nTxt) { nTxt.textContent = 'अम्लीय लवण (Acidic Salt)'; nTxt.setAttribute('fill', '#7dd3fc'); }
+        if (pAcid) pAcid.textContent = 'H₂SO₄ [प्रबल सल्फ्यूरिक अम्ल]';
+        if (pBase) pBase.textContent = 'Cu(OH)₂ [दुर्बल कॉपर हाइड्रॉक्साइड]';
+        if (bTitle) bTitle.textContent = 'CuSO₄ जलीय विलयन';
+        if (bSub) bSub.textContent = 'प्रबल अम्ल + दुर्बल क्षारक';
+
+        if (pSalt) pSalt.textContent = 'CuSO₄ (कॉपर सल्फेट — नीला थोथा)';
+        if (pSub) pSub.textContent = 'प्रबल अम्ल (H₂SO₄) + दुर्बल क्षारक [Cu(OH)₂] से निर्मित।';
+        if (pRxn) pRxn.textContent = 'H₂SO₄(प्रबल) + Cu(OH)₂(दुर्बल) ➔ CuSO₄ + 2H₂O';
+        if (pRxnSub) pRxnSub.textContent = 'जल-अपघटन के पश्चात जलीय विलयन अम्लीय प्रकृति का होता है।';
+        if (pEff) pEff.textContent = 'pH = 5.5 (अम्लीय) — नीला लिटमस हल्का लाल';
+        if (pEffSub) pEffSub.textContent = 'कॉपर आयन के कारण विलयन स्वयं हल्का नीला होता है।';
+        if (st) st.innerHTML = '<span style="color:#0284c7;">✔ CuSO₄ (कॉपर सल्फेट):</span> <strong>pH = 5.5 (अम्लीय लवण)</strong> क्योंकि यह प्रबल अम्ल (H₂SO₄) और दुर्बल क्षारक [Cu(OH)₂] से बना है।';
+      }
+    }
 </script>
 </body>
 </html>
