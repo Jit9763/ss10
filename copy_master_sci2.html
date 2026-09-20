@@ -1593,21 +1593,207 @@
       </table>
     </div>
 
-    <!-- Image Placeholder 1: Indicators -->
-    <div class="image-placeholder-card" style="margin: 28px 0; background: #ffffff; border: 2.5px dashed #0284c7; border-radius: 16px; padding: 22px; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span style="background: #e0f2fe; color: #0284c7; font-weight: 900; font-size: 15px; padding: 5px 14px; border-radius: 8px; border: 1.5px solid #7dd3fc;">
-          🖼️ चित्र प्लेसहोल्डर 2.1 (16:9 आरेख)
-        </span>
-        <span style="font-size: 14px; font-weight: 800; color: #64748b;">NCERT क्रियाकलाप 2.1 सूचक रंग परीक्षण</span>
+    <!-- ===================================================================
+         SIMULATOR 2.1: अम्ल एवं क्षारक सूचक रंग परीक्षण लैब (Indicators Lab)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_ind_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-vial" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.1: विभिन्न सूचकों द्वारा अम्ल व क्षारक की पहचान व रंग परिवर्तन — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">[शीर्षक: विभिन्न प्राकृतिक व संश्लेषित सूचकों का अम्ल तथा क्षारक में रंग परिवर्तन स्पेक्ट्रम]</h4>
-      <p style="font-size: 17px; color: #334155; line-height: 1.6; margin-bottom: 12px;"><strong>चित्र विवरण (Visual Description):</strong> एक आधुनिक विज्ञान प्रयोगशाला बेंच पर वॉच-ग्लास व परखनलियों की पंक्ति। एक ओर हाइड्रोक्लोरिक अम्ल (HCl) और दूसरी ओर सोडियम हाइड्रॉक्साइड (NaOH) विलयन। ड्रॉपर से नीला लिटमस (लाल होते हुए), लाल लिटमस (नीला होते हुए), फिनॉल्फथलीन (क्षार में गहरा गुलाबी) तथा मेथिल ऑरेंज (अम्ल में लाल व क्षार में पीला) के रंग परिवर्तन स्पष्ट कांच की परखनलियों में अति-स्वच्छ 2D वेक्टर शैली में दर्शाए गए हैं।</p>
-      <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
-        <div style="font-size: 13px; font-weight: 900; color: #059669; margin-bottom: 4px;">🎨 AI Image Generation Prompt:</div>
-        <code style="font-size: 14px; color: #0f172a; font-family: monospace; display: block; word-break: break-word; line-height: 1.5;">
-          A clean, high-contrast 2D educational textbook vector diagram on a crisp white background with 16:9 aspect ratio. The diagram shows NCERT Class 10 Chemistry Activity 2.1: Acid and Base Indicator Testing. Laboratory test tubes arranged in a sleek rack: Blue litmus turning red in acid, red litmus turning blue in alkali, phenolphthalein turning vibrant pink in sodium hydroxide solution, and methyl orange turning reddish in acid and yellow in base. Pipettes adding drops into transparent borosilicate glassware. Minimalist flat vector style, bold Hindi and English scientific labels, vivid contrasting colors, clean scientific textbook quality --ar 16:9
-        </code>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.1:</strong> विज्ञान प्रयोगशाला में 4 परखनलियों में अम्ल व क्षारक के नमूने [तनु HCl, तनु H₂SO₄, तनु NaOH, तनु Ca(OH)₂] रखे गए हैं। नीचे दिए गए विभिन्न सूचकों के बटन दबाकर देखें कि विलयनों के रंग में क्या परिवर्तन होता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="sind_btn_blue" style="background:#2563eb; color:#fff;" onclick="simIndTest('blue')">
+          <i class="fas fa-tint"></i> 1. नीला लिटमस (Blue Litmus)
+        </button>
+        <button class="sim-btn" id="sind_btn_red" style="background:#dc2626; color:#fff;" onclick="simIndTest('red')">
+          <i class="fas fa-tint"></i> 2. लाल लिटमस (Red Litmus)
+        </button>
+        <button class="sim-btn" id="sind_btn_phen" style="background:#db2777; color:#fff;" onclick="simIndTest('phen')">
+          <i class="fas fa-eye-dropper"></i> 3. फिनॉल्फथलीन (Phenolphthalein)
+        </button>
+        <button class="sim-btn" id="sind_btn_meth" style="background:#ea580c; color:#fff;" onclick="simIndTest('meth')">
+          <i class="fas fa-flask"></i> 4. मेथिल ऑरेंज (Methyl Orange)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simIndReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_ind_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_ind_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="sind_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="sind_rackWood" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#78350f"/>
+            </linearGradient>
+            <linearGradient id="sind_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+
+          <!-- LIGHT GREEN LAB BACKGROUND -->
+          <rect x="0" y="0" width="1200" height="540" fill="transparent"/>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,400 710,400 680,480 20,480" fill="url(#sind_benchTop)"/>
+          <rect x="20" y="480" width="660" height="40" fill="#0f172a"/>
+
+          <!-- TEST TUBE WOODEN/ACRYLIC RACK -->
+          <rect x="70" y="360" width="580" height="24" rx="5" fill="url(#sind_rackWood)"/>
+          <rect x="70" y="430" width="580" height="20" rx="4" fill="url(#sind_rackWood)"/>
+          <!-- Rack pillars -->
+          <rect x="85" y="240" width="18" height="190" fill="#78350f"/>
+          <rect x="615" y="240" width="18" height="190" fill="#78350f"/>
+          <rect x="70" y="235" width="580" height="16" rx="4" fill="#92400e"/>
+
+          <!-- ================= 4 TEST TUBES ================= -->
+
+          <!-- TUBE 1: HCl (Acid) -->
+          <g id="sind_tube1_group" transform="translate(130, 160)">
+            <rect id="sind_liq1" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
+            <!-- Meniscus curve -->
+            <ellipse id="sind_meniscus1" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <!-- Glass Body -->
+            <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Rim lip -->
+            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Indicator test strip dipped -->
+            <rect id="sind_strip1" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <!-- Label Badge -->
+            <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="35" y="262" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">तनु HCl</text>
+            <text x="35" y="275" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">(प्रबल अम्ल)</text>
+          </g>
+
+          <!-- TUBE 2: H2SO4 (Acid) -->
+          <g id="sind_tube2_group" transform="translate(270, 160)">
+            <rect id="sind_liq2" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
+            <ellipse id="sind_meniscus2" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+            <rect id="sind_strip2" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="35" y="262" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">तनु H₂SO₄</text>
+            <text x="35" y="275" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">(सल्फ्यूरिक अम्ल)</text>
+          </g>
+
+          <!-- TUBE 3: NaOH (Base) -->
+          <g id="sind_tube3_group" transform="translate(410, 160)">
+            <rect id="sind_liq3" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
+            <ellipse id="sind_meniscus3" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+            <rect id="sind_strip3" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+            <text x="35" y="262" font-size="14" font-weight="900" fill="#a78bfa" text-anchor="middle">तनु NaOH</text>
+            <text x="35" y="275" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">(प्रबल क्षारक)</text>
+          </g>
+
+          <!-- TUBE 4: Ca(OH)2 (Base) -->
+          <g id="sind_tube4_group" transform="translate(550, 160)">
+            <rect id="sind_liq4" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
+            <ellipse id="sind_meniscus4" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
+            <rect x="5" y="10" width="60" height="225" rx="12" fill="url(#sind_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+            <rect id="sind_strip4" x="30" y="40" width="10" height="120" rx="2" fill="#cbd5e1" opacity="0" style="transition: all 0.4s ease;"/>
+            <rect x="-15" y="245" width="100" height="34" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+            <text x="35" y="262" font-size="13" font-weight="900" fill="#a78bfa" text-anchor="middle">Ca(OH)₂</text>
+            <text x="35" y="275" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">(चूने का पानी)</text>
+          </g>
+
+          <!-- DROPPERS ANIMATION GROUP -->
+          <g id="sind_dropper_group" transform="translate(340, 50)" opacity="0" style="transition: all 0.4s ease;">
+            <rect x="12" y="0" width="16" height="55" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+            <polygon points="12,55 28,55 20,75" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+            <path d="M10,0 Q20,-18 30,0 Z" fill="#ef4444"/>
+            <circle id="sind_drop" cx="20" cy="90" r="5" fill="#ef4444"/>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(70, 45)">
+            <rect x="0" y="0" width="580" height="42" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="sind_lab_title" x="290" y="27" font-size="16" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.1: सूचक रंग परीक्षण लैब — कोई सूचक चुनें</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 25)">
+            <!-- Outer Box -->
+            <rect x="0" y="0" width="455" height="490" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 NCERT 2.1 प्रेक्षण तालिका (Observation Table)</text>
+
+            <!-- Table Header -->
+            <rect x="14" y="60" width="427" height="30" rx="6" fill="#0f172a"/>
+            <text x="80" y="80" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">विलयन नमूना</text>
+            <text x="185" y="80" font-size="13" font-weight="900" fill="#fde047" text-anchor="middle">लिटमस</text>
+            <text x="290" y="80" font-size="13" font-weight="900" fill="#f472b6" text-anchor="middle">फिनॉल्फथलीन</text>
+            <text x="385" y="80" font-size="13" font-weight="900" fill="#fb923c" text-anchor="middle">मेथिल ऑरेंज</text>
+
+            <!-- Table Row 1: HCl -->
+            <rect id="sind_row1" x="14" y="95" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+            <text x="80" y="119" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">1. तनु HCl</text>
+            <text id="sind_t1_lit" x="185" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">नीला ➔ लाल</text>
+            <text id="sind_t1_ph" x="290" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">रंगहीन</text>
+            <text id="sind_t1_mo" x="385" y="119" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल / नारंगी</text>
+
+            <!-- Table Row 2: H2SO4 -->
+            <rect id="sind_row2" x="14" y="138" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+            <text x="80" y="162" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">2. तनु H₂SO₄</text>
+            <text id="sind_t2_lit" x="185" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">नीला ➔ लाल</text>
+            <text id="sind_t2_ph" x="290" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">रंगहीन</text>
+            <text id="sind_t2_mo" x="385" y="162" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल / नारंगी</text>
+
+            <!-- Table Row 3: NaOH -->
+            <rect id="sind_row3" x="14" y="181" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+            <text x="80" y="205" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">3. तनु NaOH</text>
+            <text id="sind_t3_lit" x="185" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल ➔ नीला</text>
+            <text id="sind_t3_ph" x="290" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">गहरा गुलाबी</text>
+            <text id="sind_t3_mo" x="385" y="205" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">पीला</text>
+
+            <!-- Table Row 4: Ca(OH)2 -->
+            <rect id="sind_row4" x="14" y="224" width="427" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+            <text x="80" y="248" font-size="13.5" font-weight="900" fill="#0f172a" text-anchor="middle">4. Ca(OH)₂</text>
+            <text id="sind_t4_lit" x="185" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">लाल ➔ नीला</text>
+            <text id="sind_t4_ph" x="290" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">गहरा गुलाबी</text>
+            <text id="sind_t4_mo" x="385" y="248" font-size="13" font-weight="800" fill="#64748b" text-anchor="middle">पीला</text>
+
+            <!-- Active Indicator Detail Box -->
+            <g transform="translate(14, 272)">
+              <rect id="sind_detail_bg" x="0" y="0" width="427" height="110" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text id="sind_detail_title" x="14" y="26" font-size="15" font-weight="900" fill="#15803d">सक्रिय सूचक: कोई सूचक चुनें</text>
+              <text id="sind_detail_desc1" x="14" y="52" font-size="13.5" font-weight="800" fill="#1e293b">ऊपर दिए गए 4 सूचक बटनों में से किसी एक पर क्लिक करें।</text>
+              <text id="sind_detail_desc2" x="14" y="76" font-size="13" font-weight="800" fill="#475569">अम्ल व क्षारक के साथ सूचक के विशिष्ट रंग परिवर्तन का अध्ययन करें।</text>
+              <text id="sind_detail_desc3" x="14" y="98" font-size="12.5" font-weight="900" fill="#0369a1">प्रकृति: अम्ल (H⁺ आयन) | क्षारक (OH⁻ आयन)</text>
+            </g>
+
+            <!-- Bottom Scientific Rule Pill -->
+            <g transform="translate(14, 394)">
+              <rect x="0" y="0" width="427" height="82" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.5"/>
+              <text x="213" y="26" font-size="14" font-weight="900" fill="#86efac" text-anchor="middle">⭐ बोर्ड परीक्षा स्मृति सूत्र (Memory Trick):</text>
+              <text x="213" y="48" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"अम्ल नीले को लाल करता है (अनिल: अ = अम्ल, नि = नीला, ल = लाल)"</text>
+              <text x="213" y="70" font-size="13" font-weight="800" fill="#f472b6" text-anchor="middle">"क्षारक लाल को नीला व फिनॉल्फथलीन को गहरा गुलाबी करता है।"</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="sind_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> 4 परखनलियों में अम्ल (HCl, H₂SO₄) तथा क्षारक [NaOH, Ca(OH)₂] रखे हैं। ऊपर से कोई भी सूचक बटन दबाएं।
       </div>
     </div>
 
@@ -1649,7 +1835,7 @@
     </div>
 
     <!-- ===================================================================
-         SIMULATOR 2.1: अम्ल की धातु से क्रिया व H₂ गैस का POP परीक्षण
+         SIMULATOR 2.2: अम्ल की धातु से क्रिया व H₂ गैस का POP परीक्षण
          =================================================================== -->
     <div class="sim-card" id="sim2_1_box">
       <div class="sim-header">
@@ -1926,21 +2112,215 @@
       </p>
     </div>
 
-    <!-- Image Placeholder 2: Carbonate Activity -->
-    <div class="image-placeholder-card" style="margin: 28px 0; background: #ffffff; border: 2.5px dashed #0284c7; border-radius: 16px; padding: 22px; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span style="background: #e0f2fe; color: #0284c7; font-weight: 900; font-size: 15px; padding: 5px 14px; border-radius: 8px; border: 1.5px solid #7dd3fc;">
-          🖼️ चित्र प्लेसहोल्डर 2.2 (16:9 आरेख)
-        </span>
-        <span style="font-size: 14px; font-weight: 800; color: #64748b;">NCERT क्रियाकलाप 2.5 CO₂ परीक्षण</span>
+    <!-- ===================================================================
+         SIMULATOR 2.3: धातु कार्बोनेट की अम्ल से क्रिया व चूने के पानी का दूधिया होना
+         =================================================================== -->
+    <div class="sim-card" id="sim2_carb_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-flask" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.5: धातु कार्बोनेट पर अम्ल की क्रिया एवं चूने के पानी का दूधिया होना — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">[शीर्षक: सोडियम कार्बोनेट पर तनु HCl की क्रिया तथा उत्पन्न CO₂ गैस द्वारा चूने के पानी का दूधिया होना]</h4>
-      <p style="font-size: 17px; color: #334155; line-height: 1.6; margin-bottom: 12px;"><strong>चित्र विवरण (Visual Description):</strong> दो परखनलियों वाली प्रायोगिक व्यवस्था। पहली परखनली में नीचे ठोस Na₂CO₃ और थिसिल कीप से तनु HCl डाला जा रहा है। परखनली में तीव्र झाग व बुदबुदाहट के साथ CO₂ गैस बनती है जो कांच की निकास नली से दूसरी परखनली में रखे स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित होती है। दूसरी परखनली का रंग धीरे-धीरे दूधिया सफेद अवक्षेप (CaCO₃) में बदलता हुआ दर्शाया गया है। सभी लेबल स्पष्ट रूप से अंकित हैं।</p>
-      <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
-        <div style="font-size: 13px; font-weight: 900; color: #059669; margin-bottom: 4px;">🎨 AI Image Generation Prompt:</div>
-        <code style="font-size: 14px; color: #0f172a; font-family: monospace; display: block; word-break: break-word; line-height: 1.5;">
-          A clean, scientific 2D educational textbook vector illustration on a white background with 16:9 aspect ratio. The diagram depicts NCERT Class 10 Chemistry Activity 2.5: Passing carbon dioxide gas through lime water. Test tube A contains sodium carbonate reacting vigorously with dilute hydrochloric acid added via a thistle funnel, producing frothy bubbles of carbon dioxide gas. A curved glass delivery tube routes the gas into test tube B containing calcium hydroxide (clear lime water), which turns turbid milky white due to calcium carbonate precipitate. Minimalist flat vector art, clinical lighting, clear dual-language labels (Hindi/English), crisp sharp line-work --ar 16:9
-        </code>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.5:</strong> क्वथन नली A में सोडियम कार्बोनेट (Na₂CO₃) लेकर थिसिल कीप से तनु HCl मिलाते हैं। उत्पन्न गैस को निकास नली द्वारा परखनली B में रखे स्वच्छ चूने के पानी [Ca(OH)₂] में प्रवाहित करते हैं। देखें कि चूने का पानी दूधिया क्यों होता है और अधिक CO₂ डालने पर क्या होता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="scarb_play_btn" style="background:#16a34a; color:#fff;" onclick="simCarbPlayAuto()">
+          <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
+        </button>
+        <button class="sim-btn secondary" id="scarb_btn1" onclick="simCarbStep(1)">
+          1. उपकरण व्यवस्था व Na₂CO₃
+        </button>
+        <button class="sim-btn warning" id="scarb_btn2" onclick="simCarbStep(2)">
+          2. तनु HCl मिलाना व CO₂ बुदबुदाहट
+        </button>
+        <button class="sim-btn" id="scarb_btn3" style="background:#2563eb; color:#fff;" onclick="simCarbStep(3)">
+          3. चूने का पानी दूधिया होना (CaCO₃)
+        </button>
+        <button class="sim-btn success" id="scarb_btn4" style="background:#7c3aed; color:#fff;" onclick="simCarbStep(4)">
+          4. अत्यधिक CO₂ प्रवाहित करना (दूधियापन गायब)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simCarbReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="scarb_pbar"></div></div>
+
+      <div class="sim-stage" id="sim2_carb_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_carb_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="scarb_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="scarb_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+            <filter id="scarb_blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scarb_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- STAND 1 (LEFT for Boiling Tube A) -->
+          <g transform="translate(60, 110)">
+            <rect x="20" y="320" width="160" height="24" rx="4" fill="#334155"/>
+            <rect x="95" y="20" width="10" height="300" fill="#64748b"/>
+            <rect x="90" y="100" width="80" height="8" fill="#475569"/>
+            <path d="M165,85 L180,85 L180,125 L165,125" fill="none" stroke="#334155" stroke-width="4"/>
+          </g>
+
+          <!-- BOILING TUBE A (Na2CO3 + HCl) -->
+          <g transform="translate(230, 150)">
+            <!-- Liquid in Tube A -->
+            <rect id="scarb_liq_a" x="6" y="110" width="68" height="110" rx="8" fill="#e0f2fe" opacity="0.8"/>
+            <!-- Solid Na2CO3 crystals at bottom -->
+            <ellipse cx="40" cy="210" rx="30" ry="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <text x="40" y="208" font-size="11" font-weight="900" fill="#475569" text-anchor="middle">Na₂CO₃ ठोस</text>
+
+            <!-- Effervescence Bubbles in Tube A -->
+            <g id="scarb_bubbles_a" opacity="0">
+              <circle cx="25" cy="190" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="50" cy="180" r="4.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="35" cy="160" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="55" cy="145" r="3" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="30" cy="130" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="45" cy="120" r="3.5" fill="#ffffff" stroke="#38bdf8" stroke-width="1"/>
+              <text x="40" y="150" font-size="12" font-weight="900" fill="#0284c7" text-anchor="middle">CO₂ बुदबुदाहट</text>
+            </g>
+
+            <!-- Glass Body -->
+            <rect x="5" y="10" width="70" height="210" rx="14" fill="url(#scarb_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <!-- Cork with two holes -->
+            <polygon points="5,10 75,10 70,-15 10,-15" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+
+            <!-- THISTLE FUNNEL (थिसिल कीप) Dipping into bottom -->
+            <path d="M22,-15 L22,190" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+            <!-- Thistle Top cup -->
+            <polygon points="12,-45 32,-45 25,-15 19,-15" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+            <!-- Acid drops falling down funnel -->
+            <g id="scarb_acid_drops" opacity="0">
+              <circle cx="22" cy="-25" r="2.5" fill="#38bdf8"/>
+              <circle cx="22" cy="50" r="2.5" fill="#38bdf8"/>
+              <circle cx="22" cy="130" r="2.5" fill="#38bdf8"/>
+            </g>
+
+            <!-- Label -->
+            <rect x="-10" y="235" width="100" height="34" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="252" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">परखनली (A)</text>
+            <text x="40" y="265" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">Na₂CO₃ + HCl</text>
+          </g>
+
+          <!-- BENT DELIVERY TUBE (कांच की निकास नली) -->
+          <g id="scarb_delivery_tube">
+            <path d="M280,135 L280,75 Q280,60 295,60 L500,60 Q515,60 515,75 L515,280" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+            <path d="M280,135 L280,75 Q280,60 295,60 L500,60 Q515,60 515,75 L515,280" fill="none" stroke="#e0f2fe" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Gas Flow pulse dots -->
+            <g id="scarb_gas_flow" opacity="0">
+              <circle cx="280" cy="100" r="3" fill="#ffffff"/>
+              <circle cx="350" cy="60" r="3" fill="#ffffff"/>
+              <circle cx="430" cy="60" r="3" fill="#ffffff"/>
+              <circle cx="515" cy="150" r="3" fill="#ffffff"/>
+              <circle cx="515" cy="220" r="3" fill="#ffffff"/>
+            </g>
+          </g>
+
+          <!-- STAND 2 (RIGHT for Test Tube B) -->
+          <g transform="translate(420, 160)">
+            <rect x="20" y="270" width="140" height="20" rx="4" fill="#334155"/>
+            <rect x="85" y="10" width="8" height="260" fill="#64748b"/>
+            <rect x="80" y="90" width="65" height="7" fill="#475569"/>
+            <path d="M140,78 L152,78 L152,112 L140,112" fill="none" stroke="#334155" stroke-width="3"/>
+          </g>
+
+          <!-- TEST TUBE B (Lime Water) -->
+          <g transform="translate(560, 200)">
+            <!-- Liquid in Tube B (Lime water) -->
+            <rect id="scarb_lime_liq" x="6" y="50" width="58" height="130" rx="8" fill="#e0f2fe" opacity="0.6" style="transition: all 0.6s ease;"/>
+            <!-- Milky cloudiness overlay -->
+            <rect id="scarb_milky_cloud" x="6" y="50" width="58" height="130" rx="8" fill="#ffffff" opacity="0" filter="url(#scarb_blur)" style="transition: all 0.7s ease;"/>
+            <!-- Bubbles in Lime water -->
+            <g id="scarb_bubbles_b" opacity="0">
+              <circle cx="25" cy="140" r="3" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="45" cy="120" r="3.5" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="28" cy="95" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="42" cy="70" r="3.5" fill="#ffffff" stroke="#0284c7" stroke-width="0.8"/>
+            </g>
+
+            <!-- Glass Body -->
+            <rect x="5" y="10" width="60" height="175" rx="12" fill="url(#scarb_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <ellipse cx="35" cy="10" rx="33" ry="5" fill="#f8fafc" stroke="#0284c7" stroke-width="2.2"/>
+
+            <!-- Status Tag above Tube B -->
+            <rect id="scarb_b_tag" x="-20" y="-35" width="110" height="28" rx="6" fill="#0f172a" stroke="#cbd5e1" stroke-width="1.2"/>
+            <text id="scarb_b_text" x="35" y="-17" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">स्वच्छ चूने का पानी</text>
+
+            <!-- Label -->
+            <rect x="-15" y="195" width="100" height="34" rx="6" fill="#0f172a" stroke="#facc15" stroke-width="1.5"/>
+            <text x="35" y="212" font-size="14" font-weight="900" fill="#fde047" text-anchor="middle">परखनली (B)</text>
+            <text x="35" y="225" font-size="11" font-weight="800" fill="#cbd5e1" text-anchor="middle">Ca(OH)₂ विलयन</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 25)">
+            <rect x="0" y="0" width="600" height="42" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="scarb_lab_title" x="300" y="27" font-size="15.5" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.5: CO₂ गैस व चूने के पानी का परीक्षण</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 लाइव प्रेक्षण एवं रासायनिक समीकरण</text>
+
+            <!-- Card 1: Reaction in Tube A -->
+            <g transform="translate(16, 60)">
+              <rect id="scarb_card1_bg" x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">1. परखनली (A) में रासायनिक अभिक्रिया:</text>
+              <text x="14" y="48" font-size="15" font-weight="900" fill="#0369a1">Na₂CO₃ + 2HCl ➔ 2NaCl + H₂O + CO₂↑</text>
+              <text id="scarb_c1_sub" x="14" y="70" font-size="12.5" font-weight="800" fill="#64748b">सोडियम कार्बोनेट पर अम्ल डालने पर तीव्र बुदबुदाहट के साथ CO₂ बनती है।</text>
+            </g>
+
+            <!-- Card 2: Lime Water Turning Milky -->
+            <g transform="translate(16, 155)">
+              <rect id="scarb_card2_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#854d0e">2. चूने का पानी दूधिया होना (Milky Appearance):</text>
+              <text x="14" y="48" font-size="15" font-weight="900" fill="#b45309">Ca(OH)₂ + CO₂ ➔ CaCO₃↓ (श्वेत अवक्षेप) + H₂O</text>
+              <text id="scarb_c2_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">अघुलनशील कैल्शियम कार्बोनेट बनने से चूने का पानी दूधिया हो जाता है।</text>
+            </g>
+
+            <!-- Card 3: Excess CO2 Effect -->
+            <g transform="translate(16, 257)">
+              <rect id="scarb_card3_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">3. अत्यधिक CO₂ प्रवाहित करने पर (Excess CO₂):</text>
+              <text x="14" y="48" font-size="14.5" font-weight="900" fill="#2563eb">CaCO₃ + H₂O + CO₂ ➔ Ca(HCO₃)₂(aq) [विलेय]</text>
+              <text id="scarb_c3_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">जल में विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट बनने से दूधियापन गायब हो जाता है।</text>
+            </g>
+
+            <!-- Summary Classification Box -->
+            <g transform="translate(16, 360)">
+              <rect x="0" y="0" width="423" height="120" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">✔ कार्बन डाइऑक्साइड (CO₂) गैस का मानक परीक्षण</text>
+              <text x="211" y="50" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">धातु कार्बोनेट / हाइड्रोजनकार्बोनेट + अम्ल ➔ लवण + जल + CO₂↑</text>
+              <text x="211" y="74" font-size="12.5" font-weight="800" fill="#38bdf8" text-anchor="middle">चूने के पानी को दूधिया करना केवल CO₂ की विशिष्ट पहचान है।</text>
+              <text x="211" y="98" font-size="12" font-weight="800" fill="#e2e8f0" text-anchor="middle">संगमरमर, चूना-पत्थर, खड़िया (Chalk) = CaCO₃ के विविध रूप</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="scarb_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> परखनली (A) में ठोस Na₂CO₃ व परखनली (B) में स्वच्छ चूने का पानी तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।
       </div>
     </div>
 
@@ -2029,21 +2409,242 @@
       </div>
     </div>
 
-    <!-- Image Placeholder 3: Acid Conduction -->
-    <div class="image-placeholder-card" style="margin: 28px 0; background: #ffffff; border: 2.5px dashed #0284c7; border-radius: 16px; padding: 22px; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span style="background: #e0f2fe; color: #0284c7; font-weight: 900; font-size: 15px; padding: 5px 14px; border-radius: 8px; border: 1.5px solid #7dd3fc;">
-          🖼️ चित्र प्लेसहोल्डर 2.3 (16:9 आरेख)
-        </span>
-        <span style="font-size: 14px; font-weight: 800; color: #64748b;">NCERT क्रियाकलाप 2.9 विद्युत चालकता</span>
+    <!-- ===================================================================
+         SIMULATOR 2.4: अम्लीय जलीय विलयन में विद्युत चालन प्रयोग
+         =================================================================== -->
+    <div class="sim-card" id="sim2_cond_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-bolt" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.8: जलीय विलयनों में विद्युत चालन एवं आयनीकरण परीक्षण — 16:9 लैब सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">[शीर्षक: अम्लीय विलयन में विद्युत चालन प्रयोग (HCl बनाम ग्लूकोज बल्ब परीक्षण)]</h4>
-      <p style="font-size: 17px; color: #334155; line-height: 1.6; margin-bottom: 12px;"><strong>चित्र विवरण (Visual Description):</strong> एक 100 mL के बीकर में कॉर्क पर गड़ी दो लोहे की कीलें। बीकर में तनु हाइड्रोक्लोरिक अम्ल (HCl) का विलयन भरा है। कीलों को तारों द्वारा 6 वोल्ट की बैटरी, एक स्विच तथा एक प्रकाशमान चमकते हुए पीले बल्ब से जोड़ा गया है। बल्ब के ऊपर 'बल्ब जलता है (H⁺ आयन द्वारा चालन)' का स्पष्ट लेबल है। पास ही दूसरे बीकर में ग्लूकोज विलयन में बल्ब बुझा हुआ दिखाया गया है।</p>
-      <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
-        <div style="font-size: 13px; font-weight: 900; color: #059669; margin-bottom: 4px;">🎨 AI Image Generation Prompt:</div>
-        <code style="font-size: 14px; color: #0f172a; font-family: monospace; display: block; word-break: break-word; line-height: 1.5;">
-          A crisp 2D educational vector science diagram on a white background with 16:9 aspect ratio. Diagram depicts NCERT Class 10 Chemistry Activity 2.9: Electrical conductivity of acids in aqueous solution. A glass beaker contains dilute HCl solution with two iron nails fixed on a rubber cork. Connected in series with insulated wires, a 6V battery, a key/switch, and an illuminated glowing incandescent bulb. Clear contrast showing free H+ and Cl- ions in solution conducting electricity. Clean textbook infographic style, vivid sharp lines, bilingual Hindi/English annotations --ar 16:9
-        </code>
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.8:</strong> 100 mL के बीकर में रबर कॉर्क पर दो लोहे की कीलें लगाकर उन्हें 6V बैटरी, स्विच तथा एक बल्ब से जोड़ते हैं। बीकर में विभिन्न विलयन डालकर स्विच ऑन करके देखें कि किस विलयन में बल्ब जलता है और क्यों:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="scond_btn_hcl" style="background:#dc2626; color:#fff;" onclick="simCondSelect('hcl')">
+          <i class="fas fa-lightbulb"></i> 1. तनु HCl (अम्ल) 💡
+        </button>
+        <button class="sim-btn" id="scond_btn_h2so4" style="background:#ea580c; color:#fff;" onclick="simCondSelect('h2so4')">
+          <i class="fas fa-lightbulb"></i> 2. तनु H₂SO₄ (अम्ल) 💡
+        </button>
+        <button class="sim-btn" id="scond_btn_gluc" style="background:#64748b; color:#fff;" onclick="simCondSelect('glucose')">
+          <i class="fas fa-ban"></i> 3. ग्लूकोज (C₆H₁₂O₆) ❌
+        </button>
+        <button class="sim-btn" id="scond_btn_alc" style="background:#64748b; color:#fff;" onclick="simCondSelect('alcohol')">
+          <i class="fas fa-ban"></i> 4. ऐल्कोहॉल (C₂H₅OH) ❌
+        </button>
+        <button class="sim-btn" id="scond_btn_naoh" style="background:#7c3aed; color:#fff;" onclick="simCondSelect('naoh')">
+          <i class="fas fa-lightbulb"></i> 5. तनु NaOH (क्षारक) 💡
+        </button>
+        <button class="sim-btn" style="background:#475569; color:#fff;" onclick="simCondReset()">
+          <i class="fas fa-power-off"></i> स्विच ऑफ / रीसेट
+        </button>
+      </div>
+
+      <div class="sim-stage" id="sim2_cond_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_cond_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="scond_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="scond_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+            <radialGradient id="scond_bulbGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="35%" stop-color="#fef08a"/>
+              <stop offset="70%" stop-color="#eab308" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#ca8a04" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="scond_glowBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scond_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- 6V BATTERY (TOP LEFT) -->
+          <g transform="translate(70, 70)">
+            <rect x="0" y="10" width="110" height="70" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <rect x="15" y="0" width="20" height="10" fill="#dc2626" rx="2"/>
+            <rect x="75" y="0" width="20" height="10" fill="#0284c7" rx="2"/>
+            <text x="25" y="-3" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">+</text>
+            <text x="85" y="-3" font-size="14" font-weight="900" fill="#0284c7" text-anchor="middle">-</text>
+            <text x="55" y="45" font-size="16" font-weight="900" fill="#f8fafc" text-anchor="middle">6 V बैटरी</text>
+            <text x="55" y="65" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="middle">DC स्रोत</text>
+          </g>
+
+          <!-- SWITCH / KEY (TOP CENTER) -->
+          <g transform="translate(260, 80)">
+            <rect x="0" y="0" width="80" height="40" rx="6" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="5" fill="#e2e8f0"/>
+            <circle cx="60" cy="20" r="5" fill="#e2e8f0"/>
+            <!-- Switch arm: closed (0 deg) or open (-30 deg) -->
+            <line id="scond_switch_arm" x1="20" y1="20" x2="58" y2="20" stroke="#facc15" stroke-width="4" stroke-linecap="round" style="transition: all 0.3s ease;"/>
+            <text id="scond_switch_label" x="40" y="55" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">स्विच: ON</text>
+          </g>
+
+          <!-- BULB ASSEMBLY (TOP RIGHT) -->
+          <g id="scond_bulb_assembly" transform="translate(430, 45)">
+            <!-- Outer Bulb Glow (Active when bulb ON) -->
+            <circle id="scond_bulb_glow" cx="50" cy="50" r="60" fill="url(#scond_bulbGlow)" opacity="1" filter="url(#scond_glowBlur)" style="transition: opacity 0.3s ease;"/>
+            <!-- Glow Rays -->
+            <g id="scond_bulb_rays" opacity="1" style="transition: opacity 0.3s ease;">
+              <line x1="50" y1="-5" x2="50" y2="-20" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="95" y1="20" x2="110" y2="10" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="105" y1="50" x2="120" y2="50" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="5" y1="20" x2="-10" y2="10" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="-5" y1="50" x2="-20" y2="50" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+            </g>
+
+            <!-- Bulb Glass Dome -->
+            <circle cx="50" cy="50" r="30" fill="#fef08a" stroke="#ca8a04" stroke-width="2" id="scond_bulb_glass" style="transition: all 0.3s ease;"/>
+            <!-- Filament -->
+            <path id="scond_filament" d="M42,65 L44,45 L48,40 L52,40 L56,45 L58,65" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" style="transition: stroke 0.3s ease;"/>
+            <!-- Socket Base -->
+            <rect x="38" y="75" width="24" height="18" rx="2" fill="#64748b"/>
+            <line x1="38" y1="80" x2="62" y2="80" stroke="#475569" stroke-width="1.5"/>
+            <line x1="38" y1="86" x2="62" y2="86" stroke="#475569" stroke-width="1.5"/>
+
+            <text id="scond_bulb_status_txt" x="50" y="112" font-size="13" font-weight="900" fill="#ca8a04" text-anchor="middle">बल्ब: जल रहा है 💡</text>
+          </g>
+
+          <!-- CIRCUIT CONNECTING WIRES -->
+          <!-- Wire 1: Battery + (X:95, Y:70) to Switch (X:280, Y:100) -->
+          <path d="M95,70 L95,50 L260,50 L280,100" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wire 2: Switch (X:320, Y:100) to Bulb (X:468, Y:130) -->
+          <path d="M320,100 L370,50 L468,50 L468,130" fill="none" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wire 3: Bulb other terminal to Right Nail (X:395, Y:270) -->
+          <path d="M492,130 L550,130 L550,220 L395,220 L395,270" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+          <!-- Wire 4: Battery - (X:155, Y:70) to Left Nail (X:285, Y:270) -->
+          <path d="M155,70 L155,220 L285,220 L285,270" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+
+          <!-- ================= 100 mL BEAKER WITH CORK & NAILS ================= -->
+          <g transform="translate(190, 180)">
+            <!-- Solution Liquid in Beaker -->
+            <rect id="scond_liquid" x="8" y="70" width="204" height="145" rx="8" fill="#bae6fd" opacity="0.8" style="transition: fill 0.5s ease;"/>
+
+            <!-- Floating Ions / Molecules Animation Group -->
+            <g id="scond_ions_group">
+              <!-- Positive ions H+ -->
+              <circle cx="45" cy="110" r="11" fill="#3b82f6"/>
+              <text x="45" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+
+              <circle cx="85" cy="140" r="11" fill="#3b82f6"/>
+              <text x="85" y="144" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+
+              <circle cx="140" cy="100" r="11" fill="#3b82f6"/>
+              <text x="140" y="104" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+
+              <!-- Negative ions Cl- -->
+              <circle cx="65" cy="170" r="12" fill="#10b981"/>
+              <text x="65" y="174" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+
+              <circle cx="165" cy="150" r="12" fill="#10b981"/>
+              <text x="165" y="154" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+            </g>
+
+            <!-- Bubbles near nails when current flows -->
+            <g id="scond_nail_bubbles" opacity="1">
+              <circle cx="93" cy="160" r="2.5" fill="#ffffff"/>
+              <circle cx="97" cy="140" r="3" fill="#ffffff"/>
+              <circle cx="203" cy="160" r="2.5" fill="#ffffff"/>
+              <circle cx="207" cy="140" r="3" fill="#ffffff"/>
+            </g>
+
+            <!-- Rubber Cork at Bottom -->
+            <rect x="50" y="180" width="120" height="35" rx="6" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+            <text x="110" y="202" font-size="12" font-weight="900" fill="#fde047" text-anchor="middle">रबर कॉर्क</text>
+
+            <!-- Iron Nail 1 (Left: Connected to Negative/Cathode) -->
+            <rect x="92" y="85" width="6" height="100" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+            <polygon points="90,85 100,85 95,75" fill="#475569"/>
+            <text x="80" y="105" font-size="11" font-weight="900" fill="#0284c7">कील 1</text>
+
+            <!-- Iron Nail 2 (Right: Connected to Positive/Anode) -->
+            <rect x="122" y="85" width="6" height="100" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+            <polygon points="120,85 130,85 125,75" fill="#475569"/>
+            <text x="135" y="105" font-size="11" font-weight="900" fill="#dc2626">कील 2</text>
+
+            <!-- Glass Beaker Outline (100 mL) -->
+            <rect x="5" y="10" width="210" height="210" rx="14" fill="url(#scond_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+            <!-- Beaker Spout -->
+            <path d="M5,15 L-5,10 L5,25" fill="none" stroke="#0284c7" stroke-width="2.2"/>
+            <line x1="5" y1="10" x2="215" y2="10" stroke="#0284c7" stroke-width="2.5"/>
+
+            <!-- Volume graduations on beaker -->
+            <line x1="180" y1="60" x2="205" y2="60" stroke="#0284c7" stroke-width="1.5"/>
+            <text x="170" y="64" font-size="10" font-weight="800" fill="#0284c7">100mL</text>
+            <line x1="185" y1="100" x2="205" y2="100" stroke="#0284c7" stroke-width="1.5"/>
+            <text x="175" y="104" font-size="10" font-weight="800" fill="#0284c7">50mL</text>
+
+            <!-- Beaker Label Badge -->
+            <rect x="40" y="225" width="140" height="34" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+            <text id="scond_beaker_title" x="110" y="242" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle">तनु HCl विलयन</text>
+            <text id="scond_beaker_sub" x="110" y="255" font-size="11" font-weight="800" fill="#86efac" text-anchor="middle">मुक्त H⁺ व Cl⁻ आयन उपस्थित</text>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 15)">
+            <rect x="0" y="0" width="600" height="36" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="scond_lab_title" x="300" y="24" font-size="15" font-weight="900" fill="#86efac" text-anchor="middle">⚡ NCERT 2.8: जलीय विलयनों में विद्युत चालकता व आयन चालन</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 विद्युत चालन एवं आयनिक प्रेक्षण</text>
+
+            <!-- Card 1: Sample Solution Status -->
+            <g transform="translate(16, 60)">
+              <rect id="scond_c1_bg" x="0" y="0" width="423" height="88" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#0f172a">परीक्षण नमूना (Tested Solution):</text>
+              <text id="scond_panel_sample" x="14" y="50" font-size="17" font-weight="900" fill="#15803d">तनु हाइड्रोक्लोरिक अम्ल (तनु HCl)</text>
+              <text id="scond_panel_sample_sub" x="14" y="74" font-size="13" font-weight="800" fill="#334155">प्रबल अम्ल — जल में पूर्णतः आयनित होता है।</text>
+            </g>
+
+            <!-- Card 2: Ionization Equation -->
+            <g transform="translate(16, 158)">
+              <rect id="scond_c2_bg" x="0" y="0" width="423" height="88" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">आयनन समीकरण (Ionization Equation):</text>
+              <text id="scond_panel_eq" x="14" y="50" font-size="16" font-weight="900" fill="#2563eb">HCl(aq) ➔ H⁺(aq) + Cl⁻(aq)</text>
+              <text id="scond_panel_eq_sub" x="14" y="74" font-size="13" font-weight="800" fill="#0369a1">H⁺(aq) आयन ही अम्लीय गुण व चालन के लिए उत्तरदायी हैं।</text>
+            </g>
+
+            <!-- Card 3: Bulb Result -->
+            <g transform="translate(16, 256)">
+              <rect id="scond_c3_bg" x="0" y="0" width="423" height="88" rx="8" fill="#fefce8" stroke="#facc15" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#854d0e">बल्ब प्रेक्षण (Bulb Glow Result):</text>
+              <text id="scond_panel_bulb" x="14" y="50" font-size="17" font-weight="900" fill="#b45309">बल्ब तीव्र जलता है (Bulb Glows Brightly) 💡</text>
+              <text id="scond_panel_bulb_sub" x="14" y="74" font-size="13" font-weight="800" fill="#713f12">मुक्त H⁺ व Cl⁻ आयनों के प्रवाह से विद्युत परिपथ पूर्ण होता है।</text>
+            </g>
+
+            <!-- Scientific Rule Box -->
+            <g transform="translate(16, 354)">
+              <rect x="0" y="0" width="423" height="132" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">⭐ अत्यंत महत्वपूर्ण बोर्ड परीक्षा निष्कर्ष:</text>
+              <text x="211" y="52" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"विद्युत चालन के लिए विलयन में मुक्त आयनों का होना अनिवार्य है।"</text>
+              <text x="211" y="76" font-size="12.5" font-weight="800" fill="#ffffff" text-anchor="middle">• अम्ल (HCl, H₂SO₄) एवं क्षारक (NaOH) मुक्त आयन देते हैं ➔ बल्ब जलता है।</text>
+              <text x="211" y="100" font-size="12.5" font-weight="800" fill="#cbd5e1" text-anchor="middle">• ग्लूकोज व ऐल्कोहॉल में H होने पर भी आयन नहीं बनते ➔ बल्ब नहीं जलता!</text>
+              <text x="211" y="122" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle">निष्कर्ष: सभी अम्ल में H होता है, पर सभी H-यौगिक अम्ल नहीं होते!</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="scond_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> बीकर में तनु HCl विलयन भरा है तथा परिपथ पूर्ण होने से बल्ब जल रहा है। ऊपर से ग्लूकोज, ऐल्कोहॉल या अन्य विलयन चुनकर अंतर देखें।
       </div>
     </div>
 
@@ -2071,13 +2672,13 @@
     </div>
 
     <!-- ===================================================================
-         SIMULATOR 2.2: सार्वत्रिक सूचक एवं 0-14 pH रंग पैमाना सिमुलेटर
+         SIMULATOR 2.5: सार्वत्रिक सूचक एवं 0-14 pH रंग पैमाना सिमुलेटर
          =================================================================== -->
     <div class="sim-card" id="sim2_2_box">
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-eye-dropper" style="color: #16a34a;"></i>
-          <span>क्रियाकलाप 2.2: सार्वत्रिक सूचक (Universal Indicator) एवं 0-14 pH रंग पैमाना — 16:9 लैब सिमुलेटर</span>
+          <span>क्रियाकलाप 2.11: सार्वत्रिक सूचक (Universal Indicator) एवं 0-14 pH रंग पैमाना — 16:9 लैब सिमुलेटर</span>
         </div>
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🧪</span>
       </div>
@@ -2328,7 +2929,7 @@
       <div class="sim-header">
         <div class="sim-title">
           <i class="fas fa-bolt" style="color: #16a34a;"></i>
-          <span>क्लोर-क्षार प्रक्रिया (Chlor-Alkali Electrolysis Cell) — 16:9 औद्योगिक लैब सिमुलेटर</span>
+          <span>क्रियाकलाप 2.14: क्लोर-क्षार प्रक्रिया (Chlor-Alkali Electrolysis Cell) — 16:9 औद्योगिक लैब सिमुलेटर</span>
         </div>
         <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू ⚡</span>
       </div>
@@ -2607,20 +3208,240 @@
       </ul>
     </div>
 
-    <!-- Image Placeholder 4: Salts Summary -->
-    <div class="image-placeholder-card" style="margin: 28px 0; background: #ffffff; border: 2.5px dashed #0284c7; border-radius: 16px; padding: 22px; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.08);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <span style="background: #e0f2fe; color: #0284c7; font-weight: 900; font-size: 15px; padding: 5px 14px; border-radius: 8px; border: 1.5px solid #7dd3fc;">
-          🖼️ चित्र प्लेसहोल्डर 2.4 (16:9 आरेख)
-        </span>
-        <span style="font-size: 14px; font-weight: 800; color: #64748b;">NCERT साधारण नमक से निर्मित 5 रसायन</span>
+    <!-- ===================================================================
+         SIMULATOR 2.7: क्रिस्टलन का जल (CuSO4.5H2O का तापन व पुनःजलयोजन)
+         =================================================================== -->
+    <div class="sim-card" id="sim2_cryst_box">
+      <div class="sim-header">
+        <div class="sim-title">
+          <i class="fas fa-gem" style="color: #16a34a;"></i>
+          <span>क्रियाकलाप 2.15: क्रिस्टलन का जल — नीले तूतिया (CuSO₄·5H₂O) का तापन व पुनःजलयोजन सिमुलेटर</span>
+        </div>
+        <span class="sim-badge" style="background:#dcfce7; color:#15803d; border:2px solid #86efac; font-size:15px; font-weight:900;">16:9 प्रोजेक्टर व्यू 🔬</span>
       </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">[शीर्षक: साधारण नमक (NaCl) से निर्मित प्रमुख रसायनों का संपूर्ण माइंडमैप / फ्लोचार्ट]</h4>
-      <p style="font-size: 17px; color: #334155; line-height: 1.6; margin-bottom: 12px;"><strong>चित्र विवरण (Visual Description):</strong> केंद्र में साधारण नमक (NaCl) का क्रिस्टल और उससे 5 प्रमुख शाखाएं निकलती हुईं: 1. कास्टिक सोडा (NaOH - क्लोर क्षार प्रक्रिया), 2. विरंजक चूर्ण (CaOCl₂), 3. बेकिंग सोडा (NaHCO₃), 4. धावन सोडा (Na₂CO₃·10H₂O), तथा 5. प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O)। प्रत्येक शाखा पर रासायनिक सूत्र, निर्माण समीकरण तथा दैनिक जीवन में 2-2 मुख्य सचित्र उपयोग सुंदर आइकनों के साथ 16:9 पैनोरमिक इन्फोग्राफिक रूप में दर्शाए गए हैं।</p>
-      <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
-        <div style="font-size: 13px; font-weight: 900; color: #059669; margin-bottom: 4px;">🎨 AI Image Generation Prompt:</div>
-        <code style="font-size: 14px; color: #0f172a; font-family: monospace; display: block; word-break: break-word; line-height: 1.5;">
-          A premium modern scientific educational infographic on a clean white background with 16:9 widescreen ratio. Illustrates chemicals derived from common salt (NaCl) for NCERT Class 10 Chemistry Chapter 2. In the center is a glowing cubic salt crystal of NaCl branching out into 5 distinct colorful conceptual nodes: Sodium Hydroxide (NaOH), Bleaching Powder (CaOCl2), Baking Soda (NaHCO3), Washing Soda (Na2CO3.10H2O), and Plaster of Paris (CaSO4.1/2H2O). Each node features chemical formulas, balanced production equations, and miniature realistic icons of industrial uses. High definition vector graphics, crisp typography in Hindi and English, clean borders --ar 16:9
+
+      <p style="font-size: 19px; color: #1e293b; margin-bottom: 12px; line-height: 1.8; font-weight:700;">
+        <strong>एनसीईआरटी क्रियाकलाप 2.15:</strong> एक शुष्क क्वथन नली में नीले कॉपर सल्फेट (CuSO₄·5H₂O) के क्रिस्टल लेकर बर्नर पर गर्म करते हैं। गर्म करने पर नीला रंग श्वेत चूर्ण में बदल जाता है और परखनली की दीवार पर जल की बूंदें जम जाती हैं। ड्रॉपर से पुनः जल मिलाने पर यह फिर से नीला हो जाता है:
+      </p>
+
+      <div class="sim-controls-grid">
+        <button class="sim-btn" id="scryst_play_btn" style="background:#16a34a; color:#fff;" onclick="simCrystPlayAuto()">
+          <i class="fas fa-play"></i> ▶ संपूर्ण वीडियो एनिमेशन (क्रमशः ऑटो-प्ले)
+        </button>
+        <button class="sim-btn secondary" id="scryst_btn1" onclick="simCrystStep(1)">
+          1. प्रारंभिक नीले क्रिस्टल (CuSO₄·5H₂O)
+        </button>
+        <button class="sim-btn warning" id="scryst_btn2" onclick="simCrystStep(2)">
+          2. बर्नर तापन (श्वेत चूर्ण + जल की बूंदें)
+        </button>
+        <button class="sim-btn success" id="scryst_btn3" style="background:#2563eb; color:#fff;" onclick="simCrystStep(3)">
+          3. जल की बूंदें मिलाना (पुनः गहरा नीला होना)
+        </button>
+        <button class="sim-btn" style="background:#64748b; color:#fff;" onclick="simCrystReset()">
+          <i class="fas fa-redo"></i> 🔄 रीसेट
+        </button>
+      </div>
+
+      <div class="sim-progress-wrap"><div class="sim-progress-bar" id="scryst_pbar"></div></div>
+
+      <div class="sim-stage" id="sim2_cryst_stage" style="aspect-ratio: 1200 / 540 !important; min-height: 480px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+        <svg id="sim2_cryst_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="scryst_benchTop" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/>
+            </linearGradient>
+            <linearGradient id="scryst_glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+              <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.2"/>
+              <stop offset="80%" stop-color="#bae6fd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0.7"/>
+            </linearGradient>
+            <linearGradient id="scryst_flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="40%" stop-color="#f59e0b"/>
+              <stop offset="100%" stop-color="#ef4444"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 3D WORKBENCH -->
+          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scryst_benchTop)"/>
+          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+
+          <!-- BUNSEN BURNER (BOTTOM CENTER) -->
+          <g transform="translate(340, 320)">
+            <!-- Burner Base -->
+            <polygon points="10,95 70,95 65,80 15,80" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
+            <!-- Burner Pipe -->
+            <rect x="34" y="25" width="12" height="60" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+            <!-- Air collar -->
+            <rect x="32" y="55" width="16" height="12" rx="2" fill="#64748b"/>
+            <!-- Gas nozzle top -->
+            <rect x="30" y="20" width="20" height="6" rx="1" fill="#475569"/>
+
+            <!-- FLAME GROUP (Toggled on Step 2) -->
+            <g id="scryst_flame" opacity="0" style="transition: opacity 0.4s ease;">
+              <!-- Outer flame -->
+              <path d="M40,20 Q25,-25 40,-45 Q55,-25 40,20 Z" fill="url(#scryst_flameGrad)"/>
+              <!-- Inner blue core -->
+              <path d="M40,20 Q32,-5 40,-18 Q48,-5 40,20 Z" fill="#60a5fa" opacity="0.9"/>
+              <text x="40" y="-55" font-size="12" font-weight="900" fill="#ef4444" text-anchor="middle">🔥 ज्वाला (तापन)</text>
+            </g>
+          </g>
+
+          <!-- TEST TUBE HOLDER (क्वाथन नली होल्डर) -->
+          <g transform="translate(140, 160)">
+            <!-- Wooden handle -->
+            <rect x="0" y="70" width="140" height="14" rx="4" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+            <text x="70" y="81" font-size="11" font-weight="900" fill="#fef3c7" text-anchor="middle">परखनली होल्डर</text>
+            <!-- Metal clamp band -->
+            <rect x="140" y="66" width="30" height="22" rx="4" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+          </g>
+
+          <!-- TILTED BOILING TUBE (35 DEGREES) -->
+          <g transform="translate(360, 260) rotate(-35)">
+            <!-- Glass Body -->
+            <rect x="-25" y="-140" width="50" height="180" rx="14" fill="url(#scryst_glassGrad)" stroke="#0284c7" stroke-width="2.2"/>
+            <ellipse cx="0" cy="-140" rx="25" ry="6" fill="#f8fafc" stroke="#0284c7" stroke-width="2"/>
+
+            <!-- COPPER SULPHATE POWDER/CRYSTALS AT BOTTOM -->
+            <!-- Initial: Blue; Step 2: White; Step 3: Blue again -->
+            <path id="scryst_powder" d="M-22,20 Q0,10 22,20 L22,30 Q0,45 -22,30 Z" fill="#2563eb" style="transition: fill 0.6s ease;"/>
+            <text id="scryst_powder_label" x="0" y="27" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">CuSO₄·5H₂O</text>
+
+            <!-- WATER DROPLETS CONDENSED ON COOL UPPER WALLS (Step 2) -->
+            <g id="scryst_droplets" opacity="0" style="transition: opacity 0.5s ease;">
+              <circle cx="-16" cy="-60" r="3.5" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="-18" cy="-40" r="4.5" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="-15" cy="-20" r="3" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="16" cy="-70" r="3" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="18" cy="-45" r="4" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+              <circle cx="15" cy="-25" r="3.5" fill="#38bdf8" stroke="#0284c7" stroke-width="0.8"/>
+            </g>
+
+            <!-- Steam rising out of mouth -->
+            <g id="scryst_steam" opacity="0" style="transition: opacity 0.4s ease;">
+              <path d="M-5,-145 Q-15,-170 -5,-190" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+              <path d="M5,-145 Q15,-170 5,-190" fill="none" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+              <text x="0" y="-195" font-size="11" font-weight="900" fill="#0284c7" text-anchor="middle">जलवाष्प (5H₂O)</text>
+            </g>
+          </g>
+
+          <!-- WATER DROPPER (Dispensing drops on Step 3) -->
+          <g id="scryst_dropper" transform="translate(480, 80)" opacity="0" style="transition: all 0.5s ease;">
+            <rect x="8" y="0" width="14" height="60" rx="3" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+            <polygon points="8,60 22,60 15,80" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+            <path d="M6,0 Q15,-15 24,0 Z" fill="#2563eb"/>
+            <!-- Falling water droplets -->
+            <circle cx="15" cy="95" r="4.5" fill="#38bdf8"/>
+            <circle cx="15" cy="125" r="4" fill="#38bdf8"/>
+            <text x="50" y="50" font-size="12" font-weight="900" fill="#1d4ed8">+ जल की 2-3 बूंदें</text>
+          </g>
+
+          <!-- Condensation Annotation Tag -->
+          <g id="scryst_cond_tag" transform="translate(490, 200)" opacity="0" style="transition: opacity 0.4s ease;">
+            <rect x="0" y="0" width="160" height="30" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+            <text x="80" y="19" font-size="11.5" font-weight="900" fill="#38bdf8" text-anchor="middle">💧 संघनित जल की बूंदें</text>
+            <!-- Pointer line -->
+            <line x1="0" y1="15" x2="-35" y2="15" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3"/>
+          </g>
+
+          <!-- TOP BANNER LAB TITLE -->
+          <g transform="translate(60, 25)">
+            <rect x="0" y="0" width="600" height="38" rx="8" fill="#0f172a" opacity="0.9" stroke="#16a34a" stroke-width="2"/>
+            <text id="scryst_lab_title" x="300" y="25" font-size="15.5" font-weight="900" fill="#86efac" text-anchor="middle">🔬 NCERT 2.15: क्रिस्टलन का जल — तापन व जलयोजन</text>
+          </g>
+
+          <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
+          <g transform="translate(725, 20)">
+            <rect x="0" y="0" width="455" height="500" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 6px 14px rgba(0,0,0,0.06))"/>
+
+            <!-- Header -->
+            <rect x="0" y="0" width="455" height="48" rx="14" fill="#16a34a"/>
+            <text x="227" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">📋 लाइव प्रेक्षण एवं रासायनिक अभिक्रिया</text>
+
+            <!-- Card 1: Initial Crystals -->
+            <g transform="translate(16, 60)">
+              <rect id="scryst_c1_bg" x="0" y="0" width="423" height="85" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#1e40af">1. प्रारंभिक क्रिस्टल (Initial Blue Crystals):</text>
+              <text x="14" y="48" font-size="16" font-weight="900" fill="#1d4ed8">CuSO₄·5H₂O [कॉपर सल्फेट पेंटाहाइड्रेट]</text>
+              <text x="14" y="70" font-size="12.5" font-weight="800" fill="#334155">रंग: गहरा नीला। सूत्र इकाई में 5 अणु क्रिस्टलन का जल उपस्थित है।</text>
+            </g>
+
+            <!-- Card 2: Heating (Dehydration) -->
+            <g transform="translate(16, 155)">
+              <rect id="scryst_c2_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#854d0e">2. बर्नर पर तापन (Heating / Dehydration):</text>
+              <text x="14" y="48" font-size="15" font-weight="900" fill="#b45309">CuSO₄·5H₂O(नीला) 🔥 ➔ CuSO₄(श्वेत) + 5H₂O↑</text>
+              <text id="scryst_c2_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">जल के 5 अणु वाष्पित होकर ठंडी दीवारों पर संघनित होते हैं व लवण श्वेत बनता है।</text>
+            </g>
+
+            <!-- Card 3: Re-hydration -->
+            <g transform="translate(16, 257)">
+              <rect id="scryst_c3_bg" x="0" y="0" width="423" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="14" y="24" font-size="14" font-weight="900" fill="#15803d">3. पुनः जल मिलाने पर (Re-hydration):</text>
+              <text x="14" y="48" font-size="15" font-weight="900" fill="#16a34a">CuSO₄(श्वेत) + 5H₂O ➔ CuSO₄·5H₂O(नीला)</text>
+              <text id="scryst_c3_sub" x="14" y="72" font-size="12.5" font-weight="800" fill="#64748b">सफेद निर्जल चूर्ण जल पाकर तत्काल अपना मूल नीला रंग पुनः प्राप्त कर लेता है।</text>
+            </g>
+
+            <!-- Summary Box -->
+            <g transform="translate(16, 360)">
+              <rect x="0" y="0" width="423" height="120" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="1.8"/>
+              <text x="211" y="26" font-size="14.5" font-weight="900" fill="#86efac" text-anchor="middle">✔ क्रिस्टलन के जल की NCERT परिभाषा</text>
+              <text x="211" y="50" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">"लवण के एक सूत्र इकाई में जल के निश्चित अणुओं की संख्या को</text>
+              <text x="211" y="72" font-size="13" font-weight="800" fill="#fde047" text-anchor="middle">क्रिस्टलन का जल (Water of Crystallization) कहते हैं।"</text>
+              <text x="211" y="96" font-size="12" font-weight="800" fill="#38bdf8" text-anchor="middle">• जिप्सम (CaSO₄·2H₂O) = 2 अणु जल | धावन सोडा (Na₂CO₃·10H₂O) = 10 अणु</text>
+              <text x="211" y="114" font-size="12" font-weight="900" fill="#f472b6" text-anchor="middle">• प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O) = अर्धहाइड्रेट</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="scryst_status" style="margin-top:12px; padding:16px 20px; background:#f8fafc; border-left:8px solid #16a34a; border-radius:10px; font-weight:800; color:#0f172a; font-size:16px; min-height:50px; display:flex; align-items:center;">
+        <strong>प्रारंभिक स्थिति:</strong> क्वथन नली में नीले कॉपर सल्फेट (CuSO₄·5H₂O) के क्रिस्टल तैयार हैं। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।
+      </div>
+    </div>
+
+<!-- ===================================================================
+         चित्र प्लेसहोल्डर: साधारण नमक से निर्मित 5 रसायन फ्लोचार्ट (Justified Static Image)
+         =================================================================== -->
+    <div class="image-placeholder-card" style="margin: 35px 0; background: #ffffff; border: 3px dashed #0284c7; border-radius: 18px; padding: 26px; box-shadow: 0 8px 25px rgba(2, 132, 199, 0.1);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+        <span style="background: #e0f2fe; color: #0284c7; font-weight: 900; font-size: 16px; padding: 6px 16px; border-radius: 8px; border: 2px solid #7dd3fc;">
+          🖼️ चित्र प्लेसहोल्डर 2.1 (16:9 पैनोरमिक इन्फोग्राफिक पोस्टर)
+        </span>
+        <span style="font-size: 14.5px; font-weight: 800; color: #475569; background:#f1f5f9; padding:5px 12px; border-radius:6px;">
+          NCERT अध्याय 2: साधारण नमक (NaCl) से निर्मित 5 प्रमुख औद्योगिक रसायन
+        </span>
+      </div>
+
+      <h4 style="font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 10px;">
+        [शीर्षक: साधारण नमक (NaCl) से निर्मित प्रमुख औद्योगिक रसायनों का संपूर्ण माइंडमैप एवं संश्लेषण फ्लोचार्ट]
+      </h4>
+
+      <!-- स्पष्टीकरण: सिमुलेटर क्यों नहीं लगेगा? -->
+      <div style="background: #fffbeb; border: 2px solid #fde68a; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px;">
+        <div style="font-size: 16px; font-weight: 900; color: #92400e; margin-bottom: 6px; display:flex; align-items:center; gap:8px;">
+          <i class="fas fa-info-circle"></i> 💡 यहाँ सिमुलेटर के स्थान पर चित्र (Image) लगाने का स्पष्ट शैक्षणिक एवं तकनीकी कारण:
+        </div>
+        <ul style="font-size: 15.5px; color: #78350f; line-height: 1.7; margin: 0; padding-left: 22px;">
+          <li><strong>कोई गतिशील लैब प्रयोग नहीं (No Dynamic Lab Experiment):</strong> इस टॉपिक में कोई एकल प्रयोगशाला उपकरण (जैसे परखनली, बर्नर या बुदबुदाहट) नहीं है, बल्कि यह 5 अलग-अलग स्वतंत्र औद्योगिक निर्माण प्रक्रियाओं (कास्टिक सोडा, विरंजक चूर्ण, बेकिंग सोडा, धावन सोडा, तथा POP) का एक तुलनात्मक सैद्धांतिक चार्ट है।</li>
+          <li><strong>दीर्घकालिक स्मृति व बोर्ड रिवीज़न (Visual Memory & Quick Revision):</strong> 10वीं बोर्ड परीक्षा में छात्रों को एक ही नज़र में 5 रसायनों के रासायनिक नाम, सूत्र, निर्माण समीकरण तथा 2-2 उपयोग याद करने होते हैं। इसके लिए एक एकीकृत 16:9 पैनोरमिक माइंडमैप (Infographic Concept Map) सिमुलेटर से कहीं अधिक उपयोगी और प्रभावी होता है।</li>
+        </ul>
+      </div>
+
+      <p style="font-size: 17.5px; color: #334155; line-height: 1.7; margin-bottom: 14px;">
+        <strong>चित्र विवरण (Visual Description):</strong> एक 16:9 पैनोरमिक चौड़ा साइंटिफिक इन्फोग्राफिक चार्ट। केंद्र में एक पारदर्शी चमकदार साधारण नमक (NaCl) का घन (Cubic Crystal) स्थित है। केंद्र से 5 रंगीन और सुस्पष्ट शाखाएं निकलती हैं:
+        <br><strong>1. सोडियम हाइड्रॉक्साइड (NaOH)</strong> — क्लोर-क्षार प्रक्रिया, सूत्र व साबुन निर्माण आइकन।
+        <br><strong>2. विरंजक चूर्ण (CaOCl₂)</strong> — शुष्क बुझे चूने पर क्लोरीन की क्रिया, वस्त्र उद्योग विरंजन आइकन।
+        <br><strong>3. बेकिंग सोडा (NaHCO₃)</strong> — साल्वे प्रक्रम समीकरण, खस्ता पकोड़े व अग्निशामक आइकन।
+        <br><strong>4. धावन सोडा (Na₂CO₃·10H₂O)</strong> — पुनःक्रिस्टलीकरण, जल की कठोरता दूर करने व सफाई अपमार्जक आइकन।
+        <br><strong>5. प्लास्टर ऑफ पेरिस (CaSO₄·½H₂O)</strong> — जिप्सम 373 K तापन, टूटी हड्डियों का प्लास्टर व मूर्तियां आइकन।
+      </p>
+
+      <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 14px 18px;">
+        <div style="font-size: 14px; font-weight: 900; color: #059669; margin-bottom: 6px;">🎨 AI Image Generation Prompt:</div>
+        <code style="font-size: 14.5px; color: #0f172a; font-family: 'Fira Code', monospace; display: block; word-break: break-word; line-height: 1.6;">
+          A masterclass 16:9 widescreen educational scientific concept map and infographic for NCERT Class 10 Chemistry Chapter 2. In the center, a luminous glowing cubic crystal of sodium chloride (NaCl) titled "Common Salt (NaCl)". From the center, five distinct colorful branches radiate outward with clean rounded nodes: Node 1 "Sodium Hydroxide (NaOH)" with chlor-alkali reaction; Node 2 "Bleaching Powder (CaOCl2)" with dry slaked lime reaction; Node 3 "Baking Soda (NaHCO3)" with Solvay reaction and antacid icon; Node 4 "Washing Soda (Na2CO3.10H2O)" with recrystallization and laundry icon; Node 5 "Plaster of Paris (CaSO4.1/2H2O)" with gypsum heating at 373 K and medical cast icon. Pristine white studio background, ultra-sharp vector graphics, modern flat aesthetic, bold Hindi and English scientific typography, high contrast, textbook publisher quality --ar 16:9 --style raw
         </code>
       </div>
     </div>
@@ -2798,6 +3619,492 @@
         simTimers[simId].forEach(function(t) { clearTimeout(t); });
         simTimers[simId] = [];
       }
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.1: INDICATORS TESTING LAB (Activity 2.1)
+       ========================================================== */
+    function simIndReset() {
+      clearSimTimers('ind');
+      var st = document.getElementById('sind_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> 4 परखनलियों में अम्ल (HCl, H₂SO₄) तथा क्षारक [NaOH, Ca(OH)₂] रखे हैं। ऊपर से कोई भी सूचक बटन दबाएं।';
+
+      // Reset test tubes liquid colors to initial translucent slate
+      ['sind_liq1', 'sind_liq2', 'sind_liq3', 'sind_liq4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.setAttribute('fill', '#e2e8f0');
+      });
+      ['sind_meniscus1', 'sind_meniscus2', 'sind_meniscus3', 'sind_meniscus4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.setAttribute('fill', '#cbd5e1');
+      });
+      // Hide test strips
+      ['sind_strip1', 'sind_strip2', 'sind_strip3', 'sind_strip4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.opacity = '0';
+      });
+
+      var dropGrp = document.getElementById('sind_dropper_group');
+      if (dropGrp) dropGrp.style.opacity = '0';
+
+      var dTitle = document.getElementById('sind_detail_title');
+      if (dTitle) dTitle.textContent = 'सक्रिय सूचक: कोई सूचक चुनें';
+      var dDesc1 = document.getElementById('sind_detail_desc1');
+      if (dDesc1) dDesc1.textContent = 'ऊपर दिए गए 4 सूचक बटनों में से किसी एक पर क्लिक करें।';
+      var dDesc2 = document.getElementById('sind_detail_desc2');
+      if (dDesc2) dDesc2.textContent = 'अम्ल व क्षारक के साथ सूचक के विशिष्ट रंग परिवर्तन का अध्ययन करें।';
+
+      // Reset table row highlights
+      ['sind_row1', 'sind_row2', 'sind_row3', 'sind_row4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#e2e8f0'); }
+      });
+    }
+
+    function simIndTest(type) {
+      simIndReset();
+      var dropGrp = document.getElementById('sind_dropper_group');
+      if (dropGrp) dropGrp.style.opacity = '1';
+
+      var st = document.getElementById('sind_status');
+      var dTitle = document.getElementById('sind_detail_title');
+      var dDesc1 = document.getElementById('sind_detail_desc1');
+      var dDesc2 = document.getElementById('sind_detail_desc2');
+      var drop = document.getElementById('sind_drop');
+
+      if (type === 'blue') {
+        if (drop) drop.setAttribute('fill', '#2563eb');
+        // HCl & H2SO4 turn red, NaOH & Ca(OH)2 remain blue
+        document.getElementById('sind_liq1').setAttribute('fill', '#fecaca');
+        document.getElementById('sind_meniscus1').setAttribute('fill', '#f87171');
+        document.getElementById('sind_liq2').setAttribute('fill', '#fecaca');
+        document.getElementById('sind_meniscus2').setAttribute('fill', '#f87171');
+        document.getElementById('sind_liq3').setAttribute('fill', '#bfdbfe');
+        document.getElementById('sind_meniscus3').setAttribute('fill', '#60a5fa');
+        document.getElementById('sind_liq4').setAttribute('fill', '#bfdbfe');
+        document.getElementById('sind_meniscus4').setAttribute('fill', '#60a5fa');
+
+        // Strips
+        ['sind_strip1', 'sind_strip2'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) { el.setAttribute('fill', '#ef4444'); el.style.opacity = '1'; }
+        });
+        ['sind_strip3', 'sind_strip4'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) { el.setAttribute('fill', '#3b82f6'); el.style.opacity = '1'; }
+        });
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: नीला लिटमस (Blue Litmus)';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): नीला लिटमस लाल हो जाता है!';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: नीले लिटमस पर कोई प्रभाव नहीं (नीला ही रहता है)।';
+        if (st) st.innerHTML = '<span style="color:#dc2626;">✔ नीला लिटमस परीक्षण:</span> अम्ल में डालने पर नीला लिटमस <strong>लाल</strong> हो जाता है। क्षारक में कोई परिवर्तन नहीं होता।';
+
+      } else if (type === 'red') {
+        if (drop) drop.setAttribute('fill', '#dc2626');
+        // HCl & H2SO4 stay red, NaOH & Ca(OH)2 turn blue
+        document.getElementById('sind_liq1').setAttribute('fill', '#fecaca');
+        document.getElementById('sind_meniscus1').setAttribute('fill', '#f87171');
+        document.getElementById('sind_liq2').setAttribute('fill', '#fecaca');
+        document.getElementById('sind_meniscus2').setAttribute('fill', '#f87171');
+        document.getElementById('sind_liq3').setAttribute('fill', '#bfdbfe');
+        document.getElementById('sind_meniscus3').setAttribute('fill', '#60a5fa');
+        document.getElementById('sind_liq4').setAttribute('fill', '#bfdbfe');
+        document.getElementById('sind_meniscus4').setAttribute('fill', '#60a5fa');
+
+        // Strips
+        ['sind_strip1', 'sind_strip2'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) { el.setAttribute('fill', '#ef4444'); el.style.opacity = '1'; }
+        });
+        ['sind_strip3', 'sind_strip4'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) { el.setAttribute('fill', '#3b82f6'); el.style.opacity = '1'; }
+        });
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: लाल लिटमस (Red Litmus)';
+        if (dDesc1) dDesc1.textContent = 'क्षारक [NaOH, Ca(OH)₂]: लाल लिटमस नीला हो जाता है!';
+        if (dDesc2) dDesc2.textContent = 'अम्ल (HCl, H₂SO₄): लाल लिटमस पर कोई प्रभाव नहीं (लाल ही रहता है)।';
+        if (st) st.innerHTML = '<span style="color:#2563eb;">✔ लाल लिटमस परीक्षण:</span> क्षारक में डालने पर लाल लिटमस <strong>नीला</strong> हो जाता है। अम्ल में कोई परिवर्तन नहीं होता।';
+
+      } else if (type === 'phen') {
+        if (drop) drop.setAttribute('fill', '#db2777');
+        // Phenolphthalein: Acid -> Colorless (#f1f5f9), Base -> Vibrant Pink (#fbcfe8 / #ec4899)
+        document.getElementById('sind_liq1').setAttribute('fill', '#f1f5f9');
+        document.getElementById('sind_meniscus1').setAttribute('fill', '#e2e8f0');
+        document.getElementById('sind_liq2').setAttribute('fill', '#f1f5f9');
+        document.getElementById('sind_meniscus2').setAttribute('fill', '#e2e8f0');
+        document.getElementById('sind_liq3').setAttribute('fill', '#f472b6');
+        document.getElementById('sind_meniscus3').setAttribute('fill', '#db2777');
+        document.getElementById('sind_liq4').setAttribute('fill', '#f472b6');
+        document.getElementById('sind_meniscus4').setAttribute('fill', '#db2777');
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: फिनॉल्फथलीन (Phenolphthalein)';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): पूर्णतः रंगहीन (Colorless) रहता है।';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: गहरा गुलाबी (Vibrant Pink) रंग देता है!';
+        if (st) st.innerHTML = '<span style="color:#db2777;">✔ फिनॉल्फथलीन परीक्षण:</span> क्षारक में <strong>गहरा गुलाबी रंग</strong> देता है, जबकि अम्ल में यह <strong>रंगहीन</strong> रहता है।';
+
+      } else if (type === 'meth') {
+        if (drop) drop.setAttribute('fill', '#ea580c');
+        // Methyl Orange: Acid -> Red/Orange (#fca5a5 / #ef4444), Base -> Bright Yellow (#fef08a / #eab308)
+        document.getElementById('sind_liq1').setAttribute('fill', '#f87171');
+        document.getElementById('sind_meniscus1').setAttribute('fill', '#dc2626');
+        document.getElementById('sind_liq2').setAttribute('fill', '#f87171');
+        document.getElementById('sind_meniscus2').setAttribute('fill', '#dc2626');
+        document.getElementById('sind_liq3').setAttribute('fill', '#fde047');
+        document.getElementById('sind_meniscus3').setAttribute('fill', '#eab308');
+        document.getElementById('sind_liq4').setAttribute('fill', '#fde047');
+        document.getElementById('sind_meniscus4').setAttribute('fill', '#eab308');
+
+        if (dTitle) dTitle.textContent = 'सक्रिय सूचक: मेथिल ऑरेंज (Methyl Orange)';
+        if (dDesc1) dDesc1.textContent = 'अम्ल (HCl, H₂SO₄): लाल / नारंगी (Red) रंग प्राप्त होता है।';
+        if (dDesc2) dDesc2.textContent = 'क्षारक [NaOH, Ca(OH)₂]: चमकीला पीला (Yellow) रंग प्राप्त होता है।';
+        if (st) st.innerHTML = '<span style="color:#ea580c;">✔ मेथिल ऑरेंज परीक्षण:</span> अम्ल में <strong>लाल/नारंगी</strong> तथा क्षारक में <strong>पीला</strong> रंग देता है।';
+      }
+
+      // Highlight all table rows
+      ['sind_row1', 'sind_row2', 'sind_row3', 'sind_row4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#ecfdf5'); el.setAttribute('stroke', '#10b981'); }
+      });
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.3: METAL CARBONATE + HCl -> CO2 LIME WATER (Activity 2.5)
+       ========================================================== */
+    function simCarbReset() {
+      clearSimTimers('carb');
+      var pbar = document.getElementById('scarb_pbar'); if (pbar) pbar.style.width = '0%';
+      var st = document.getElementById('scarb_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परखनली (A) में ठोस Na₂CO₃ व परखनली (B) में स्वच्छ चूने का पानी तैयार है। "संपूर्ण वीडियो एनिमेशन" दबाएं।';
+
+      var bubA = document.getElementById('scarb_bubbles_a'); if (bubA) bubA.style.opacity = '0';
+      var drops = document.getElementById('scarb_acid_drops'); if (drops) drops.style.opacity = '0';
+      var gasFlow = document.getElementById('scarb_gas_flow'); if (gasFlow) gasFlow.style.opacity = '0';
+      var bubB = document.getElementById('scarb_bubbles_b'); if (bubB) bubB.style.opacity = '0';
+      var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0';
+      var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#e0f2fe');
+      var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'स्वच्छ चूने का पानी';
+
+      ['scarb_card1_bg', 'scarb_card2_bg', 'scarb_card3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simCarbStep(s) {
+      var pbar = document.getElementById('scarb_pbar');
+      var st = document.getElementById('scarb_status');
+
+      if (s === 1) {
+        simCarbReset();
+        if (pbar) pbar.style.width = '25%';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> परखनली A में 0.5g सोडियम कार्बोनेट (Na₂CO₃) रखा है। परखनली B में स्वच्छ चूने का पानी [Ca(OH)₂] तैयार है।';
+        var c1 = document.getElementById('scarb_card1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#3b82f6'); }
+
+      } else if (s === 2) {
+        if (pbar) pbar.style.width = '50%';
+        var drops = document.getElementById('scarb_acid_drops'); if (drops) drops.style.opacity = '1';
+        var bubA = document.getElementById('scarb_bubbles_a'); if (bubA) bubA.style.opacity = '1';
+        var gasFlow = document.getElementById('scarb_gas_flow'); if (gasFlow) gasFlow.style.opacity = '1';
+        var bubB = document.getElementById('scarb_bubbles_b'); if (bubB) bubB.style.opacity = '1';
+
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> थिसिल कीप से तनु HCl डालते ही तीव्र बुदबुदाहट (Effervescence) के साथ <strong>CO₂ गैस</strong> बनती है और निकास नली से परखनली B में प्रवाहित होती है!';
+        var c1 = document.getElementById('scarb_card1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#3b82f6'); }
+
+      } else if (s === 3) {
+        if (pbar) pbar.style.width = '75%';
+        var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0.95';
+        var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#ffffff');
+        var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'दूधिया चूने का पानी (CaCO₃)';
+
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> CO₂ गैस चूने के पानी से क्रिया करके <strong>अघुलनशील कैल्शियम कार्बोनेट (CaCO₃)</strong> का सफेद अवक्षेप बनाती है, जिससे चूने का पानी <strong>दूधिया (Milky)</strong> हो जाता है!';
+        var c2 = document.getElementById('scarb_card2_bg');
+        if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
+
+      } else if (s === 4) {
+        if (pbar) pbar.style.width = '100%';
+        var milky = document.getElementById('scarb_milky_cloud'); if (milky) milky.style.opacity = '0';
+        var limeLiq = document.getElementById('scarb_lime_liq'); if (limeLiq) limeLiq.setAttribute('fill', '#f0fdf4');
+        var bTag = document.getElementById('scarb_b_text'); if (bTag) bTag.textContent = 'पुनः पारदर्शी [Ca(HCO₃)₂]';
+
+        if (st) st.innerHTML = '<strong>चरण 4:</strong> अत्यधिक मात्रा में CO₂ प्रवाहित करने पर जल में <strong>विलेयशील कैल्शियम हाइड्रोजनकार्बोनेट [Ca(HCO₃)₂]</strong> बनता है, जिससे दूधियापन पूर्णतः समाप्त होकर विलयन पुनः स्वच्छ व पारदर्शी हो जाता है!';
+        var c3 = document.getElementById('scarb_card3_bg');
+        if (c3) { c3.setAttribute('fill', '#ecfdf5'); c3.setAttribute('stroke', '#10b981'); }
+      }
+    }
+
+    function simCarbPlayAuto() {
+      simCarbReset();
+      simCarbStep(1);
+      addSimTimer('carb', setTimeout(function() { simCarbStep(2); }, 1800));
+      addSimTimer('carb', setTimeout(function() { simCarbStep(3); }, 4000));
+      addSimTimer('carb', setTimeout(function() { simCarbStep(4); }, 6500));
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.4: ELECTRICAL CONDUCTIVITY OF SOLUTIONS (Activity 2.8)
+       ========================================================== */
+    function simCondReset() {
+      clearSimTimers('cond');
+      // Open switch
+      var sw = document.getElementById('scond_switch_arm');
+      if (sw) { sw.setAttribute('x2', '48'); sw.setAttribute('y2', '5'); }
+      var swLbl = document.getElementById('scond_switch_label');
+      if (swLbl) { swLbl.textContent = 'स्विच: OFF'; swLbl.setAttribute('fill', '#dc2626'); }
+
+      // Turn off bulb
+      var bGlow = document.getElementById('scond_bulb_glow'); if (bGlow) bGlow.style.opacity = '0';
+      var bRays = document.getElementById('scond_bulb_rays'); if (bRays) bRays.style.opacity = '0';
+      var bGlass = document.getElementById('scond_bulb_glass'); if (bGlass) bGlass.setAttribute('fill', '#e2e8f0');
+      var bFil = document.getElementById('scond_filament'); if (bFil) bFil.setAttribute('stroke', '#94a3b8');
+      var bStat = document.getElementById('scond_bulb_status_txt');
+      if (bStat) { bStat.textContent = 'बल्ब: बुझा हुआ ❌'; bStat.setAttribute('fill', '#64748b'); }
+
+      // Clear bubbles and ions
+      var nBub = document.getElementById('scond_nail_bubbles'); if (nBub) nBub.style.opacity = '0';
+
+      var st = document.getElementById('scond_status');
+      if (st) st.innerHTML = '<strong>परिपथ खुला (OFF):</strong> स्विच ऑफ है। ऊपर दिए गए 5 बटनों में से किसी एक पर क्लिक करके विलयन का विद्युत चालन देखें।';
+    }
+
+    function simCondSelect(type) {
+      // Close switch
+      var sw = document.getElementById('scond_switch_arm');
+      if (sw) { sw.setAttribute('x2', '58'); sw.setAttribute('y2', '20'); }
+      var swLbl = document.getElementById('scond_switch_label');
+      if (swLbl) { swLbl.textContent = 'स्विच: ON'; swLbl.setAttribute('fill', '#15803d'); }
+
+      var bGlow = document.getElementById('scond_bulb_glow');
+      var bRays = document.getElementById('scond_bulb_rays');
+      var bGlass = document.getElementById('scond_bulb_glass');
+      var bFil = document.getElementById('scond_filament');
+      var bStat = document.getElementById('scond_bulb_status_txt');
+      var nBub = document.getElementById('scond_nail_bubbles');
+      var liq = document.getElementById('scond_liquid');
+      var bTitle = document.getElementById('scond_beaker_title');
+      var bSub = document.getElementById('scond_beaker_sub');
+      var st = document.getElementById('scond_status');
+
+      var pSample = document.getElementById('scond_panel_sample');
+      var pSampleSub = document.getElementById('scond_panel_sample_sub');
+      var pEq = document.getElementById('scond_panel_eq');
+      var pEqSub = document.getElementById('scond_panel_eq_sub');
+      var pBulb = document.getElementById('scond_panel_bulb');
+      var pBulbSub = document.getElementById('scond_panel_bulb_sub');
+      var c3 = document.getElementById('scond_c3_bg');
+
+      var ionsGroup = document.getElementById('scond_ions_group');
+
+      if (type === 'hcl') {
+        if (bGlow) bGlow.style.opacity = '1';
+        if (bRays) bRays.style.opacity = '1';
+        if (bGlass) bGlass.setAttribute('fill', '#fef08a');
+        if (bFil) bFil.setAttribute('stroke', '#ea580c');
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (nBub) nBub.style.opacity = '1';
+        if (liq) liq.setAttribute('fill', '#bae6fd');
+        if (bTitle) bTitle.textContent = 'तनु HCl विलयन';
+        if (bSub) bSub.textContent = 'मुक्त H⁺ व Cl⁻ आयन उपस्थित';
+
+        if (ionsGroup) {
+          ionsGroup.innerHTML = `
+            <circle cx="45" cy="110" r="11" fill="#3b82f6"/><text x="45" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+            <circle cx="85" cy="140" r="11" fill="#3b82f6"/><text x="85" y="144" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+            <circle cx="140" cy="100" r="11" fill="#3b82f6"/><text x="140" y="104" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+            <circle cx="65" cy="170" r="12" fill="#10b981"/><text x="65" y="174" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+            <circle cx="165" cy="150" r="12" fill="#10b981"/><text x="165" y="154" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+          `;
+        }
+
+        if (pSample) pSample.textContent = 'तनु हाइड्रोक्लोरिक अम्ल (तनु HCl)';
+        if (pSampleSub) pSampleSub.textContent = 'प्रबल अम्ल — जल में पूर्णतः आयनित होता है।';
+        if (pEq) pEq.textContent = 'HCl(aq) ➔ H⁺(aq) + Cl⁻(aq)';
+        if (pEqSub) pEqSub.textContent = 'H⁺(aq) आयन ही अम्लीय गुण व विद्युत चालन के लिए उत्तरदायी हैं।';
+        if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
+        if (pBulbSub) pBulbSub.textContent = 'मुक्त H⁺ व Cl⁻ आयनों के प्रवाह से परिपथ पूर्ण होता है।';
+        if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
+        if (st) st.innerHTML = '<span style="color:#15803d;">✔ तनु HCl:</span> <strong>बल्ब चमकता है 💡</strong> क्योंकि HCl जलीय विलयन में H⁺ तथा Cl⁻ आयनों में टूटकर विद्युत का चालन करता है।';
+
+      } else if (type === 'h2so4') {
+        if (bGlow) bGlow.style.opacity = '1';
+        if (bRays) bRays.style.opacity = '1';
+        if (bGlass) bGlass.setAttribute('fill', '#fef08a');
+        if (bFil) bFil.setAttribute('stroke', '#ea580c');
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (nBub) nBub.style.opacity = '1';
+        if (liq) liq.setAttribute('fill', '#bae6fd');
+        if (bTitle) bTitle.textContent = 'तनु H₂SO₄ विलयन';
+        if (bSub) bSub.textContent = '2H⁺ व SO₄²⁻ आयन उपस्थित';
+
+        if (ionsGroup) {
+          ionsGroup.innerHTML = `
+            <circle cx="50" cy="110" r="11" fill="#3b82f6"/><text x="50" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+            <circle cx="100" cy="130" r="11" fill="#3b82f6"/><text x="100" y="134" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+            <circle cx="150" cy="150" r="14" fill="#0284c7"/><text x="150" y="154" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">SO₄²⁻</text>
+          `;
+        }
+
+        if (pSample) pSample.textContent = 'तनु सल्फ्यूरिक अम्ल (तनु H₂SO₄)';
+        if (pSampleSub) pSampleSub.textContent = 'द्विक्षारकीय प्रबल खनिज अम्ल।';
+        if (pEq) pEq.textContent = 'H₂SO₄(aq) ➔ 2H⁺(aq) + SO₄²⁻(aq)';
+        if (pEqSub) pEqSub.textContent = 'दो H⁺ आयन उत्पन्न करता है, अति तीव्र चालन।';
+        if (pBulb) pBulb.textContent = 'बल्ब अत्यंत तीव्र जलता है 💡';
+        if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन धारा को तेजी से प्रवाहित करते हैं।';
+        if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
+        if (st) st.innerHTML = '<span style="color:#15803d;">✔ तनु H₂SO₄:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि यह जल में 2H⁺ तथा SO₄²⁻ आयनों में वियोजित होता है।';
+
+      } else if (type === 'glucose') {
+        if (bGlow) bGlow.style.opacity = '0';
+        if (bRays) bRays.style.opacity = '0';
+        if (bGlass) bGlass.setAttribute('fill', '#cbd5e1');
+        if (bFil) bFil.setAttribute('stroke', '#94a3b8');
+        if (bStat) { bStat.textContent = 'बल्ब: नहीं जलता ❌'; bStat.setAttribute('fill', '#dc2626'); }
+        if (nBub) nBub.style.opacity = '0';
+        if (liq) liq.setAttribute('fill', '#fef3c7');
+        if (bTitle) bTitle.textContent = 'ग्लूकोज विलयन (C₆H₁₂O₆)';
+        if (bSub) bSub.textContent = 'आणविक अवस्था, कोई आयन नहीं';
+
+        if (ionsGroup) {
+          ionsGroup.innerHTML = `
+            <ellipse cx="60" cy="120" rx="20" ry="12" fill="#d97706"/><text x="60" y="124" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₆H₁₂O₆</text>
+            <ellipse cx="140" cy="140" rx="20" ry="12" fill="#d97706"/><text x="140" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₆H₁₂O₆</text>
+          `;
+        }
+
+        if (pSample) pSample.textContent = 'ग्लूकोज विलयन (Glucose Solution)';
+        if (pSampleSub) pSampleSub.textContent = 'सहसंयोजी कार्बनिक यौगिक (C₆H₁₂O₆)।';
+        if (pEq) pEq.textContent = 'C₆H₁₂O₆(aq) ➔ C₆H₁₂O₆ (कोई आयन नहीं)';
+        if (pEqSub) pEqSub.textContent = 'हाइड्रोजन होने पर भी यह H⁺ आयन नहीं देता।';
+        if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
+        if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, परिपथ अधूरा है।';
+        if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
+        if (st) st.innerHTML = '<span style="color:#dc2626;">❌ ग्लूकोज:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ग्लूकोज में हाइड्रोजन परमाणु होते हुए भी यह जल में H⁺ आयन नहीं बनाता। अतः यह अम्ल नहीं है!';
+
+      } else if (type === 'alcohol') {
+        if (bGlow) bGlow.style.opacity = '0';
+        if (bRays) bRays.style.opacity = '0';
+        if (bGlass) bGlass.setAttribute('fill', '#cbd5e1');
+        if (bFil) bFil.setAttribute('stroke', '#94a3b8');
+        if (bStat) { bStat.textContent = 'बल्ब: नहीं जलता ❌'; bStat.setAttribute('fill', '#dc2626'); }
+        if (nBub) nBub.style.opacity = '0';
+        if (liq) liq.setAttribute('fill', '#f3e8ff');
+        if (bTitle) bTitle.textContent = 'ऐल्कोहॉल (C₂H₅OH)';
+        if (bSub) bSub.textContent = 'सहसंयोजी अणु, कोई आयन नहीं';
+
+        if (ionsGroup) {
+          ionsGroup.innerHTML = `
+            <ellipse cx="60" cy="120" rx="20" ry="12" fill="#7c3aed"/><text x="60" y="124" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₂H₅OH</text>
+            <ellipse cx="140" cy="140" rx="20" ry="12" fill="#7c3aed"/><text x="140" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₂H₅OH</text>
+          `;
+        }
+
+        if (pSample) pSample.textContent = 'ऐल्कोहॉल / एथेनॉल (Alcohol Solution)';
+        if (pSampleSub) pSampleSub.textContent = 'सहसंयोजी कार्बनिक यौगिक (C₂H₅OH)।';
+        if (pEq) pEq.textContent = 'C₂H₅OH(aq) ➔ C₂H₅OH (कोई आयन नहीं)';
+        if (pEqSub) pEqSub.textContent = 'जल में H⁺ आयन विमुक्त नहीं करता।';
+        if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
+        if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, विद्युत चालन असंभव।';
+        if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
+        if (st) st.innerHTML = '<span style="color:#dc2626;">❌ ऐल्कोहॉल:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ऐल्कोहॉल का जलीय विलयन आयनित नहीं होता। अतः यह अम्लीय व्यवहार नहीं दर्शाता!';
+
+      } else if (type === 'naoh') {
+        if (bGlow) bGlow.style.opacity = '1';
+        if (bRays) bRays.style.opacity = '1';
+        if (bGlass) bGlass.setAttribute('fill', '#fef08a');
+        if (bFil) bFil.setAttribute('stroke', '#ea580c');
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (nBub) nBub.style.opacity = '1';
+        if (liq) liq.setAttribute('fill', '#e0e7ff');
+        if (bTitle) bTitle.textContent = 'तनु NaOH विलयन';
+        if (bSub) bSub.textContent = 'मुक्त Na⁺ व OH⁻ आयन उपस्थित';
+
+        if (ionsGroup) {
+          ionsGroup.innerHTML = `
+            <circle cx="50" cy="110" r="11" fill="#6366f1"/><text x="50" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Na⁺</text>
+            <circle cx="140" cy="110" r="11" fill="#6366f1"/><text x="140" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Na⁺</text>
+            <circle cx="95" cy="150" r="12" fill="#ec4899"/><text x="95" y="154" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">OH⁻</text>
+          `;
+        }
+
+        if (pSample) pSample.textContent = 'सोडियम हाइड्रॉक्साइड (NaOH क्षारक)';
+        if (pSampleSub) pSampleSub.textContent = 'प्रबल क्षारक — जल में पूर्ण आयनित होता है।';
+        if (pEq) pEq.textContent = 'NaOH(aq) ➔ Na⁺(aq) + OH⁻(aq)';
+        if (pEqSub) pEqSub.textContent = 'OH⁻ आयन क्षारकीय गुण व चालन के लिए उत्तरदायी हैं।';
+        if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
+        if (pBulbSub) pBulbSub.textContent = 'क्षारक भी जलीय विलयन में विद्युत का चालन करते हैं।';
+        if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
+        if (st) st.innerHTML = '<span style="color:#7c3aed;">✔ तनु NaOH (क्षारक):</span> <strong>बल्ब जलता है 💡</strong> क्योंकि क्षारक जलीय विलयन में हाइड्रॉक्साइड आयन (OH⁻) देते हैं, जो विद्युत धारा का चालन करते हैं।';
+      }
+    }
+
+    /* ==========================================================
+       SIMULATOR 2.7: WATER OF CRYSTALLISATION (Activity 2.15)
+       ========================================================== */
+    function simCrystReset() {
+      clearSimTimers('cryst');
+      var pbar = document.getElementById('scryst_pbar'); if (pbar) pbar.style.width = '0%';
+      var st = document.getElementById('scryst_status');
+      if (st) st.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> क्वथन नली में नीले कॉपर सल्फेट (CuSO₄·5H₂O) के क्रिस्टल तैयार हैं। "संपूर्ण वीडियो एनिमेशन" या चरण 2 दबाएं।';
+
+      var flame = document.getElementById('scryst_flame'); if (flame) flame.style.opacity = '0';
+      var powder = document.getElementById('scryst_powder'); if (powder) powder.setAttribute('fill', '#2563eb');
+      var powderLbl = document.getElementById('scryst_powder_label'); if (powderLbl) powderLbl.textContent = 'CuSO₄·5H₂O';
+      var drops = document.getElementById('scryst_droplets'); if (drops) drops.style.opacity = '0';
+      var steam = document.getElementById('scryst_steam'); if (steam) steam.style.opacity = '0';
+      var dropper = document.getElementById('scryst_dropper'); if (dropper) dropper.style.opacity = '0';
+      var tag = document.getElementById('scryst_cond_tag'); if (tag) tag.style.opacity = '0';
+
+      ['scryst_c1_bg', 'scryst_c2_bg', 'scryst_c3_bg'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.setAttribute('fill', '#f8fafc'); el.setAttribute('stroke', '#cbd5e1'); }
+      });
+    }
+
+    function simCrystStep(s) {
+      var pbar = document.getElementById('scryst_pbar');
+      var st = document.getElementById('scryst_status');
+
+      if (s === 1) {
+        simCrystReset();
+        if (pbar) pbar.style.width = '33%';
+        if (st) st.innerHTML = '<strong>चरण 1:</strong> शुष्क क्वथन नली में नीले कॉपर सल्फेट के क्रिस्टल (CuSO₄·5H₂O) उपस्थित हैं। इसमें 5 अणु क्रिस्टलन का जल जुड़ा है।';
+        var c1 = document.getElementById('scryst_c1_bg');
+        if (c1) { c1.setAttribute('fill', '#eff6ff'); c1.setAttribute('stroke', '#3b82f6'); }
+
+      } else if (s === 2) {
+        if (pbar) pbar.style.width = '66%';
+        var flame = document.getElementById('scryst_flame'); if (flame) flame.style.opacity = '1';
+        var powder = document.getElementById('scryst_powder'); if (powder) powder.setAttribute('fill', '#f8fafc');
+        var powderLbl = document.getElementById('scryst_powder_label'); if (powderLbl) powderLbl.textContent = 'CuSO₄ (श्वेत)';
+        var drops = document.getElementById('scryst_droplets'); if (drops) drops.style.opacity = '1';
+        var steam = document.getElementById('scryst_steam'); if (steam) steam.style.opacity = '1';
+        var tag = document.getElementById('scryst_cond_tag'); if (tag) tag.style.opacity = '1';
+
+        if (st) st.innerHTML = '<strong>चरण 2:</strong> बर्नर की ज्वाला पर गर्म करने पर क्रिस्टलन का जल (5H₂O) वाष्पित होकर ऊपर की ठंडी दीवार पर <strong>जल की बूंदों</strong> के रूप में संघनित होता है, तथा नीला लवण <strong>सफेद निर्जल चूर्ण (CuSO₄)</strong> में बदल जाता है!';
+        var c2 = document.getElementById('scryst_c2_bg');
+        if (c2) { c2.setAttribute('fill', '#fefce8'); c2.setAttribute('stroke', '#eab308'); }
+
+      } else if (s === 3) {
+        if (pbar) pbar.style.width = '100%';
+        var flame = document.getElementById('scryst_flame'); if (flame) flame.style.opacity = '0';
+        var steam = document.getElementById('scryst_steam'); if (steam) steam.style.opacity = '0';
+        var dropper = document.getElementById('scryst_dropper'); if (dropper) dropper.style.opacity = '1';
+        var powder = document.getElementById('scryst_powder'); if (powder) powder.setAttribute('fill', '#1d4ed8');
+        var powderLbl = document.getElementById('scryst_powder_label'); if (powderLbl) powderLbl.textContent = 'CuSO₄·5H₂O';
+
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> ड्रॉपर से 2-3 बूंद जल डालते ही सफेद निर्जल कॉपर सल्फेट पुनः जल के 5 अणुओं को ग्रहण कर तत्काल <strong>गहरे नीले रंग</strong> में परिवर्तित हो जाता है!';
+        var c3 = document.getElementById('scryst_c3_bg');
+        if (c3) { c3.setAttribute('fill', '#ecfdf5'); c3.setAttribute('stroke', '#10b981'); }
+      }
+    }
+
+    function simCrystPlayAuto() {
+      simCrystReset();
+      simCrystStep(1);
+      addSimTimer('cryst', setTimeout(function() { simCrystStep(2); }, 2000));
+      addSimTimer('cryst', setTimeout(function() { simCrystStep(3); }, 5000));
     }
 
     /* ==========================================================
@@ -3067,6 +4374,10 @@
       applySimTypography();
       sim21Reset();
       sim23Reset();
+      simIndReset();
+      simCarbReset();
+      simCondReset();
+      simCrystReset();
     });
 </script>
 </body>
