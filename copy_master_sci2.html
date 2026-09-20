@@ -4829,134 +4829,160 @@
           </defs>
 
           <!-- 3D WORKBENCH -->
-          <polygon points="20,410 710,410 680,490 20,490" fill="url(#scond_benchTop)"/>
-          <rect x="20" y="490" width="660" height="35" fill="#0f172a"/>
+          <polygon points="20,400 705,400 680,515 20,515" fill="url(#scond_benchTop)"/>
+          <rect x="20" y="515" width="660" height="20" fill="#0f172a"/>
 
-          <!-- 6V BATTERY (TOP LEFT) -->
-          <g transform="translate(70, 70)">
-            <rect x="0" y="10" width="110" height="70" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <rect x="15" y="0" width="20" height="10" fill="#dc2626" rx="2"/>
-            <rect x="75" y="0" width="20" height="10" fill="#0284c7" rx="2"/>
-            <text x="25" y="-3" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">+</text>
-            <text x="85" y="-3" font-size="14" font-weight="900" fill="#0284c7" text-anchor="middle">-</text>
-            <text x="55" y="45" font-size="16" font-weight="900" fill="#f8fafc" text-anchor="middle">6 V बैटरी</text>
-            <text x="55" y="65" font-size="11" font-weight="800" fill="#334155" text-anchor="middle">DC स्रोत</text>
+          <!-- 6V LAB BATTERY (TOP LEFT) -->
+          <g transform="translate(45, 45)">
+            <!-- Main Battery Chassis -->
+            <rect x="0" y="10" width="130" height="75" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="2.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))"/>
+            <!-- Dual Terminals with clear polarization -->
+            <rect x="20" y="0" width="24" height="10" fill="#dc2626" rx="2"/>
+            <rect x="86" y="0" width="24" height="10" fill="#0284c7" rx="2"/>
+            <text x="32" y="-3" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">+</text>
+            <text x="98" y="-3" font-size="16" font-weight="900" fill="#0284c7" text-anchor="middle">−</text>
+            <!-- Battery Label Card (High contrast, zero cut-off) -->
+            <rect x="12" y="22" width="106" height="52" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+            <text x="65" y="44" font-size="15.5" font-weight="900" fill="#facc15" text-anchor="middle">6 V बैटरी</text>
+            <text x="65" y="62" font-size="11.5" font-weight="900" fill="#ffffff" text-anchor="middle">DC विद्युत स्रोत</text>
           </g>
 
           <!-- SWITCH / KEY (TOP CENTER) -->
-          <g transform="translate(260, 80)">
-            <rect x="0" y="0" width="80" height="40" rx="6" fill="#334155" stroke="#1e293b" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="5" fill="#e2e8f0"/>
-            <circle cx="60" cy="20" r="5" fill="#e2e8f0"/>
+          <g transform="translate(265, 55)">
+            <rect x="0" y="0" width="95" height="46" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.2))"/>
+            <circle cx="24" cy="23" r="6" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+            <circle cx="71" cy="23" r="6" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
             <!-- Switch arm: closed (0 deg) or open (-30 deg) -->
-            <line id="scond_switch_arm" x1="20" y1="20" x2="58" y2="20" stroke="#facc15" stroke-width="4" stroke-linecap="round" style="transition: all 0.3s ease;"/>
-            <text id="scond_switch_label" x="40" y="55" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">स्विच: ON</text>
+            <line id="scond_switch_arm" x1="24" y1="23" x2="69" y2="23" stroke="#facc15" stroke-width="4.5" stroke-linecap="round" style="transition: all 0.3s ease;"/>
+            <!-- Switch Label Badge below -->
+            <g transform="translate(0, 52)">
+              <rect x="10" y="0" width="75" height="22" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+              <text id="scond_switch_label" x="47.5" y="16" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">स्विच: ON</text>
+            </g>
           </g>
 
           <!-- BULB ASSEMBLY (TOP RIGHT) -->
-          <g id="scond_bulb_assembly" transform="translate(430, 45)">
+          <g id="scond_bulb_assembly" transform="translate(480, 38)">
             <!-- Outer Bulb Glow (Active when bulb ON) -->
-            <circle id="scond_bulb_glow" cx="50" cy="50" r="60" fill="url(#scond_bulbGlow)" opacity="1" filter="url(#scond_glowBlur)" style="transition: opacity 0.3s ease;"/>
+            <circle id="scond_bulb_glow" cx="50" cy="45" r="55" fill="url(#scond_bulbGlow)" opacity="1" filter="url(#scond_glowBlur)" style="transition: opacity 0.3s ease;"/>
             <!-- Glow Rays -->
             <g id="scond_bulb_rays" opacity="1" style="transition: opacity 0.3s ease;">
-              <line x1="50" y1="-5" x2="50" y2="-20" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
-              <line x1="95" y1="20" x2="110" y2="10" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
-              <line x1="105" y1="50" x2="120" y2="50" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
-              <line x1="5" y1="20" x2="-10" y2="10" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
-              <line x1="-5" y1="50" x2="-20" y2="50" stroke="#facc15" stroke-width="3" stroke-linecap="round"/>
+              <line x1="50" y1="-8" x2="50" y2="-22" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="95" y1="15" x2="112" y2="5" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="105" y1="45" x2="122" y2="45" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="5" y1="15" x2="-12" y2="5" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="-5" y1="45" x2="-22" y2="45" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
             </g>
 
             <!-- Bulb Glass Dome -->
-            <circle cx="50" cy="50" r="30" fill="#fef08a" stroke="#ca8a04" stroke-width="2" id="scond_bulb_glass" style="transition: all 0.3s ease;"/>
+            <circle cx="50" cy="45" r="28" fill="#fef08a" stroke="#ca8a04" stroke-width="2.5" id="scond_bulb_glass" style="transition: all 0.3s ease;"/>
             <!-- Filament -->
-            <path id="scond_filament" d="M42,65 L44,45 L48,40 L52,40 L56,45 L58,65" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" style="transition: stroke 0.3s ease;"/>
+            <path id="scond_filament" d="M42,60 L44,40 L48,34 L52,34 L56,40 L58,60" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round" style="transition: stroke 0.3s ease;"/>
             <!-- Socket Base -->
-            <rect x="38" y="75" width="24" height="18" rx="2" fill="#64748b"/>
-            <line x1="38" y1="80" x2="62" y2="80" stroke="#475569" stroke-width="1.5"/>
-            <line x1="38" y1="86" x2="62" y2="86" stroke="#475569" stroke-width="1.5"/>
+            <rect x="37" y="70" width="26" height="18" rx="3" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+            <line x1="37" y1="76" x2="63" y2="76" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="37" y1="82" x2="63" y2="82" stroke="#94a3b8" stroke-width="1.5"/>
 
-            <text id="scond_bulb_status_txt" x="50" y="112" font-size="13" font-weight="900" fill="#ca8a04" text-anchor="middle">बल्ब: जल रहा है 💡</text>
+            <!-- Bulb Status Label Badge -->
+            <g transform="translate(-10, 94)">
+              <rect id="scond_bulb_badge_bg" x="0" y="0" width="120" height="24" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+              <text id="scond_bulb_status_txt" x="60" y="17" font-size="12.5" font-weight="900" fill="#15803d" text-anchor="middle">बल्ब: जल रहा है 💡</text>
+            </g>
           </g>
 
-          <!-- CIRCUIT CONNECTING WIRES -->
-          <!-- Wire 1: Battery + (X:95, Y:70) to Switch (X:280, Y:100) -->
-          <path d="M95,70 L95,50 L260,50 L280,100" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
-          <!-- Wire 2: Switch (X:320, Y:100) to Bulb (X:468, Y:130) -->
-          <path d="M320,100 L370,50 L468,50 L468,130" fill="none" stroke="#facc15" stroke-width="3.5" stroke-linecap="round"/>
-          <!-- Wire 3: Bulb other terminal to Right Nail (X:395, Y:270) -->
-          <path d="M492,130 L550,130 L550,220 L395,220 L395,270" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
-          <!-- Wire 4: Battery - (X:155, Y:70) to Left Nail (X:285, Y:270) -->
-          <path d="M155,70 L155,220 L285,220 L285,270" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- CIRCUIT CONNECTING WIRES (Zero crossings over text or glassware) -->
+          <!-- Wire 1: Battery + (X:77, Y:45) to Switch (X:289, Y:78) -->
+          <path d="M77,45 L77,20 L289,20 L289,78" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wire 2: Switch (X:336, Y:78) to Bulb (X:517, Y:126) -->
+          <path d="M336,78 L336,20 L517,20 L517,126" fill="none" stroke="#eab308" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wire 3: Bulb other terminal (X:543, Y:126) to Right Nail (X:385, Y:220) -->
+          <path d="M543,126 L605,126 L605,158 L385,158 L385,220" fill="none" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Wire 4: Battery - (X:143, Y:45) to Left Nail (X:275, Y:220) -->
+          <path d="M143,45 L155,45 L155,158 L275,158 L275,220" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round"/>
+
+          <!-- EXTERNAL NAIL LABELS (Comfortably in clear space above beaker rim, ZERO overlap) -->
+          <g transform="translate(229, 126)">
+            <rect x="0" y="0" width="92" height="22" rx="4" fill="#0284c7" stroke="#ffffff" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+            <text x="46" y="15" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">कील 1 (कैथोड −)</text>
+          </g>
+          <g transform="translate(339, 126)">
+            <rect x="0" y="0" width="92" height="22" rx="4" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+            <text x="46" y="15" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">कील 2 (एनोड +)</text>
+          </g>
 
           <!-- ================= 100 mL BEAKER WITH CORK & NAILS ================= -->
-          <g transform="translate(190, 180)">
+          <g transform="translate(200, 155)">
             <!-- Solution Liquid in Beaker -->
-            <rect id="scond_liquid" x="8" y="70" width="204" height="145" rx="8" fill="#bae6fd" opacity="0.8" style="transition: fill 0.5s ease;"/>
+            <rect id="scond_liquid" x="14" y="65" width="232" height="175" rx="8" fill="#bae6fd" opacity="0.8" style="transition: fill 0.5s ease;"/>
+            <!-- Liquid Meniscus Ellipse -->
+            <ellipse id="scond_meniscus" cx="130" cy="65" rx="116" ry="8" fill="#93c5fd" opacity="0.7"/>
 
-            <!-- Floating Ions / Molecules Animation Group -->
+            <!-- Floating Large Ions / Molecules Group (High contrast, dark bold 900 text) -->
             <g id="scond_ions_group">
-              <!-- Positive ions H+ -->
-              <circle cx="45" cy="110" r="11" fill="#3b82f6"/>
-              <text x="45" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+              <!-- Left Zone (x: 20-65) -->
+              <circle cx="44" cy="115" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/>
+              <text x="44" y="120" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
 
-              <circle cx="85" cy="140" r="11" fill="#3b82f6"/>
-              <text x="85" y="144" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+              <circle cx="44" cy="168" r="16" fill="#86efac" stroke="#16a34a" stroke-width="2.5"/>
+              <text x="44" y="173" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Cl⁻</text>
 
-              <circle cx="140" cy="100" r="11" fill="#3b82f6"/>
-              <text x="140" y="104" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
+              <!-- Middle Zone between nails (x: 95-165, width=70) -->
+              <circle cx="130" cy="112" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/>
+              <text x="130" y="117" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
 
-              <!-- Negative ions Cl- -->
-              <circle cx="65" cy="170" r="12" fill="#10b981"/>
-              <text x="65" y="174" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
-
-              <circle cx="165" cy="150" r="12" fill="#10b981"/>
-              <text x="165" y="154" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+              <circle cx="130" cy="162" r="16" fill="#86efac" stroke="#16a34a" stroke-width="2.5"/>
+              <text x="130" y="167" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Cl⁻</text>
             </g>
 
-            <!-- Bubbles near nails when current flows -->
+            <!-- Active Bubbles near nails when current flows -->
             <g id="scond_nail_bubbles" opacity="1">
-              <circle cx="93" cy="160" r="2.5" fill="#ffffff"/>
-              <circle cx="97" cy="140" r="3" fill="#ffffff"/>
-              <circle cx="203" cy="160" r="2.5" fill="#ffffff"/>
-              <circle cx="207" cy="140" r="3" fill="#ffffff"/>
+              <circle cx="71" cy="140" r="3.5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+              <circle cx="79" cy="115" r="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+              <circle cx="181" cy="145" r="3.5" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+              <circle cx="189" cy="120" r="3" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
             </g>
 
             <!-- Rubber Cork at Bottom -->
-            <rect x="50" y="180" width="120" height="35" rx="6" fill="#78350f" stroke="#451a03" stroke-width="2"/>
-            <text x="110" y="202" font-size="12" font-weight="900" fill="#92400e" text-anchor="middle">रबर कॉर्क</text>
+            <rect x="40" y="195" width="180" height="45" rx="8" fill="#451a03" stroke="#290e03" stroke-width="2.5"/>
+            <rect x="65" y="206" width="130" height="24" rx="4" fill="#78350f" stroke="#a16207" stroke-width="1.2"/>
+            <text x="130" y="223" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">रबर कॉर्क (Rubber Cork)</text>
 
-            <!-- Iron Nail 1 (Left: Connected to Negative/Cathode) -->
-            <rect x="92" y="85" width="6" height="100" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
-            <polygon points="90,85 100,85 95,75" fill="#475569"/>
-            <text x="80" y="105" font-size="11" font-weight="900" fill="#0284c7">कील 1</text>
+            <!-- Iron Nail 1 (Left: Connected to Negative/Cathode at x=75) -->
+            <rect x="71" y="65" width="8" height="135" fill="#cbd5e1" stroke="#334155" stroke-width="1.8"/>
+            <polygon points="69,65 81,65 75,53" fill="#475569" stroke="#334155" stroke-width="1.5"/>
 
-            <!-- Iron Nail 2 (Right: Connected to Positive/Anode) -->
-            <rect x="122" y="85" width="6" height="100" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
-            <polygon points="120,85 130,85 125,75" fill="#475569"/>
-            <text x="135" y="105" font-size="11" font-weight="900" fill="#dc2626">कील 2</text>
+            <!-- Iron Nail 2 (Right: Connected to Positive/Anode at x=185) -->
+            <rect x="181" y="65" width="8" height="135" fill="#cbd5e1" stroke="#334155" stroke-width="1.8"/>
+            <polygon points="179,65 191,65 185,53" fill="#475569" stroke="#334155" stroke-width="1.5"/>
 
-            <!-- Glass Beaker Outline (100 mL) -->
-            <rect x="5" y="10" width="210" height="210" rx="14" fill="url(#scond_glassGrad)" stroke="#0284c7" stroke-width="2.5"/>
+            <!-- Glass Beaker Outline (100 mL Pyrex, 260px wide) -->
+            <rect x="10" y="15" width="240" height="230" rx="14" fill="url(#scond_glassGrad)" stroke="#0284c7" stroke-width="2.8"/>
             <!-- Beaker Spout -->
-            <path d="M5,15 L-5,10 L5,25" fill="none" stroke="#0284c7" stroke-width="2.2"/>
-            <line x1="5" y1="10" x2="215" y2="10" stroke="#0284c7" stroke-width="2.5"/>
+            <path d="M10,20 L-6,15 L10,32" fill="none" stroke="#0284c7" stroke-width="2.4"/>
+            <!-- Top Rim Flange -->
+            <rect x="5" y="10" width="250" height="8" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="2.5" opacity="0.85"/>
 
-            <!-- Volume graduations on beaker -->
-            <line x1="180" y1="60" x2="205" y2="60" stroke="#0284c7" stroke-width="1.5"/>
-            <text x="170" y="64" font-size="10" font-weight="800" fill="#0284c7">100mL</text>
-            <line x1="185" y1="100" x2="205" y2="100" stroke="#0284c7" stroke-width="1.5"/>
-            <text x="175" y="104" font-size="10" font-weight="800" fill="#0284c7">50mL</text>
-
-            <!-- Beaker Label Badge -->
-            <rect x="40" y="225" width="140" height="34" rx="6" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="scond_beaker_title" x="110" y="242" font-size="14" font-weight="900" fill="#1e40af" text-anchor="middle">तनु HCl विलयन</text>
-            <text id="scond_beaker_sub" x="110" y="255" font-size="11" font-weight="800" fill="#166534" text-anchor="middle">मुक्त H⁺ व Cl⁻ आयन उपस्थित</text>
+            <!-- Volume graduations on beaker (Clear right margin, no overlap) -->
+            <line x1="220" y1="75" x2="242" y2="75" stroke="#0284c7" stroke-width="2"/>
+            <text x="215" y="79" font-size="10" font-weight="900" fill="#0369a1" text-anchor="end">100 mL</text>
+            <line x1="225" y1="125" x2="242" y2="125" stroke="#0284c7" stroke-width="2"/>
+            <text x="220" y="129" font-size="10" font-weight="900" fill="#0369a1" text-anchor="end">75 mL</text>
+            <line x1="220" y1="175" x2="242" y2="175" stroke="#0284c7" stroke-width="2"/>
+            <text x="215" y="179" font-size="10" font-weight="900" fill="#0369a1" text-anchor="end">50 mL</text>
           </g>
 
-          <!-- TOP BANNER LAB TITLE -->
-          <g transform="translate(60, 15)">
-            <rect x="0" y="0" width="650" height="36" rx="8" fill="#ffffff" opacity="0.9" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.08))"/>
-            <text id="scond_lab_title" x="325" y="23" font-size="14" font-weight="900" fill="#166534" text-anchor="middle">⚡ NCERT 2.8: जलीय विलयनों में विद्युत चालकता व आयन चालन</text>
+          <!-- ================= WIDE TABLE DISPLAY BANNER (Full Table Width under Apparatus) ================= -->
+          <g transform="translate(30, 422)">
+            <rect x="0" y="0" width="655" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.8" filter="drop-shadow(0 4px 10px rgba(0,0,0,0.12))"/>
+            <!-- Left Accent Strip -->
+            <rect x="0" y="0" width="10" height="74" rx="4" fill="#16a34a"/>
+            <!-- Icon Circle -->
+            <circle cx="35" cy="37" r="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <text id="scond_table_icon" x="35" y="45" font-size="20" text-anchor="middle">💡</text>
+            <!-- Primary Title Text (Bold & Large, 100% Dark) -->
+            <text id="scond_table_title" x="68" y="31" font-size="17.5" font-weight="900" fill="#000000">बीकर: तनु हाइड्रोक्लोरिक अम्ल (तनु HCl) — विद्युत चालन सक्रिय 💡</text>
+            <!-- Dynamic Status Subtitle Text (Bold & Large, 100% Dark) -->
+            <text id="scond_table_sub" x="68" y="58" font-size="15" font-weight="900" fill="#000000">▶ निष्कर्ष: विलयन में मुक्त H⁺ व Cl⁻ आयन गति करते हैं जिससे परिपथ पूर्ण होकर बल्ब जलता है।</text>
           </g>
 
           <!-- ================= RIGHT OBSERVATION PANEL (X: 725 to 1175) ================= -->
@@ -7701,9 +7727,11 @@
       clearSimTimers('cond');
       // Open switch
       var sw = document.getElementById('scond_switch_arm');
-      if (sw) { sw.setAttribute('x2', '48'); sw.setAttribute('y2', '5'); }
+      if (sw) { sw.setAttribute('x2', '55'); sw.setAttribute('y2', '5'); }
       var swLbl = document.getElementById('scond_switch_label');
       if (swLbl) { swLbl.textContent = 'स्विच: OFF'; swLbl.setAttribute('fill', '#dc2626'); }
+      var swBadge = swLbl ? swLbl.parentElement.querySelector('rect') : null;
+      if (swBadge) { swBadge.setAttribute('fill', '#fee2e2'); swBadge.setAttribute('stroke', '#ef4444'); }
 
       // Turn off bulb
       var bGlow = document.getElementById('scond_bulb_glow'); if (bGlow) bGlow.style.opacity = '0';
@@ -7711,10 +7739,19 @@
       var bGlass = document.getElementById('scond_bulb_glass'); if (bGlass) bGlass.setAttribute('fill', '#e2e8f0');
       var bFil = document.getElementById('scond_filament'); if (bFil) bFil.setAttribute('stroke', '#94a3b8');
       var bStat = document.getElementById('scond_bulb_status_txt');
-      if (bStat) { bStat.textContent = 'बल्ब: बुझा हुआ ❌'; bStat.setAttribute('fill', '#64748b'); }
+      if (bStat) { bStat.textContent = 'बल्ब: बुझा हुआ ❌'; bStat.setAttribute('fill', '#dc2626'); }
+      var bBadge = document.getElementById('scond_bulb_badge_bg');
+      if (bBadge) { bBadge.setAttribute('fill', '#fee2e2'); bBadge.setAttribute('stroke', '#ef4444'); }
 
-      // Clear bubbles and ions
+      // Clear bubbles
       var nBub = document.getElementById('scond_nail_bubbles'); if (nBub) nBub.style.opacity = '0';
+
+      // Table banner updates
+      var tblIcon = document.getElementById('scond_table_icon'); if (tblIcon) tblIcon.textContent = '🔌';
+      var tblTitle = document.getElementById('scond_table_title');
+      if (tblTitle) tblTitle.textContent = 'बीकर: परिपथ खुला (स्विच OFF) — कोई विद्युत धारा नहीं';
+      var tblSub = document.getElementById('scond_table_sub');
+      if (tblSub) tblSub.textContent = '▶ निर्देश: ऊपर दिए गए 5 बटनों में से किसी एक विलयन का चयन करके परीक्षण करें।';
 
       var st = document.getElementById('scond_status');
       if (st) st.innerHTML = '<strong>परिपथ खुला (OFF):</strong> स्विच ऑफ है। ऊपर दिए गए 5 बटनों में से किसी एक पर क्लिक करके विलयन का विद्युत चालन देखें।';
@@ -7723,20 +7760,25 @@
     function simCondSelect(type) {
       // Close switch
       var sw = document.getElementById('scond_switch_arm');
-      if (sw) { sw.setAttribute('x2', '58'); sw.setAttribute('y2', '20'); }
+      if (sw) { sw.setAttribute('x2', '69'); sw.setAttribute('y2', '23'); }
       var swLbl = document.getElementById('scond_switch_label');
       if (swLbl) { swLbl.textContent = 'स्विच: ON'; swLbl.setAttribute('fill', '#15803d'); }
+      var swBadge = swLbl ? swLbl.parentElement.querySelector('rect') : null;
+      if (swBadge) { swBadge.setAttribute('fill', '#dcfce7'); swBadge.setAttribute('stroke', '#16a34a'); }
 
       var bGlow = document.getElementById('scond_bulb_glow');
       var bRays = document.getElementById('scond_bulb_rays');
       var bGlass = document.getElementById('scond_bulb_glass');
       var bFil = document.getElementById('scond_filament');
       var bStat = document.getElementById('scond_bulb_status_txt');
+      var bBadge = document.getElementById('scond_bulb_badge_bg');
       var nBub = document.getElementById('scond_nail_bubbles');
       var liq = document.getElementById('scond_liquid');
-      var bTitle = document.getElementById('scond_beaker_title');
-      var bSub = document.getElementById('scond_beaker_sub');
       var st = document.getElementById('scond_status');
+
+      var tblIcon = document.getElementById('scond_table_icon');
+      var tblTitle = document.getElementById('scond_table_title');
+      var tblSub = document.getElementById('scond_table_sub');
 
       var pSample = document.getElementById('scond_panel_sample');
       var pSampleSub = document.getElementById('scond_panel_sample_sub');
@@ -7753,21 +7795,23 @@
         if (bRays) bRays.style.opacity = '1';
         if (bGlass) bGlass.setAttribute('fill', '#fef08a');
         if (bFil) bFil.setAttribute('stroke', '#ea580c');
-        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#15803d'); }
+        if (bBadge) { bBadge.setAttribute('fill', '#dcfce7'); bBadge.setAttribute('stroke', '#16a34a'); }
         if (nBub) nBub.style.opacity = '1';
         if (liq) liq.setAttribute('fill', '#bae6fd');
-        if (bTitle) bTitle.textContent = 'तनु HCl विलयन';
-        if (bSub) bSub.textContent = 'मुक्त H⁺ व Cl⁻ आयन उपस्थित';
 
         if (ionsGroup) {
           ionsGroup.innerHTML = `
-            <circle cx="45" cy="110" r="11" fill="#3b82f6"/><text x="45" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
-            <circle cx="85" cy="140" r="11" fill="#3b82f6"/><text x="85" y="144" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
-            <circle cx="140" cy="100" r="11" fill="#3b82f6"/><text x="140" y="104" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
-            <circle cx="65" cy="170" r="12" fill="#10b981"/><text x="65" y="174" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
-            <circle cx="165" cy="150" r="12" fill="#10b981"/><text x="165" y="154" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Cl⁻</text>
+            <circle cx="44" cy="115" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/><text x="44" y="120" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
+            <circle cx="44" cy="168" r="16" fill="#86efac" stroke="#16a34a" stroke-width="2.5"/><text x="44" y="173" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Cl⁻</text>
+            <circle cx="130" cy="112" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/><text x="130" y="117" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
+            <circle cx="130" cy="162" r="16" fill="#86efac" stroke="#16a34a" stroke-width="2.5"/><text x="130" y="167" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Cl⁻</text>
           `;
         }
+
+        if (tblIcon) tblIcon.textContent = '💡';
+        if (tblTitle) tblTitle.textContent = 'बीकर: तनु हाइड्रोक्लोरिक अम्ल (HCl) — विद्युत चालन सक्रिय 💡';
+        if (tblSub) tblSub.textContent = '▶ निष्कर्ष: मुक्त H⁺ व Cl⁻ आयनों के प्रवाह से परिपथ पूर्ण होकर बल्ब तीव्र जलता है।';
 
         if (pSample) pSample.textContent = 'तनु हाइड्रोक्लोरिक अम्ल (तनु HCl)';
         if (pSampleSub) pSampleSub.textContent = 'प्रबल अम्ल — जल में पूर्णतः आयनित होता है।';
@@ -7776,26 +7820,29 @@
         if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त H⁺ व Cl⁻ आयनों के प्रवाह से परिपथ पूर्ण होता है।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#15803d;">✔ तनु HCl:</span> <strong>बल्ब चमकता है 💡</strong> क्योंकि HCl जलीय विलयन में H⁺ तथा Cl⁻ आयनों में टूटकर विद्युत का चालन करता है।';
+        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु HCl:</span> <strong>बल्ब चमकता है 💡</strong> क्योंकि HCl जलीय विलयन में H⁺ तथा Cl⁻ आयनों में टूटकर विद्युत का चालन करता है।';
 
       } else if (type === 'h2so4') {
         if (bGlow) bGlow.style.opacity = '1';
         if (bRays) bRays.style.opacity = '1';
         if (bGlass) bGlass.setAttribute('fill', '#fef08a');
         if (bFil) bFil.setAttribute('stroke', '#ea580c');
-        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#15803d'); }
+        if (bBadge) { bBadge.setAttribute('fill', '#dcfce7'); bBadge.setAttribute('stroke', '#16a34a'); }
         if (nBub) nBub.style.opacity = '1';
         if (liq) liq.setAttribute('fill', '#bae6fd');
-        if (bTitle) bTitle.textContent = 'तनु H₂SO₄ विलयन';
-        if (bSub) bSub.textContent = '2H⁺ व SO₄²⁻ आयन उपस्थित';
 
         if (ionsGroup) {
           ionsGroup.innerHTML = `
-            <circle cx="50" cy="110" r="11" fill="#3b82f6"/><text x="50" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
-            <circle cx="100" cy="130" r="11" fill="#3b82f6"/><text x="100" y="134" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">H⁺</text>
-            <circle cx="150" cy="150" r="14" fill="#0284c7"/><text x="150" y="154" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">SO₄²⁻</text>
+            <circle cx="44" cy="140" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/><text x="44" y="145" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
+            <circle cx="130" cy="112" r="16" fill="#93c5fd" stroke="#0284c7" stroke-width="2.5"/><text x="130" y="117" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">H⁺</text>
+            <circle cx="130" cy="162" r="20" fill="#fed7aa" stroke="#ea580c" stroke-width="2.5"/><text x="130" y="167" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">SO₄²⁻</text>
           `;
         }
+
+        if (tblIcon) tblIcon.textContent = '💡';
+        if (tblTitle) tblTitle.textContent = 'बीकर: तनु सल्फ्यूरिक अम्ल (H₂SO₄) — अति तीव्र विद्युत चालन 💡';
+        if (tblSub) tblSub.textContent = '▶ निष्कर्ष: 2H⁺ व SO₄²⁻ आयन उपस्थित हैं ➔ बल्ब अत्यंत तीव्रता से चमकता है।';
 
         if (pSample) pSample.textContent = 'तनु सल्फ्यूरिक अम्ल (तनु H₂SO₄)';
         if (pSampleSub) pSampleSub.textContent = 'द्विक्षारकीय प्रबल खनिज अम्ल।';
@@ -7804,7 +7851,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब अत्यंत तीव्र जलता है 💡';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन धारा को तेजी से प्रवाहित करते हैं।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#15803d;">✔ तनु H₂SO₄:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि यह जल में 2H⁺ तथा SO₄²⁻ आयनों में वियोजित होता है।';
+        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु H₂SO₄:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि यह जल में 2H⁺ तथा SO₄²⁻ आयनों में वियोजित होता है।';
 
       } else if (type === 'glucose') {
         if (bGlow) bGlow.style.opacity = '0';
@@ -7812,17 +7859,24 @@
         if (bGlass) bGlass.setAttribute('fill', '#cbd5e1');
         if (bFil) bFil.setAttribute('stroke', '#94a3b8');
         if (bStat) { bStat.textContent = 'बल्ब: नहीं जलता ❌'; bStat.setAttribute('fill', '#dc2626'); }
+        if (bBadge) { bBadge.setAttribute('fill', '#fee2e2'); bBadge.setAttribute('stroke', '#ef4444'); }
         if (nBub) nBub.style.opacity = '0';
         if (liq) liq.setAttribute('fill', '#fef3c7');
-        if (bTitle) bTitle.textContent = 'ग्लूकोज विलयन (C₆H₁₂O₆)';
-        if (bSub) bSub.textContent = 'आणविक अवस्था, कोई आयन नहीं';
 
         if (ionsGroup) {
           ionsGroup.innerHTML = `
-            <ellipse cx="60" cy="120" rx="20" ry="12" fill="#d97706"/><text x="60" y="124" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₆H₁₂O₆</text>
-            <ellipse cx="140" cy="140" rx="20" ry="12" fill="#d97706"/><text x="140" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₆H₁₂O₆</text>
+            <rect x="18" y="132" width="48" height="28" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2.2"/>
+            <text x="42" y="151" font-size="10.5" font-weight="900" fill="#000000" text-anchor="middle">C₆H₁₂O₆</text>
+            <rect x="96" y="112" width="68" height="32" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+            <text x="130" y="133" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">C₆H₁₂O₆</text>
+            <rect x="96" y="156" width="68" height="32" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+            <text x="130" y="177" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">C₆H₁₂O₆</text>
           `;
         }
+
+        if (tblIcon) tblIcon.textContent = '❌';
+        if (tblTitle) tblTitle.textContent = 'बीकर: ग्लूकोज विलयन (C₆H₁₂O₆) — कोई विद्युत चालन नहीं ❌';
+        if (tblSub) tblSub.textContent = '▶ निष्कर्ष: सहसंयोजी कार्बनिक अणु होने के कारण कोई मुक्त आयन नहीं बनते ➔ बल्ब बुझा रहता है!';
 
         if (pSample) pSample.textContent = 'ग्लूकोज विलयन (Glucose Solution)';
         if (pSampleSub) pSampleSub.textContent = 'सहसंयोजी कार्बनिक यौगिक (C₆H₁₂O₆)।';
@@ -7831,7 +7885,7 @@
         if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, परिपथ अधूरा है।';
         if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
-        if (st) st.innerHTML = '<span style="color:#dc2626;">❌ ग्लूकोज:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ग्लूकोज में हाइड्रोजन परमाणु होते हुए भी यह जल में H⁺ आयन नहीं बनाता। अतः यह अम्ल नहीं है!';
+        if (st) st.innerHTML = '<span style="color:#dc2626; font-size:17px; font-weight:900;">❌ ग्लूकोज:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ग्लूकोज में हाइड्रोजन परमाणु होते हुए भी यह जल में H⁺ आयन नहीं बनाता। अतः यह अम्ल नहीं है!';
 
       } else if (type === 'alcohol') {
         if (bGlow) bGlow.style.opacity = '0';
@@ -7839,17 +7893,24 @@
         if (bGlass) bGlass.setAttribute('fill', '#cbd5e1');
         if (bFil) bFil.setAttribute('stroke', '#94a3b8');
         if (bStat) { bStat.textContent = 'बल्ब: नहीं जलता ❌'; bStat.setAttribute('fill', '#dc2626'); }
+        if (bBadge) { bBadge.setAttribute('fill', '#fee2e2'); bBadge.setAttribute('stroke', '#ef4444'); }
         if (nBub) nBub.style.opacity = '0';
         if (liq) liq.setAttribute('fill', '#f3e8ff');
-        if (bTitle) bTitle.textContent = 'ऐल्कोहॉल (C₂H₅OH)';
-        if (bSub) bSub.textContent = 'सहसंयोजी अणु, कोई आयन नहीं';
 
         if (ionsGroup) {
           ionsGroup.innerHTML = `
-            <ellipse cx="60" cy="120" rx="20" ry="12" fill="#7c3aed"/><text x="60" y="124" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₂H₅OH</text>
-            <ellipse cx="140" cy="140" rx="20" ry="12" fill="#7c3aed"/><text x="140" y="144" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">C₂H₅OH</text>
+            <rect x="18" y="132" width="48" height="28" rx="14" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.2"/>
+            <text x="42" y="151" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">C₂H₅OH</text>
+            <rect x="96" y="112" width="68" height="32" rx="16" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.5"/>
+            <text x="130" y="133" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">C₂H₅OH</text>
+            <rect x="96" y="156" width="68" height="32" rx="16" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.5"/>
+            <text x="130" y="177" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">C₂H₅OH</text>
           `;
         }
+
+        if (tblIcon) tblIcon.textContent = '❌';
+        if (tblTitle) tblTitle.textContent = 'बीकर: ऐल्कोहॉल / एथेनॉल (C₂H₅OH) — कोई विद्युत चालन नहीं ❌';
+        if (tblSub) tblSub.textContent = '▶ निष्कर्ष: जल में H⁺ आयन विमुक्त नहीं होते ➔ विद्युत चालन असंभव, बल्ब नहीं जलता!';
 
         if (pSample) pSample.textContent = 'ऐल्कोहॉल / एथेनॉल (Alcohol Solution)';
         if (pSampleSub) pSampleSub.textContent = 'सहसंयोजी कार्बनिक यौगिक (C₂H₅OH)।';
@@ -7858,35 +7919,38 @@
         if (pBulb) pBulb.textContent = 'बल्ब नहीं जलता (Bulb DOES NOT Glow) ❌';
         if (pBulbSub) pBulbSub.textContent = 'मुक्त आयन अनुपस्थित हैं, विद्युत चालन असंभव।';
         if (c3) { c3.setAttribute('fill', '#fef2f2'); c3.setAttribute('stroke', '#ef4444'); }
-        if (st) st.innerHTML = '<span style="color:#dc2626;">❌ ऐल्कोहॉल:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ऐल्कोहॉल का जलीय विलयन आयनित नहीं होता। अतः यह अम्लीय व्यवहार नहीं दर्शाता!';
+        if (st) st.innerHTML = '<span style="color:#dc2626; font-size:17px; font-weight:900;">❌ ऐल्कोहॉल:</span> <strong>बल्ब नहीं जलता ❌</strong> क्योंकि ऐल्कोहॉल का जलीय विलयन आयनित नहीं होता। अतः यह अम्लीय व्यवहार नहीं दर्शाता!';
 
       } else if (type === 'naoh') {
         if (bGlow) bGlow.style.opacity = '1';
         if (bRays) bRays.style.opacity = '1';
         if (bGlass) bGlass.setAttribute('fill', '#fef08a');
         if (bFil) bFil.setAttribute('stroke', '#ea580c');
-        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#ca8a04'); }
+        if (bStat) { bStat.textContent = 'बल्ब: जल रहा है 💡'; bStat.setAttribute('fill', '#15803d'); }
+        if (bBadge) { bBadge.setAttribute('fill', '#dcfce7'); bBadge.setAttribute('stroke', '#16a34a'); }
         if (nBub) nBub.style.opacity = '1';
         if (liq) liq.setAttribute('fill', '#e0e7ff');
-        if (bTitle) bTitle.textContent = 'तनु NaOH विलयन';
-        if (bSub) bSub.textContent = 'मुक्त Na⁺ व OH⁻ आयन उपस्थित';
 
         if (ionsGroup) {
           ionsGroup.innerHTML = `
-            <circle cx="50" cy="110" r="11" fill="#6366f1"/><text x="50" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Na⁺</text>
-            <circle cx="140" cy="110" r="11" fill="#6366f1"/><text x="140" y="114" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">Na⁺</text>
-            <circle cx="95" cy="150" r="12" fill="#ec4899"/><text x="95" y="154" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">OH⁻</text>
+            <circle cx="44" cy="140" r="16" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2.5"/><text x="44" y="145" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Na⁺</text>
+            <circle cx="130" cy="112" r="16" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2.5"/><text x="130" y="117" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">Na⁺</text>
+            <circle cx="130" cy="162" r="16" fill="#fbcfe8" stroke="#db2777" stroke-width="2.5"/><text x="130" y="167" font-size="13" font-weight="900" fill="#000000" text-anchor="middle">OH⁻</text>
           `;
         }
 
-        if (pSample) pSample.textContent = 'सोडियम हाइड्रॉक्साइड (NaOH क्षारक)';
-        if (pSampleSub) pSampleSub.textContent = 'प्रबल क्षारक — जल में पूर्ण आयनित होता है।';
+        if (tblIcon) tblIcon.textContent = '💡';
+        if (tblTitle) tblTitle.textContent = 'बीकर: तनु सोडियम हाइड्रॉक्साइड (तनु NaOH क्षारक) — विद्युत चालन सक्रिय 💡';
+        if (tblSub) tblSub.textContent = '▶ निष्कर्ष: क्षारक जल में Na⁺ व OH⁻ आयन देता है ➔ परिपथ पूर्ण होकर बल्ब तीव्र जलता है।';
+
+        if (pSample) pSample.textContent = 'तनु सोडियम हाइड्रॉक्साइड (तनु NaOH)';
+        if (pSampleSub) pSampleSub.textContent = 'प्रबल क्षारक — जल में OH⁻ आयन देता है।';
         if (pEq) pEq.textContent = 'NaOH(aq) ➔ Na⁺(aq) + OH⁻(aq)';
-        if (pEqSub) pEqSub.textContent = 'OH⁻ आयन क्षारकीय गुण व चालन के लिए उत्तरदायी हैं।';
+        if (pEqSub) pEqSub.textContent = 'OH⁻ आयन क्षारीय गुण व विद्युत चालन करते हैं।';
         if (pBulb) pBulb.textContent = 'बल्ब तीव्र जलता है (Bulb Glows) 💡';
-        if (pBulbSub) pBulbSub.textContent = 'क्षारक भी जलीय विलयन में विद्युत का चालन करते हैं।';
+        if (pBulbSub) pBulbSub.textContent = 'मुक्त Na⁺ व OH⁻ आयन परिपथ को पूर्ण करते हैं।';
         if (c3) { c3.setAttribute('fill', '#fefce8'); c3.setAttribute('stroke', '#eab308'); }
-        if (st) st.innerHTML = '<span style="color:#7c3aed;">✔ तनु NaOH (क्षारक):</span> <strong>बल्ब जलता है 💡</strong> क्योंकि क्षारक जलीय विलयन में हाइड्रॉक्साइड आयन (OH⁻) देते हैं, जो विद्युत धारा का चालन करते हैं।';
+        if (st) st.innerHTML = '<span style="color:#15803d; font-size:17px; font-weight:900;">✔ तनु NaOH:</span> <strong>बल्ब जलता है 💡</strong> क्योंकि क्षारक भी जलीय विलयन में हाइड्रॉक्साइड आयन (OH⁻) देते हैं, जो विद्युत धारा का चालन करते हैं।';
       }
     }
 
