@@ -1790,7 +1790,7 @@
 
           <!-- TUBE 1: HCl (Acid) -->
           <g id="sind_tube1_group" transform="translate(130, 160)">
-            <rect id="sind_liq1" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 0.5s ease;"/>
+            <rect id="sind_liq1" x="5" y="90" width="60" height="145" rx="10" fill="#e2e8f0" opacity="0.85" style="transition: fill 5.0s ease-in-out, stroke 5.0s ease-in-out; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));"/>
             <!-- Meniscus curve -->
             <ellipse id="sind_meniscus1" cx="35" cy="90" rx="30" ry="6" fill="#cbd5e1" style="transition: fill 0.5s ease;"/>
             <circle id="sind_drop1" cx="35" cy="40" r="4" fill="#db2777" opacity="0"/>
@@ -7322,12 +7322,12 @@
             <!-- Step 1: Rich Royal Blue (#1d4ed8) -> Step 2: Chalk White (#f8fafc) -> Step 3: Royal Blue again (#1d4ed8) -->
             <g id="scryst_substance_group">
               <!-- Powder curved mass in tube rounded end (x: -142 to -80) -->
-              <path id="scryst_powder_bed" d="M -142,0 Q -142,22 -110,22 L -80,22 Q -85,0 -80,-22 L -110,-22 Q -142,-22 -142,0 Z" fill="#1d4ed8" stroke="#1e40af" stroke-width="2" style="transition: fill 1.2s ease, stroke 1.2s ease; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));"/>
+              <path id="scryst_powder_bed" d="M -142,0 Q -142,22 -110,22 L -80,22 Q -85,0 -80,-22 L -110,-22 Q -142,-22 -142,0 Z" fill="#1d4ed8" stroke="#1e40af" stroke-width="2" style="transition: fill 4.0s ease-in-out, stroke 4.0s ease-in-out; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));"/>
 
               <!-- Crystal facets & texture -->
-              <polygon id="scryst_facet1" points="-125,-12 -110,-18 -105,-6 -120,0" fill="#3b82f6" opacity="0.9" style="transition: fill 1.2s ease;"/>
-              <polygon id="scryst_facet2" points="-115,4 -95,2 -100,16 -120,14" fill="#60a5fa" opacity="0.9" style="transition: fill 1.2s ease;"/>
-              <polygon id="scryst_facet3" points="-135,2 -122,-4 -125,12 -136,8" fill="#1e40af" opacity="0.9" style="transition: fill 1.2s ease;"/>
+              <polygon id="scryst_facet1" points="-125,-12 -110,-18 -105,-6 -120,0" fill="#3b82f6" opacity="0.9" style="transition: fill 4.0s ease-in-out;"/>
+              <polygon id="scryst_facet2" points="-115,4 -95,2 -100,16 -120,14" fill="#60a5fa" opacity="0.9" style="transition: fill 4.0s ease-in-out;"/>
+              <polygon id="scryst_facet3" points="-135,2 -122,-4 -125,12 -136,8" fill="#1e40af" opacity="0.9" style="transition: fill 4.0s ease-in-out;"/>
 
               <!-- Sparkling Crystal Glimmer (Step 1) -->
               <g id="scryst_sparkles">
@@ -7372,6 +7372,27 @@
               <text x="145" y="-35" font-size="13" font-weight="900" fill="#0284c7" text-anchor="middle">वाष्पित जल (5H₂O↑)</text>
             </g>
 
+                        <!-- ================= SLIDING WATER DROPS INSIDE INCLINED TUBE (STEP 3) ================= -->
+            <!-- Because tube is inclined at -22°, water naturally trickles down the lower inner glass slope (y: 17) to the powder bed (x: -85) -->
+            <g id="scryst_sliding_stream" opacity="0" style="transition: opacity 0.6s ease;">
+              <!-- Water drop 1 trickling down the glass incline -->
+              <circle cy="17" r="4.0" fill="url(#scryst_waterDropGrad)" stroke="#0284c7" stroke-width="0.8">
+                <animate attributeName="cx" values="60;-85" dur="1.8s" repeatCount="indefinite" begin="0.2s"/>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.88;1" dur="1.8s" repeatCount="indefinite" begin="0.2s"/>
+                <animate attributeName="r" values="3.5;4.2;3.2" dur="1.8s" repeatCount="indefinite" begin="0.2s"/>
+              </circle>
+              <!-- Water drop 2 trickling slightly behind -->
+              <circle cy="18" r="3.6" fill="url(#scryst_waterDropGrad)" stroke="#0284c7" stroke-width="0.8">
+                <animate attributeName="cx" values="60;-85" dur="1.8s" repeatCount="indefinite" begin="1.1s"/>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.88;1" dur="1.8s" repeatCount="indefinite" begin="1.1s"/>
+                <animate attributeName="r" values="3.2;4.0;3.0" dur="1.8s" repeatCount="indefinite" begin="1.1s"/>
+              </circle>
+              <!-- Wet water trail on lower glass wall -->
+              <path d="M 60,18 L -85,18" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.75" stroke-dasharray="8,6">
+                <animate attributeName="stroke-dashoffset" values="28;0" dur="1.2s" repeatCount="indefinite"/>
+              </path>
+            </g>
+
             <!-- ================= PURA GLASSI 3D TEST TUBE BODY (FOREGROUND) ================= -->
             <!-- Transparent Glass Cylinder with 3D Specular Highlight Gradients -->
             <path d="M -110,-24 L 60,-24 L 60,24 L -110,24 Q -145,24 -145,0 Q -145,-24 -110,-24 Z" fill="url(#scryst_glass3D)" stroke="#0284c7" stroke-width="2.5"/>
@@ -7388,35 +7409,36 @@
             <ellipse cx="60" cy="0" rx="3.5" ry="23" fill="#ffffff" opacity="0.9"/>
           </g>
 
-          <!-- ================= 4. WATER DROPPER (APPROACHES IN STEP 3) ================= -->
-          <!-- Realistic Glass Dropper dispensing water drops directly into the tube mouth -->
-          <g id="scryst_dropper_unit" transform="translate(415, 30)" opacity="0" style="transition: all 0.8s ease-in-out;">
+          <!-- ================= 4. REALISTIC TILTED 3D WATER DROPPER (STEP 3) ================= -->
+          <!-- Held tilted at +22° aiming directly into the inclined test tube mouth -->
+          <g id="scryst_dropper_unit" transform="translate(470, 72) rotate(22)" opacity="0" style="transition: all 0.8s ease-in-out;">
             <!-- Blue Rubber Squeeze Bulb -->
-            <path d="M 0,-15 Q 12,-35 25,-15 Q 35,5 25,25 Q 12,35 0,25 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
-            <!-- Glass Barrel -->
+            <path d="M -2,-15 Q 12,-38 27,-15 Q 38,5 27,25 Q 12,38 -2,25 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
+            <!-- Glass Barrel with 3D Specular Highlight -->
             <rect x="0" y="25" width="25" height="70" rx="3" fill="url(#scryst_glass3D)" stroke="#0284c7" stroke-width="2"/>
+            <line x1="4" y1="28" x2="4" y2="92" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
             <!-- Tapered Glass Nozzle Tip -->
-            <polygon points="0,95 25,95 16,130 9,130" fill="url(#scryst_glass3D)" stroke="#0284c7" stroke-width="2"/>
+            <polygon points="0,95 25,95 16,132 9,132" fill="url(#scryst_glass3D)" stroke="#0284c7" stroke-width="2"/>
             <!-- Water inside dropper -->
-            <rect x="3" y="55" width="19" height="40" fill="#38bdf8" opacity="0.75"/>
-            <polygon points="3,95 22,95 15,128 10,128" fill="#38bdf8" opacity="0.8"/>
+            <rect x="3" y="55" width="19" height="40" fill="#38bdf8" opacity="0.8"/>
+            <polygon points="3,95 22,95 15,130 10,130" fill="#38bdf8" opacity="0.85"/>
 
-            <!-- Dynamic Falling Water Drops (SMIL Animated in Step 3) -->
-            <g id="scryst_falling_drops">
-              <circle cx="12.5" cy="140" r="4.2" fill="url(#scryst_waterDropGrad)" stroke="#0284c7" stroke-width="0.8">
-                <animate attributeName="cy" values="135;220" dur="1.2s" repeatCount="indefinite" begin="0s"/>
-                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="1.2s" repeatCount="indefinite" begin="0s"/>
-              </circle>
-              <circle cx="12.5" cy="140" r="4.0" fill="url(#scryst_waterDropGrad)" stroke="#0284c7" stroke-width="0.8">
-                <animate attributeName="cy" values="135;220" dur="1.2s" repeatCount="indefinite" begin="0.6s"/>
-                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="1.2s" repeatCount="indefinite" begin="0.6s"/>
-              </circle>
-            </g>
-
-            <!-- Dropper Label -->
-            <rect x="35" y="45" width="135" height="28" rx="6" fill="#ffffff" stroke="#1d4ed8" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.12))"/>
-            <text x="102" y="64" font-size="12.5" font-weight="900" fill="#000000" text-anchor="middle">💧 जल की 2-3 बूंदें ➔</text>
+            <!-- Droplet emerging from nozzle tip and entering tube mouth -->
+            <circle cx="12.5" cy="138" r="4.2" fill="url(#scryst_waterDropGrad)" stroke="#0284c7" stroke-width="0.8">
+              <animate attributeName="cy" values="133;162" dur="1.8s" repeatCount="indefinite" begin="0s"/>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="1.8s" repeatCount="indefinite" begin="0s"/>
+            </circle>
           </g>
+
+          <!-- Dropper Label Pill -->
+          <g id="scryst_dropper_label_group" opacity="0" style="transition: opacity 0.8s ease;">
+            <rect x="475" y="55" width="145" height="28" rx="6" fill="#ffffff" stroke="#1d4ed8" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.12))"/>
+            <text x="547" y="74" font-size="12.5" font-weight="900" fill="#000000" text-anchor="middle">💧 झुका ड्रॉपर (जल) ➔</text>
+            <line x1="475" y1="69" x2="445" y2="105" stroke="#1d4ed8" stroke-width="1.8" stroke-dasharray="3,3"/>
+          </g>
+
+          <!-- Clean Dropper Label in normal SVG space (no rotation drift) -->
+          
 
           <!-- ================= 5. ANNOTATION POINTERS & LABELS ================= -->
           <!-- Substance Identification Pill (Bottom Left of Tube) -->
@@ -8489,7 +8511,8 @@
       // Droplets, Steam, Dropper, Tags
       var drops = document.getElementById('scryst_condensed_droplets'); if (drops) drops.style.opacity = '0';
       var steam = document.getElementById('scryst_steam_stream'); if (steam) steam.style.opacity = '0';
-      var dropper = document.getElementById('scryst_dropper_unit'); if (dropper) dropper.style.opacity = '0';
+      var dropper = document.getElementById('scryst_dropper_unit'); if (dropper) dropper.style.opacity = '0'; var dLbl = document.getElementById('scryst_dropper_label_group'); if (dLbl) dLbl.style.opacity = '0';
+      var slidingStream = document.getElementById('scryst_sliding_stream'); if (slidingStream) slidingStream.style.opacity = '0';
       var condTag = document.getElementById('scryst_cond_tag'); if (condTag) condTag.style.opacity = '0';
 
       // Pill Label
@@ -8535,7 +8558,7 @@
         // Turn ON Flame
         if (flame) flame.style.opacity = '1';
         // Dropper away
-        if (dropper) dropper.style.opacity = '0';
+        if (dropper) dropper.style.opacity = '0'; var dLbl = document.getElementById('scryst_dropper_label_group'); if (dLbl) dLbl.style.opacity = '0';
 
         // Turn crystals into white powder
         if (powder) { powder.setAttribute('fill', '#f8fafc'); powder.setAttribute('stroke', '#cbd5e1'); }
@@ -8563,10 +8586,14 @@
         // Flame OFF
         if (flame) flame.style.opacity = '0';
         if (steam) steam.style.opacity = '0';
-        // Bring in Dropper
-        if (dropper) dropper.style.opacity = '1';
+        // Bring in Tilted Dropper and activate sliding water stream
+        if (dropper) dropper.style.opacity = '1'; var dLbl = document.getElementById('scryst_dropper_label_group'); if (dLbl) dLbl.style.opacity = '1';
+        var slidingStream = document.getElementById('scryst_sliding_stream');
+        if (slidingStream) slidingStream.style.opacity = '1';
 
-        // Rehydrate: restore deep blue color
+        if (st) st.innerHTML = '<strong>चरण 3:</strong> झुके हुए ड्रॉपर से जल की बूंदें तिरछी परखनली की तली में फिसलकर श्वेत चूर्ण तक पहुंचती हैं ➔ क्रिस्टलन जल (5H₂O) जुड़ने से <strong>नीला रंग धीरे-धीरे वापस गहरा होता जा रहा है...</strong>';
+
+        // Gradual slow rehydration: transitions smoothly over 3.8 seconds
         if (powder) { powder.setAttribute('fill', '#1d4ed8'); powder.setAttribute('stroke', '#1e40af'); }
         if (f1) f1.setAttribute('fill', '#3b82f6');
         if (f2) f2.setAttribute('fill', '#60a5fa');
@@ -8580,8 +8607,6 @@
         if (c2) { c2.setAttribute('fill', '#f8fafc'); c2.setAttribute('stroke', '#cbd5e1'); }
         if (c3) { c3.setAttribute('fill', '#dbeafe'); c3.setAttribute('stroke', '#1d4ed8'); }
 
-        if (st) st.innerHTML = '<strong>चरण 3:</strong> ड्रॉपर द्वारा सफेद निर्जल कॉपर सल्फेट में 2-3 बूंदें जल मिलाते ही क्रिस्टलन जल पुनः जुड़ जाता है ➔ <strong>लवण का गहरा चमकदार नीला रंग (CuSO₄·5H₂O) तुरंत वापस आ जाता है!</strong>';
-
       } else if (s === 4) {
         if (pbar) pbar.style.width = '100%';
         if (c4) { c4.setAttribute('fill', '#f5f3ff'); c4.setAttribute('stroke', '#7c3aed'); }
@@ -8592,9 +8617,11 @@
     function simCrystPlayAuto() {
       simCrystReset();
       simCrystStep(1);
-      addSimTimer('cryst', setTimeout(function() { simCrystStep(2); }, 2400));
-      addSimTimer('cryst', setTimeout(function() { simCrystStep(3); }, 5800));
-      addSimTimer('cryst', setTimeout(function() { simCrystStep(4); }, 8800));
+      // Give 5.0 seconds for gradual heating and slow fading to white
+      addSimTimer('cryst', setTimeout(function() { simCrystStep(2); }, 2000));
+      // Give 5.5 seconds for tilted dropper, sliding water drops, and gradual slow rehydration to blue
+      addSimTimer('cryst', setTimeout(function() { simCrystStep(3); }, 7000));
+      addSimTimer('cryst', setTimeout(function() { simCrystStep(4); }, 12500));
     }
 
     /* ==========================================================
