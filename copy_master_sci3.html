@@ -2796,6 +2796,19 @@
           </div>
         </div>
 
+        <!-- INTERACTIVE 3D ACTION CONTROL BAR (Positioned over table at bottom left) -->
+        <div id="s33_action_bar" style="position:absolute; bottom:12px; left:25px; display:flex; align-items:center; gap:12px; z-index:8; background:rgba(255,255,255,0.95); padding:7px 16px; border-radius:12px; border:2px solid #16a34a; box-shadow:0 4px 14px rgba(0,0,0,0.12); backdrop-filter:blur(6px);">
+          <button id="s33_btn_action" onclick="sim33TriggerAction()" style="background:#16a34a; color:#ffffff; font-size:15px; font-weight:900; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.2); transition:all 0.2s; display:flex; align-items:center; gap:6px;">
+            💧 पारा की बूंद टपकाएं
+          </button>
+          <button id="s33_btn_replay" onclick="sim33ResetAction()" style="background:#f1f5f9; color:#0f172a; font-size:14px; font-weight:800; padding:8px 14px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+            🔄 रीसेट
+          </button>
+          <span id="s33_action_status_pill" style="font-size:13.5px; font-weight:800; color:#15803d; background:#dcfce7; padding:6px 14px; border-radius:20px; border:1px solid #86efac;">
+            🟢 तैयार (बूंद टपकाकर देखें)
+          </span>
+        </div>
+
         <svg id="svg_sim33" viewBox="0 0 1200 540" width="100%" height="100%">
 
   <defs>
@@ -3110,6 +3123,19 @@
     </radialGradient>
   </defs>
 
+          <style>
+            @keyframes s33VaporFloat {
+              0% { transform: translateY(0px) scale(0.95); opacity: 0.45; }
+              50% { transform: translateY(-25px) scale(1.15); opacity: 0.75; }
+              100% { transform: translateY(-55px) scale(1.3); opacity: 0; }
+            }
+            .s33-vapor-plume {
+              animation: s33VaporFloat 3.5s infinite linear;
+            }
+            .s33-vapor-plume-slow {
+              animation: s33VaporFloat 4.5s infinite linear 1s;
+            }
+          </style>
 
           <!-- 3D WORKBENCH WITH BEVELED EDGE -->
           <ellipse cx="370" cy="465" rx="340" ry="18" fill="url(#stage_shadow_ch3)"/>
@@ -3126,7 +3152,7 @@
           </g>
 
           <!-- 3D GLASS WATCH GLASS & APPARATUS STAGE (Center: x=360, y=320) -->
-          <g id="s33_stage_anim" transform="translate(180, 50)">
+          <g id="s33_stage_anim" transform="translate(180, 40)">
             <!-- 1. MERCURY VISUAL (Default) -->
             <g id="s33_vis_hg" style="display:block;">
               <ellipse cx="180" cy="335" rx="170" ry="25" fill="#000000" opacity="0.18"/>
@@ -3135,8 +3161,12 @@
               <ellipse cx="180" cy="322" rx="135" ry="22" fill="rgba(241,245,249,0.3)"/>
               <path d="M 40 318 Q 180 345 320 318" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.75"/>
 
+              <!-- Concentric Ripple Rings (Expanding upon droplet merge) -->
+              <ellipse id="s33_hg_ripple1" cx="180" cy="322" rx="15" ry="4" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0" style="transition: all 0.6s ease-out;"/>
+              <ellipse id="s33_hg_ripple2" cx="180" cy="322" rx="25" ry="6" fill="none" stroke="#94a3b8" stroke-width="1.8" opacity="0" style="transition: all 0.7s ease-out;"/>
+
               <!-- Liquid Mercury Main Cohesive Pool -->
-              <ellipse cx="180" cy="322" rx="95" ry="18" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="2"/>
+              <ellipse id="s33_hg_pool" cx="180" cy="322" rx="95" ry="18" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="2" style="transition: all 0.3s ease;"/>
               <!-- Specular Highlight on Pool -->
               <ellipse cx="170" cy="316" rx="75" ry="6" fill="#ffffff" opacity="0.65"/>
 
@@ -3154,19 +3184,36 @@
               <ellipse cx="240" cy="327" rx="3.5" ry="2" fill="#ffffff" opacity="0.8"/>
 
               <!-- Glass Dropper hovering above delivering mercury drop -->
-              <g transform="translate(180, 110)">
-                <rect x="-6" y="0" width="12" height="110" rx="4" fill="rgba(255,255,255,0.7)" stroke="#64748b" stroke-width="1.5"/>
-                <rect x="-4" y="20" width="8" height="90" fill="url(#metal3d_fe)"/>
-                <rect x="-14" y="-30" width="28" height="32" rx="10" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
-                <circle cx="0" cy="140" r="7" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1"/>
-                <ellipse cx="-2" cy="138" rx="3" ry="2" fill="#ffffff" opacity="0.9"/>
+              <g id="s33_hg_dropper" transform="translate(180, 75)">
+                <!-- Glass Stem -->
+                <rect x="-6" y="25" width="12" height="110" rx="4" fill="rgba(255,255,255,0.75)" stroke="#64748b" stroke-width="1.5"/>
+                <!-- Liquid Column inside Dropper -->
+                <rect x="-4" y="45" width="8" height="88" fill="url(#metal3d_fe)"/>
+                <!-- Rubber Bulb (Animates squeeze) -->
+                <g id="s33_hg_bulb" style="transform-origin: 0px 5px; transition: transform 0.3s ease;">
+                  <rect x="-15" y="-10" width="30" height="36" rx="12" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+                  <line x1="-12" y1="5" x2="12" y2="5" stroke="#b91c1c" stroke-width="1.5"/>
+                </g>
+                <!-- Dropper Tip -->
+                <polygon points="-6,135 6,135 2,148 -2,148" fill="rgba(255,255,255,0.85)" stroke="#64748b" stroke-width="1"/>
               </g>
-              <text x="180" y="380" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">उच्च पृष्ठ तनाव: मर्करी कांच को नहीं भिगोती, गोल बूंदें बनाती है</text>
+
+              <!-- Falling Droplet Group (Animates downwards) -->
+              <g id="s33_hg_falling_drop" transform="translate(180, 230)" opacity="1" style="transition: transform 0.65s cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 0.15s;">
+                <circle cx="0" cy="0" r="8" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.2"/>
+                <ellipse cx="-2.5" cy="-2.5" rx="3.5" ry="2" fill="#ffffff" opacity="0.9"/>
+              </g>
+
+              <text x="180" y="370" font-size="15.5" font-weight="900" fill="#000000" text-anchor="middle">उच्च पृष्ठ तनाव: मर्करी कांच को नहीं भिगोती, गोल बूंदें बनाती है</text>
             </g>
 
             <!-- 2. GALLIUM MELTING ON PALM VISUAL -->
             <g id="s33_vis_ga" style="display:none;">
               <ellipse cx="180" cy="345" rx="145" ry="22" fill="#000000" opacity="0.16"/>
+
+              <!-- Radiant Thermal Heat Aura (Pulse) -->
+              <ellipse id="s33_ga_heat_glow" cx="180" cy="305" rx="115" ry="55" fill="#f97316" opacity="0" style="transition: opacity 0.6s ease;"/>
+
               <!-- Cupped Open Palm -->
               <g transform="translate(180, 305)">
                 <path d="M -90,55 C -95,30 -80,-10 -50,-25 C -30,-35 40,-35 70,-20 C 95,-10 105,25 95,55 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
@@ -3176,19 +3223,26 @@
                 <path d="M 15,-35 C 15,-65 35,-65 40,-30" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
                 <path d="M 45,-25 C 50,-50 65,-50 70,-20" fill="#fed7aa" stroke="#ea580c" stroke-width="2"/>
                 <path d="M -30,10 Q 0,25 40,5" fill="none" stroke="#fdba74" stroke-width="2"/>
+
                 <!-- Melting Liquid Gallium Puddle on Palm -->
-                <ellipse cx="5" cy="5" rx="44" ry="16" fill="url(#metal3d_fe)" stroke="#475569" stroke-width="1.8"/>
-                <ellipse cx="-5" cy="2" rx="28" ry="6" fill="#ffffff" opacity="0.8"/>
-                <!-- Solid crystal ingot in center (partially melted) -->
-                <polygon points="-12,-6 2,-16 16,-6 6,4 -8,4" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+                <ellipse id="s33_ga_liquid_puddle" cx="5" cy="5" rx="12" ry="5" fill="url(#metal3d_fe)" stroke="#475569" stroke-width="1.8" opacity="0" style="transition: all 0.8s ease-in-out;"/>
+                <ellipse id="s33_ga_liquid_shine" cx="-5" cy="2" rx="8" ry="2" fill="#ffffff" opacity="0" style="transition: all 0.8s ease-in-out;"/>
+
+                <!-- Solid crystal ingot in center (Shrinks when melting) -->
+                <g id="s33_ga_solid_ingot" style="transform-origin: 0px -6px; transition: all 0.8s ease-in-out;">
+                  <polygon points="-16,-12 6,-24 24,-10 12,6 -10,6" fill="url(#metal3d_fe)" stroke="#1e293b" stroke-width="1.5"/>
+                  <polygon points="-16,-12 6,-24 0,-6 -10,6" fill="#cbd5e1" opacity="0.9"/>
+                  <polygon points="6,-24 24,-10 12,6 0,-6" fill="#94a3b8" opacity="0.95"/>
+                  <line x1="0" y1="-6" x2="6" y2="-24" stroke="#ffffff" stroke-width="1.5"/>
+                </g>
               </g>
 
               <!-- Temperature comparison indicator -->
               <g transform="translate(180, 105)">
-                <text x="0" y="0" font-size="18" font-weight="900" fill="#dc2626" text-anchor="middle">हथेली का ताप: 37°C ➔ गैलियम गलनांक: 29.76°C</text>
+                <text id="s33_ga_temp_readout" x="0" y="0" font-size="18" font-weight="900" fill="#dc2626" text-anchor="middle">हथेली का ताप: 37°C ➔ गैलियम गलनांक: 29.76°C</text>
                 <text x="0" y="24" font-size="14.5" font-weight="800" fill="#000000" text-anchor="middle">हथेली पर रखते ही शरीर की ऊष्मा पाकर तुरंत पिघल जाती है</text>
               </g>
-              <text x="180" y="405" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">गैलियम (Ga) व सीज़ियम (Cs) - अति निम्न गलनांक वाली धातुएं</text>
+              <text x="180" y="375" font-size="15.5" font-weight="900" fill="#000000" text-anchor="middle">गैलियम (Ga) व सीज़ियम (Cs) - अति निम्न गलनांक वाली धातुएं</text>
             </g>
 
             <!-- 3. IODINE CRYSTALS VISUAL -->
@@ -3198,94 +3252,133 @@
               <ellipse cx="180" cy="325" rx="150" ry="30" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
               <ellipse cx="180" cy="328" rx="130" ry="20" fill="#f1f5f9"/>
 
-              <!-- Rising Violet Vapor Wisps -->
-              <path d="M 140 300 Q 130 220 150 160 Q 170 110 155 70" fill="none" stroke="#c084fc" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
-              <path d="M 180 295 Q 200 210 185 150 Q 170 90 190 60" fill="none" stroke="#a855f7" stroke-width="14" stroke-linecap="round" opacity="0.4"/>
-              <path d="M 220 305 Q 235 230 215 170 Q 200 120 225 75" fill="none" stroke="#c084fc" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+              <!-- Continuous Animated Rising Violet Vapor Wisps -->
+              <g id="s33_i2_vapor_cloud" style="transform-origin: 180px 300px; transition: opacity 0.5s ease;">
+                <path class="s33-vapor-plume" d="M 140 300 Q 120 220 145 160 Q 165 110 150 65" fill="none" stroke="#c084fc" stroke-width="16" stroke-linecap="round" opacity="0.45"/>
+                <path class="s33-vapor-plume-slow" d="M 180 295 Q 205 210 185 150 Q 165 90 190 55" fill="none" stroke="#a855f7" stroke-width="18" stroke-linecap="round" opacity="0.55"/>
+                <path class="s33-vapor-plume" d="M 220 305 Q 240 230 215 170 Q 195 120 225 65" fill="none" stroke="#c084fc" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
+                <circle cx="160" cy="140" r="10" fill="#c084fc" opacity="0.4"/>
+                <circle cx="200" cy="110" r="12" fill="#a855f7" opacity="0.4"/>
+                <circle cx="175" cy="80" r="14" fill="#9333ea" opacity="0.3"/>
+              </g>
 
               <!-- Cluster of Prismatic Lustrous Iodine Crystals -->
-              <polygon points="120,320 145,275 175,290 160,335 125,335" fill="#3b0764" stroke="#7e22ce" stroke-width="1.8"/>
-              <polygon points="120,320 145,275 155,300 135,330" fill="#581c87"/>
-              <polygon points="145,275 175,290 165,305 155,300" fill="#9333ea"/>
-              <line x1="145" y1="275" x2="165" y2="305" stroke="#e9d5ff" stroke-width="1.5"/>
+              <g id="s33_i2_crystals">
+                <polygon points="120,320 145,275 175,290 160,335 125,335" fill="#3b0764" stroke="#7e22ce" stroke-width="1.8"/>
+                <polygon points="120,320 145,275 155,300 135,330" fill="#581c87"/>
+                <polygon points="145,275 175,290 165,305 155,300" fill="#9333ea"/>
+                <line x1="145" y1="275" x2="165" y2="305" stroke="#e9d5ff" stroke-width="2"/>
 
-              <polygon points="165,310 195,255 235,280 215,335 170,330" fill="#2e1065" stroke="#9333ea" stroke-width="2"/>
-              <polygon points="195,255 235,280 210,305 185,280" fill="#7e22ce"/>
-              <polygon points="165,310 185,280 210,305 190,335" fill="#a855f7"/>
-              <line x1="195" y1="255" x2="210" y2="305" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+                <polygon points="165,310 195,255 235,280 215,335 170,330" fill="#2e1065" stroke="#9333ea" stroke-width="2"/>
+                <polygon points="195,255 235,280 210,305 185,280" fill="#7e22ce"/>
+                <polygon points="165,310 185,280 210,305 190,335" fill="#a855f7"/>
+                <line x1="195" y1="255" x2="210" y2="305" stroke="#ffffff" stroke-width="2.5" opacity="0.95"/>
 
-              <polygon points="215,325 245,285 270,300 250,335 220,335" fill="#3b0764" stroke="#a855f7" stroke-width="1.5"/>
-              <polygon points="245,285 270,300 255,315 235,305" fill="#9333ea"/>
-              <line x1="245" y1="285" x2="255" y2="315" stroke="#f3e8ff" stroke-width="1.5"/>
+                <polygon points="215,325 245,285 270,300 250,335 220,335" fill="#3b0764" stroke="#a855f7" stroke-width="1.5"/>
+                <polygon points="245,285 270,300 255,315 235,305" fill="#9333ea"/>
+                <line x1="245" y1="285" x2="255" y2="315" stroke="#f3e8ff" stroke-width="2"/>
+              </g>
 
-              <text x="180" y="380" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">आयोडीन (I₂) - अधातु होते हुए भी तीव्र धात्विक चमक (Lustre) व बैंगनी वाष्प</text>
+              <!-- Metallic Lustre Sparkle Stars -->
+              <g transform="translate(195, 255)">
+                <polygon points="0,-10 3,-3 10,0 3,3 0,10 -3,3 -10,0 -3,-3" fill="#ffffff"/>
+              </g>
+              <g transform="translate(145, 275)">
+                <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#e9d5ff"/>
+              </g>
+
+              <text x="180" y="370" font-size="15.5" font-weight="900" fill="#000000" text-anchor="middle">आयोडीन (I₂) - अधातु होते हुए भी तीव्र धात्विक चमक (Lustre) व बैंगनी वाष्प</text>
             </g>
 
             <!-- 4. DIAMOND HARDNESS TEST VISUAL -->
             <g id="s33_vis_diamond" style="display:none;">
               <ellipse cx="180" cy="340" rx="140" ry="24" fill="#000000" opacity="0.22"/>
-              <rect x="70" y="315" width="220" height="35" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-              <ellipse cx="180" cy="315" rx="110" ry="14" fill="#1e293b"/>
+              <!-- Anvil Mounting Base -->
+              <rect x="70" y="305" width="220" height="45" rx="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+              <ellipse cx="180" cy="305" rx="110" ry="14" fill="#1e293b"/>
 
               <!-- Brilliant-Cut 3D Faceted Diamond -->
-              <polygon points="135,225 225,225 265,260 95,260" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-              <polygon points="150,225 210,225 235,245 125,245" fill="#ffffff" opacity="0.9"/>
-              <polygon points="95,260 265,260 180,320" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
-              <polygon points="180,260 180,320 220,260" fill="#38bdf8" opacity="0.75"/>
-              <polygon points="180,260 180,320 140,260" fill="#bae6fd" opacity="0.8"/>
-              <polygon points="95,260 140,260 180,320" fill="#0284c7" opacity="0.6"/>
-              <polygon points="265,260 220,260 180,320" fill="#0369a1" opacity="0.7"/>
+              <g id="s33_dia_gem">
+                <polygon points="135,225 225,225 265,260 95,260" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+                <polygon points="150,225 210,225 235,245 125,245" fill="#ffffff" opacity="0.9"/>
+                <polygon points="95,260 265,260 180,310" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+                <polygon points="180,260 180,310 220,260" fill="#38bdf8" opacity="0.75"/>
+                <polygon points="180,260 180,310 140,260" fill="#bae6fd" opacity="0.8"/>
+                <polygon points="95,260 140,260 180,310" fill="#0284c7" opacity="0.6"/>
+                <polygon points="265,260 220,260 180,310" fill="#0369a1" opacity="0.7"/>
+              </g>
 
-              <!-- Sparkles -->
-              <g transform="translate(180, 205)">
-                <path d="M 0,-25 L 0,25 M -25,0 L 25,0" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+              <!-- Hardened Steel Stylus Hardness Testing Rig -->
+              <g id="s33_dia_stylus_rig" transform="translate(180, 95)" style="transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                <!-- Hydraulic Testing Cylinder -->
+                <rect x="-16" y="-30" width="32" height="60" rx="4" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+                <rect x="-8" y="30" width="16" height="70" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.5"/>
+                <!-- Hardened Steel Stylus Tip Pointer -->
+                <polygon points="-8,100 8,100 0,128" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+                <!-- Pressure Dial Indicator on Cylinder -->
+                <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+                <!-- Dial Needle -->
+                <line id="s33_dia_dial_needle" x1="0" y1="0" x2="0" y2="-10" stroke="#dc2626" stroke-width="2" stroke-linecap="round" style="transform-origin: 0px 0px; transition: transform 0.5s ease;"/>
+                <text id="s33_dia_pressure_val" x="0" y="22" font-size="8.5" font-weight="900" fill="#ffffff" text-anchor="middle">500 N</text>
               </g>
-              <g transform="translate(115, 245)">
-                <path d="M 0,-15 L 0,15 M -15,0 L 15,0" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+
+              <!-- Sparks during scratch friction -->
+              <g id="s33_dia_sparks" transform="translate(180, 225)" opacity="0" style="transition: opacity 0.2s;">
+                <polygon points="0,-14 4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4" fill="#facc15"/>
+                <polygon points="12,-12 6,-3 14,0 8,5 8,12 2,7 -4,12 -2,5" fill="#f97316"/>
+                <polygon points="-12,-12 -6,-3 -14,0 -8,5 -8,12 -2,7 4,12 2,5" fill="#ffffff"/>
               </g>
-              <g transform="translate(245, 245)">
-                <path d="M 0,-15 L 0,15 M -15,0 L 15,0" stroke="#ec4899" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+
+              <!-- Microscope Loupe Result Badge (Magnified flawless surface) -->
+              <g id="s33_dia_result_loupe" transform="translate(320, 190)" opacity="0" style="transition: opacity 0.4s ease;">
+                <circle cx="0" cy="0" r="34" fill="#ffffff" stroke="#16a34a" stroke-width="3" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.2))"/>
+                <text x="0" y="-10" font-size="9" font-weight="900" fill="#0f172a" text-anchor="middle">खरोंच जांच</text>
+                <text x="0" y="8" font-size="14" font-weight="900" fill="#16a34a" text-anchor="middle">0 खरोंच ✓</text>
+                <text x="0" y="23" font-size="8.5" font-weight="900" fill="#64748b" text-anchor="middle">100% अखंड</text>
               </g>
 
               <g transform="translate(180, 115)">
                 <text x="0" y="0" font-size="18" font-weight="900" fill="#0284c7" text-anchor="middle">मोह्स कठोरता पैमाना: 10/10 (कठोरतम)</text>
                 <text x="0" y="24" font-size="14.5" font-weight="800" fill="#000000" text-anchor="middle">लोहा, स्टील व हथौड़ा भी इस पर एक खरोंच नहीं लगा सकते!</text>
               </g>
-              <text x="180" y="380" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">हीरा (Diamond) - कार्बन का त्रिविमीय जालक, गलनांक > 4000°C</text>
+              <text x="180" y="370" font-size="15.5" font-weight="900" fill="#000000" text-anchor="middle">हीरा (Diamond) - कार्बन का त्रिविमीय जालक, गलनांक > 4000°C</text>
             </g>
 
             <!-- 5. SODIUM CUTTING WITH KNIFE VISUAL -->
             <g id="s33_vis_na" style="display:none;">
               <ellipse cx="180" cy="345" rx="160" ry="24" fill="#000000" opacity="0.16"/>
+              <!-- Cutting Board -->
               <polygon points="50,335 310,335 285,365 25,365" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
               <rect x="25" y="365" width="260" height="8" fill="#e2e8f0"/>
 
-              <!-- Freshly Sliced Sodium Block -->
-              <polygon points="80,310 145,310 145,345 80,345" fill="#94a3b8" stroke="#475569" stroke-width="1.8"/>
-              <polygon points="80,310 110,290 170,290 145,310" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
-              <polygon points="145,310 170,290 170,325 145,345" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
-              <line x1="150" y1="300" x2="165" y2="335" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
-
-              <polygon points="185,310 250,310 250,345 185,345" fill="#94a3b8" stroke="#475569" stroke-width="1.8"/>
-              <polygon points="185,310 215,290 275,290 250,310" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
-              <polygon points="185,310 215,290 215,325 185,345" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
-              <line x1="190" y1="300" x2="205" y2="335" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
-
-              <!-- Stainless Steel Scalpel Slicing Downwards -->
-              <g transform="translate(162, 160)">
-                <polygon points="-6,0 6,0 3,145 -3,155" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.5"/>
-                <line x1="0" y1="5" x2="0" y2="150" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
-                <rect x="-10" y="-80" width="20" height="80" rx="5" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
-                <circle cx="0" cy="-60" r="3" fill="#cbd5e1"/>
-                <circle cx="0" cy="-30" r="3" fill="#cbd5e1"/>
-                <path d="M -25 40 L -25 90 M -25 90 L -30 80 M -25 90 L -20 80" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M 25 40 L 25 90 M 25 90 L 20 80 M 25 90 L 30 80" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Sodium Block Left Half -->
+              <g id="s33_na_left_half" style="transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);">
+                <polygon points="95,305 160,305 160,345 95,345" fill="#94a3b8" stroke="#475569" stroke-width="1.8"/>
+                <polygon points="95,305 125,285 175,285 160,305" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+                <!-- Fresh Cut Exposed Mirror-Lustre Face on Left Half -->
+                <polygon points="160,305 175,285 175,325 160,345" fill="url(#metal3d_mg)" stroke="#38bdf8" stroke-width="1.8"/>
+                <line x1="165" y1="295" x2="172" y2="335" stroke="#ffffff" stroke-width="2" opacity="0.95"/>
               </g>
 
-              <text x="180" y="390" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">सोडियम (Na) - इतनी मुलायम कि साधारण चाकू से मक्खन की तरह कट जाती है!</text>
+              <!-- Sodium Block Right Half -->
+              <g id="s33_na_right_half" style="transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);">
+                <polygon points="160,305 225,305 225,345 160,345" fill="#94a3b8" stroke="#475569" stroke-width="1.8"/>
+                <polygon points="160,305 175,285 240,285 225,305" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+                <!-- Fresh Cut Exposed Mirror-Lustre Face on Right Half -->
+                <polygon points="160,305 175,285 175,325 160,345" fill="url(#metal3d_mg)" stroke="#38bdf8" stroke-width="1.8"/>
+                <line x1="162" y1="295" x2="168" y2="335" stroke="#ffffff" stroke-width="2" opacity="0.95"/>
+              </g>
+
+              <!-- Stainless Steel Scalpel Slicing Downwards -->
+              <g id="s33_na_knife_tool" transform="translate(160, 140)" style="transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);">
+                <polygon points="-5,0 5,0 2,150 -2,160" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.5"/>
+                <line x1="0" y1="5" x2="0" y2="155" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+                <rect x="-9" y="-80" width="18" height="80" rx="5" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+                <circle cx="0" cy="-60" r="2.5" fill="#cbd5e1"/>
+                <circle cx="0" cy="-30" r="2.5" fill="#cbd5e1"/>
+              </g>
+
+              <text x="180" y="372" font-size="15.5" font-weight="900" fill="#000000" text-anchor="middle">सोडियम (Na) - इतनी मुलायम कि साधारण चाकू से मक्खन की तरह कट जाती है!</text>
             </g>
           </g>
 
@@ -12436,10 +12529,278 @@ function sim33SelectException(type) {
     if (mainStatus) mainStatus.innerHTML = '<strong>अपवाद 5 (क्षार धातुएं - Na, K):</strong> लिथियम, सोडियम व पोटैशियम इतनी मुलायम धातुएं हैं कि इन्हें प्रयोगशाला के साधारण चाकू से आसानी से काटा जा सकता है तथा इनका घनत्व भी कम होता है।';
   }
 
+  // Update Action Bar buttons & status pill
+  var btnAction = document.getElementById('s33_btn_action');
+  var pill = document.getElementById('s33_action_status_pill');
+  if (type === 'hg') {
+    if (btnAction) btnAction.innerHTML = '💧 पारा की बूंद टपकाएं';
+    if (pill) {
+      pill.textContent = '🟢 तैयार (बूंद टपकाकर देखें)';
+      pill.style.color = '#0284c7';
+      pill.style.background = '#e0f2fe';
+      pill.style.borderColor = '#7dd3fc';
+    }
+  } else if (type === 'ga' || type === 'cs') {
+    if (btnAction) btnAction.innerHTML = '🔥 हथेली की ऊष्मा दें (37°C पिघलाएं)';
+    if (pill) {
+      pill.textContent = '❄️ ठोस अवस्था (25°C)';
+      pill.style.color = '#ea580c';
+      pill.style.background = '#ffedd5';
+      pill.style.borderColor = '#fdba74';
+    }
+  } else if (type === 'i2') {
+    if (btnAction) btnAction.innerHTML = '💨 ऊर्ध्वपातन (Sublimation) तेज करें';
+    if (pill) {
+      pill.textContent = '✨ बैंगनी वाष्प व धात्विक चमक';
+      pill.style.color = '#9333ea';
+      pill.style.background = '#f3e8ff';
+      pill.style.borderColor = '#d8b4fe';
+    }
+  } else if (type === 'diamond') {
+    if (btnAction) btnAction.innerHTML = '🔨 स्टील सुई से खरोंच परीक्षण (Scratch Test)';
+    if (pill) {
+      pill.textContent = '💎 मोह्स पैमाना 10/10 (कठोरतम)';
+      pill.style.color = '#0f172a';
+      pill.style.background = '#f1f5f9';
+      pill.style.borderColor = '#cbd5e1';
+    }
+  } else if (type === 'na' || type === 'na_knife') {
+    if (btnAction) btnAction.innerHTML = '🔪 चाकू से सोडियम काटें (Butter Slice)';
+    if (pill) {
+      pill.textContent = '🧈 साबुन/मक्खन जैसी कोमलता';
+      pill.style.color = '#16a34a';
+      pill.style.background = '#dcfce7';
+      pill.style.borderColor = '#86efac';
+    }
+  }
+
+  // Reset animations to pristine starting state
+  sim33ResetAction();
+
   // If in video mode, update video immediately
   if (s33Mode === 'video') {
     sim33SetMode('video');
   }
+}
+
+var s33ActionBusy = false;
+
+function sim33TriggerAction() {
+  if (s33ActionBusy) return;
+  var pill = document.getElementById('s33_action_status_pill');
+
+  if (s33CurrentException === 'hg') {
+    s33ActionBusy = true;
+    var bulb = document.getElementById('s33_hg_bulb');
+    var drop = document.getElementById('s33_hg_falling_drop');
+    var r1 = document.getElementById('s33_hg_ripple1');
+    var r2 = document.getElementById('s33_hg_ripple2');
+    var pool = document.getElementById('s33_hg_pool');
+
+    if (bulb) bulb.style.transform = 'scale(0.85, 0.85)';
+    if (drop) {
+      drop.style.transition = 'none';
+      drop.style.transform = 'translate(180px, 200px)';
+      drop.style.opacity = '1';
+      setTimeout(function() {
+        drop.style.transition = 'transform 0.65s cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 0.15s';
+        drop.style.transform = 'translate(180px, 322px)';
+      }, 50);
+    }
+
+    setTimeout(function() {
+      if (bulb) bulb.style.transform = 'scale(1, 1)';
+      if (drop) drop.style.opacity = '0';
+      if (pool) pool.style.transform = 'scale(1.04)';
+      if (r1) {
+        r1.style.opacity = '0.9';
+        r1.setAttribute('rx', '15');
+        r1.setAttribute('ry', '4');
+        setTimeout(function() {
+          r1.setAttribute('rx', '75');
+          r1.setAttribute('ry', '15');
+          r1.style.opacity = '0';
+        }, 50);
+      }
+      if (r2) {
+        setTimeout(function() {
+          r2.style.opacity = '0.8';
+          r2.setAttribute('rx', '25');
+          r2.setAttribute('ry', '6');
+          setTimeout(function() {
+            r2.setAttribute('rx', '95');
+            r2.setAttribute('ry', '18');
+            r2.style.opacity = '0';
+          }, 50);
+        }, 120);
+      }
+      if (pill) {
+        pill.textContent = '💧 बूंद पारा में मिल गई! (पृष्ठ तनाव से गोल बूंदें)';
+      }
+      setTimeout(function() {
+        if (pool) pool.style.transform = 'scale(1)';
+        s33ActionBusy = false;
+      }, 800);
+    }, 720);
+
+  } else if (s33CurrentException === 'ga' || s33CurrentException === 'cs') {
+    s33ActionBusy = true;
+    var heatGlow = document.getElementById('s33_ga_heat_glow');
+    var tempReadout = document.getElementById('s33_ga_temp_readout');
+    var solidIngot = document.getElementById('s33_ga_solid_ingot');
+    var liquidPuddle = document.getElementById('s33_ga_liquid_puddle');
+    var liquidShine = document.getElementById('s33_ga_liquid_shine');
+
+    if (heatGlow) heatGlow.style.opacity = '0.7';
+    if (tempReadout) tempReadout.textContent = 'हथेली का ताप: 37°C ➔ गैलियम पिघल रहा है...';
+    if (pill) pill.textContent = '🔥 शरीर की ऊष्मा (37°C) पाकर गैलियम पिघल रहा है...';
+
+    setTimeout(function() {
+      if (solidIngot) {
+        solidIngot.style.transform = 'scale(0.05)';
+        solidIngot.style.opacity = '0';
+      }
+      if (liquidPuddle) {
+        liquidPuddle.setAttribute('rx', '50');
+        liquidPuddle.setAttribute('ry', '18');
+        liquidPuddle.style.opacity = '1';
+      }
+      if (liquidShine) {
+        liquidShine.setAttribute('rx', '32');
+        liquidShine.setAttribute('ry', '5');
+        liquidShine.style.opacity = '0.9';
+      }
+      if (tempReadout) tempReadout.textContent = 'हथेली का ताप (37°C) > गैलियम गलनांक (29.76°C): पूर्णतः पिघल गया!';
+      if (pill) pill.textContent = '💧 पूर्णतः पिघल गया! (गलनांक मात्र 29.76°C)';
+      s33ActionBusy = false;
+    }, 500);
+
+  } else if (s33CurrentException === 'i2') {
+    var vaporCloud = document.getElementById('s33_i2_vapor_cloud');
+    if (vaporCloud) {
+      vaporCloud.style.opacity = '1';
+      vaporCloud.style.transform = 'scale(1.35)';
+      setTimeout(function() {
+        vaporCloud.style.transform = 'scale(1)';
+      }, 1500);
+    }
+    if (pill) pill.textContent = '💨 तीव्र ऊर्ध्वपातन: ठोस आयोडीन सीधे बैंगनी वाष्प में बदल रहा है!';
+
+  } else if (s33CurrentException === 'diamond') {
+    s33ActionBusy = true;
+    var stylusRig = document.getElementById('s33_dia_stylus_rig');
+    var needle = document.getElementById('s33_dia_dial_needle');
+    var sparks = document.getElementById('s33_dia_sparks');
+    var loupe = document.getElementById('s33_dia_result_loupe');
+
+    if (loupe) loupe.style.opacity = '0';
+    if (stylusRig) stylusRig.style.transform = 'translate(180px, 195px)';
+    if (needle) needle.style.transform = 'rotate(85deg)';
+    if (pill) pill.textContent = '🔨 500 N भारी दाब: स्टील सुई से खरोंचने का प्रयास...';
+
+    setTimeout(function() {
+      if (sparks) sparks.style.opacity = '1';
+      if (stylusRig) stylusRig.style.transform = 'translate(184px, 196px)';
+      setTimeout(function() {
+        if (stylusRig) stylusRig.style.transform = 'translate(176px, 195px)';
+      }, 150);
+      setTimeout(function() {
+        if (stylusRig) stylusRig.style.transform = 'translate(180px, 195px)';
+      }, 300);
+    }, 600);
+
+    setTimeout(function() {
+      if (sparks) sparks.style.opacity = '0';
+      if (stylusRig) stylusRig.style.transform = 'translate(180px, 95px)';
+      if (needle) needle.style.transform = 'rotate(0deg)';
+      if (loupe) loupe.style.opacity = '1';
+      if (pill) pill.textContent = '💎 0 खरोंच! मोह्स कठोरता 10/10 (प्रकृति का कठोरतम पदार्थ)';
+      s33ActionBusy = false;
+    }, 1300);
+
+  } else if (s33CurrentException === 'na' || s33CurrentException === 'na_knife') {
+    s33ActionBusy = true;
+    var knife = document.getElementById('s33_na_knife_tool');
+    var lHalf = document.getElementById('s33_na_left_half');
+    var rHalf = document.getElementById('s33_na_right_half');
+
+    if (knife) knife.style.transform = 'translate(160px, 315px)';
+    if (pill) pill.textContent = '🔪 चाकू से आसानी से कट रहा है (मक्खन की तरह)...';
+
+    setTimeout(function() {
+      if (lHalf) lHalf.style.transform = 'translate(-26px, 0)';
+      if (rHalf) rHalf.style.transform = 'translate(26px, 0)';
+      if (pill) pill.textContent = '🧈 मक्खन जैसी कटी! ताजा कटा पृष्ठ अत्यंत चमकदार रजत वर्ण!';
+      s33ActionBusy = false;
+    }, 450);
+  }
+}
+
+function sim33ResetAction() {
+  s33ActionBusy = false;
+  // Mercury reset
+  var bulb = document.getElementById('s33_hg_bulb');
+  var drop = document.getElementById('s33_hg_falling_drop');
+  var r1 = document.getElementById('s33_hg_ripple1');
+  var r2 = document.getElementById('s33_hg_ripple2');
+  var pool = document.getElementById('s33_hg_pool');
+  if (bulb) bulb.style.transform = 'scale(1, 1)';
+  if (drop) {
+    drop.style.transition = 'none';
+    drop.style.transform = 'translate(180px, 230px)';
+    drop.style.opacity = '1';
+  }
+  if (r1) r1.style.opacity = '0';
+  if (r2) r2.style.opacity = '0';
+  if (pool) pool.style.transform = 'scale(1)';
+
+  // Gallium reset
+  var heatGlow = document.getElementById('s33_ga_heat_glow');
+  var tempReadout = document.getElementById('s33_ga_temp_readout');
+  var solidIngot = document.getElementById('s33_ga_solid_ingot');
+  var liquidPuddle = document.getElementById('s33_ga_liquid_puddle');
+  var liquidShine = document.getElementById('s33_ga_liquid_shine');
+  if (heatGlow) heatGlow.style.opacity = '0';
+  if (tempReadout) tempReadout.textContent = 'हथेली का ताप: 37°C ➔ गैलियम गलनांक: 29.76°C';
+  if (solidIngot) {
+    solidIngot.style.transform = 'scale(1)';
+    solidIngot.style.opacity = '1';
+  }
+  if (liquidPuddle) {
+    liquidPuddle.setAttribute('rx', '12');
+    liquidPuddle.setAttribute('ry', '5');
+    liquidPuddle.style.opacity = '0';
+  }
+  if (liquidShine) {
+    liquidShine.setAttribute('rx', '8');
+    liquidShine.setAttribute('ry', '2');
+    liquidShine.style.opacity = '0';
+  }
+
+  // Iodine reset
+  var vaporCloud = document.getElementById('s33_i2_vapor_cloud');
+  if (vaporCloud) {
+    vaporCloud.style.opacity = '1';
+    vaporCloud.style.transform = 'scale(1)';
+  }
+
+  // Diamond reset
+  var stylusRig = document.getElementById('s33_dia_stylus_rig');
+  var needle = document.getElementById('s33_dia_dial_needle');
+  var sparks = document.getElementById('s33_dia_sparks');
+  var loupe = document.getElementById('s33_dia_result_loupe');
+  if (stylusRig) stylusRig.style.transform = 'translate(180px, 95px)';
+  if (needle) needle.style.transform = 'rotate(0deg)';
+  if (sparks) sparks.style.opacity = '0';
+  if (loupe) loupe.style.opacity = '0';
+
+  // Sodium reset
+  var knife = document.getElementById('s33_na_knife_tool');
+  var lHalf = document.getElementById('s33_na_left_half');
+  var rHalf = document.getElementById('s33_na_right_half');
+  if (knife) knife.style.transform = 'translate(160px, 140px)';
+  if (lHalf) lHalf.style.transform = 'translate(0, 0)';
+  if (rHalf) rHalf.style.transform = 'translate(0, 0)';
 }
 
 function sim33ShowException(type) {
