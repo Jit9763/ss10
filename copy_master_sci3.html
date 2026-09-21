@@ -2747,25 +2747,55 @@
         <strong>NCERT परीक्षा में बार-बार पूछे जाने वाले अपवाद:</strong> सामान्यतः धातुएं ठोस व कठोर तथा अधातुएं भंगुर/गैस होती हैं, परंतु नीचे दिए गए 5 विशिष्ट तत्वों के अपवादों को लाइव सिमुलेटर में देखें:
       </p>
 
-      <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" style="background:#0284c7; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('hg')">
-          1. पारा (Mercury - Hg) ➔ कमरे के ताप पर द्रव धातु
-        </button>
-        <button class="sim-btn" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('ga')">
-          2. गैलियम / सीज़ियम ➔ हथेली की गर्मी (37°C) पर पिघलना
-        </button>
-        <button class="sim-btn" style="background:#9333ea; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('i2')">
-          3. आयोडीन (I₂) ➔ चमकीली धात्विक चमक वाली अधातु
-        </button>
-        <button class="sim-btn" style="background:#0f172a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('diamond')">
-          4. हीरा (Diamond) ➔ प्रकृति का सबसे कठोरतम पदार्थ
-        </button>
-        <button class="sim-btn" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('na')">
-          5. सोडियम (Na) ➔ चाकू से मक्खन की तरह कटना
-        </button>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:12px;">
+        <div class="sim-controls-grid" style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="sim-btn" id="s33_btn_hg" style="background:#0284c7; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('hg')">
+            1. पारा (Mercury - Hg) ➔ द्रव धातु
+          </button>
+          <button class="sim-btn" id="s33_btn_ga" style="background:#ea580c; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('ga')">
+            2. गैलियम (Ga) ➔ हथेली पर पिघलना
+          </button>
+          <button class="sim-btn" id="s33_btn_i2" style="background:#9333ea; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('i2')">
+            3. आयोडीन (I₂) ➔ चमकीली अधातु
+          </button>
+          <button class="sim-btn" id="s33_btn_diamond" style="background:#0f172a; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('diamond')">
+            4. हीरा (Diamond) ➔ कठोरतम पदार्थ
+          </button>
+          <button class="sim-btn" id="s33_btn_na" style="background:#16a34a; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('na')">
+            5. सोडियम (Na) ➔ चाकू से कटना
+          </button>
+        </div>
+
+        <!-- Mode Toggle: 3D Model vs 10s Lab Video -->
+        <div style="display:flex; gap:6px; background:#e2e8f0; padding:4px; border-radius:10px; border:1.5px solid #cbd5e1;">
+          <button id="s33_tab_sim" style="background:#16a34a; color:#fff; font-size:15px; font-weight:900; padding:8px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;" onclick="sim33SetMode('sim')">
+            🔬 3D सिमुलेटर मॉडल
+          </button>
+          <button id="s33_tab_video" style="background:#ffffff; color:#0f172a; font-size:15px; font-weight:900; padding:8px 14px; border-radius:7px; border:1px solid #cbd5e1; cursor:pointer; transition:all 0.2s;" onclick="sim33SetMode('video')">
+            🎬 10s रियल HD वीडियो
+          </button>
+        </div>
       </div>
 
       <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
+        <!-- 10s HD VIDEO OVERLAY CONTAINER (Left 690px) -->
+        <div id="s33_video_container" style="display:none; position:absolute; left:18px; top:15px; width:690px; height:505px; border-radius:14px; overflow:hidden; background:#0f172a; border:3px solid #16a34a; box-shadow:0 8px 24px rgba(0,0,0,0.25); z-index:10;">
+          <div style="position:relative; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000000;">
+            <video id="s33_video_player" controls autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block; background:#000000;">
+              <source id="s33_video_source" src="media/sim33_mercury_liquid.mp4" type="video/mp4">
+              आपका ब्राउज़र HTML5 वीडियो प्लेयर को सपोर्ट नहीं करता।
+            </video>
+            <!-- Top Floating Info Tag -->
+            <div id="s33_video_badge" style="position:absolute; top:12px; left:14px; background:rgba(15,23,42,0.85); color:#ffffff; padding:6px 14px; border-radius:20px; font-size:13.5px; font-weight:900; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.25); pointer-events:none;">
+              📹 10s रियल NCERT लैब वीडियो: मर्करी (Hg) द्रव धातु
+            </div>
+            <!-- Bottom Action Hint -->
+            <button onclick="sim33SetMode('sim')" style="position:absolute; bottom:14px; right:16px; background:rgba(22,163,74,0.92); color:#ffffff; font-size:13px; font-weight:900; padding:6px 14px; border-radius:8px; border:none; cursor:pointer; backdrop-filter:blur(4px); box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+              🔄 वापस 3D सिमुलेटर पर जाएं
+            </button>
+          </div>
+        </div>
+
         <svg id="svg_sim33" viewBox="0 0 1200 540" width="100%" height="100%">
 
   <defs>
@@ -3086,8 +3116,14 @@
           <polygon points="20,445 710,445 680,515 20,515" fill="url(#lab_table_top)"/>
           <rect x="20" y="515" width="660" height="20" fill="url(#lab_table_front)"/>
 
-          <!-- DIRECT DARK TITLE (NO SURROUNDING BOX) -->
-          <text id="s33_title_text" x="360" y="46" font-size="19" font-weight="900" fill="#000000" text-anchor="middle">कमरे के ताप (25°C) पर द्रव धातु: मर्करी (पारा - Hg)</text>
+          <!-- DIRECT DARK TITLE & VIDEO BUTTON (NO SURROUNDING BOX) -->
+          <text id="s33_title_text" x="290" y="46" font-size="18.5" font-weight="900" fill="#000000" text-anchor="middle">कमरे के ताप (25°C) पर द्रव धातु: मर्करी (पारा - Hg)</text>
+
+          <!-- On-stage launch 10s real video pill -->
+          <g onclick="sim33SetMode('video')" style="cursor:pointer;" transform="translate(565, 28)">
+            <rect x="0" y="0" width="140" height="28" rx="14" fill="#16a34a" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+            <text x="70" y="19" font-size="12.5" font-weight="900" fill="#ffffff" text-anchor="middle">▶️ रियल वीडियो 🎬</text>
+          </g>
 
           <!-- 3D GLASS WATCH GLASS & APPARATUS STAGE (Center: x=360, y=320) -->
           <g id="s33_stage_anim" transform="translate(180, 50)">
@@ -12213,7 +12249,92 @@ function sim32Reset() {
 /* --------------------------------------------------------------------------
    SIMULATOR 3.3: अपवाद एक्सप्लोरर (Activity 3.7)
    -------------------------------------------------------------------------- */
+var s33CurrentException = 'hg';
+var s33Mode = 'sim';
+
+var s33VideoMap = {
+  'hg': {
+    src: 'media/sim33_mercury_liquid.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: मर्करी (Hg) द्रव धातु'
+  },
+  'ga': {
+    src: 'media/sim33_gallium_melting.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: गैलियम (Ga) हथेली पर पिघलना'
+  },
+  'cs': {
+    src: 'media/sim33_gallium_melting.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: गैलियम व सीज़ियम निम्न गलनांक'
+  },
+  'i2': {
+    src: 'media/sim33_iodine_sublimation.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: आयोडीन (I₂) धात्विक चमक व ऊर्ध्वपातन'
+  },
+  'diamond': {
+    src: 'media/sim33_diamond_hardness.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: हीरा (Diamond) कठोरतम अपररूप'
+  },
+  'na': {
+    src: 'media/sim33_sodium_cutting.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: सोडियम (Na) चाकू से कटना'
+  },
+  'na_knife': {
+    src: 'media/sim33_sodium_cutting.mp4',
+    title: '📹 10s रियल NCERT लैब वीडियो: सोडियम (Na) चाकू से कटना'
+  }
+};
+
+function sim33SetMode(mode) {
+  s33Mode = mode;
+  var container = document.getElementById('s33_video_container');
+  var player = document.getElementById('s33_video_player');
+  var vSource = document.getElementById('s33_video_source');
+  var vBadge = document.getElementById('s33_video_badge');
+  var tabSim = document.getElementById('s33_tab_sim');
+  var tabVideo = document.getElementById('s33_tab_video');
+
+  if (mode === 'video') {
+    if (tabSim) {
+      tabSim.style.background = '#ffffff';
+      tabSim.style.color = '#0f172a';
+      tabSim.style.border = '1px solid #cbd5e1';
+    }
+    if (tabVideo) {
+      tabVideo.style.background = '#16a34a';
+      tabVideo.style.color = '#ffffff';
+      tabVideo.style.border = 'none';
+    }
+    if (container) container.style.display = 'block';
+
+    var videoInfo = s33VideoMap[s33CurrentException] || s33VideoMap['hg'];
+    if (vBadge) vBadge.textContent = videoInfo.title;
+    if (player && vSource) {
+      if (!vSource.getAttribute('src') || !vSource.getAttribute('src').endsWith(videoInfo.src)) {
+        vSource.setAttribute('src', videoInfo.src);
+        player.load();
+      }
+      player.play().catch(function(e) { /* user gesture may be needed */ });
+    }
+  } else {
+    // Mode 'sim'
+    if (tabSim) {
+      tabSim.style.background = '#16a34a';
+      tabSim.style.color = '#ffffff';
+      tabSim.style.border = 'none';
+    }
+    if (tabVideo) {
+      tabVideo.style.background = '#ffffff';
+      tabVideo.style.color = '#0f172a';
+      tabVideo.style.border = '1px solid #cbd5e1';
+    }
+    if (container) container.style.display = 'none';
+    if (player) {
+      try { player.pause(); } catch(e) {}
+    }
+  }
+}
+
 function sim33SelectException(type) {
+  s33CurrentException = type;
   var pbar = document.getElementById('s33_pbar');
   var stext = document.getElementById('s33_title_text');
   var cardName = document.getElementById('s33_card_name');
@@ -12221,6 +12342,22 @@ function sim33SelectException(type) {
   var cardRule = document.getElementById('s33_card_rule');
   var cardFact = document.getElementById('s33_card_fact');
   var mainStatus = document.getElementById('sim33_status');
+
+  // Highlight active button
+  var allBtns = ['s33_btn_hg', 's33_btn_ga', 's33_btn_i2', 's33_btn_diamond', 's33_btn_na'];
+  allBtns.forEach(function(bId) {
+    var b = document.getElementById(bId);
+    if (b) {
+      b.style.boxShadow = 'none';
+      b.style.transform = 'scale(1)';
+    }
+  });
+  var activeKey = (type === 'na_knife') ? 'na' : ((type === 'cs') ? 'ga' : type);
+  var activeBtn = document.getElementById('s33_btn_' + activeKey);
+  if (activeBtn) {
+    activeBtn.style.boxShadow = '0 0 0 3px #ffffff, 0 0 0 6px #0f172a';
+    activeBtn.style.transform = 'scale(1.04)';
+  }
 
   var visHg = document.getElementById('s33_vis_hg');
   var visGa = document.getElementById('s33_vis_ga');
@@ -12298,6 +12435,11 @@ function sim33SelectException(type) {
     if (pbar) pbar.style.width = '100%';
     if (mainStatus) mainStatus.innerHTML = '<strong>अपवाद 5 (क्षार धातुएं - Na, K):</strong> लिथियम, सोडियम व पोटैशियम इतनी मुलायम धातुएं हैं कि इन्हें प्रयोगशाला के साधारण चाकू से आसानी से काटा जा सकता है तथा इनका घनत्व भी कम होता है।';
   }
+
+  // If in video mode, update video immediately
+  if (s33Mode === 'video') {
+    sim33SetMode('video');
+  }
 }
 
 function sim33ShowException(type) {
@@ -12306,6 +12448,7 @@ function sim33ShowException(type) {
 
 function sim33Reset() {
   sim33SelectException('hg');
+  sim33SetMode('sim');
 }
 
 /* --------------------------------------------------------------------------
