@@ -2223,17 +2223,17 @@
       </p>
 
       <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('cu')">
-          1. तांबे का तार (Cu धातु ➔ तीव्र बल्ब 💡)
+        <button class="sim-btn" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('cu')">
+          1. तांबे की छड़ (Cu धातु ➔ तीव्र बल्ब 💡)
         </button>
         <button class="sim-btn" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('fe')">
           2. लोहे की कील (Fe धातु ➔ बल्ब प्रज्वलित 💡)
         </button>
-        <button class="sim-btn" style="background:#b91c1c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('sulfur')">
-          3. सल्फर / कोयला (अधातु ➔ बल्ब बंद ❌)
+        <button class="sim-btn" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('pencil')">
+          ⭐ 3. पेंसिल दोनों ओर से छीली हुई (ग्रेफाइट ➔ सुचालक 💡)
         </button>
-        <button class="sim-btn" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('graphite')">
-          ⭐ 4. ग्रेफाइट (पेंसिल लेड — अपवाद सुचालक 💡)
+        <button class="sim-btn" style="background:#334155; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('coal')">
+          4. कोयला की डली (कार्बन अधातु ➔ बल्ब बंद ❌)
         </button>
         <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
@@ -2588,9 +2588,8 @@
             <!-- Metal Screw Base & Bakelite Socket -->
             <rect x="28" y="78" width="24" height="16" rx="2" fill="url(#metal3d_brass)"/>
             <rect x="20" y="94" width="40" height="14" rx="4" fill="url(#burner_base)"/>
-            <!-- Status Badge above Bulb -->
-            <rect x="-20" y="-15" width="120" height="28" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
-            <text id="s32_bulb_txt" x="40" y="4" font-size="14" font-weight="900" fill="#64748b" text-anchor="middle">बल्ब: बंद ⚪</text>
+            <!-- DIRECT DARK TEXT ABOVE BULB (NO SURROUNDING BOX) -->
+            <text id="s32_bulb_txt" x="40" y="-4" font-size="16" font-weight="900" fill="#000000" text-anchor="middle">बल्ब: बंद ⚪</text>
           </g>
 
           <!-- 3D CURVED CIRCUIT CONNECTING WIRES -->
@@ -2613,14 +2612,71 @@
             <text x="15" y="5" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">B</text>
           </g>
 
-          <!-- TEST SAMPLE CLAMPED BETWEEN A & B (x=250 to 530, y=342) -->
+          <!-- TEST SAMPLES CLAMPED BETWEEN A & B (x=240 to 540, y=350) -->
           <g id="s32_sample_grp">
-            <rect id="s32_sample_bar" x="250" y="343" width="280" height="14" rx="4" fill="url(#metal3d_cu)" stroke="#7c2d12" stroke-width="1.5"/>
-            <rect id="s32_sample_rect" x="250" y="343" width="280" height="14" rx="4" fill="url(#metal3d_cu)" opacity="0"/>
-            
-            <!-- Sample Name Pill Badge (Placed SAFELY at y=388, well above workbench) -->
-            <rect x="300" y="380" width="180" height="34" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
-            <text id="s32_sample_lbl" x="390" y="403" font-size="15" font-weight="900" fill="#000000" text-anchor="middle">तांबे का तार (Cu धातु)</text>
+            <!-- ITEM 1: तांबे की छड़ -->
+            <g id="s32_obj_cu" style="display:block;">
+              <rect x="246" y="356" width="288" height="6" rx="3" fill="#000000" opacity="0.15"/>
+              <rect x="245" y="342" width="290" height="16" rx="5" fill="url(#metal3d_cu)" stroke="#9a3412" stroke-width="1.5"/>
+              <rect x="248" y="344" width="284" height="4" rx="2" fill="#ffedd5" opacity="0.6"/>
+              <ellipse cx="248" cy="350" rx="3" ry="7" fill="#ea580c"/>
+              <ellipse cx="532" cy="350" rx="3" ry="7" fill="#ea580c"/>
+            </g>
+
+            <!-- ITEM 2: लोहे की कील -->
+            <g id="s32_obj_fe" style="display:none;">
+              <ellipse cx="390" cy="358" rx="140" ry="4" fill="#000000" opacity="0.15"/>
+              <rect x="242" y="334" width="9" height="32" rx="3" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+              <ellipse cx="246" cy="350" rx="3" ry="14" fill="#cbd5e1"/>
+              <rect x="250" y="343" width="250" height="14" rx="2" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.5"/>
+              <rect x="252" y="345" width="245" height="3" rx="1.5" fill="#f8fafc" opacity="0.75"/>
+              <line x1="262" y1="343" x2="262" y2="357" stroke="#334155" stroke-width="1.8"/>
+              <line x1="269" y1="343" x2="269" y2="357" stroke="#334155" stroke-width="1.8"/>
+              <line x1="276" y1="343" x2="276" y2="357" stroke="#334155" stroke-width="1.8"/>
+              <polygon points="500,343 538,350 500,357" fill="url(#metal3d_fe)" stroke="#334155" stroke-width="1.5"/>
+              <line x1="500" y1="345" x2="532" y2="350" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+            </g>
+
+            <!-- ITEM 3: पेंसिल दोनों ओर से छीली हुई -->
+            <g id="s32_obj_pencil" style="display:none;">
+              <ellipse cx="390" cy="360" rx="140" ry="4" fill="#000000" opacity="0.15"/>
+              <!-- Left exposed graphite lead -->
+              <rect x="242" y="347.5" width="20" height="5" rx="2" fill="#0f172a" stroke="#000" stroke-width="1"/>
+              <rect x="243" y="348" width="18" height="1.5" fill="#94a3b8" opacity="0.6"/>
+              <!-- Left wood cone -->
+              <polygon points="285,340 262,347 262,353 285,360" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+              <polygon points="285,340 262,347 262,350 285,347" fill="#fde68a"/>
+              <!-- Central pencil hexagonal wood shaft -->
+              <rect x="285" y="340" width="210" height="6" fill="#f59e0b" stroke="#b45309" stroke-width="0.8"/>
+              <rect x="285" y="346" width="210" height="8" fill="#fbbf24" stroke="#b45309" stroke-width="0.8"/>
+              <text x="390" y="352.5" font-size="6.5" font-weight="900" fill="#78350f" text-anchor="middle" letter-spacing="1">★★★ HB GRAPHITE LEAD PENCIL ★★★</text>
+              <rect x="285" y="354" width="210" height="6" fill="#d97706" stroke="#b45309" stroke-width="0.8"/>
+              <!-- Right wood cone -->
+              <polygon points="495,340 518,347 518,353 495,360" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+              <polygon points="495,340 518,347 518,350 495,347" fill="#fde68a"/>
+              <!-- Right exposed graphite lead -->
+              <rect x="518" y="347.5" width="20" height="5" rx="2" fill="#0f172a" stroke="#000" stroke-width="1"/>
+              <rect x="519" y="348" width="18" height="1.5" fill="#94a3b8" opacity="0.6"/>
+            </g>
+
+            <!-- ITEM 4: कोयला की डली -->
+            <g id="s32_obj_coal" style="display:none;">
+              <ellipse cx="390" cy="364" rx="142" ry="6" fill="#000000" opacity="0.2"/>
+              <polygon points="244,352 255,338 280,332 315,326 350,334 385,324 425,328 465,325 500,332 530,342 538,352 534,363 505,369 465,372 420,366 375,371 330,367 290,370 258,364" 
+                       fill="#18181b" stroke="#09090b" stroke-width="2"/>
+              <polygon points="255,338 315,326 330,346 270,350" fill="#27272a" opacity="0.9"/>
+              <polygon points="315,326 385,324 400,344 330,346" fill="#3f3f46" opacity="0.65"/>
+              <polygon points="385,324 465,325 450,348 400,344" fill="#27272a" opacity="0.9"/>
+              <polygon points="465,325 530,342 490,355 450,348" fill="#3f3f46" opacity="0.6"/>
+              <polygon points="270,350 330,346 350,368 290,370" fill="#09090b" opacity="0.6"/>
+              <polygon points="330,346 400,344 420,366 350,368" fill="#18181b"/>
+              <polygon points="400,344 450,348 465,372 420,366" fill="#09090b" opacity="0.6"/>
+              <path d="M 315 330 L 325 334 M 382 328 L 395 332 M 460 329 L 472 333 M 285 352 L 298 355 M 420 350 L 435 354" 
+                    stroke="#71717a" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+            </g>
+
+            <!-- DIRECT DARK TEXT (NO SURROUNDING BOX) -->
+            <text id="s32_sample_lbl" x="390" y="405" font-size="18" font-weight="900" fill="#000000" text-anchor="middle">तांबे की छड़ (Cu धातु)</text>
           </g>
 
           <!-- RIGHT OBSERVATION PANEL -->
@@ -11858,83 +11914,107 @@ function sim32TestMaterial(type) {
   var pbar = document.getElementById('s32_pbar');
   var stext = document.getElementById('s32_status_text') || document.getElementById('s32_res_nature');
   var bulbGlow = document.getElementById('s32_bulb_glow') || document.getElementById('s32_glow_circle');
-  var sample = document.getElementById('s32_sample_rect') || document.getElementById('s32_sample_bar');
   var sampleLbl = document.getElementById('s32_sample_lbl');
-  var bulbTxt = document.getElementById('s32_bulb_status_txt') || document.getElementById('s32_bulb_txt') || document.getElementById('s32_res_bulb');
+  var bulbTxt = document.getElementById('s32_bulb_txt');
+  var resBulb = document.getElementById('s32_res_bulb');
   var resultType = document.getElementById('s32_result_type') || document.getElementById('s32_res_name');
   var freeElec = document.getElementById('s32_free_electrons');
   var mainStatus = document.getElementById('sim32_status');
 
-  if (!sample && !sampleLbl) return;
+  var objCu = document.getElementById('s32_obj_cu');
+  var objFe = document.getElementById('s32_obj_fe');
+  var objPencil = document.getElementById('s32_obj_pencil');
+  var objCoal = document.getElementById('s32_obj_coal');
+
+  // Helper to switch visible sample object
+  function showSample(obj) {
+    if (objCu) objCu.style.display = 'none';
+    if (objFe) objFe.style.display = 'none';
+    if (objPencil) objPencil.style.display = 'none';
+    if (objCoal) objCoal.style.display = 'none';
+    if (obj) obj.style.display = 'block';
+  }
 
   if (type === 'cu') {
-    if (sample) sample.setAttribute('fill', 'url(#metal3d_cu)');
-    if (sampleLbl) sampleLbl.textContent = 'तांबे का तार (Cu धातु)';
+    showSample(objCu);
+    if (sampleLbl) sampleLbl.textContent = 'तांबे की छड़ (Cu धातु)';
     if (bulbGlow) bulbGlow.style.opacity = '1';
     if (bulbTxt) {
       bulbTxt.textContent = 'बल्ब: तीव्र प्रदीप्त 💡 (सुचालक)';
-      bulbTxt.setAttribute('fill', '#15803d');
+      bulbTxt.setAttribute('fill', '#000000');
+    }
+    if (resBulb) {
+      resBulb.textContent = 'बल्ब: तीव्र प्रदीप्त 💡 (सुचालक)';
+      resBulb.setAttribute('fill', '#15803d');
     }
     if (resultType) {
-      resultType.textContent = 'तांबा (Cu) - धातु सुचालक';
+      resultType.textContent = 'तांबे की छड़ (Cu धातु)';
       resultType.setAttribute('fill', '#16a34a');
     }
     if (stext) stext.textContent = 'तांबा धातु: परिपथ पूर्ण, बल्ब तीव्र चमक उठा ⚡';
     if (freeElec) freeElec.style.opacity = '1';
     if (pbar) pbar.style.width = '100%';
-    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण Cu:</strong> तांबे के तार में मुक्त इलेक्ट्रॉन होने के कारण परिपथ पूर्ण हो गया और बल्ब प्रज्वलित हो उठा।';
-    speakHindiCh3('तांबा विद्युत का सुचालक है, परिपथ पूर्ण होने से बल्ब जल उठा।');
-  } else if (type === 'graphite') {
-    if (sample) sample.setAttribute('fill', '#1e293b');
-    if (sampleLbl) sampleLbl.textContent = 'ग्रेफाइट पेंसिल लेड (अपवाद ⚡)';
-    if (bulbGlow) bulbGlow.style.opacity = '0.85';
-    if (bulbTxt) {
-      bulbTxt.textContent = 'बल्ब: प्रदीप्त 💡 (अपवाद सुचालक!)';
-      bulbTxt.setAttribute('fill', '#15803d');
-    }
-    if (resultType) {
-      resultType.textContent = 'ग्रेफाइट - अपवाद! अधातु सुचालक';
-      resultType.setAttribute('fill', '#7c3aed');
-    }
-    if (stext) stext.textContent = 'ग्रेफाइट अपवाद: कार्बन अधातु का अपररूप, फिर भी विद्युत सुचालक!';
-    if (freeElec) freeElec.style.opacity = '1';
-    if (pbar) pbar.style.width = '100%';
-    if (mainStatus) mainStatus.innerHTML = '<strong>अपवाद ग्रेफाइट:</strong> कार्बन अधातु होने के बावजूद इसकी परतदार संरचना में मुक्त इलेक्ट्रॉन होते हैं, जिससे बल्ब जलता है!';
-    speakHindiCh3('ग्रेफाइट अधातु का अपवाद है, इसके पास मुक्त इलेक्ट्रॉन होने से बल्ब जलता है।');
-  } else if (type === 'sulfur' || type === 's') {
-    if (sample) sample.setAttribute('fill', '#facc15');
-    if (sampleLbl) sampleLbl.textContent = 'सल्फर / कोयला (अधातु)';
-    if (bulbGlow) bulbGlow.style.opacity = '0';
-    if (bulbTxt) {
-      bulbTxt.textContent = 'बल्ब: बंद ❌ (विद्युत कुचालक)';
-      bulbTxt.setAttribute('fill', '#dc2626');
-    }
-    if (resultType) {
-      resultType.textContent = 'सल्फर / कोयला - कुचालक अधातु';
-      resultType.setAttribute('fill', '#dc2626');
-    }
-    if (stext) stext.textContent = 'सल्फर अधातु: विद्युत कुचालक, परिपथ खुला रहा, बल्ब OFF!';
-    if (freeElec) freeElec.style.opacity = '0';
-    if (pbar) pbar.style.width = '20%';
-    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण सल्फर:</strong> अधातुओं में मुक्त इलेक्ट्रॉन नहीं होते, अतः परिपथ में धारा प्रवाहित नहीं होती और बल्ब बंद रहता है।';
-    speakHindiCh3('सल्फर विद्युत का कुचालक है, बल्ब नहीं जला।');
+    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण तांबे की छड़ (Cu):</strong> तांबे की छड़ में मुक्त इलेक्ट्रॉन होने के कारण परिपथ पूर्ण हो गया और बल्ब तीव्र चमक उठा!';
   } else if (type === 'fe') {
-    if (sample) sample.setAttribute('fill', 'url(#metal3d_fe)');
+    showSample(objFe);
     if (sampleLbl) sampleLbl.textContent = 'लोहे की कील (Fe धातु)';
     if (bulbGlow) bulbGlow.style.opacity = '0.95';
     if (bulbTxt) {
       bulbTxt.textContent = 'बल्ब: प्रदीप्त 💡 (धातु सुचालक)';
-      bulbTxt.setAttribute('fill', '#15803d');
+      bulbTxt.setAttribute('fill', '#000000');
+    }
+    if (resBulb) {
+      resBulb.textContent = 'बल्ब: प्रदीप्त 💡 (धातु सुचालक)';
+      resBulb.setAttribute('fill', '#15803d');
     }
     if (resultType) {
-      resultType.textContent = 'लोहा (Fe) - धातु सुचालक';
+      resultType.textContent = 'लोहे की कील (Fe धातु)';
       resultType.setAttribute('fill', '#16a34a');
     }
     if (stext) stext.textContent = 'लोहा धातु: विद्युत सुचालक, परिपथ में धारा बही!';
     if (freeElec) freeElec.style.opacity = '1';
     if (pbar) pbar.style.width = '100%';
-    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण लोहा:</strong> लोहे की कील विद्युत की सुचालक है, जिससे बल्ब जलता है।';
-    speakHindiCh3('लोहा विद्युत का सुचालक है।');
+    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण लोहे की कील (Fe):</strong> लोहे की कील विद्युत की उत्तम सुचालक है, जिससे परिपथ में धारा प्रवाहित हुई और बल्ब जल उठा।';
+  } else if (type === 'pencil' || type === 'graphite') {
+    showSample(objPencil);
+    if (sampleLbl) sampleLbl.textContent = 'पेंसिल दोनों ओर से छीली हुई (ग्रेफाइट - अपवाद ⚡)';
+    if (bulbGlow) bulbGlow.style.opacity = '0.85';
+    if (bulbTxt) {
+      bulbTxt.textContent = 'बल्ब: प्रदीप्त 💡 (अपवाद सुचालक!)';
+      bulbTxt.setAttribute('fill', '#000000');
+    }
+    if (resBulb) {
+      resBulb.textContent = 'बल्ब: प्रदीप्त 💡 (अपवाद सुचालक!)';
+      resBulb.setAttribute('fill', '#7c3aed');
+    }
+    if (resultType) {
+      resultType.textContent = 'पेंसिल लेड (ग्रेफाइट अधातु अपवाद)';
+      resultType.setAttribute('fill', '#7c3aed');
+    }
+    if (stext) stext.textContent = 'ग्रेफाइट अपवाद: कार्बन अधातु होने के बावजूद विद्युत सुचालक!';
+    if (freeElec) freeElec.style.opacity = '1';
+    if (pbar) pbar.style.width = '100%';
+    if (mainStatus) mainStatus.innerHTML = '<strong>अपवाद पेंसिल दोनों ओर से छीली हुई:</strong> पेंसिल के अंदर ग्रेफाइट कोर उपस्थित है। ग्रेफाइट अधातु होने के बावजूद मुक्त इलेक्ट्रॉनों के कारण विद्युत का सुचालक है!';
+  } else if (type === 'coal' || type === 'sulfur' || type === 's') {
+    showSample(objCoal);
+    if (sampleLbl) sampleLbl.textContent = 'कोयला की डली (कार्बन अधातु)';
+    if (bulbGlow) bulbGlow.style.opacity = '0';
+    if (bulbTxt) {
+      bulbTxt.textContent = 'बल्ब: बंद ❌ (विद्युत कुचालक)';
+      bulbTxt.setAttribute('fill', '#000000');
+    }
+    if (resBulb) {
+      resBulb.textContent = 'बल्ब: बंद ❌ (विद्युत कुचालक)';
+      resBulb.setAttribute('fill', '#dc2626');
+    }
+    if (resultType) {
+      resultType.textContent = 'कोयला की डली (कार्बन अधातु)';
+      resultType.setAttribute('fill', '#dc2626');
+    }
+    if (stext) stext.textContent = 'कोयला अधातु: विद्युत कुचालक, परिपथ खुला रहा, बल्ब OFF!';
+    if (freeElec) freeElec.style.opacity = '0';
+    if (pbar) pbar.style.width = '20%';
+    if (mainStatus) mainStatus.innerHTML = '<strong>परीक्षण कोयला की डली:</strong> कोयला कार्बन का अक्रिस्टलीय रूप है, जिसमें मुक्त इलेक्ट्रॉन नहीं होते। अतः यह विद्युत का कुचालक है और बल्ब बंद रहता है।';
   }
 }
 
@@ -11950,23 +12030,39 @@ function sim32Reset() {
   var pbar = document.getElementById('s32_pbar');
   var stext = document.getElementById('s32_status_text') || document.getElementById('s32_res_nature');
   var bulbGlow = document.getElementById('s32_bulb_glow') || document.getElementById('s32_glow_circle');
-  var sample = document.getElementById('s32_sample_rect') || document.getElementById('s32_sample_bar');
   var sampleLbl = document.getElementById('s32_sample_lbl');
-  var bulbTxt = document.getElementById('s32_bulb_status_txt') || document.getElementById('s32_bulb_txt') || document.getElementById('s32_res_bulb');
+  var bulbTxt = document.getElementById('s32_bulb_txt');
+  var resBulb = document.getElementById('s32_res_bulb');
   var resultType = document.getElementById('s32_result_type') || document.getElementById('s32_res_name');
   var mainStatus = document.getElementById('sim32_status');
 
+  var objCu = document.getElementById('s32_obj_cu');
+  var objFe = document.getElementById('s32_obj_fe');
+  var objPencil = document.getElementById('s32_obj_pencil');
+  var objCoal = document.getElementById('s32_obj_coal');
+
+  if (objCu) objCu.style.display = 'block';
+  if (objFe) objFe.style.display = 'none';
+  if (objPencil) objPencil.style.display = 'none';
+  if (objCoal) objCoal.style.display = 'none';
+
   if (pbar) pbar.style.width = '0%';
   if (bulbGlow) bulbGlow.style.opacity = '0';
-  if (sample) sample.setAttribute('fill', '#94a3b8');
-  if (sampleLbl) sampleLbl.textContent = 'क्लिप्स A-B के बीच खाली';
+  if (sampleLbl) sampleLbl.textContent = 'तांबे की छड़ (Cu धातु) - प्रारंभिक स्थिति';
   if (bulbTxt) {
-    bulbTxt.textContent = 'बल्ब: बंद ⚪ (परिपथ अपूर्ण)';
-    bulbTxt.setAttribute('fill', '#64748b');
+    bulbTxt.textContent = 'बल्ब: बंद ⚪ (स्विच खुला)';
+    bulbTxt.setAttribute('fill', '#000000');
   }
-  if (resultType) resultType.textContent = 'कोई नमूना नहीं';
-  if (stext) stext.textContent = 'टर्मिनलों के बीच पदार्थ जोड़कर चालकता जांचें';
-  if (mainStatus) mainStatus.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परिपथ खुला है। ऊपर दिए गए बटनों से तांबा, लोहा, सल्फर या ग्रेफाइट चुनकर बल्ब पर प्रभाव देखें।';
+  if (resBulb) {
+    resBulb.textContent = 'बल्ब: बंद ⚪ (स्विच खुला)';
+    resBulb.setAttribute('fill', '#64748b');
+  }
+  if (resultType) {
+    resultType.textContent = 'तांबे की छड़ (Cu धातु)';
+    resultType.setAttribute('fill', '#2563eb');
+  }
+  if (stext) stext.textContent = 'ऊपर से बटन दबाकर परीक्षण शुरू करें।';
+  if (mainStatus) mainStatus.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> परिपथ खुला है। ऊपर दिए गए बटनों से तांबे की छड़, लोहे की कील, पेंसिल या कोयला की डली चुनकर बल्ब पर प्रभाव देखें।';
 }
 
 /* --------------------------------------------------------------------------
