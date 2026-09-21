@@ -3491,19 +3491,49 @@
         <strong>NCERT क्रियाकलाप 3.8:</strong> मैग्नीशियम रिबन को जलाकर राख (MgO) को जल में घोलते हैं, यह लाल लिटमस को नीला करता है (क्षारकीय प्रकृति)। वहीं सल्फर चूर्ण को जलाकर निकली SO₂ गैस को जल में घोलने पर वह नीले लिटमस को लाल करती है (अम्लीय प्रकृति):
       </p>
 
-      <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34TestOxide('mg')">
-          1. धात्विक ऑक्साइड (Mg दहन ➔ MgO + जल ➔ क्षारकीय Mg(OH)₂)
-        </button>
-        <button class="sim-btn" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34TestOxide('s')">
-          2. अधात्विक ऑक्साइड (S दहन ➔ SO₂ + जल ➔ अम्लीय H₂SO₃)
-        </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34Reset()">
-          <i class="fas fa-redo"></i> 🔄 रीसेट
-        </button>
+      <div class="sim-controls-grid" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button class="sim-btn" id="s34_btn_mg" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34TestOxide('mg')">
+            1. धात्विक ऑक्साइड (Mg दहन ➔ MgO + जल ➔ क्षारकीय Mg(OH)₂)
+          </button>
+          <button class="sim-btn" id="s34_btn_s" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34TestOxide('s')">
+            2. अधात्विक ऑक्साइड (S दहन ➔ SO₂ + जल ➔ अम्लीय H₂SO₃)
+          </button>
+          <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim34Reset()">
+            <i class="fas fa-redo"></i> 🔄 रीसेट
+          </button>
+        </div>
+
+        <!-- Mode Toggle: 3D Model vs 10s Lab Video -->
+        <div style="display:flex; gap:6px; background:#e2e8f0; padding:4px; border-radius:10px; border:1.5px solid #cbd5e1;">
+          <button id="s34_tab_sim" style="background:#16a34a; color:#fff; font-size:15px; font-weight:900; padding:8px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;" onclick="sim34SetMode('sim')">
+            🔬 3D सिमुलेटर मॉडल
+          </button>
+          <button id="s34_tab_video" style="background:#ffffff; color:#0f172a; font-size:15px; font-weight:900; padding:8px 14px; border-radius:7px; border:1px solid #cbd5e1; cursor:pointer; transition:all 0.2s;" onclick="sim34SetMode('video')">
+            🎬 10s रियल HD वीडियो
+          </button>
+        </div>
       </div>
 
       <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
+        <!-- 10s HD VIDEO OVERLAY CONTAINER (Left 690px) -->
+        <div id="s34_video_container" style="display:none; position:absolute; left:18px; top:15px; width:690px; height:505px; border-radius:14px; overflow:hidden; background:#0f172a; border:3px solid #16a34a; box-shadow:0 8px 24px rgba(0,0,0,0.25); z-index:10;">
+          <div style="position:relative; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000000;">
+            <video id="s34_video_player" controls autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block; background:#000000;">
+              <source id="s34_video_source" src="media/sim34_oxides_nature.mp4" type="video/mp4">
+              आपका ब्राउज़र HTML5 वीडियो प्लेयर को सपोर्ट नहीं करता।
+            </video>
+            <!-- Top Floating Info Tag -->
+            <div id="s34_video_badge" style="position:absolute; top:12px; left:14px; background:rgba(15,23,42,0.85); color:#ffffff; padding:6px 14px; border-radius:20px; font-size:13.5px; font-weight:900; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.25); pointer-events:none;">
+              📹 10s रियल NCERT लैब वीडियो: Mg व S दहन (धातु/अधातु ऑक्साइड एवं लिटमस परीक्षण)
+            </div>
+            <!-- Bottom Action Hint -->
+            <button onclick="sim34SetMode('sim')" style="position:absolute; bottom:14px; right:16px; background:rgba(22,163,74,0.92); color:#ffffff; font-size:13px; font-weight:900; padding:6px 14px; border-radius:8px; border:none; cursor:pointer; backdrop-filter:blur(4px); box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+              🔄 वापस 3D सिमुलेटर पर जाएं
+            </button>
+          </div>
+        </div>
+
         <svg id="svg_sim34" viewBox="0 0 1200 540" width="100%" height="100%">
 
   <defs>
