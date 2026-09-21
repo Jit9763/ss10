@@ -2086,9 +2086,9 @@
           <g id="s31_rod_grp" transform="translate(160, 180)">
             <!-- Main 3D Metallic Rod -->
             <rect id="s31_rod" x="0" y="0" width="470" height="16" rx="4" fill="url(#metal3d_cu)" stroke="#7c2d12" stroke-width="1.5"/>
-            <!-- Conduction Heat Glow Layer (Fades in from left) -->
-            <rect id="s31_heat_glow" x="0" y="0" width="470" height="16" rx="4" fill="url(#liquid_molten_iron)" opacity="0" style="transition:opacity 0.5s ease;"/>
-            <rect id="s31_rod_heat" x="0" y="0" width="470" height="16" rx="4" fill="url(#liquid_molten_iron)" opacity="0" style="transition:opacity 0.5s ease;"/>
+            <!-- Conduction Heat Glow Layer (Expands dynamically from left to right as timer runs) -->
+            <rect id="s31_heat_glow" x="0" y="0" width="0" height="16" rx="4" fill="url(#flame3d_inner)" opacity="0" style="transition:width 0.04s linear;"/>
+            <rect id="s31_rod_heat" x="0" y="0" width="0" height="16" rx="4" fill="#ef4444" opacity="0" style="transition:width 0.04s linear;"/>
           </g>
 
           <!-- 3D VOLUMETRIC BUNSEN BURNER (Heating left end of rod at x=250) -->
@@ -2119,9 +2119,9 @@
           <!-- 3D WAX BEAD & STEEL PIN AT RIGHT END (x=615, y=180) -->
           <g id="s31_wax_pin_grp" transform="translate(615, 180)">
             <!-- Translucent Wax Bead sticking pin to rod -->
-            <ellipse id="s31_wax" cx="8" cy="18" rx="14" ry="8" fill="#fef08a" stroke="#ca8a04" stroke-width="1.8" style="transition:all 0.5s ease; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));"/>
+            <ellipse id="s31_wax" cx="8" cy="18" rx="14" ry="8" fill="#fef08a" stroke="#ca8a04" stroke-width="1.8" style="transition:all 0.4s ease; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));"/>
             <!-- 3D Metal Pin / Nail (Falls when heated) -->
-            <g id="s31_pin" style="transition:transform 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53);">
+            <g id="s31_pin" style="transition:transform 0.45s cubic-bezier(0.55, 0.085, 0.68, 0.53); transform-origin: 8px 20px;">
               <line x1="8" y1="20" x2="8" y2="85" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
               <polygon points="5,85 11,85 8,96" fill="#1e293b"/>
               <circle cx="8" cy="20" r="6" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
@@ -2131,13 +2131,20 @@
             <ellipse cx="8" cy="255" rx="28" ry="5" fill="#e2e8f0"/>
           </g>
 
-          <!-- CLEAN LABELS IN PILL BADGES (High contrast, zero overlap) -->
-          <g transform="translate(190, 80)">
-            <rect x="0" y="0" width="190" height="36" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
-            <text id="s31_rod_label" x="95" y="24" font-size="15" font-weight="900" fill="#000000" text-anchor="middle">तांबे की छड़ (Cu)</text>
+          <!-- CLEAN LABELS & DIGITAL STOPWATCH (High contrast, zero overlap) -->
+          <g transform="translate(150, 75)">
+            <rect x="0" y="0" width="165" height="36" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
+            <text id="s31_rod_label" x="82" y="24" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">तांबे की छड़ (Cu)</text>
           </g>
 
-          <g transform="translate(530, 80)">
+          <!-- ON-STAGE DIGITAL STOPWATCH (Timer Display) -->
+          <g id="s31_stopwatch_grp" transform="translate(330, 75)">
+            <rect x="0" y="0" width="145" height="36" rx="8" fill="#0f172a" stroke="#22c55e" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.15))"/>
+            <circle id="s31_timer_dot" cx="16" cy="18" r="5" fill="#64748b"/>
+            <text id="s31_digital_timer" x="80" y="25" font-family="'JetBrains Mono', monospace" font-size="17" font-weight="900" fill="#22c55e" text-anchor="middle">0.0 s</text>
+          </g>
+
+          <g transform="translate(490, 75)">
             <rect x="0" y="0" width="170" height="36" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
             <text x="85" y="24" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">मोम + ऑलपिन (कील)</text>
           </g>
@@ -11632,85 +11639,204 @@ function adjustSimStroke(amount) {
 }
 
 function speakHindiCh3(text) {
+  // Voice completely disabled per user preference (visual action prioritized)
   if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    var utter = new SpeechSynthesisUtterance(text);
-    utter.lang = 'hi-IN';
-    utter.rate = 0.95;
-    window.speechSynthesis.speak(utter);
+    try { window.speechSynthesis.cancel(); } catch(e) {}
   }
 }
 
 /* --------------------------------------------------------------------------
-   SIMULATOR 3.1: ऊष्मा चालकता (Activity 3.5)
+   SIMULATOR 3.1: ऊष्मा चालकता (Activity 3.5) - LIVE DIGITAL TIMER & HEAT PROPAGATION
    -------------------------------------------------------------------------- */
 var s31Timer = null;
+var s31StartTime = 0;
+var s31TargetSeconds = 3.8;
+var s31CurrentMetal = 'cu';
+
+var s31MetalConfig = {
+  cu: {
+    name: 'तांबा (Copper - Cu)',
+    fill: 'url(#metal3d_cu)',
+    cond: '385 W/m•K (सर्वोत्तम चालक ⚡)',
+    time: 3.8,
+    label: 'तांबे की छड़ (Cu)'
+  },
+  al: {
+    name: 'ऐलुमिनियम (Aluminium - Al)',
+    fill: 'url(#metal3d_al)',
+    cond: '205 W/m•K (उत्तम चालक)',
+    time: 7.5,
+    label: 'ऐलुमिनियम छड़ (Al)'
+  },
+  pb: {
+    name: 'लेड / सीसा (Lead - Pb)',
+    fill: 'url(#metal3d_fe)',
+    cond: '35 W/m•K (कुचालक / अति मंद ⚠️)',
+    time: 18.0,
+    label: 'लेड छड़ (Pb)'
+  }
+};
+
 function sim31SelectMetal(type) {
+  s31CurrentMetal = type;
+  var cfg = s31MetalConfig[type] || s31MetalConfig.cu;
+  s31TargetSeconds = cfg.time;
+
   var rod = document.getElementById('s31_rod');
-  var pbar = document.getElementById('s31_pbar');
-  var stext = document.getElementById('s31_status_text') || document.getElementById('s31_data_status');
+  var rodLabel = document.getElementById('s31_rod_label');
   var metalName = document.getElementById('s31_metal_name') || document.getElementById('s31_data_metal');
   var kVal = document.getElementById('s31_k_val') || document.getElementById('s31_data_cond');
-  var pinDropTime = document.getElementById('s31_pindrop_time') || document.getElementById('s31_data_time');
-  var pin = document.getElementById('s31_pin');
-  var wax = document.getElementById('s31_wax');
-  var heatGlow = document.getElementById('s31_heat_glow') || document.getElementById('s31_rod_heat');
-  var flame = document.getElementById('s31_flame') || document.getElementById('s31_flame_poly');
-  var mainStatus = document.getElementById('sim31_status');
 
-  if (!rod) return;
-  if (s31Timer) clearInterval(s31Timer);
+  if (rod) rod.setAttribute('fill', cfg.fill);
+  if (rodLabel) rodLabel.textContent = cfg.label;
+  if (metalName) metalName.textContent = cfg.name;
+  if (kVal) kVal.textContent = cfg.cond;
 
-  if (type === 'cu') {
-    rod.setAttribute('fill', 'url(#metal3d_cu)');
-    if (metalName) metalName.textContent = 'तांबा (Copper - Cu)';
-    if (kVal) kVal.textContent = '385 W/m•K (सर्वोत्तम चालक ⚡)';
-    if (pinDropTime) pinDropTime.textContent = '3 से 4 सेकंड (अत्यंत तीव्र)';
-    if (stext) stext.textContent = 'तांबा: ऊष्मा का सर्वोत्तम सुचालक, मोम 4 सेकंड में पिघलकर पिन गिरती है!';
-    if (mainStatus) mainStatus.innerHTML = '<strong>तांबा (Cu):</strong> ऊष्मा का सर्वोत्तम सुचालक। बर्नर से ऊष्मा तीव्र गति से सिरे तक पहुंचकर मोम को पिघला देती है।';
-    speakHindiCh3('तांबा ऊष्मा का सर्वोत्तम सुचालक है। मोम शीघ्र पिघलकर पिन गिर जाती है।');
-  } else if (type === 'al') {
-    rod.setAttribute('fill', 'url(#metal3d_al)');
-    if (metalName) metalName.textContent = 'ऐलुमिनियम (Aluminium - Al)';
-    if (kVal) kVal.textContent = '205 W/m•K (उत्तम चालक)';
-    if (pinDropTime) pinDropTime.textContent = '7 से 8 सेकंड (मध्यम चालन)';
-    if (stext) stext.textContent = 'ऐलुमिनियम: अच्छा सुचालक, मोम लगभग 8 सेकंड में पिघलती है।';
-    if (mainStatus) mainStatus.innerHTML = '<strong>ऐलुमिनियम (Al):</strong> अच्छा सुचालक। तांबे की तुलना में थोड़ा अधिक समय लेता है।';
-    speakHindiCh3('ऐलुमिनियम ऊष्मा का अच्छा चालक है।');
-  } else if (type === 'pb') {
-    rod.setAttribute('fill', 'url(#metal3d_fe)');
-    if (metalName) metalName.textContent = 'लेड / सीसा (Lead - Pb)';
-    if (kVal) kVal.textContent = '35 W/m•K (कुचालक / अति मंद ⚠️)';
-    if (pinDropTime) pinDropTime.textContent = '30+ सेकंड (पिन बहुत देर से गिरती है)';
-    if (stext) stext.textContent = 'लेड (Pb) तथा मर्करी (Hg) ऊष्मा के सबसे मंद चालक (कुचालक) हैं!';
-    if (mainStatus) mainStatus.innerHTML = '<strong>लेड (Pb):</strong> ऊष्मा का सबसे दुर्बल चालक (कुचालक)। पिन पिघलने में अत्यधिक समय लगता है।';
-    speakHindiCh3('लेड और मर्करी ऊष्मा के सबसे मंद चालक अर्थात कुचालक हैं।');
+  // Reset and auto-start live heating test with digital timer!
+  sim31ResetStateOnly();
+  sim31StartHeating();
+}
+
+function sim31ResetStateOnly() {
+  if (s31Timer) {
+    clearInterval(s31Timer);
+    s31Timer = null;
   }
 
-  // Animate heat conduction
-  if (flame) flame.style.opacity = '1';
-  if (heatGlow) heatGlow.style.opacity = '0.9';
-  if (pbar) pbar.style.width = '0%';
-  if (pin) pin.setAttribute('transform', 'translate(0, 0)');
-  if (wax) wax.style.opacity = '1';
+  var pbar = document.getElementById('s31_pbar');
+  var pin = document.getElementById('s31_pin');
+  var wax = document.getElementById('s31_wax');
+  var flame = document.getElementById('s31_flame') || document.getElementById('s31_flame_poly');
+  var heatGlow = document.getElementById('s31_heat_glow');
+  var heatGlow2 = document.getElementById('s31_rod_heat');
+  var digitalTimer = document.getElementById('s31_digital_timer');
+  var timerDot = document.getElementById('s31_timer_dot');
+  var dataTime = document.getElementById('s31_data_time') || document.getElementById('s31_pindrop_time');
+  var dataStatus = document.getElementById('s31_data_status') || document.getElementById('s31_status_text');
 
-  var duration = type === 'cu' ? 3000 : (type === 'al' ? 5500 : 10000);
-  var start = Date.now();
+  if (pbar) pbar.style.width = '0%';
+  if (pin) {
+    pin.style.transition = 'none';
+    pin.style.transform = 'translate(0, 0) rotate(0deg)';
+  }
+  if (wax) {
+    wax.setAttribute('rx', '14');
+    wax.setAttribute('ry', '8');
+    wax.setAttribute('cy', '18');
+    wax.style.opacity = '1';
+    wax.setAttribute('fill', '#fef08a');
+  }
+  if (flame) flame.style.opacity = '0';
+  if (heatGlow) {
+    heatGlow.setAttribute('width', '0');
+    heatGlow.style.opacity = '0';
+  }
+  if (heatGlow2) {
+    heatGlow2.setAttribute('width', '0');
+    heatGlow2.style.opacity = '0';
+  }
+  if (digitalTimer) {
+    digitalTimer.textContent = '0.0 s';
+    digitalTimer.setAttribute('fill', '#22c55e');
+  }
+  if (timerDot) timerDot.setAttribute('fill', '#64748b');
+  if (dataTime) {
+    dataTime.textContent = '--.- s';
+    dataTime.setAttribute('fill', '#dc2626');
+  }
+  if (dataStatus) dataStatus.textContent = 'बर्नर शुरू करें या धातु चुनें।';
+}
+
+function sim31StartHeating() {
+  if (s31Timer) clearInterval(s31Timer);
+  s31StartTime = Date.now();
+
+  var cfg = s31MetalConfig[s31CurrentMetal] || s31MetalConfig.cu;
+  var targetSec = cfg.time;
+
+  var flame = document.getElementById('s31_flame') || document.getElementById('s31_flame_poly');
+  var heatGlow = document.getElementById('s31_heat_glow');
+  var heatGlow2 = document.getElementById('s31_rod_heat');
+  var digitalTimer = document.getElementById('s31_digital_timer');
+  var timerDot = document.getElementById('s31_timer_dot');
+  var dataTime = document.getElementById('s31_data_time') || document.getElementById('s31_pindrop_time');
+  var dataStatus = document.getElementById('s31_data_status') || document.getElementById('s31_status_text');
+  var pbar = document.getElementById('s31_pbar');
+  var pin = document.getElementById('s31_pin');
+  var wax = document.getElementById('s31_wax');
+  var mainStatus = document.getElementById('sim31_status');
+
+  // Ignite burner & activate timer display
+  if (flame) flame.style.opacity = '1';
+  if (timerDot) timerDot.setAttribute('fill', '#22c55e');
+  if (heatGlow) heatGlow.style.opacity = '0.92';
+  if (heatGlow2) heatGlow2.style.opacity = '0.7';
+
   s31Timer = setInterval(function() {
-    var elapsed = Date.now() - start;
-    var pct = Math.min(100, Math.floor((elapsed / duration) * 100));
-    if (pbar) pbar.style.width = pct + '%';
-    if (pct >= 80 && wax) {
-      wax.style.opacity = '0.3';
+    var elapsedSec = (Date.now() - s31StartTime) / 1000;
+    var pct = Math.min(100, (elapsedSec / targetSec) * 100);
+
+    // Live Digital Stopwatch Countdown/Up
+    if (digitalTimer) digitalTimer.textContent = elapsedSec.toFixed(1) + ' s';
+    if (dataTime) {
+      dataTime.textContent = elapsedSec.toFixed(1) + ' s';
+      dataTime.setAttribute('fill', '#2563eb');
     }
-    if (pct >= 100) {
+    if (pbar) pbar.style.width = pct.toFixed(1) + '%';
+
+    // Propagate heat front visually from left to right along the rod (0 to 470px)
+    var currentWidth = (pct / 100) * 470;
+    if (heatGlow) heatGlow.setAttribute('width', currentWidth.toFixed(1));
+    if (heatGlow2) heatGlow2.setAttribute('width', Math.max(0, currentWidth - 25).toFixed(1));
+
+    // Dynamic wax softening
+    if (pct >= 65 && wax) {
+      wax.setAttribute('ry', '11');
+      wax.setAttribute('cy', '20');
+      wax.style.opacity = '0.75';
+      if (dataStatus) dataStatus.textContent = 'ऊष्मा मोम तक पहुंची! मोम पिघलना शुरू... (' + Math.round(pct) + '%)';
+    } else if (dataStatus) {
+      dataStatus.textContent = 'ऊष्मा छड़ में सिरे की ओर बढ़ रही है... (' + Math.round(pct) + '%)';
+    }
+
+    // PIN DROPS AT 100%
+    if (elapsedSec >= targetSec) {
       clearInterval(s31Timer);
-      if (pin) pin.setAttribute('transform', 'translate(0, 160)');
-      if (stext) stext.textContent = 'मोम पूर्णतः पिघल गई! पिन नीचे गिर गई 🔻';
-      if (mainStatus) mainStatus.innerHTML = '<strong>परिणाम:</strong> मोम पिघल गई और पिन नीचे गिर गई! सिद्ध हुआ कि धातुएं ऊष्मा का चालन करती हैं।';
-      speakHindiCh3('मोम पिघल गई और पिन नीचे गिर गई।');
+      s31Timer = null;
+
+      if (digitalTimer) {
+        digitalTimer.textContent = targetSec.toFixed(1) + ' s';
+        digitalTimer.setAttribute('fill', '#eab308');
+      }
+      if (timerDot) timerDot.setAttribute('fill', '#ef4444');
+      if (dataTime) {
+        dataTime.textContent = targetSec.toFixed(1) + ' s (पिन गिरी!)';
+        dataTime.setAttribute('fill', '#16a34a');
+      }
+      if (pbar) pbar.style.width = '100%';
+      if (heatGlow) heatGlow.setAttribute('width', '470');
+
+      // Wax melts and drips
+      if (wax) {
+        wax.setAttribute('rx', '18');
+        wax.setAttribute('ry', '3');
+        wax.setAttribute('cy', '24');
+        wax.style.opacity = '0.35';
+      }
+
+      // Pin gravity drop animation onto catch dish
+      if (pin) {
+        pin.style.transition = 'transform 0.45s cubic-bezier(0.55, 0.085, 0.68, 0.53)';
+        pin.style.transform = 'translate(10px, 175px) rotate(88deg)';
+      }
+
+      if (dataStatus) dataStatus.textContent = '🔔 मोम पिघली! पिन डिश में गिरी (' + targetSec.toFixed(1) + 's में)।';
+      if (mainStatus) {
+        mainStatus.innerHTML = '<strong>' + cfg.name + ':</strong> ' + targetSec.toFixed(1) + 
+          ' सेकंड में ऊष्मा सिरे तक पहुंची और मोम पिघलने से पिन नीचे डिश में गिर गई! सिद्ध हुआ कि धातुएं ऊष्मा की सुचालक हैं।';
+      }
     }
-  }, 100);
+  }, 40);
 }
 
 function sim31PlayAuto() {
@@ -11718,21 +11844,11 @@ function sim31PlayAuto() {
 }
 
 function sim31Reset() {
-  if (s31Timer) clearInterval(s31Timer);
-  var pbar = document.getElementById('s31_pbar');
-  var pin = document.getElementById('s31_pin');
-  var wax = document.getElementById('s31_wax');
-  var flame = document.getElementById('s31_flame') || document.getElementById('s31_flame_poly');
-  var heatGlow = document.getElementById('s31_heat_glow') || document.getElementById('s31_rod_heat');
-  var stext = document.getElementById('s31_status_text') || document.getElementById('s31_data_status');
+  sim31ResetStateOnly();
   var mainStatus = document.getElementById('sim31_status');
-  if (pbar) pbar.style.width = '0%';
-  if (pin) pin.setAttribute('transform', 'translate(0, 0)');
-  if (wax) wax.style.opacity = '1';
-  if (flame) flame.style.opacity = '0';
-  if (heatGlow) heatGlow.style.opacity = '0';
-  if (stext) stext.textContent = 'धातु चुनें व बर्नर जलाकर चालन देखें';
-  if (mainStatus) mainStatus.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> धातु की छड़ क्लैम्प में कसी है। "संपूर्ण ऑटो-प्ले" दबाकर तापन व पिन गिरना देखें।';
+  if (mainStatus) {
+    mainStatus.innerHTML = '<strong>प्रारंभिक स्थिति:</strong> तांबे की छड़ क्लैम्प में कसी है। "संपूर्ण ऑटो-प्ले" दबाकर टाइमर के साथ मोम पिघलना व पिन गिरना देखें।';
+  }
 }
 
 /* --------------------------------------------------------------------------
