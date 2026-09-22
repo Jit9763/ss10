@@ -5285,7 +5285,7 @@
       </div>
     </div>
 
-                        <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
+                            <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
@@ -5436,14 +5436,6 @@
                 <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.8"/>
               </radialGradient>
 
-              <!-- Thermometer Red Mercury Gradient (High Contrast Vivid Red) -->
-              <linearGradient id="s37_mercury_grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#fca5a5"/>
-                <stop offset="35%" stop-color="#ef4444"/>
-                <stop offset="85%" stop-color="#dc2626"/>
-                <stop offset="100%" stop-color="#991b1b"/>
-              </linearGradient>
-
               <!-- NO2 Red-Brown Gas Gradient -->
               <linearGradient id="s37_no2_grad" x1="0" y1="1" x2="0" y2="0">
                 <stop offset="0%" stop-color="#991b1b" stop-opacity="0.85"/>
@@ -5588,41 +5580,45 @@
                     <text id="s37_temp_text" x="0" y="17" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">25°C (स्थिर)</text>
                   </g>
 
-                  <!-- Outer Glass Stem (14px Wide with Specular Glass Finish) -->
-                  <rect x="-7" y="0" width="14" height="325" rx="7" fill="url(#s37_glass_body)" stroke="#475569" stroke-width="1.8" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
-                  <!-- White Capillary Channel -->
+                  <!-- Outer Glass Stem (16px Wide with Specular Glass Finish) -->
+                  <rect x="-8" y="0" width="16" height="325" rx="8" fill="url(#s37_glass_body)" stroke="#475569" stroke-width="1.8" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+                  
+                  <!-- White / Pink Capillary Channel Background (High Contrast) -->
                   <rect x="-4" y="10" width="8" height="305" rx="4" fill="#ffffff" opacity="0.95"/>
+                  <rect x="-3" y="15" width="6" height="300" rx="3" fill="#fee2e2" stroke="#fca5a5" stroke-width="0.6"/>
                   
                   <!-- Thermometer Graduation Scale Ticks & Numbers -->
-                  <line x1="-7" y1="40" x2="-2" y2="40" stroke="#334155" stroke-width="1.5"/>
-                  <text x="-10" y="43" font-size="8" font-weight="900" fill="#334155" text-anchor="end">100°</text>
+                  <line x1="-8" y1="40" x2="-3" y2="40" stroke="#334155" stroke-width="1.8"/>
+                  <text x="-12" y="43" font-size="8.5" font-weight="900" fill="#334155" text-anchor="end">100°</text>
                   
-                  <line x1="-7" y1="95" x2="-2" y2="95" stroke="#334155" stroke-width="1.5"/>
-                  <text x="-10" y="98" font-size="8" font-weight="900" fill="#334155" text-anchor="end">75°</text>
+                  <line x1="-8" y1="95" x2="-3" y2="95" stroke="#334155" stroke-width="1.8"/>
+                  <text x="-12" y="98" font-size="8.5" font-weight="900" fill="#334155" text-anchor="end">75°</text>
                   
-                  <line x1="-7" y1="150" x2="-2" y2="150" stroke="#334155" stroke-width="1.5"/>
-                  <text x="-10" y="153" font-size="8" font-weight="900" fill="#334155" text-anchor="end">50°</text>
+                  <line x1="-8" y1="150" x2="-3" y2="150" stroke="#334155" stroke-width="1.8"/>
+                  <text x="-12" y="153" font-size="8.5" font-weight="900" fill="#334155" text-anchor="end">50°</text>
                   
-                  <line x1="-7" y1="205" x2="-2" y2="205" stroke="#dc2626" stroke-width="2"/>
-                  <text x="-10" y="208" font-size="8.5" font-weight="900" fill="#dc2626" text-anchor="end">25°</text>
+                  <line x1="-8" y1="205" x2="-3" y2="205" stroke="#dc2626" stroke-width="2.2"/>
+                  <text x="-12" y="208" font-size="9" font-weight="900" fill="#dc2626" text-anchor="end">25°</text>
                   
-                  <line x1="-7" y1="260" x2="-2" y2="260" stroke="#334155" stroke-width="1.5"/>
-                  <text x="-10" y="263" font-size="8" font-weight="900" fill="#334155" text-anchor="end">0°</text>
+                  <line x1="-8" y1="260" x2="-3" y2="260" stroke="#334155" stroke-width="1.8"/>
+                  <text x="-12" y="263" font-size="8.5" font-weight="900" fill="#334155" text-anchor="end">0°</text>
 
                   <!-- Big Glossy Crimson Mercury Reservoir Bulb at Bottom -->
-                  <circle cx="0" cy="320" r="14" fill="url(#s37_mercury_grad)" stroke="#991b1b" stroke-width="1.5"/>
-                  <ellipse cx="-4" cy="316" rx="4" ry="2.5" fill="#ffffff" opacity="0.75"/>
+                  <circle cx="0" cy="320" r="14" fill="#dc2626" stroke="#991b1b" stroke-width="1.8"/>
+                  <ellipse cx="-4" cy="316" rx="4" ry="2.5" fill="#ffffff" opacity="0.8"/>
 
-                  <!-- PHYSICAL RISING MERCURY COLUMN (Anchored at bulb cy=320, rises upwards to y2) -->
-                  <line id="s37_mercury_line" x1="0" y1="320" x2="0" y2="205" stroke="url(#s37_mercury_grad)" stroke-width="6" stroke-linecap="round"/>
+                  <!-- PHYSICAL RISING MERCURY COLUMN (Solid Crimson #dc2626, 6px wide, anchored at 320, rises to y2) -->
+                  <line id="s37_mercury_line" x1="0" y1="320" x2="0" y2="205" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
                   
-                  <!-- Glowing Meniscus Indicator at top of mercury -->
-                  <circle id="s37_mercury_tip" cx="0" cy="205" r="3.2" fill="#fef08a" stroke="#dc2626" stroke-width="0.8"/>
+                  <!-- Glowing Meniscus Indicator Bead at top of mercury -->
+                  <circle id="s37_mercury_tip" cx="0" cy="205" r="4.2" fill="#fef08a" stroke="#dc2626" stroke-width="1.2"/>
 
-                  <!-- Precision Scale Pointer Arrow pointing right to the graduation tick -->
-                  <g id="s37_scale_pointer" transform="translate(-8, 205)">
-                    <polygon points="0,0 -7,-4 -7,4" fill="#dc2626"/>
-                    <line x1="0" y1="0" x2="16" y2="0" stroke="#fef08a" stroke-width="1.5"/>
+                  <!-- Dynamic Precision Scale Pointer Arrow with Live Degree Badge -->
+                  <g id="s37_scale_pointer" transform="translate(-10, 205)">
+                    <polygon points="0,0 -8,-5 -8,5" fill="#dc2626"/>
+                    <line x1="0" y1="0" x2="16" y2="0" stroke="#fef08a" stroke-width="2"/>
+                    <rect x="-38" y="-9" width="28" height="18" rx="4" fill="#dc2626" stroke="#b91c1c" stroke-width="0.8"/>
+                    <text id="s37_scale_temp_tag" x="-24" y="4" font-size="9.5" font-weight="900" fill="#ffffff" text-anchor="middle">25°</text>
                   </g>
                 </g>
 
@@ -14763,7 +14759,7 @@ var s37_isAnimating = false;
 var s37_bubbleTween = null;
 var s37_fumeTween = null;
 var s37_currentTimeline = null;
-var s37_tempState = { val: 25 };
+var s37_mercuryState = { y: 205, temp: 25 };
 
 // Real Experiment Video Sources Mapping
 var s37_videos = {
@@ -14838,51 +14834,51 @@ function s37PlayPopSound() {
   } catch(e) {}
 }
 
-// Live Numeric Temperature Counter & Synchronized Physical Mercury Column Animation
+// Live Rising Red Line Mercury Animation (Guaranteed 60fps DOM Updates)
 function s37AnimateTemperature(targetTemp, label, duration) {
-  gsap.killTweensOf(s37_tempState);
-  var tempText = document.getElementById('s37_temp_text');
-  var d = duration || 1.6;
+  var d = duration || 2.0;
   // Formula: 0°C -> y=260, 100°C -> y=40. Each 25°C = 55px (2.2px per °C)
   var targetY = 260 - (targetTemp * 2.2);
 
-  // 1. Digital numeric readout counter
-  gsap.to(s37_tempState, {
-    val: targetTemp,
+  var mLine = document.getElementById('s37_mercury_line');
+  var mTip = document.getElementById('s37_mercury_tip');
+  var sPointer = document.getElementById('s37_scale_pointer');
+  var sTag = document.getElementById('s37_scale_temp_tag');
+  var tempText = document.getElementById('s37_temp_text');
+
+  gsap.killTweensOf(s37_mercuryState);
+
+  gsap.to(s37_mercuryState, {
+    y: targetY,
+    temp: targetTemp,
     duration: d,
     ease: "power2.out",
     onUpdate: function() {
+      var curY = s37_mercuryState.y;
+      var curTemp = Math.round(s37_mercuryState.temp);
+
+      // 1. Physically update red mercury line height
+      if (mLine) mLine.setAttribute('y2', curY);
+
+      // 2. Physically update glowing meniscus bead
+      if (mTip) mTip.setAttribute('cy', curY);
+
+      // 3. Move precision scale pointer along with mercury
+      if (sPointer) sPointer.setAttribute('transform', 'translate(-10, ' + curY + ')');
+
+      // 4. Update small tag directly beside the mercury line
+      if (sTag) sTag.textContent = curTemp + '°';
+
+      // 5. Update top digital display box
       if (tempText) {
-        var rounded = Math.round(s37_tempState.val);
-        tempText.textContent = rounded + '°C (' + (label || (rounded > 35 ? 'ऊष्माक्षेपी 🔥' : 'स्थिर')) + ')';
+        tempText.textContent = curTemp + '°C (' + (label || (curTemp > 35 ? 'ऊष्माक्षेपी 🔥' : 'स्थिर')) + ')';
       }
     }
   });
 
-  // 2. Physical rising mercury column (anchored at bulb cy=320, rises upward to y2)
-  gsap.to("#s37_mercury_line", {
-    attr: { y2: targetY },
-    duration: d,
-    ease: "power2.out"
-  });
-
-  // 3. Meniscus glow tip
-  gsap.to("#s37_mercury_tip", {
-    attr: { cy: targetY },
-    duration: d,
-    ease: "power2.out"
-  });
-
-  // 4. Precision scale pointer arrow
-  gsap.to("#s37_scale_pointer", {
-    attr: { transform: "translate(-8, " + targetY + ")" },
-    duration: d,
-    ease: "power2.out"
-  });
-
-  // 5. Digital gauge pulse effect if exothermic
+  // Digital gauge pulse effect if exothermic
   if (targetTemp > 35) {
-    gsap.fromTo("#s37_temp_display_box", { scale: 1 }, { scale: 1.06, transformOrigin: "center center", duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" });
+    gsap.fromTo("#s37_temp_display_box", { scale: 1 }, { scale: 1.06, transformOrigin: "center center", duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" });
   }
 }
 
@@ -15089,7 +15085,7 @@ function sim37SelectMetal(type) {
     if (eqEl) eqEl.textContent = 'Mg + 2HNO₃ (अति तनु 1%) ➔ Mg(NO₃)₂ + H₂↑';
     if (obs1El) obs1El.textContent = '• बुलबुले: विशेष अपवाद — H₂ गैस मुक्त होती है!';
     if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 48°C (तीव्र अभिक्रिया)'; obs2El.setAttribute('fill', '#7c3aed'); }
-    if (obs3El) obs3El.textContent = '• केवल Mg व Mn अति तनु HNO₃ से H₂ देते हैं';
+    if (obs3El) obs3El.textContent = '• केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ देते हैं';
     speakHindiCh3('विशेष NCERT अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु 1% नाइट्रिक अम्ल से हाइड्रोजन गैस मुक्त करते हैं।');
   }
 }
@@ -15121,11 +15117,14 @@ function sim37RunStep(step) {
     var tl = gsap.timeline();
 
     if (s37_currentType === 'mg') {
-      if (statusBox) statusBox.textContent = 'सर्वाधिक तीव्र H₂ बुलबुले व उच्चतम ऊष्माक्षेपी प्रभाव! तापमापी का पारा 55°C तक चढ़ा। 🔥';
-      speakHindiCh3('मैग्नीशियम से सर्वाधिक तीव्र बुलबुले निकलते हैं और तापमापी पचपन डिग्री तक पहुंच जाता है।');
+      if (statusBox) statusBox.textContent = 'सर्वाधिक तीव्र H₂ बुलबुले व उच्चतम ऊष्माक्षेपी प्रभाव! तापमापी का लाल पारा 55°C तक चढ़ा। 🔥';
+      speakHindiCh3('मैग्नीशियम से सर्वाधिक तीव्र बुलबुले निकलते हैं और तापमापी में लाल पारा पचपन डिग्री तक चढ़ गया।');
 
       s37StartAcidBubbles(0.65, 12);
-      s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
+      s37AnimateTemperature(55, 'उच्चतम 🔥', 2.0);
+
+      // Dedicated pause to let student clearly watch the red line climb
+      tl.to({}, { duration: 2.2 });
 
       s37AppendPopTest(tl, 3, function() {
         if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! Pop! परीक्षण';
@@ -15133,11 +15132,13 @@ function sim37RunStep(step) {
       });
 
     } else if (s37_currentType === 'zn') {
-      if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले निकलते हैं व ताप 38°C पहुंचता है।';
-      speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है और ताप अड़तीस डिग्री होता है।');
+      if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले निकलते हैं व लाल पारा 38°C पहुंचा।';
+      speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है और लाल पारा अड़तीस डिग्री तक चढ़ता है।');
 
       s37StartAcidBubbles(1.1, 8);
-      s37AnimateTemperature(38, 'मध्यम', 1.5);
+      s37AnimateTemperature(38, 'मध्यम', 1.8);
+
+      tl.to({}, { duration: 2.0 });
 
       s37AppendPopTest(tl, 2, function() {
         if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
@@ -15145,17 +15146,17 @@ function sim37RunStep(step) {
       });
 
     } else if (s37_currentType === 'fe') {
-      if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C) होती है।';
-      speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और ताप केवल अट्ठाईस डिग्री पहुंचता है।');
+      if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C) हुई।';
+      speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और लाल पारा केवल अट्ठाईस डिग्री पहुंचता है।');
 
       s37StartAcidBubbles(2.2, 4);
-      s37AnimateTemperature(28, 'अल्प', 1.2);
+      s37AnimateTemperature(28, 'अल्प', 1.5);
       if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
       tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'cu') {
       if (statusBox) statusBox.textContent = 'कॉपर तनु HCl से कोई क्रिया नहीं करता। शून्य बुलबुले व ताप 25°C स्थिर रहता है। 🛡️';
-      speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
+      speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। लाल पारा पच्चीस डिग्री पर स्थिर रहता है।');
 
       s37StopAcidBubbles();
       s37AnimateTemperature(25, 'स्थिर ❌', 0.5);
@@ -15163,21 +15164,23 @@ function sim37RunStep(step) {
       tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'hno3') {
-      if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है! ताप 45°C पहुंचता है। ⚠️';
-      speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी नाइट्रोजन डाइऑक्साइड गैस निकलती है।');
+      if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है! लाल पारा 45°C पहुंचता है। ⚠️';
+      speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी गैस के साथ पारा पैंतालीस डिग्री पहुंचता है।');
 
       s37StopAcidBubbles();
       s37StartNO2Fumes();
-      s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
+      s37AnimateTemperature(45, 'ऑक्सीकरण', 1.8);
       if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
       tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'mg_hno3') {
-      if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देते हैं! 🧪';
-      speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
+      if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले व 48°C ताप देते हैं! 🧪';
+      speakHindiCh3('विशेष अपवाद: मैग्नीशियम अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देता है और पारा अड़तालीस डिग्री पहुंचता है।');
 
       s37StartAcidBubbles(0.7, 10);
-      s37AnimateTemperature(48, 'तीव्र अपवाद', 1.6);
+      s37AnimateTemperature(48, 'तीव्र अपवाद', 1.8);
+
+      tl.to({}, { duration: 2.0 });
 
       s37AppendPopTest(tl, 3, function() {
         if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
@@ -15212,11 +15215,13 @@ function sim37TriggerAction() {
   if (s37_currentType === 'mg') {
     s37_currentTimeline
       .call(function() {
-        if (statusBox) statusBox.textContent = 'तीव्र अभिक्रिया: H₂ बुलबुलों का प्रवाह व तापमापी का लाल पारा 55°C तक चढ़ा!';
-        speakHindiCh3('तीव्रतम अभिक्रिया: हाइड्रोजन के घने बुलबुले और तापमापी पचपन डिग्री तक चढ़ गया।');
+        if (statusBox) statusBox.textContent = 'तीव्र अभिक्रिया: H₂ बुलबुलों का प्रवाह व तापमापी में लाल पारा 55°C तक चढ़ा!';
+        speakHindiCh3('तीव्रतम अभिक्रिया: हाइड्रोजन के घने बुलबुले और तापमापी में लाल पारा पचपन डिग्री तक चढ़ गया।');
         s37StartAcidBubbles(0.65, 12);
-        s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
-      });
+        s37AnimateTemperature(55, 'उच्चतम 🔥', 2.0);
+      })
+      // Dedicated pause to let student clearly watch the red line climb
+      .to({}, { duration: 2.2 });
 
     s37AppendPopTest(s37_currentTimeline, 3, function() {
       if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! Pop! परीक्षण';
@@ -15226,11 +15231,12 @@ function sim37TriggerAction() {
   } else if (s37_currentType === 'zn') {
     s37_currentTimeline
       .call(function() {
-        if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले व ताप 38°C पहुंचा।';
-        speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है।');
+        if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले व लाल पारा 38°C पहुंचा।';
+        speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है और लाल पारा अड़तीस डिग्री तक चढ़ता है।');
         s37StartAcidBubbles(1.1, 8);
-        s37AnimateTemperature(38, 'मध्यम', 1.6);
-      });
+        s37AnimateTemperature(38, 'मध्यम', 1.8);
+      })
+      .to({}, { duration: 2.0 });
 
     s37AppendPopTest(s37_currentTimeline, 2, function() {
       if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
@@ -15241,9 +15247,9 @@ function sim37TriggerAction() {
     s37_currentTimeline
       .call(function() {
         if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C) हुई।';
-        speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है।');
+        speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और लाल पारा केवल अट्ठाईस डिग्री पहुंचता है।');
         s37StartAcidBubbles(2.2, 4);
-        s37AnimateTemperature(28, 'अल्प', 1.4);
+        s37AnimateTemperature(28, 'अल्प', 1.5);
       })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15253,7 +15259,7 @@ function sim37TriggerAction() {
     s37_currentTimeline
       .call(function() {
         if (statusBox) statusBox.textContent = 'कॉपर तनु HCl से कोई क्रिया नहीं करता (शून्य बुलबुले, 25°C स्थिर)।';
-        speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
+        speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। लाल पारा पच्चीस डिग्री पर स्थिर रहता है।');
         s37AnimateTemperature(25, 'स्थिर ❌', 0.5);
       })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
@@ -15264,9 +15270,9 @@ function sim37TriggerAction() {
     s37_currentTimeline
       .call(function() {
         if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है!';
-        speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी गैस निकलती है।');
+        speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी गैस के साथ पारा पैंतालीस डिग्री पहुंचता है।');
         s37StartNO2Fumes();
-        s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
+        s37AnimateTemperature(45, 'ऑक्सीकरण', 1.8);
       })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15275,11 +15281,12 @@ function sim37TriggerAction() {
   } else if (s37_currentType === 'mg_hno3') {
     s37_currentTimeline
       .call(function() {
-        if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देते हैं!';
-        speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
+        if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले व 48°C ताप देते हैं!';
+        speakHindiCh3('विशेष अपवाद: मैग्नीशियम अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देता है और पारा अड़तालीस डिग्री पहुंचता है।');
         s37StartAcidBubbles(0.7, 10);
-        s37AnimateTemperature(48, 'तीव्र अपवाद', 1.6);
-      });
+        s37AnimateTemperature(48, 'तीव्र अपवाद', 1.8);
+      })
+      .to({}, { duration: 2.0 });
 
     s37AppendPopTest(s37_currentTimeline, 3, function() {
       if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
@@ -15298,17 +15305,15 @@ function sim37ResetAction() {
   s37StopNO2Fumes();
   s37_isAnimating = false;
 
-  gsap.killTweensOf(s37_tempState);
-  s37_tempState.val = 25;
+  gsap.killTweensOf(s37_mercuryState);
+  s37_mercuryState.y = 205;
+  s37_mercuryState.temp = 25;
 
   if (typeof gsap !== 'undefined') {
     gsap.killTweensOf("#s37_dropper_rig");
     gsap.killTweensOf("#s37_dropper_bulb");
     gsap.killTweensOf("#s37_falling_drop");
     gsap.killTweensOf("#s37_acid_ripple");
-    gsap.killTweensOf("#s37_mercury_line");
-    gsap.killTweensOf("#s37_mercury_tip");
-    gsap.killTweensOf("#s37_scale_pointer");
     gsap.killTweensOf("#s37_temp_display_box");
     gsap.killTweensOf("#s37_splinter_rig");
     gsap.killTweensOf("#s37_pop_flash");
@@ -15327,7 +15332,9 @@ function sim37ResetAction() {
     var mTip = document.getElementById('s37_mercury_tip');
     if (mTip) mTip.setAttribute('cy', '205');
     var sPointer = document.getElementById('s37_scale_pointer');
-    if (sPointer) sPointer.setAttribute('transform', 'translate(-8, 205)');
+    if (sPointer) sPointer.setAttribute('transform', 'translate(-10, 205)');
+    var sTag = document.getElementById('s37_scale_temp_tag');
+    if (sTag) sTag.textContent = '25°';
 
     gsap.set("#s37_temp_display_box", { scale: 1 });
     gsap.set("#s37_splinter_rig", { x: 480, y: 20, opacity: 0 });
