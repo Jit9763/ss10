@@ -5285,40 +5285,88 @@
       </div>
     </div>
 
-        <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
+            <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
       <!-- COMPACT STREAMLINED HEADER -->
-      <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:12px; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+      <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-          <div style="background:#7c3aed; color:#fff; width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">
+          <div style="background:#7c3aed; color:#fff; width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0;">
             <i class="fas fa-vial"></i>
           </div>
-          <h3 style="margin:0; font-size:22px; font-weight:900; color:#0f172a; line-height:1.3; -webkit-text-stroke:0px !important;">
+          <h3 style="margin:0; font-size:20px; font-weight:900; color:#0f172a; line-height:1.3; -webkit-text-stroke:0px !important;">
             सिमुलेटर 3.7: धातुओं की तनु अम्लों से अभिक्रिया एवं HNO₃ अपवाद (3D वर्चुअल लैब)
           </h3>
-          <span style="background:#f5f3ff; color:#7c3aed; font-size:13px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #ddd6fe; -webkit-text-stroke:0px !important;">
+          <span style="background:#f5f3ff; color:#7c3aed; font-size:12.5px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #ddd6fe; -webkit-text-stroke:0px !important;">
             क्रियाकलाप 3.11
           </span>
         </div>
         <!-- Dual Display Switcher Tabs -->
         <div style="display:flex; gap:6px; background:#f1f5f9; padding:4px; border-radius:10px; border:1.5px solid #cbd5e1;">
-          <button id="s37_tab_sim" onclick="sim37SetDisplay('sim')" style="background:#7c3aed; color:#ffffff; font-size:13px; font-weight:900; padding:6px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
+          <button id="s37_tab_sim" onclick="sim37SetDisplay('sim')" style="background:#7c3aed; color:#ffffff; font-size:12.5px; font-weight:900; padding:5px 13px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
             <i class="fas fa-cube"></i> 🔬 16:9 सिमुलेटर
           </button>
-          <button id="s37_tab_video" onclick="sim37SetDisplay('video')" style="background:#ffffff; color:#0f172a; font-size:13px; font-weight:900; padding:6px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
+          <button id="s37_tab_video" onclick="sim37SetDisplay('video')" style="background:#ffffff; color:#0f172a; font-size:12.5px; font-weight:900; padding:5px 13px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
             <i class="fas fa-play-circle"></i> 🎬 रियल वीडियो
           </button>
         </div>
       </div>
 
-      <!-- NCERT Formula Header Banner -->
-      <div style="background:linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border:1.5px solid #ddd6fe; border-radius:10px; padding:12px 18px; margin-bottom:14px;">
-        <div style="font-size:14.5px; color:#5b21b6; font-weight:800;">
-          💡 <strong>प्रयोग सूत्र:</strong> धातु + तनु अम्ल ➔ लवण + H₂↑ (दर: Mg &gt; Al &gt; Zn &gt; Fe, Cu = 0)। HNO₃ प्रबल ऑक्सीकारक होने से H₂ की जगह H₂O बनाता है (अपवाद: 1% अति तनु HNO₃ में Mg व Mn से H₂ गैस निकलती है)।
+      <!-- COMPACT FORMULA & CONTROLS TOOLBAR (Positioned Above Frame for Zero Scrolling) -->
+      <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+        <!-- Compact Formula Banner -->
+        <div style="background:linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border:1.5px solid #ddd6fe; border-radius:8px; padding:7px 14px; font-size:13.5px; color:#5b21b6; font-weight:800;">
+          💡 <strong>प्रयोग सूत्र:</strong> धातु + तनु अम्ल ➔ लवण + H₂↑ (दर: Mg &gt; Al &gt; Zn &gt; Fe, Cu = 0) • HNO₃ में H₂ नहीं H₂O बनता है (अपवाद: 1% अति तनु HNO₃ में Mg/Mn)
+        </div>
+
+        <!-- Integrated Unified Controls Toolbar (All Selectors & Actions in One Viewport) -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:10px; padding:8px 12px;">
+          <!-- Metal Selectors -->
+          <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+            <span style="font-size:13px; font-weight:900; color:#334155; margin-right:2px;">
+              <i class="fas fa-flask"></i> धातु:
+            </span>
+            <button id="s37_btn_mg" onclick="sim37SelectMetal('mg')" style="background:#16a34a; color:#ffffff; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:2px solid #0f172a; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.2); transition:all 0.2s;">
+              ⚡ Mg + HCl
+            </button>
+            <button id="s37_btn_zn" onclick="sim37SelectMetal('zn')" style="background:#ffffff; color:#0284c7; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+              ⚙️ Zn + HCl
+            </button>
+            <button id="s37_btn_fe" onclick="sim37SelectMetal('fe')" style="background:#ffffff; color:#475569; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+              🔩 Fe + HCl
+            </button>
+            <button id="s37_btn_cu" onclick="sim37SelectMetal('cu')" style="background:#ffffff; color:#dc2626; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+              🛡️ Cu + HCl (अक्रिय)
+            </button>
+            <button id="s37_btn_hno3" onclick="sim37SelectMetal('hno3')" style="background:#ffffff; color:#d97706; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+              ⚠️ HNO₃ अपवाद
+            </button>
+            <button id="s37_btn_mg_hno3" onclick="sim37SelectMetal('mg_hno3')" style="background:#ffffff; color:#7c3aed; font-size:12px; font-weight:900; padding:6px 12px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+              🧪 Mg + 1% HNO₃
+            </button>
+          </div>
+
+          <!-- Action & Step Controls -->
+          <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+            <button onclick="sim37RunStep(1)" style="background:#ffffff; color:#0f172a; font-size:12px; font-weight:800; padding:6px 10px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              1️⃣ सज्जा
+            </button>
+            <button onclick="sim37RunStep(2)" style="background:#ffffff; color:#0f172a; font-size:12px; font-weight:800; padding:6px 10px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              2️⃣ अम्ल
+            </button>
+            <button onclick="sim37RunStep(3)" style="background:#ffffff; color:#0f172a; font-size:12px; font-weight:800; padding:6px 10px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              3️⃣ बुलबुले/ताप
+            </button>
+            <button onclick="sim37TriggerAction()" style="background:linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color:#ffffff; font-size:12.5px; font-weight:900; padding:7px 15px; border-radius:6px; border:none; cursor:pointer; box-shadow:0 3px 10px rgba(124,58,237,0.35);">
+              ▶️ ऑटो-प्ले
+            </button>
+            <button onclick="sim37ResetAction()" style="background:#ffffff; color:#475569; font-size:12px; font-weight:800; padding:6px 10px; border-radius:6px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              🔄 रीसेट
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- MAIN 16:9 SCREEN CONTAINER -->
-      <div style="position:relative; width:100%; aspect-ratio:16/9; max-height:560px; min-height:420px; background:#0f172a; border-radius:14px; overflow:hidden; border:2.5px solid #334155; box-shadow:0 12px 36px rgba(0,0,0,0.35);">
+      <!-- MAIN 16:9 SCREEN CONTAINER (Everything visible at a glance without scrolling) -->
+      <div style="position:relative; width:100%; aspect-ratio:16/9; max-height:510px; min-height:400px; background:#0f172a; border-radius:12px; overflow:hidden; border:2px solid #334155; box-shadow:0 10px 30px rgba(0,0,0,0.35);">
         
         <!-- MODE A: 16:9 INTERACTIVE 3D ACID LAB VIEW -->
         <div id="s37_sim_mode" style="width:100%; height:100%; position:relative;">
@@ -5416,17 +5464,13 @@
                 <rect x="250" y="0" width="14" height="140" fill="#8d6e63"/>
                 <!-- Upper Bar with Holes -->
                 <rect x="0" y="30" width="280" height="16" rx="3" fill="#8d6e63"/>
-                <!-- Tubes in Rack (Background Samples: Zn, Fe, Cu) -->
-                <!-- Rack Tube 1: Zn -->
+                <!-- Tubes in Rack (Background Samples: Zn, Fe, Cu, HNO3) -->
                 <rect x="45" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
                 <text x="64" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Zn</text>
-                <!-- Rack Tube 2: Fe -->
                 <rect x="105" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
                 <text x="124" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Fe</text>
-                <!-- Rack Tube 3: Cu -->
                 <rect x="165" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
                 <text x="184" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Cu</text>
-                <!-- Rack Tube 4: HNO3 -->
                 <rect x="225" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
                 <text x="244" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">HNO₃</text>
               </g>
@@ -5497,7 +5541,7 @@
                 <line x1="338" y1="350" x2="352" y2="350" stroke="#64748b" stroke-width="1.5"/>
                 <text x="356" y="354" font-size="9" font-weight="900" fill="#64748b">5ml</text>
 
-                <!-- IMMERSED LABORATORY THERMOMETER (NCERT Exothermic Test) -->
+                <!-- IMMERSED LABORATORY THERMOMETER (NCERT Exothermic Test with Live Animation) -->
                 <g id="s37_thermometer_rig" transform="translate(385, 90)">
                   <!-- Thermometer Glass Stem -->
                   <rect x="-3" y="0" width="6" height="315" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" opacity="0.9"/>
@@ -5506,12 +5550,12 @@
                   <!-- Rising Red Mercury Column (Height controlled by GSAP) -->
                   <rect id="s37_mercury_column" x="-1.5" y="260" width="3" height="55" fill="url(#s37_mercury_grad)"/>
                   
-                  <!-- Live Temperature Readout Callout Badge -->
+                  <!-- Live Temperature Readout Callout Badge (GSAP Number Counter) -->
                   <g id="s37_temp_badge_group" transform="translate(18, 120)">
-                    <rect x="0" y="0" width="85" height="34" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.15))"/>
+                    <rect x="0" y="0" width="90" height="34" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.15))"/>
                     <path d="M 0 17 L -8 13 L 0 9 Z" fill="#ef4444"/>
-                    <text x="10" y="16" font-size="10" font-weight="800" fill="#64748b">तापमान:</text>
-                    <text id="s37_temp_text" x="10" y="30" font-size="13" font-weight="900" fill="#b91c1c">25°C (स्थिर)</text>
+                    <text x="8" y="14" font-size="9.5" font-weight="800" fill="#64748b">तापमान:</text>
+                    <text id="s37_temp_text" x="8" y="28" font-size="12.5" font-weight="900" fill="#b91c1c">25°C (स्थिर)</text>
                   </g>
                 </g>
 
@@ -5590,7 +5634,7 @@
                 • बुलबुले बनने की दर: सर्वाधिक तीव्र (Most Vigorous)
               </text>
               <text id="s37_card_obs2" x="30" y="250" font-size="13" font-weight="900" fill="#dc2626">
-                • तापमापी में उच्चतम ताप वृद्धि (ΔT सर्वाधिक)
+                • तापमापी में उच्चतम ताप वृद्धि: 25°C ➔ 55°C (ΔT सर्वाधिक)
               </text>
               <text id="s37_card_obs3" x="30" y="270" font-size="13" font-weight="800" fill="#15803d">
                 • H₂ गैस Pop! ध्वनि के साथ जलती है
@@ -5613,7 +5657,7 @@
               <rect x="18" y="390" width="310" height="76" rx="8" fill="#fffbeb" stroke="#fef08a" stroke-width="1.5"/>
               <text x="30" y="410" font-size="12" font-weight="800" fill="#854d0e">वर्तमान चरण स्थिति:</text>
               <text id="s37_status_text" x="30" y="436" font-size="12" font-weight="900" fill="#92400e">
-                प्रयोग प्रारंभ करने के लिए "▶️ संपूर्ण ऑटो-प्ले" दबाएं।
+                प्रयोग प्रारंभ करने के लिए "▶️ ऑटो-प्ले" दबाएं।
               </text>
             </g>
           </svg>
@@ -5626,62 +5670,6 @@
             आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
           </video>
         </div>
-      </div>
-
-      <!-- CONTROL SUITE: METAL & ACID SELECTORS & 3-STEP BUTTONS -->
-      <div style="margin-top:16px; display:flex; flex-direction:column; gap:12px;">
-        
-        <!-- ROW 1: METAL & ACID VARIANT BUTTONS -->
-        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
-          <span style="font-size:14px; font-weight:900; color:#334155; margin-right:4px;">
-            <i class="fas fa-flask"></i> 1. धातु व अम्ल चयन:
-          </span>
-          <button id="s37_btn_mg" onclick="sim37SelectMetal('mg')" style="background:#16a34a; color:#ffffff; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #0f172a; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.25); transition:all 0.2s;">
-            ⚡ Mg + HCl (सर्वाधिक तीव्र)
-          </button>
-          <button id="s37_btn_zn" onclick="sim37SelectMetal('zn')" style="background:#ffffff; color:#0284c7; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
-            ⚙️ Zn + HCl (मध्यम बुलबुले)
-          </button>
-          <button id="s37_btn_fe" onclick="sim37SelectMetal('fe')" style="background:#ffffff; color:#475569; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
-            🔩 Fe + HCl (मंद अभिक्रिया)
-          </button>
-          <button id="s37_btn_cu" onclick="sim37SelectMetal('cu')" style="background:#ffffff; color:#dc2626; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
-            🛡️ Cu + HCl (अक्रिय - शून्य)
-          </button>
-          <button id="s37_btn_hno3" onclick="sim37SelectMetal('hno3')" style="background:#ffffff; color:#d97706; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
-            ⚠️ HNO₃ अपवाद (H₂O + NO₂)
-          </button>
-          <button id="s37_btn_mg_hno3" onclick="sim37SelectMetal('mg_hno3')" style="background:#ffffff; color:#7c3aed; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
-            🧪 Mg + 1% अति तनु HNO₃
-          </button>
-        </div>
-
-        <!-- ROW 2: ACTION STEPS & AUTO-PLAY -->
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-top:1.5px solid #e2e8f0; padding-top:12px;">
-          <!-- 3 Step Progression Buttons -->
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <button onclick="sim37RunStep(1)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
-              1️⃣ धातु व परखनली सज्जा
-            </button>
-            <button onclick="sim37RunStep(2)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
-              2️⃣ तनु अम्ल मिलाना (ड्रॉपर)
-            </button>
-            <button onclick="sim37RunStep(3)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
-              3️⃣ H₂ बुलबुले व ताप मापन
-            </button>
-          </div>
-
-          <!-- Main Auto Play & Reset -->
-          <div style="display:flex; gap:8px;">
-            <button onclick="sim37TriggerAction()" style="background:linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color:#ffffff; font-size:14px; font-weight:900; padding:9px 20px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(124,58,237,0.35);">
-              ▶️ संपूर्ण ऑटो-प्ले
-            </button>
-            <button onclick="sim37ResetAction()" style="background:#f1f5f9; color:#475569; font-size:14px; font-weight:800; padding:9px 18px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
-              🔄 रीसेट
-            </button>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -14702,6 +14690,7 @@ var s37_isAnimating = false;
 var s37_bubbleTween = null;
 var s37_fumeTween = null;
 var s37_flameTween = null;
+var s37_tempState = { val: 25 };
 
 var s37_videoMap = {
   'mg': 'media/zinc_reacting_in_sulfuric_acid.mp4',
@@ -14763,6 +14752,29 @@ function sim37SetDisplay(mode) {
     if (player) {
       player.pause();
     }
+  }
+}
+
+// Live Numeric Temperature Counter Animation Engine
+function s37AnimateTemperature(targetTemp, label, duration) {
+  gsap.killTweensOf(s37_tempState);
+  var tempText = document.getElementById('s37_temp_text');
+  var tempBadge = document.getElementById('s37_temp_badge_group');
+
+  gsap.to(s37_tempState, {
+    val: targetTemp,
+    duration: duration || 1.6,
+    ease: "power2.out",
+    onUpdate: function() {
+      if (tempText) {
+        var rounded = Math.round(s37_tempState.val);
+        tempText.textContent = rounded + '°C (' + (label || (rounded > 35 ? 'ऊष्माक्षेपी 🔥' : 'स्थिर')) + ')';
+      }
+    }
+  });
+
+  if (targetTemp > 35 && tempBadge) {
+    gsap.fromTo(tempBadge, { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" });
   }
 }
 
@@ -14876,7 +14888,7 @@ function sim37SelectMetal(type) {
       b.style.background = '#ffffff';
       b.style.color = (t === 'mg' ? '#16a34a' : t === 'zn' ? '#0284c7' : t === 'fe' ? '#475569' : t === 'cu' ? '#dc2626' : t === 'hno3' ? '#d97706' : '#7c3aed');
       b.style.borderColor = '#cbd5e1';
-      b.style.boxShadow = '0 2px 6px rgba(0,0,0,0.06)';
+      b.style.boxShadow = 'none';
     }
   });
 
@@ -14972,19 +14984,18 @@ function sim37RunStep(step) {
   var statusBox = document.getElementById('s37_status_text');
   var popupBadge = document.getElementById('s37_popup_badge');
   var popupText = document.getElementById('s37_popup_text');
-  var tempText = document.getElementById('s37_temp_text');
 
   if (step === 1) {
     // Step 1: Tube & Metal setup
     if (statusBox) statusBox.textContent = 'चरण 1: परखनली में धातु का प्रतिदर्श व तापमापी सज्जित किया गया।';
     speakHindiCh3('परखनली में धातु और तापमापी व्यवस्थित किए गए। प्रारंभिक ताप पच्चीस डिग्री सेल्सियस है।');
 
+    s37AnimateTemperature(25, 'स्थिर', 0.4);
     gsap.timeline()
       .set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1 })
       .set("#s37_metal_sample_group", { scale: 1, opacity: 1 })
       .fromTo("#s37_metal_sample_group", { scale: 0.4 }, { scale: 1, duration: 0.6, ease: "back.out(2)" })
       .to("#s37_mercury_column", { height: 55, y: 260, duration: 0.4 });
-    if (tempText) tempText.textContent = '25°C (स्थिर)';
 
   } else if (step === 2) {
     // Step 2: Acid Dropper Addition
@@ -14992,32 +15003,25 @@ function sim37RunStep(step) {
     speakHindiCh3('ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
 
     gsap.timeline()
-      // Dropper glides over tube mouth
       .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.8, ease: "power2.out" })
       .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
-      // Acid drop falls
       .set("#s37_falling_drop", { opacity: 1, y: 120 })
       .to("#s37_falling_drop", { y: 245, duration: 0.4, ease: "power1.in" })
       .set("#s37_falling_drop", { opacity: 0 })
-      // Surface ripple & liquid level slight bump
       .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
       .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
       .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.8, ease: "power2.inOut" });
 
   } else if (step === 3) {
-    // Step 3: Bubbles Evolution & Thermometer Temp Rise & Pop Test
+    // Step 3: Bubbles Evolution & Live Counter Animation & Pop Test
     if (s37_currentType === 'mg') {
       if (statusBox) statusBox.textContent = 'चरण 3: सर्वाधिक तीव्र H₂ बुलबुले व उच्चतम ऊष्माक्षेपी प्रभाव (55°C)! 🔥';
       speakHindiCh3('मैग्नीशियम से सर्वाधिक तीव्र बुलबुले निकलते हैं और तापमापी पचपन डिग्री तक पहुंच जाता है।');
 
       s37StartAcidBubbles(0.65, 12);
+      s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
       gsap.timeline()
-        // Thermometer rises from 25C to 55C (height: 55 -> 125, y: 260 -> 190)
-        .to("#s37_mercury_column", { height: 125, y: 190, duration: 1.5, ease: "power2.out" })
-        .call(function() {
-          if (tempText) tempText.textContent = '55°C (उच्चतम 🔥)';
-        })
-        // Splinter pop test
+        .to("#s37_mercury_column", { height: 125, y: 190, duration: 1.8, ease: "power2.out" })
         .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
         .call(function() {
@@ -15032,11 +15036,9 @@ function sim37RunStep(step) {
       speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है और ताप अड़तीस डिग्री होता है।');
 
       s37StartAcidBubbles(1.1, 8);
+      s37AnimateTemperature(38, 'मध्यम', 1.5);
       gsap.timeline()
-        .to("#s37_mercury_column", { height: 85, y: 230, duration: 1.4, ease: "power2.out" })
-        .call(function() {
-          if (tempText) tempText.textContent = '38°C (मध्यम)';
-        })
+        .to("#s37_mercury_column", { height: 85, y: 230, duration: 1.5, ease: "power2.out" })
         .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
@@ -15045,14 +15047,12 @@ function sim37RunStep(step) {
 
     } else if (s37_currentType === 'fe') {
       if (statusBox) statusBox.textContent = 'चरण 3: लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)।';
-      speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और ताप केवल अट्ठाईस डिग्री पहुंचता है।');
+      speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और ताप अट्ठाईस डिग्री पहुंचता है।');
 
       s37StartAcidBubbles(2.2, 4);
+      s37AnimateTemperature(28, 'अल्प', 1.2);
       gsap.timeline()
         .to("#s37_mercury_column", { height: 65, y: 250, duration: 1.2, ease: "power2.out" })
-        .call(function() {
-          if (tempText) tempText.textContent = '28°C (अल्प)';
-        })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
       if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
@@ -15062,11 +15062,9 @@ function sim37RunStep(step) {
       speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
 
       s37StopAcidBubbles();
+      s37AnimateTemperature(25, 'स्थिर ❌', 0.5);
       gsap.timeline()
         .to("#s37_mercury_column", { height: 55, y: 260, duration: 0.5 })
-        .call(function() {
-          if (tempText) tempText.textContent = '25°C (स्थिर ❌)';
-        })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
       if (popupText) popupText.textContent = '🛡️ Cu + HCl: कोई अभिक्रिया नहीं (शून्य बुलबुले, 25°C अपरिवर्तित)';
@@ -15077,11 +15075,9 @@ function sim37RunStep(step) {
 
       s37StopAcidBubbles();
       s37StartNO2Fumes();
+      s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
       gsap.timeline()
-        .to("#s37_mercury_column", { height: 100, y: 215, duration: 1.5, ease: "power2.out" })
-        .call(function() {
-          if (tempText) tempText.textContent = '45°C (ऑक्सीकरण)';
-        })
+        .to("#s37_mercury_column", { height: 100, y: 215, duration: 1.6, ease: "power2.out" })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
       if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
@@ -15091,11 +15087,9 @@ function sim37RunStep(step) {
       speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
 
       s37StartAcidBubbles(0.7, 10);
+      s37AnimateTemperature(48, 'तीव्र', 1.6);
       gsap.timeline()
-        .to("#s37_mercury_column", { height: 110, y: 205, duration: 1.5, ease: "power2.out" })
-        .call(function() {
-          if (tempText) tempText.textContent = '48°C (तीव्र)';
-        })
+        .to("#s37_mercury_column", { height: 110, y: 205, duration: 1.6, ease: "power2.out" })
         .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
@@ -15111,7 +15105,6 @@ function sim37TriggerAction() {
   if (typeof gsap === 'undefined') return;
 
   var statusBox = document.getElementById('s37_status_text');
-  var tempText = document.getElementById('s37_temp_text');
   var popupText = document.getElementById('s37_popup_text');
   s37_currentTimeline = gsap.timeline();
 
@@ -15120,28 +15113,26 @@ function sim37TriggerAction() {
 
   s37_currentTimeline
     // Step 1: Dropper moves in and adds acid
-    .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.9, ease: "power2.out" })
+    .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.8, ease: "power2.out" })
     .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
     .set("#s37_falling_drop", { opacity: 1, y: 120 })
-    .to("#s37_falling_drop", { y: 245, duration: 0.45, ease: "power1.in" })
+    .to("#s37_falling_drop", { y: 245, duration: 0.4, ease: "power1.in" })
     .set("#s37_falling_drop", { opacity: 0 })
     .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
     .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
-    .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.8, ease: "power2.inOut" });
+    .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.7, ease: "power2.inOut" });
 
-  // Step 2: Reaction & Bubbles & Temperature
+  // Step 2: Reaction & Bubbles & Live Temperature Counter
   if (s37_currentType === 'mg') {
     s37_currentTimeline
       .call(function() {
         if (statusBox) statusBox.textContent = 'तीव्र अभिक्रिया: H₂ बुलबुलों का प्रवाह व तापमापी 55°C तक चढ़ा!';
         speakHindiCh3('तीव्रतम अभिक्रिया: हाइड्रोजन के घने बुलबुले और तापमापी पचपन डिग्री तक चढ़ गया।');
         s37StartAcidBubbles(0.65, 12);
+        s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
       })
       .to("#s37_mercury_column", { height: 125, y: 190, duration: 1.8, ease: "power2.out" })
-      .call(function() {
-        if (tempText) tempText.textContent = '55°C (उच्चतम 🔥)';
-      })
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
       .call(function() {
         speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण!');
@@ -15156,12 +15147,10 @@ function sim37TriggerAction() {
         if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले व 38°C ताप वृद्धि।';
         speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है।');
         s37StartAcidBubbles(1.1, 8);
+        s37AnimateTemperature(38, 'मध्यम', 1.6);
       })
       .to("#s37_mercury_column", { height: 85, y: 230, duration: 1.6, ease: "power2.out" })
-      .call(function() {
-        if (tempText) tempText.textContent = '38°C (मध्यम)';
-      })
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15173,11 +15162,9 @@ function sim37TriggerAction() {
         if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)।';
         speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है।');
         s37StartAcidBubbles(2.2, 4);
+        s37AnimateTemperature(28, 'अल्प', 1.4);
       })
       .to("#s37_mercury_column", { height: 65, y: 250, duration: 1.4, ease: "power2.out" })
-      .call(function() {
-        if (tempText) tempText.textContent = '28°C (अल्प)';
-      })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
@@ -15187,6 +15174,7 @@ function sim37TriggerAction() {
       .call(function() {
         if (statusBox) statusBox.textContent = 'कॉपर तनु HCl से कोई क्रिया नहीं करता (शून्य बुलबुले, 25°C स्थिर)।';
         speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
+        s37AnimateTemperature(25, 'स्थिर ❌', 0.5);
       })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15198,11 +15186,9 @@ function sim37TriggerAction() {
         if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है!';
         speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी गैस निकलती है।');
         s37StartNO2Fumes();
+        s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
       })
       .to("#s37_mercury_column", { height: 100, y: 215, duration: 1.6, ease: "power2.out" })
-      .call(function() {
-        if (tempText) tempText.textContent = '45°C (ऑक्सीकरण)';
-      })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
@@ -15213,12 +15199,10 @@ function sim37TriggerAction() {
         if (statusBox) statusBox.textContent = 'विशेष अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देता है!';
         speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
         s37StartAcidBubbles(0.7, 10);
+        s37AnimateTemperature(48, 'तीव्र', 1.6);
       })
       .to("#s37_mercury_column", { height: 110, y: 205, duration: 1.6, ease: "power2.out" })
-      .call(function() {
-        if (tempText) tempText.textContent = '48°C (तीव्र)';
-      })
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15236,6 +15220,9 @@ function sim37ResetAction() {
   s37StopNO2Fumes();
   s37_isAnimating = false;
 
+  gsap.killTweensOf(s37_tempState);
+  s37_tempState.val = 25;
+
   if (typeof gsap !== 'undefined') {
     gsap.killTweensOf("#s37_dropper_rig");
     gsap.killTweensOf("#s37_dropper_bulb");
@@ -15245,6 +15232,7 @@ function sim37ResetAction() {
     gsap.killTweensOf("#s37_splinter_rig");
     gsap.killTweensOf("#s37_pop_flash");
     gsap.killTweensOf("#s37_popup_badge");
+    gsap.killTweensOf("#s37_temp_badge_group");
 
     gsap.set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1, clearProps: "all" });
     gsap.set("#s37_dropper_bulb", { scaleY: 1, clearProps: "scaleY" });
@@ -15254,13 +15242,14 @@ function sim37ResetAction() {
     gsap.set("#s37_splinter_rig", { opacity: 0, y: 0 });
     gsap.set("#s37_pop_flash", { opacity: 0, scale: 1 });
     gsap.set("#s37_popup_badge", { opacity: 0, scale: 0.6 });
+    gsap.set("#s37_temp_badge_group", { scale: 1 });
   }
 
   var tempText = document.getElementById('s37_temp_text');
   if (tempText) tempText.textContent = '25°C (स्थिर)';
 
   var statusBox = document.getElementById('s37_status_text');
-  if (statusBox) statusBox.textContent = 'प्रयोग प्रारंभ करने के लिए "▶️ संपूर्ण ऑटो-प्ले" दबाएं।';
+  if (statusBox) statusBox.textContent = 'प्रयोग प्रारंभ करने के लिए "▶️ ऑटो-प्ले" दबाएं।';
 }
 
 
