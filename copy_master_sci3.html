@@ -5285,7 +5285,7 @@
       </div>
     </div>
 
-                    <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
+                        <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
@@ -5537,18 +5537,18 @@
 
                 <!-- DYNAMIC RISING H2 BUBBLE TORRENT (Fluid GSAP Animated in Wide Tube) -->
                 <g id="s37_dynamic_bubbles" style="opacity:0; pointer-events:none;">
-                  <circle id="s37_bub1" cx="350" cy="405" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub2" cx="365" cy="390" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub3" cx="340" cy="375" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub4" cx="372" cy="360" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub5" cx="348" cy="345" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub6" cx="362" cy="330" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub7" cx="342" cy="315" r="8.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub8" cx="375" cy="300" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub9" cx="352" cy="285" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub10" cx="368" cy="270" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub11" cx="345" cy="255" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub12" cx="370" cy="245" r="8.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub1" cx="340" cy="405" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub2" cx="355" cy="390" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub3" cx="335" cy="375" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub4" cx="358" cy="360" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub5" cx="338" cy="345" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub6" cx="352" cy="330" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub7" cx="332" cy="315" r="8.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub8" cx="360" cy="300" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub9" cx="342" cy="285" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub10" cx="356" cy="270" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub11" cx="336" cy="255" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub12" cx="352" cy="245" r="8.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
                 </g>
 
                 <!-- 3D GLASS TEST TUBE BODY (Sim 3.5 Look: Glass Body + Rim + Reflections) -->
@@ -5574,8 +5574,20 @@
                 <line x1="316" y1="345" x2="330" y2="345" stroke="#64748b" stroke-width="1.8"/>
                 <text x="334" y="349" font-size="9" font-weight="900" fill="#64748b">10ml</text>
 
-                <!-- PROMINENT HIGH-VISIBILITY THERMOMETER (Bold Inside Test Tube) -->
+                <!-- ============================================================
+                     PROMINENT HIGH-VISIBILITY THERMOMETER (Bold Inside Test Tube)
+                     ========================================================= -->
                 <g id="s37_thermometer_rig" transform="translate(380, 85)">
+                  <!-- Dedicated Digital Temperature Display Box (Directly Mounted on Top of Thermometer) -->
+                  <g id="s37_temp_display_box" transform="translate(0, -38)">
+                    <!-- Stem Collar & Mount Bracket -->
+                    <rect x="-4" y="24" width="8" height="15" fill="#475569" rx="2"/>
+                    <!-- Digital Card Box -->
+                    <rect x="-68" y="-14" width="136" height="38" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2.2" filter="drop-shadow(0 4px 12px rgba(239,68,68,0.25))"/>
+                    <text x="0" y="1" font-size="9.5" font-weight="800" fill="#64748b" text-anchor="middle">थर्मामीटर तापमान पाठ्यांक:</text>
+                    <text id="s37_temp_text" x="0" y="17" font-size="14" font-weight="900" fill="#dc2626" text-anchor="middle">25°C (स्थिर)</text>
+                  </g>
+
                   <!-- Outer Glass Stem (14px Wide with Specular Glass Finish) -->
                   <rect x="-7" y="0" width="14" height="325" rx="7" fill="url(#s37_glass_body)" stroke="#475569" stroke-width="1.8" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
                   <!-- White Capillary Channel -->
@@ -5601,31 +5613,38 @@
                   <circle cx="0" cy="320" r="14" fill="url(#s37_mercury_grad)" stroke="#991b1b" stroke-width="1.5"/>
                   <ellipse cx="-4" cy="316" rx="4" ry="2.5" fill="#ffffff" opacity="0.75"/>
 
-                  <!-- PROMINENT VIBRANT RED MERCURY COLUMN (Physically animates upwards) -->
-                  <rect id="s37_mercury_column" x="-3.5" y="205" width="7" height="115" rx="3.5" fill="url(#s37_mercury_grad)" stroke="#b91c1c" stroke-width="0.5"/>
+                  <!-- PHYSICAL RISING MERCURY COLUMN (Anchored at bulb cy=320, rises upwards to y2) -->
+                  <line id="s37_mercury_line" x1="0" y1="320" x2="0" y2="205" stroke="url(#s37_mercury_grad)" stroke-width="6" stroke-linecap="round"/>
                   
-                  <!-- Meniscus Glow Line at top of mercury -->
-                  <line id="s37_mercury_glow" x1="-3.5" y1="205" x2="3.5" y2="205" stroke="#fef08a" stroke-width="2"/>
+                  <!-- Glowing Meniscus Indicator at top of mercury -->
+                  <circle id="s37_mercury_tip" cx="0" cy="205" r="3.2" fill="#fef08a" stroke="#dc2626" stroke-width="0.8"/>
 
-                  <!-- Dynamic Pointer Callout Badge (Glides Vertically with Mercury Column) -->
-                  <g id="s37_temp_badge_group" transform="translate(16, 195)">
-                    <!-- Pointing arrow head -->
-                    <path d="M 0 15 L -8 11 L 0 7 Z" fill="#ef4444"/>
-                    <rect x="0" y="0" width="94" height="30" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="drop-shadow(0 3px 8px rgba(239,68,68,0.3))"/>
-                    <text x="6" y="13" font-size="9" font-weight="800" fill="#64748b">तापमापी पारा:</text>
-                    <text id="s37_temp_text" x="6" y="26" font-size="12" font-weight="900" fill="#b91c1c">25°C (स्थिर)</text>
+                  <!-- Precision Scale Pointer Arrow pointing right to the graduation tick -->
+                  <g id="s37_scale_pointer" transform="translate(-8, 205)">
+                    <polygon points="0,0 -7,-4 -7,4" fill="#dc2626"/>
+                    <line x1="0" y1="0" x2="16" y2="0" stroke="#fef08a" stroke-width="1.5"/>
                   </g>
                 </g>
 
-                <!-- POP TEST BURNING SPLINTER RIG -->
-                <g id="s37_splinter_rig" style="opacity:0;" transform="translate(360, 65)">
-                  <line x1="-40" y1="-20" x2="0" y2="25" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+                <!-- ============================================================
+                     POP TEST BURNING SPLINTER RIG (Matches activity 3.11 test)
+                     ========================================================= -->
+                <g id="s37_splinter_rig" style="opacity:0;" transform="translate(480, 20)">
+                  <!-- Wooden Matchstick Stem -->
+                  <line x1="-48" y1="-24" x2="0" y2="25" stroke="#78350f" stroke-width="4.5" stroke-linecap="round"/>
+                  <!-- Glowing Coal -->
                   <circle cx="0" cy="25" r="6" fill="#ef4444"/>
+                  <!-- Flickering Flame -->
                   <path id="s37_splinter_flame" d="M 0 25 Q -8 8 0 -6 Q 8 8 0 25 Z" fill="url(#s37_flame_grad)"/>
+                  
+                  <!-- Pop Shockwave Rings & Flash -->
                   <circle id="s37_pop_flash" cx="0" cy="25" r="32" fill="#fef08a" opacity="0"/>
-                  <g id="s37_pop_label" transform="translate(20, 10)">
-                    <rect x="0" y="0" width="115" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-                    <text x="57" y="17" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">💥 Pop! ध्वनि परीक्षण</text>
+                  <circle id="s37_pop_ring" cx="0" cy="25" r="38" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0"/>
+
+                  <!-- Pop Callout Badge -->
+                  <g id="s37_pop_label" style="opacity:0;" transform="translate(18, 5)">
+                    <rect x="0" y="0" width="135" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8" filter="drop-shadow(0 2px 8px rgba(220,38,38,0.25))"/>
+                    <text x="67" y="19" font-size="12.5" font-weight="900" fill="#b91c1c" text-anchor="middle">💥 Pop! ध्वनि परीक्षण</text>
                   </g>
                 </g>
 
@@ -5728,7 +5747,6 @@
         </div>
       </div>
     </div>
-
     <div class="sim-card" id="sim3_aquaregia_box" style="border:3px solid #d97706; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(217,119,6,0.12);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
@@ -14736,53 +14754,39 @@ function sim36ResetAction() {
 
 
 /* ==========================================================================
-   SIMULATOR 3.7: अम्लों से अभिक्रिया व HNO3 अपवाद (Activity 3.11) — 16:9 CONTROLLER
-   OLABS VIRTUAL LAB MODEL WITH GSAP FLUID DYNAMICS & THERMOMETER REACTION ENGINE
+   SIMULATOR 3.7: अम्लों से अभिक्रिया एवं HNO₃ अपवाद (3D Virtual Lab & Real Video)
    ========================================================================== */
 
 var s37_currentType = 'mg';
-var s37_currentTimeline = null;
+var s37_displayMode = 'sim';
 var s37_isAnimating = false;
 var s37_bubbleTween = null;
 var s37_fumeTween = null;
-var s37_flameTween = null;
+var s37_currentTimeline = null;
 var s37_tempState = { val: 25 };
 
-var s37_videoMap = {
-  'mg': 'media/zinc_reacting_in_sulfuric_acid.mp4',
-  'zn': 'media/activity_1_3_zinc_h2.mp4',
-  'fe': 'media/activity_1_3_zinc_h2.mp4',
-  'cu': 'media/sim36_copper_water.mp4',
-  'hno3': 'media/activity_1_3_zinc_h2.mp4',
-  'mg_hno3': 'media/zinc_reacting_in_sulfuric_acid.mp4'
+// Real Experiment Video Sources Mapping
+var s37_videos = {
+  mg: "media/Magnesium_ribbon_reacting_in_water_20260922084915.mp4",
+  zn: "media/zinc_reacting_in_sulfuric_acid.mp4",
+  fe: "media/zinc_reacting_in_sulfuric_acid.mp4",
+  cu: "media/Copper_strip_in_boiling_water_20260922085122.mp4",
+  hno3: "media/zinc_reacting_in_sulfuric_acid.mp4",
+  mg_hno3: "media/Magnesium_ribbon_reacting_in_water_20260922084915.mp4"
 };
 
-// Continuous flame flicker on load
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof gsap !== 'undefined') {
-    gsap.to("#s37_splinter_flame", {
-      scaleY: 1.15,
-      scaleX: 0.92,
-      transformOrigin: "bottom center",
-      repeat: -1,
-      yoyo: true,
-      duration: 0.12,
-      ease: "power1.inOut"
-    });
-  }
-});
-
-// Display Switcher (Sim vs Video)
+// Mode Switcher: 16:9 Simulator vs Real Video
 function sim37SetDisplay(mode) {
-  var videoMode = document.getElementById('s37_video_mode');
+  s37_displayMode = mode;
   var simMode = document.getElementById('s37_sim_mode');
+  var videoMode = document.getElementById('s37_video_mode');
   var tabSim = document.getElementById('s37_tab_sim');
   var tabVideo = document.getElementById('s37_tab_video');
   var player = document.getElementById('s37_video_player');
 
   if (mode === 'video') {
-    if (videoMode) videoMode.style.display = 'block';
     if (simMode) simMode.style.display = 'none';
+    if (videoMode) videoMode.style.display = 'block';
     if (tabVideo) {
       tabVideo.style.background = '#7c3aed';
       tabVideo.style.color = '#ffffff';
@@ -14811,15 +14815,41 @@ function sim37SetDisplay(mode) {
   }
 }
 
-// Live Numeric Temperature Counter Animation Engine
+// Realistic Synthetic Audio Pop Sound Generator (HTML5 Web Audio API)
+function s37PlayPopSound() {
+  try {
+    var AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    if (!window.s37_audioCtx) window.s37_audioCtx = new AudioCtx();
+    var actx = window.s37_audioCtx;
+    if (actx.state === 'suspended') actx.resume();
+
+    var osc = actx.createOscillator();
+    var gain = actx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(340, actx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(60, actx.currentTime + 0.08);
+    gain.gain.setValueAtTime(0.45, actx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, actx.currentTime + 0.08);
+    osc.connect(gain);
+    gain.connect(actx.destination);
+    osc.start();
+    osc.stop(actx.currentTime + 0.09);
+  } catch(e) {}
+}
+
+// Live Numeric Temperature Counter & Synchronized Physical Mercury Column Animation
 function s37AnimateTemperature(targetTemp, label, duration) {
   gsap.killTweensOf(s37_tempState);
   var tempText = document.getElementById('s37_temp_text');
-  var tempBadge = document.getElementById('s37_temp_badge_group');
+  var d = duration || 1.6;
+  // Formula: 0°C -> y=260, 100°C -> y=40. Each 25°C = 55px (2.2px per °C)
+  var targetY = 260 - (targetTemp * 2.2);
 
+  // 1. Digital numeric readout counter
   gsap.to(s37_tempState, {
     val: targetTemp,
-    duration: duration || 1.6,
+    duration: d,
     ease: "power2.out",
     onUpdate: function() {
       if (tempText) {
@@ -14829,8 +14859,63 @@ function s37AnimateTemperature(targetTemp, label, duration) {
     }
   });
 
-  if (targetTemp > 35 && tempBadge) {
-    gsap.fromTo(tempBadge, { scale: 1 }, { scale: 1.08, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" });
+  // 2. Physical rising mercury column (anchored at bulb cy=320, rises upward to y2)
+  gsap.to("#s37_mercury_line", {
+    attr: { y2: targetY },
+    duration: d,
+    ease: "power2.out"
+  });
+
+  // 3. Meniscus glow tip
+  gsap.to("#s37_mercury_tip", {
+    attr: { cy: targetY },
+    duration: d,
+    ease: "power2.out"
+  });
+
+  // 4. Precision scale pointer arrow
+  gsap.to("#s37_scale_pointer", {
+    attr: { transform: "translate(-8, " + targetY + ")" },
+    duration: d,
+    ease: "power2.out"
+  });
+
+  // 5. Digital gauge pulse effect if exothermic
+  if (targetTemp > 35) {
+    gsap.fromTo("#s37_temp_display_box", { scale: 1 }, { scale: 1.06, transformOrigin: "center center", duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" });
+  }
+}
+
+// Helper: Multi-Pop Test Sequence with Splinter Retreat (2-3 Pop के बाद तीली हट जाती है)
+function s37AppendPopTest(tl, popCount, onComplete) {
+  var count = popCount || 3;
+  // 1. Splinter approaches test tube mouth
+  tl.to("#s37_splinter_rig", { opacity: 1, x: 345, y: 80, duration: 0.7, ease: "power2.out" })
+    .to("#s37_pop_label", { opacity: 1, duration: 0.15 });
+
+  // 2. Pops while splinter is present at mouth
+  for (var p = 1; p <= count; p++) {
+    (function(num) {
+      tl.call(function() {
+        s37PlayPopSound();
+        if (num === 1) speakHindiCh3('पॉप ध्वनि परीक्षण!');
+      })
+      .fromTo("#s37_pop_flash", { opacity: 0, scale: 0.5 }, { opacity: 0.95, scale: 2.0 + num * 0.35, duration: 0.12, yoyo: true, repeat: 1 })
+      .fromTo("#s37_pop_ring", { opacity: 1, scale: 0.5 }, { opacity: 0, scale: 2.5 + num * 0.35, duration: 0.25 }, "<")
+      .to("#s37_splinter_flame", { scale: 1.5 + num * 0.25, transformOrigin: "bottom center", duration: 0.1, yoyo: true, repeat: 1 }, "<");
+
+      if (num < count) {
+        tl.to({}, { duration: 0.22 }); // short pause between pops
+      }
+    })(p);
+  }
+
+  // 3. Splinter retreats immediately after pops (दो-तीन पॉप के बाद तीली हट जाती है)
+  tl.to("#s37_pop_label", { opacity: 0, duration: 0.15 })
+    .to("#s37_splinter_rig", { x: 500, y: 20, opacity: 0, duration: 0.65, ease: "power2.in" });
+
+  if (onComplete) {
+    tl.call(onComplete);
   }
 }
 
@@ -14858,7 +14943,7 @@ function s37StartAcidBubbles(speedFactor, count) {
 
     s37_bubbleTween.to(bId, {
       y: -160,
-      x: (idx % 2 === 0 ? "+=10" : "-=10"),
+      x: (idx % 2 === 0 ? "+=8" : "-=8"),
       scale: 1.45,
       opacity: 0.95,
       duration: riseDuration,
@@ -14888,16 +14973,13 @@ function s37StopAcidBubbles() {
 // Continuous NO2 Fume Waving
 function s37StartNO2Fumes() {
   s37StopNO2Fumes();
-  if (typeof gsap === 'undefined') return;
-
-  var container = document.getElementById('s37_no2_fumes');
-  if (container) container.style.opacity = '1';
+  var fumes = document.getElementById('s37_no2_fumes');
+  if (fumes) fumes.style.opacity = '1';
 
   s37_fumeTween = gsap.timeline({ repeat: -1, yoyo: true });
-  s37_fumeTween
-    .to("#s37_fume1", { x: 10, scaleY: 1.1, duration: 1.4, ease: "sine.inOut" }, 0)
-    .to("#s37_fume2", { x: -8, scaleY: 1.15, duration: 1.6, ease: "sine.inOut" }, 0.2)
-    .to("#s37_fume3", { x: 12, scaleY: 1.08, duration: 1.5, ease: "sine.inOut" }, 0.1);
+  s37_fumeTween.to("#s37_fume1", { x: 10, duration: 1.4, ease: "sine.inOut" }, 0)
+               .to("#s37_fume2", { x: -12, duration: 1.6, ease: "sine.inOut" }, 0)
+               .to("#s37_fume3", { x: 8, duration: 1.2, ease: "sine.inOut" }, 0);
 }
 
 function s37StopNO2Fumes() {
@@ -14905,158 +14987,125 @@ function s37StopNO2Fumes() {
     s37_fumeTween.kill();
     s37_fumeTween = null;
   }
-  var container = document.getElementById('s37_no2_fumes');
-  if (container) container.style.opacity = '0';
-  gsap.set(["#s37_fume1", "#s37_fume2", "#s37_fume3"], { x: 0, scaleY: 1 });
+  var fumes = document.getElementById('s37_no2_fumes');
+  if (fumes) fumes.style.opacity = '0';
 }
 
-// Metal Selection Handler
+// Select Metal Sample
 function sim37SelectMetal(type) {
-  if (s37_currentTimeline) {
-    s37_currentTimeline.kill();
-    s37_currentTimeline = null;
-  }
-  s37StopAcidBubbles();
-  s37StopNO2Fumes();
-  s37_isAnimating = false;
   s37_currentType = type;
   sim37ResetAction();
 
-  // Update video player
-  var player = document.getElementById('s37_video_player');
-  var source = document.getElementById('s37_video_source');
-  if (player && source && s37_videoMap[type]) {
-    source.src = s37_videoMap[type];
-    player.load();
-  }
-
-  // Buttons styling
-  var types = ['mg', 'zn', 'fe', 'cu', 'hno3', 'mg_hno3'];
-  types.forEach(function(t) {
-    var b = document.getElementById('s37_btn_' + t);
-    if (!b) return;
-    if (t === type) {
-      b.style.background = (t === 'mg' ? '#16a34a' : t === 'zn' ? '#0284c7' : t === 'fe' ? '#475569' : t === 'cu' ? '#dc2626' : t === 'hno3' ? '#d97706' : '#7c3aed');
-      b.style.color = '#ffffff';
-      b.style.borderColor = '#0f172a';
-      b.style.boxShadow = '0 3px 10px rgba(0,0,0,0.25)';
-    } else {
-      b.style.background = '#ffffff';
-      b.style.color = (t === 'mg' ? '#16a34a' : t === 'zn' ? '#0284c7' : t === 'fe' ? '#475569' : t === 'cu' ? '#dc2626' : t === 'hno3' ? '#d97706' : '#7c3aed');
-      b.style.borderColor = '#cbd5e1';
-      b.style.boxShadow = 'none';
+  // Reset all button styles
+  var buttons = ['mg', 'zn', 'fe', 'cu', 'hno3', 'mg_hno3'];
+  buttons.forEach(function(b) {
+    var btn = document.getElementById('s37_btn_' + b);
+    if (btn) {
+      btn.style.background = '#ffffff';
+      btn.style.color = (b === 'cu' ? '#dc2626' : (b === 'hno3' ? '#d97706' : (b === 'mg_hno3' ? '#7c3aed' : '#0f172a')));
+      btn.style.border = '1.5px solid #cbd5e1';
+      btn.style.boxShadow = 'none';
     }
   });
 
-  // Material shape & liquid color update
-  var mesh = document.getElementById('s37_metal_mesh');
-  var acidFill = document.getElementById('s37_acid_fill');
-  var acidMeniscus = document.getElementById('s37_acid_meniscus');
+  // Highlight Active Button
+  var activeBtn = document.getElementById('s37_btn_' + type);
+  if (activeBtn) {
+    activeBtn.style.background = (type === 'mg' ? '#16a34a' : (type === 'zn' ? '#0284c7' : (type === 'fe' ? '#475569' : (type === 'cu' ? '#dc2626' : (type === 'hno3' ? '#d97706' : '#7c3aed')))));
+    activeBtn.style.color = '#ffffff';
+    activeBtn.style.border = '2px solid #0f172a';
+    activeBtn.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+  }
 
-  if (mesh) {
-    if (type === 'mg' || type === 'mg_hno3') {
-      mesh.setAttribute('fill', '#e2e8f0'); // Magnesium bright ribbon
-      mesh.setAttribute('stroke', '#64748b');
-    } else if (type === 'zn') {
-      mesh.setAttribute('fill', '#94a3b8'); // Zinc granule
-      mesh.setAttribute('stroke', '#334155');
-    } else if (type === 'fe') {
-      mesh.setAttribute('fill', '#475569'); // Iron dark filings
-      mesh.setAttribute('stroke', '#0f172a');
-    } else if (type === 'cu') {
-      mesh.setAttribute('fill', '#b45309'); // Copper reddish-brown
-      mesh.setAttribute('stroke', '#78350f');
-    } else if (type === 'hno3') {
-      mesh.setAttribute('fill', '#94a3b8'); // Zinc/Metal in HNO3
-      mesh.setAttribute('stroke', '#334155');
+  // Update Real Video Source
+  var videoSource = document.getElementById('s37_video_source');
+  var player = document.getElementById('s37_video_player');
+  if (videoSource && s37_videos[type]) {
+    videoSource.src = s37_videos[type];
+    if (player) {
+      player.load();
+      if (s37_displayMode === 'video') player.play().catch(function(e){});
     }
   }
+
+  // Update Right Observation Board
+  var titleEl = document.getElementById('s37_card_metal_title');
+  var eqEl = document.getElementById('s37_card_equation');
+  var obs1El = document.getElementById('s37_card_obs1');
+  var obs2El = document.getElementById('s37_card_obs2');
+  var obs3El = document.getElementById('s37_card_obs3');
+  var acidFill = document.getElementById('s37_acid_fill');
+  var acidMeniscus = document.getElementById('s37_acid_meniscus');
 
   if (acidFill && acidMeniscus) {
     if (type === 'hno3') {
       acidFill.setAttribute('fill', 'url(#s37_hno3_liquid)');
       acidMeniscus.setAttribute('fill', 'url(#s37_hno3_liquid)');
+      acidMeniscus.setAttribute('stroke', '#f59e0b');
     } else {
       acidFill.setAttribute('fill', 'url(#s37_acid_liquid)');
       acidMeniscus.setAttribute('fill', 'url(#s37_acid_liquid)');
+      acidMeniscus.setAttribute('stroke', '#38bdf8');
     }
   }
 
-  // Update Right Panel text with guaranteed non-overflowing lengths
-  var cardTitle = document.getElementById('s37_card_metal_title');
-  var cardEq = document.getElementById('s37_card_equation');
-  var obs1 = document.getElementById('s37_card_obs1');
-  var obs2 = document.getElementById('s37_card_obs2');
-  var obs3 = document.getElementById('s37_card_obs3');
-
   if (type === 'mg') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: मैग्नीशियम (Mg) + तनु HCl';
-    if (cardEq) cardEq.textContent = 'Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा';
-    if (obs1) obs1.textContent = '• बुलबुले दर: सर्वाधिक तीव्र (Most Vigorous)';
-    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 55°C (उच्चतम ΔT 🔥)';
-    if (obs3) obs3.textContent = '• H₂ गैस Pop! ध्वनि के साथ जलती है';
+    if (titleEl) titleEl.textContent = 'चयनित: मैग्नीशियम (Mg) + तनु HCl';
+    if (eqEl) eqEl.textContent = 'Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा';
+    if (obs1El) obs1El.textContent = '• बुलबुले दर: सर्वाधिक तीव्र (Most Vigorous)';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 55°C (उच्चतम ΔT 🔥)'; obs2El.setAttribute('fill', '#dc2626'); }
+    if (obs3El) obs3El.textContent = '• H₂ गैस Pop! Pop! ध्वनि के साथ जलती है';
+    speakHindiCh3('मैग्नीशियम धातु चयनित। यह तनु अम्ल के साथ तीव्रतम अभिक्रिया और सर्वाधिक ऊष्मा उत्पन्न करती है।');
   } else if (type === 'zn') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: जिंक (Zn) + तनु HCl';
-    if (cardEq) cardEq.textContent = 'Zn + 2HCl ➔ ZnCl₂ + H₂↑ + ऊष्मा';
-    if (obs1) obs1.textContent = '• बुलबुले दर: मध्यम व नियमित (Steady Stream)';
-    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 38°C (मध्यम ऊष्मा)';
-    if (obs3) obs3.textContent = '• H₂ गैस परखनली मुख पर Pop! ध्वनि देती है';
+    if (titleEl) titleEl.textContent = 'चयनित: जिंक (Zn) + तनु HCl';
+    if (eqEl) eqEl.textContent = 'Zn + 2HCl ➔ ZnCl₂ + H₂↑ + ऊष्मा';
+    if (obs1El) obs1El.textContent = '• बुलबुले दर: मध्यम दर (Moderate Rate)';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 38°C (मध्यम ऊष्मा)'; obs2El.setAttribute('fill', '#0284c7'); }
+    if (obs3El) obs3El.textContent = '• H₂ गैस Pop! ध्वनि देती है';
+    speakHindiCh3('जिंक धातु चयनित। जिंक से मध्यम गति से हाइड्रोजन गैस के बुलबुले निकलते हैं।');
   } else if (type === 'fe') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: लोहा (Fe) + तनु HCl';
-    if (cardEq) cardEq.textContent = 'Fe + 2HCl ➔ FeCl₂ + H₂↑';
-    if (obs1) obs1.textContent = '• बुलबुले दर: अत्यंत मंद (Slow Evolution)';
-    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 28°C (अल्प ऊष्मा)';
-    if (obs3) obs3.textContent = '• विलयन का रंग हल्का हरा (FeCl₂) होता है';
+    if (titleEl) titleEl.textContent = 'चयनित: लोहा (Fe) + तनु HCl';
+    if (eqEl) eqEl.textContent = 'Fe + 2HCl ➔ FeCl₂ + H₂↑';
+    if (obs1El) obs1El.textContent = '• बुलबुले दर: अत्यंत मंद (Very Slow)';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 28°C (अल्प परिवर्तन)'; obs2El.setAttribute('fill', '#475569'); }
+    if (obs3El) obs3El.textContent = '• गैस बहुत धीमी गति से निकलती है';
+    speakHindiCh3('लोहा चयनित। लोहे के साथ अभिक्रिया बहुत मंद गति से होती है।');
   } else if (type === 'cu') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: कॉपर (Cu) + तनु HCl';
-    if (cardEq) cardEq.textContent = 'Cu + HCl ➔ कोई अभिक्रिया नहीं (No Reaction)';
-    if (obs1) obs1.textContent = '• बुलबुले दर: शून्य (Zero Bubbles ❌)';
-    if (obs2) obs2.textContent = '• ताप परिवर्तन: शून्य (25°C अपरिवर्तित)';
-    if (obs3) obs3.textContent = '• कॉपर हाइड्रोजन से कम सक्रिय (अक्रिय)';
+    if (titleEl) titleEl.textContent = 'चयनित: तांबा / कॉपर (Cu) + तनु HCl';
+    if (eqEl) eqEl.textContent = 'Cu + HCl ➔ कोई अभिक्रिया नहीं (No Reaction)';
+    if (obs1El) obs1El.textContent = '• बुलबुले दर: शून्य (No Bubbles)';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C (अपरिवर्तित / स्थिर)'; obs2El.setAttribute('fill', '#15803d'); }
+    if (obs3El) obs3El.textContent = '• कॉपर हाइड्रोजन से कम क्रियाशील है';
+    speakHindiCh3('तांबा चयनित। कॉपर तनु अम्लों से क्रिया नहीं करता क्योंकि यह हाइड्रोजन से कम सक्रिय है।');
   } else if (type === 'hno3') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: धातु (Zn) + नाइट्रिक अम्ल (HNO₃)';
-    if (cardEq) cardEq.textContent = 'Zn + 4HNO₃ ➔ Zn(NO₃)₂ + 2H₂O + 2NO₂↑';
-    if (obs1) obs1.textContent = '• H₂ गैस मुक्त नहीं होती, भूरी NO₂ गैस निकलती है';
-    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 45°C (तीव्र ऑक्सीकरण)';
-    if (obs3) obs3.textContent = '• HNO₃ प्रबल ऑक्सीकारक है, H₂ को H₂O बनाता है';
+    if (titleEl) titleEl.textContent = 'चयनित: धातु + सामान्य नाइट्रिक अम्ल (HNO₃)';
+    if (eqEl) eqEl.textContent = 'धातु + HNO₃ ➔ लवण + H₂O + NO₂↑ (भूरी गैस)';
+    if (obs1El) obs1El.textContent = '• गैस: H₂ नहीं बनती, भूरी NO₂ गैस निकलती है';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 45°C (ऑक्सीकरण)'; obs2El.setAttribute('fill', '#d97706'); }
+    if (obs3El) obs3El.textContent = '• HNO₃ प्रबल ऑक्सीकारक है जो H₂ को जल में बदलता है';
+    speakHindiCh3('नाइट्रिक अम्ल अपवाद। HNO₃ प्रबल ऑक्सीकारक है, यह हाइड्रोजन को जल में बदल देता है और भूरी NO₂ गैस बनाता है।');
   } else if (type === 'mg_hno3') {
-    if (cardTitle) cardTitle.textContent = 'चयनित: Mg + 1% अति तनु HNO₃ (अपवाद)';
-    if (cardEq) cardEq.textContent = 'Mg + 2HNO₃ (1%) ➔ Mg(NO₃)₂ + H₂↑';
-    if (obs1) obs1.textContent = '• विशेष अपवाद: H₂ गैस के तीव्र बुलबुले निकलते हैं!';
-    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 48°C (तीव्र अभिक्रिया)';
-    if (obs3) obs3.textContent = '• केवल Mg व Mn अति तनु HNO₃ से H₂ देते हैं';
+    if (titleEl) titleEl.textContent = 'चयनित: मैग्नीशियम (Mg) + 1% अति तनु HNO₃';
+    if (eqEl) eqEl.textContent = 'Mg + 2HNO₃ (अति तनु 1%) ➔ Mg(NO₃)₂ + H₂↑';
+    if (obs1El) obs1El.textContent = '• बुलबुले: विशेष अपवाद — H₂ गैस मुक्त होती है!';
+    if (obs2El) { obs2El.textContent = '• ताप वृद्धि: 25°C ➔ 48°C (तीव्र अभिक्रिया)'; obs2El.setAttribute('fill', '#7c3aed'); }
+    if (obs3El) obs3El.textContent = '• केवल Mg व Mn अति तनु HNO₃ से H₂ देते हैं';
+    speakHindiCh3('विशेष NCERT अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु 1% नाइट्रिक अम्ल से हाइड्रोजन गैस मुक्त करते हैं।');
   }
 }
 
-// 3-Step Controllers with Synchronized Mercury & Badge Glide
+// Step Controller (Manual Progression 1, 2, 3)
 function sim37RunStep(step) {
-  if (s37_currentTimeline) {
-    s37_currentTimeline.kill();
-    s37_currentTimeline = null;
-  }
-  s37StopAcidBubbles();
-  s37StopNO2Fumes();
-
   var statusBox = document.getElementById('s37_status_text');
-  var popupBadge = document.getElementById('s37_popup_badge');
   var popupText = document.getElementById('s37_popup_text');
 
   if (step === 1) {
-    if (statusBox) statusBox.textContent = 'परखनली में धातु का प्रतिदर्श व तापमापी सज्जित किया गया। प्रारंभिक ताप 25°C स्थिर है।';
-    speakHindiCh3('परखनली में धातु और तापमापी व्यवस्थित किए गए। प्रारंभिक ताप पच्चीस डिग्री सेल्सियस है।');
-
-    s37AnimateTemperature(25, 'स्थिर', 0.4);
-    gsap.timeline()
-      .set("#s37_dropper_rig", { x: 560, y: 35, opacity: 1 })
-      .set("#s37_metal_sample_group", { scale: 1, opacity: 1 })
-      .fromTo("#s37_metal_sample_group", { scale: 0.4 }, { scale: 1, duration: 0.6, ease: "back.out(2)" })
-      .to("#s37_mercury_column", { height: 115, y: 205, duration: 0.4 })
-      .to("#s37_mercury_glow", { y: 0, duration: 0.4 }, "<")
-      .to("#s37_temp_badge_group", { y: 195, duration: 0.4 }, "<");
-
+    sim37ResetAction();
+    if (statusBox) statusBox.textContent = 'चरण 1: परखनली में धातु का टुकड़ा और तापमापी व्यवस्थित किया गया। प्रारंभिक ताप: 25°C';
+    speakHindiCh3('चरण एक: परखनली में धातु का नमूना और तापमापी सज्जित है। प्रारंभिक तापमान पच्चीस डिग्री है।');
   } else if (step === 2) {
-    if (statusBox) statusBox.textContent = 'ड्रॉपर द्वारा परखनली में तनु अम्ल मिलाया जा रहा है...';
-    speakHindiCh3('ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
+    if (statusBox) statusBox.textContent = 'चरण 2: ड्रॉपर से परखनली में तनु अम्ल डाला जा रहा है...';
+    speakHindiCh3('चरण दो: ड्रॉपर की सहायता से परखनली में तनु अम्ल मिलाया जा रहा है।');
 
     gsap.timeline()
       .to("#s37_dropper_rig", { x: 360, y: 75, duration: 0.8, ease: "power2.out" })
@@ -15069,24 +15118,19 @@ function sim37RunStep(step) {
       .to("#s37_dropper_rig", { x: 560, y: 35, duration: 0.8, ease: "power2.inOut" });
 
   } else if (step === 3) {
+    var tl = gsap.timeline();
+
     if (s37_currentType === 'mg') {
       if (statusBox) statusBox.textContent = 'सर्वाधिक तीव्र H₂ बुलबुले व उच्चतम ऊष्माक्षेपी प्रभाव! तापमापी का पारा 55°C तक चढ़ा। 🔥';
       speakHindiCh3('मैग्नीशियम से सर्वाधिक तीव्र बुलबुले निकलते हैं और तापमापी पचपन डिग्री तक पहुंच जाता है।');
 
       s37StartAcidBubbles(0.65, 12);
       s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 181, y: 139, duration: 1.8, ease: "power2.out" })
-        .to("#s37_mercury_glow", { y: -66, duration: 1.8, ease: "power2.out" }, "<")
-        .to("#s37_temp_badge_group", { y: 129, duration: 1.8, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
-        .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
-        .call(function() {
-          speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण सफल!');
-        })
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
-      if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! परीक्षण';
+      s37AppendPopTest(tl, 3, function() {
+        if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! Pop! परीक्षण';
+        gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      });
 
     } else if (s37_currentType === 'zn') {
       if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले निकलते हैं व ताप 38°C पहुंचता है।';
@@ -15094,15 +15138,11 @@ function sim37RunStep(step) {
 
       s37StartAcidBubbles(1.1, 8);
       s37AnimateTemperature(38, 'मध्यम', 1.5);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 144, y: 176, duration: 1.5, ease: "power2.out" })
-        .to("#s37_mercury_glow", { y: -29, duration: 1.5, ease: "power2.out" }, "<")
-        .to("#s37_temp_badge_group", { y: 166, duration: 1.5, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
-        .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
-      if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+      s37AppendPopTest(tl, 2, function() {
+        if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+        gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      });
 
     } else if (s37_currentType === 'fe') {
       if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C) होती है।';
@@ -15110,13 +15150,8 @@ function sim37RunStep(step) {
 
       s37StartAcidBubbles(2.2, 4);
       s37AnimateTemperature(28, 'अल्प', 1.2);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 122, y: 198, duration: 1.2, ease: "power2.out" })
-        .to("#s37_mercury_glow", { y: -7, duration: 1.2, ease: "power2.out" }, "<")
-        .to("#s37_temp_badge_group", { y: 188, duration: 1.2, ease: "power2.out" }, "<")
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
-
       if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
+      tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'cu') {
       if (statusBox) statusBox.textContent = 'कॉपर तनु HCl से कोई क्रिया नहीं करता। शून्य बुलबुले व ताप 25°C स्थिर रहता है। 🛡️';
@@ -15124,13 +15159,8 @@ function sim37RunStep(step) {
 
       s37StopAcidBubbles();
       s37AnimateTemperature(25, 'स्थिर ❌', 0.5);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 115, y: 205, duration: 0.5 })
-        .to("#s37_mercury_glow", { y: 0, duration: 0.5 }, "<")
-        .to("#s37_temp_badge_group", { y: 195, duration: 0.5 }, "<")
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
-
       if (popupText) popupText.textContent = '🛡️ Cu + HCl: कोई अभिक्रिया नहीं (शून्य बुलबुले, 25°C अपरिवर्तित)';
+      tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'hno3') {
       if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है! ताप 45°C पहुंचता है। ⚠️';
@@ -15139,29 +15169,20 @@ function sim37RunStep(step) {
       s37StopAcidBubbles();
       s37StartNO2Fumes();
       s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 159, y: 161, duration: 1.6, ease: "power2.out" })
-        .to("#s37_mercury_glow", { y: -44, duration: 1.6, ease: "power2.out" }, "<")
-        .to("#s37_temp_badge_group", { y: 151, duration: 1.6, ease: "power2.out" }, "<")
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
-
       if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
+      tl.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     } else if (s37_currentType === 'mg_hno3') {
       if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देते हैं! 🧪';
       speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
 
       s37StartAcidBubbles(0.7, 10);
-      s37AnimateTemperature(48, 'तीव्र', 1.6);
-      gsap.timeline()
-        .to("#s37_mercury_column", { height: 166, y: 154, duration: 1.6, ease: "power2.out" })
-        .to("#s37_mercury_glow", { y: -51, duration: 1.6, ease: "power2.out" }, "<")
-        .to("#s37_temp_badge_group", { y: 144, duration: 1.6, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
-        .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
-        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      s37AnimateTemperature(48, 'तीव्र अपवाद', 1.6);
 
-      if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+      s37AppendPopTest(tl, 3, function() {
+        if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+        gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      });
     }
   }
 }
@@ -15195,18 +15216,12 @@ function sim37TriggerAction() {
         speakHindiCh3('तीव्रतम अभिक्रिया: हाइड्रोजन के घने बुलबुले और तापमापी पचपन डिग्री तक चढ़ गया।');
         s37StartAcidBubbles(0.65, 12);
         s37AnimateTemperature(55, 'उच्चतम 🔥', 1.8);
-      })
-      .to("#s37_mercury_column", { height: 181, y: 139, duration: 1.8, ease: "power2.out" })
-      .to("#s37_mercury_glow", { y: -66, duration: 1.8, ease: "power2.out" }, "<")
-      .to("#s37_temp_badge_group", { y: 129, duration: 1.8, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.8, ease: "power2.out" })
-      .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
-      .call(function() {
-        speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण!');
-      })
-      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      });
 
-    if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! परीक्षण';
+    s37AppendPopTest(s37_currentTimeline, 3, function() {
+      if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! Pop! परीक्षण';
+      gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    });
 
   } else if (s37_currentType === 'zn') {
     s37_currentTimeline
@@ -15215,15 +15230,12 @@ function sim37TriggerAction() {
         speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है।');
         s37StartAcidBubbles(1.1, 8);
         s37AnimateTemperature(38, 'मध्यम', 1.6);
-      })
-      .to("#s37_mercury_column", { height: 144, y: 176, duration: 1.6, ease: "power2.out" })
-      .to("#s37_mercury_glow", { y: -29, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_temp_badge_group", { y: 166, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.8, ease: "power2.out" })
-      .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
-      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      });
 
-    if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+    s37AppendPopTest(s37_currentTimeline, 2, function() {
+      if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+      gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    });
 
   } else if (s37_currentType === 'fe') {
     s37_currentTimeline
@@ -15233,9 +15245,6 @@ function sim37TriggerAction() {
         s37StartAcidBubbles(2.2, 4);
         s37AnimateTemperature(28, 'अल्प', 1.4);
       })
-      .to("#s37_mercury_column", { height: 122, y: 198, duration: 1.4, ease: "power2.out" })
-      .to("#s37_mercury_glow", { y: -7, duration: 1.4, ease: "power2.out" }, "<")
-      .to("#s37_temp_badge_group", { y: 188, duration: 1.4, ease: "power2.out" }, "<")
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
@@ -15259,9 +15268,6 @@ function sim37TriggerAction() {
         s37StartNO2Fumes();
         s37AnimateTemperature(45, 'ऑक्सीकरण', 1.6);
       })
-      .to("#s37_mercury_column", { height: 159, y: 161, duration: 1.6, ease: "power2.out" })
-      .to("#s37_mercury_glow", { y: -44, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_temp_badge_group", { y: 151, duration: 1.6, ease: "power2.out" }, "<")
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
     if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
@@ -15272,16 +15278,13 @@ function sim37TriggerAction() {
         if (statusBox) statusBox.textContent = 'विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देते हैं!';
         speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
         s37StartAcidBubbles(0.7, 10);
-        s37AnimateTemperature(48, 'तीव्र', 1.6);
-      })
-      .to("#s37_mercury_column", { height: 166, y: 154, duration: 1.6, ease: "power2.out" })
-      .to("#s37_mercury_glow", { y: -51, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_temp_badge_group", { y: 144, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
-      .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
-      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+        s37AnimateTemperature(48, 'तीव्र अपवाद', 1.6);
+      });
 
-    if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+    s37AppendPopTest(s37_currentTimeline, 3, function() {
+      if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+      gsap.to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    });
   }
 }
 
@@ -15303,22 +15306,34 @@ function sim37ResetAction() {
     gsap.killTweensOf("#s37_dropper_bulb");
     gsap.killTweensOf("#s37_falling_drop");
     gsap.killTweensOf("#s37_acid_ripple");
-    gsap.killTweensOf("#s37_mercury_column");
-    gsap.killTweensOf("#s37_mercury_glow");
+    gsap.killTweensOf("#s37_mercury_line");
+    gsap.killTweensOf("#s37_mercury_tip");
+    gsap.killTweensOf("#s37_scale_pointer");
+    gsap.killTweensOf("#s37_temp_display_box");
     gsap.killTweensOf("#s37_splinter_rig");
     gsap.killTweensOf("#s37_pop_flash");
+    gsap.killTweensOf("#s37_pop_ring");
+    gsap.killTweensOf("#s37_pop_label");
     gsap.killTweensOf("#s37_popup_badge");
-    gsap.killTweensOf("#s37_temp_badge_group");
 
     gsap.set("#s37_dropper_rig", { x: 560, y: 35, opacity: 1, clearProps: "all" });
     gsap.set("#s37_dropper_bulb", { scaleY: 1, clearProps: "scaleY" });
     gsap.set("#s37_falling_drop", { opacity: 0, y: 120 });
     gsap.set("#s37_acid_ripple", { opacity: 0, scale: 1 });
-    gsap.set("#s37_mercury_column", { height: 115, y: 205 });
-    gsap.set("#s37_mercury_glow", { y: 0 });
-    gsap.set("#s37_temp_badge_group", { y: 195, scale: 1 });
-    gsap.set("#s37_splinter_rig", { opacity: 0, y: 0 });
+    
+    // Reset Mercury column to 25°C mark (y2=205)
+    var mLine = document.getElementById('s37_mercury_line');
+    if (mLine) mLine.setAttribute('y2', '205');
+    var mTip = document.getElementById('s37_mercury_tip');
+    if (mTip) mTip.setAttribute('cy', '205');
+    var sPointer = document.getElementById('s37_scale_pointer');
+    if (sPointer) sPointer.setAttribute('transform', 'translate(-8, 205)');
+
+    gsap.set("#s37_temp_display_box", { scale: 1 });
+    gsap.set("#s37_splinter_rig", { x: 480, y: 20, opacity: 0 });
     gsap.set("#s37_pop_flash", { opacity: 0, scale: 1 });
+    gsap.set("#s37_pop_ring", { opacity: 0, scale: 1 });
+    gsap.set("#s37_pop_label", { opacity: 0 });
     gsap.set("#s37_popup_badge", { opacity: 0, scale: 0.6 });
   }
 
