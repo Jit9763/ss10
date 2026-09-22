@@ -173,8 +173,8 @@
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
-      padding: 28px;
-      margin: 40px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 12px 32px rgba(0,0,0,0.06);
       font-size: 15px;
       line-height: 1.5;
@@ -455,8 +455,8 @@
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
-      padding: 28px;
-      margin: 40px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 12px 32px rgba(0,0,0,0.06);
     }
 
@@ -490,9 +490,10 @@
     /* Simulator 16:9 Projector Stage */
     .sim-stage {
       width: 100% !important;
-      aspect-ratio: 1200 / 540 !important;
+      aspect-ratio: 16 / 9 !important;
       height: auto !important;
-      min-height: 480px !important;
+      max-height: 510px !important;
+      min-height: 400px !important;
       background: #ffffff !important;
       border: 2.5px solid #cbd5e1 !important;
       border-radius: 14px !important;
@@ -506,7 +507,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 8px;
     }
 
     .sim-btn {
@@ -715,8 +716,8 @@
       background: #ffffff;
       border: 2px solid #94a3b8;
       border-radius: 14px;
-      padding: 22px;
-      margin: 28px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     }
 
@@ -754,7 +755,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 8px;
     }
 
     .control-group {
@@ -815,9 +816,10 @@
         /* Projector 16:9 Widescreen Simulator Stage */
     .sim-stage {
       width: 100% !important;
-      aspect-ratio: 1200 / 540 !important;
+      aspect-ratio: 16 / 9 !important;
       height: auto !important;
-      min-height: 480px !important;
+      max-height: 510px !important;
+      min-height: 400px !important;
       background: #ffffff !important;
       border: 2.5px solid #cbd5e1 !important;
       border-radius: 14px !important;
@@ -831,8 +833,8 @@
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
-      padding: 30px;
-      margin: 40px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
@@ -1140,9 +1142,10 @@
 
 .sim-stage {
       width: 100% !important;
-      aspect-ratio: 1200 / 540 !important;
+      aspect-ratio: 16 / 9 !important;
       height: auto !important;
-      min-height: 480px !important;
+      max-height: 510px !important;
+      min-height: 400px !important;
       background: #ffffff !important;
       border: 2.5px solid #cbd5e1 !important;
       border-radius: 14px !important;
@@ -2024,19 +2027,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> धातुएं ऊष्मा की सुचालक होती हैं (Cu व Al सर्वोत्तम; Pb व Hg मंदतम)। सिरे पर तापन से मोम पिघलकर पिन गिरती है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s31_btn_play" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 20px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31PlayAuto()">
+        <button class="sim-btn" id="s31_btn_play" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31PlayAuto()">
           <i class="fas fa-play"></i> ▶ संपूर्ण ऑटो-प्ले (बर्नर तापन ➔ मोम पिघलना ➔ पिन गिरना)
         </button>
-        <button class="sim-btn" id="s31_btn_cu" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('cu')">
+        <button class="sim-btn" id="s31_btn_cu" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('cu')">
           तांबा (Cu - तीव्र चालन ⚡)
         </button>
-        <button class="sim-btn" id="s31_btn_al" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('al')">
+        <button class="sim-btn" id="s31_btn_al" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('al')">
           एल्युमिनियम (Al - मध्यम चालन)
         </button>
-        <button class="sim-btn" id="s31_btn_pb" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('pb')">
+        <button class="sim-btn" id="s31_btn_pb" style="background:#b45309; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31SelectMetal('pb')">
           लेड / सीसा (Pb - मंद/कुचालक ⚠️)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim31Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -2045,8 +2048,8 @@
         <div id="s31_pbar" style="width:0%; height:100%; background:#16a34a; transition:width 0.3s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim31" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim31" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -2516,25 +2519,25 @@
         💡 <strong>प्रयोग सूत्र:</strong> मुक्त इलेक्ट्रॉनों के कारण धातुएं विद्युत की सुचालक हैं। अधातु होने पर भी कार्बन का अपररूप ग्रेफाइट सुचालक है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('cu')">
+        <button class="sim-btn" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('cu')">
           1. तांबे की छड़ (Cu धातु ➔ तीव्र बल्ब 💡)
         </button>
-        <button class="sim-btn" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('fe')">
+        <button class="sim-btn" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('fe')">
           2. लोहे की कील (Fe धातु ➔ बल्ब प्रज्वलित 💡)
         </button>
-        <button class="sim-btn" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('pencil')">
+        <button class="sim-btn" style="background:#7c3aed; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('pencil')">
           ⭐ 3. पेंसिल दोनों ओर से छीली हुई (ग्रेफाइट ➔ सुचालक 💡)
         </button>
-        <button class="sim-btn" style="background:#f1f5f9; color:#0f172a; border:1.5px solid #cbd5e1; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('coal')">
+        <button class="sim-btn" style="background:#f1f5f9; color:#0f172a; border:1.5px solid #cbd5e1; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32TestSample('coal')">
           4. कोयला की डली (कार्बन अधातु ➔ बल्ब बंद ❌)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim32Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim32" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim32" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -3036,19 +3039,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> अपवाद: मर्करी (द्रव धातु), ब्रोमीन (द्रव अधातु), आयोडीन (चमकीली अधातु), Na/K (मुलायम धातुएं), हीरा (कठोरतम)।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="sim-btn" id="s33_btn_hg" style="background:#0284c7; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('hg')">
+          <button class="sim-btn" id="s33_btn_hg" style="background:#0284c7; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('hg')">
             1. पारा (Mercury - Hg) ➔ द्रव धातु
           </button>
-          <button class="sim-btn" id="s33_btn_ga" style="background:#ea580c; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('ga')">
+          <button class="sim-btn" id="s33_btn_ga" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('ga')">
             2. गैलियम (Ga) ➔ हथेली पर पिघलना
           </button>
-          <button class="sim-btn" id="s33_btn_i2" style="background:#9333ea; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('i2')">
+          <button class="sim-btn" id="s33_btn_i2" style="background:#9333ea; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('i2')">
             3. आयोडीन (I₂) ➔ चमकीली अधातु
           </button>
-          <button class="sim-btn" id="s33_btn_diamond" style="background:#f1f5f9; color:#0f172a; border:1.5px solid #cbd5e1; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('diamond')">
+          <button class="sim-btn" id="s33_btn_diamond" style="background:#f1f5f9; color:#0f172a; border:1.5px solid #cbd5e1; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('diamond')">
             4. हीरा (Diamond) ➔ कठोरतम पदार्थ
           </button>
-          <button class="sim-btn" id="s33_btn_na" style="background:#16a34a; color:#fff; font-size:16px; font-weight:900; padding:10px 16px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('na')">
+          <button class="sim-btn" id="s33_btn_na" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim33ShowException('na')">
             5. सोडियम (Na) ➔ चाकू से कटना
           </button>
         </div>
@@ -3080,7 +3083,7 @@
         </div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #f0fdf4 0%, #e8f5e9 100%); border:3px solid #16a34a; border-radius:14px; position:relative; overflow:hidden;">
         <!-- 10s HD VIDEO OVERLAY CONTAINER (Left 690px) -->
         <div id="s33_video_container" style="display:none; position:absolute; left:18px; top:15px; width:690px; height:505px; border-radius:14px; overflow:hidden; background:#f1f5f9; border:3px solid #16a34a; box-shadow:0 8px 24px rgba(0,0,0,0.25); z-index:10;">
           <div style="position:relative; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#f8fafc;">
@@ -3099,7 +3102,7 @@
           </div>
         </div>
 
-        <svg id="svg_sim33" viewBox="0 0 1200 540" width="100%" height="100%">
+        <svg id="svg_sim33" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -3777,10 +3780,10 @@
       <div class="sim-controls-grid" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
         <!-- Element Selection -->
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="sim-btn" id="s34_btn_mg" style="background:#16a34a; color:#ffffff; font-size:16px; font-weight:900; padding:10px 18px; border-radius:8px; border:2px solid #15803d; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.12);" onclick="sim34SelectOxide('mg')">
+          <button class="sim-btn" id="s34_btn_mg" style="background:#16a34a; color:#ffffff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #15803d; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.12);" onclick="sim34SelectOxide('mg')">
             1. मैग्नीशियम (धातु Mg) ➔ क्षारकीय भस्म
           </button>
-          <button class="sim-btn" id="s34_btn_s" style="background:#ffffff; color:#b91c1c; font-size:16px; font-weight:900; padding:10px 18px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim34SelectOxide('s')">
+          <button class="sim-btn" id="s34_btn_s" style="background:#ffffff; color:#b91c1c; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim34SelectOxide('s')">
             2. सल्फर (अधातु S) ➔ अम्लीय गैस
           </button>
         </div>
@@ -3819,7 +3822,7 @@
       </div>
 
       <!-- SIMULATOR STAGE / VIDEO WRAPPER -->
-      <div class="sim-stage" style="aspect-ratio:16/9; min-height:480px; background:#3b4720; border:4px solid #166534; border-radius:16px; position:relative; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:#3b4720; border:4px solid #166534; border-radius:16px; position:relative; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
         
         <!-- 1. VIDEO CONTAINER (Dual Mode) -->
         <div id="s34_video_container" style="display:none; width:100%; height:100%; position:relative; background:#f8fafc;">
@@ -3827,9 +3830,7 @@
             <source id="s34_video_source" src="media/sim34_oxides_nature.mp4" type="video/mp4">
             आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
           </video>
-          <button onclick="sim34SetMode('sim')" style="position:absolute; bottom:18px; right:20px; background:rgba(22,163,74,0.95); color:#ffffff; font-size:14px; font-weight:900; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; backdrop-filter:blur(6px); box-shadow:0 3px 12px rgba(0,0,0,0.4); z-index:10;">
-            🔬 16:9 सिमुलेटर पर लौटें
-          </button>
+          
         </div>
 
         <!-- 2. OLABS HIGH-FIDELITY VECTOR SVG STAGE -->
@@ -4378,19 +4379,19 @@
       <div class="sim-controls-grid" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
         <!-- Element / Reaction Selection -->
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="sim-btn" id="s35_btn_al_acid" style="background:#16a34a; color:#ffffff; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #15803d; cursor:pointer; box-shadow:0 2px 8px rgba(22,163,74,0.2);" onclick="sim35SelectMode('al_acid')">
+          <button class="sim-btn" id="s35_btn_al_acid" style="background:#16a34a; color:#ffffff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #15803d; cursor:pointer; box-shadow:0 2px 8px rgba(22,163,74,0.2);" onclick="sim35SelectMode('al_acid')">
             1. Al₂O₃ + तनु अम्ल (HCl ➔ AlCl₃ लवण)
           </button>
-          <button class="sim-btn" id="s35_btn_al_base" style="background:#ffffff; color:#7c3aed; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('al_base')">
+          <button class="sim-btn" id="s35_btn_al_base" style="background:#ffffff; color:#7c3aed; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('al_base')">
             2. Al₂O₃ + तनु क्षार (NaOH ➔ NaAlO₂ लवण)
           </button>
-          <button class="sim-btn" id="s35_btn_dual" style="background:#ffffff; color:#0284c7; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35RunDualCycle()">
+          <button class="sim-btn" id="s35_btn_dual" style="background:#ffffff; color:#0284c7; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35RunDualCycle()">
             ⚖️ दोनों उभयधर्मी परीक्षण (अम्ल + क्षारक चक्र)
           </button>
-          <button class="sim-btn" id="s35_btn_zno" style="background:#ffffff; color:#0284c7; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('zno')">
+          <button class="sim-btn" id="s35_btn_zno" style="background:#ffffff; color:#0284c7; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('zno')">
             3. ZnO उभयधर्मी परीक्षण (जिंक ऑक्साइड)
           </button>
-          <button class="sim-btn" id="s35_btn_combustion" style="background:#ffffff; color:#b45309; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('combustion')">
+          <button class="sim-btn" id="s35_btn_combustion" style="background:#ffffff; color:#b45309; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim35SelectMode('combustion')">
             4. धातु दहन (Al बर्नर दहन)
           </button>
         </div>
@@ -4429,16 +4430,14 @@
       </div>
 
       <!-- SIMULATOR STAGE / VIDEO WRAPPER (16:9 Super Glassy) -->
-      <div style="position:relative; width:100%; border-radius:14px; overflow:hidden; border:2.5px solid #cbd5e1; box-shadow:0 8px 24px rgba(0,0,0,0.08); background:#d8f3dc;">
+      <div style="position:relative; width:100%; aspect-ratio:16/9 !important; max-height:510px !important; min-height:400px !important; border-radius:14px; overflow:hidden; border:2.5px solid #cbd5e1; box-shadow:0 8px 24px rgba(0,0,0,0.08); background:#d8f3dc;">
         
         <!-- Video Player Mode (Initially Hidden) -->
         <div id="s35_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#f8fafc;">
           <video id="s35_video_player" style="width:100%; height:100%; object-fit:cover; display:block;" controls playsinline preload="metadata">
             <source id="s35_video_source" src="media/sim35_amphoteric.mp4" type="video/mp4">
           </video>
-          <button onclick="sim35SetDisplay('sim')" style="position:absolute; bottom:18px; right:20px; background:#16a34a; color:#ffffff; font-size:14px; font-weight:900; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 3px 12px rgba(0,0,0,0.25); z-index:10;">
-            🔬 वापस 16:9 सिमुलेटर पर जाएं
-          </button>
+          
         </div>
 
         <!-- 16:9 SUPER GLASSY SVG LAB -->
@@ -4880,7 +4879,7 @@
       </div>
 
       <!-- MAIN 16:9 SCREEN CONTAINER -->
-      <div style="position:relative; width:100%; aspect-ratio:16/9; max-height:560px; min-height:420px; background:#0f172a; border-radius:14px; overflow:hidden; border:2.5px solid #334155; box-shadow:0 12px 36px rgba(0,0,0,0.35);">
+      <div style="position:relative; width:100%; aspect-ratio:16/9 !important; max-height:510px !important; min-height:400px !important; background:#0f172a; border-radius:14px; overflow:hidden; border:2.5px solid #334155; box-shadow:0 12px 36px rgba(0,0,0,0.35);">
         
         <!-- MODE A: 16:9 INTERACTIVE 3D LAB VIEW -->
         <div id="s36_sim_mode" style="width:100%; height:100%; position:relative;">
@@ -5814,16 +5813,16 @@
         💡 <strong>प्रयोग सूत्र:</strong> सांद्र HCl (3 भाग) + सांद्र HNO₃ (1 भाग) का ताजा मिश्रण, जो उत्कृष्ट धातुओं (सोना Au व प्लैटिनम Pt) को भी घोल देता है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s38_btn_mix" style="background:#d97706; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38MixAcids()">
+        <button class="sim-btn" id="s38_btn_mix" style="background:#d97706; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38MixAcids()">
           1. 3:1 अनुपात में अम्ल मिलाएं (सधूम ऐक्वारेजिया निर्माण ⚗️)
         </button>
-        <button class="sim-btn" id="s38_btn_drop" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38DropGold()">
+        <button class="sim-btn" id="s38_btn_drop" style="background:#b45309; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38DropGold()">
           2. सोने का टुकड़ा (Au) डालें ➔ पूर्ण विलीन 🥇
         </button>
-        <button class="sim-btn" id="s38_btn_single" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38SingleAcidTest()">
+        <button class="sim-btn" id="s38_btn_single" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38SingleAcidTest()">
           3. अकेला अम्ल परीक्षण (HCl या HNO₃ ➔ कोई विगलन नहीं ❌)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim38Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -5832,8 +5831,8 @@
         <div id="s38_pbar" style="width:0%; height:100%; background:#d97706; transition:width 0.3s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%); border:3px solid #d97706; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim38" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%); border:3px solid #d97706; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim38" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -6274,19 +6273,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> अधिक सक्रिय धातु (Fe/Zn) कम सक्रिय धातु (Cu) को उसके लवण (CuSO₄) के जलीय विलयन से विस्थापित कर देती है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s39_btn_fecu" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('fe_cu')">
+        <button class="sim-btn" id="s39_btn_fecu" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('fe_cu')">
           1. Fe कील + CuSO₄ (नीला ➔ हल्का हरा + Cu परत)
         </button>
-        <button class="sim-btn" id="s39_btn_cufe" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('cu_fe')">
+        <button class="sim-btn" id="s39_btn_cufe" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('cu_fe')">
           2. Cu तार + FeSO₄ (कोई अभिक्रिया नहीं ❌)
         </button>
-        <button class="sim-btn" id="s39_btn_zncu" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('zn_cu')">
+        <button class="sim-btn" id="s39_btn_zncu" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('zn_cu')">
           3. Zn टुकड़ा + CuSO₄ (नीला ➔ रंगहीन)
         </button>
-        <button class="sim-btn" id="s39_btn_cuag" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('cu_ag')">
+        <button class="sim-btn" id="s39_btn_cuag" style="background:#7c3aed; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Select('cu_ag')">
           4. Cu तार + AgNO₃ (रंगहीन ➔ नीला + Ag चमकीली परत)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim39Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -6295,8 +6294,8 @@
         <div id="s39_pbar" style="width:0%; height:100%; background:#2563eb; transition:width 0.3s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%); border:3px solid #2563eb; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim39" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%); border:3px solid #2563eb; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim39" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -6781,19 +6780,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> Na (2,8,1) ➔ Na⁺ + e⁻ तथा Cl (2,8,7) + e⁻ ➔ Cl⁻; स्थिर वैद्युत आकर्षण से आयनिक बंध बनता है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s310_btn_step1" style="background:#059669; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(1)">
+        <button class="sim-btn" id="s310_btn_step1" style="background:#059669; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(1)">
           चरण 1: उदासीन परमाणु (Na 2,8,1 व Cl 2,8,7)
         </button>
-        <button class="sim-btn" id="s310_btn_step2" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(2)">
+        <button class="sim-btn" id="s310_btn_step2" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(2)">
           चरण 2: इलेक्ट्रॉन स्थानांतरण (e⁻ छलांग ⚡)
         </button>
-        <button class="sim-btn" id="s310_btn_step3" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(3)">
+        <button class="sim-btn" id="s310_btn_step3" style="background:#7c3aed; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(3)">
           चरण 3: Na⁺ व Cl⁻ आयन निर्माण (स्थायी अष्टक)
         </button>
-        <button class="sim-btn" id="s310_btn_step4" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(4)">
+        <button class="sim-btn" id="s310_btn_step4" style="background:#dc2626; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310SetStep(4)">
           चरण 4: स्थिरवैद्युत जालक (NaCl क्रिस्टल)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim310Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -6802,8 +6801,8 @@
         <div id="s310_pbar" style="width:25%; height:100%; background:#059669; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%); border:3px solid #059669; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim310" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%); border:3px solid #059669; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim310" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -7283,13 +7282,13 @@
         💡 <strong>प्रयोग सूत्र:</strong> Mg (2,8,2) ➔ Mg²⁺ + 2e⁻; यह 2 इलेक्ट्रॉन दो क्लोरीन परमाणुओं को देकर स्थिर MgCl₂ संरचना बनाता है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s311_btn_play" style="background:#0284c7; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311PlayTransfer()">
+        <button class="sim-btn" id="s311_btn_play" style="background:#0284c7; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311PlayTransfer()">
           ▶ 2 इलेक्ट्रॉनों का दो Cl परमाणुओं में स्थानांतरण ⚡
         </button>
-        <button class="sim-btn" id="s311_btn_formula" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311ShowFormula()">
+        <button class="sim-btn" id="s311_btn_formula" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311ShowFormula()">
           इलेक्ट्रॉन-बिंदु सूत्र (Lewis Dot Formula 📋)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim311Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -7298,8 +7297,8 @@
         <div id="s311_pbar" style="width:0%; height:100%; background:#0284c7; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%); border:3px solid #0284c7; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim311" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%); border:3px solid #0284c7; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim311" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -7728,19 +7727,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> ठोस अवस्था में आयन गतिहीन (कुचालक), परन्तु गलित/जलीय अवस्था में मुक्त आयनों के कारण विद्युत के सुचालक होते हैं।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s312_btn_solid" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('solid')">
+        <button class="sim-btn" id="s312_btn_solid" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('solid')">
           1. ठोस NaCl क्रिस्टल (बल्ब OFF ❌)
         </button>
-        <button class="sim-btn" id="s312_btn_aqueous" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('aqueous')">
+        <button class="sim-btn" id="s312_btn_aqueous" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('aqueous')">
           2. जलीय NaCl विलयन (बल्ब प्रदीप्त 💡⚡)
         </button>
-        <button class="sim-btn" id="s312_btn_molten" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('molten')">
+        <button class="sim-btn" id="s312_btn_molten" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312SetState('molten')">
           3. गलित NaCl (801°C पर मुक्त आयन ♨️)
         </button>
-        <button class="sim-btn" id="s312_btn_brittle" style="background:#b91c1c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312HammerTest()">
+        <button class="sim-btn" id="s312_btn_brittle" style="background:#b91c1c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312HammerTest()">
           4. हथौड़ा आघात (भंगुरता परीक्षण 🔨)
         </button>
-        <button class="sim-btn" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312Reset()">
+        <button class="sim-btn" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim312Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -7749,8 +7748,8 @@
         <div id="s312_pbar" style="width:0%; height:100%; background:#7c3aed; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #faf5ff 0%, #ede9fe 100%); border:3px solid #7c3aed; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim312" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #faf5ff 0%, #ede9fe 100%); border:3px solid #7c3aed; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim312" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -8241,16 +8240,16 @@
         💡 <strong>प्रयोग सूत्र:</strong> सिनाबार (HgS) को वायु में गर्म करने पर पहले HgO और अधिक तापन पर मर्करी धातु (2HgO ➔ 2Hg + O₂) प्राप्त होती है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s313_btn_step1" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Step(1)">
+        <button class="sim-btn" id="s313_btn_step1" style="background:#dc2626; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Step(1)">
           चरण 1: HgS + O₂ तापन (मर्क्यूरिक ऑक्साइड HgO निर्माण)
         </button>
-        <button class="sim-btn" id="s313_btn_step2" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Step(2)">
+        <button class="sim-btn" id="s313_btn_step2" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Step(2)">
           चरण 2: HgO का अति-तापन (तरल पारा Hg निक्षेपण 💧)
         </button>
-        <button class="sim-btn" id="s313_btn_cu2s" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313CopperGlance()">
+        <button class="sim-btn" id="s313_btn_cu2s" style="background:#b45309; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313CopperGlance()">
           कॉपर अयस्क (Cu₂S का स्वतः अपचयन ➔ Cu)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim313Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -8259,8 +8258,8 @@
         <div id="s313_pbar" style="width:0%; height:100%; background:#dc2626; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #fee2e2 0%, #fecaca 100%); border:3px solid #dc2626; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim313" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #fee2e2 0%, #fecaca 100%); border:3px solid #dc2626; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim313" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -8734,16 +8733,16 @@
         💡 <strong>प्रयोग सूत्र:</strong> भर्जन: सल्फाइड अयस्क + O₂ (ZnS + O₂ ➔ ZnO + SO₂)। निस्तापन: कार्बोनेट अयस्क - O₂ (ZnCO₃ ➔ ZnO + CO₂)।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s314_btn_roast" style="background:#d97706; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('roast')">
+        <button class="sim-btn" id="s314_btn_roast" style="background:#d97706; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('roast')">
           1. भर्जन (ZnS + O₂ ➔ ZnO + SO₂ ⬆ वायु चालू)
         </button>
-        <button class="sim-btn" id="s314_btn_calc" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('calc')">
+        <button class="sim-btn" id="s314_btn_calc" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('calc')">
           2. निस्तापन (ZnCO₃ ➔ ZnO + CO₂ ⬆ वायु बंद)
         </button>
-        <button class="sim-btn" id="s314_btn_reduce" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('reduce')">
+        <button class="sim-btn" id="s314_btn_reduce" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Select('reduce')">
           3. कार्बन द्वारा अपचयन (ZnO + C ➔ Zn + CO)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim314Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -8752,8 +8751,8 @@
         <div id="s314_pbar" style="width:0%; height:100%; background:#d97706; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #fef3c7 0%, #fed7aa 100%); border:3px solid #d97706; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim314" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #fef3c7 0%, #fed7aa 100%); border:3px solid #d97706; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim314" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -9200,13 +9199,13 @@
         💡 <strong>प्रयोग सूत्र:</strong> Fe₂O₃ + 2Al ➔ 2Fe(l) + Al₂O₃ + अत्यधिक ऊष्मा। गलित लोहे से रेल की पटरियों की वेल्डिंग की जाती है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s315_btn_ignite" style="background:#b91c1c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315Ignite()">
+        <button class="sim-btn" id="s315_btn_ignite" style="background:#b91c1c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315Ignite()">
           ▶ मैग्नीशियम फीते से प्रज्वलन (Ignite 3000°C ज्वाला 🔥⚡)
         </button>
-        <button class="sim-btn" id="s315_btn_weld" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315PourMoltenFe()">
+        <button class="sim-btn" id="s315_btn_weld" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315PourMoltenFe()">
           गलित लोहे का रेल पटरी की दरार में प्रवाह (वेल्डिंग 🛠️)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim315Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -9215,8 +9214,8 @@
         <div id="s315_pbar" style="width:0%; height:100%; background:#b91c1c; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #fee2e2 0%, #fed7aa 100%); border:3px solid #b91c1c; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim315" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #fee2e2 0%, #fed7aa 100%); border:3px solid #b91c1c; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim315" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -9694,13 +9693,13 @@
         💡 <strong>प्रयोग सूत्र:</strong> Na, Mg, Al कार्बन से अपचयित नहीं होते; गलित NaCl के विद्युत अपघटन में कैथोड(-) पर Na व ऐनोड(+) पर Cl₂ गैस मिलती है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s316_btn_current" style="background:#059669; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316StartElectrolysis()">
+        <button class="sim-btn" id="s316_btn_current" style="background:#059669; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316StartElectrolysis()">
           ▶ विद्युत धारा प्रवाहित करें (कैथोड पर Na जमा ➔ ऐनोड पर Cl₂ गैस 🫧)
         </button>
-        <button class="sim-btn" id="s316_btn_c_fail" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316ShowCarbonFail()">
+        <button class="sim-btn" id="s316_btn_c_fail" style="background:#dc2626; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316ShowCarbonFail()">
           कार्बन अपचयन क्यों विफल होता है? (कारण देखें ❌)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim316Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -9709,8 +9708,8 @@
         <div id="s316_pbar" style="width:0%; height:100%; background:#059669; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #d1fae5 0%, #a7f3d0 100%); border:3px solid #059669; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim316" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #d1fae5 0%, #a7f3d0 100%); border:3px solid #059669; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim316" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -10168,13 +10167,13 @@
         💡 <strong>प्रयोग सूत्र:</strong> अशुद्ध तांबा ऐनोड(+) पर घुलता है, शुद्ध तांबा कैथोड(-) पर जमा होता है; अशुद्धियां ऐनोड पंक बनाती हैं।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s317_btn_play" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317StartRefining()">
+        <button class="sim-btn" id="s317_btn_play" style="background:#b45309; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317StartRefining()">
           ▶ विद्युत अपघटन प्रारंभ (ऐनोड घुलेगा ➔ कैथोड मोटा होगा ➔ ऐनोड पंक बनेगा)
         </button>
-        <button class="sim-btn" id="s317_btn_mud" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317HighlightMud()">
+        <button class="sim-btn" id="s317_btn_mud" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317HighlightMud()">
           ऐनोड पंक (Anode Mud) का विश्लेषण (Au, Ag की उपस्थिति)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim317Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -10183,8 +10182,8 @@
         <div id="s317_pbar" style="width:0%; height:100%; background:#b45309; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #fef3c7 0%, #fed7aa 100%); border:3px solid #b45309; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim317" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #fef3c7 0%, #fed7aa 100%); border:3px solid #b45309; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim317" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -10793,19 +10792,19 @@
         💡 <strong>प्रयोग सूत्र:</strong> लोहे में जंग (Fe₂O₃•xH₂O) लगने के लिए वायु (ऑक्सीजन) तथा जल (नमी) दोनों की एक साथ उपस्थिति अनिवार्य है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s318_btn_tubeA" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('A')">
+        <button class="sim-btn" id="s318_btn_tubeA" style="background:#dc2626; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('A')">
           परखनली A: जल + वायु (भूरी जंग लगी ⚠️)
         </button>
-        <button class="sim-btn" id="s318_btn_tubeB" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('B')">
+        <button class="sim-btn" id="s318_btn_tubeB" style="background:#2563eb; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('B')">
           परखनली B: उबला जल + तेल की परत (वायु रहित 🛡️)
         </button>
-        <button class="sim-btn" id="s318_btn_tubeC" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('C')">
+        <button class="sim-btn" id="s318_btn_tubeC" style="background:#16a34a; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318SelectTube('C')">
           परखनली C: शुष्क वायु + निर्जल CaCl₂ (जल रहित 🛡️)
         </button>
-        <button class="sim-btn" id="s318_btn_timelapse" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318TimeLapse()">
+        <button class="sim-btn" id="s318_btn_timelapse" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318TimeLapse()">
           ▶ 3 दिन का टाइम-लैप्स (तीनों का एक साथ अवलोकन)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim318Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -10814,8 +10813,8 @@
         <div id="s318_pbar" style="width:0%; height:100%; background:#ea580c; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #ffedd5 0%, #fed7aa 100%); border:3px solid #ea580c; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim318" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #ffedd5 0%, #fed7aa 100%); border:3px solid #ea580c; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim318" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -11321,16 +11320,16 @@
         💡 <strong>प्रयोग सूत्र:</strong> लोहे व इस्पात पर गलित जिंक (Zn) की परत चढ़ाना; खरोंच लगने पर भी जिंक पहले ऑक्सीकृत होकर रक्षा करता है।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s319_btn_dip" style="background:#0284c7; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319DipZinc()">
+        <button class="sim-btn" id="s319_btn_dip" style="background:#0284c7; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319DipZinc()">
           ▶ लोहे की चादर को गलित जिंक (450°C) में डुबोएं (Coating प्रक्रिया)
         </button>
-        <button class="sim-btn" id="s319_btn_scratch" style="background:#ea580c; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319ScratchTest()">
+        <button class="sim-btn" id="s319_btn_scratch" style="background:#ea580c; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319ScratchTest()">
           खरोंच परीक्षण (परत टूटने पर भी बलिदानी सुरक्षा 🛡️)
         </button>
-        <button class="sim-btn" id="s319_btn_unprotected" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319ShowUnprotected()">
+        <button class="sim-btn" id="s319_btn_unprotected" style="background:#dc2626; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319ShowUnprotected()">
           बिना लेपन वाला लोहा (जंग लगना ❌)
         </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319Reset()">
+        <button class="sim-btn" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim319Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -11339,8 +11338,8 @@
         <div id="s319_pbar" style="width:0%; height:100%; background:#0284c7; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #e0f2fe 0%, #bae6fd 100%); border:3px solid #0284c7; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim319" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #e0f2fe 0%, #bae6fd 100%); border:3px solid #0284c7; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim319" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
@@ -11780,22 +11779,22 @@
         💡 <strong>प्रयोग सूत्र:</strong> पीतल (Cu+Zn), कांसा (Cu+Sn), सोल्डर (Pb+Sn गलनांक कम), स्टेनलेस स्टील (Fe+Ni+Cr), अमलगम (Hg मिश्रधातु)।
       </p>
 <div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s320_btn_brass" style="background:#eab308; color:#000; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('brass')">
+        <button class="sim-btn" id="s320_btn_brass" style="background:#eab308; color:#000; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('brass')">
           1. पीतल (Brass: Cu + Zn)
         </button>
-        <button class="sim-btn" id="s320_btn_bronze" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('bronze')">
+        <button class="sim-btn" id="s320_btn_bronze" style="background:#b45309; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('bronze')">
           2. कांसा (Bronze: Cu + Sn)
         </button>
-        <button class="sim-btn" id="s320_btn_solder" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('solder')">
+        <button class="sim-btn" id="s320_btn_solder" style="background:#64748b; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('solder')">
           3. सोल्डर (Solder: Pb + Sn निम्न गलनांक)
         </button>
-        <button class="sim-btn" id="s320_btn_steel" style="background:#0284c7; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('steel')">
+        <button class="sim-btn" id="s320_btn_steel" style="background:#0284c7; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('steel')">
           4. स्टेनलेस स्टील (Fe + Ni + Cr जंगरहित)
         </button>
-        <button class="sim-btn" id="s320_btn_gold" style="background:#d97706; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('gold')">
+        <button class="sim-btn" id="s320_btn_gold" style="background:#d97706; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320SelectAlloy('gold')">
           5. 22-कैरट सोना (22 भाग Au + 2 भाग Cu/Ag)
         </button>
-        <button class="sim-btn" style="background:#475569; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320Reset()">
+        <button class="sim-btn" style="background:#475569; color:#fff; font-size: 12.5px; font-weight:900; padding: 6px 12px; border-radius:8px; border:none; cursor:pointer;" onclick="sim320Reset()">
           <i class="fas fa-redo"></i> 🔄 रीसेट
         </button>
       </div>
@@ -11804,8 +11803,8 @@
         <div id="s320_pbar" style="width:20%; height:100%; background:#7c3aed; transition:width 0.4s ease;"></div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #ede9fe 0%, #ddd6fe 100%); border:3px solid #7c3aed; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim320" viewBox="0 0 1200 540" width="100%" height="100%">
+      <div class="sim-stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background:linear-gradient(180deg, #ede9fe 0%, #ddd6fe 100%); border:3px solid #7c3aed; border-radius:14px; position:relative; overflow:hidden;">
+        <svg id="svg_sim320" viewBox="0 0 1200 540" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 
   <defs>
     <!-- ==========================================
