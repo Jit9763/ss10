@@ -177,8 +177,8 @@
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
-      padding: 28px;
-      margin: 40px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 12px 32px rgba(0,0,0,0.06);
       font-size: 15px;
       line-height: 1.5;
@@ -233,8 +233,8 @@
     }
 
     .sim-card .sim-btn {
-      padding: 9px 16px;
-      font-size: 14.5px !important;
+      padding: 6px 12px !important;
+      font-size: 12.5px !important;
       font-weight: 900 !important;
       border-radius: 8px;
       border: none;
@@ -459,8 +459,8 @@
       background: #ffffff;
       border: 3px solid #cbd5e1;
       border-radius: 20px;
-      padding: 28px;
-      margin: 40px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
       box-shadow: 0 12px 32px rgba(0,0,0,0.06);
     }
 
@@ -491,31 +491,37 @@
       border-radius: 20px;
     }
 
-    /* Simulator 16:9 Projector Stage */
+    /* Simulator 16:9 Standard Screen Container (Zero-Scroll Format) */
     .sim-stage {
       width: 100% !important;
-      aspect-ratio: 1200 / 540 !important;
+      aspect-ratio: 16 / 9 !important;
       height: auto !important;
-      min-height: 480px !important;
-      background: #ffffff !important;
-      border: 2.5px solid #cbd5e1 !important;
-      border-radius: 14px !important;
+      max-height: 510px !important;
+      min-height: 400px !important;
+      background: #0f172a !important;
+      border: 2px solid #334155 !important;
+      border-radius: 12px !important;
       position: relative !important;
       overflow: hidden !important;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
     }
 
     /* Controls Grid */
     .sim-controls-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 7px !important;
+      margin-bottom: 10px !important;
+      background: #f8fafc !important;
+      border: 1.5px solid #e2e8f0 !important;
+      border-radius: 10px !important;
+      padding: 8px 12px !important;
+      align-items: center !important;
     }
 
     .sim-btn {
-      padding: 9px 16px;
-      font-size: 14.5px;
+      padding: 6px 12px;
+      font-size: 12.5px;
       font-weight: 900;
       border-radius: 8px;
       border: none;
@@ -755,10 +761,15 @@
     }
 
     .sim-controls-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 7px !important;
+      margin-bottom: 10px !important;
+      background: #f8fafc !important;
+      border: 1.5px solid #e2e8f0 !important;
+      border-radius: 10px !important;
+      padding: 8px 12px !important;
+      align-items: center !important;
     }
 
     .control-group {
@@ -816,18 +827,19 @@
       background: #047857;
     }
 
-        /* Projector 16:9 Widescreen Simulator Stage */
+        /* Simulator 16:9 Standard Screen Container (Zero-Scroll Format) */
     .sim-stage {
       width: 100% !important;
-      aspect-ratio: 1200 / 540 !important;
+      aspect-ratio: 16 / 9 !important;
       height: auto !important;
-      min-height: 480px !important;
-      background: #ffffff !important;
-      border: 2.5px solid #cbd5e1 !important;
-      border-radius: 14px !important;
+      max-height: 510px !important;
+      min-height: 400px !important;
+      background: #0f172a !important;
+      border: 2px solid #334155 !important;
+      border-radius: 12px !important;
       position: relative !important;
       overflow: hidden !important;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
     }
     
     .sim-card {
@@ -1247,12 +1259,16 @@
 }
 
 .sim-controls-grid {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 7px !important;
+      margin-bottom: 10px !important;
+      background: #f8fafc !important;
+      border: 1.5px solid #e2e8f0 !important;
+      border-radius: 10px !important;
+      padding: 8px 12px !important;
+      align-items: center !important;
+    }
 
 .sim-btn {
   background: #2563eb;
@@ -1611,7 +1627,7 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim1_pbar"></div></div>
 
-      <div class="sim-stage" id="sim1_stage" style="aspect-ratio: 1200 / 620 !important; min-height: 520px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+      <div class="sim-stage" id="sim1_stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
 <svg id="s1_svg" viewBox="0 0 800 340" style="width:100%; height:100%; display:block;">
         <defs>
           <linearGradient id="s1_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -1882,7 +1898,7 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim2_pbar"></div></div>
 
-      <div class="sim-stage" id="sim2_stage" style="aspect-ratio: 1200 / 620 !important; min-height: 520px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+      <div class="sim-stage" id="sim2_stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
         <svg id="sim2_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
             <linearGradient id="s2_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -2214,7 +2230,7 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim3_pbar"></div></div>
 
-      <div class="sim-stage" id="sim3_stage" style="aspect-ratio: 1200 / 620 !important; min-height: 520px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
+      <div class="sim-stage" id="sim3_stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important; border-radius: 14px; position:relative; overflow:hidden;">
         <svg id="sim3_svg" viewBox="0 0 1200 540" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
             <linearGradient id="s3_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -2543,7 +2559,7 @@
 
       <div class="sim-progress-wrap"><div class="sim-progress-bar" id="sim4_pbar"></div></div>
 
-            <div class="sim-stage" id="sim4_stage" style="aspect-ratio: 1200 / 620 !important; min-height: 520px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important;">
+            <div class="sim-stage" id="sim4_stage" style="aspect-ratio: 16 / 9 !important; max-height: 510px !important; min-height: 400px !important; background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%) !important; border: 3px solid #16a34a !important;">
         <svg id="sim4_svg" viewBox="0 -80 1200 620" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMax meet">
           <defs>
             <linearGradient id="s4_labBg" x1="0%" y1="0%" x2="0%" y2="100%">
