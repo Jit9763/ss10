@@ -357,31 +357,6 @@ h1 {
   transform: scale(1.05);
 }
 
-.floating-copy-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1100;
-  background: var(--accent-gold);
-  color: #000;
-  padding: 14px 24px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-family: var(--font-main);
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
-  transition: var(--transition);
-}
-
-.floating-copy-btn:hover {
-  transform: scale(1.05);
-}
-
-.floating-copy-btn.success {
-  background: #10b981;
-  color: #ffffff;
-}
 
 /* Keyword & Callout boxes */
 .keyword-box {

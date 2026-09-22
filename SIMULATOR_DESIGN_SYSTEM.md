@@ -42,9 +42,29 @@
 | `sim2_cryst_box` | – | 2.15 Crystal water CuSO₄ | Color change heating |
 | `sim2_pop_setting_box` | – | POP Plaster setting | |
 
+### Chapter 3 (`copy_master_sci3.html`)
+| Box ID | SVG ID | Activity | Visual Look & Features |
+|---|---|---|---|
+| `sim3_oxides_box` | `sim34_olabs_svg` | 3.8 धात्विक (MgO) बनाम अधात्विक (SO₂) ऑक्साइड | **✅ CANONICAL OLABS STANDARD** Light olive wall (`#5a6a34` ➔ `#3c481e`), Certificate frame, Slate table (`#2d3b46` ➔ `#161f26`), 3D Wooden blocks (`#4a301a`), Parchment labels (`#fffff7` ➔ `#eee9ae`), Super-bright glassy borosilicate with 5px white specular strokes (`#ffffff`, 0.88), Electric blue Bunsen flame, Dual mode toggle (`🔬 सिमुलेटर` / `🎬 रियल वीडियो`). |
+
 ---
 
-## 📐 SECTION 1: STANDARD LAYOUT (हमेशा यही use करो)
+## 🏛️ SECTION 1: CANONICAL OLABS VIRTUAL LAB DESIGN SYSTEM (MANDATORY FOR ALL CHAPTER SIMULATORS)
+
+> [!IMPORTANT]
+> **सभी आगामी सिमुलेटरों हेतु स्थायी रूप से सुरक्षित (PERMANENT SPECIFICATION):**
+> सभी सिमुलेटरों में बैकग्राउंड, ग्लासवेअर, ज्वाला, लेबल और ड्यूल-मोड का यही प्रामाणिक OLabs वर्चुअल लैब मॉडल लागू रहेगा:
+> 1. **Light Olive/Moss Green Wall:** `<linearGradient id="olabs_wall">` (`#5a6a34` ➔ `#4a5928` ➔ `#3c481e`) + गोल्ड फ्रेम में दीवार पर लगा प्रमाण-पत्र (`#b45309`, `#fefce8`)।
+> 2. **Charcoal Slate Workbench:** टेबल सतह ग्रेडिएंट `#2d3b46` ➔ `#161f26` + डार्क फ्रंट बेवल किनारा `#0f171d` ➔ `#080c10`।
+> 3. **Super-Bright Glassy Apparatus:** क्रिस्टल बोरोसिलिकेट पारदर्शी बॉडी + बाहरी दीवारों पर 5px शुद्ध श्वेत स्पेक्युलर रिफ्लेक्शन आर्क्स (`stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.88"`), फ्लेयर्ड रिम व लिक्विड मेनिस्कस कर्व।
+> 4. **Elevated 3D Wooden Pedestals:** प्रत्येक कांच के उपकरण के नीचे 3D बेवेल्ड डार्क वुड ब्लॉक (`#4a301a` ➔ `#241408`) + टेबल पर 0.45 ड्राप शैडो।
+> 5. **Parchment Scroll Paper Labels:** ब्लॉक के नीचे ड्राप-शैडो युक्त क्रीम पार्चमेंट स्क्रॉल बैनर (`#fffff7` ➔ `#eee9ae`, 900 ब्लैक बोल्ड फॉन्ट)।
+> 6. **Realistic Dual-Cone Electric Blue Flame:** बर्नर की यथार्थवादी गैस ज्वाला (नीला रूट `#1e3a8a` + इलेक्ट्रिक ब्लू आउटर कोन `#1d4ed8` ➔ `#38bdf8` + चमकदार सायन/श्वेत इनर कोर `#38bdf8` ➔ `#ffffff` + सूक्ष्म GSAP स्केल फ्लिकर)।
+> 7. **Dual Mode Standard:** प्रत्येक सिमुलेटर में 16:9 इंटरैक्टिव SVG सिमुलेटर के साथ-साथ HD रियल वीडियो (MP4) टैब स्विच उपलब्ध रहेगा।
+
+---
+
+## 📐 SECTION 1B: STANDARD LAYOUT (हमेशा यही use करो)
 
 ### 1.1 SVG Canvas
 ```

@@ -158,43 +158,64 @@
   </style>
 </head>
 <body>
+    <!-- Floating Home Button -->
+  <a href="science10.html" class="floating-home-btn" title="विज्ञान पोर्टल होम">🏠</a>
+
   <header class="top-toolbar">
-    <div class="toolbar-inner">
-      <div class="toolbar-left">
-        <a href="science10.html" class="portal-nav-btn"><i class="fas fa-home"></i> 🏠 होम</a>
-        <a href="copy_master_sci6.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
-        <div class="toolbar-divider"></div>
-        <div class="toolbar-group">
-          <span class="group-label">टेक्स्ट आकार:</span>
-          <button class="tool-btn" onclick="adjustFontSize(1)">A+</button>
-          <button class="tool-btn" onclick="adjustFontSize(-1)">A-</button>
-        </div>
-        <div class="toolbar-group">
-          <span class="group-label">बोल्ड स्तर:</span>
-          <button class="tool-btn" onclick="adjustFontWeight(100)">B+</button>
-          <button class="tool-btn" onclick="adjustFontWeight(-100)">B-</button>
-        </div>
-      </div>
-      <div class="toolbar-right">
-        <button class="tool-btn btn-print" onclick="window.print()"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
-      </div>
+    <div class="toolbar-left">
+      <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
+      <a href="copy_master_sci6.html" class="portal-nav-btn" style="background:#059669; color:#ffffff; border-color:#059669;" title="थ्योरी नोट्स"><i class="fas fa-book-open"></i> 📖 संपूर्ण नोट्स व 3D सिमुलेटर ➔</a>
+    </div>
+
+    <div class="toolbar-right">
+      <!-- Font Size Controls -->
+      <button class="tool-btn" onclick="adjustFontSize(1)" title="फ़ॉन्ट आकार बढ़ाएं">
+        <i class="fas fa-font"></i> A+
+      </button>
+      <button class="tool-btn" onclick="adjustFontSize(-1)" title="फ़ॉन्ट आकार घटाएं">
+        A-
+      </button>
+
+      <!-- Font Weight Controls -->
+      <button class="tool-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएं">
+        <strong>B+</strong>
+      </button>
+      <button class="tool-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएं">
+        B-
+      </button>
+
+      <!-- Page Width Controls -->
+      <button class="tool-btn" onclick="adjustWidth(60)" title="पृष्ठ चौड़ाई बढ़ाएं">
+        <i class="fas fa-arrows-alt-h"></i> W+
+      </button>
+      <button class="tool-btn" onclick="adjustWidth(-60)" title="पृष्ठ चौड़ाई घटाएं">
+        W-
+      </button>
+
+      <!-- Simulator Line Thickness Controls -->
+      <button class="tool-btn" onclick="adjustSimStroke(1)" title="सिमुलेटर रेखाएं मोटी करें">
+        <i class="fas fa-pen-nib"></i> रेखा +
+      </button>
+      <button class="tool-btn" onclick="adjustSimStroke(-1)" title="सिमुलेटर रेखाएं पतली करें">
+        रेखा -
+      </button>
+
+      <!-- Print Button -->
+      <button class="tool-btn primary" onclick="window.print()">
+        <i class="fas fa-print"></i> प्रिंट
+      </button>
     </div>
   </header>
 
-  <main class="page-container" id="mainDocContainer">
-    <div class="qa-header-card">
-      <div class="qa-badge">NCERT Solutions & Board Question Bank • अध्याय 6</div>
-      <h1 class="qa-main-title">अध्याय 6: नियंत्रण एवं समन्वय — संपूर्ण प्रश्नोत्तर</h1>
-      <p class="qa-sub-title">Control and Coordination • तंत्रिका तंत्र, न्यूरॉन, प्रतिवर्ती चाप, मानव मस्तिष्क, पादप गतियां एवं अंतःस्रावी हॉर्मोन • आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
-        <span class="highlight-chip"><i class="fas fa-check-double"></i> 100% सटीक NCERT उत्तर</span>
-        <span class="highlight-chip"><i class="fas fa-landmark"></i> बोर्ड परीक्षा विगत 5 वर्ष (2019-2024)</span>
-        <span class="highlight-chip"><i class="fas fa-award"></i> मॉडल उत्तर लेखन शैली</span>
-      </div>
+  <div class="doc-container" id="mainDocContainer">
+    <!-- Chapter Hero -->
+    <div class="chapter-hero">
+      <span class="chapter-tag" style="background:#ecfdf5; color:#059669; border-color:#86efac;">NCERT कक्षा 10 विज्ञान | संपूर्ण प्रश्नोत्तर बैंक</span>
+      <h1 class="chapter-title">अध्याय 6: नियंत्रण एवं समन्वय — संपूर्ण प्रश्नोत्तर</h1>
+      <p class="chapter-subtitle">Control and Coordination • पाठ्यपुस्तक आंतरिक प्रश्न + अभ्यास प्रश्न + विगत 5 वर्षों के बोर्ड प्रश्नोत्तर</p>
     </div>
 
-
-    <!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
+<!-- SECTION 1: NCERT आंतरिक प्रश्नोत्तर -->
     <section class="doc-section">
       <div class="section-title-wrap">
         <span class="section-badge">भाग 1</span>
@@ -324,7 +345,7 @@
       </div>
     </section>
 
-  </main>
+  </div>
 
   <script>
     var sizeOffset = 0;
@@ -374,6 +395,15 @@
       if (weightOffset > 100) weightOffset = 100;
       applyDynamicTypography();
     }
+
+    function adjustWidth(amount) {
+      if (!window.curW) window.curW = 1040;
+      window.curW += amount;
+      var el = document.getElementById("mainDocContainer");
+      if (el) el.style.maxWidth = window.curW + "px";
+    }
+
+    function adjustSimStroke() {}
 
     document.addEventListener('DOMContentLoaded', applyDynamicTypography);
   </script>

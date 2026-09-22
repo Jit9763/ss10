@@ -253,7 +253,7 @@
     }
 
     .top-toolbar, .top-toolbar * {
-      font-size: 15px !important;
+      font-size:19px !important;
       line-height: normal !important;
     }
 
@@ -284,7 +284,7 @@
       align-items: center;
       gap: 8px;
       padding: 8px 18px;
-      font-size: 16px;
+      font-size:19px;
       font-weight: 900;
       border-radius: 10px;
       background: #f0fdf4;
@@ -302,7 +302,7 @@
 
     .tool-btn {
       padding: 7px 13px;
-      font-size: 15px;
+      font-size:19px;
       font-weight: 900;
       border-radius: 8px;
       border: 1.5px solid #cbd5e1;
@@ -1717,67 +1717,78 @@
 </head>
 <body>
 
+    <!-- Top Non-Floating Projector Toolbar -->
   <header class="top-toolbar">
     <div class="toolbar-inner">
       <div class="toolbar-left">
         <a href="science10.html" class="portal-nav-btn" title="विज्ञान पोर्टल"><i class="fas fa-home"></i> 🏠 होम</a>
         <a href="qa_master_sci4.html" class="portal-nav-btn" style="background:#0284c7; color:#ffffff; border-color:#0284c7; white-space: nowrap;" title="अभ्यास प्रश्नोत्तर"><i class="fas fa-question-circle"></i> ❓ प्रश्नोत्तर हल ➔</a>
-        <div class="toolbar-divider"></div>
-        <div class="toolbar-group">
-          <span class="group-label">टेक्स्ट आकार:</span>
-          <button class="tool-btn" onclick="adjustFontSize(1)" title="अक्षर बड़ा करें">A+</button>
-          <button class="tool-btn" onclick="adjustFontSize(-1)" title="अक्षर छोटा करें">A-</button>
-        </div>
-        <div class="toolbar-group">
-          <span class="group-label">बोल्ड स्तर:</span>
-          <button class="tool-btn" onclick="adjustFontWeight(100)" title="मोटा करें">B+</button>
-          <button class="tool-btn" onclick="adjustFontWeight(-100)" title="पतला करें">B-</button>
-        </div>
-        <div class="toolbar-group">
-          <span class="group-label">पेज चौड़ाई:</span>
-          <button class="tool-btn" onclick="adjustWidth(100)" title="पेज चौड़ा करें">W+</button>
-          <button class="tool-btn" onclick="adjustWidth(-100)" title="पेज संकरा करें">W-</button>
-        </div>
-        <div class="toolbar-group">
-          <span class="group-label">🧪 सिमुलेटर:</span>
-          <button class="tool-btn" onclick="adjustSimFontSize(1)" title="सिमुलेटर टेक्स्ट बड़ा">सिम A+</button>
-          <button class="tool-btn" onclick="adjustSimFontSize(-1)" title="सिमुलेटर टेक्स्ट छोटा">सिम A-</button>
-          <button class="tool-btn" onclick="adjustSimStroke(0.5)" title="रेखा मोटी करें">रेखा +</button>
-          <button class="tool-btn" onclick="adjustSimStroke(-0.5)" title="रेखा पतली करें">रेखा -</button>
-        </div>
       </div>
-      <div class="toolbar-right">
-        <button class="tool-btn btn-print" onclick="window.print()" title="प्रिंट या PDF सेव करें"><i class="fas fa-print"></i> 🖨️ प्रिंट</button>
-      </div>
+
+    <div class="toolbar-right">
+      <!-- Font Size Controls -->
+      <button class="tool-btn" onclick="adjustFontSize(1)" title="फ़ॉन्ट आकार बढ़ाएं">
+        <i class="fas fa-font"></i> A+
+      </button>
+      <button class="tool-btn" onclick="adjustFontSize(-1)" title="फ़ॉन्ट आकार घटाएं">
+        A-
+      </button>
+
+      <!-- Font Weight Controls -->
+      <button class="tool-btn" onclick="adjustFontWeight(100)" title="फ़ॉन्ट मोटाई बढ़ाएं">
+        <strong>B+</strong>
+      </button>
+      <button class="tool-btn" onclick="adjustFontWeight(-100)" title="फ़ॉन्ट मोटाई घटाएं">
+        B-
+      </button>
+
+      <!-- Page Width Controls -->
+      <button class="tool-btn" onclick="adjustWidth(60)" title="पृष्ठ चौड़ाई बढ़ाएं">
+        <i class="fas fa-arrows-alt-h"></i> W+
+      </button>
+      <button class="tool-btn" onclick="adjustWidth(-60)" title="पृष्ठ चौड़ाई घटाएं">
+        W-
+      </button>
+
+      <!-- Dedicated Simulator Text Size Controls -->
+      <button class="tool-btn" onclick="adjustSimFontSize(1)" style="background:#eff6ff; color:#1d4ed8; border-color:#93c5fd;" title="सिमुलेटर का टेक्स्ट बड़ा करें">
+        <i class="fas fa-flask"></i> सिम A+
+      </button>
+      <button class="tool-btn" onclick="adjustSimFontSize(-1)" style="background:#eff6ff; color:#1d4ed8; border-color:#93c5fd;" title="सिमुलेटर का टेक्स्ट छोटा करें">
+        सिम A-
+      </button>
+
+      <!-- Simulator Line Thickness Controls -->
+      <button class="tool-btn" onclick="adjustSimStroke(1)" title="सिमुलेटर रेखाएं मोटी करें">
+        <i class="fas fa-pen-nib"></i> रेखा +
+      </button>
+      <button class="tool-btn" onclick="adjustSimStroke(-1)" title="सिमुलेटर रेखाएं पतली करें">
+        रेखा -
+      </button>
+
+      <!-- Print Button -->
+      <button class="tool-btn primary" onclick="window.print()" title="प्रिंट करें">
+        <i class="fas fa-print"></i> प्रिंट
+      </button>
+    </div>
     </div>
   </header>
 
-  <main class="page-container" id="mainDocContainer">
+  <!-- Floating ONLY Home Button -->
+  <a href="science10.html" class="floating-home-btn" title="मुख्य विज्ञान पोर्टल पर जाएं">
+    🏠
+  </a>
 
-    <div class="chapter-header-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 5px solid #2563eb; border-radius: 24px; padding: 35px; margin-bottom: 40px; color: #ffffff; box-shadow: 0 12px 36px rgba(37,99,235,0.25);">
-      <div class="chapter-badge" style="display:inline-block; background:#2563eb; color:#ffffff; font-size:20pt; font-weight:900; padding:6px 20px; border-radius:30px; margin-bottom:14px; -webkit-text-stroke:0px;">
-        NCERT कक्षा 10 विज्ञान (Chemistry) • अध्याय 4
-      </div>
-      <h1 class="chapter-main-title" style="font-size:38pt; font-weight:900; color:#ffffff; margin:0 0 12px 0; -webkit-text-stroke:0.6px #ffffff;">
-        अध्याय 4: कार्बन एवं उसके यौगिक (Carbon and its Compounds)
-      </h1>
-      <p class="chapter-sub-title" style="font-size:24pt; font-weight:800; color:#93c5fd; margin:0 0 20px 0; -webkit-text-stroke:0.4px #93c5fd; line-height:1.6;">
-        सहसंयोजी आबंधन, अपररूप, हाइड्रोकार्बन, समजातीय श्रेणी, रासायनिक गुणधर्म (दहन/ऑक्सीकरण/संकलन/प्रतिस्थापन), एथेनॉल-एथेनोइक अम्ल एवं 3D मिसेल सफाई क्रियाविधि
-      </p>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px;">
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-microscope"></i> 🔬 20 इंटरैक्टिव 3D लैब सिमुलेटर</span>
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-atom"></i> ⚛️ 3D सहसंयोजी आबंधन व इलेक्ट्रॉन बिंदु</span>
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-cubes"></i> 🧪 हाइड्रोकार्बन, समजातीय श्रेणी व समावयवता</span>
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-fire"></i> 🔥 दहन, ऑक्सीकरण, संकलन व प्रतिस्थापन</span>
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-flask"></i> 🍓 एथेनॉल, एथेनोइक अम्ल व एस्टरीकरण</span>
-        <span class="highlight-chip" style="background:rgba(255,255,255,0.15); color:#ffffff; font-size:18pt; font-weight:900; padding:6px 16px; border-radius:12px; -webkit-text-stroke:0px;"><i class="fas fa-soap"></i> 🧼 3D मिसेल इमल्शन व कठोर जल स्कम</span>
-      </div>
+  <div class="doc-container" id="mainDocContainer">
+    
+    <!-- Chapter Title / Hero Matching SS10 Master -->
+    <div class="chapter-hero">
+      <span class="chapter-tag">NCERT कक्षा 10 • विज्ञान</span>
+      <h1 class="chapter-title">अध्याय 4: कार्बन एवं उसके यौगिक (Carbon and its Compounds)</h1>
+      <span class="chapter-subtitle">सहसंयोजी आबंधन, अपररूप, हाइड्रोकार्बन, समजातीय श्रेणी, रासायनिक गुणधर्म (दहन/ऑक्सीकरण/संकलन/प्रतिस्थापन), एथेनॉल-एथेनोइक अम्ल एवं 3D मिसेल सफाई क्रियाविधि</span>
     </div>
 
-    <!-- ===================================================================
-         SECTION 1: कार्बन में सहसंयोजी आबंध एवं कार्बन की सर्वतोमुखी प्रकृति
-         =================================================================== -->
-    <section class="doc-section" id="sec4_1">
+<section class="doc-section" id="sec4_1">
       <div class="section-title-wrap">
         <span class="section-badge" style="background:#2563eb; color:#fff; font-size:20pt; font-weight:900; padding:4px 16px; border-radius:10px;">भाग 1</span>
         <h2 class="section-heading" style="font-size:34pt; font-weight:900; color:#000000; margin:10px 0;">1. कार्बन में सहसंयोजी आबंध एवं कार्बन की सर्वतोमुखी प्रकृति</h2>
@@ -7223,7 +7234,7 @@
       </div>
     </section>
 
-  </main>
+  </div>
 
   
 
