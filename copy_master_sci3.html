@@ -5730,12 +5730,11 @@
         </div>
 
         <!-- MODE B: REAL EXPERIMENT VIDEO PLAYER (Full 16:9 Frame) -->
-        <div id="s36_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#000000;">
-          <video id="s36_video_player" style="width:100%; height:100%; object-fit:cover; display:block;" controls playsinline preload="metadata">
-            <source id="s36_video_source" src="media/sim36_sodium_water.mp4" type="video/mp4">
+        <div id="s37_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#000000;">
+          <video id="s37_video_player" style="width:100%; height:100%; object-fit:contain; display:block;" controls playsinline preload="metadata">
+            <source id="s37_video_source" src="media/sim37_mg_joined.mp4" type="video/mp4">
             आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
           </video>
-
         </div>
       </div>
 
@@ -14813,12 +14812,12 @@ var s37_mercuryState = { y: 205, temp: 25 };
 
 // Real Experiment Video Sources Mapping
 var s37_videos = {
-  mg: "media/Magnesium_ribbon_reacting_in_water_20260922084915.mp4",
-  zn: "media/zinc_reacting_in_sulfuric_acid.mp4",
-  fe: "media/zinc_reacting_in_sulfuric_acid.mp4",
-  cu: "media/Copper_strip_in_boiling_water_20260922085122.mp4",
-  hno3: "media/zinc_reacting_in_sulfuric_acid.mp4",
-  mg_hno3: "media/Magnesium_ribbon_reacting_in_water_20260922084915.mp4"
+  mg: "media/sim37_mg_joined.mp4",
+  zn: "media/sim37_zn_joined.mp4",
+  fe: "media/sim37_fe_joined.mp4",
+  cu: "media/sim37_cu_acid.mp4",
+  hno3: "media/sim37_hno3.mp4",
+  mg_hno3: "media/sim37_mg_joined.mp4"
 };
 
 // Mode Switcher: 16:9 Simulator vs Real Video
