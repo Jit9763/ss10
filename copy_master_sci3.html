@@ -5285,7 +5285,7 @@
       </div>
     </div>
 
-                <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
+                    <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:18px 20px; margin:24px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
@@ -5368,44 +5368,64 @@
       <!-- MAIN 16:9 SCREEN CONTAINER (Everything visible at a glance without scrolling) -->
       <div style="position:relative; width:100%; aspect-ratio:16/9; max-height:510px; min-height:400px; background:#0f172a; border-radius:12px; overflow:hidden; border:2px solid #334155; box-shadow:0 10px 30px rgba(0,0,0,0.35);">
         
-        <!-- MODE A: 16:9 INTERACTIVE 3D ACID LAB VIEW -->
+        <!-- MODE A: 16:9 INTERACTIVE 3D ACID LAB VIEW (Simulator 3.5 Glass Aesthetics) -->
         <div id="s37_sim_mode" style="width:100%; height:100%; position:relative;">
           <svg id="sim37_olabs_svg" viewBox="0 0 1100 520" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMid meet">
             <defs>
-              <!-- Lab Room Wall Gradient -->
+              <!-- Lab Room Wall Gradient (Matching Sim 3.5) -->
               <linearGradient id="s37_wall" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#f5f3ff" />
                 <stop offset="60%" stop-color="#ede9fe" />
                 <stop offset="100%" stop-color="#ddd6fe" />
               </linearGradient>
 
-              <!-- Tabletop Perspective Gradient -->
+              <!-- Tabletop Perspective Gradient (Polished Mahogany Wood) -->
               <linearGradient id="s37_table" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#5d4037" />
                 <stop offset="25%" stop-color="#4e342e" />
                 <stop offset="100%" stop-color="#3e2723" />
               </linearGradient>
 
-              <!-- Glass 3D Cylinder Refraction -->
-              <linearGradient id="s37_glass_cyl" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
-                <stop offset="6%" stop-color="#c4b5fd" stop-opacity="0.25"/>
-                <stop offset="25%" stop-color="#f5f3ff" stop-opacity="0.08"/>
-                <stop offset="75%" stop-color="#f5f3ff" stop-opacity="0.06"/>
-                <stop offset="94%" stop-color="#a78bfa" stop-opacity="0.25"/>
-                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.80"/>
+              <!-- Super Glassy 3D Body Gradient (Identical to Sim 3.5 s35_glass_body) -->
+              <linearGradient id="s37_glass_body" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+                <stop offset="6%" stop-color="#bae6fd" stop-opacity="0.40" />
+                <stop offset="20%" stop-color="#ffffff" stop-opacity="0.15" />
+                <stop offset="80%" stop-color="#e0f2fe" stop-opacity="0.10" />
+                <stop offset="94%" stop-color="#7dd3fc" stop-opacity="0.40" />
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95" />
               </linearGradient>
 
-              <!-- Dilute Acid Clear Liquid Gradient -->
-              <linearGradient id="s37_acid_liquid" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#e0e7ff" stop-opacity="0.75"/>
-                <stop offset="100%" stop-color="#c7d2fe" stop-opacity="0.92"/>
+              <!-- Super Glassy Rim Gradient (Identical to Sim 3.5 s35_glass_rim) -->
+              <linearGradient id="s37_glass_rim" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#64748b" />
+                <stop offset="25%" stop-color="#ffffff" />
+                <stop offset="50%" stop-color="#cbd5e1" />
+                <stop offset="75%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#475569" />
               </linearGradient>
 
-              <!-- Nitric Acid Warm Amber Tint Liquid Gradient -->
-              <linearGradient id="s37_hno3_liquid" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#fef08a" stop-opacity="0.75"/>
-                <stop offset="100%" stop-color="#fde047" stop-opacity="0.90"/>
+              <!-- Chrome Stand Clamp Gradient -->
+              <linearGradient id="s37_chrome" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#94a3b8" />
+                <stop offset="30%" stop-color="#ffffff" />
+                <stop offset="60%" stop-color="#cbd5e1" />
+                <stop offset="85%" stop-color="#64748b" />
+                <stop offset="100%" stop-color="#334155" />
+              </linearGradient>
+
+              <!-- Dilute Acid Clear Liquid Gradient (High-Refraction Vivid Cyan) -->
+              <linearGradient id="s37_acid_liquid" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0284c7" stop-opacity="0.85" />
+                <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.75" />
+                <stop offset="100%" stop-color="#0369a1" stop-opacity="0.90" />
+              </linearGradient>
+
+              <!-- Nitric Acid Amber Tint Liquid Gradient -->
+              <linearGradient id="s37_hno3_liquid" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#d97706" stop-opacity="0.85" />
+                <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.75" />
+                <stop offset="100%" stop-color="#b45309" stop-opacity="0.90" />
               </linearGradient>
 
               <!-- Radial Hydrogen Bubble Highlight -->
@@ -5458,85 +5478,106 @@
             <g id="s37_apparatus_rig">
               
               <!-- 3D Wooden Test Tube Rack Behind (Background Depth) -->
-              <g transform="translate(60, 240)">
+              <g transform="translate(50, 240)">
                 <!-- Back Rack Base & Posts -->
-                <rect x="0" y="140" width="280" height="20" rx="4" fill="#6d4c41"/>
+                <rect x="0" y="140" width="260" height="20" rx="4" fill="#6d4c41"/>
                 <rect x="15" y="0" width="14" height="140" fill="#8d6e63"/>
-                <rect x="250" y="0" width="14" height="140" fill="#8d6e63"/>
-                <!-- Upper Bar with Holes -->
-                <rect x="0" y="30" width="280" height="16" rx="3" fill="#8d6e63"/>
+                <rect x="230" y="0" width="14" height="140" fill="#8d6e63"/>
+                <rect x="0" y="30" width="260" height="16" rx="3" fill="#8d6e63"/>
                 <!-- Tubes in Rack (Background Samples: Zn, Fe, Cu, HNO3) -->
-                <rect x="45" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
-                <text x="64" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Zn</text>
-                <rect x="105" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
-                <text x="124" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Fe</text>
-                <rect x="165" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
-                <text x="184" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Cu</text>
-                <rect x="225" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
-                <text x="244" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">HNO₃</text>
+                <rect x="40" y="-10" width="36" height="165" rx="8" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="1.8" opacity="0.75"/>
+                <text x="58" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Zn</text>
+                <rect x="95" y="-10" width="36" height="165" rx="8" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="1.8" opacity="0.75"/>
+                <text x="113" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Fe</text>
+                <rect x="150" y="-10" width="36" height="165" rx="8" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="1.8" opacity="0.75"/>
+                <text x="168" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Cu</text>
+                <rect x="205" y="-10" width="36" height="165" rx="8" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="1.8" opacity="0.75"/>
+                <text x="223" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">HNO₃</text>
               </g>
 
-              <!-- MAIN ACTIVE REACTION TEST TUBE STAND & CLAMP (Center x=450) -->
-              <!-- Stand Base & Vertical Rod -->
-              <ellipse cx="450" cy="455" rx="120" ry="16" fill="url(#s37_shadow)"/>
-              <rect x="390" y="445" width="120" height="15" rx="3" fill="#1e293b"/>
-              <rect x="445" y="110" width="10" height="340" fill="#64748b" stroke="#334155" stroke-width="1"/>
-              <!-- Clamp Arm holding Test Tube -->
-              <rect x="400" y="240" width="50" height="12" fill="#334155"/>
-              <rect x="388" y="225" width="12" height="42" rx="3" fill="#1e293b"/>
+              <!-- MAIN ACTIVE REACTION STAND & HEAVY CAST IRON CLAMP (Center x=460) -->
+              <ellipse cx="460" cy="460" rx="120" ry="16" fill="url(#s37_shadow)"/>
+              <rect x="400" y="450" width="120" height="15" rx="3" fill="#1e293b"/>
+              <rect x="455" y="90" width="12" height="365" fill="url(#s37_chrome)" stroke="#334155" stroke-width="1"/>
+              <!-- Sturdy Clamp Arm Gripping Test Tube -->
+              <rect x="390" y="225" width="70" height="14" fill="#334155" rx="2"/>
+              <rect x="382" y="210" width="14" height="46" rx="4" fill="url(#s37_chrome)"/>
 
-              <!-- MAIN BOROSILICATE TEST TUBE (x=335, y=140, w=72, h=290) -->
+              <!-- ============================================================
+                   MAIN 3.5-STYLE LARGE GLASS TEST TUBE (w=96px, h=315px, x=312 to 408)
+                   ========================================================= -->
               <g id="s37_main_tube_group">
-                <!-- Tube Shadow -->
-                <ellipse cx="371" cy="435" rx="45" ry="10" fill="url(#s37_shadow)" opacity="0.4"/>
+                <!-- Tube Table Shadow -->
+                <ellipse cx="360" cy="450" rx="55" ry="12" fill="url(#s37_shadow)" opacity="0.45"/>
 
-                <!-- Dilute Acid Liquid Fill inside Tube -->
-                <rect id="s37_acid_fill" x="337" y="245" width="68" height="175" rx="10" fill="url(#s37_acid_liquid)"/>
-                <ellipse id="s37_acid_meniscus" cx="371" cy="245" rx="34" ry="8" fill="url(#s37_acid_liquid)" stroke="#a5b4fc" stroke-width="1.5"/>
+                <!-- Dilute Acid Liquid Fill inside Large Tube (w=88px, h=160px) -->
+                <rect id="s37_acid_fill" x="316" y="235" width="88" height="155" rx="6" fill="url(#s37_acid_liquid)"/>
+                <!-- Hemispherical Liquid Bottom -->
+                <path d="M 316 385 A 44 44 0 0 0 404 385 Z" fill="url(#s37_acid_liquid)"/>
+                <!-- Liquid Meniscus with High-Light Curve -->
+                <ellipse id="s37_acid_meniscus" cx="360" cy="235" rx="44" ry="9" fill="url(#s37_acid_liquid)" stroke="#38bdf8" stroke-width="1.8"/>
 
                 <!-- Surface Liquid Impact Ripple -->
-                <ellipse id="s37_acid_ripple" cx="371" cy="245" rx="14" ry="5" fill="none" stroke="#ffffff" stroke-width="2" opacity="0" style="pointer-events:none;"/>
+                <ellipse id="s37_acid_ripple" cx="360" cy="235" rx="18" ry="6" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0" style="pointer-events:none;"/>
 
                 <!-- Red-Brown NO2 Fumes (for HNO3 mode) -->
                 <g id="s37_no2_fumes" style="opacity:0; pointer-events:none;">
-                  <path id="s37_fume1" d="M 355 240 Q 345 190 360 140 Q 375 90 355 50" stroke="url(#s37_no2_grad)" stroke-width="12" fill="none" opacity="0.8" stroke-linecap="round"/>
-                  <path id="s37_fume2" d="M 370 240 Q 385 190 365 130 Q 345 80 370 40" stroke="url(#s37_no2_grad)" stroke-width="14" fill="none" opacity="0.85" stroke-linecap="round"/>
-                  <path id="s37_fume3" d="M 385 240 Q 395 180 380 130 Q 365 80 385 45" stroke="url(#s37_no2_grad)" stroke-width="11" fill="none" opacity="0.75" stroke-linecap="round"/>
-                  <rect x="315" y="20" width="110" height="24" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-                  <text x="370" y="36" font-size="11" font-weight="900" fill="#991b1b" text-anchor="middle">भूरे रंग की NO₂ गैस</text>
+                  <path id="s37_fume1" d="M 345 230 Q 335 180 350 130 Q 365 80 345 40" stroke="url(#s37_no2_grad)" stroke-width="14" fill="none" opacity="0.85" stroke-linecap="round"/>
+                  <path id="s37_fume2" d="M 360 230 Q 380 180 360 120 Q 340 70 365 30" stroke="url(#s37_no2_grad)" stroke-width="16" fill="none" opacity="0.9" stroke-linecap="round"/>
+                  <path id="s37_fume3" d="M 375 230 Q 390 170 375 120 Q 360 70 380 35" stroke="url(#s37_no2_grad)" stroke-width="13" fill="none" opacity="0.8" stroke-linecap="round"/>
+                  <rect x="305" y="15" width="110" height="24" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="360" y="31" font-size="11" font-weight="900" fill="#991b1b" text-anchor="middle">भूरे रंग की NO₂ गैस</text>
                 </g>
 
                 <!-- Metal Sample Pellets/Ribbon at Bottom of Tube -->
-                <g id="s37_metal_sample_group" transform="translate(365, 410)">
-                  <path id="s37_metal_mesh" d="M -18 0 Q -5 -12 10 -4 Q 18 6 12 12 Q -2 18 -16 8 Z" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
-                  <ellipse cx="-4" cy="2" rx="6" ry="3" fill="#ffffff" opacity="0.5"/>
+                <g id="s37_metal_sample_group" transform="translate(360, 415)">
+                  <path id="s37_metal_mesh" d="M -22 0 Q -8 -14 14 -5 Q 22 8 16 14 Q -4 20 -20 10 Z" fill="#cbd5e1" stroke="#334155" stroke-width="2.5"/>
+                  <ellipse cx="-5" cy="2" rx="8" ry="4" fill="#ffffff" opacity="0.6"/>
                 </g>
 
-                <!-- DYNAMIC RISING H2 BUBBLE TORRENT (Fluid GSAP Animated) -->
+                <!-- DYNAMIC RISING H2 BUBBLE TORRENT (Fluid GSAP Animated in Wide Tube) -->
                 <g id="s37_dynamic_bubbles" style="opacity:0; pointer-events:none;">
-                  <circle id="s37_bub1" cx="360" cy="405" r="4.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub2" cx="370" cy="390" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub3" cx="352" cy="375" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub4" cx="376" cy="360" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub5" cx="358" cy="345" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub6" cx="368" cy="330" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub7" cx="354" cy="315" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub8" cx="378" cy="300" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub9" cx="362" cy="285" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub10" cx="372" cy="270" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
-                  <circle id="s37_bub11" cx="356" cy="255" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
-                  <circle id="s37_bub12" cx="374" cy="248" r="8.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub1" cx="350" cy="405" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub2" cx="365" cy="390" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub3" cx="340" cy="375" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub4" cx="372" cy="360" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub5" cx="348" cy="345" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub6" cx="362" cy="330" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub7" cx="342" cy="315" r="8.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub8" cx="375" cy="300" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub9" cx="352" cy="285" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub10" cx="368" cy="270" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub11" cx="345" cy="255" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub12" cx="370" cy="245" r="8.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
                 </g>
 
-                <!-- 3D Glass Tube Body & Rounded Hemispherical Bottom -->
-                <rect x="335" y="140" width="72" height="260" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2.5"/>
-                <path d="M 335 400 A 36 36 0 0 0 407 400 Z" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2.5"/>
-                <ellipse cx="371" cy="140" rx="36" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+                <!-- 3D GLASS TEST TUBE BODY (Sim 3.5 Look: Glass Body + Rim + Reflections) -->
+                <!-- Cylindrical Tube Wall (w=96px, h=260px) -->
+                <rect x="312" y="125" width="96" height="260" rx="10" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="2.8"/>
+                <!-- Hemispherical Rounded Bottom (r=48px) -->
+                <path d="M 312 385 A 48 48 0 0 0 408 385 Z" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="2.8"/>
+                <!-- Flared Beaded Glass Lip at Mouth (Authentic NCERT Lab Collar) -->
+                <rect x="306" y="118" width="108" height="12" rx="5" fill="url(#s37_glass_body)" stroke="url(#s37_glass_rim)" stroke-width="2.2"/>
+                <ellipse cx="360" cy="124" rx="46" ry="6" fill="#e0f2fe" stroke="#cbd5e1" stroke-width="1.5" opacity="0.6"/>
 
-                <!-- PROMINENT HIGH-VISIBILITY THERMOMETER (NCERT Exothermic Test) -->
-                <g id="s37_thermometer_rig" transform="translate(382, 85)">
-                  <!-- Outer Glass Cylinder Stem (Wide 14px with high-contrast glass border) -->
-                  <rect x="-7" y="0" width="14" height="325" rx="7" fill="url(#s37_glass_cyl)" stroke="#475569" stroke-width="1.8" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+                <!-- Glass Specular Reflection Highlights (Matching Sim 3.5 Beaker Look) -->
+                <path d="M 318 135 L 318 380" stroke="#ffffff" stroke-width="3.5" opacity="0.8" stroke-linecap="round"/>
+                <path d="M 402 135 L 402 380" stroke="#ffffff" stroke-width="2.2" opacity="0.55" stroke-linecap="round"/>
+
+                <!-- Clean Laboratory Graduation Measurement Lines -->
+                <line x1="316" y1="210" x2="332" y2="210" stroke="#64748b" stroke-width="1.8"/>
+                <text x="336" y="214" font-size="9" font-weight="900" fill="#64748b">25ml</text>
+                <line x1="316" y1="255" x2="330" y2="255" stroke="#64748b" stroke-width="1.8"/>
+                <text x="334" y="259" font-size="9" font-weight="900" fill="#64748b">20ml</text>
+                <line x1="316" y1="300" x2="332" y2="300" stroke="#64748b" stroke-width="1.8"/>
+                <text x="336" y="304" font-size="9" font-weight="900" fill="#64748b">15ml</text>
+                <line x1="316" y1="345" x2="330" y2="345" stroke="#64748b" stroke-width="1.8"/>
+                <text x="334" y="349" font-size="9" font-weight="900" fill="#64748b">10ml</text>
+
+                <!-- PROMINENT HIGH-VISIBILITY THERMOMETER (Bold Inside Test Tube) -->
+                <g id="s37_thermometer_rig" transform="translate(380, 85)">
+                  <!-- Outer Glass Stem (14px Wide with Specular Glass Finish) -->
+                  <rect x="-7" y="0" width="14" height="325" rx="7" fill="url(#s37_glass_body)" stroke="#475569" stroke-width="1.8" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
                   <!-- White Capillary Channel -->
                   <rect x="-4" y="10" width="8" height="305" rx="4" fill="#ffffff" opacity="0.95"/>
                   
@@ -5577,7 +5618,7 @@
                 </g>
 
                 <!-- POP TEST BURNING SPLINTER RIG -->
-                <g id="s37_splinter_rig" style="opacity:0;" transform="translate(370, 70)">
+                <g id="s37_splinter_rig" style="opacity:0;" transform="translate(360, 65)">
                   <line x1="-40" y1="-20" x2="0" y2="25" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
                   <circle cx="0" cy="25" r="6" fill="#ef4444"/>
                   <path id="s37_splinter_flame" d="M 0 25 Q -8 8 0 -6 Q 8 8 0 25 Z" fill="url(#s37_flame_grad)"/>
@@ -5590,8 +5631,8 @@
 
               </g>
 
-              <!-- ACID DROPPER / PIPETTE (Descends to add acid) -->
-              <g id="s37_dropper_rig" transform="translate(560, 40)">
+              <!-- ACID DROPPER / PIPETTE (Descends over Test Tube Mouth) -->
+              <g id="s37_dropper_rig" transform="translate(560, 35)">
                 <rect x="-4" y="0" width="8" height="90" fill="#e0f2fe" stroke="#64748b" stroke-width="1" opacity="0.85"/>
                 <polygon points="-4,90 4,90 1,115 -1,115" fill="#e0f2fe" stroke="#64748b" stroke-width="1"/>
                 <path id="s37_dropper_bulb" d="M -9 0 C -12 -18 12 -18 9 0 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
@@ -5602,7 +5643,7 @@
             </g>
 
             <!-- RESULT POPUP FLOATING BADGE (Center Top) -->
-            <g id="s37_popup_badge" style="opacity:0; transform-origin:center center;" transform="translate(370, 38)">
+            <g id="s37_popup_badge" style="opacity:0; transform-origin:center center;" transform="translate(360, 38)">
               <rect x="-240" y="-18" width="480" height="38" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.15))"/>
               <text id="s37_popup_text" x="0" y="7" font-size="14" font-weight="900" fill="#6d28d9" text-anchor="middle">
                 ⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ऊष्माक्षेपी अभिक्रिया!
@@ -5613,7 +5654,6 @@
                  RIGHT OBSERVATION & REACTION DATA PANEL (Zero Text Overflow Guaranteed)
                  ========================================================= -->
             <g transform="translate(735, 18)">
-              <!-- Outer Card Panel (w=345, h=485) -->
               <rect x="0" y="0" width="345" height="485" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5" filter="drop-shadow(0 6px 18px rgba(0,0,0,0.12))"/>
               
               <!-- Panel Header -->
@@ -5664,7 +5704,7 @@
                 विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ देते हैं।
               </text>
 
-              <!-- Step Status Banner using foreignObject for Guaranteed Clean Multi-line Wrapping -->
+              <!-- Step Status Banner using foreignObject for Clean Multi-line Wrapping -->
               <foreignObject x="14" y="378" width="317" height="92">
                 <div xmlns="http://www.w3.org/1999/xhtml" style="background:#fffbeb; border:1.5px solid #fef08a; border-radius:8px; padding:7px 10px; height:100%; box-sizing:border-box; font-family:inherit;">
                   <div style="font-size:10.5px; font-weight:800; color:#854d0e; margin-bottom:2px;">
@@ -14818,8 +14858,8 @@ function s37StartAcidBubbles(speedFactor, count) {
 
     s37_bubbleTween.to(bId, {
       y: -160,
-      x: (idx % 2 === 0 ? "+=8" : "-=8"),
-      scale: 1.4,
+      x: (idx % 2 === 0 ? "+=10" : "-=10"),
+      scale: 1.45,
       opacity: 0.95,
       duration: riseDuration,
       ease: "power1.out",
@@ -15007,7 +15047,7 @@ function sim37RunStep(step) {
 
     s37AnimateTemperature(25, 'स्थिर', 0.4);
     gsap.timeline()
-      .set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1 })
+      .set("#s37_dropper_rig", { x: 560, y: 35, opacity: 1 })
       .set("#s37_metal_sample_group", { scale: 1, opacity: 1 })
       .fromTo("#s37_metal_sample_group", { scale: 0.4 }, { scale: 1, duration: 0.6, ease: "back.out(2)" })
       .to("#s37_mercury_column", { height: 115, y: 205, duration: 0.4 })
@@ -15019,14 +15059,14 @@ function sim37RunStep(step) {
     speakHindiCh3('ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
 
     gsap.timeline()
-      .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.8, ease: "power2.out" })
+      .to("#s37_dropper_rig", { x: 360, y: 75, duration: 0.8, ease: "power2.out" })
       .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
       .set("#s37_falling_drop", { opacity: 1, y: 120 })
-      .to("#s37_falling_drop", { y: 245, duration: 0.4, ease: "power1.in" })
+      .to("#s37_falling_drop", { y: 235, duration: 0.4, ease: "power1.in" })
       .set("#s37_falling_drop", { opacity: 0 })
       .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
       .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
-      .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.8, ease: "power2.inOut" });
+      .to("#s37_dropper_rig", { x: 560, y: 35, duration: 0.8, ease: "power2.inOut" });
 
   } else if (step === 3) {
     if (s37_currentType === 'mg') {
@@ -15039,7 +15079,7 @@ function sim37RunStep(step) {
         .to("#s37_mercury_column", { height: 181, y: 139, duration: 1.8, ease: "power2.out" })
         .to("#s37_mercury_glow", { y: -66, duration: 1.8, ease: "power2.out" }, "<")
         .to("#s37_temp_badge_group", { y: 129, duration: 1.8, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
         .call(function() {
           speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण सफल!');
@@ -15058,7 +15098,7 @@ function sim37RunStep(step) {
         .to("#s37_mercury_column", { height: 144, y: 176, duration: 1.5, ease: "power2.out" })
         .to("#s37_mercury_glow", { y: -29, duration: 1.5, ease: "power2.out" }, "<")
         .to("#s37_temp_badge_group", { y: 166, duration: 1.5, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15117,7 +15157,7 @@ function sim37RunStep(step) {
         .to("#s37_mercury_column", { height: 166, y: 154, duration: 1.6, ease: "power2.out" })
         .to("#s37_mercury_glow", { y: -51, duration: 1.6, ease: "power2.out" }, "<")
         .to("#s37_temp_badge_group", { y: 144, duration: 1.6, ease: "power2.out" }, "<")
-        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
         .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
         .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15139,14 +15179,14 @@ function sim37TriggerAction() {
   speakHindiCh3('प्रयोग प्रारंभ: ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
 
   s37_currentTimeline
-    .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.8, ease: "power2.out" })
+    .to("#s37_dropper_rig", { x: 360, y: 75, duration: 0.8, ease: "power2.out" })
     .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
     .set("#s37_falling_drop", { opacity: 1, y: 120 })
-    .to("#s37_falling_drop", { y: 245, duration: 0.4, ease: "power1.in" })
+    .to("#s37_falling_drop", { y: 235, duration: 0.4, ease: "power1.in" })
     .set("#s37_falling_drop", { opacity: 0 })
     .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
     .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
-    .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.7, ease: "power2.inOut" });
+    .to("#s37_dropper_rig", { x: 560, y: 35, duration: 0.7, ease: "power2.inOut" });
 
   if (s37_currentType === 'mg') {
     s37_currentTimeline
@@ -15159,7 +15199,7 @@ function sim37TriggerAction() {
       .to("#s37_mercury_column", { height: 181, y: 139, duration: 1.8, ease: "power2.out" })
       .to("#s37_mercury_glow", { y: -66, duration: 1.8, ease: "power2.out" }, "<")
       .to("#s37_temp_badge_group", { y: 129, duration: 1.8, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.8, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
       .call(function() {
         speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण!');
@@ -15179,7 +15219,7 @@ function sim37TriggerAction() {
       .to("#s37_mercury_column", { height: 144, y: 176, duration: 1.6, ease: "power2.out" })
       .to("#s37_mercury_glow", { y: -29, duration: 1.6, ease: "power2.out" }, "<")
       .to("#s37_temp_badge_group", { y: 166, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.8, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15237,7 +15277,7 @@ function sim37TriggerAction() {
       .to("#s37_mercury_column", { height: 166, y: 154, duration: 1.6, ease: "power2.out" })
       .to("#s37_mercury_glow", { y: -51, duration: 1.6, ease: "power2.out" }, "<")
       .to("#s37_temp_badge_group", { y: 144, duration: 1.6, ease: "power2.out" }, "<")
-      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+      .to("#s37_splinter_rig", { opacity: 1, y: 125, duration: 0.7, ease: "power2.out" })
       .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
       .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
 
@@ -15270,7 +15310,7 @@ function sim37ResetAction() {
     gsap.killTweensOf("#s37_popup_badge");
     gsap.killTweensOf("#s37_temp_badge_group");
 
-    gsap.set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1, clearProps: "all" });
+    gsap.set("#s37_dropper_rig", { x: 560, y: 35, opacity: 1, clearProps: "all" });
     gsap.set("#s37_dropper_bulb", { scaleY: 1, clearProps: "scaleY" });
     gsap.set("#s37_falling_drop", { opacity: 0, y: 120 });
     gsap.set("#s37_acid_ripple", { opacity: 0, scale: 1 });
