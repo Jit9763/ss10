@@ -4847,495 +4847,426 @@
 
     </div>
 
-      <div class="sim-card" id="sim3_water_reaction_box" style="border:3px solid #0284c7; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(2,132,199,0.12);">
+            <div class="sim-card" id="sim3_water_reaction_box" style="border:3px solid #0284c7; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(2,132,199,0.12);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-          <div style="background:#16a34a; color:#fff; width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">
+          <div style="background:#0284c7; color:#fff; width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">
             <i class="fas fa-water"></i>
           </div>
           <h3 style="margin:0; font-size:22px; font-weight:900; color:#0f172a; line-height:1.3; -webkit-text-stroke:0px !important;">
             सिमुलेटर 3.6: धातुओं की ठंडे जल, गर्म जल व भाप से अभिक्रिया
           </h3>
-          <span style="background:#f1f5f9; color:#334155; font-size:13px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #cbd5e1; -webkit-text-stroke:0px !important;">
-            क्रियाकलाप 3.10
+          <span style="background:#e0f2fe; color:#0369a1; font-size:13px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #7dd3fc; -webkit-text-stroke:0px !important;">
+            NCERT क्रियाकलाप 3.10 • 3D वर्चुअल लैब
           </span>
         </div>
       </div>
 
-      <p style="font-size:15.5px !important; line-height:1.55 !important; color:#334155 !important; font-weight:700 !important; margin:0 0 14px 0 !important; background:#f8fafc; padding:8px 14px; border-left:4px solid #16a34a; border-radius:6px; -webkit-text-stroke:0px !important;">
-        💡 <strong>प्रयोग सूत्र:</strong> Na/K ठंडे जल से तीव्र (H₂ में आग), Mg गर्म जल से, तथा Al/Fe केवल भाप (Steam) से क्रिया करते हैं।
+      <p style="font-size:15.5px !important; line-height:1.55 !important; color:#334155 !important; font-weight:700 !important; margin:0 0 14px 0 !important; background:#f0fdf4; padding:8px 14px; border-left:4px solid #16a34a; border-radius:6px; -webkit-text-stroke:0px !important;">
+        💡 <strong>प्रयोग सूत्र:</strong> Na/K ठंडे जल से तीव्र (H₂ में आग 🔥), Ca मंद क्रिया से तैरता है (🫧), Mg केवल गर्म जल से क्रिया कर तैरता है (♨️), Al/Fe केवल भाप (Steam 💨) से क्रिया करते हैं, जबकि Cu जल से कोई क्रिया नहीं करता (❌)।
       </p>
-<div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s36_btn_na" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Select('na')">
-          1. सोडियम (Na - ठंडा जल + आग 🔥)
-        </button>
-        <button class="sim-btn" id="s36_btn_ca" style="background:#2563eb; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Select('ca')">
-          2. कैल्शियम (Ca - मंद क्रिया + तैरना 🫧)
-        </button>
-        <button class="sim-btn" id="s36_btn_mg" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Select('mg')">
-          3. मैग्नीशियम (Mg - गर्म जल ♨️)
-        </button>
-        <button class="sim-btn" id="s36_btn_steam" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Select('steam')">
-          4. लोहा/एल्युमिनियम (Fe/Al - भाप उपकरण 💨)
-        </button>
-        <button class="sim-btn" id="s36_btn_cu" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Select('cu')">
-          5. तांबा (Cu - कोई अभिक्रिया नहीं ❌)
-        </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim36Reset()">
-          <i class="fas fa-redo"></i> 🔄 रीसेट
-        </button>
+
+      <!-- CONTROLS & DUAL MODE BAR -->
+      <div class="sim-controls-grid" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+        <!-- Metal / Reaction Selection -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="sim-btn" id="s36_btn_na" style="background:#dc2626; color:#ffffff; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #b91c1c; cursor:pointer; box-shadow:0 2px 8px rgba(220,38,38,0.25);" onclick="sim36SelectMetal('na')">
+            1. सोडियम (Na - ठंडा जल + आग 🔥)
+          </button>
+          <button class="sim-btn" id="s36_btn_ca" style="background:#ffffff; color:#2563eb; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim36SelectMetal('ca')">
+            2. कैल्शियम (Ca - मंद क्रिया + तैरना 🫧)
+          </button>
+          <button class="sim-btn" id="s36_btn_mg" style="background:#ffffff; color:#16a34a; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim36SelectMetal('mg')">
+            3. मैग्नीशियम (Mg - गर्म जल ♨️)
+          </button>
+          <button class="sim-btn" id="s36_btn_steam" style="background:#ffffff; color:#7c3aed; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim36SelectMetal('steam')">
+            4. लोहा/ऐलुमिनियम (Fe/Al - भाप उपकरण 💨)
+          </button>
+          <button class="sim-btn" id="s36_btn_cu" style="background:#ffffff; color:#b45309; font-size:15px; font-weight:900; padding:10px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06);" onclick="sim36SelectMetal('cu')">
+            5. तांबा (Cu - कोई अभिक्रिया नहीं ❌)
+          </button>
+        </div>
+
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <!-- Dual Mode Toggle Tabs -->
+          <div style="display:inline-flex; background:#f1f5f9; padding:4px; border-radius:10px; border:1.5px solid #cbd5e1;">
+            <button id="s36_tab_sim" style="background:#0284c7; color:#ffffff; font-size:14.5px; font-weight:900; padding:8px 15px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;" onclick="sim36SetDisplay('sim')">
+              🔬 16:9 सिमुलेटर
+            </button>
+            <button id="s36_tab_video" style="background:#ffffff; color:#0f172a; font-size:14.5px; font-weight:900; padding:8px 15px; border-radius:7px; border:1px solid #cbd5e1; cursor:pointer; transition:all 0.2s;" onclick="sim36SetDisplay('video')">
+              🎬 रियल वीडियो
+            </button>
+          </div>
+
+          <!-- Action & Reset -->
+          <button id="s36_btn_action" onclick="sim36TriggerAction()" style="background:#0284c7; color:#ffffff; font-size:14.5px; font-weight:900; padding:9px 18px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.18); transition:all 0.2s; display:flex; align-items:center; gap:6px;">
+            <span>▶️ संपूर्ण ऑटो-प्ले एनिमेशन</span>
+          </button>
+
+          <!-- Step Buttons -->
+          <button onclick="sim36RunStep(1)" title="चरण 1: धातु/उपकरण चयन" style="background:#ffffff; color:#0f172a; font-size:13.5px; font-weight:800; padding:9px 12px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+            1️⃣ धातु चयन
+          </button>
+          <button onclick="sim36RunStep(2)" title="चरण 2: जल / भाप संपर्क" style="background:#ffffff; color:#0f172a; font-size:13.5px; font-weight:800; padding:9px 12px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+            2️⃣ जल/भाप संपर्क
+          </button>
+          <button onclick="sim36RunStep(3)" title="चरण 3: H₂ गैस व ज्वलन/उत्प्लावन" style="background:#ffffff; color:#0f172a; font-size:13.5px; font-weight:800; padding:9px 12px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+            3️⃣ H₂ गैस व उत्प्लावन
+          </button>
+
+          <button id="s36_btn_replay" onclick="sim36ResetAction()" style="background:#ffffff; color:#0f172a; font-size:13.5px; font-weight:800; padding:9px 14px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer; transition:all 0.2s;">
+            🔄 रीसेट
+          </button>
+        </div>
       </div>
 
-      <div style="width:100%; height:8px; background:#e2e8f0; border-radius:4px; overflow:hidden; margin-bottom:16px;">
-        <div id="s36_pbar" style="width:0%; height:100%; background:#0284c7; transition:width 0.3s ease;"></div>
+      <!-- SIMULATOR STAGE / VIDEO WRAPPER (16:9 Super Glassy) -->
+      <div style="position:relative; width:100%; border-radius:14px; overflow:hidden; border:2.5px solid #cbd5e1; box-shadow:0 8px 24px rgba(0,0,0,0.08); background:#f0fdf4;">
+        
+        <!-- Video Player Mode (Initially Hidden) -->
+        <div id="s36_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#0f172a; padding:20px; box-sizing:border-box;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+            <div style="color:#ffffff; font-size:16px; font-weight:900;">
+              🎬 10-सेकंड AI वीडियो जनरेशन प्लेयर व प्रॉम्प्ट
+            </div>
+            <button onclick="sim36SetDisplay('sim')" style="background:#0284c7; color:#ffffff; font-size:13.5px; font-weight:900; padding:7px 16px; border-radius:8px; border:none; cursor:pointer;">
+              🔬 वापस 16:9 सिमुलेटर पर जाएं
+            </button>
+          </div>
+          <video id="s36_video_player" style="width:100%; max-height:420px; object-fit:contain; display:block; border-radius:10px; background:#000;" controls playsinline preload="metadata">
+            <source id="s36_video_source" src="media/sim36_sodium_water.mp4" type="video/mp4">
+          </video>
+          <!-- Video Prompt Display Box with Copy Button -->
+          <div style="margin-top:14px; background:#1e293b; border:1.5px solid #334155; border-radius:10px; padding:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span style="color:#38bdf8; font-size:14px; font-weight:800;"><i class="fas fa-magic"></i> 10-Second Realistic Video Prompt (Sora / Kling / Runway Gen-3):</span>
+              <button onclick="sim36CopyCurrentPrompt()" id="s36_btn_copy_prompt" style="background:#0284c7; color:#fff; font-size:12.5px; font-weight:800; padding:5px 12px; border-radius:6px; border:none; cursor:pointer;">
+                📋 प्रॉम्प्ट कॉपी करें
+              </button>
+            </div>
+            <p id="s36_prompt_display_text" style="color:#e2e8f0; font-size:13px; line-height:1.6; margin:0; font-family:'JetBrains Mono',monospace;">
+              Cinematic macro 8K shot in a sterile chemistry laboratory: A pair of stainless steel forceps carefully drops a small shiny pea-sized sodium metal piece into a transparent borosilicate glass beaker filled with crystal-clear water. Instantly upon touching the water, the sodium metal furiously fizzes and darts across the surface, generating violent microscopic hydrogen bubbles. Within 2 seconds, intense heat ignites the hydrogen gas into a brilliant golden-yellow and lilac flame dancing directly on the water's surface, leaving a trail of white vapor against a clean soft studio backdrop. 60fps, photorealistic physics, slow motion, clean science educational documentary style.
+            </p>
+          </div>
+        </div>
+
+        <!-- 16:9 SUPER GLASSY SVG LAB -->
+        <div id="s36_sim_mode" style="width:100%; height:100%; position:relative;">
+          <svg id="sim36_olabs_svg" viewBox="0 0 1100 520" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <!-- Room Wall Gradient (Fresh Mint Green OLabs Authentic) -->
+              <linearGradient id="s36_wall" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f0fdf4" />
+                <stop offset="60%" stop-color="#dcfce7" />
+                <stop offset="100%" stop-color="#bbf7d0" />
+              </linearGradient>
+
+              <!-- Tabletop Perspective Gradient (Polished Mahogany Wood) -->
+              <linearGradient id="s36_table" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5d4037" />
+                <stop offset="25%" stop-color="#4e342e" />
+                <stop offset="100%" stop-color="#3e2723" />
+              </linearGradient>
+
+              <!-- Glass 3D Refraction -->
+              <linearGradient id="s36_glass_cyl" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+                <stop offset="6%" stop-color="#bae6fd" stop-opacity="0.25"/>
+                <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.08"/>
+                <stop offset="75%" stop-color="#e0f2fe" stop-opacity="0.06"/>
+                <stop offset="94%" stop-color="#7dd3fc" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.80"/>
+              </linearGradient>
+
+              <!-- Liquid Cold Water -->
+              <linearGradient id="s36_liquid_cold" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+                <stop offset="40%" stop-color="#7dd3fc" stop-opacity="0.30"/>
+                <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#0284c7" stop-opacity="0.55"/>
+              </linearGradient>
+
+              <!-- Liquid Hot Water -->
+              <linearGradient id="s36_liquid_hot" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fb923c" stop-opacity="0.40"/>
+                <stop offset="40%" stop-color="#fed7aa" stop-opacity="0.25"/>
+                <stop offset="70%" stop-color="#fde047" stop-opacity="0.30"/>
+                <stop offset="100%" stop-color="#ea580c" stop-opacity="0.50"/>
+              </linearGradient>
+
+              <!-- Flame Gradient for Na ignition -->
+              <linearGradient id="s36_flame_grad" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#f97316" stop-opacity="0.95"/>
+                <stop offset="40%" stop-color="#eab308" stop-opacity="0.90"/>
+                <stop offset="75%" stop-color="#fef08a" stop-opacity="0.95"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
+              </linearGradient>
+
+              <!-- Bunsen Blue Flame -->
+              <linearGradient id="s36_burner_flame" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.95"/>
+                <stop offset="35%" stop-color="#0284c7" stop-opacity="0.90"/>
+                <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
+              </linearGradient>
+
+              <!-- Radial Shadow -->
+              <radialGradient id="s36_shadow_radial" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+                <stop offset="60%" stop-color="#000000" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- BACKGROUND WALL -->
+            <rect width="1100" height="430" fill="url(#s36_wall)" />
+
+            <!-- LABORATORY WORKBENCH -->
+            <polygon points="0,410 1100,410 1100,520 0,520" fill="url(#s36_table)" />
+            <rect x="0" y="410" width="1100" height="12" fill="#8d6e63" opacity="0.7" />
+            <line x1="0" y1="422" x2="1100" y2="422" stroke="#271406" stroke-width="3" />
+
+            <!-- ============================================================
+                 APPARATUS A: BEAKER SETUP (For Na, Ca, Mg, Cu)
+                 ============================================================ -->
+            <g id="s36_beaker_station" style="transition:opacity 0.4s ease;">
+              <!-- Shadow under beaker -->
+              <ellipse cx="360" cy="425" rx="145" ry="16" fill="url(#s36_shadow_radial)"/>
+
+              <!-- Liquid Water Fill in Beaker (x=240, y=230, w=240, h=180) -->
+              <rect id="s36_water_rect" x="242" y="235" width="236" height="175" rx="8" fill="url(#s36_liquid_cold)"/>
+              <ellipse id="s36_water_meniscus" cx="360" cy="235" rx="118" ry="12" fill="url(#s36_liquid_cold)" stroke="#38bdf8" stroke-width="1.5"/>
+
+              <!-- Rising Steam Wisps for Hot Water (Mg Mode) -->
+              <g id="s36_hot_steam_wisps" style="opacity:0;">
+                <path d="M 310 220 Q 300 180 320 150 Q 340 120 330 90" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+                <path d="M 360 220 Q 380 180 360 145 Q 340 110 360 80" stroke="#ffffff" stroke-width="5" fill="none" opacity="0.65" stroke-linecap="round"/>
+                <path d="M 410 220 Q 430 180 410 150 Q 390 120 410 90" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+              </g>
+
+              <!-- 3D Glass Beaker Body -->
+              <rect x="238" y="160" width="244" height="255" rx="14" fill="url(#s36_glass_cyl)" stroke="#cbd5e1" stroke-width="3"/>
+              <ellipse cx="360" cy="160" rx="122" ry="12" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+              <!-- Beaker Spout on Left -->
+              <path d="M 238 162 Q 220 155 228 170" stroke="#cbd5e1" stroke-width="3" fill="none"/>
+              <!-- Measurement Graduation Lines -->
+              <line x1="248" y1="240" x2="275" y2="240" stroke="#64748b" stroke-width="2"/>
+              <text x="282" y="244" font-size="11" font-weight="900" fill="#475569">200ml</text>
+              <line x1="248" y1="290" x2="270" y2="290" stroke="#64748b" stroke-width="2"/>
+              <text x="277" y="294" font-size="11" font-weight="900" fill="#475569">150ml</text>
+              <line x1="248" y1="340" x2="275" y2="340" stroke="#64748b" stroke-width="2"/>
+              <text x="282" y="344" font-size="11" font-weight="900" fill="#475569">100ml</text>
+
+              <!-- Dynamic Hydrogen Bubbles Pool -->
+              <g id="s36_dynamic_bubbles" style="opacity:0;">
+                <circle cx="340" cy="270" r="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+                <circle cx="370" cy="255" r="7" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+                <circle cx="390" cy="285" r="6" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+                <circle cx="330" cy="310" r="8" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.85"/>
+                <circle cx="380" cy="330" r="7" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.85"/>
+                <circle cx="360" cy="355" r="6" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" opacity="0.85"/>
+                <circle cx="350" cy="290" r="4" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+                <circle cx="400" cy="310" r="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+              </g>
+
+              <!-- Metal Pellet (Target being dropped) -->
+              <g id="s36_pellet_group" transform="translate(360, 235)">
+                <circle id="s36_pellet_mesh" cx="0" cy="0" r="16" fill="#cbd5e1" stroke="#334155" stroke-width="2.5" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.3))"/>
+                <!-- Adhered H2 Bubbles on Metal Surface (Ca & Mg buoyant flotation) -->
+                <g id="s36_attached_bubbles" style="opacity:0;">
+                  <circle cx="-12" cy="-8" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                  <circle cx="12" cy="-6" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                  <circle cx="-8" cy="11" r="4" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                  <circle cx="9" cy="9" r="4.5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                  <circle cx="0" cy="14" r="5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                </g>
+              </g>
+
+              <!-- Vigorous Sodium Hydrogen Flame on Surface -->
+              <g id="s36_na_flame_rig" style="opacity:0; pointer-events:none;" transform="translate(360, 220)">
+                <!-- Outer Flame -->
+                <path d="M 0 0 Q -25 -45 0 -85 Q 25 -45 0 0 Z" fill="url(#s36_flame_grad)"/>
+                <!-- Inner Flame -->
+                <path d="M 0 0 Q -14 -30 0 -60 Q 14 -30 0 0 Z" fill="#ffffff" opacity="0.95"/>
+                <!-- Sparks -->
+                <circle cx="-18" cy="-55" r="3" fill="#fef08a"/>
+                <circle cx="16" cy="-65" r="2.5" fill="#fde047"/>
+                <circle cx="-6" cy="-90" r="2" fill="#ea580c"/>
+                <rect x="-100" y="-120" width="200" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+                <text x="0" y="-101" font-size="13" font-weight="900" fill="#b91c1c" text-anchor="middle">🔥 तीव्र ऊष्मा! H₂ ने आग पकड़ ली!</text>
+              </g>
+
+              <!-- Floating Forceps/Tongs Rig -->
+              <g id="s36_forceps_rig" transform="translate(360, 80)" style="transition:transform 0.4s ease;">
+                <path d="M -15 -80 L -8 0 L -4 14" stroke="#64748b" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <path d="M 15 -80 L 8 0 L 4 14" stroke="#94a3b8" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="0" cy="-75" rx="14" ry="5" fill="#334155"/>
+                <rect x="-65" y="-115" width="130" height="26" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.15))"/>
+                <text id="s36_tongs_label" x="0" y="-98" font-size="12" font-weight="900" fill="#0f172a" text-anchor="middle">चिमटा (Forceps)</text>
+              </g>
+
+              <!-- Beaker Mode Title Tag -->
+              <rect x="260" y="445" width="200" height="32" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.1))"/>
+              <text id="s36_beaker_title_tag" x="360" y="466" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">बीकर: ठंडा जल (Cold Water)</text>
+            </g>
+
+            <!-- ============================================================
+                 APPARATUS B: NCERT STEAM ON METAL SETUP (Activity 3.10 Fig 3.3)
+                 ============================================================ -->
+            <g id="s36_steam_station" style="opacity:0; pointer-events:none; transition:opacity 0.4s ease;">
+              <!-- Laboratory Stand & Clamp -->
+              <ellipse cx="140" cy="425" rx="90" ry="14" fill="url(#s36_shadow_radial)"/>
+              <!-- Stand Base -->
+              <rect x="70" y="415" width="140" height="15" rx="3" fill="#1e293b"/>
+              <!-- Vertical Rod -->
+              <rect x="135" y="140" width="10" height="280" fill="#64748b" stroke="#334155" stroke-width="1"/>
+              <!-- Clamp Arm -->
+              <rect x="145" y="260" width="50" height="12" fill="#334155"/>
+              <rect x="190" y="245" width="12" height="42" rx="3" fill="#1e293b"/>
+
+              <!-- Horizontal Hard Glass Boiling Tube -->
+              <ellipse cx="360" cy="265" rx="160" ry="24" fill="url(#s36_shadow_radial)" opacity="0.25"/>
+              <rect x="175" y="240" width="310" height="50" rx="10" fill="url(#s36_glass_cyl)" stroke="#94a3b8" stroke-width="3"/>
+              <!-- Closed Hemispherical Left End of Boiling Tube -->
+              <path d="M 175 240 A 25 25 0 0 0 175 290 Z" fill="url(#s36_glass_cyl)" stroke="#94a3b8" stroke-width="3"/>
+
+              <!-- Wet Glass Wool at Left Base -->
+              <rect x="178" y="245" width="70" height="40" rx="6" fill="#84cc16" opacity="0.85" stroke="#4d7c0f" stroke-width="1.5"/>
+              <text x="213" y="270" font-size="11" font-weight="900" fill="#14532d" text-anchor="middle">गीली ग्लास वूल</text>
+              <rect x="155" y="195" width="115" height="25" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+              <text x="212" y="212" font-size="11" font-weight="900" fill="#15803d" text-anchor="middle">जल-भीगी ग्लास वूल</text>
+
+              <!-- Metal Sample (Fe filings / Al coil) in Middle -->
+              <rect id="s36_steam_metal_sample" x="320" y="250" width="60" height="30" rx="5" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+              <text id="s36_steam_metal_label" x="350" y="270" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">लोहा (Fe)</text>
+              <rect x="295" y="195" width="110" height="25" rx="5" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+              <text x="350" y="212" font-size="11" font-weight="900" fill="#0f172a" text-anchor="middle">धातु प्रतिदर्श</text>
+
+              <!-- Rubber Cork Stopper on Right Mouth -->
+              <polygon points="480,240 500,245 500,285 480,290" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+
+              <!-- Bunsen Burner Heating Underneath -->
+              <g transform="translate(200, 310)">
+                <!-- Burner Base & Barrel -->
+                <ellipse cx="20" cy="100" rx="35" ry="8" fill="#1e293b"/>
+                <rect x="14" y="30" width="12" height="70" fill="#475569" stroke="#1e293b" stroke-width="1.5"/>
+                <!-- Flame -->
+                <path id="s36_burner_flame_path" d="M 20 30 Q 8 -10 20 -35 Q 32 -10 20 30 Z" fill="url(#s36_burner_flame)"/>
+              </g>
+
+              <!-- Animated Steam Particles sweeping rightward -->
+              <g id="s36_steam_flow" style="opacity:0;">
+                <circle cx="260" cy="265" r="7" fill="#ffffff" opacity="0.75"/>
+                <circle cx="285" cy="260" r="9" fill="#ffffff" opacity="0.8"/>
+                <circle cx="305" cy="270" r="8" fill="#ffffff" opacity="0.7"/>
+                <circle cx="395" cy="262" r="8" fill="#ffffff" opacity="0.75"/>
+                <circle cx="425" cy="266" r="9" fill="#ffffff" opacity="0.8"/>
+                <circle cx="455" cy="263" r="7" fill="#ffffff" opacity="0.7"/>
+              </g>
+
+              <!-- Glass Delivery Tube from Cork to Trough -->
+              <path d="M 495 265 L 560 265 L 560 395 L 610 395 L 610 365" fill="none" stroke="#bae6fd" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
+              <path d="M 495 265 L 560 265 L 560 395 L 610 395 L 610 365" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round"/>
+
+              <!-- Water Trough (जल द्रोणिका) -->
+              <ellipse cx="615" cy="425" rx="80" ry="14" fill="url(#s36_shadow_radial)"/>
+              <rect x="540" y="365" width="150" height="50" rx="8" fill="url(#s36_liquid_cold)" stroke="#0369a1" stroke-width="2.5"/>
+              <ellipse cx="615" cy="365" rx="75" ry="9" fill="url(#s36_liquid_cold)" stroke="#38bdf8" stroke-width="1.5"/>
+
+              <!-- Inverted Test Tube (उल्टी परखनली) collecting H2 -->
+              <rect x="590" y="210" width="46" height="185" rx="8" fill="url(#s36_glass_cyl)" stroke="#94a3b8" stroke-width="2.5"/>
+              <path d="M 590 215 A 23 23 0 0 1 636 215 Z" fill="url(#s36_glass_cyl)" stroke="#94a3b8" stroke-width="2"/>
+              
+              <!-- Water Level inside Inverted Tube (Displaced Downward by H2) -->
+              <rect id="s36_inverted_water" x="592" y="260" width="42" height="135" fill="url(#s36_liquid_cold)" opacity="0.9"/>
+              
+              <!-- Hydrogen Gas collected at top -->
+              <rect id="s36_h2_pocket" x="592" y="210" width="42" height="50" fill="#fef08a" opacity="0.85"/>
+              <text x="613" y="240" font-size="11" font-weight="900" fill="#854d0e" text-anchor="middle">H₂ गैस</text>
+              <rect x="545" y="165" width="135" height="26" rx="5" fill="#ffffff" stroke="#ca8a04" stroke-width="1.5"/>
+              <text x="612" y="182" font-size="11" font-weight="900" fill="#854d0e" text-anchor="middle">जल का अधोमुखी विस्थापन</text>
+
+              <!-- Bubbles emerging from delivery tube in water -->
+              <g id="s36_steam_bubbles" style="opacity:0;">
+                <circle cx="610" cy="350" r="5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                <circle cx="614" cy="320" r="6" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+                <circle cx="608" cy="290" r="6.5" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+              </g>
+
+              <!-- Pop Splinter Test -->
+              <g id="s36_splinter_rig" style="opacity:0;" transform="translate(615, 130)">
+                <line x1="-30" y1="0" x2="30" y2="0" stroke="#78350f" stroke-width="3"/>
+                <circle cx="-30" cy="0" r="5" fill="#ef4444"/>
+                <rect x="-80" y="-30" width="160" height="24" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                <text x="0" y="-14" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">💥 Pop! ध्वनि के साथ दहन</text>
+              </g>
+            </g>
+
+            <!-- RESULT POPUP FLOATING BADGE (Center Top) -->
+            <g id="s36_popup_badge" style="opacity:0; transform-origin:center center;" transform="translate(360, 45)">
+              <rect x="-240" y="-20" width="480" height="42" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.15))"/>
+              <text id="s36_popup_text" x="0" y="7" font-size="15" font-weight="900" fill="#15803d" text-anchor="middle">
+                🔥 तीव्र ऊष्माक्षेपी अभिक्रिया — H₂ गैस ने तुरंत आग पकड़ ली!
+              </text>
+            </g>
+
+            <!-- ============================================================
+                 RIGHT OBSERVATION & REACTION DATA PANEL (x=725 to 1080)
+                 ============================================================ -->
+            <g transform="translate(715, 15)">
+              <rect x="0" y="0" width="370" height="485" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="3" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.08))"/>
+              
+              <!-- Header Bar -->
+              <rect x="0" y="0" width="370" height="48" rx="14" fill="#0284c7"/>
+              <text x="185" y="31" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle">💧 अभिक्रिया विश्लेषण व बोर्ड अवलोकन</text>
+
+              <!-- Status Banner -->
+              <g transform="translate(14, 58)">
+                <rect x="0" y="0" width="342" height="46" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+                <text id="s36_status_text" x="171" y="28" font-size="13" font-weight="900" fill="#0f172a" text-anchor="middle">सोडियम: ठंडे जल से अति-तीव्र क्रिया व H₂ दहन</text>
+              </g>
+
+              <!-- Chemical Reaction Equation Box -->
+              <g transform="translate(14, 114)">
+                <rect x="0" y="0" width="342" height="85" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+                <text x="12" y="24" font-size="14" font-weight="900" fill="#1e293b">रासायनिक समीकरण:</text>
+                <text id="s36_eq_line" x="171" y="58" font-size="14" font-weight="900" fill="#0369a1" text-anchor="middle">2Na + 2H₂O ➔ 2NaOH + H₂↑ + ऊष्मा</text>
+              </g>
+
+              <!-- NCERT Facts Checklist -->
+              <g transform="translate(14, 210)">
+                <rect x="0" y="0" width="342" height="260" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                <text x="12" y="22" font-size="15" font-weight="900" fill="#0f172a">क्रियाशीलता श्रेणी क्रम (NCERT 3.10):</text>
+
+                <!-- Box 1: Water State -->
+                <rect x="10" y="32" width="322" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="16" y="52" font-size="12.5" font-weight="900" fill="#0f172a">जल की अवस्था:</text>
+                <text id="s36_water_state" x="16" y="72" font-size="13.5" font-weight="900" fill="#0284c7">शीतल जल (Cold Water) - तीव्र ऊष्माक्षेपी</text>
+
+                <!-- Box 2: Special Observation -->
+                <rect x="10" y="92" width="322" height="68" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+                <text x="16" y="112" font-size="12.5" font-weight="900" fill="#0f172a">विशेष अवलोकन:</text>
+                <text id="s36_obs_text1" x="16" y="132" font-size="12.5" font-weight="900" fill="#0f172a">उत्पन्न ऊष्मा इतनी अधिक होती है कि</text>
+                <text id="s36_obs_text2" x="16" y="148" font-size="12.5" font-weight="900" fill="#dc2626">उत्सर्जित H₂ गैस तुरंत प्रज्वलित हो उठती है।</text>
+
+                <!-- Box 3: Board Exam Key Fact -->
+                <rect x="10" y="168" width="322" height="80" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+                <text x="16" y="188" font-size="13" font-weight="900" fill="#0369a1">💡 बोर्ड परीक्षा प्रश्न (NCERT Hot):</text>
+                <text id="s36_exam_fact1" x="16" y="208" font-size="12" font-weight="900" fill="#0f172a">Ca व Mg जल पर तैरने क्यों लगते हैं?</text>
+                <text id="s36_exam_fact2" x="16" y="226" font-size="12" font-weight="900" fill="#15803d">उत्तर: उत्पन्न H₂ के बुलबुले धातु से चिपक जाते हैं!</text>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%); border:3px solid #0284c7; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim36" viewBox="0 0 1200 540" width="100%" height="100%">
-
-  <defs>
-    <!-- ==========================================
-         1. 3D GLASS & BEAKER/TEST TUBE GRADIENTS
-         ========================================== -->
-    <linearGradient id="glass3d_ch3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.90"/>
-      <stop offset="5%" stop-color="#bae6fd" stop-opacity="0.30"/>
-      <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.10"/>
-      <stop offset="75%" stop-color="#e0f2fe" stop-opacity="0.08"/>
-      <stop offset="95%" stop-color="#7dd3fc" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.80"/>
-    </linearGradient>
-
-    <linearGradient id="glass_rim_ch3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#94a3b8"/>
-      <stop offset="20%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#cbd5e1"/>
-      <stop offset="80%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#64748b"/>
-    </linearGradient>
-
-    <linearGradient id="glass_shine_overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
-    </linearGradient>
-
-    <!-- Rubber Stopper / Cork -->
-    <linearGradient id="cork3d" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#78350f"/>
-      <stop offset="30%" stop-color="#b45309"/>
-      <stop offset="70%" stop-color="#d97706"/>
-      <stop offset="100%" stop-color="#451a03"/>
-    </linearGradient>
-
-    <!-- ==========================================
-         2. CHEMICAL LIQUID GRADIENTS & MENISCUS
-         ========================================== -->
-    <!-- CuSO4 Deep Royal Blue Solution -->
-    <linearGradient id="liquid_cuso4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.85"/>
-      <stop offset="40%" stop-color="#3b82f6" stop-opacity="0.75"/>
-      <stop offset="70%" stop-color="#2563eb" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#1e40af" stop-opacity="0.90"/>
-    </linearGradient>
-
-    <!-- FeSO4 Pale Emerald Green Solution -->
-    <linearGradient id="liquid_feso4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#15803d" stop-opacity="0.55"/>
-      <stop offset="40%" stop-color="#4ade80" stop-opacity="0.45"/>
-      <stop offset="70%" stop-color="#22c55e" stop-opacity="0.50"/>
-      <stop offset="100%" stop-color="#166534" stop-opacity="0.60"/>
-    </linearGradient>
-
-    <!-- Clear Acid / Water (HCl, H2SO4, H2O) -->
-    <linearGradient id="liquid_clear_acid" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
-      <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.15"/>
-      <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.40"/>
-    </linearGradient>
-
-    <!-- Aqua Regia Sparkling Golden/Orange Fuming Acid -->
-    <linearGradient id="liquid_aquaregia" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d97706" stop-opacity="0.85"/>
-      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.75"/>
-      <stop offset="70%" stop-color="#fbbf24" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#b45309" stop-opacity="0.90"/>
-    </linearGradient>
-
-    <!-- Oil Layer (Rusting experiment Tube B) -->
-    <linearGradient id="liquid_oil_layer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ca8a04" stop-opacity="0.90"/>
-      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#a16207" stop-opacity="0.90"/>
-    </linearGradient>
-
-    <!-- Molten Zinc (Galvanisation bath 450°C) -->
-    <linearGradient id="liquid_molten_zinc" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="25%" stop-color="#e2e8f0"/>
-      <stop offset="50%" stop-color="#cbd5e1"/>
-      <stop offset="75%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-
-    <!-- Molten Iron (Thermite Reaction 3000°C) -->
-    <linearGradient id="liquid_molten_iron" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b91c1c"/>
-      <stop offset="30%" stop-color="#f97316"/>
-      <stop offset="60%" stop-color="#facc15"/>
-      <stop offset="85%" stop-color="#fef08a"/>
-      <stop offset="100%" stop-color="#ea580c"/>
-    </linearGradient>
-
-    <!-- ==========================================
-         3. 3D METALLIC SHEEN GRADIENTS
-         ========================================== -->
-    <!-- Copper (Cu): Lustrous Shiny Bronze-Copper -->
-    <linearGradient id="metal3d_cu" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9a3412"/>
-      <stop offset="20%" stop-color="#ea580c"/>
-      <stop offset="50%" stop-color="#fed7aa"/>
-      <stop offset="75%" stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#7c2d12"/>
-    </linearGradient>
-
-    <!-- Iron / Steel (Fe): Polished Steel Sheen -->
-    <linearGradient id="metal3d_fe" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="25%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#f1f5f9"/>
-      <stop offset="75%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <!-- Aluminium (Al): Silvery-White Lustrous -->
-    <linearGradient id="metal3d_al" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="25%" stop-color="#cbd5e1"/>
-      <stop offset="50%" stop-color="#ffffff"/>
-      <stop offset="75%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-
-    <!-- Zinc (Zn): Cool Bluish Silver-Gray -->
-    <linearGradient id="metal3d_zn" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#475569"/>
-      <stop offset="25%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#e0e7ff"/>
-      <stop offset="75%" stop-color="#cbd5e1"/>
-      <stop offset="100%" stop-color="#334155"/>
-    </linearGradient>
-
-    <!-- Magnesium (Mg): Brilliant Silver White Ribbon -->
-    <linearGradient id="metal3d_mg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#94a3b8"/>
-      <stop offset="35%" stop-color="#f8fafc"/>
-      <stop offset="60%" stop-color="#ffffff"/>
-      <stop offset="85%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#64748b"/>
-    </linearGradient>
-
-    <!-- Sodium (Na): Soft Silvery Violet-White -->
-    <linearGradient id="metal3d_na" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6b7280"/>
-      <stop offset="30%" stop-color="#e9d5ff"/>
-      <stop offset="55%" stop-color="#faf5ff"/>
-      <stop offset="80%" stop-color="#d8b4fe"/>
-      <stop offset="100%" stop-color="#4b5563"/>
-    </linearGradient>
-
-    <!-- Gold (Au): Rich Golden Lustre -->
-    <linearGradient id="metal3d_au" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b45309"/>
-      <stop offset="25%" stop-color="#f59e0b"/>
-      <stop offset="50%" stop-color="#fef08a"/>
-      <stop offset="75%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#78350f"/>
-    </linearGradient>
-
-    <!-- Brass (Cu 80% + Zn 20%): Warm Lustrous Brass -->
-    <linearGradient id="metal3d_brass" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#854d0e"/>
-      <stop offset="25%" stop-color="#eab308"/>
-      <stop offset="50%" stop-color="#fef9c3"/>
-      <stop offset="75%" stop-color="#ca8a04"/>
-      <stop offset="100%" stop-color="#713f12"/>
-    </linearGradient>
-
-    <!-- Bronze (Cu 90% + Sn 10%): Antique Bronze -->
-    <linearGradient id="metal3d_bronze" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#78350f"/>
-      <stop offset="25%" stop-color="#b45309"/>
-      <stop offset="50%" stop-color="#fde68a"/>
-      <stop offset="75%" stop-color="#92400e"/>
-      <stop offset="100%" stop-color="#451a03"/>
-    </linearGradient>
-
-    <!-- Solder (Pb 50% + Sn 50%): Low Melting Lead-Tin -->
-    <linearGradient id="metal3d_solder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="30%" stop-color="#94a3b8"/>
-      <stop offset="55%" stop-color="#e2e8f0"/>
-      <stop offset="85%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <!-- Rust Fe2O3.xH2O Flaky Rough Coating -->
-    <linearGradient id="metal3d_rust" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7f1d1d"/>
-      <stop offset="25%" stop-color="#991b1b"/>
-      <stop offset="50%" stop-color="#b45309"/>
-      <stop offset="75%" stop-color="#c2410c"/>
-      <stop offset="100%" stop-color="#450a0a"/>
-    </linearGradient>
-
-    <!-- ==========================================
-         4. VOLUMETRIC BUNSEN BURNER & FLAME
-         ========================================== -->
-    <linearGradient id="burner_barrel" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="20%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#f1f5f9"/>
-      <stop offset="80%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <linearGradient id="burner_base" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#475569"/>
-      <stop offset="40%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-
-    <linearGradient id="burner_collar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b45309"/>
-      <stop offset="35%" stop-color="#fde047"/>
-      <stop offset="70%" stop-color="#d97706"/>
-      <stop offset="100%" stop-color="#78350f"/>
-    </linearGradient>
-
-    <!-- Realistic Blue Flame (Clean combustion) -->
-    <linearGradient id="flame3d_blue" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.95"/>
-      <stop offset="30%" stop-color="#0284c7" stop-opacity="0.90"/>
-      <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="90%" stop-color="#e0f2fe" stop-opacity="0.90"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
-    </linearGradient>
-
-    <!-- Inner Cone of Blue Flame -->
-    <linearGradient id="flame3d_inner" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#7dd3fc" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
-    </linearGradient>
-
-    <!-- Dazzling White-Hot Magnesium Flame -->
-    <radialGradient id="flame3d_mg_flash" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="25%" stop-color="#fef08a"/>
-      <stop offset="60%" stop-color="#fdba74" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Glowing Aura for Electrical Bulb -->
-    <radialGradient id="bulb_glow_radial" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fef08a" stop-opacity="1.0"/>
-      <stop offset="30%" stop-color="#facc15" stop-opacity="0.85"/>
-      <stop offset="65%" stop-color="#eab308" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ca8a04" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- ==========================================
-         5. 3D ATOM & ION SPHERES (PhET Style)
-         ========================================== -->
-    <!-- Sodium Ion Na+ (Purple / Violet) -->
-    <radialGradient id="atom3d_na_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#f3e8ff"/>
-      <stop offset="25%" stop-color="#c084fc"/>
-      <stop offset="70%" stop-color="#7e22ce"/>
-      <stop offset="100%" stop-color="#3b0764"/>
-    </radialGradient>
-
-    <!-- Chloride Ion Cl- (Emerald Green) -->
-    <radialGradient id="atom3d_cl_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#bbf7d0"/>
-      <stop offset="25%" stop-color="#4ade80"/>
-      <stop offset="70%" stop-color="#16a34a"/>
-      <stop offset="100%" stop-color="#052e16"/>
-    </radialGradient>
-
-    <!-- Magnesium Ion Mg2+ (Teal / Cyan) -->
-    <radialGradient id="atom3d_mg_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#cffafe"/>
-      <stop offset="25%" stop-color="#22d3ee"/>
-      <stop offset="70%" stop-color="#0891b2"/>
-      <stop offset="100%" stop-color="#164e63"/>
-    </radialGradient>
-
-    <!-- Free Electron e- (Energetic Amber-Yellow) -->
-    <radialGradient id="atom3d_electron" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="35%" stop-color="#fef08a"/>
-      <stop offset="70%" stop-color="#eab308"/>
-      <stop offset="100%" stop-color="#ca8a04"/>
-    </radialGradient>
-
-    <!-- ==========================================
-         6. WORKBENCH & SOFT SHADOWS
-         ========================================== -->
-    <!-- Polished Wooden Lab Workbench Top -->
-    <linearGradient id="lab_table_top" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="40%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-
-    <!-- Workbench Front Bevel Face -->
-    <linearGradient id="lab_table_front" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-
-    <!-- Radial Drop Shadow for Apparatus Base -->
-    <radialGradient id="stage_shadow_ch3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.38"/>
-      <stop offset="60%" stop-color="#000000" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-
-          <!-- 3D WORKBENCH WITH BEVELED EDGE -->
-          <ellipse cx="370" cy="465" rx="340" ry="18" fill="url(#stage_shadow_ch3)"/>
-          <polygon points="20,445 710,445 680,515 20,515" fill="url(#lab_table_top)"/>
-          <rect x="20" y="515" width="660" height="20" fill="url(#lab_table_front)"/>
-
-          <!-- MODE A: BEAKER WATER SETUP (Default for Na, Ca, Mg, Cu) -->
-          <g id="s36_beaker_mode" style="transition:opacity 0.4s ease;">
-            <!-- Drop Shadow -->
-            <ellipse cx="380" cy="445" rx="160" ry="18" fill="url(#stage_shadow_ch3)"/>
-            
-            <!-- 3D Water Solution -->
-            <rect id="s36_water_level" x="226" y="240" width="308" height="200" rx="10" fill="url(#liquid_clear_acid)"/>
-            <ellipse cx="380" cy="240" rx="154" ry="14" fill="url(#liquid_clear_acid)" stroke="#38bdf8" stroke-width="1.5"/>
-
-            <!-- 3D Glass Beaker -->
-            <rect x="220" y="160" width="320" height="285" rx="16" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="3.5"/>
-            <ellipse cx="380" cy="160" rx="160" ry="12" fill="none" stroke="url(#glass_rim_ch3)" stroke-width="3"/>
-
-            <!-- Metal Sample Pellet -->
-            <circle id="s36_metal_pellet" cx="380" cy="235" r="16" fill="url(#metal3d_na)" stroke="#1e293b" stroke-width="2" style="transition:all 0.6s ease; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2));"/>
-            <!-- Metal Label Pill Badge -->
-            <rect x="300" y="110" width="160" height="34" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
-            <text id="s36_pellet_label" x="380" y="133" font-size="15" font-weight="900" text-anchor="middle" fill="#000000">सोडियम (Na)</text>
-
-            <!-- H2 Gas Bubbles Layer -->
-            <g id="s36_bubbles" style="opacity:0; transition:opacity 0.3s ease;">
-              <circle cx="365" cy="265" r="6" fill="#ffffff" opacity="0.95" stroke="#bae6fd"/>
-              <circle cx="395" cy="280" r="8" fill="#ffffff" opacity="0.95" stroke="#bae6fd"/>
-              <circle cx="350" cy="310" r="5" fill="#ffffff" opacity="0.95" stroke="#bae6fd"/>
-              <circle cx="410" cy="330" r="7" fill="#ffffff" opacity="0.95" stroke="#bae6fd"/>
-              <circle cx="380" cy="360" r="9" fill="#ffffff" opacity="0.95" stroke="#bae6fd"/>
-            </g>
-
-            <!-- Flame on water surface for Na/K -->
-            <g id="s36_na_flame" style="opacity:0; transition:opacity 0.3s ease;">
-              <path d="M 380 230 Q 360 165 380 120 Q 400 165 380 230 Z" fill="url(#flame3d_blue)"/>
-              <path d="M 380 230 Q 370 180 380 145 Q 390 180 380 230 Z" fill="url(#flame3d_inner)"/>
-              <rect x="290" y="70" width="180" height="30" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-              <text x="380" y="90" font-size="13" font-weight="900" text-anchor="middle" fill="#dc2626">H₂ में तुरंत आग लग गई! 🔥</text>
-            </g>
-          </g>
-
-          <!-- MODE B: NCERT STEAM APPARATUS (Shown for Fe/Al steam) -->
-          <g id="s36_steam_mode" style="opacity:0; pointer-events:none; transition:opacity 0.4s ease;">
-            <!-- Horizontal Boiling Tube Clamped in Stand -->
-            <ellipse cx="250" cy="445" rx="180" ry="14" fill="url(#stage_shadow_ch3)"/>
-            <!-- Boiling Tube Body -->
-            <rect x="60" y="250" width="360" height="42" rx="8" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="3"/>
-            <!-- Wet Glass Wool on Left -->
-            <rect x="70" y="255" width="75" height="32" rx="4" fill="#a3e635" stroke="#4d7c0f" stroke-width="1.5"/>
-            <rect x="45" y="200" width="125" height="28" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
-            <text x="107" y="219" font-size="12" font-weight="900" text-anchor="middle" fill="#14532d">जल-भीगी ग्लास वूल</text>
-
-            <!-- Metal Sample in Center of Tube -->
-            <rect x="250" y="260" width="65" height="22" rx="4" fill="url(#metal3d_fe)" stroke="#1e293b" stroke-width="1.5"/>
-            <rect x="220" y="200" width="125" height="28" rx="6" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
-            <text x="282" y="219" font-size="12" font-weight="900" text-anchor="middle" fill="#000000">धातु प्रतिदर्श (Fe/Al)</text>
-
-            <!-- 3D Burner Heating the Tube Underneath -->
-            <g transform="translate(180, 290)">
-              <rect x="15" y="60" width="14" height="90" rx="2" fill="url(#burner_barrel)"/>
-              <path d="M 5 150 L 35 150 L 30 135 L 10 135 Z" fill="url(#burner_base)"/>
-              <path d="M 17 60 Q 5 20 22 -5 Q 39 20 27 60 Z" fill="url(#flame3d_blue)"/>
-            </g>
-
-            <!-- 3D Glass Delivery Tube leading into Trough -->
-            <path d="M 420 270 L 500 270 L 500 410 L 580 410 L 580 340" stroke="url(#glass3d_ch3)" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <path d="M 420 270 L 500 270 L 500 410 L 580 410 L 580 340" stroke="#0284c7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-            <!-- 3D Water Trough & Inverted Gas Jar collecting H2 -->
-            <rect x="520" y="390" width="170" height="75" rx="8" fill="url(#liquid_clear_acid)" stroke="#0369a1" stroke-width="2.5"/>
-            <!-- Inverted Test Tube -->
-            <rect x="560" y="235" width="45" height="180" rx="8" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="2.5"/>
-            <!-- H2 Gas collected at closed top -->
-            <rect x="564" y="239" width="37" height="50" fill="#fef08a" opacity="0.85"/>
-            <rect x="515" y="195" width="135" height="28" rx="6" fill="#ffffff" stroke="#ca8a04" stroke-width="1.5"/>
-            <text x="582" y="214" font-size="12" font-weight="900" text-anchor="middle" fill="#854d0e">H₂ गैस एकत्र (Down)</text>
-          </g>
-
-          <!-- RIGHT OBSERVATION & DATA PANEL (x=725 to 1190) -->
-          <g transform="translate(725, 15)">
-            <rect x="0" y="0" width="455" height="505" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="3" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.08))"/>
-            
-            <rect x="0" y="0" width="455" height="52" rx="14" fill="#0284c7"/>
-            <text x="227" y="34" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">💧 अभिक्रिया विश्लेषण व अवलोकन</text>
-
-            <g transform="translate(16, 68)">
-              <rect x="0" y="0" width="423" height="50" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
-              <text id="s36_status_text" x="211" y="31" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">सोडियम: ठंडे जल से तीव्र क्रिया व H₂ दहन</text>
-            </g>
-
-            <g transform="translate(16, 128)">
-              <rect x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
-              <text x="14" y="24" font-size="15" font-weight="900" fill="#1e293b">रासायनिक समीकरण:</text>
-              <text id="s36_eq_line" x="211" y="60" font-size="17" font-weight="900" fill="#0369a1" text-anchor="middle">2Na + 2H₂O ➔ 2NaOH + H₂↑ + ऊष्मा</text>
-            </g>
-
-            <g transform="translate(16, 224)">
-              <rect x="0" y="0" width="423" height="266" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="14" y="24" font-size="16" font-weight="900" fill="#000000">क्रियाशीलता श्रेणी क्रम (NCERT):</text>
-
-              <rect x="12" y="36" width="399" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
-              <text x="20" y="58" font-size="14" font-weight="900" fill="#000000">जल की अवस्था:</text>
-              <text id="s36_water_state" x="20" y="80" font-size="15" font-weight="900" fill="#0284c7">शीतल जल (Cold Water) - तीव्र ऊष्माक्षेपी</text>
-
-              <rect x="12" y="100" width="399" height="74" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
-              <text x="20" y="122" font-size="14" font-weight="900" fill="#000000">विशेष अवलोकन:</text>
-              <text id="s36_obs_text1" x="20" y="142" font-size="13.5" font-weight="900" fill="#000000">उत्पन्न ऊष्मा इतनी अधिक होती है कि</text>
-              <text id="s36_obs_text2" x="20" y="160" font-size="13.5" font-weight="900" fill="#dc2626">उत्सर्जित H₂ गैस तुरंत प्रज्वलित हो उठती है।</text>
-
-              <rect x="12" y="182" width="399" height="74" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
-              <text x="20" y="204" font-size="14" font-weight="900" fill="#0369a1">महत्वपूर्ण परीक्षा प्रश्न 💡:</text>
-              <text id="s36_exam_fact1" x="20" y="224" font-size="13" font-weight="900" fill="#000000">Ca व Mg जल पर तैरने क्यों लगते हैं?</text>
-              <text id="s36_exam_fact2" x="20" y="244" font-size="13" font-weight="900" fill="#000000">उत्तर: H₂ बुलबुले धातु सतह पर चिपक जाते हैं!</text>
-            </g>
-          </g>
-        </svg>
-      </div>
-
-      <div class="sim-feedback" id="s36_feedback" style="margin-top:14px; padding:16px 22px; background:#e0f2fe; border-left:8px solid #0284c7; border-radius:8px; font-size:22px; font-weight:800; color:#000000;">
-        💡 <strong>तथ्य:</strong> Na, K ठंडे जल से; Mg गर्म जल से; Fe, Al केवल भाप से क्रिया करते हैं, जबकि Cu, Ag, Au जल की किसी अवस्था से क्रिया नहीं करते।
+      <div class="sim-feedback" id="s36_feedback" style="margin-top:14px; padding:16px 22px; background:#e0f2fe; border-left:8px solid #0284c7; border-radius:8px; font-size:18px; font-weight:800; color:#0f172a;">
+        💡 <strong>NCERT मुख्य निष्कर्ष:</strong> पोटैशियम व सोडियम ठंडे जल से हिंसक अभिक्रिया करते हैं; कैल्शियम कम हिंसक होता है और तैरता है; मैग्नीशियम केवल गर्म जल से क्रिया करके तैरता है; ऐलुमिनियम व लोहा केवल भाप से क्रिया करते हैं; जबकि लेड, कॉपर, सिल्वर एवं गोल्ड जल के साथ बिल्कुल अभिक्रिया नहीं करते।
       </div>
     </div>
 
 
-
-    <!-- ===================================================================
-         SIMULATOR 3.7: अम्लों से अभिक्रिया व तनु HNO3 का अपवाद (Activity 3.11)
-         =================================================================== -->
     <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(124,58,237,0.12);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
@@ -14114,90 +14045,479 @@ function sim35ResetAction() {
   }
 }
 
-/* --------------------------------------------------------------------------
-   SIMULATOR 3.6: जल व भाप से अभिक्रिया (Activity 3.10)
-   -------------------------------------------------------------------------- */
-function sim36Select(type) {
-  var beakerMode = document.getElementById('s36_beaker_mode');
-  var steamMode = document.getElementById('s36_steam_mode');
-  var naFlame = document.getElementById('s36_na_flame');
-  var bubbles = document.getElementById('s36_bubbles');
-  var stext = document.getElementById('s36_status_text');
-  var eqLine = document.getElementById('s36_eq_line');
-  var pellet = document.getElementById('s36_metal_pellet');
-  var pelletLbl = document.getElementById('s36_pellet_label');
-  var pbar = document.getElementById('s36_pbar');
+/* ==========================================================================
+   SIMULATOR 3.6: जल व भाप से अभिक्रिया (Activity 3.10) — 16:9 CONTROLLER
+   ========================================================================== */
 
-  if (!stext) return;
+var s36_currentMetal = 'na';
+var s36_currentTimeline = null;
+var s36_isAnimating = false;
 
-  if (type === 'na') {
-    if (beakerMode) beakerMode.style.opacity = '1';
-    if (steamMode) steamMode.style.opacity = '0';
-    if (naFlame) naFlame.style.opacity = '1';
-    if (bubbles) bubbles.style.opacity = '1';
-    if (pellet) pellet.setAttribute('cy', '235');
-    if (pelletLbl) pelletLbl.textContent = 'सोडियम (Na)';
-    if (eqLine) eqLine.textContent = '2Na + 2H₂O ➔ 2NaOH + H₂↑ + ऊष्मा (आग!)';
-    stext.textContent = 'सोडियम: ठंडे जल से अति-तीव्र क्रिया, H₂ में तुरंत आग लग गई!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('सोडियम ठंडे पानी में तीव्र क्रिया करके आग पकड़ लेता है।');
-  } else if (type === 'ca') {
-    if (beakerMode) beakerMode.style.opacity = '1';
-    if (steamMode) steamMode.style.opacity = '0';
-    if (naFlame) naFlame.style.opacity = '0';
-    if (bubbles) bubbles.style.opacity = '1';
-    if (pellet) pellet.setAttribute('cy', '230');
-    if (pelletLbl) pelletLbl.textContent = 'कैल्शियम (Ca) तैरता हुआ';
-    if (eqLine) eqLine.textContent = 'Ca + 2H₂O ➔ Ca(OH)₂ + H₂↑';
-    stext.textContent = 'कैल्शियम: मंद क्रिया, H₂ बुलबुले चिपकने से धातु तैरने लगती है!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('कैल्शियम से हाइड्रोजन गैस के बुलबुले चिपक जाते हैं और वह तैरने लगता है।');
-  } else if (type === 'mg') {
-    if (beakerMode) beakerMode.style.opacity = '1';
-    if (steamMode) steamMode.style.opacity = '0';
-    if (naFlame) naFlame.style.opacity = '0';
-    if (bubbles) bubbles.style.opacity = '1';
-    if (pellet) pellet.setAttribute('cy', '230');
-    if (pelletLbl) pelletLbl.textContent = 'मैग्नीशियम (Mg) गर्म जल';
-    if (eqLine) eqLine.textContent = 'Mg + 2H₂O(गर्म) ➔ Mg(OH)₂ + H₂↑';
-    stext.textContent = 'मैग्नीशियम: ठंडे जल से नहीं, गर्म जल से क्रिया करके तैरने लगता है!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('मैग्नीशियम गर्म जल से क्रिया करके तैरने लगता है।');
-  } else if (type === 'steam') {
-    if (beakerMode) beakerMode.style.opacity = '0';
-    if (steamMode) steamMode.style.opacity = '1';
-    if (eqLine) eqLine.textContent = '3Fe(s) + 4H₂O(g भाप) ➔ Fe₃O₄(s) + 4H₂↑';
-    stext.textContent = 'लोहा व ऐलुमिनियम: केवल भाप से क्रिया करके H₂ गैस उत्सर्जित करते हैं!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('लोहा और ऐलुमिनियम केवल भाप से क्रिया करते हैं।');
-  } else if (type === 'cu') {
-    if (beakerMode) beakerMode.style.opacity = '1';
-    if (steamMode) steamMode.style.opacity = '0';
-    if (naFlame) naFlame.style.opacity = '0';
-    if (bubbles) bubbles.style.opacity = '0';
-    if (pellet) pellet.setAttribute('cy', '450');
-    if (pelletLbl) pelletLbl.textContent = 'तांबा (Cu) तली में बैठा';
-    if (eqLine) eqLine.textContent = 'Cu + H₂O ➔ कोई अभिक्रिया नहीं (No Reaction)';
-    stext.textContent = 'Cu, Ag, Au: जल से कोई अभिक्रिया नहीं';
-    if (pbar) pbar.style.width = '20%';
-    speakHindiCh3('कॉपर जल की किसी भी अवस्था से अभिक्रिया नहीं करता।');
+var s36_videoMap = {
+  'na': 'media/sim36_sodium_water.mp4',
+  'ca': 'media/sim36_calcium_water.mp4',
+  'mg': 'media/sim36_magnesium_hotwater.mp4',
+  'steam': 'media/sim36_iron_steam.mp4',
+  'cu': 'media/sim36_copper_water.mp4'
+};
+
+var s36_promptsMap = {
+  'na': 'Cinematic macro 8K shot in a sterile chemistry laboratory: A pair of stainless steel forceps carefully drops a small shiny pea-sized sodium metal piece into a transparent borosilicate glass beaker filled with crystal-clear water. Instantly upon touching the water, the sodium metal furiously fizzes and darts across the surface, generating violent microscopic hydrogen bubbles. Within 2 seconds, intense heat ignites the hydrogen gas into a brilliant golden-yellow and lilac flame dancing directly on the water\'s surface, leaving a trail of white vapor against a clean soft studio backdrop. 60fps, photorealistic physics, slow motion, clean science educational documentary style.',
+  'ca': 'Ultra-realistic 8K close-up in a glass beaker of pure water: A small silvery-gray piece of calcium metal is immersed. It initially sinks to the middle, then a steady vigorous effervescence of fine hydrogen gas bubbles begins forming all over the metal\'s surface. As the dense coating of hydrogen bubbles completely encapsulates the calcium pellet, the buoyant force lifts the piece of calcium upward to float gracefully on the surface while fizzing continuously. Crystal clear glass refraction, natural volumetric lighting, high-speed macro science photography.',
+  'mg': 'Close-up 8K laboratory shot of a polished magnesium metal ribbon curled inside a Pyrex test tube of hot boiling water. Thermal steam wisps rise as vigorous effervescence of hydrogen bubbles rapidly nucleates along the magnesium ribbon. The cling of hundreds of shiny gas bubbles increases buoyancy, causing the ribbon to gently rise and float near the steaming liquid meniscus. Educational science video, pristine depth of field, 4K crisp 60fps.',
+  'steam': 'Cinematic 8K wide-to-macro laboratory setup of the NCERT steam apparatus: A horizontal heat-resistant boiling tube clamped to a metal stand. At the closed left end, moist wet glass wool is heated by a blue Bunsen burner flame, generating billowing steam that rushes horizontally over gray iron filings and aluminium foil heated to red-hot glow in the middle. The bent delivery tube passes steam and hydrogen into a glass water trough, where stream of vigorous bubbles rises inside an inverted transparent graduated test tube, visibly displacing the water downward. Realistic glass reflections, physics-accurate water displacement, professional science documentary quality.',
+  'cu': 'Macro 8K laboratory view: A bright lustrous reddish-brown copper metal strip sits at the bottom of a transparent beaker of hot boiling water. Zero bubbles form, no surface tarnishing, zero reaction as steam passes by, remaining completely pristine and inert. Extreme clarity, educational laboratory documentary.'
+};
+
+function sim36SetDisplay(mode) {
+  var videoMode = document.getElementById('s36_video_mode');
+  var simMode = document.getElementById('s36_sim_mode');
+  var tabSim = document.getElementById('s36_tab_sim');
+  var tabVideo = document.getElementById('s36_tab_video');
+  var player = document.getElementById('s36_video_player');
+
+  if (mode === 'video') {
+    if (videoMode) videoMode.style.display = 'block';
+    if (simMode) simMode.style.display = 'none';
+    if (tabVideo) {
+      tabVideo.style.background = '#0284c7';
+      tabVideo.style.color = '#ffffff';
+    }
+    if (tabSim) {
+      tabSim.style.background = '#ffffff';
+      tabSim.style.color = '#0f172a';
+    }
+    if (player) {
+      player.play().catch(function(e) { console.log('Autoplay prevented:', e); });
+    }
+  } else {
+    if (videoMode) videoMode.style.display = 'none';
+    if (simMode) simMode.style.display = 'block';
+    if (tabSim) {
+      tabSim.style.background = '#0284c7';
+      tabSim.style.color = '#ffffff';
+    }
+    if (tabVideo) {
+      tabVideo.style.background = '#ffffff';
+      tabVideo.style.color = '#0f172a';
+    }
+    if (player) {
+      player.pause();
+    }
   }
 }
 
-function sim36Reset() {
-  var beakerMode = document.getElementById('s36_beaker_mode');
-  var steamMode = document.getElementById('s36_steam_mode');
-  var naFlame = document.getElementById('s36_na_flame');
-  var bubbles = document.getElementById('s36_bubbles');
-  var pbar = document.getElementById('s36_pbar');
-  var stext = document.getElementById('s36_status_text');
-  if (beakerMode) beakerMode.style.opacity = '1';
-  if (steamMode) steamMode.style.opacity = '0';
-  if (naFlame) naFlame.style.opacity = '0';
-  if (bubbles) bubbles.style.opacity = '0';
-  if (pbar) pbar.style.width = '0%';
-  if (stext) stext.textContent = 'धातु चुनें: ठंडे जल, गर्म जल या भाप से क्रिया जांचें';
+function sim36CopyCurrentPrompt() {
+  var text = s36_promptsMap[s36_currentMetal] || s36_promptsMap['na'];
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById('s36_btn_copy_prompt');
+    if (btn) {
+      var oldText = btn.innerHTML;
+      btn.innerHTML = '✅ कॉपी संपन्न!';
+      btn.style.background = '#16a34a';
+      setTimeout(function() {
+        btn.innerHTML = oldText;
+        btn.style.background = '#0284c7';
+      }, 2000);
+    }
+  }).catch(function(err) {
+    alert('प्रॉम्प्ट कॉपी नहीं हो सका, कृपया मैन्युअल कॉपी करें।');
+  });
 }
+
+function sim36SelectMetal(type) {
+  if (s36_currentTimeline) {
+    s36_currentTimeline.kill();
+    s36_currentTimeline = null;
+  }
+  s36_isAnimating = false;
+  s36_currentMetal = type;
+  sim36ResetAction();
+
+  // Update video player & prompt
+  var player = document.getElementById('s36_video_player');
+  var source = document.getElementById('s36_video_source');
+  var promptDisplay = document.getElementById('s36_prompt_display_text');
+  if (player && source && s36_videoMap[type]) {
+    source.src = s36_videoMap[type];
+    player.load();
+  }
+  if (promptDisplay && s36_promptsMap[type]) {
+    promptDisplay.textContent = s36_promptsMap[type];
+  }
+
+  // Buttons styling
+  var metals = ['na', 'ca', 'mg', 'steam', 'cu'];
+  metals.forEach(function(m) {
+    var b = document.getElementById('s36_btn_' + m);
+    if (!b) return;
+    if (m === type) {
+      b.style.background = (m === 'na' ? '#dc2626' : m === 'ca' ? '#2563eb' : m === 'mg' ? '#16a34a' : m === 'steam' ? '#7c3aed' : '#b45309');
+      b.style.color = '#ffffff';
+      b.style.borderColor = '#0f172a';
+      b.style.boxShadow = '0 3px 10px rgba(0,0,0,0.25)';
+    } else {
+      b.style.background = '#ffffff';
+      b.style.color = (m === 'na' ? '#dc2626' : m === 'ca' ? '#2563eb' : m === 'mg' ? '#16a34a' : m === 'steam' ? '#7c3aed' : '#b45309');
+      b.style.borderColor = '#cbd5e1';
+      b.style.boxShadow = '0 2px 6px rgba(0,0,0,0.06)';
+    }
+  });
+
+  // Apparatus stations toggle
+  var beakerStation = document.getElementById('s36_beaker_station');
+  var steamStation = document.getElementById('s36_steam_station');
+  var pelletMesh = document.getElementById('s36_pellet_mesh');
+  var waterRect = document.getElementById('s36_water_rect');
+  var waterMeniscus = document.getElementById('s36_water_meniscus');
+  var steamWisps = document.getElementById('s36_hot_steam_wisps');
+  var beakerTitleTag = document.getElementById('s36_beaker_title_tag');
+
+  var stext = document.getElementById('s36_status_text');
+  var eqLine = document.getElementById('s36_eq_line');
+  var wState = document.getElementById('s36_water_state');
+  var obs1 = document.getElementById('s36_obs_text1');
+  var obs2 = document.getElementById('s36_obs_text2');
+  var exam1 = document.getElementById('s36_exam_fact1');
+  var exam2 = document.getElementById('s36_exam_fact2');
+  var feedback = document.getElementById('s36_feedback');
+
+  if (type === 'steam') {
+    if (beakerStation) { beakerStation.style.opacity = '0'; beakerStation.style.pointerEvents = 'none'; }
+    if (steamStation) { steamStation.style.opacity = '1'; steamStation.style.pointerEvents = 'auto'; }
+
+    if (stext) stext.textContent = 'लोहा व ऐलुमिनियम: केवल भाप (Steam) से क्रिया';
+    if (eqLine) eqLine.textContent = '3Fe(s) + 4H₂O(g भाप) ➔ Fe₃O₄(s) + 4H₂↑';
+    if (wState) wState.textContent = 'गैसीय अवस्था: भाप (Steam 100°C)';
+    if (obs1) obs1.textContent = 'ठंडे व गर्म जल से शून्य क्रिया; केवल';
+    if (obs2) {
+      obs2.textContent = 'भाप से क्रिया कर धात्विक ऑक्साइड व H₂ गैस बनाता है।';
+      obs2.style.color = '#7c3aed';
+    }
+    if (exam1) exam1.textContent = 'लोहे पर भाप की क्रिया का समीकरण क्या है?';
+    if (exam2) {
+      exam2.textContent = 'उत्तर: Fe₃O₄ (आयरन II, III ऑक्साइड) + 4H₂';
+      exam2.style.color = '#15803d';
+    }
+    if (feedback) {
+      feedback.innerHTML = '💡 <strong>भाप अभिक्रिया:</strong> लोहा (Fe) एवं ऐलुमिनियम (Al) ठंडे या गर्म जल से बिल्कुल क्रिया नहीं करते, परंतु लाल तप्त होकर केवल जलवाष्प (भाप) से क्रिया करते हैं। [3Fe + 4H₂O(भाप) ➔ Fe₃O₄ + 4H₂↑]';
+    }
+    speakHindiCh3('लोहा और ऐलुमिनियम केवल भाप से अभिक्रिया करते हैं।');
+  } else {
+    if (beakerStation) { beakerStation.style.opacity = '1'; beakerStation.style.pointerEvents = 'auto'; }
+    if (steamStation) { steamStation.style.opacity = '0'; steamStation.style.pointerEvents = 'none'; }
+
+    // Colors of pellet
+    if (pelletMesh) {
+      if (type === 'na') pelletMesh.setAttribute('fill', '#e9d5ff'); // Soft Silvery Na
+      else if (type === 'ca') pelletMesh.setAttribute('fill', '#94a3b8'); // Grayish Ca
+      else if (type === 'mg') pelletMesh.setAttribute('fill', '#f8fafc'); // Bright silver ribbon Mg
+      else if (type === 'cu') pelletMesh.setAttribute('fill', '#ea580c'); // Lustrous Red-Bronze Cu
+    }
+
+    // Water temp & styling
+    if (type === 'mg') {
+      if (waterRect) waterRect.setAttribute('fill', 'url(#s36_liquid_hot)');
+      if (waterMeniscus) waterMeniscus.setAttribute('fill', 'url(#s36_liquid_hot)');
+      if (steamWisps) steamWisps.style.opacity = '0.9';
+      if (beakerTitleTag) beakerTitleTag.textContent = 'बीकर: गर्म जल (Hot Water ♨️)';
+    } else {
+      if (waterRect) waterRect.setAttribute('fill', 'url(#s36_liquid_cold)');
+      if (waterMeniscus) waterMeniscus.setAttribute('fill', 'url(#s36_liquid_cold)');
+      if (steamWisps) steamWisps.style.opacity = '0';
+      if (beakerTitleTag) beakerTitleTag.textContent = 'बीकर: ठंडा जल (Cold Water)';
+    }
+
+    if (type === 'na') {
+      if (stext) stext.textContent = 'सोडियम: ठंडे जल से अति-तीव्र क्रिया, H₂ में तुरंत आग लग गई!';
+      if (eqLine) eqLine.textContent = '2Na + 2H₂O ➔ 2NaOH + H₂↑ + अत्यधिक ऊष्मा (🔥)';
+      if (wState) wState.textContent = 'शीतल जल (Cold Water) - तीव्र ऊष्माक्षेपी';
+      if (obs1) obs1.textContent = 'उत्पन्न ऊष्मा इतनी तीव्र होती है कि';
+      if (obs2) {
+        obs2.textContent = 'उत्सर्जित H₂ गैस तुरंत प्रज्वलित हो उठती है।';
+        obs2.style.color = '#dc2626';
+      }
+      if (exam1) exam1.textContent = 'सोडियम को केरोसिन में क्यों डुबो कर रखते हैं?';
+      if (exam2) {
+        exam2.textContent = 'उत्तर: यह वायु व जल से तीव्र क्रिया कर आग पकड़ लेता है।';
+        exam2.style.color = '#b91c1c';
+      }
+      if (feedback) {
+        feedback.innerHTML = '💡 <strong>सोडियम/पोटैशियम:</strong> ये ठंडे जल के साथ अत्यधिक तीव्र व विस्फोटक अभिक्रिया करते हैं। निकलने वाली हाइड्रोजन गैस उत्पन्न ऊष्मा से तुरंत आग पकड़ लेती है। [2Na + 2H₂O ➔ 2NaOH + H₂ + ऊष्मा]';
+      }
+      speakHindiCh3('सोडियम ठंडे जल से अति तीव्र क्रिया करके आग पकड़ लेता है।');
+    } else if (type === 'ca') {
+      if (stext) stext.textContent = 'कैल्शियम: मंद क्रिया, H₂ बुलबुले चिपकने से धातु तैरने लगती है!';
+      if (eqLine) eqLine.textContent = 'Ca + 2H₂O ➔ Ca(OH)₂ + H₂↑ (मंद ऊष्मा)';
+      if (wState) wState.textContent = 'शीतल जल (Cold Water) - मंद अभिक्रिया';
+      if (obs1) obs1.textContent = 'अभिक्रिया धीमी होती है, ऊष्मा आग लगाने हेतु पर्याप्त नहीं;';
+      if (obs2) {
+        obs2.textContent = 'H₂ गैस के बुलबुले धातु सतह से चिपककर उसे तैराते हैं।';
+        obs2.style.color = '#2563eb';
+      }
+      if (exam1) exam1.textContent = 'कैल्शियम जल में तैरने क्यों लगता है?';
+      if (exam2) {
+        exam2.textContent = 'उत्तर: उत्पन्न H₂ के बुलबुले कैल्शियम से चिपक जाते हैं!';
+        exam2.style.color = '#15803d';
+      }
+      if (feedback) {
+        feedback.innerHTML = '💡 <strong>कैल्शियम का तैरना:</strong> कैल्शियम की जल से क्रिया थोड़ी धीमी होती है और इतनी ऊष्मा नहीं निकलती कि H₂ में आग लगे। बुलबुले धातु से चिपक जाते हैं जिससे यह तैरने लगता है।';
+      }
+      speakHindiCh3('कैल्शियम की सतह पर हाइड्रोजन के बुलबुले चिपक जाते हैं जिससे वह तैरने लगता है।');
+    } else if (type === 'mg') {
+      if (stext) stext.textContent = 'मैग्नीशियम: ठंडे जल से नहीं, गर्म जल से क्रिया करके तैरता है!';
+      if (eqLine) eqLine.textContent = 'Mg + 2H₂O(गर्म जल) ➔ Mg(OH)₂ + H₂↑';
+      if (wState) wState.textContent = 'गर्म जल (Hot Water ♨️)';
+      if (obs1) obs1.textContent = 'ठंडे जल से कोई अभिक्रिया नहीं होती; केवल';
+      if (obs2) {
+        obs2.textContent = 'गर्म जल से क्रिया कर H₂ बुलबुलों के कारण तैरने लगता है।';
+        obs2.style.color = '#16a34a';
+      }
+      if (exam1) exam1.textContent = 'Mg ठंडे जल से क्रिया क्यों नहीं करता?';
+      if (exam2) {
+        exam2.textContent = 'उत्तर: यह कम क्रियाशील है, गर्म जल की ऊष्मा आवश्यक है।';
+        exam2.style.color = '#15803d';
+      }
+      if (feedback) {
+        feedback.innerHTML = '💡 <strong>मैग्नीशियम व गर्म जल:</strong> मैग्नीशियम शीतल जल से क्रिया नहीं करता। यह केवल गर्म जल से क्रिया करके मैग्नीशियम हाइड्रॉक्साइड व हाइड्रोजन बनाता है तथा बुलबुले चिपकने से तैरने लगता है।';
+      }
+      speakHindiCh3('मैग्नीशियम ठंडे जल से क्रिया नहीं करता, गर्म जल से क्रिया करके तैरता है।');
+    } else if (type === 'cu') {
+      if (stext) stext.textContent = 'तांबा (Cu): जल की किसी भी अवस्था से कोई क्रिया नहीं!';
+      if (eqLine) eqLine.textContent = 'Cu + H₂O (ठंडा/गर्म/भाप) ➔ कोई अभिक्रिया नहीं ❌';
+      if (wState) wState.textContent = 'किसी भी अवस्था में शून्य क्रिया';
+      if (obs1) obs1.textContent = 'तांबा, चांदी, सोना सक्रियता श्रेणी में हाइड्रोजन से नीचे हैं;';
+      if (obs2) {
+        obs2.textContent = 'यह जल अथवा भाप किसी से भी क्रिया नहीं करता।';
+        obs2.style.color = '#b45309';
+      }
+      if (exam1) exam1.textContent = 'गर्म जल के टैंक तांबे के क्यों बनाए जाते हैं?';
+      if (exam2) {
+        exam2.textContent = 'उत्तर: क्योंकि तांबा जल या भाप से कोई अभिक्रिया नहीं करता।';
+        exam2.style.color = '#15803d';
+      }
+      if (feedback) {
+        feedback.innerHTML = '💡 <strong>अक्रिय धातुएं:</strong> कॉपर (Cu), सिल्वर (Ag), गोल्ड (Au) एवं लेड (Pb) जल अथवा भाप की किसी भी अवस्था से कोई अभिक्रिया नहीं करते क्योंकि ये हाइड्रोजन से कम क्रियाशील हैं।';
+      }
+      speakHindiCh3('कॉपर जल की किसी भी अवस्था से अभिक्रिया नहीं करता।');
+    }
+  }
+}
+
+function sim36RunStep(step) {
+  if (s36_currentTimeline) {
+    s36_currentTimeline.kill();
+    s36_currentTimeline = null;
+  }
+  s36_isAnimating = false;
+
+  var statusBox = document.getElementById('s36_status_text');
+
+  if (s36_currentMetal === 'steam') {
+    // Steam apparatus steps
+    if (step === 1) {
+      if (statusBox) statusBox.textContent = 'चरण 1: उपकरण सज्जा — नली में गीली ग्लास वूल व धातु (Fe/Al) व्यवस्थित की गई।';
+      speakHindiCh3('उपकरण सज्जा पूर्ण है।');
+      gsap.to("#s36_steam_station", { opacity: 1, duration: 0.5 });
+    } else if (step === 2) {
+      if (statusBox) statusBox.textContent = 'चरण 2: बर्नर से गीली ग्लास वूल को गर्म करके भाप बनाई गई, जो धातु पर बह रही है...';
+      speakHindiCh3('बर्नर से भाप बनाई जा रही है।');
+      gsap.timeline()
+        .to("#s36_steam_flow", { opacity: 1, duration: 0.8 })
+        .to("#s36_steam_metal_sample", { fill: "#ef4444", duration: 0.8 });
+    } else if (step === 3) {
+      if (statusBox) statusBox.textContent = 'चरण 3: H₂ गैस के बुलबुले उल्टी परखनली में एकत्र होकर जल को नीचे धकेलते हैं!';
+      speakHindiCh3('हाइड्रोजन गैस उल्टी परखनली में एकत्र हो रही है।');
+      gsap.timeline()
+        .to("#s36_steam_bubbles", { opacity: 1, duration: 0.5 })
+        .to("#s36_inverted_water", { y: 60, height: 75, duration: 1.2, ease: "power1.inOut" })
+        .to("#s36_h2_pocket", { height: 110, duration: 1.2 }, "<")
+        .to("#s36_splinter_rig", { opacity: 1, y: 150, duration: 0.8 })
+        .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    }
+  } else {
+    // Beaker metal steps
+    if (step === 1) {
+      if (statusBox) statusBox.textContent = 'चरण 1: चिमटे में धातु का टुकड़ा लेकर बीकर के ठीक ऊपर लाया गया।';
+      speakHindiCh3('चिमटे से धातु को बीकर के ऊपर लाया गया।');
+      gsap.timeline()
+        .set("#s36_forceps_rig", { x: 360, y: 40, opacity: 1 })
+        .set("#s36_pellet_group", { x: 360, y: 80, opacity: 1 })
+        .to("#s36_forceps_rig", { y: 150, duration: 0.8, ease: "power2.out" })
+        .to("#s36_pellet_group", { y: 190, duration: 0.8, ease: "power2.out" }, "<");
+    } else if (step === 2) {
+      if (statusBox) statusBox.textContent = 'चरण 2: धातु को जल में गिराया गया...';
+      speakHindiCh3('धातु को जल में गिराया गया।');
+      gsap.timeline()
+        .to("#s36_pellet_group", { y: (s36_currentMetal === 'cu' ? 415 : (s36_currentMetal === 'na' ? 235 : 380)), duration: 0.8, ease: (s36_currentMetal === 'na' ? "bounce.out" : "power1.in") })
+        .to("#s36_forceps_rig", { y: 40, duration: 0.8, ease: "power2.in" }, "<")
+        .to("#s36_dynamic_bubbles", { opacity: (s36_currentMetal === 'cu' ? 0 : 1), duration: 0.4 });
+    } else if (step === 3) {
+      if (s36_currentMetal === 'na') {
+        if (statusBox) statusBox.textContent = 'चरण 3: अत्यधिक ऊष्मा से उत्सर्जित H₂ गैस में तुरंत भीषण आग लग गई! 🔥';
+        speakHindiCh3('अत्यधिक ऊष्मा से हाइड्रोजन में तुरंत आग लग गई।');
+        gsap.timeline()
+          .to("#s36_na_flame_rig", { opacity: 1, duration: 0.3 })
+          .to("#s36_pellet_group", { x: "+=25", repeat: 5, yoyo: true, duration: 0.12 })
+          .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      } else if (s36_currentMetal === 'ca') {
+        if (statusBox) statusBox.textContent = 'चरण 3: H₂ के बुलबुले चिपकने से कैल्शियम धातु जल की सतह पर तैरने लगी! 🫧';
+        speakHindiCh3('हाइड्रोजन के बुलबुले चिपकने से कैल्शियम तैरने लगा।');
+        gsap.timeline()
+          .to("#s36_attached_bubbles", { opacity: 1, duration: 0.4 })
+          .to("#s36_pellet_group", { y: 240, duration: 1.4, ease: "power1.out" })
+          .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      } else if (s36_currentMetal === 'mg') {
+        if (statusBox) statusBox.textContent = 'चरण 3: गर्म जल की ऊष्मा से तीव्र H₂ बुलबुले बने व मैग्नीशियम तैरने लगा! ♨️';
+        speakHindiCh3('गर्म जल से क्रिया करके मैग्नीशियम तैरने लगा।');
+        gsap.timeline()
+          .to("#s36_attached_bubbles", { opacity: 1, duration: 0.4 })
+          .to("#s36_pellet_group", { y: 242, duration: 1.4, ease: "power1.out" })
+          .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      } else if (s36_currentMetal === 'cu') {
+        if (statusBox) statusBox.textContent = 'चरण 3: तांबा तली में शांत बैठा रहा — जल से कोई क्रिया नहीं! ❌';
+        speakHindiCh3('कॉपर जल से कोई क्रिया नहीं करता।');
+        gsap.timeline()
+          .to("#s36_pellet_group", { y: 415, duration: 0.2 })
+          .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+      }
+    }
+  }
+}
+
+function sim36TriggerAction() {
+  sim36ResetAction();
+  if (typeof gsap === 'undefined') return;
+  s36_currentTimeline = gsap.timeline();
+
+  var statusBox = document.getElementById('s36_status_text');
+  var popupText = document.getElementById('s36_popup_text');
+
+  if (s36_currentMetal === 'steam') {
+    if (statusBox) statusBox.textContent = 'संपूर्ण ऑटो-प्ले: गीली ग्लास वूल को गर्म किया जा रहा है...';
+    speakHindiCh3('भाप उपकरण में गीली ग्लास वूल को गर्म करके भाप बनाई जा रही है।');
+
+    s36_currentTimeline
+      // Step 1: Heat glass wool & metal
+      .to("#s36_steam_station", { opacity: 1, duration: 0.3 })
+      .to("#s36_steam_flow", { opacity: 1, duration: 0.8 })
+      .to("#s36_steam_metal_sample", { fill: "#ef4444", duration: 0.8 }, "-=0.4")
+      
+      // Step 2: Bubbles into inverted test tube & water displacement
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'भाप धातु पर से गुजरी: H₂ गैस बनकर जल को नीचे विस्थापित कर रही है...';
+        speakHindiCh3('हाइड्रोजन गैस जल को नीचे विस्थापित करके एकत्र हो रही है।');
+      })
+      .to("#s36_steam_bubbles", { opacity: 1, duration: 0.4 })
+      .to("#s36_inverted_water", { y: 60, height: 75, duration: 1.5, ease: "power1.inOut" })
+      .to("#s36_h2_pocket", { height: 110, duration: 1.5 }, "<")
+
+      // Step 3: Splinter Pop Test
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'परखनली के मुख पर जलती तीली ले जाने पर पॉप (Pop) ध्वनि आई!';
+        speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस की पुष्टि हुई।');
+        if (popupText) popupText.textContent = "💨 भाप से क्रिया संपन्न: Fe₃O₄ + H₂ गैस एकत्र (Pop ध्वनि)";
+      })
+      .to("#s36_splinter_rig", { opacity: 1, y: 150, duration: 0.8, ease: "power2.out" })
+      .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" });
+
+  } else {
+    // Beaker sequence
+    if (statusBox) statusBox.textContent = 'चिमटा धातु लेकर बीकर में प्रवेश कर रहा है...';
+    speakHindiCh3('चिमटे से धातु को बीकर में डाला जा रहा है।');
+
+    s36_currentTimeline
+      // Step 1: Forceps descend
+      .set("#s36_forceps_rig", { x: 360, y: 40, opacity: 1 })
+      .set("#s36_pellet_group", { x: 360, y: 80, opacity: 1 })
+      .to("#s36_forceps_rig", { y: 150, duration: 0.7, ease: "power2.out" })
+      .to("#s36_pellet_group", { y: 190, duration: 0.7, ease: "power2.out" }, "<")
+      
+      // Step 2: Release pellet into water
+      .to("#s36_pellet_group", { 
+        y: (s36_currentMetal === 'cu' ? 415 : (s36_currentMetal === 'na' ? 235 : 380)), 
+        duration: 0.8, 
+        ease: (s36_currentMetal === 'na' ? "bounce.out" : "power1.in") 
+      })
+      .to("#s36_forceps_rig", { y: 40, duration: 0.7, ease: "power2.in" }, "-=0.4")
+      
+      // Step 3: Reaction behavior
+      .call(function() {
+        if (s36_currentMetal === 'na') {
+          if (statusBox) statusBox.textContent = 'सोडियम: तीव्र क्रिया से उत्पन्न H₂ ने तुरंत आग पकड़ ली! 🔥';
+          speakHindiCh3('सोडियम जल की सतह पर तैरते हुए भीषण आग पकड़ लेता है।');
+          if (popupText) popupText.textContent = "🔥 तीव्र ऊष्माक्षेपी अभिक्रिया — H₂ गैस ने तुरंत आग पकड़ ली!";
+        } else if (s36_currentMetal === 'ca') {
+          if (statusBox) statusBox.textContent = 'कैल्शियम: H₂ के बुलबुले चिपकने से धातु ऊपर तैरने लगी! 🫧';
+          speakHindiCh3('हाइड्रोजन के बुलबुले चिपकने से कैल्शियम तैरने लगता है।');
+          if (popupText) popupText.textContent = "🫧 H₂ गैस के बुलबुले चिपकने से कैल्शियम धातु तैरने लगी!";
+        } else if (s36_currentMetal === 'mg') {
+          if (statusBox) statusBox.textContent = 'मैग्नीशियम: गर्म जल से क्रिया कर H₂ बुलबुलों के साथ तैरने लगा! ♨️';
+          speakHindiCh3('गर्म जल से क्रिया करके मैग्नीशियम तैरने लगता है।');
+          if (popupText) popupText.textContent = "♨️ मैग्नीशियम गर्म जल से क्रिया कर तैरने लगा!";
+        } else if (s36_currentMetal === 'cu') {
+          if (statusBox) statusBox.textContent = 'तांबा (Cu): कोई अभिक्रिया नहीं, तली में स्थिर बैठा रहा। ❌';
+          speakHindiCh3('कॉपर जल से कोई क्रिया नहीं करता।');
+          if (popupText) popupText.textContent = "❌ कॉपर (तांबा) जल से कोई अभिक्रिया नहीं करता!";
+        }
+      });
+
+    if (s36_currentMetal === 'na') {
+      s36_currentTimeline
+        .to("#s36_dynamic_bubbles", { opacity: 1, duration: 0.3 })
+        .to("#s36_na_flame_rig", { opacity: 1, duration: 0.2 })
+        .to("#s36_pellet_group", { x: "+=22", repeat: 8, yoyo: true, duration: 0.12 })
+        .to("#s36_na_flame_rig", { x: "+=22", repeat: 8, yoyo: true, duration: 0.12 }, "<")
+        .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    } else if (s36_currentMetal === 'ca') {
+      s36_currentTimeline
+        .to("#s36_dynamic_bubbles", { opacity: 1, duration: 0.4 })
+        .to("#s36_attached_bubbles", { opacity: 1, duration: 0.3 })
+        .to("#s36_pellet_group", { y: 240, duration: 1.6, ease: "power1.out" })
+        .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    } else if (s36_currentMetal === 'mg') {
+      s36_currentTimeline
+        .to("#s36_dynamic_bubbles", { opacity: 1, duration: 0.4 })
+        .to("#s36_attached_bubbles", { opacity: 1, duration: 0.3 })
+        .to("#s36_pellet_group", { y: 242, duration: 1.6, ease: "power1.out" })
+        .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+    } else if (s36_currentMetal === 'cu') {
+      s36_currentTimeline
+        .to("#s36_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" }, "+=0.4");
+    }
+  }
+}
+
+function sim36ResetAction() {
+  if (s36_currentTimeline) {
+    s36_currentTimeline.kill();
+    s36_currentTimeline = null;
+  }
+  s36_isAnimating = false;
+
+  if (typeof gsap !== 'undefined') {
+    gsap.set("#s36_forceps_rig", { x: 360, y: 80, opacity: 1 });
+    gsap.set("#s36_pellet_group", { x: 360, y: 235, opacity: 1 });
+    gsap.set("#s36_na_flame_rig", { opacity: 0, x: 360, y: 220 });
+    gsap.set("#s36_dynamic_bubbles", { opacity: 0 });
+    gsap.set("#s36_attached_bubbles", { opacity: 0 });
+    gsap.set("#s36_popup_badge", { opacity: 0, scale: 0.85 });
+
+    // Steam apparatus
+    gsap.set("#s36_steam_flow", { opacity: 0 });
+    gsap.set("#s36_steam_bubbles", { opacity: 0 });
+    gsap.set("#s36_steam_metal_sample", { fill: "#475569" });
+    gsap.set("#s36_inverted_water", { y: 0, height: 135 });
+    gsap.set("#s36_h2_pocket", { height: 50 });
+    gsap.set("#s36_splinter_rig", { opacity: 0, y: 0 });
+  }
+
+  var statusBox = document.getElementById('s36_status_text');
+  if (statusBox) {
+    statusBox.textContent = 'सिमुलेटर 3.6 तैयार: धातु चुनें और "▶️ संपूर्ण ऑटो-प्ले" दबाएं।';
+  }
+}
+
 
 /* --------------------------------------------------------------------------
    SIMULATOR 3.7: अम्लों से अभिक्रिया व HNO3 अपवाद (Activity 3.11)
