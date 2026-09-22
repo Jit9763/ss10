@@ -5285,487 +5285,406 @@
       </div>
     </div>
 
-    <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(124,58,237,0.12);">
+        <div class="sim-card" id="sim3_acid_reaction_box" style="border:3px solid #7c3aed; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(124,58,237,0.14);">
       <!-- COMPACT STREAMLINED HEADER -->
-      <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+      <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:12px; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
         <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-          <div style="background:#16a34a; color:#fff; width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">
+          <div style="background:#7c3aed; color:#fff; width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;">
             <i class="fas fa-vial"></i>
           </div>
           <h3 style="margin:0; font-size:22px; font-weight:900; color:#0f172a; line-height:1.3; -webkit-text-stroke:0px !important;">
-            सिमुलेटर 3.7: धातुओं की अम्लों से क्रिया एवं HNO₃ अपवाद
+            सिमुलेटर 3.7: धातुओं की तनु अम्लों से अभिक्रिया एवं HNO₃ अपवाद (3D वर्चुअल लैब)
           </h3>
-          <span style="background:#f1f5f9; color:#334155; font-size:13px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #cbd5e1; -webkit-text-stroke:0px !important;">
+          <span style="background:#f5f3ff; color:#7c3aed; font-size:13px; font-weight:800; padding:3px 10px; border-radius:12px; border:1px solid #ddd6fe; -webkit-text-stroke:0px !important;">
             क्रियाकलाप 3.11
           </span>
         </div>
+        <!-- Dual Display Switcher Tabs -->
+        <div style="display:flex; gap:6px; background:#f1f5f9; padding:4px; border-radius:10px; border:1.5px solid #cbd5e1;">
+          <button id="s37_tab_sim" onclick="sim37SetDisplay('sim')" style="background:#7c3aed; color:#ffffff; font-size:13px; font-weight:900; padding:6px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
+            <i class="fas fa-cube"></i> 🔬 16:9 सिमुलेटर
+          </button>
+          <button id="s37_tab_video" onclick="sim37SetDisplay('video')" style="background:#ffffff; color:#0f172a; font-size:13px; font-weight:900; padding:6px 14px; border-radius:7px; border:none; cursor:pointer; transition:all 0.2s;">
+            <i class="fas fa-play-circle"></i> 🎬 रियल वीडियो
+          </button>
+        </div>
       </div>
 
-      <p style="font-size:15.5px !important; line-height:1.55 !important; color:#334155 !important; font-weight:700 !important; margin:0 0 14px 0 !important; background:#f8fafc; padding:8px 14px; border-left:4px solid #16a34a; border-radius:6px; -webkit-text-stroke:0px !important;">
-        💡 <strong>प्रयोग सूत्र:</strong> धातु + तनु अम्ल ➔ लवण + H₂ (दर: Mg > Al > Zn > Fe)। HNO₃ प्रबल ऑक्सीकारक होने से H₂ की जगह H₂O बनाता है।
-      </p>
-<div class="sim-controls-grid" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
-        <button class="sim-btn" id="s37_btn_mg" style="background:#16a34a; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Select('mg')">
-          1. मैग्नीशियम (Mg + HCl ➔ सर्वाधिक तीव्र बुलबुले + Pop! 💥)
-        </button>
-        <button class="sim-btn" id="s37_btn_zn" style="background:#0284c7; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Select('zn')">
-          2. जिंक (Zn + HCl ➔ मध्यम बुलबुले)
-        </button>
-        <button class="sim-btn" id="s37_btn_cu" style="background:#b45309; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Select('cu')">
-          3. तांबा (Cu + HCl ➔ शून्य बुलबुले ❌)
-        </button>
-        <button class="sim-btn" id="s37_btn_hno3" style="background:#dc2626; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Select('hno3')">
-          4. HNO₃ अपवाद (H₂O बनता है ⚠️)
-        </button>
-        <button class="sim-btn" id="s37_btn_mg_hno3" style="background:#7c3aed; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Select('mg_hno3')">
-          5. अति तनु HNO₃ + Mg (H₂ मुक्त!)
-        </button>
-        <button class="sim-btn" style="background:#64748b; color:#fff; font-size:17px; font-weight:900; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;" onclick="sim37Reset()">
-          <i class="fas fa-redo"></i> 🔄 रीसेट
-        </button>
+      <!-- NCERT Formula Header Banner -->
+      <div style="background:linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border:1.5px solid #ddd6fe; border-radius:10px; padding:12px 18px; margin-bottom:14px;">
+        <div style="font-size:14.5px; color:#5b21b6; font-weight:800;">
+          💡 <strong>प्रयोग सूत्र:</strong> धातु + तनु अम्ल ➔ लवण + H₂↑ (दर: Mg &gt; Al &gt; Zn &gt; Fe, Cu = 0)। HNO₃ प्रबल ऑक्सीकारक होने से H₂ की जगह H₂O बनाता है (अपवाद: 1% अति तनु HNO₃ में Mg व Mn से H₂ गैस निकलती है)।
+        </div>
       </div>
 
-      <div style="width:100%; height:8px; background:#e2e8f0; border-radius:4px; overflow:hidden; margin-bottom:16px;">
-        <div id="s37_pbar" style="width:0%; height:100%; background:#7c3aed; transition:width 0.3s ease;"></div>
-      </div>
+      <!-- MAIN 16:9 SCREEN CONTAINER -->
+      <div style="position:relative; width:100%; aspect-ratio:16/9; max-height:560px; min-height:420px; background:#0f172a; border-radius:14px; overflow:hidden; border:2.5px solid #334155; box-shadow:0 12px 36px rgba(0,0,0,0.35);">
+        
+        <!-- MODE A: 16:9 INTERACTIVE 3D ACID LAB VIEW -->
+        <div id="s37_sim_mode" style="width:100%; height:100%; position:relative;">
+          <svg id="sim37_olabs_svg" viewBox="0 0 1100 520" style="width:100%; height:100%; display:block;" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <!-- Lab Room Wall Gradient -->
+              <linearGradient id="s37_wall" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f5f3ff" />
+                <stop offset="60%" stop-color="#ede9fe" />
+                <stop offset="100%" stop-color="#ddd6fe" />
+              </linearGradient>
 
-      <div class="sim-stage" style="aspect-ratio:1200/540; min-height:480px; background:linear-gradient(180deg, #faf5ff 0%, #f3e8ff 100%); border:3px solid #7c3aed; border-radius:14px; position:relative; overflow:hidden;">
-        <svg id="svg_sim37" viewBox="0 0 1200 540" width="100%" height="100%">
+              <!-- Tabletop Perspective Gradient -->
+              <linearGradient id="s37_table" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5d4037" />
+                <stop offset="25%" stop-color="#4e342e" />
+                <stop offset="100%" stop-color="#3e2723" />
+              </linearGradient>
 
-  <defs>
-    <!-- ==========================================
-         1. 3D GLASS & BEAKER/TEST TUBE GRADIENTS
-         ========================================== -->
-    <linearGradient id="glass3d_ch3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.90"/>
-      <stop offset="5%" stop-color="#bae6fd" stop-opacity="0.30"/>
-      <stop offset="25%" stop-color="#e0f2fe" stop-opacity="0.10"/>
-      <stop offset="75%" stop-color="#e0f2fe" stop-opacity="0.08"/>
-      <stop offset="95%" stop-color="#7dd3fc" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.80"/>
-    </linearGradient>
+              <!-- Glass 3D Cylinder Refraction -->
+              <linearGradient id="s37_glass_cyl" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+                <stop offset="6%" stop-color="#c4b5fd" stop-opacity="0.25"/>
+                <stop offset="25%" stop-color="#f5f3ff" stop-opacity="0.08"/>
+                <stop offset="75%" stop-color="#f5f3ff" stop-opacity="0.06"/>
+                <stop offset="94%" stop-color="#a78bfa" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.80"/>
+              </linearGradient>
 
-    <linearGradient id="glass_rim_ch3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#94a3b8"/>
-      <stop offset="20%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#cbd5e1"/>
-      <stop offset="80%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#64748b"/>
-    </linearGradient>
+              <!-- Dilute Acid Clear Liquid Gradient -->
+              <linearGradient id="s37_acid_liquid" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e0e7ff" stop-opacity="0.75"/>
+                <stop offset="100%" stop-color="#c7d2fe" stop-opacity="0.92"/>
+              </linearGradient>
 
-    <linearGradient id="glass_shine_overlay" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
-    </linearGradient>
+              <!-- Nitric Acid Warm Amber Tint Liquid Gradient -->
+              <linearGradient id="s37_hno3_liquid" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fef08a" stop-opacity="0.75"/>
+                <stop offset="100%" stop-color="#fde047" stop-opacity="0.90"/>
+              </linearGradient>
 
-    <!-- Rubber Stopper / Cork -->
-    <linearGradient id="cork3d" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#78350f"/>
-      <stop offset="30%" stop-color="#b45309"/>
-      <stop offset="70%" stop-color="#d97706"/>
-      <stop offset="100%" stop-color="#451a03"/>
-    </linearGradient>
+              <!-- Radial Hydrogen Bubble Highlight -->
+              <radialGradient id="s37_bubble_grad" cx="35%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+                <stop offset="40%" stop-color="#ede9fe" stop-opacity="0.7"/>
+                <stop offset="85%" stop-color="#c4b5fd" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.8"/>
+              </radialGradient>
 
-    <!-- ==========================================
-         2. CHEMICAL LIQUID GRADIENTS & MENISCUS
-         ========================================== -->
-    <!-- CuSO4 Deep Royal Blue Solution -->
-    <linearGradient id="liquid_cuso4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.85"/>
-      <stop offset="40%" stop-color="#3b82f6" stop-opacity="0.75"/>
-      <stop offset="70%" stop-color="#2563eb" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#1e40af" stop-opacity="0.90"/>
-    </linearGradient>
+              <!-- Thermometer Red Mercury Gradient -->
+              <linearGradient id="s37_mercury_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f87171"/>
+                <stop offset="40%" stop-color="#ef4444"/>
+                <stop offset="100%" stop-color="#b91c1c"/>
+              </linearGradient>
 
-    <!-- FeSO4 Pale Emerald Green Solution -->
-    <linearGradient id="liquid_feso4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#15803d" stop-opacity="0.55"/>
-      <stop offset="40%" stop-color="#4ade80" stop-opacity="0.45"/>
-      <stop offset="70%" stop-color="#22c55e" stop-opacity="0.50"/>
-      <stop offset="100%" stop-color="#166534" stop-opacity="0.60"/>
-    </linearGradient>
+              <!-- NO2 Red-Brown Gas Gradient -->
+              <linearGradient id="s37_no2_grad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#991b1b" stop-opacity="0.85"/>
+                <stop offset="50%" stop-color="#b45309" stop-opacity="0.70"/>
+                <stop offset="100%" stop-color="#d97706" stop-opacity="0.15"/>
+              </linearGradient>
 
-    <!-- Clear Acid / Water (HCl, H2SO4, H2O) -->
-    <linearGradient id="liquid_clear_acid" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
-      <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.15"/>
-      <stop offset="70%" stop-color="#bae6fd" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.40"/>
-    </linearGradient>
+              <!-- Flame Gradient for Pop Splinter -->
+              <linearGradient id="s37_flame_grad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="25%" stop-color="#fef08a"/>
+                <stop offset="65%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
 
-    <!-- Aqua Regia Sparkling Golden/Orange Fuming Acid -->
-    <linearGradient id="liquid_aquaregia" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d97706" stop-opacity="0.85"/>
-      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.75"/>
-      <stop offset="70%" stop-color="#fbbf24" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#b45309" stop-opacity="0.90"/>
-    </linearGradient>
+              <!-- Soft Shadow Gradient -->
+              <radialGradient id="s37_shadow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+                <stop offset="60%" stop-color="#000000" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
 
-    <!-- Oil Layer (Rusting experiment Tube B) -->
-    <linearGradient id="liquid_oil_layer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ca8a04" stop-opacity="0.90"/>
-      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#a16207" stop-opacity="0.90"/>
-    </linearGradient>
+            <!-- 1. Background Lab Room -->
+            <rect x="0" y="0" width="1100" height="390" fill="url(#s37_wall)"/>
+            <rect x="0" y="390" width="1100" height="130" fill="url(#s37_table)"/>
+            <line x1="0" y1="390" x2="1100" y2="390" stroke="#d8b4fe" stroke-width="2.5" opacity="0.6"/>
 
-    <!-- Molten Zinc (Galvanisation bath 450°C) -->
-    <linearGradient id="liquid_molten_zinc" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="25%" stop-color="#e2e8f0"/>
-      <stop offset="50%" stop-color="#cbd5e1"/>
-      <stop offset="75%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-
-    <!-- Molten Iron (Thermite Reaction 3000°C) -->
-    <linearGradient id="liquid_molten_iron" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b91c1c"/>
-      <stop offset="30%" stop-color="#f97316"/>
-      <stop offset="60%" stop-color="#facc15"/>
-      <stop offset="85%" stop-color="#fef08a"/>
-      <stop offset="100%" stop-color="#ea580c"/>
-    </linearGradient>
-
-    <!-- ==========================================
-         3. 3D METALLIC SHEEN GRADIENTS
-         ========================================== -->
-    <!-- Copper (Cu): Lustrous Shiny Bronze-Copper -->
-    <linearGradient id="metal3d_cu" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9a3412"/>
-      <stop offset="20%" stop-color="#ea580c"/>
-      <stop offset="50%" stop-color="#fed7aa"/>
-      <stop offset="75%" stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#7c2d12"/>
-    </linearGradient>
-
-    <!-- Iron / Steel (Fe): Polished Steel Sheen -->
-    <linearGradient id="metal3d_fe" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="25%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#f1f5f9"/>
-      <stop offset="75%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <!-- Aluminium (Al): Silvery-White Lustrous -->
-    <linearGradient id="metal3d_al" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#64748b"/>
-      <stop offset="25%" stop-color="#cbd5e1"/>
-      <stop offset="50%" stop-color="#ffffff"/>
-      <stop offset="75%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-
-    <!-- Zinc (Zn): Cool Bluish Silver-Gray -->
-    <linearGradient id="metal3d_zn" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#475569"/>
-      <stop offset="25%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#e0e7ff"/>
-      <stop offset="75%" stop-color="#cbd5e1"/>
-      <stop offset="100%" stop-color="#334155"/>
-    </linearGradient>
-
-    <!-- Magnesium (Mg): Brilliant Silver White Ribbon -->
-    <linearGradient id="metal3d_mg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#94a3b8"/>
-      <stop offset="35%" stop-color="#f8fafc"/>
-      <stop offset="60%" stop-color="#ffffff"/>
-      <stop offset="85%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#64748b"/>
-    </linearGradient>
-
-    <!-- Sodium (Na): Soft Silvery Violet-White -->
-    <linearGradient id="metal3d_na" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6b7280"/>
-      <stop offset="30%" stop-color="#e9d5ff"/>
-      <stop offset="55%" stop-color="#faf5ff"/>
-      <stop offset="80%" stop-color="#d8b4fe"/>
-      <stop offset="100%" stop-color="#4b5563"/>
-    </linearGradient>
-
-    <!-- Gold (Au): Rich Golden Lustre -->
-    <linearGradient id="metal3d_au" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b45309"/>
-      <stop offset="25%" stop-color="#f59e0b"/>
-      <stop offset="50%" stop-color="#fef08a"/>
-      <stop offset="75%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#78350f"/>
-    </linearGradient>
-
-    <!-- Brass (Cu 80% + Zn 20%): Warm Lustrous Brass -->
-    <linearGradient id="metal3d_brass" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#854d0e"/>
-      <stop offset="25%" stop-color="#eab308"/>
-      <stop offset="50%" stop-color="#fef9c3"/>
-      <stop offset="75%" stop-color="#ca8a04"/>
-      <stop offset="100%" stop-color="#713f12"/>
-    </linearGradient>
-
-    <!-- Bronze (Cu 90% + Sn 10%): Antique Bronze -->
-    <linearGradient id="metal3d_bronze" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#78350f"/>
-      <stop offset="25%" stop-color="#b45309"/>
-      <stop offset="50%" stop-color="#fde68a"/>
-      <stop offset="75%" stop-color="#92400e"/>
-      <stop offset="100%" stop-color="#451a03"/>
-    </linearGradient>
-
-    <!-- Solder (Pb 50% + Sn 50%): Low Melting Lead-Tin -->
-    <linearGradient id="metal3d_solder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="30%" stop-color="#94a3b8"/>
-      <stop offset="55%" stop-color="#e2e8f0"/>
-      <stop offset="85%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <!-- Rust Fe2O3.xH2O Flaky Rough Coating -->
-    <linearGradient id="metal3d_rust" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7f1d1d"/>
-      <stop offset="25%" stop-color="#991b1b"/>
-      <stop offset="50%" stop-color="#b45309"/>
-      <stop offset="75%" stop-color="#c2410c"/>
-      <stop offset="100%" stop-color="#450a0a"/>
-    </linearGradient>
-
-    <!-- ==========================================
-         4. VOLUMETRIC BUNSEN BURNER & FLAME
-         ========================================== -->
-    <linearGradient id="burner_barrel" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="20%" stop-color="#94a3b8"/>
-      <stop offset="50%" stop-color="#f1f5f9"/>
-      <stop offset="80%" stop-color="#64748b"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-
-    <linearGradient id="burner_base" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#475569"/>
-      <stop offset="40%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-
-    <linearGradient id="burner_collar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b45309"/>
-      <stop offset="35%" stop-color="#fde047"/>
-      <stop offset="70%" stop-color="#d97706"/>
-      <stop offset="100%" stop-color="#78350f"/>
-    </linearGradient>
-
-    <!-- Realistic Blue Flame (Clean combustion) -->
-    <linearGradient id="flame3d_blue" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.95"/>
-      <stop offset="30%" stop-color="#0284c7" stop-opacity="0.90"/>
-      <stop offset="65%" stop-color="#38bdf8" stop-opacity="0.85"/>
-      <stop offset="90%" stop-color="#e0f2fe" stop-opacity="0.90"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
-    </linearGradient>
-
-    <!-- Inner Cone of Blue Flame -->
-    <linearGradient id="flame3d_inner" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#7dd3fc" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="1.0"/>
-    </linearGradient>
-
-    <!-- Dazzling White-Hot Magnesium Flame -->
-    <radialGradient id="flame3d_mg_flash" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="25%" stop-color="#fef08a"/>
-      <stop offset="60%" stop-color="#fdba74" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Glowing Aura for Electrical Bulb -->
-    <radialGradient id="bulb_glow_radial" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fef08a" stop-opacity="1.0"/>
-      <stop offset="30%" stop-color="#facc15" stop-opacity="0.85"/>
-      <stop offset="65%" stop-color="#eab308" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ca8a04" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- ==========================================
-         5. 3D ATOM & ION SPHERES (PhET Style)
-         ========================================== -->
-    <!-- Sodium Ion Na+ (Purple / Violet) -->
-    <radialGradient id="atom3d_na_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#f3e8ff"/>
-      <stop offset="25%" stop-color="#c084fc"/>
-      <stop offset="70%" stop-color="#7e22ce"/>
-      <stop offset="100%" stop-color="#3b0764"/>
-    </radialGradient>
-
-    <!-- Chloride Ion Cl- (Emerald Green) -->
-    <radialGradient id="atom3d_cl_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#bbf7d0"/>
-      <stop offset="25%" stop-color="#4ade80"/>
-      <stop offset="70%" stop-color="#16a34a"/>
-      <stop offset="100%" stop-color="#052e16"/>
-    </radialGradient>
-
-    <!-- Magnesium Ion Mg2+ (Teal / Cyan) -->
-    <radialGradient id="atom3d_mg_ion" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#cffafe"/>
-      <stop offset="25%" stop-color="#22d3ee"/>
-      <stop offset="70%" stop-color="#0891b2"/>
-      <stop offset="100%" stop-color="#164e63"/>
-    </radialGradient>
-
-    <!-- Free Electron e- (Energetic Amber-Yellow) -->
-    <radialGradient id="atom3d_electron" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="35%" stop-color="#fef08a"/>
-      <stop offset="70%" stop-color="#eab308"/>
-      <stop offset="100%" stop-color="#ca8a04"/>
-    </radialGradient>
-
-    <!-- ==========================================
-         6. WORKBENCH & SOFT SHADOWS
-         ========================================== -->
-    <!-- Polished Wooden Lab Workbench Top -->
-    <linearGradient id="lab_table_top" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="40%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-
-    <!-- Workbench Front Bevel Face -->
-    <linearGradient id="lab_table_front" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#020617"/>
-    </linearGradient>
-
-    <!-- Radial Drop Shadow for Apparatus Base -->
-    <radialGradient id="stage_shadow_ch3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.38"/>
-      <stop offset="60%" stop-color="#000000" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-
-          <!-- 3D WORKBENCH WITH BEVELED EDGE -->
-          <ellipse cx="370" cy="465" rx="340" ry="18" fill="url(#stage_shadow_ch3)"/>
-          <polygon points="20,445 710,445 680,515 20,515" fill="url(#lab_table_top)"/>
-          <rect x="20" y="515" width="660" height="20" fill="url(#lab_table_front)"/>
-
-          <!-- 3D WOODEN TEST TUBE RACK (x=80 to 650, y=200 to 450) -->
-          <g transform="translate(100, 100)">
-            <!-- Rack Base & Support Posts -->
-            <rect x="10" y="325" width="500" height="24" rx="4" fill="#b45309" stroke="#78350f" stroke-width="2"/>
-            <rect x="10" y="160" width="500" height="18" rx="4" fill="#d97706" stroke="#92400e" stroke-width="1.5"/>
-            <rect x="20" y="178" width="16" height="147" rx="3" fill="#92400e"/>
-            <rect x="480" y="178" width="16" height="147" rx="3" fill="#92400e"/>
-
-            <!-- 4 3D GLASSY TEST TUBES: Mg, Al, Zn, Cu -->
-            <!-- Tube 1: Mg + HCl (Rapid Bubbles) -->
-            <g transform="translate(70, 40)">
-              <rect x="0" y="0" width="54" height="295" rx="14" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="2.5"/>
-              <rect x="4" y="110" width="46" height="180" rx="10" fill="url(#liquid_clear_acid)"/>
-              <rect x="20" y="250" width="14" height="35" rx="3" fill="url(#metal3d_mg)"/>
-              <!-- Bubbles -->
-              <g id="s37_mg_bubbles" style="opacity:0; transition:opacity 0.3s ease;">
-                <circle cx="27" cy="230" r="5" fill="#ffffff" opacity="0.95"/>
-                <circle cx="22" cy="190" r="6" fill="#ffffff" opacity="0.95"/>
-                <circle cx="32" cy="150" r="7" fill="#ffffff" opacity="0.95"/>
-                <circle cx="25" cy="120" r="8" fill="#ffffff" opacity="0.95"/>
+            <!-- ============================================================
+                 LEFT SECTION: 3D TEST TUBE RACK & APPARATUS (x=40 to 710)
+                 ========================================================= -->
+            <g id="s37_apparatus_rig">
+              
+              <!-- 3D Wooden Test Tube Rack Behind (Background Depth) -->
+              <g transform="translate(60, 240)">
+                <!-- Back Rack Base & Posts -->
+                <rect x="0" y="140" width="280" height="20" rx="4" fill="#6d4c41"/>
+                <rect x="15" y="0" width="14" height="140" fill="#8d6e63"/>
+                <rect x="250" y="0" width="14" height="140" fill="#8d6e63"/>
+                <!-- Upper Bar with Holes -->
+                <rect x="0" y="30" width="280" height="16" rx="3" fill="#8d6e63"/>
+                <!-- Tubes in Rack (Background Samples: Zn, Fe, Cu) -->
+                <!-- Rack Tube 1: Zn -->
+                <rect x="45" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
+                <text x="64" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Zn</text>
+                <!-- Rack Tube 2: Fe -->
+                <rect x="105" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
+                <text x="124" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Fe</text>
+                <!-- Rack Tube 3: Cu -->
+                <rect x="165" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
+                <text x="184" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">Cu</text>
+                <!-- Rack Tube 4: HNO3 -->
+                <rect x="225" y="-10" width="38" height="165" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2" opacity="0.7"/>
+                <text x="244" y="175" font-size="11" font-weight="900" fill="#e2e8f0" text-anchor="middle">HNO₃</text>
               </g>
-              <rect x="-10" y="-30" width="74" height="24" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
-              <text x="27" y="-14" font-size="12" font-weight="900" fill="#15803d" text-anchor="middle">1. Mg (तीव्र)</text>
-            </g>
 
-            <!-- Tube 2: Zn + HCl (Moderate Bubbles) -->
-            <g transform="translate(190, 40)">
-              <rect x="0" y="0" width="54" height="295" rx="14" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="2.5"/>
-              <rect x="4" y="110" width="46" height="180" rx="10" fill="url(#liquid_clear_acid)"/>
-              <rect x="20" y="250" width="14" height="35" rx="3" fill="url(#metal3d_zn)"/>
-              <g id="s37_zn_bubbles" style="opacity:0; transition:opacity 0.3s ease;">
-                <circle cx="26" cy="230" r="4" fill="#ffffff" opacity="0.9"/>
-                <circle cx="28" cy="180" r="5" fill="#ffffff" opacity="0.9"/>
-                <circle cx="24" cy="140" r="6" fill="#ffffff" opacity="0.9"/>
+              <!-- MAIN ACTIVE REACTION TEST TUBE STAND & CLAMP (Center x=450) -->
+              <!-- Stand Base & Vertical Rod -->
+              <ellipse cx="450" cy="455" rx="120" ry="16" fill="url(#s37_shadow)"/>
+              <rect x="390" y="445" width="120" height="15" rx="3" fill="#1e293b"/>
+              <rect x="445" y="110" width="10" height="340" fill="#64748b" stroke="#334155" stroke-width="1"/>
+              <!-- Clamp Arm holding Test Tube -->
+              <rect x="400" y="240" width="50" height="12" fill="#334155"/>
+              <rect x="388" y="225" width="12" height="42" rx="3" fill="#1e293b"/>
+
+              <!-- MAIN BOROSILICATE TEST TUBE (x=335, y=140, w=70, h=290) -->
+              <g id="s37_main_tube_group">
+                <!-- Tube Shadow -->
+                <ellipse cx="370" cy="435" rx="45" ry="10" fill="url(#s37_shadow)" opacity="0.4"/>
+
+                <!-- Dilute Acid Liquid Fill inside Tube -->
+                <rect id="s37_acid_fill" x="337" y="245" width="66" height="175" rx="10" fill="url(#s37_acid_liquid)"/>
+                <ellipse id="s37_acid_meniscus" cx="370" cy="245" rx="33" ry="8" fill="url(#s37_acid_liquid)" stroke="#a5b4fc" stroke-width="1.5"/>
+
+                <!-- Surface Liquid Impact Ripple -->
+                <ellipse id="s37_acid_ripple" cx="370" cy="245" rx="12" ry="4" fill="none" stroke="#ffffff" stroke-width="2" opacity="0" style="pointer-events:none;"/>
+
+                <!-- Red-Brown NO2 Fumes (for HNO3 mode) -->
+                <g id="s37_no2_fumes" style="opacity:0; pointer-events:none;">
+                  <path id="s37_fume1" d="M 355 240 Q 345 190 360 140 Q 375 90 355 50" stroke="url(#s37_no2_grad)" stroke-width="12" fill="none" opacity="0.8" stroke-linecap="round"/>
+                  <path id="s37_fume2" d="M 370 240 Q 385 190 365 130 Q 345 80 370 40" stroke="url(#s37_no2_grad)" stroke-width="14" fill="none" opacity="0.85" stroke-linecap="round"/>
+                  <path id="s37_fume3" d="M 385 240 Q 395 180 380 130 Q 365 80 385 45" stroke="url(#s37_no2_grad)" stroke-width="11" fill="none" opacity="0.75" stroke-linecap="round"/>
+                  <rect x="315" y="20" width="110" height="24" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                  <text x="370" y="36" font-size="11" font-weight="900" fill="#991b1b" text-anchor="middle">भूरे रंग की NO₂ गैस</text>
+                </g>
+
+                <!-- Metal Sample Pellets/Ribbon at Bottom of Tube -->
+                <g id="s37_metal_sample_group" transform="translate(370, 410)">
+                  <!-- Metal Mesh Shape (Dynamic per metal) -->
+                  <path id="s37_metal_mesh" d="M -18 0 Q -5 -12 10 -4 Q 18 6 12 12 Q -2 18 -16 8 Z" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+                  <ellipse cx="-4" cy="2" rx="6" ry="3" fill="#ffffff" opacity="0.5"/>
+                </g>
+
+                <!-- DYNAMIC RISING H2 BUBBLE TORRENT (Fluid GSAP Animated) -->
+                <g id="s37_dynamic_bubbles" style="opacity:0; pointer-events:none;">
+                  <circle id="s37_bub1" cx="365" cy="405" r="4.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub2" cx="375" cy="390" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub3" cx="355" cy="375" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub4" cx="380" cy="360" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub5" cx="362" cy="345" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub6" cx="372" cy="330" r="5.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub7" cx="358" cy="315" r="7.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub8" cx="382" cy="300" r="6.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub9" cx="366" cy="285" r="6.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub10" cx="374" cy="270" r="5.5" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1"/>
+                  <circle id="s37_bub11" cx="360" cy="255" r="7.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                  <circle id="s37_bub12" cx="378" cy="248" r="8.0" fill="url(#s37_bubble_grad)" stroke="#7c3aed" stroke-width="1.2"/>
+                </g>
+
+                <!-- 3D Glass Tube Body & Rounded Hemispherical Bottom -->
+                <rect x="335" y="140" width="70" height="260" rx="8" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2.5"/>
+                <path d="M 335 400 A 35 35 0 0 0 405 400 Z" fill="url(#s37_glass_cyl)" stroke="#cbd5e1" stroke-width="2.5"/>
+                <ellipse cx="370" cy="140" rx="35" ry="7" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+
+                <!-- Graduation Marks -->
+                <line x1="338" y1="250" x2="352" y2="250" stroke="#64748b" stroke-width="1.5"/>
+                <text x="356" y="254" font-size="9" font-weight="900" fill="#64748b">15ml</text>
+                <line x1="338" y1="300" x2="350" y2="300" stroke="#64748b" stroke-width="1.5"/>
+                <text x="354" y="304" font-size="9" font-weight="900" fill="#64748b">10ml</text>
+                <line x1="338" y1="350" x2="352" y2="350" stroke="#64748b" stroke-width="1.5"/>
+                <text x="356" y="354" font-size="9" font-weight="900" fill="#64748b">5ml</text>
+
+                <!-- IMMERSED LABORATORY THERMOMETER (NCERT Exothermic Test) -->
+                <g id="s37_thermometer_rig" transform="translate(385, 90)">
+                  <!-- Thermometer Glass Stem -->
+                  <rect x="-3" y="0" width="6" height="315" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" opacity="0.9"/>
+                  <!-- Mercury Bulb at Bottom -->
+                  <circle cx="0" cy="315" r="7" fill="url(#s37_mercury_grad)" stroke="#b91c1c" stroke-width="1"/>
+                  <!-- Rising Red Mercury Column (Height controlled by GSAP) -->
+                  <rect id="s37_mercury_column" x="-1.5" y="260" width="3" height="55" fill="url(#s37_mercury_grad)"/>
+                  
+                  <!-- Live Temperature Readout Callout Badge -->
+                  <g id="s37_temp_badge_group" transform="translate(18, 120)">
+                    <rect x="0" y="0" width="85" height="34" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.15))"/>
+                    <path d="M 0 17 L -8 13 L 0 9 Z" fill="#ef4444"/>
+                    <text x="10" y="16" font-size="10" font-weight="800" fill="#64748b">तापमान:</text>
+                    <text id="s37_temp_text" x="10" y="30" font-size="13" font-weight="900" fill="#b91c1c">25°C (स्थिर)</text>
+                  </g>
+                </g>
+
+                <!-- POP TEST BURNING SPLINTER RIG -->
+                <g id="s37_splinter_rig" style="opacity:0;" transform="translate(370, 70)">
+                  <!-- Wooden Splint Stick -->
+                  <line x1="-40" y1="-20" x2="0" y2="25" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+                  <!-- Glowing Ember & Flame -->
+                  <circle cx="0" cy="25" r="6" fill="#ef4444"/>
+                  <path id="s37_splinter_flame" d="M 0 25 Q -8 8 0 -6 Q 8 8 0 25 Z" fill="url(#s37_flame_grad)"/>
+                  <!-- Pop Light Flash Effect -->
+                  <circle id="s37_pop_flash" cx="0" cy="25" r="32" fill="#fef08a" opacity="0"/>
+                  <!-- Pop Badge -->
+                  <g id="s37_pop_label" transform="translate(20, 10)">
+                    <rect x="0" y="0" width="115" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+                    <text x="57" y="17" font-size="12" font-weight="900" fill="#b91c1c" text-anchor="middle">💥 Pop! ध्वनि परीक्षण</text>
+                  </g>
+                </g>
+
               </g>
-              <rect x="-10" y="-30" width="74" height="24" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
-              <text x="27" y="-14" font-size="12" font-weight="900" fill="#0369a1" text-anchor="middle">2. Zn (मध्यम)</text>
+
+              <!-- ACID DROPPER / PIPETTE (Descends to add acid) -->
+              <g id="s37_dropper_rig" transform="translate(560, 40)">
+                <!-- Glass Tube -->
+                <rect x="-4" y="0" width="8" height="90" fill="#e0f2fe" stroke="#64748b" stroke-width="1" opacity="0.85"/>
+                <!-- Tapered Nozzle Tip -->
+                <polygon points="-4,90 4,90 1,115 -1,115" fill="#e0f2fe" stroke="#64748b" stroke-width="1"/>
+                <!-- Rubber Squeeze Bulb -->
+                <path id="s37_dropper_bulb" d="M -9 0 C -12 -18 12 -18 9 0 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
+                <!-- Internal Acid Column -->
+                <rect id="s37_dropper_liquid" x="-2" y="15" width="4" height="85" fill="#818cf8"/>
+                <!-- Falling Acid Drop -->
+                <circle id="s37_falling_drop" cx="0" cy="120" r="3.5" fill="#6366f1" opacity="0"/>
+              </g>
+
             </g>
 
-            <!-- Tube 3: Fe + HCl (Slow Bubbles) -->
-            <g transform="translate(310, 40)">
-              <rect x="0" y="0" width="54" height="295" rx="14" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="2.5"/>
-              <rect x="4" y="110" width="46" height="180" rx="10" fill="url(#liquid_clear_acid)"/>
-              <rect x="20" y="250" width="14" height="35" rx="3" fill="url(#metal3d_fe)"/>
-              <rect x="-10" y="-30" width="74" height="24" rx="6" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
-              <text x="27" y="-14" font-size="12" font-weight="900" fill="#334155" text-anchor="middle">3. Fe (मंद)</text>
+            <!-- RESULT POPUP FLOATING BADGE (Center Top) -->
+            <g id="s37_popup_badge" style="opacity:0; transform-origin:center center;" transform="translate(370, 38)">
+              <rect x="-240" y="-18" width="480" height="38" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.15))"/>
+              <text id="s37_popup_text" x="0" y="7" font-size="14" font-weight="900" fill="#6d28d9" text-anchor="middle">
+                ⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ऊष्माक्षेपी अभिक्रिया!
+              </text>
             </g>
 
-            <!-- Tube 4: Cu + HCl (Zero Bubbles) -->
-            <g transform="translate(420, 40)">
-              <rect x="0" y="0" width="54" height="295" rx="14" fill="url(#glass3d_ch3)" stroke="url(#glass_rim_ch3)" stroke-width="2.5"/>
-              <rect x="4" y="110" width="46" height="180" rx="10" fill="url(#liquid_clear_acid)"/>
-              <rect x="20" y="250" width="14" height="35" rx="3" fill="url(#metal3d_cu)"/>
-              <rect x="-10" y="-30" width="74" height="24" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
-              <text x="27" y="-14" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">4. Cu (शून्य)</text>
+            <!-- ============================================================
+                 RIGHT OBSERVATION & REACTION DATA PANEL (x=735 to 1080)
+                 ========================================================= -->
+            <g transform="translate(735, 20)">
+              <!-- Outer Card Panel -->
+              <rect x="0" y="0" width="345" height="480" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5" filter="drop-shadow(0 6px 18px rgba(0,0,0,0.12))"/>
+              
+              <!-- Panel Header -->
+              <path d="M 0 14 Q 0 0 14 0 L 331 0 Q 345 0 345 14 L 345 44 L 0 44 Z" fill="#7c3aed"/>
+              <text x="172" y="28" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">
+                📊 अम्ल अभिक्रिया दर व तापमापी प्रेक्षण
+              </text>
+
+              <!-- Metal & Acid Status Badge -->
+              <rect x="18" y="58" width="310" height="40" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+              <text id="s37_card_metal_title" x="30" y="83" font-size="14.5" font-weight="900" fill="#6d28d9">
+                चयनित: मैग्नीशियम (Mg) + तनु HCl
+              </text>
+
+              <!-- Chemical Reaction Equation Box -->
+              <rect x="18" y="108" width="310" height="66" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="30" y="128" font-size="12" font-weight="800" fill="#64748b">रासायनिक समीकरण:</text>
+              <text id="s37_card_equation" x="30" y="156" font-size="14" font-weight="900" fill="#0f172a">
+                Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा
+              </text>
+
+              <!-- Observation & Heat Readout -->
+              <rect x="18" y="184" width="310" height="96" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+              <text x="30" y="204" font-size="12" font-weight="800" fill="#64748b">मुख्य प्रेक्षण व तापमापी:</text>
+              <text id="s37_card_obs1" x="30" y="228" font-size="13" font-weight="900" fill="#0f172a">
+                • बुलबुले बनने की दर: सर्वाधिक तीव्र (Most Vigorous)
+              </text>
+              <text id="s37_card_obs2" x="30" y="250" font-size="13" font-weight="900" fill="#dc2626">
+                • तापमापी में उच्चतम ताप वृद्धि (ΔT सर्वाधिक)
+              </text>
+              <text id="s37_card_obs3" x="30" y="270" font-size="13" font-weight="800" fill="#15803d">
+                • H₂ गैस Pop! ध्वनि के साथ जलती है
+              </text>
+
+              <!-- NCERT Reactivity Order Box -->
+              <rect x="18" y="290" width="310" height="88" rx="8" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1.5"/>
+              <text x="30" y="310" font-size="12" font-weight="900" fill="#6d28d9">तनु अम्लों के प्रति अभिक्रियाशीलता दर:</text>
+              <text x="30" y="334" font-size="14.5" font-weight="900" fill="#5b21b6">
+                Mg &gt; Al &gt; Zn &gt; Fe &gt; Cu (शून्य दर)
+              </text>
+              <text x="30" y="356" font-size="11" font-weight="800" fill="#475569">
+                HNO₃ अपवाद: प्रबल ऑक्सीकारक होने से H₂ नहीं, H₂O बनता है!
+              </text>
+              <text x="30" y="370" font-size="11" font-weight="800" fill="#16a34a">
+                विशेष अपवाद: केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ देते हैं।
+              </text>
+
+              <!-- Step Status Banner -->
+              <rect x="18" y="390" width="310" height="76" rx="8" fill="#fffbeb" stroke="#fef08a" stroke-width="1.5"/>
+              <text x="30" y="410" font-size="12" font-weight="800" fill="#854d0e">वर्तमान चरण स्थिति:</text>
+              <text id="s37_status_text" x="30" y="436" font-size="12" font-weight="900" fill="#92400e">
+                प्रयोग प्रारंभ करने के लिए "▶️ संपूर्ण ऑटो-प्ले" दबाएं।
+              </text>
             </g>
+          </svg>
+        </div>
 
-            <!-- Burning Splinter for Pop sound test -->
-            <g id="s37_splinter" style="opacity:0; transition:opacity 0.4s ease;" transform="translate(90, 0)">
-              <line x1="0" y1="0" x2="30" y2="40" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="30" cy="40" r="12" fill="url(#flame3d_yellow)"/>
-              <rect x="45" y="25" width="90" height="24" rx="5" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
-              <text x="90" y="42" font-size="12" font-weight="900" fill="#dc2626" text-anchor="middle">POP! ध्वनि 💥</text>
-            </g>
-          </g>
-
-          <!-- RIGHT OBSERVATION PANEL -->
-          <g transform="translate(725, 15)">
-            <rect x="0" y="0" width="455" height="505" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="3" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.08))"/>
-            
-            <rect x="0" y="0" width="455" height="52" rx="14" fill="#7c3aed"/>
-            <text x="227" y="34" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">🧪 अम्ल अभिक्रिया दर एवं निष्कर्ष</text>
-
-            <g transform="translate(16, 68)">
-              <rect x="0" y="0" width="423" height="50" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
-              <text id="s37_status_text" x="211" y="31" font-size="14" font-weight="900" fill="#000000" text-anchor="middle">परखनली चुनें व अम्ल से अभिक्रिया जांचें</text>
-            </g>
-
-            <g transform="translate(16, 128)">
-              <rect x="0" y="0" width="423" height="85" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
-              <text x="14" y="24" font-size="15" font-weight="900" fill="#1e293b">रासायनिक समीकरण:</text>
-              <text id="s37_eq_line" x="211" y="60" font-size="17" font-weight="900" fill="#7c3aed" text-anchor="middle">Mg + 2HCl ➔ MgCl₂ + H₂↑ (Pop ध्वनि)</text>
-            </g>
-
-            <g transform="translate(16, 224)">
-              <rect x="0" y="0" width="423" height="266" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
-              <text x="14" y="24" font-size="16" font-weight="900" fill="#000000">NCERT मुख्य परीक्षा नियम:</text>
-
-              <rect x="12" y="34" width="399" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
-              <text x="20" y="56" font-size="14" font-weight="900" fill="#000000">अभिक्रियाशीलता का घटता क्रम:</text>
-              <text x="20" y="78" font-size="15" font-weight="900" fill="#15803d">Mg > Al > Zn > Fe (Cu क्रिया नहीं करता)</text>
-
-              <rect x="12" y="98" width="399" height="74" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
-              <text x="20" y="118" font-size="14" font-weight="900" fill="#dc2626">नाइट्रिक अम्ल (HNO₃) अपवाद ⚠️:</text>
-              <text x="20" y="138" font-size="13" font-weight="900" fill="#334155">HNO₃ प्रबल ऑक्सीकारक है, यह उत्पन्न H₂ को जल</text>
-              <text x="20" y="156" font-size="13" font-weight="900" fill="#334155">(H₂O) में बदल देता है और स्वयं NO₂ में अपचयित होता है।</text>
-
-              <rect x="12" y="180" width="399" height="76" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
-              <text x="20" y="202" font-size="14" font-weight="900" fill="#6d28d9">विशेष अपवाद (NCERT):</text>
-              <text x="20" y="222" font-size="13.5" font-weight="900" fill="#000000">केवल <strong>Mg</strong> व <strong>Mn</strong> अति तनु (1%) HNO₃ के साथ</text>
-              <text x="20" y="242" font-size="13.5" font-weight="900" fill="#000000">अभिक्रिया करके H₂ गैस मुक्त करते हैं।</text>
-            </g>
-          </g>
-        </svg>
+        <!-- MODE B: REAL EXPERIMENT VIDEO PLAYER (Full 16:9 Frame - Pure Video) -->
+        <div id="s37_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#000000;">
+          <video id="s37_video_player" style="width:100%; height:100%; object-fit:cover; display:block;" controls playsinline preload="metadata">
+            <source id="s37_video_source" src="media/zinc_reacting_in_sulfuric_acid.mp4" type="video/mp4">
+            आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
+          </video>
+        </div>
       </div>
 
-      <div class="sim-feedback" id="s37_feedback" style="margin-top:14px; padding:16px 22px; background:#ede9fe; border-left:8px solid #7c3aed; border-radius:8px; font-size:22px; font-weight:800; color:#000000;">
-        💡 <strong>तथ्य:</strong> मैग्नीशियम के साथ अभिक्रिया सबसे तीव्र और सबसे अधिक ऊष्माक्षेपी होती है, जबकि कॉपर तनु HCl से क्रिया नहीं करता।
+      <!-- CONTROL SUITE: METAL & ACID SELECTORS & 3-STEP BUTTONS -->
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:12px;">
+        
+        <!-- ROW 1: METAL & ACID VARIANT BUTTONS -->
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <span style="font-size:14px; font-weight:900; color:#334155; margin-right:4px;">
+            <i class="fas fa-flask"></i> 1. धातु व अम्ल चयन:
+          </span>
+          <button id="s37_btn_mg" onclick="sim37SelectMetal('mg')" style="background:#16a34a; color:#ffffff; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #0f172a; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.25); transition:all 0.2s;">
+            ⚡ Mg + HCl (सर्वाधिक तीव्र)
+          </button>
+          <button id="s37_btn_zn" onclick="sim37SelectMetal('zn')" style="background:#ffffff; color:#0284c7; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
+            ⚙️ Zn + HCl (मध्यम बुलबुले)
+          </button>
+          <button id="s37_btn_fe" onclick="sim37SelectMetal('fe')" style="background:#ffffff; color:#475569; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
+            🔩 Fe + HCl (मंद अभिक्रिया)
+          </button>
+          <button id="s37_btn_cu" onclick="sim37SelectMetal('cu')" style="background:#ffffff; color:#dc2626; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
+            🛡️ Cu + HCl (अक्रिय - शून्य)
+          </button>
+          <button id="s37_btn_hno3" onclick="sim37SelectMetal('hno3')" style="background:#ffffff; color:#d97706; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
+            ⚠️ HNO₃ अपवाद (H₂O + NO₂)
+          </button>
+          <button id="s37_btn_mg_hno3" onclick="sim37SelectMetal('mg_hno3')" style="background:#ffffff; color:#7c3aed; font-size:13px; font-weight:900; padding:7px 16px; border-radius:8px; border:2px solid #cbd5e1; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.06); transition:all 0.2s;">
+            🧪 Mg + 1% अति तनु HNO₃
+          </button>
+        </div>
+
+        <!-- ROW 2: ACTION STEPS & AUTO-PLAY -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; border-top:1.5px solid #e2e8f0; padding-top:12px;">
+          <!-- 3 Step Progression Buttons -->
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button onclick="sim37RunStep(1)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              1️⃣ धातु व परखनली सज्जा
+            </button>
+            <button onclick="sim37RunStep(2)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              2️⃣ तनु अम्ल मिलाना (ड्रॉपर)
+            </button>
+            <button onclick="sim37RunStep(3)" style="background:#f1f5f9; color:#0f172a; font-size:13px; font-weight:800; padding:8px 15px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              3️⃣ H₂ बुलबुले व ताप मापन
+            </button>
+          </div>
+
+          <!-- Main Auto Play & Reset -->
+          <div style="display:flex; gap:8px;">
+            <button onclick="sim37TriggerAction()" style="background:linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color:#ffffff; font-size:14px; font-weight:900; padding:9px 20px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(124,58,237,0.35);">
+              ▶️ संपूर्ण ऑटो-प्ले
+            </button>
+            <button onclick="sim37ResetAction()" style="background:#f1f5f9; color:#475569; font-size:14px; font-weight:800; padding:9px 18px; border-radius:8px; border:1.5px solid #cbd5e1; cursor:pointer;">
+              🔄 रीसेट
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
 
-
-
-    <!-- ===================================================================
-         SIMULATOR 3.8: ऐक्वारेजिया — अम्लराज (Aqua Regia 3:1)
-         =================================================================== -->
     <div class="sim-card" id="sim3_aquaregia_box" style="border:3px solid #d97706; background:#ffffff; border-radius:16px; padding:22px; margin:28px 0; box-shadow:0 8px 28px rgba(217,119,6,0.12);">
       <!-- COMPACT STREAMLINED HEADER -->
       <div class="sim-header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
@@ -14772,73 +14691,578 @@ function sim36ResetAction() {
 }
 
 
-/* --------------------------------------------------------------------------
-   SIMULATOR 3.7: अम्लों से अभिक्रिया व HNO3 अपवाद (Activity 3.11)
-   -------------------------------------------------------------------------- */
-function sim37Select(type) {
-  var mgBubbles = document.getElementById('s37_mg_bubbles');
-  var znBubbles = document.getElementById('s37_zn_bubbles');
-  var splinter = document.getElementById('s37_splinter');
-  var stext = document.getElementById('s37_status_text');
-  var eqLine = document.getElementById('s37_eq_line');
-  var pbar = document.getElementById('s37_pbar');
+/* ==========================================================================
+   SIMULATOR 3.7: अम्लों से अभिक्रिया व HNO3 अपवाद (Activity 3.11) — 16:9 CONTROLLER
+   OLABS VIRTUAL LAB MODEL WITH GSAP FLUID DYNAMICS & THERMOMETER REACTION ENGINE
+   ========================================================================== */
 
-  if (!stext) return;
+var s37_currentType = 'mg';
+var s37_currentTimeline = null;
+var s37_isAnimating = false;
+var s37_bubbleTween = null;
+var s37_fumeTween = null;
+var s37_flameTween = null;
 
-  if (type === 'mg') {
-    if (mgBubbles) mgBubbles.style.opacity = '1';
-    if (znBubbles) znBubbles.style.opacity = '0';
-    if (splinter) splinter.style.opacity = '1';
-    if (eqLine) eqLine.textContent = 'Mg + 2HCl ➔ MgCl₂ + H₂↑ (Pop ध्वनि)';
-    stext.textContent = 'मैग्नीशियम: सर्वाधिक तीव्र बुलबुले व उच्चतम ऊष्मा!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('मैग्नीशियम तनु अम्ल से सर्वाधिक तीव्र क्रिया करके हाइड्रोजन गैस देता है।');
-  } else if (type === 'zn') {
-    if (mgBubbles) mgBubbles.style.opacity = '0';
-    if (znBubbles) znBubbles.style.opacity = '1';
-    if (splinter) splinter.style.opacity = '1';
-    if (eqLine) eqLine.textContent = 'Zn + 2HCl ➔ ZnCl₂ + H₂↑';
-    stext.textContent = 'जिंक: मध्यम गति से H₂ के बुलबुले निकलते हैं।';
-    if (pbar) pbar.style.width = '75%';
-    speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है।');
-  } else if (type === 'cu') {
-    if (mgBubbles) mgBubbles.style.opacity = '0';
-    if (znBubbles) znBubbles.style.opacity = '0';
-    if (splinter) splinter.style.opacity = '0';
-    if (eqLine) eqLine.textContent = 'Cu + HCl ➔ कोई अभिक्रिया नहीं (शून्य बुलबुले)';
-    stext.textContent = 'कॉपर: तनु HCl से क्रिया नहीं करता क्योंकि हाइड्रोजन से कम सक्रिय है!';
-    if (pbar) pbar.style.width = '10%';
-    speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता।');
-  } else if (type === 'hno3') {
-    if (mgBubbles) mgBubbles.style.opacity = '0';
-    if (znBubbles) znBubbles.style.opacity = '0';
-    if (splinter) splinter.style.opacity = '0';
-    if (eqLine) eqLine.textContent = 'Zn + 4HNO₃ ➔ Zn(NO₃)₂ + 2H₂O + 2NO₂';
-    stext.textContent = 'HNO₃ अपवाद: प्रबल ऑक्सीकारक, H₂ नहीं H₂O बनता है';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है।');
-  } else if (type === 'mg_hno3') {
-    if (mgBubbles) mgBubbles.style.opacity = '1';
-    if (splinter) splinter.style.opacity = '1';
-    if (eqLine) eqLine.textContent = 'Mg + 2HNO₃(अति तनु 1%) ➔ Mg(NO₃)₂ + H₂↑';
-    stext.textContent = 'अपवाद: Mg व Mn अति तनु HNO₃ से H₂ देते हैं!';
-    if (pbar) pbar.style.width = '100%';
-    speakHindiCh3('केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
+var s37_videoMap = {
+  'mg': 'media/zinc_reacting_in_sulfuric_acid.mp4',
+  'zn': 'media/activity_1_3_zinc_h2.mp4',
+  'fe': 'media/activity_1_3_zinc_h2.mp4',
+  'cu': 'media/sim36_copper_water.mp4',
+  'hno3': 'media/activity_1_3_zinc_h2.mp4',
+  'mg_hno3': 'media/zinc_reacting_in_sulfuric_acid.mp4'
+};
+
+// Continuous flame flicker on load
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gsap !== 'undefined') {
+    gsap.to("#s37_splinter_flame", {
+      scaleY: 1.15,
+      scaleX: 0.92,
+      transformOrigin: "bottom center",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.12,
+      ease: "power1.inOut"
+    });
+  }
+});
+
+// Display Switcher (Sim vs Video)
+function sim37SetDisplay(mode) {
+  var videoMode = document.getElementById('s37_video_mode');
+  var simMode = document.getElementById('s37_sim_mode');
+  var tabSim = document.getElementById('s37_tab_sim');
+  var tabVideo = document.getElementById('s37_tab_video');
+  var player = document.getElementById('s37_video_player');
+
+  if (mode === 'video') {
+    if (videoMode) videoMode.style.display = 'block';
+    if (simMode) simMode.style.display = 'none';
+    if (tabVideo) {
+      tabVideo.style.background = '#7c3aed';
+      tabVideo.style.color = '#ffffff';
+    }
+    if (tabSim) {
+      tabSim.style.background = '#ffffff';
+      tabSim.style.color = '#0f172a';
+    }
+    if (player) {
+      player.play().catch(function(e) { console.log('Autoplay prevented:', e); });
+    }
+  } else {
+    if (videoMode) videoMode.style.display = 'none';
+    if (simMode) simMode.style.display = 'block';
+    if (tabSim) {
+      tabSim.style.background = '#7c3aed';
+      tabSim.style.color = '#ffffff';
+    }
+    if (tabVideo) {
+      tabVideo.style.background = '#ffffff';
+      tabVideo.style.color = '#0f172a';
+    }
+    if (player) {
+      player.pause();
+    }
   }
 }
 
-function sim37Reset() {
-  var mgBubbles = document.getElementById('s37_mg_bubbles');
-  var znBubbles = document.getElementById('s37_zn_bubbles');
-  var splinter = document.getElementById('s37_splinter');
-  var pbar = document.getElementById('s37_pbar');
-  var stext = document.getElementById('s37_status_text');
-  if (mgBubbles) mgBubbles.style.opacity = '0';
-  if (znBubbles) znBubbles.style.opacity = '0';
-  if (splinter) splinter.style.opacity = '0';
-  if (pbar) pbar.style.width = '0%';
-  if (stext) stext.textContent = 'परखनली चुनें व अम्ल से अभिक्रिया जांचें';
+// Continuous Rising Hydrogen Bubbles Loop (GSAP Physics)
+function s37StartAcidBubbles(speedFactor, count) {
+  s37StopAcidBubbles();
+  if (typeof gsap === 'undefined') return;
+
+  var container = document.getElementById('s37_dynamic_bubbles');
+  if (container) container.style.opacity = '1';
+
+  var bubbles = [
+    '#s37_bub1', '#s37_bub2', '#s37_bub3', '#s37_bub4',
+    '#s37_bub5', '#s37_bub6', '#s37_bub7', '#s37_bub8',
+    '#s37_bub9', '#s37_bub10', '#s37_bub11', '#s37_bub12'
+  ];
+
+  s37_bubbleTween = gsap.timeline({ repeat: -1 });
+
+  bubbles.forEach(function(bId, idx) {
+    var riseDuration = (speedFactor || 1.0) * (0.8 + (idx % 3) * 0.2);
+    var delay = idx * 0.09 * (speedFactor || 1.0);
+
+    gsap.set(bId, { y: 0, opacity: 0, scale: 0.6 });
+
+    s37_bubbleTween.to(bId, {
+      y: -160,
+      x: (idx % 2 === 0 ? "+=8" : "-=8"),
+      scale: 1.4,
+      opacity: 0.95,
+      duration: riseDuration,
+      ease: "power1.out",
+      repeat: -1,
+      repeatDelay: 0.08,
+      onRepeat: function() {
+        gsap.set(bId, { y: 0, opacity: 0.9, scale: 0.6 });
+      }
+    }, delay);
+  });
 }
+
+function s37StopAcidBubbles() {
+  if (s37_bubbleTween) {
+    s37_bubbleTween.kill();
+    s37_bubbleTween = null;
+  }
+  var container = document.getElementById('s37_dynamic_bubbles');
+  if (container) container.style.opacity = '0';
+  for (var i = 1; i <= 12; i++) {
+    var b = document.getElementById('s37_bub' + i);
+    if (b) gsap.set(b, { y: 0, x: 0, opacity: 0, scale: 1 });
+  }
+}
+
+// Continuous NO2 Fume Waving
+function s37StartNO2Fumes() {
+  s37StopNO2Fumes();
+  if (typeof gsap === 'undefined') return;
+
+  var container = document.getElementById('s37_no2_fumes');
+  if (container) container.style.opacity = '1';
+
+  s37_fumeTween = gsap.timeline({ repeat: -1, yoyo: true });
+  s37_fumeTween
+    .to("#s37_fume1", { x: 10, scaleY: 1.1, duration: 1.4, ease: "sine.inOut" }, 0)
+    .to("#s37_fume2", { x: -8, scaleY: 1.15, duration: 1.6, ease: "sine.inOut" }, 0.2)
+    .to("#s37_fume3", { x: 12, scaleY: 1.08, duration: 1.5, ease: "sine.inOut" }, 0.1);
+}
+
+function s37StopNO2Fumes() {
+  if (s37_fumeTween) {
+    s37_fumeTween.kill();
+    s37_fumeTween = null;
+  }
+  var container = document.getElementById('s37_no2_fumes');
+  if (container) container.style.opacity = '0';
+  gsap.set(["#s37_fume1", "#s37_fume2", "#s37_fume3"], { x: 0, scaleY: 1 });
+}
+
+// Metal Selection Handler
+function sim37SelectMetal(type) {
+  if (s37_currentTimeline) {
+    s37_currentTimeline.kill();
+    s37_currentTimeline = null;
+  }
+  s37StopAcidBubbles();
+  s37StopNO2Fumes();
+  s37_isAnimating = false;
+  s37_currentType = type;
+  sim37ResetAction();
+
+  // Update video player
+  var player = document.getElementById('s37_video_player');
+  var source = document.getElementById('s37_video_source');
+  if (player && source && s37_videoMap[type]) {
+    source.src = s37_videoMap[type];
+    player.load();
+  }
+
+  // Buttons styling
+  var types = ['mg', 'zn', 'fe', 'cu', 'hno3', 'mg_hno3'];
+  types.forEach(function(t) {
+    var b = document.getElementById('s37_btn_' + t);
+    if (!b) return;
+    if (t === type) {
+      b.style.background = (t === 'mg' ? '#16a34a' : t === 'zn' ? '#0284c7' : t === 'fe' ? '#475569' : t === 'cu' ? '#dc2626' : t === 'hno3' ? '#d97706' : '#7c3aed');
+      b.style.color = '#ffffff';
+      b.style.borderColor = '#0f172a';
+      b.style.boxShadow = '0 3px 10px rgba(0,0,0,0.25)';
+    } else {
+      b.style.background = '#ffffff';
+      b.style.color = (t === 'mg' ? '#16a34a' : t === 'zn' ? '#0284c7' : t === 'fe' ? '#475569' : t === 'cu' ? '#dc2626' : t === 'hno3' ? '#d97706' : '#7c3aed');
+      b.style.borderColor = '#cbd5e1';
+      b.style.boxShadow = '0 2px 6px rgba(0,0,0,0.06)';
+    }
+  });
+
+  // Material shape & liquid color update
+  var mesh = document.getElementById('s37_metal_mesh');
+  var acidFill = document.getElementById('s37_acid_fill');
+  var acidMeniscus = document.getElementById('s37_acid_meniscus');
+
+  if (mesh) {
+    if (type === 'mg' || type === 'mg_hno3') {
+      mesh.setAttribute('fill', '#e2e8f0'); // Magnesium bright ribbon
+      mesh.setAttribute('stroke', '#64748b');
+    } else if (type === 'zn') {
+      mesh.setAttribute('fill', '#94a3b8'); // Zinc granule
+      mesh.setAttribute('stroke', '#334155');
+    } else if (type === 'fe') {
+      mesh.setAttribute('fill', '#475569'); // Iron dark filings
+      mesh.setAttribute('stroke', '#0f172a');
+    } else if (type === 'cu') {
+      mesh.setAttribute('fill', '#b45309'); // Copper reddish-brown
+      mesh.setAttribute('stroke', '#78350f');
+    } else if (type === 'hno3') {
+      mesh.setAttribute('fill', '#94a3b8'); // Zinc/Metal in HNO3
+      mesh.setAttribute('stroke', '#334155');
+    }
+  }
+
+  if (acidFill && acidMeniscus) {
+    if (type === 'hno3') {
+      acidFill.setAttribute('fill', 'url(#s37_hno3_liquid)');
+      acidMeniscus.setAttribute('fill', 'url(#s37_hno3_liquid)');
+    } else {
+      acidFill.setAttribute('fill', 'url(#s37_acid_liquid)');
+      acidMeniscus.setAttribute('fill', 'url(#s37_acid_liquid)');
+    }
+  }
+
+  // Update Right Panel text
+  var cardTitle = document.getElementById('s37_card_metal_title');
+  var cardEq = document.getElementById('s37_card_equation');
+  var obs1 = document.getElementById('s37_card_obs1');
+  var obs2 = document.getElementById('s37_card_obs2');
+  var obs3 = document.getElementById('s37_card_obs3');
+
+  if (type === 'mg') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: मैग्नीशियम (Mg) + तनु HCl';
+    if (cardEq) cardEq.textContent = 'Mg + 2HCl ➔ MgCl₂ + H₂↑ + ऊष्मा';
+    if (obs1) obs1.textContent = '• बुलबुले बनने की दर: सर्वाधिक तीव्र (Most Vigorous)';
+    if (obs2) obs2.textContent = '• तापमापी में उच्चतम ताप वृद्धि: 25°C ➔ 55°C (ΔT सर्वाधिक)';
+    if (obs3) obs3.textContent = '• H₂ गैस Pop! ध्वनि के साथ जलती है';
+  } else if (type === 'zn') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: जिंक (Zn) + तनु HCl';
+    if (cardEq) cardEq.textContent = 'Zn + 2HCl ➔ ZnCl₂ + H₂↑ + ऊष्मा';
+    if (obs1) obs1.textContent = '• बुलबुले बनने की दर: मध्यम व नियमित (Steady Stream)';
+    if (obs2) obs2.textContent = '• तापमापी में मध्यम ताप वृद्धि: 25°C ➔ 38°C';
+    if (obs3) obs3.textContent = '• H₂ गैस परखनली मुख पर Pop! ध्वनि देती है';
+  } else if (type === 'fe') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: लोहा (Fe) + तनु HCl';
+    if (cardEq) cardEq.textContent = 'Fe + 2HCl ➔ FeCl₂ + H₂↑ + अल्प ऊष्मा';
+    if (obs1) obs1.textContent = '• बुलबुले बनने की दर: अत्यंत मंद (Slow Evolution)';
+    if (obs2) obs2.textContent = '• तापमापी में बहुत कम ताप वृद्धि: 25°C ➔ 28°C';
+    if (obs3) obs3.textContent = '• विलयन का रंग हल्का हरा (FeCl₂) होने लगता है';
+  } else if (type === 'cu') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: कॉपर (Cu) + तनु HCl';
+    if (cardEq) cardEq.textContent = 'Cu + HCl ➔ कोई अभिक्रिया नहीं (No Reaction)';
+    if (obs1) obs1.textContent = '• बुलबुले बनने की दर: शून्य (Zero Bubbles)';
+    if (obs2) obs2.textContent = '• तापमापी में शून्य ताप परिवर्तन: 25°C (अपरिवर्तित)';
+    if (obs3) obs3.textContent = '• कॉपर हाइड्रोजन से कम सक्रिय होने के कारण H₂ नहीं देता';
+  } else if (type === 'hno3') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: धातु (Zn) + नाइट्रिक अम्ल (HNO₃)';
+    if (cardEq) cardEq.textContent = 'Zn + 4HNO₃ ➔ Zn(NO₃)₂ + 2H₂O + 2NO₂↑';
+    if (obs1) obs1.textContent = '• H₂ गैस मुक्त नहीं होती, भूरी NO₂ गैस निकलती है';
+    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 45°C (तीव्र ऑक्सीकरण)';
+    if (obs3) obs3.textContent = '• HNO₃ प्रबल ऑक्सीकारक है, H₂ को जल (H₂O) में बदलता है';
+  } else if (type === 'mg_hno3') {
+    if (cardTitle) cardTitle.textContent = 'चयनित: Mg + 1% अति तनु HNO₃ (अपवाद)';
+    if (cardEq) cardEq.textContent = 'Mg + 2HNO₃ (1% अति तनु) ➔ Mg(NO₃)₂ + H₂↑';
+    if (obs1) obs1.textContent = '• विशेष अपवाद: H₂ गैस के तीव्र बुलबुले निकलते हैं!';
+    if (obs2) obs2.textContent = '• ताप वृद्धि: 25°C ➔ 48°C';
+    if (obs3) obs3.textContent = '• केवल Mg व Mn अति तनु (1%) HNO₃ से H₂ देते हैं';
+  }
+}
+
+// 3-Step Controllers
+function sim37RunStep(step) {
+  if (s37_currentTimeline) {
+    s37_currentTimeline.kill();
+    s37_currentTimeline = null;
+  }
+  s37StopAcidBubbles();
+  s37StopNO2Fumes();
+
+  var statusBox = document.getElementById('s37_status_text');
+  var popupBadge = document.getElementById('s37_popup_badge');
+  var popupText = document.getElementById('s37_popup_text');
+  var tempText = document.getElementById('s37_temp_text');
+
+  if (step === 1) {
+    // Step 1: Tube & Metal setup
+    if (statusBox) statusBox.textContent = 'चरण 1: परखनली में धातु का प्रतिदर्श व तापमापी सज्जित किया गया।';
+    speakHindiCh3('परखनली में धातु और तापमापी व्यवस्थित किए गए। प्रारंभिक ताप पच्चीस डिग्री सेल्सियस है।');
+
+    gsap.timeline()
+      .set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1 })
+      .set("#s37_metal_sample_group", { scale: 1, opacity: 1 })
+      .fromTo("#s37_metal_sample_group", { scale: 0.4 }, { scale: 1, duration: 0.6, ease: "back.out(2)" })
+      .to("#s37_mercury_column", { height: 55, y: 260, duration: 0.4 });
+    if (tempText) tempText.textContent = '25°C (स्थिर)';
+
+  } else if (step === 2) {
+    // Step 2: Acid Dropper Addition
+    if (statusBox) statusBox.textContent = 'चरण 2: ड्रॉपर द्वारा परखनली में तनु अम्ल मिलाया जा रहा है...';
+    speakHindiCh3('ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
+
+    gsap.timeline()
+      // Dropper glides over tube mouth
+      .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.8, ease: "power2.out" })
+      .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
+      // Acid drop falls
+      .set("#s37_falling_drop", { opacity: 1, y: 120 })
+      .to("#s37_falling_drop", { y: 245, duration: 0.4, ease: "power1.in" })
+      .set("#s37_falling_drop", { opacity: 0 })
+      // Surface ripple & liquid level slight bump
+      .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
+      .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
+      .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.8, ease: "power2.inOut" });
+
+  } else if (step === 3) {
+    // Step 3: Bubbles Evolution & Thermometer Temp Rise & Pop Test
+    if (s37_currentType === 'mg') {
+      if (statusBox) statusBox.textContent = 'चरण 3: सर्वाधिक तीव्र H₂ बुलबुले व उच्चतम ऊष्माक्षेपी प्रभाव (55°C)! 🔥';
+      speakHindiCh3('मैग्नीशियम से सर्वाधिक तीव्र बुलबुले निकलते हैं और तापमापी पचपन डिग्री तक पहुंच जाता है।');
+
+      s37StartAcidBubbles(0.65, 12);
+      gsap.timeline()
+        // Thermometer rises from 25C to 55C (height: 55 -> 125, y: 260 -> 190)
+        .to("#s37_mercury_column", { height: 125, y: 190, duration: 1.5, ease: "power2.out" })
+        .call(function() {
+          if (tempText) tempText.textContent = '55°C (उच्चतम 🔥)';
+        })
+        // Splinter pop test
+        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
+        .call(function() {
+          speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण सफल!');
+        })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! परीक्षण';
+
+    } else if (s37_currentType === 'zn') {
+      if (statusBox) statusBox.textContent = 'चरण 3: जिंक से मध्यम दर से H₂ गैस के बुलबुले व 38°C ताप वृद्धि।';
+      speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है और ताप अड़तीस डिग्री होता है।');
+
+      s37StartAcidBubbles(1.1, 8);
+      gsap.timeline()
+        .to("#s37_mercury_column", { height: 85, y: 230, duration: 1.4, ease: "power2.out" })
+        .call(function() {
+          if (tempText) tempText.textContent = '38°C (मध्यम)';
+        })
+        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+
+    } else if (s37_currentType === 'fe') {
+      if (statusBox) statusBox.textContent = 'चरण 3: लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)।';
+      speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है और ताप केवल अट्ठाईस डिग्री पहुंचता है।');
+
+      s37StartAcidBubbles(2.2, 4);
+      gsap.timeline()
+        .to("#s37_mercury_column", { height: 65, y: 250, duration: 1.2, ease: "power2.out" })
+        .call(function() {
+          if (tempText) tempText.textContent = '28°C (अल्प)';
+        })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
+
+    } else if (s37_currentType === 'cu') {
+      if (statusBox) statusBox.textContent = 'चरण 3: कॉपर तनु HCl से कोई क्रिया नहीं करता (शून्य बुलबुले, 25°C स्थिर)। 🛡️';
+      speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
+
+      s37StopAcidBubbles();
+      gsap.timeline()
+        .to("#s37_mercury_column", { height: 55, y: 260, duration: 0.5 })
+        .call(function() {
+          if (tempText) tempText.textContent = '25°C (स्थिर ❌)';
+        })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '🛡️ Cu + HCl: कोई अभिक्रिया नहीं (शून्य बुलबुले, 25°C अपरिवर्तित)';
+
+    } else if (s37_currentType === 'hno3') {
+      if (statusBox) statusBox.textContent = 'चरण 3: HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है! ⚠️';
+      speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी नाइट्रोजन डाइऑक्साइड गैस निकलती है।');
+
+      s37StopAcidBubbles();
+      s37StartNO2Fumes();
+      gsap.timeline()
+        .to("#s37_mercury_column", { height: 100, y: 215, duration: 1.5, ease: "power2.out" })
+        .call(function() {
+          if (tempText) tempText.textContent = '45°C (ऑक्सीकरण)';
+        })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
+
+    } else if (s37_currentType === 'mg_hno3') {
+      if (statusBox) statusBox.textContent = 'चरण 3: विशेष अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देता है! 🧪';
+      speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
+
+      s37StartAcidBubbles(0.7, 10);
+      gsap.timeline()
+        .to("#s37_mercury_column", { height: 110, y: 205, duration: 1.5, ease: "power2.out" })
+        .call(function() {
+          if (tempText) tempText.textContent = '48°C (तीव्र)';
+        })
+        .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.7, ease: "power2.out" })
+        .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
+        .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+      if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+    }
+  }
+}
+
+// Full Auto-Play Controller (Cinematic Timeline)
+function sim37TriggerAction() {
+  sim37ResetAction();
+  if (typeof gsap === 'undefined') return;
+
+  var statusBox = document.getElementById('s37_status_text');
+  var tempText = document.getElementById('s37_temp_text');
+  var popupText = document.getElementById('s37_popup_text');
+  s37_currentTimeline = gsap.timeline();
+
+  if (statusBox) statusBox.textContent = 'संपूर्ण ऑटो-प्ले प्रारंभ: ड्रॉपर से तनु अम्ल मिलाया जा रहा है...';
+  speakHindiCh3('प्रयोग प्रारंभ: ड्रॉपर से परखनली में तनु अम्ल मिलाया जा रहा है।');
+
+  s37_currentTimeline
+    // Step 1: Dropper moves in and adds acid
+    .to("#s37_dropper_rig", { x: 370, y: 80, duration: 0.9, ease: "power2.out" })
+    .to("#s37_dropper_bulb", { scaleY: 0.75, transformOrigin: "top center", duration: 0.25, yoyo: true, repeat: 1 })
+    .set("#s37_falling_drop", { opacity: 1, y: 120 })
+    .to("#s37_falling_drop", { y: 245, duration: 0.45, ease: "power1.in" })
+    .set("#s37_falling_drop", { opacity: 0 })
+    .to("#s37_acid_ripple", { opacity: 1, scale: 2.2, duration: 0.4, transformOrigin: "center center" }, "-=0.1")
+    .to("#s37_acid_ripple", { opacity: 0, duration: 0.3 })
+    .to("#s37_dropper_rig", { x: 560, y: 40, duration: 0.8, ease: "power2.inOut" });
+
+  // Step 2: Reaction & Bubbles & Temperature
+  if (s37_currentType === 'mg') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'तीव्र अभिक्रिया: H₂ बुलबुलों का प्रवाह व तापमापी 55°C तक चढ़ा!';
+        speakHindiCh3('तीव्रतम अभिक्रिया: हाइड्रोजन के घने बुलबुले और तापमापी पचपन डिग्री तक चढ़ गया।');
+        s37StartAcidBubbles(0.65, 12);
+      })
+      .to("#s37_mercury_column", { height: 125, y: 190, duration: 1.8, ease: "power2.out" })
+      .call(function() {
+        if (tempText) tempText.textContent = '55°C (उच्चतम 🔥)';
+      })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_pop_flash", { opacity: 1, scale: 2.2, duration: 0.12, repeat: 1, yoyo: true })
+      .call(function() {
+        speakHindiCh3('पॉप ध्वनि के साथ हाइड्रोजन गैस का परीक्षण!');
+      })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '⚡ Mg + HCl: सर्वाधिक तीव्र बुलबुले व उच्चतम ताप (55°C) — Pop! परीक्षण';
+
+  } else if (s37_currentType === 'zn') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'जिंक से मध्यम दर से H₂ गैस के बुलबुले व 38°C ताप वृद्धि।';
+        speakHindiCh3('जिंक मध्यम गति से हाइड्रोजन गैस मुक्त करता है।');
+        s37StartAcidBubbles(1.1, 8);
+      })
+      .to("#s37_mercury_column", { height: 85, y: 230, duration: 1.6, ease: "power2.out" })
+      .call(function() {
+        if (tempText) tempText.textContent = '38°C (मध्यम)';
+      })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_pop_flash", { opacity: 1, scale: 1.8, duration: 0.12, repeat: 1, yoyo: true })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '⚙️ Zn + HCl: मध्यम दर से H₂ बुलबुले व ताप 38°C — Pop! ध्वनि';
+
+  } else if (s37_currentType === 'fe') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'लोहे से अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)।';
+        speakHindiCh3('लोहे के साथ अभिक्रिया बहुत धीमी होती है।');
+        s37StartAcidBubbles(2.2, 4);
+      })
+      .to("#s37_mercury_column", { height: 65, y: 250, duration: 1.4, ease: "power2.out" })
+      .call(function() {
+        if (tempText) tempText.textContent = '28°C (अल्प)';
+      })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '🔩 Fe + HCl: अत्यंत मंद गति से बुलबुले व अल्प ताप वृद्धि (28°C)';
+
+  } else if (s37_currentType === 'cu') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'कॉपर तनु HCl से कोई क्रिया नहीं करता (शून्य बुलबुले, 25°C स्थिर)।';
+        speakHindiCh3('कॉपर तनु हाइड्रोक्लोरिक अम्ल से कोई क्रिया नहीं करता। ताप भी स्थिर रहता है।');
+      })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '🛡️ Cu + HCl: कोई अभिक्रिया नहीं (शून्य बुलबुले, 25°C अपरिवर्तित)';
+
+  } else if (s37_currentType === 'hno3') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'HNO₃ अपवाद: H₂ गैस नहीं बनती, भूरी NO₂ गैस व H₂O बनता है!';
+        speakHindiCh3('नाइट्रिक अम्ल प्रबल ऑक्सीकारक है, यह हाइड्रोजन को पानी में बदल देता है और भूरी गैस निकलती है।');
+        s37StartNO2Fumes();
+      })
+      .to("#s37_mercury_column", { height: 100, y: 215, duration: 1.6, ease: "power2.out" })
+      .call(function() {
+        if (tempText) tempText.textContent = '45°C (ऑक्सीकरण)';
+      })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '⚠️ HNO₃ अपवाद: H₂ नहीं बनता, H₂O व भूरी NO₂ गैस उत्सर्जित होती है!';
+
+  } else if (s37_currentType === 'mg_hno3') {
+    s37_currentTimeline
+      .call(function() {
+        if (statusBox) statusBox.textContent = 'विशेष अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस के तीव्र बुलबुले देता है!';
+        speakHindiCh3('विशेष अपवाद: केवल मैग्नीशियम और मैंगनीज अति तनु नाइट्रिक अम्ल से हाइड्रोजन गैस देते हैं।');
+        s37StartAcidBubbles(0.7, 10);
+      })
+      .to("#s37_mercury_column", { height: 110, y: 205, duration: 1.6, ease: "power2.out" })
+      .call(function() {
+        if (tempText) tempText.textContent = '48°C (तीव्र)';
+      })
+      .to("#s37_splinter_rig", { opacity: 1, y: 130, duration: 0.8, ease: "power2.out" })
+      .to("#s37_pop_flash", { opacity: 1, scale: 2.0, duration: 0.12, repeat: 1, yoyo: true })
+      .to("#s37_popup_badge", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)" });
+
+    if (popupText) popupText.textContent = '🧪 NCERT अपवाद: Mg अति तनु (1%) HNO₃ से H₂ गैस मुक्त करता है!';
+  }
+}
+
+// Clean Reset Action
+function sim37ResetAction() {
+  if (s37_currentTimeline) {
+    s37_currentTimeline.kill();
+    s37_currentTimeline = null;
+  }
+  s37StopAcidBubbles();
+  s37StopNO2Fumes();
+  s37_isAnimating = false;
+
+  if (typeof gsap !== 'undefined') {
+    gsap.killTweensOf("#s37_dropper_rig");
+    gsap.killTweensOf("#s37_dropper_bulb");
+    gsap.killTweensOf("#s37_falling_drop");
+    gsap.killTweensOf("#s37_acid_ripple");
+    gsap.killTweensOf("#s37_mercury_column");
+    gsap.killTweensOf("#s37_splinter_rig");
+    gsap.killTweensOf("#s37_pop_flash");
+    gsap.killTweensOf("#s37_popup_badge");
+
+    gsap.set("#s37_dropper_rig", { x: 560, y: 40, opacity: 1, clearProps: "all" });
+    gsap.set("#s37_dropper_bulb", { scaleY: 1, clearProps: "scaleY" });
+    gsap.set("#s37_falling_drop", { opacity: 0, y: 120 });
+    gsap.set("#s37_acid_ripple", { opacity: 0, scale: 1 });
+    gsap.set("#s37_mercury_column", { height: 55, y: 260 });
+    gsap.set("#s37_splinter_rig", { opacity: 0, y: 0 });
+    gsap.set("#s37_pop_flash", { opacity: 0, scale: 1 });
+    gsap.set("#s37_popup_badge", { opacity: 0, scale: 0.6 });
+  }
+
+  var tempText = document.getElementById('s37_temp_text');
+  if (tempText) tempText.textContent = '25°C (स्थिर)';
+
+  var statusBox = document.getElementById('s37_status_text');
+  if (statusBox) statusBox.textContent = 'प्रयोग प्रारंभ करने के लिए "▶️ संपूर्ण ऑटो-प्ले" दबाएं।';
+}
+
 
 /* --------------------------------------------------------------------------
    SIMULATOR 3.8: ऐक्वारेजिया (अम्लराज - Aqua Regia)
