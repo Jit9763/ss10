@@ -4872,14 +4872,11 @@
         </div>
       </div>
 
-      <!-- NCERT Formula Formula Header Banner -->
-      <div style="background:linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border:1.5px solid #bae6fd; border-radius:10px; padding:10px 16px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-        <div style="font-size:14px; color:#0369a1; font-weight:800;">
+      <!-- NCERT Formula Header Banner -->
+      <div style="background:linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border:1.5px solid #bae6fd; border-radius:10px; padding:12px 18px; margin-bottom:14px;">
+        <div style="font-size:14.5px; color:#0369a1; font-weight:800;">
           💡 <strong>प्रयोग सूत्र:</strong> Na/K ठंडे जल से तीव्र (H₂ में आग) • Ca बुलबुलों से तैरता है • Mg गर्म जल से • Fe/Al केवल भाप से • Cu अक्रिय
         </div>
-        <button onclick="sim36CopyCurrentPrompt()" style="background:#0284c7; color:#ffffff; font-size:12.5px; font-weight:800; padding:5px 12px; border-radius:6px; border:none; cursor:pointer; display:flex; align-items:center; gap:6px;">
-          <i class="fas fa-copy"></i> 📋 AI वीडियो प्रॉम्प्ट कॉपी करें
-        </button>
       </div>
 
       <!-- MAIN 16:9 SCREEN CONTAINER -->
@@ -5224,31 +5221,15 @@
           </svg>
         </div>
 
-        <!-- MODE B: REAL 10-SECOND AI VIDEO GENERATION PLAYER (3.5 Dual Model) -->
-        <div id="s36_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#0f172a; padding:20px; box-sizing:border-box;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
-            <div style="color:#ffffff; font-size:16px; font-weight:900;">
-              🎬 10-सेकंड AI वीडियो जनरेशन प्लेयर व प्रॉम्प्ट
-            </div>
-            <button onclick="sim36SetDisplay('sim')" style="background:#0284c7; color:#ffffff; font-size:13.5px; font-weight:900; padding:7px 16px; border-radius:8px; border:none; cursor:pointer;">
-              🔬 वापस 16:9 सिमुलेटर पर जाएं
-            </button>
-          </div>
-          <video id="s36_video_player" style="width:100%; max-height:420px; object-fit:contain; display:block; border-radius:10px; background:#000;" controls playsinline preload="metadata">
+        <!-- MODE B: REAL EXPERIMENT VIDEO PLAYER (Full 16:9 Frame) -->
+        <div id="s36_video_mode" style="display:none; width:100%; height:100%; position:relative; background:#000000;">
+          <video id="s36_video_player" style="width:100%; height:100%; object-fit:cover; display:block;" controls playsinline preload="metadata">
             <source id="s36_video_source" src="media/sim36_sodium_water.mp4" type="video/mp4">
+            आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
           </video>
-          <!-- Video Prompt Display Box with Copy Button -->
-          <div style="margin-top:14px; background:#1e293b; border:1.5px solid #334155; border-radius:10px; padding:14px;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-              <span style="color:#38bdf8; font-size:14px; font-weight:800;"><i class="fas fa-magic"></i> 10-Second Realistic Video Prompt (Sora / Kling / Runway Gen-3):</span>
-              <button onclick="sim36CopyCurrentPrompt()" style="background:#38bdf8; color:#0f172a; font-size:12px; font-weight:900; padding:4px 10px; border-radius:6px; border:none; cursor:pointer;">
-                📋 प्रॉम्प्ट कॉपी करें
-              </button>
-            </div>
-            <p id="s36_prompt_display_text" style="color:#cbd5e1; font-size:13px; line-height:1.5; margin:0; font-family:monospace; background:#0f172a; padding:10px; border-radius:6px; border:1px solid #334155; user-select:all;">
-              Cinematic macro 8K shot in a sterile chemistry laboratory: A pair of stainless steel forceps carefully drops a small shiny pea-sized sodium metal piece into a transparent borosilicate glass beaker filled with crystal-clear water. Instantly upon touching the water, the sodium metal furiously fizzes and darts across the surface, generating violent microscopic hydrogen bubbles. Within 2 seconds, intense heat ignites the hydrogen gas into a brilliant golden-yellow and lilac flame dancing directly on the water's surface, leaving a trail of white vapor against a clean soft studio backdrop. 60fps, photorealistic physics, slow motion, clean science educational documentary style.
-            </p>
-          </div>
+          <button onclick="sim36SetDisplay('sim')" style="position:absolute; bottom:18px; right:20px; background:rgba(2,132,199,0.92); color:#ffffff; font-size:14px; font-weight:900; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; backdrop-filter:blur(8px); box-shadow:0 4px 14px rgba(0,0,0,0.4); z-index:10; transition:all 0.2s;">
+            🔬 वापस 16:9 सिमुलेटर पर जाएं
+          </button>
         </div>
       </div>
 
@@ -14105,14 +14086,6 @@ var s36_videoMap = {
   'cu': 'media/sim36_copper_water.mp4'
 };
 
-var s36_promptsMap = {
-  'na': 'Cinematic macro 8K shot in a sterile chemistry laboratory: A pair of stainless steel forceps carefully drops a small shiny pea-sized sodium metal piece into a transparent borosilicate glass beaker filled with crystal-clear water. Instantly upon touching the water, the sodium metal furiously fizzes and darts across the surface, generating violent microscopic hydrogen bubbles. Within 2 seconds, intense heat ignites the hydrogen gas into a brilliant golden-yellow and lilac flame dancing directly on the water\'s surface, leaving a trail of white vapor against a clean soft studio backdrop. 60fps, photorealistic physics, slow motion, clean science educational documentary style.',
-  'ca': 'Ultra-realistic 8K close-up in a glass beaker of pure water: A small silvery-gray piece of calcium metal is immersed. It initially sinks to the middle, then a steady vigorous effervescence of fine hydrogen gas bubbles begins forming all over the metal\'s surface. As the dense coating of hydrogen bubbles completely encapsulates the calcium pellet, the buoyant force lifts the piece of calcium upward to float gracefully on the surface while fizzing continuously. Crystal clear glass refraction, natural volumetric lighting, high-speed macro science photography.',
-  'mg': 'Close-up 8K laboratory shot of a polished magnesium metal ribbon curled inside a Pyrex test tube of hot boiling water. Thermal steam wisps rise as vigorous effervescence of hydrogen bubbles rapidly nucleates along the magnesium ribbon. The cling of hundreds of shiny gas bubbles increases buoyancy, causing the ribbon to gently rise and float near the steaming liquid meniscus. Educational science video, pristine depth of field, 4K crisp 60fps.',
-  'steam': 'Cinematic 8K photorealistic 10-second laboratory documentary shot of NCERT Class 10 steam apparatus setup: A horizontal hard-glass boiling tube is clamped securely to an iron retort stand. At the closed rear left end, moist wet glass wool is heated by a blue Bunsen burner flame, generating dense vaporous white steam. The steam rushes horizontally across the tube over pure gray iron metal filings heated to a glowing red-hot state in the center. In a visible chemical transformation, the red-hot iron oxidizes into black Fe3O4 (magnetite). The released invisible hydrogen gas travels through a bent glass delivery tube into a transparent water trough. Rapid continuous vigorous gas bubbles stream upward inside an inverted water-filled graduated test tube, actively pushing the water level downward by downward displacement of water. Camera smoothly pans from the red-hot boiling tube to the bubbling gas collector. 60fps, crisp laboratory lighting, realistic fluid dynamics, photorealistic physics, clean science documentary, 10 seconds duration.',
-  'cu': 'Macro 8K laboratory view: A bright lustrous reddish-brown copper metal strip sits at the bottom of a transparent beaker of hot boiling water. Zero bubbles form, no surface tarnishing, zero reaction as steam passes by, remaining completely pristine and inert. Extreme clarity, educational laboratory documentary.'
-};
-
 // Continuous burner flame animation on load (matching 3.4)
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof gsap !== 'undefined') {
@@ -14173,23 +14146,6 @@ function sim36SetDisplay(mode) {
     if (player) {
       player.pause();
     }
-  }
-}
-
-// 1-Click Copy Prompt Helper
-function sim36CopyCurrentPrompt() {
-  var prompt = s36_promptsMap[s36_currentMetal] || s36_promptsMap['na'];
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(prompt).then(function() {
-      alert('✅ 10-सेकंड AI वीडियो प्रॉम्प्ट क्लिपबोर्ड पर कॉपी हो गया!');
-    }).catch(function() {
-      promptUserFallback(prompt);
-    });
-  } else {
-    promptUserFallback(prompt);
-  }
-  function promptUserFallback(text) {
-    window.prompt("इस 10-सेकंड AI वीडियो प्रॉम्प्ट को कॉपी करें (Ctrl+C):", text);
   }
 }
 
@@ -14342,16 +14298,12 @@ function sim36SelectMetal(type) {
   s36_currentMetal = type;
   sim36ResetAction();
 
-  // Update video player & prompt
+  // Update video player for selected metal
   var player = document.getElementById('s36_video_player');
   var source = document.getElementById('s36_video_source');
-  var promptDisplay = document.getElementById('s36_prompt_display_text');
   if (player && source && s36_videoMap[type]) {
     source.src = s36_videoMap[type];
     player.load();
-  }
-  if (promptDisplay && s36_promptsMap[type]) {
-    promptDisplay.textContent = s36_promptsMap[type];
   }
 
   // Buttons styling
