@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="1150" height="720">
   <defs>
     <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
@@ -15,37 +15,68 @@
     </filter>
   </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2.5"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect width="1150" height="720" rx="24" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1126" height="696" rx="20" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.3"/>
 
   <!-- Title -->
   <g filter="url(#shadow5)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#34d399" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">👑 नागरिकों की गरिमा और आजादी (Dignity &amp; Freedom of Citizens)</text>
+    <rect x="40" y="24" width="1070" height="76" rx="16" fill="#030712" stroke="#34d399" stroke-width="3"/>
+    <text x="575" y="73" fill="url(#titleGrad5)" font-family="'Tiro Devanagari Hindi', 'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">👑 नागरिकों की गरिमा और आजादी (Dignity &amp; Freedom of Citizens)</text>
   </g>
 
-  <!-- 2 Cards -->
-  <g transform="translate(35, 125)" filter="url(#shadow5)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#db2777"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. महिलाओं की गरिमा व समान अवसर</text>
+  <!-- Left Card: महिलाओं की गरिमा -->
+  <g transform="translate(40, 125)" filter="url(#shadow5)">
+    <rect width="520" height="555" rx="18" fill="#1e293b" stroke="#f472b6" stroke-width="3"/>
+    <rect x="0" y="0" width="520" height="54" rx="18" fill="#db2777"/>
+    <text x="260" y="37" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="23" font-weight="900" text-anchor="middle">1. महिलाओं की गरिमा एवं समान अवसर</text>
     
-    <text x="25" y="100" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• पुरुषों के वर्चस्व के खिलाफ निरंतर संघर्ष:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">लंबे संघर्ष के बाद आज यह स्वीकार किया गया है कि महिलाओं से आदर का व्यवहार लोकतंत्र की अनिवार्य शर्त है।</text>
+    <text x="25" y="105" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• ऐतिहासिक पुरुष-वर्चस्व के विरुद्ध संघर्ष:</text>
+    <text x="25" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">लंबे संघर्षों के बाद आज यह स्वीकार किया गया कि</tspan>
+      <tspan x="25" dy="28">महिलाओं से सम्मान और बराबरी का व्यवहार किसी भी</tspan>
+      <tspan x="25" dy="28">लोकतांत्रिक समाज की बुनियादी और अनिवार्य शर्त है।</tspan>
+    </text>
 
-    <text x="25" y="210" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• कानूनी आधार प्राप्त होना:</text>
-    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">अन्याय के खिलाफ महिलाओं के पास अब कानूनी लड़ाई लड़ने का आधार मौजूद है।</text>
+    <text x="25" y="245" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• कानूनी एवं नैतिक आधार की प्राप्ति:</text>
+    <text x="25" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">तानाशाही शासनों में महिलाओं को अधिकार नहीं थे;</tspan>
+      <tspan x="25" dy="28">लोकतंत्र ने उन्हें भेदभाव और घरेलू हिंसा के खिलाफ</tspan>
+      <tspan x="25" dy="28">अदालत में कानूनी लड़ाई लड़ने का नैतिक बल दिया।</tspan>
+    </text>
+
+    <rect x="25" y="390" width="470" height="135" rx="14" fill="#500724" stroke="#f472b6" stroke-width="2"/>
+    <text x="260" y="430" fill="#fbcfe8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 महिला सशक्तीकरण:</text>
+    <text x="260" y="470" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+      <tspan x="260" dy="0">कानूनी मान्यता होने से समाज में बराबरी के</tspan>
+      <tspan x="260" dy="28">दावों को नैतिक स्वीकार्यता प्राप्त हुई है।</tspan>
+    </text>
   </g>
 
-  <g transform="translate(565, 125)" filter="url(#shadow5)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. वंचित जातियों की गरिमा व दावों को बल</text>
+  <!-- Right Card: वंचित जातियों की गरिमा -->
+  <g transform="translate(590, 125)" filter="url(#shadow5)">
+    <rect width="520" height="555" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="520" height="54" rx="18" fill="#059669"/>
+    <text x="260" y="37" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="23" font-weight="900" text-anchor="middle">2. वंचित जातियों की गरिमा व दावों को बल</text>
     
-    <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• भेदभाव के खिलाफ अधिकार:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सदियों से शोषित जातियों को लोकतंत्र ने अपनी गरिमा और अवसरों की मांग करने का नैतिक बल दिया।</text>
+    <text x="25" y="105" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• भेदभाव के विरुद्ध संवैधानिक अधिकार:</text>
+    <text x="25" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">सदियों से शोषित व वंचित जातियों को लोकतंत्र ने</tspan>
+      <tspan x="25" dy="28">समान दर्जे और अवसरों की मांग करने का वैध</tspan>
+      <tspan x="25" dy="28">अधिकार और आत्मसम्मान से जीने का हौसला दिया।</tspan>
+    </text>
 
-    <text x="25" y="210" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• शिकायतें लोकतंत्र की सफलता का प्रमाण:</text>
-    <text x="25" y="245" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">जनता की शिकायतें और नई मांगें यह सिद्ध करती हैं कि नागरिक जागरूक हो चुके हैं।</text>
+    <text x="25" y="245" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• जनता की शिकायतें - सफलता का प्रमाण:</text>
+    <text x="25" y="280" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">नागरिकों की निरंतर शिकायतें यह सिद्ध करती हैं</tspan>
+      <tspan x="25" dy="28">कि वे मूक प्रजा नहीं हैं, बल्कि जागरूक नागरिक</tspan>
+      <tspan x="25" dy="28">बनकर सत्ता से अपना लोकतांत्रिक हक मांग रहे हैं।</tspan>
+    </text>
+
+    <rect x="25" y="390" width="470" height="135" rx="14" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <text x="260" y="430" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 लोकतंत्र की सतत परीक्षा:</text>
+    <text x="260" y="470" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+      <tspan x="260" dy="0">लोकतंत्र कभी ठहरता नहीं; नागरिकों की नई मांगें</tspan>
+      <tspan x="260" dy="28">ही लोकतंत्र की जीवंतता का सबसे बड़ा प्रमाण हैं।</tspan>
+    </text>
   </g>
 </svg>

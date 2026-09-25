@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="1150" height="720">
   <defs>
     <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#111827"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
     <linearGradient id="titleGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -15,35 +15,82 @@
     </filter>
   </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad1)" stroke="#334155" stroke-width="2.5"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Background -->
+  <rect width="1150" height="720" rx="24" fill="url(#bgGrad1)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1126" height="696" rx="20" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3"/>
 
-  <!-- Title -->
+  <!-- Main Title -->
   <g filter="url(#shadow1)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">🌟 लोकतंत्र के मूल्यांकन के 5 मुख्य पैमाने (5 Evaluation Metrics)</text>
+    <rect x="40" y="24" width="1070" height="76" rx="16" fill="#030712" stroke="#38bdf8" stroke-width="3"/>
+    <text x="575" y="73" fill="url(#titleGrad1)" font-family="'Tiro Devanagari Hindi', 'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">🌟 लोकतंत्र के मूल्यांकन के 5 मुख्य पैमाने (5 Evaluation Metrics)</text>
   </g>
 
-  <!-- 5 Horizontal Feature Rows -->
-  <g transform="translate(35, 120)" filter="url(#shadow1)">
-    <rect width="1010" height="495" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+  <!-- 4 Cards Grid (2x2) -->
+  <!-- Card 1: Top Left -->
+  <g transform="translate(40, 125)" filter="url(#shadow1)">
+    <rect width="520" height="155" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="0" y="0" width="520" height="46" rx="16" fill="#0284c7"/>
+    <text x="260" y="32" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">1. नागरिकों में समानता को बढ़ावा</text>
     
-    <text x="35" y="55" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">1. नागरिकों में समानता को बढ़ावा देना:</text>
-    <text x="450" y="55" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">हर नागरिक को समान राजनीतिक अधिकार व एक वोट का समान मूल्य।</text>
+    <text x="24" y="80" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• राजनीतिक व नागरिक समानता:</text>
+    <text x="24" y="112" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="24" dy="0">प्रत्येक नागरिक को समान वोट का अधिकार और</tspan>
+      <tspan x="24" dy="28">कानून के समक्ष बिना भेदभाव पूर्ण समानता।</tspan>
+    </text>
+  </g>
 
-    <text x="35" y="125" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">2. व्यक्ति की गरिमा को सुरक्षा देना:</text>
-    <text x="450" y="125" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">महिलाओं व वंचित समूहों के सम्मान और स्वतंत्रता की कानूनी रक्षा।</text>
+  <!-- Card 2: Top Right -->
+  <g transform="translate(590, 125)" filter="url(#shadow1)">
+    <rect width="520" height="155" rx="16" fill="#1e293b" stroke="#ec4899" stroke-width="2.5"/>
+    <rect x="0" y="0" width="520" height="46" rx="16" fill="#db2777"/>
+    <text x="260" y="32" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">2. व्यक्ति की गरिमा की सुरक्षा</text>
+    
+    <text x="24" y="80" fill="#f472b6" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• सम्मान और स्वतंत्रता की रक्षा:</text>
+    <text x="24" y="112" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="24" dy="0">महिलाओं व कमजोर जातियों के सम्मान व आजादी</tspan>
+      <tspan x="24" dy="28">को कानूनी संरक्षण व नैतिक मान्यता देना।</tspan>
+    </text>
+  </g>
 
-    <text x="35" y="195" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">3. फैसलों की गुणवत्ता में सुधार:</text>
-    <text x="450" y="195" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">विचार-विमर्श व बहस द्वारा बेहतर और सर्वमान्य निर्णय लेना।</text>
+  <!-- Card 3: Mid Left -->
+  <g transform="translate(40, 305)" filter="url(#shadow1)">
+    <rect width="520" height="155" rx="16" fill="#1e293b" stroke="#facc15" stroke-width="2.5"/>
+    <rect x="0" y="0" width="520" height="46" rx="16" fill="#d97706"/>
+    <text x="260" y="32" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">3. फैसलों की गुणवत्ता में सुधार</text>
+    
+    <text x="24" y="80" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• विचार-विमर्श व बहस द्वारा निर्णय:</text>
+    <text x="24" y="112" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="24" dy="0">संसद व विधायिका में खुली चर्चा से जल्दबाजी में</tspan>
+      <tspan x="24" dy="28">गलत फैसले लेने की संभावना समाप्त होती है।</tspan>
+    </text>
+  </g>
 
-    <text x="35" y="265" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">4. टकरावों को टालने व संभालने की क्षमता:</text>
-    <text x="450" y="265" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">सामाजिक विविधताओं के बीच शांतिपूर्ण सामंजस्य स्थापित करना।</text>
+  <!-- Card 4: Mid Right -->
+  <g transform="translate(590, 305)" filter="url(#shadow1)">
+    <rect width="520" height="155" rx="16" fill="#1e293b" stroke="#a855f7" stroke-width="2.5"/>
+    <rect x="0" y="0" width="520" height="46" rx="16" fill="#9333ea"/>
+    <text x="260" y="32" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">4. टकरावों को टालने व संभालने की क्षमता</text>
+    
+    <text x="24" y="80" fill="#c084fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• सामाजिक विविधताओं में सामंजस्य:</text>
+    <text x="24" y="112" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="24" dy="0">विविध भाषा, धर्म व जातियों के मतभेदों को</tspan>
+      <tspan x="24" dy="28">शांतिपूर्ण व संवैधानिक संवाद से हल करना।</tspan>
+    </text>
+  </g>
 
-    <text x="35" y="335" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">5. गलतियों को सुधारने की गुंजाइश:</text>
-    <text x="450" y="335" fill="#fde047" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="bold">चुनावों के माध्यम से नीतियों व सरकार को बदलने का अवसर।</text>
+  <!-- Card 5: Bottom Full Width -->
+  <g transform="translate(40, 485)" filter="url(#shadow1)">
+    <rect width="1070" height="195" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="1070" height="48" rx="18" fill="#059669"/>
+    <text x="535" y="33" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="22" font-weight="900" text-anchor="middle">5. गलतियों को सुधारने की खुली गुंजाइश (Scope to Correct Mistakes)</text>
+    
+    <text x="35" y="85" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• लोकतंत्र में कोई गलती स्थायी नहीं होती:</text>
+    <text x="35" y="118" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="35" dy="0">यदि सरकार कोई गलत निर्णय ले ले, तो मीडिया और जन-आंदोलनों द्वारा सार्वजनिक बहस होती है।</tspan>
+      <tspan x="35" dy="28">सरकार को या तो फैसला बदलना पड़ता है, अथवा अगले चुनाव में जनता शासकों को ही बदल देती है।</tspan>
+    </text>
 
-    <rect x="25" y="390" width="960" height="75" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
-    <text x="505" y="435" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 लोकतंत्र अन्य सभी तानाशाही या गैर-लोकतांत्रिक शासनों से बेहतर है!</text>
+    <rect x="25" y="152" width="1020" height="34" rx="8" fill="#022c22"/>
+    <text x="535" y="176" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🎯 निष्कर्ष: इन्हीं 5 ठोस पैमानों के कारण लोकतंत्र किसी भी तानाशाही या राजतंत्र से श्रेष्ठ सिद्ध होता है!</text>
   </g>
 </svg>

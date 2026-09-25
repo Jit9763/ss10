@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 720" width="1150" height="720">
   <defs>
     <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="50%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#090d16"/>
     </linearGradient>
     <linearGradient id="titleGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#facc15"/>
@@ -15,44 +15,66 @@
     </filter>
   </defs>
 
-  <rect width="1100" height="650" rx="24" fill="url(#bgGrad3)" stroke="#334155" stroke-width="2.5"/>
-  <rect x="12" y="12" width="1076" height="626" rx="20" fill="none" stroke="#facc15" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect width="1150" height="720" rx="24" fill="url(#bgGrad3)" stroke="#334155" stroke-width="2.5"/>
+  <rect x="12" y="12" width="1126" height="696" rx="20" fill="none" stroke="#facc15" stroke-width="1.5" stroke-opacity="0.3"/>
 
   <!-- Title -->
   <g filter="url(#shadow3)">
-    <rect x="40" y="24" width="1020" height="74" rx="16" fill="#090d16" stroke="#facc15" stroke-width="3"/>
-    <text x="550" y="72" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', 'Segoe UI', sans-serif" font-size="28" font-weight="900" text-anchor="middle">📈 आर्थिक संवृद्धि बनाम गरीबी व असमानता में कमी</text>
+    <rect x="40" y="24" width="1070" height="76" rx="16" fill="#030712" stroke="#facc15" stroke-width="3"/>
+    <text x="575" y="73" fill="url(#titleGrad3)" font-family="'Tiro Devanagari Hindi', 'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="30" font-weight="900" text-anchor="middle">📈 आर्थिक संवृद्धि बनाम गरीबी व असमानता में कमी</text>
   </g>
 
-  <g transform="translate(35, 125)" filter="url(#shadow3)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#0284c7"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">1. आर्थिक संवृद्धि (Economic Growth)</text>
+  <!-- Left Card: आर्थिक संवृद्धि -->
+  <g transform="translate(40, 125)" filter="url(#shadow3)">
+    <rect width="520" height="555" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="0" y="0" width="520" height="54" rx="18" fill="#0284c7"/>
+    <text x="260" y="37" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="23" font-weight="900" text-anchor="middle">1. आर्थिक संवृद्धि (Economic Growth)</text>
     
-    <text x="25" y="100" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• तानाशाही बनाम लोकतंत्र का रिकॉर्ड:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">1950 से 2000 के बीच तानाशाही वाले देशों में आर्थिक संवृद्धि दर थोड़ी बेहतर रही।</text>
+    <text x="25" y="105" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• तानाशाही बनाम लोकतंत्र का रिकॉर्ड:</text>
+    <text x="25" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">1950 से 2000 के 50 वर्षों के अध्ययन बताते हैं कि</tspan>
+      <tspan x="25" dy="28">तानाशाही व्यवस्थाओं में विकास दर थोड़ी बेहतर रही।</tspan>
+    </text>
 
-    <text x="25" y="200" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• विकास के अन्य कारक:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">आबादी, वैश्विक स्थिति और अन्य देशों से सहयोग पर भी विकास निर्भर करता है।</text>
+    <text x="25" y="225" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• विकास के अनेक अन्य निर्धारक कारक:</text>
+    <text x="25" y="260" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">देश की जनसंख्या का आकार, वैश्विक आर्थिक स्थिति तथा</tspan>
+      <tspan x="25" dy="28">अन्य देशों से मिलने वाले सहयोग पर भी विकास निर्भर है।</tspan>
+    </text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-    <text x="240" y="355" fill="#38bdf8" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 निष्कर्ष:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">विकास की थोड़ी कम दर के बावजूद लोकतंत्र बेहतर है।</text>
+    <rect x="25" y="370" width="470" height="150" rx="14" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+    <text x="260" y="410" fill="#7dd3fc" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 मुख्य निष्कर्ष:</text>
+    <text x="260" y="450" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+      <tspan x="260" dy="0">विकास दर के मामूली अंतर के लिए लोकतंत्र को</tspan>
+      <tspan x="260" dy="28">त्यागा नहीं जा सकता, क्योंकि लोकतंत्र अनेक अन्य</tspan>
+      <tspan x="260" dy="28">सकारात्मक परिणाम व मानवीय अधिकार देता है।</tspan>
+    </text>
   </g>
 
-  <g transform="translate(565, 125)" filter="url(#shadow3)">
-    <rect width="500" height="490" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-    <rect x="0" y="0" width="500" height="60" rx="18" fill="#059669"/>
-    <text x="240" y="40" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">2. गरीबी व असमानता में कमी (Inequality Reduction)</text>
+  <!-- Right Card: असमानता में कमी -->
+  <g transform="translate(590, 125)" filter="url(#shadow3)">
+    <rect width="520" height="555" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <rect x="0" y="0" width="520" height="54" rx="18" fill="#059669"/>
+    <text x="260" y="37" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="23" font-weight="900" text-anchor="middle">2. गरीबी व असमानता में कमी</text>
     
-    <text x="25" y="100" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• धन के वितरण में असमानता:</text>
-    <text x="25" y="135" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">मुट्ठी भर अमीर लोग राष्ट्रीय आय के बहुत बड़े हिस्से पर कब्जा रखते हैं।</text>
+    <text x="25" y="105" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• धन के संकेंद्रण की गंभीर समस्या:</text>
+    <text x="25" y="140" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">मुट्ठी भर अमीर लोग देश की अधिकांश आय व संपदा पर</tspan>
+      <tspan x="25" dy="28">कब्जा रखते हैं, जबकि निचले वर्ग के पास साधन कम हैं।</tspan>
+    </text>
 
-    <text x="25" y="200" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="19" font-weight="900">• कल्याणकारी योजनाएं:</text>
-    <text x="25" y="235" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">लोकतांत्रिक सरकारें मुफ़्त अनाज, स्वास्थ्य व शिक्षा से गरीबी कम करती हैं।</text>
+    <text x="25" y="225" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900">• कल्याणकारी सामाजिक योजनाएं:</text>
+    <text x="25" y="260" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18">
+      <tspan x="25" dy="0">लोकतांत्रिक सरकारें मुफ़्त राशन, स्वास्थ्य, आवास व</tspan>
+      <tspan x="25" dy="28">शिक्षा योजनाओं से गरीबों को सामाजिक सुरक्षा देती हैं।</tspan>
+    </text>
 
-    <rect x="20" y="320" width="440" height="140" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
-    <text x="240" y="355" fill="#34d399" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="20" font-weight="900" text-anchor="middle">🎯 मुख्य अपेक्षा:</text>
-    <text x="240" y="395" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">लोकतंत्र से आर्थिक असमानता घटाने की उम्मीद रखी जाती है।</text>
+    <rect x="25" y="370" width="470" height="150" rx="14" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+    <text x="260" y="410" fill="#6ee7b7" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="21" font-weight="900" text-anchor="middle">🎯 मुख्य जन-अपेक्षा:</text>
+    <text x="260" y="450" fill="#ffffff" font-family="'Tiro Devanagari Hindi', sans-serif" font-size="18" font-weight="bold" text-anchor="middle">
+      <tspan x="260" dy="0">लोकतंत्र से यह स्वाभाविक अपेक्षा है कि वह</tspan>
+      <tspan x="260" dy="28">आर्थिक असमानता घटाए और सभी नागरिकों को</tspan>
+      <tspan x="260" dy="28">सम्मानजनक जीवन के अवसर प्रदान करे।</tspan>
+    </text>
   </g>
 </svg>
